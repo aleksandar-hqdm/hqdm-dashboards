@@ -33,47 +33,60 @@
   // === KPI tiles ===
   renderKPIs(DATA.kpis);
 
-  // === Headline trend chart ===
-  setText('trend-headline', DATA.trend.headline);
-  setText('trend-annotation', DATA.trend.may_extrapolation_note + ' ' + DATA.trend.annotation_text);
-  renderQuarterlyTable(DATA.trend.quarterly);
-  const trendChart = renderTrendChart(DATA.trend);
-  wireTrendToggles(trendChart, DATA.trend);
+  // === Headline trend charts (Sessions + Conversions/Transactions, stacked) ===
+  if (DATA.trend) {
+    setText('trend-headline', DATA.trend.headline);
+    setText('trend-annotation', (DATA.trend.may_extrapolation_note || '') + ' ' + (DATA.trend.annotation_text || ''));
+    if (DATA.trend.quarterly) renderQuarterlyTable(DATA.trend.quarterly);
+    const trendCharts = renderStackedTrendCharts(DATA.trend);
+    wireTrendSeriesToggles(trendCharts, DATA.trend);
+  }
 
-  // === Maps presence ===
-  renderMapsTable(DATA.maps_presence);
+  // === Maps presence (PM only) ===
+  if (DATA.maps_presence && document.querySelector('#maps-table')) renderMapsTable(DATA.maps_presence);
 
-  // === LD leaderboard ===
-  renderLDTable(DATA.ld_leaderboard);
+  // === LD leaderboard (PM only) ===
+  if (DATA.ld_leaderboard && document.querySelector('#ld-table')) renderLDTable(DATA.ld_leaderboard);
 
-  // === LD heatmap loop (optional, if data present) ===
-  if (LD) renderHeatmapLoop(LD);
+  // === LD heatmap loop (PM only) ===
+  if (LD && document.querySelector('#hm-panels')) renderHeatmapLoop(LD);
 
-  // === Per-keyword ===
-  renderKeywordTable(DATA.per_keyword);
+  // === Per-keyword (PM only) ===
+  if (DATA.per_keyword && document.querySelector('#kw-table')) renderKeywordTable(DATA.per_keyword);
 
-  // === GSC decline + URL class ===
-  renderGSCChart(DATA.gsc_decline);
-  renderURLClassChart(DATA.url_class);
-  renderBrandPull(DATA.brand_pull);
+  // === GSC decline + URL class (PM) ===
+  if (DATA.gsc_decline && document.querySelector('#gsc-chart')) renderGSCChart(DATA.gsc_decline);
+  if (DATA.url_class && document.querySelector('#urlclass-chart')) renderURLClassChart(DATA.url_class);
+  if (DATA.brand_pull && document.querySelector('#brand-pull-grid')) renderBrandPull(DATA.brand_pull);
 
-  // === Competition ===
-  renderOrgComp(DATA.organic_competitors);
+  // === PM Competition ===
+  if (DATA.organic_competitors && document.querySelector('#org-comp-table')) renderOrgComp(DATA.organic_competitors);
 
-  // === Potential ===
-  renderBucketsChart(DATA.keyword_buckets);
-  renderUpsideTable(DATA.map_upside);
-  renderTopUrlsTable(DATA.top_urls);
+  // === PM Potential ===
+  if (DATA.keyword_buckets && document.querySelector('#buckets-chart')) renderBucketsChart(DATA.keyword_buckets);
+  if (DATA.map_upside && document.querySelector('#upside-table')) renderUpsideTable(DATA.map_upside);
+  if (DATA.top_urls && document.querySelector('#top-urls-table')) renderTopUrlsTable(DATA.top_urls);
 
-  // === Positives vs negatives ===
-  renderList('positives-list', DATA.positives, 'emerald');
-  renderList('negatives-list', DATA.negatives, 'rose');
+  // === Bernie's-specific sections ===
+  if (DATA.ahrefs_trajectory && document.querySelector('#ahrefs-chart')) renderAhrefsTrajectory(DATA.ahrefs_trajectory);
+  if (DATA.aio_saturation && document.querySelector('#aio-may26')) renderAIOSaturation(DATA.aio_saturation);
+  if (DATA.index_health && document.querySelector('#index-health-table')) renderIndexHealth(DATA.index_health);
+  if (DATA.sku_coverage && document.querySelector('#sku-table')) renderSKUCoverage(DATA.sku_coverage);
+  if (DATA.competitor_reshuffle && document.querySelector('#reshuffle-bars')) renderReshuffleBars(DATA.competitor_reshuffle);
+  if (DATA.st_pattern_verified && document.querySelector('#st-pattern-list')) renderSTPattern(DATA.st_pattern_verified);
+  if (DATA.top_loser_blogs && document.querySelector('#loser-blogs-table')) renderLoserBlogs(DATA.top_loser_blogs);
+  if (DATA.top_winners_q1yoy && document.querySelector('#winners-table')) renderWinnersTable(DATA.top_winners_q1yoy);
+  if (DATA.q3_kpi_targets && document.querySelector('#q3-targets-table')) renderQ3Targets(DATA.q3_kpi_targets);
 
-  // === Lever cards ===
-  renderLeverCards(DATA.levers);
+  // === Positives vs negatives (shared) ===
+  if (DATA.positives && document.querySelector('#positives-list')) renderList('positives-list', DATA.positives, 'emerald');
+  if (DATA.negatives && document.querySelector('#negatives-list')) renderList('negatives-list', DATA.negatives, 'rose');
 
-  // === Tasks table ===
-  renderTasks(DATA.levers);
+  // === Lever cards (shared) ===
+  if (DATA.levers && document.querySelector('#lever-cards')) renderLeverCards(DATA.levers);
+
+  // === Tasks table (shared) ===
+  if (DATA.levers && document.querySelector('#tasks-table')) renderTasks(DATA.levers);
 })();
 
 // ============================================================
@@ -116,102 +129,126 @@ function renderKPIs(kpis) {
 }
 
 // ============================================================
-// Trend chart (sessions / conversions toggle, series toggle)
+// Trend charts — stacked Sessions + Conversions, shared series toggles
 // ============================================================
-function renderTrendChart(trend) {
-  const ctx = document.getElementById('trend-chart').getContext('2d');
-  const colors = { organic: '#1d5b8a', gbp: '#f59e0b', direct: '#ef4444', llm: '#8b5cf6' };
-  const labels = { organic: 'Organic', gbp: 'GBP', direct: 'Direct', llm: 'LLM' };
+function renderStackedTrendCharts(trend) {
+  // Channel colors / labels — overridable from data.json
+  const defaultColors = { organic: '#1d5b8a', gbp: '#f59e0b', direct: '#ef4444', llm: '#8b5cf6' };
+  const defaultLabels = { organic: 'Organic', gbp: 'GBP', direct: 'Direct', llm: 'LLM' };
+  const colors = trend.channel_colors || defaultColors;
+  const labels = trend.channel_labels || defaultLabels;
 
-  const buildDatasets = (mode, visible) => {
-    const src = mode === 'sessions' ? trend.sessions : trend.form_submits;
-    return Object.keys(src).map(key => ({
-      label: labels[key],
-      data: src[key],
-      borderColor: colors[key],
-      backgroundColor: colors[key] + '20',
-      tension: 0.25,
-      borderWidth: 2.5,
-      pointRadius: 2,
-      pointHoverRadius: 5,
-      hidden: !visible[key]
-    }));
-  };
-
-  const visible = { organic: true, gbp: true, direct: false, llm: true };
-
-  const chart = new Chart(ctx, {
-    type: 'line',
-    data: { labels: trend.months, datasets: buildDatasets('sessions', visible) },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          backgroundColor: '#0b1220',
-          padding: 12,
-          titleColor: '#fff',
-          bodyColor: '#e5e7eb',
-          borderColor: '#374151',
-          borderWidth: 1,
-          callbacks: {
-            label: (ctx) => `${ctx.dataset.label}: ${ctx.raw == null ? '—' : ctx.raw.toLocaleString()}`
-          }
-        }
-      },
-      scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 11 } } }
-      }
-    }
+  // Initial visible state: respect checkbox `checked` if rendered; else default
+  const channels = Object.keys(trend.sessions);
+  const visible = {};
+  channels.forEach(c => {
+    const cb = document.querySelector(`#trend-series-toggles input[data-series="${c}"]`);
+    visible[c] = cb ? cb.checked : true;
   });
 
-  chart._mode = 'sessions';
-  chart._visible = visible;
-  chart._rebuild = () => {
-    chart.data.datasets = buildDatasets(chart._mode, chart._visible);
-    chart.update();
+  const buildDatasets = (src) => Object.keys(src).map(key => ({
+    label: labels[key] || key,
+    data: src[key],
+    borderColor: colors[key] || '#6b7280',
+    backgroundColor: (colors[key] || '#6b7280') + '20',
+    tension: 0.25,
+    borderWidth: 2.5,
+    pointRadius: 2,
+    pointHoverRadius: 5,
+    hidden: !visible[key]
+  }));
+
+  const baseOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        backgroundColor: '#0b1220',
+        padding: 12,
+        titleColor: '#fff',
+        bodyColor: '#e5e7eb',
+        borderColor: '#374151',
+        borderWidth: 1,
+        callbacks: {
+          label: (ctx) => `${ctx.dataset.label}: ${ctx.raw == null ? '—' : ctx.raw.toLocaleString()}`
+        }
+      }
+    },
+    scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+      y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 11 } } }
+    }
   };
-  return chart;
+
+  const sessionsCtx = document.getElementById('trend-chart-sessions');
+  const convCtx = document.getElementById('trend-chart-conversions');
+  if (!sessionsCtx || !convCtx) return null;
+
+  const sessionsChart = new Chart(sessionsCtx.getContext('2d'), {
+    type: 'line',
+    data: { labels: trend.months, datasets: buildDatasets(trend.sessions) },
+    options: baseOptions
+  });
+
+  const convChart = new Chart(convCtx.getContext('2d'), {
+    type: 'line',
+    data: { labels: trend.months, datasets: buildDatasets(trend.form_submits) },
+    options: baseOptions
+  });
+
+  const charts = { sessions: sessionsChart, conversions: convChart, visible };
+  charts._rebuild = () => {
+    sessionsChart.data.datasets = buildDatasets(trend.sessions);
+    convChart.data.datasets = buildDatasets(trend.form_submits);
+    sessionsChart.update();
+    convChart.update();
+  };
+  return charts;
 }
 
-function wireTrendToggles(chart, trend) {
-  document.querySelectorAll('.trend-toggle').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const mode = btn.dataset.mode;
-      chart._mode = mode;
-      document.querySelectorAll('.trend-toggle').forEach(b => {
-        b.classList.remove('bg-brand-500', 'text-white');
-        b.classList.add('bg-slate-100', 'text-ink-700');
-      });
-      btn.classList.add('bg-brand-500', 'text-white');
-      btn.classList.remove('bg-slate-100', 'text-ink-700');
-      chart._rebuild();
-    });
-  });
+function wireTrendSeriesToggles(charts, trend) {
+  if (!charts) return;
   document.querySelectorAll('#trend-series-toggles input').forEach(cb => {
     cb.addEventListener('change', () => {
-      chart._visible[cb.dataset.series] = cb.checked;
-      chart._rebuild();
+      charts.visible[cb.dataset.series] = cb.checked;
+      charts._rebuild();
     });
   });
 }
 
 function renderQuarterlyTable(quarterly) {
   const tbody = document.querySelector('#trend-quarterly-table tbody');
-  tbody.innerHTML = quarterly.map(q => `
-    <tr class="text-ink-700">
-      <td class="py-2 pr-4 font-medium">${escapeHtml(q.q)}</td>
-      <td class="py-2 pr-4 text-right">${fmtNum(q.org_sess)}</td>
-      <td class="py-2 pr-4 text-right">${fmtNum(q.org_conv)}</td>
-      <td class="py-2 pr-4 text-right">${q.org_cr != null ? q.org_cr.toFixed(1) + '%' : '—'}</td>
-      <td class="py-2 pr-4 text-right">${fmtNum(q.gbp_sess)}</td>
-      <td class="py-2 pr-4 text-right">${fmtNum(q.gbp_conv)}</td>
-      <td class="py-2 text-right">${q.gbp_cr != null ? q.gbp_cr.toFixed(1) + '%' : '—'}</td>
-    </tr>
-  `).join('');
+  if (!tbody) return;
+  // Detect whether the table header expects 4 cols (Bernie's: Organic only)
+  // or 7 cols (PM: Organic + GBP). We count the <th> elements.
+  const colCount = document.querySelectorAll('#trend-quarterly-table thead th').length;
+  const isCompact = colCount <= 4;
+
+  tbody.innerHTML = quarterly.map(q => {
+    if (isCompact) {
+      return `
+        <tr class="text-ink-700">
+          <td class="py-2 pr-4 font-medium">${escapeHtml(q.q)}</td>
+          <td class="py-2 pr-4 text-right">${fmtNum(q.org_sess)}</td>
+          <td class="py-2 pr-4 text-right">${fmtNum(q.org_conv)}</td>
+          <td class="py-2 text-right">${q.org_cr != null ? q.org_cr.toFixed(2) + '%' : '—'}</td>
+        </tr>
+      `;
+    }
+    return `
+      <tr class="text-ink-700">
+        <td class="py-2 pr-4 font-medium">${escapeHtml(q.q)}</td>
+        <td class="py-2 pr-4 text-right">${fmtNum(q.org_sess)}</td>
+        <td class="py-2 pr-4 text-right">${fmtNum(q.org_conv)}</td>
+        <td class="py-2 pr-4 text-right">${q.org_cr != null ? q.org_cr.toFixed(1) + '%' : '—'}</td>
+        <td class="py-2 pr-4 text-right">${fmtNum(q.gbp_sess)}</td>
+        <td class="py-2 pr-4 text-right">${fmtNum(q.gbp_conv)}</td>
+        <td class="py-2 text-right">${q.gbp_cr != null ? q.gbp_cr.toFixed(1) + '%' : '—'}</td>
+      </tr>
+    `;
+  }).join('');
 }
 
 // ============================================================
@@ -911,6 +948,323 @@ function updatePlayPauseUI() {
 function cssEscape(s) {
   // For use in attribute selectors — escape quotes
   return String(s).replace(/"/g, '\\"');
+}
+
+// ============================================================
+// Bernie's: Ahrefs 24-month trajectory chart
+// ============================================================
+function renderAhrefsTrajectory(traj) {
+  setText('trajectory-headline', traj.headline);
+  setText('trajectory-annotation', traj.annotation);
+  const ctx = document.getElementById('ahrefs-chart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: traj.months,
+      datasets: [
+        {
+          label: 'Est. monthly traffic',
+          data: traj.traffic,
+          borderColor: '#1d5b8a',
+          backgroundColor: '#1d5b8a20',
+          tension: 0.25,
+          borderWidth: 2.5,
+          pointRadius: 2,
+          pointHoverRadius: 5,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Pages ranking',
+          data: traj.pages,
+          borderColor: '#f59e0b',
+          backgroundColor: '#f59e0b20',
+          tension: 0.25,
+          borderWidth: 2.5,
+          pointRadius: 2,
+          pointHoverRadius: 5,
+          yAxisID: 'y1'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 12, font: { size: 11 } } },
+        tooltip: { backgroundColor: '#0b1220', padding: 12 }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 45 } },
+        y:  { position: 'left',  grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { callback: v => (v/1000).toFixed(1) + 'K', font: { size: 10 } }, title: { display: true, text: 'Traffic', font: { size: 10 } } },
+        y1: { position: 'right', grid: { display: false }, beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: 'Pages', font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+// ============================================================
+// Bernie's: AIO saturation
+// ============================================================
+function renderAIOSaturation(aio) {
+  setText('aio-headline', aio.headline);
+  setText('aio-may25', `${aio.may_2025_aio} / ${aio.may_2025_total}`);
+  setText('aio-may26', `${aio.may_2026_aio} / ${aio.may_2026_total}`);
+  setText('aio-ctr-note', aio.ctr_note);
+
+  const exList = document.getElementById('aio-exceptions');
+  if (exList) {
+    exList.innerHTML = aio.exceptions.map(e => `
+      <li class="flex items-start gap-2">
+        <span class="inline-block w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0 bg-emerald-500"></span>
+        <span class="text-ink-700"><span class="font-mono text-xs bg-slate-100 px-1.5 py-0.5 rounded">${escapeHtml(e.kw)}</span> <span class="text-ink-500">— ${escapeHtml(e.reason)}</span></span>
+      </li>
+    `).join('');
+  }
+
+  // SERP feature bars
+  const wrap = document.getElementById('serp-features-bars');
+  if (wrap && aio.serp_features_2026) {
+    wrap.innerHTML = aio.serp_features_2026.map(f => {
+      const pct = (f.present / f.total * 100).toFixed(0);
+      const colorClass = f.present >= f.total * 0.8 ? 'bg-rose-500' :
+                         f.present >= f.total * 0.4 ? 'bg-amber-500' : 'bg-emerald-500';
+      return `
+        <div>
+          <div class="flex items-center justify-between text-xs mb-1">
+            <span class="font-medium text-ink-700">${escapeHtml(f.feature)}</span>
+            <span class="font-mono text-ink-600">${f.present} / ${f.total} <span class="text-ink-400">(${pct}%)</span></span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+            <div class="${colorClass} h-full rounded-full" style="width:${pct}%"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+}
+
+// ============================================================
+// Bernie's: Index health
+// ============================================================
+function renderIndexHealth(ih) {
+  setText('index-health-headline', ih.headline);
+
+  // Growth chart
+  const chartCtx = document.getElementById('index-health-chart');
+  if (chartCtx) {
+    new Chart(chartCtx.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels: ih.rows.map(r => r.date),
+        datasets: [{
+          label: 'Crawled - not indexed',
+          data: ih.rows.map(r => r.count),
+          borderColor: '#ef4444',
+          backgroundColor: '#ef444420',
+          tension: 0.25,
+          borderWidth: 2.5,
+          fill: true,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          pointBackgroundColor: ih.rows.map(r => r.label ? '#0b1220' : '#ef4444')
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0b1220',
+            callbacks: {
+              label: (ctx) => {
+                const row = ih.rows[ctx.dataIndex];
+                return [`${row.count.toLocaleString()} pages`, row.label || ''].filter(Boolean);
+              }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { callback: v => v.toLocaleString(), font: { size: 10 } } }
+        }
+      }
+    });
+  }
+
+  // Category breakdown (mini bars)
+  const catWrap = document.getElementById('index-health-categories');
+  if (catWrap) {
+    const max = Math.max(...ih.categories.map(c => c.count));
+    catWrap.innerHTML = ih.categories.map(c => {
+      const pct = (c.count / max * 100).toFixed(0);
+      return `
+        <div>
+          <div class="flex items-center justify-between text-xs mb-0.5">
+            <span class="text-ink-700 truncate pr-2">${escapeHtml(c.name)}</span>
+            <span class="font-mono text-ink-600 flex-shrink-0">${c.count}</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded h-1.5 overflow-hidden">
+            <div class="bg-rose-400 h-full" style="width:${pct}%"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Full categories table
+  const tbody = document.querySelector('#index-health-table tbody');
+  if (tbody) {
+    tbody.innerHTML = ih.categories.map(c => `
+      <tr>
+        <td class="py-3 px-4 font-medium">${escapeHtml(c.name)}</td>
+        <td class="py-3 px-4 text-right font-mono">${c.count}</td>
+        <td class="py-3 px-4 hidden md:table-cell text-xs font-mono text-ink-500">${escapeHtml(c.example)}</td>
+        <td class="py-3 px-4 text-xs text-ink-700">${escapeHtml(c.fix)}</td>
+      </tr>
+    `).join('');
+  }
+}
+
+// ============================================================
+// Bernie's: SKU coverage table
+// ============================================================
+function renderSKUCoverage(skus) {
+  const tbody = document.querySelector('#sku-table tbody');
+  if (!tbody) return;
+  tbody.innerHTML = skus.map(s => {
+    const priorityClass = s.priority === 'P0' ? 'badge-red' :
+                         s.priority === 'P1' ? 'badge-amber' : 'badge-blue';
+    return `
+      <tr>
+        <td class="py-3 px-4 font-semibold">${escapeHtml(s.sku)}</td>
+        <td class="py-3 px-4 hidden md:table-cell text-xs text-ink-600">${escapeHtml(s.category)}</td>
+        <td class="py-3 px-4 text-right font-mono">${fmtNum(s.universe_kws)}</td>
+        <td class="py-3 px-4 text-right font-mono font-semibold text-ink-900">${fmtNum(s.pure_opp_sv)}</td>
+        <td class="py-3 px-4 text-right font-mono hidden lg:table-cell">${s.wrong_url}</td>
+        <td class="py-3 px-4 text-right font-mono hidden lg:table-cell">${s.store_good}</td>
+        <td class="py-3 px-4 text-center"><span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold ${priorityClass}">${escapeHtml(s.priority)} · ${escapeHtml(s.month)}</span></td>
+        <td class="py-3 px-4 hidden md:table-cell text-xs text-ink-500">${s.head_kws ? s.head_kws.slice(0, 3).map(k => `<code class="bg-slate-100 px-1 rounded text-[10px]">${escapeHtml(k)}</code>`).join(' ') : ''}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ============================================================
+// Bernie's: Competitor reshuffle bars
+// ============================================================
+function renderReshuffleBars(rows) {
+  const wrap = document.getElementById('reshuffle-bars');
+  if (!wrap) return;
+  const max = Math.max(...rows.map(r => Math.abs(r.delta_pct)));
+  // Use log-ish scaling so Spot & Tango at +2,078% doesn't dwarf everything
+  const scale = v => {
+    const abs = Math.abs(v);
+    return abs === 0 ? 0 : Math.min(100, 10 + Math.log10(1 + abs) * 22);
+  };
+
+  wrap.innerHTML = rows.map(r => {
+    const isPos = r.delta_pct > 0;
+    const isClient = r.is_client;
+    const w = scale(r.delta_pct);
+    const verifyBadge = r.verified_pattern ? '<span class="ml-1 text-[10px] font-bold text-emerald-700">✓ verified</span>' : '';
+    return `
+      <div class="flex items-center gap-3 text-sm ${isClient ? 'font-bold' : ''}">
+        <div class="w-32 sm:w-40 truncate ${isClient ? 'text-brand-700' : 'text-ink-800'}">${escapeHtml(r.name)}${isClient ? ' <span class="text-[10px] font-bold uppercase text-brand-500">(us)</span>' : ''}${verifyBadge}</div>
+        <div class="flex-1 relative h-6 bg-slate-50 border border-slate-200 rounded overflow-hidden">
+          <div class="absolute top-0 bottom-0 left-1/2 w-px bg-slate-300"></div>
+          <div class="absolute top-1 bottom-1 ${isPos ? 'rounded-r' : 'rounded-l'} ${isClient ? 'bg-brand-700' : isPos ? 'bg-emerald-500' : 'bg-rose-500'}"
+               style="${isPos ? `left: 50%; width: ${w/2}%` : `right: 50%; width: ${w/2}%`}"></div>
+        </div>
+        <div class="w-20 sm:w-24 text-right font-mono font-semibold ${isPos ? 'text-emerald-700' : 'text-rose-700'}">${isPos ? '+' : ''}${r.delta_pct}%</div>
+        <div class="hidden md:block w-44 text-xs text-ink-500 font-mono text-right">${fmtNum(r.may25_top10)} → ${fmtNum(r.may26_top10)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ============================================================
+// Bernie's: S&T pattern card
+// ============================================================
+function renderSTPattern(st) {
+  setText('st-headline', st.headline);
+  const list = document.getElementById('st-pattern-list');
+  if (list) {
+    list.innerHTML = st.pattern_elements.map(el => `
+      <li class="flex items-start gap-2 text-ink-700">
+        <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-emerald-500"></span>
+        <span>${escapeHtml(el)}</span>
+      </li>
+    `).join('');
+  }
+  const articles = document.getElementById('st-articles-list');
+  if (articles) {
+    articles.innerHTML = st.articles_audited.map(a => `
+      <li>${escapeHtml(a.url)} <span class="text-ink-400">— ${escapeHtml(a.published)} · ${a.words}w</span></li>
+    `).join('');
+  }
+  setText('st-adaptation', st.bernies_adaptation);
+}
+
+// ============================================================
+// Bernie's: Top loser blogs
+// ============================================================
+function renderLoserBlogs(rows) {
+  const tbody = document.querySelector('#loser-blogs-table tbody');
+  if (!tbody) return;
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td class="py-3 px-4 font-mono text-xs">${escapeHtml(r.url)}</td>
+      <td class="py-3 px-4 text-right font-mono font-semibold text-rose-700">−${fmtNum(r.lost_clicks_yoy90d)}</td>
+      <td class="py-3 px-4 text-center font-mono">#${r.current_rank}</td>
+      <td class="py-3 px-4 text-xs"><code class="bg-slate-100 px-1.5 py-0.5 rounded">${escapeHtml(r.target_kw)}</code> <span class="text-ink-500">SV ${fmtNum(r.sv)}</span></td>
+      <td class="py-3 px-4 hidden lg:table-cell text-xs text-ink-600">${r.competitors.map(c => escapeHtml(c)).join(' · ')}</td>
+    </tr>
+  `).join('');
+}
+
+// ============================================================
+// Bernie's: Q1 YoY page winners
+// ============================================================
+function renderWinnersTable(w) {
+  setText('winners-read', w.read);
+  const tbody = document.querySelector('#winners-table tbody');
+  if (!tbody) return;
+  tbody.innerHTML = w.rows.map(r => {
+    const dSess = r.sess_q126 - r.sess_q125;
+    const dTx = r.tx_q126 - r.tx_q125;
+    const dSessPct = r.sess_q125 ? ((dSess / r.sess_q125) * 100).toFixed(0) : '—';
+    const dTxPct = r.tx_q125 ? ((dTx / r.tx_q125) * 100).toFixed(0) : (r.tx_q126 > 0 ? 'new' : '—');
+    const typeBadge = r.type === 'PDP' ? 'badge-green' : r.type === 'store' ? 'badge-blue' : r.type === 'blog' ? 'badge-purple' : 'badge-amber';
+    return `
+      <tr>
+        <td class="py-3 px-4 font-mono text-xs">${escapeHtml(r.url)}</td>
+        <td class="py-3 px-4 text-center"><span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold ${typeBadge}">${escapeHtml(r.type)}</span></td>
+        <td class="py-3 px-4 text-right font-mono">${fmtNum(r.sess_q125)} → ${fmtNum(r.sess_q126)}</td>
+        <td class="py-3 px-4 text-right font-mono ${dSess >= 0 ? 'text-emerald-700' : 'text-rose-700'}">${dSess >= 0 ? '+' : ''}${fmtNum(dSess)} <span class="text-ink-400">(${dSessPct === '—' ? '—' : (dSess >= 0 ? '+' : '') + dSessPct + '%'})</span></td>
+        <td class="py-3 px-4 text-right font-mono">${r.tx_q125} → ${r.tx_q126}</td>
+        <td class="py-3 px-4 text-right font-mono ${dTx >= 0 ? 'text-emerald-700' : 'text-rose-700'}">${dTx >= 0 ? '+' : ''}${dTx} <span class="text-ink-400">(${dTxPct === 'new' ? 'new' : (dTx >= 0 ? '+' : '') + dTxPct + '%'})</span></td>
+        <td class="py-3 px-4 text-right text-xs font-mono">${r.cvr_q125 ? r.cvr_q125.toFixed(2) : '0.00'}% → <strong>${r.cvr_q126 ? r.cvr_q126.toFixed(2) : '0.00'}%</strong></td>
+      </tr>
+    `;
+  }).join('');
+}
+
+// ============================================================
+// Bernie's: Q3 KPI targets table
+// ============================================================
+function renderQ3Targets(rows) {
+  const tbody = document.querySelector('#q3-targets-table tbody');
+  if (!tbody) return;
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td class="py-3 px-4 font-medium">${escapeHtml(r.kpi)}</td>
+      <td class="py-3 px-4 text-right font-mono text-ink-600">${escapeHtml(r.baseline)}</td>
+      <td class="py-3 px-4 text-right font-mono font-bold text-brand-700">${escapeHtml(r.target)}</td>
+      <td class="py-3 px-4 text-right font-mono font-bold text-emerald-700">${escapeHtml(r.stretch)}</td>
+    </tr>
+  `).join('');
 }
 
 // ============================================================

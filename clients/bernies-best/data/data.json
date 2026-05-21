@@ -1,0 +1,329 @@
+{
+  "meta": {
+    "client": "Bernie's Best",
+    "domain": "bernies.com",
+    "tagline": "Premium DTC dog supplements · 5 SKUs",
+    "tier": "DTC E-commerce",
+    "founded": null,
+    "years_in_business": null,
+    "prepared_date": "2026-05-19",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q3 2026",
+    "doc_subtitle": "Market-shifted blog traffic + index-health degradation + near-zero store presence in own categories — modernize the existing foundation, restore index hygiene, close the store-gap surface."
+  },
+  "kpis": [
+    {
+      "label": "Foundation signals held",
+      "value": "10 / 10",
+      "sentiment": "positive",
+      "detail": "All audited Bernie's URLs carry vet credentials + last-updated dates. The pre-2025 fundamentals are in place — the market moved underneath the content."
+    },
+    {
+      "label": "GSC 90d vs prev 90d",
+      "value": "+6.3%",
+      "sentiment": "positive",
+      "detail": "7,338 → 7,800 clicks. Q1 2026 recovery off the Dec 2025 trough — bleed has stopped at sitewide level. Use this as the narrative anchor for clients."
+    },
+    {
+      "label": "GSC clicks YoY 90d",
+      "value": "−52.5%",
+      "sentiment": "negative",
+      "detail": "16,411 → 7,800. Half of last year's organic clicks gone; bleed concentrated Aug 2025 – Apr 2026 (Aug 2025 core update + AIO saturation)."
+    },
+    {
+      "label": "Crawled — not indexed",
+      "value": "2,670",
+      "sentiment": "negative",
+      "detail": "+1,178 (+79%) since Feb 21. Param pollution + duplicate URLs + pagination + thin taxonomy. Even perfect content refreshes won't help if Google won't index the canonical URL."
+    },
+    {
+      "label": "AIO presence on top kws",
+      "value": "89%",
+      "sentiment": "negative",
+      "detail": "16/18 of Bernie's top organic kws now carry an AI Overview. Up from likely 20-40% a year ago. Dominant CTR-collapse mechanism."
+    },
+    {
+      "label": "Store in-SKU opportunity",
+      "value": "2.49M",
+      "sentiment": "neutral",
+      "detail": "Monthly SV across in-SKU kws Bernie's store doesn't rank for. Only 3 PDPs rank ≤20 anywhere today. 82% of the surface lives at the PDP layer."
+    }
+  ],
+  "trend": {
+    "headline": "Sessions fell sharply, but the buyers who stayed convert 3× more",
+    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). Direct sessions essentially flat (-3%); transactions +106%, CVR +114%. AI Overview eats informational queries while leaving commercial-intent ones intact.",
+    "may_extrapolation_note": "May 2026 is a partial month (through May 21).",
+    "months": [
+      "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025",
+      "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025",
+      "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+    ],
+    "sessions": {
+      "organic": [7225, 9029, 10226, 8469, 8922, 7729, 6484, 5368, 6640, 4707, 4667, 5076, 4294, 4157, 4583, 4127, 4450, 3728, 2857],
+      "direct":  [3959, 4064, 3901, 2790, 4051, 3301, 2556, 3619, 3941, 4736, 3072, 3304, 3903, 3585, 3346, 3095, 3931, 3552, 2223]
+    },
+    "form_submits": {
+      "organic": [49, 60, 60, 62, 64, 61, 51, 53, 74, 52, 63, 65, 81, 97, 106, 91, 89, 87, 58],
+      "direct":  [48, 44, 51, 33, 63, 48, 50, 43, 42, 61, 50, 54, 48, 49, 83, 120, 100, 75, 34]
+    },
+    "form_submits_label": "Transactions",
+    "form_submits_caption": "GA4 e-commerce purchase events (transactions)",
+    "quarterly": [
+      { "q": "Q1 2025 (baseline)", "org_sess": 9206, "org_conv": 62, "org_cr": 0.67, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q2 2025",            "org_sess": 7378, "org_conv": 55, "org_cr": 0.75, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q3 2025 (cliff)",    "org_sess": 5005, "org_conv": 63, "org_cr": 1.26, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q4 2025",            "org_sess": 4509, "org_conv": 81, "org_cr": 1.80, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q1 2026 (recovery)", "org_sess": 4387, "org_conv": 95, "org_cr": 2.17, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q2 2026* (partial)", "org_sess": 3678, "org_conv": 76, "org_cr": 2.07, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null }
+    ],
+    "channels": ["organic", "direct"],
+    "channel_colors": { "organic": "#1d5b8a", "direct": "#ef4444" },
+    "channel_labels": { "organic": "Organic Search", "direct": "Direct" }
+  },
+  "ahrefs_trajectory": {
+    "headline": "Two cliffs: Aug-Oct 2025 + May 2026",
+    "annotation": "Aug 2024 = peak traffic month (9,273). Jul 2025 = peak pages-ranking month (393). Two distinct cliffs: Aug-Oct 2025 (Aug 2025 core update + AIO maturation: −48% in 60 days) and May 2026 (March 2026 core update trailing edge: pages 188 → 130 in 30 days).",
+    "months": [
+      "May'24","Jun'24","Jul'24","Aug'24","Sep'24","Oct'24","Nov'24","Dec'24","Jan'25","Feb'25",
+      "Mar'25","Apr'25","May'25","Jun'25","Jul'25","Aug'25","Sep'25","Oct'25","Nov'25","Dec'25",
+      "Jan'26","Feb'26","Mar'26","Apr'26","May'26"
+    ],
+    "traffic": [8735,8748,8691,9273,8014,7946,5680,7639,7179,6608,7450,6674,6077,5631,5218,4145,3645,2724,2301,2215,2895,3029,2977,3015,2479],
+    "pages":   [239, 234, 238, 271, 271, 294, 293, 301, 310, 325, 359, 355, 390, 384, 393, 332, 329, 223, 196, 193, 214, 214, 211, 188, 130],
+    "events": [
+      { "month_index": 15, "label": "Aug 2025 core update — cliff onset", "type": "negative" },
+      { "month_index": 17, "label": "Cliff bottom (−48% in 60d)",        "type": "negative" },
+      { "month_index": 24, "label": "Mar 2026 update trailing edge",      "type": "negative" }
+    ]
+  },
+  "index_health": {
+    "headline": "2,670 pages crawled but not indexed — +79% in 84 days",
+    "headline_text": "Sample of 1,000 URLs shows the categories: URL parameter pollution, duplicate URL paths, review pagination, blog pagination loops, thin taxonomy hubs.",
+    "rows": [
+      { "date": "2026-02-21", "count": 1492, "label": "baseline" },
+      { "date": "2026-03-07", "count": 1630, "label": "" },
+      { "date": "2026-03-21", "count": 1950, "label": "March 2026 core update window" },
+      { "date": "2026-04-04", "count": 2221, "label": "" },
+      { "date": "2026-04-18", "count": 2358, "label": "" },
+      { "date": "2026-05-02", "count": 2635, "label": "" },
+      { "date": "2026-05-15", "count": 2670, "label": "+79% vs baseline" }
+    ],
+    "categories": [
+      { "name": "Review-pagination URLs",  "count": 275, "example": "/perfect-poop/reviews/?reviews-page=106&_gl=…", "fix": "rel=canonical to /perfect-poop/reviews/" },
+      { "name": "Duplicate URL paths (root vs /blogs/bernies-blog/)", "count": 226, "example": "/enzymatic-toothpaste-for-dogs-what-are-they/ at root AND /blogs/bernies-blog/<slug>/", "fix": "301 redirect root → /blogs/bernies-blog/<slug>/" },
+      { "name": "Blog posts (real content)", "count": 185, "example": "Real articles Google chose not to index", "fix": "Address parent canonical/duplicate issue first" },
+      { "name": "University taxonomy hubs", "count": 119, "example": "/university/nutrient-class/mineral/", "fix": "Audit: KEEP / CONSOLIDATE 301 / NOINDEX" },
+      { "name": "/pages/* with malformed params", "count": 84, "example": "?_pos=1&_sid=…", "fix": "rel=canonical to clean URL" },
+      { "name": "Blog-pagination loops", "count": 66, "example": "/pages/blog/page/40/?_gl=…", "fix": "rel=canonical to no-param version" }
+    ]
+  },
+  "aio_saturation": {
+    "headline": "89% of Bernie's top kws now carry an AI Overview",
+    "may_2025_aio": 5,
+    "may_2025_total": 18,
+    "may_2026_aio": 16,
+    "may_2026_total": 18,
+    "ctr_note": "Industry CTR studies (Ahrefs, BrightEdge, Seer): AIO reduces #1 organic CTR by ~40–70%; #5–#20 CTR by ~60–90%. Bernie's rankings mostly held; clicks per ranking position collapsed.",
+    "exceptions": [
+      { "kw": "are border collie smart",  "reason": "Low-medical query (not YMYL pet-health)" },
+      { "kw": "dog poop powder",          "reason": "Transactional / store-related" }
+    ],
+    "serp_features_2026": [
+      { "feature": "AI Overview",      "present": 16, "total": 18 },
+      { "feature": "People Also Ask",  "present": 18, "total": 18 },
+      { "feature": "Video carousel",   "present": 3,  "total": 18 },
+      { "feature": "Featured snippet", "present": 1,  "total": 18 }
+    ]
+  },
+  "sku_coverage": [
+    { "sku": "Perfect Poop",       "category": "digestive/probiotic", "universe_kws": 1082, "pure_opp_sv": 1375510, "wrong_url": 9, "store_good": 2, "priority": "P0", "month": "M1", "head_kws": ["dog probiotic", "probiotic for dogs", "dog digestive supplement", "probiotic chews for dogs", "gut health supplement for dogs"] },
+    { "sku": "Healthy Hips",       "category": "hip/joint",           "universe_kws": 1002, "pure_opp_sv": 443900,  "wrong_url": 0, "store_good": 0, "priority": "P0", "month": "M1", "head_kws": ["dog joint supplement", "glucosamine for dogs", "joint health supplement for dogs", "hip and joint supplement for dogs"] },
+    { "sku": "OMG Omegas",         "category": "omega/fish-oil",      "universe_kws": 641,  "pure_opp_sv": 426280,  "wrong_url": 6, "store_good": 1, "priority": "P1", "month": "M2", "head_kws": ["fish oil for dogs", "omega 3 for dogs", "salmon oil for dogs", "dog omega supplement"] },
+    { "sku": "Charming Chompers",  "category": "dental",              "universe_kws": 678,  "pure_opp_sv": 244310,  "wrong_url": 0, "store_good": 0, "priority": "P1", "month": "M2", "head_kws": ["dog dental chews", "dental chews for dogs", "dog dental treats", "best dental chews for dogs"] },
+    { "sku": "Marvelous Mobility", "category": "mobility (composite with Hips)", "universe_kws": 26, "pure_opp_sv": 710, "wrong_url": 0, "store_good": 0, "priority": "P2", "month": "M3", "head_kws": ["dog mobility supplement", "senior dog mobility"] }
+  ],
+  "competitor_reshuffle": [
+    { "name": "Spot & Tango",   "may25_top10": 1509,  "may26_top10": 32858, "delta_pct": 2078, "verified_pattern": true, "is_client": false },
+    { "name": "Wopet",          "may25_top10": 2751,  "may26_top10": 8457,  "delta_pct": 208,  "verified_pattern": false, "is_client": false },
+    { "name": "AnimalBiome",    "may25_top10": 3686,  "may26_top10": 5733,  "delta_pct": 55,   "verified_pattern": false, "is_client": false },
+    { "name": "Native Pet",     "may25_top10": 4566,  "may26_top10": 5943,  "delta_pct": 30,   "verified_pattern": false, "is_client": false },
+    { "name": "Zesty Paws",     "may25_top10": 2496,  "may26_top10": 2289,  "delta_pct": -8,   "verified_pattern": false, "is_client": false },
+    { "name": "Pet Honesty",    "may25_top10": 12788, "may26_top10": 8428,  "delta_pct": -34,  "verified_pattern": false, "is_client": false },
+    { "name": "Bernie's Best",  "may25_top10": 377,   "may26_top10": 189,   "delta_pct": -50,  "verified_pattern": null,  "is_client": true },
+    { "name": "Finn (petfinn)", "may25_top10": 780,   "may26_top10": 145,   "delta_pct": -81,  "verified_pattern": false, "is_client": false }
+  ],
+  "st_pattern_verified": {
+    "headline": "Spot & Tango content pattern — verified on 2 articles",
+    "articles_audited": [
+      { "url": "/blog/can-dogs-eat-beef-liver", "published": "Aug 28, 2025", "words": 2100 },
+      { "url": "/blog/dog-poop-color-chart",    "published": "Aug 11, 2025", "words": 2100 }
+    ],
+    "pattern_elements": [
+      "~2,100 words — mid-range, structure-driven not length-driven",
+      "Brand byline + visible publish date above article body",
+      "Vet credentials cited in body (not as byline)",
+      "Dedicated FAQ section as 2nd-to-last H2 (3–5 Q&A) — feeds AIO citation",
+      "'Final Thoughts' wrap-up section before FAQ",
+      "3–8 inline product mentions + sidebar Related Products cards",
+      "No above-fold quick-answer block"
+    ],
+    "bernies_adaptation": "Keep Bernie's existing vet credentials (stronger E-A-T than S&T's brand byline) but lift them to be visible above the fold AND cited within body sections. Add a dedicated FAQ section (3–5 Q&A) as 2nd-to-last H2 before 'Final Thoughts'. Cut product mentions from ~36 to 5–8 per article."
+  },
+  "top_winners_q1yoy": {
+    "headline": "Page-level Q1 2025 → Q1 2026 — the conversion winners",
+    "rows": [
+      { "url": "/products/bernies-perfect-poop", "type": "PDP",   "sess_q125": 2747, "sess_q126": 2263, "tx_q125": 99, "tx_q126": 144, "cvr_q125": 3.60, "cvr_q126": 6.36 },
+      { "url": "/products/charming-chompers",    "type": "PDP",   "sess_q125": 266,  "sess_q126": 450,  "tx_q125": 10, "tx_q126": 44,  "cvr_q125": 3.76, "cvr_q126": 9.78 },
+      { "url": "/products/marvelous-mobility",   "type": "PDP",   "sess_q125": 125,  "sess_q126": 181,  "tx_q125": 2,  "tx_q126": 12,  "cvr_q125": 1.60, "cvr_q126": 6.63 },
+      { "url": "/collections/all",               "type": "store", "sess_q125": 29,   "sess_q126": 149,  "tx_q125": 1,  "tx_q126": 5,   "cvr_q125": 3.45, "cvr_q126": 3.36 },
+      { "url": "/perfect-poop",                  "type": "blog",  "sess_q125": 224,  "sess_q126": 481,  "tx_q125": 8,  "tx_q126": 12,  "cvr_q125": 3.57, "cvr_q126": 2.49 },
+      { "url": "/perfect-poop/coprophagia-poop-eating", "type": "blog", "sess_q125": 0, "sess_q126": 165, "tx_q125": 0, "tx_q126": 4, "cvr_q125": 0, "cvr_q126": 2.42 },
+      { "url": "/charming-chompers",             "type": "blog",  "sess_q125": 29,   "sess_q126": 55,   "tx_q125": 0,  "tx_q126": 3,   "cvr_q125": 0,    "cvr_q126": 5.45 },
+      { "url": "/help",                          "type": "help",  "sess_q125": 12,   "sess_q126": 13,   "tx_q125": 0,  "tx_q126": 3,   "cvr_q125": 0,    "cvr_q126": 23.08 }
+    ],
+    "read": "PDPs do the conversion work; blog drives volume. /products/bernies-perfect-poop adds +45 transactions despite −18% sessions (CVR 3.60% → 6.36%). /products/charming-chompers gains BOTH +69% sessions AND +340% transactions. Scale the Charming Chompers / Marvelous Mobility pattern to the other 2 PDPs (Healthy Hips, OMG Omegas) — directly validates Lever 2."
+  },
+  "top_loser_blogs": [
+    { "url": "/blogs/dog-has-diarrhea-at-night/", "lost_clicks_yoy90d": 1446, "current_rank": 12, "target_kw": "my dog has diarrhea at night but is acting fine", "sv": 720, "competitors": ["Wopet #4 (1,602w concise)", "PetMD #6", "toegrips #7 (5,939w depth)"] },
+    { "url": "/blogs/help-why-is-my-dog-throwing-up-undigested-food/", "lost_clicks_yoy90d": 983, "current_rank": 28, "target_kw": "canine vomiting undigested food", "sv": 2900, "competitors": ["Livermore Family Pet #2", "Pet Honesty #3 (DTC peer)", "Purina #4"] },
+    { "url": "/blogs/enzymatic-toothpaste-for-dogs-what-are-they/", "lost_clicks_yoy90d": 683, "current_rank": 25, "target_kw": "dog toothpaste enzyme", "sv": 3600, "competitors": ["Virbac #3 (OEM)", "VCA #5 (vet)", "Spruce Pets #7 (3,460w listicle)"] },
+    { "url": "/blogs/what-to-feed-a-dog-with-inflammatory-bowel-disease/", "lost_clicks_yoy90d": 681, "current_rank": 29, "target_kw": "dog food for inflammatory bowel disease", "sv": 1300, "competitors": ["Vet.Cornell.edu #2 (academic)", "Greensboro NC Vet #4", "PMC.NCBI.NLM #5"] },
+    { "url": "/blogs/its-potty-time-how-long-after-a-dog-eats-do-they-poop/", "lost_clicks_yoy90d": 523, "current_rank": 4, "target_kw": "how long after dog eats do they poop", "sv": 1600, "competitors": ["PetMD #2 (1,073w concise)", "The Farmer's Dog #5", "Animal Humane Society #8"] }
+  ],
+  "q3_kpi_targets": [
+    { "kpi": "GSC clicks (last 30d sitewide)",          "baseline": "2,247",  "target": "2,800 (+25%)", "stretch": "3,300 (+47%)" },
+    { "kpi": "GSC clicks (last 90d sitewide)",          "baseline": "7,800",  "target": "9,500 (+22%)", "stretch": "11,000 (+41%)" },
+    { "kpi": "Ahrefs pages ranking",                    "baseline": "130",    "target": "175",          "stretch": "220" },
+    { "kpi": "Top-10 BLOG losers — clicks recovered",   "baseline": "—",      "target": "+50% on top 5", "stretch": "+100% on top 5" },
+    { "kpi": "Store PDP rankings ≤20 on in-SKU kws",    "baseline": "3",      "target": "30",           "stretch": "80" },
+    { "kpi": "Store organic traffic capture (est.)",    "baseline": "~10/d",  "target": "200/d",        "stretch": "500/d" },
+    { "kpi": "Crawled — not indexed (lower is better)", "baseline": "2,670",  "target": "2,000",        "stretch": "1,500 (back to Feb baseline)" }
+  ],
+  "positives": [
+    "Foundation signals held — vet credentials + last-updated dates on 10/10 audited URLs",
+    "GSC 90d PoP +6.3% — bleed has stopped at sitewide level (Q1 2026 recovery)",
+    "Organic transactions Q1'25 → Q1'26: 186 → 286 (+54%) despite −52% sessions — buyers consolidate",
+    "Organic CVR Q1'25 → Q1'26: 0.67% → 2.17% (+223%) — 3.2× lift in click quality",
+    "Direct sessions flat (10,742 → 10,372, −3%) — no brand-pull erosion visible",
+    "S&T content pattern verified (2,100w + FAQ + body-cited vet) — clear modernization target",
+    "/products/charming-chompers gained BOTH +69% sessions AND +340% transactions in Q1'26",
+    "Verified Lever 2 thesis: PDPs do the conversion work, blog drives volume"
+  ],
+  "negatives": [
+    "GSC clicks YoY 90d: 16,411 → 7,800 (−52.5%) — half of last year's clicks gone",
+    "Ahrefs pages ranking: 393 (peak Jul 2025) → 130 (May 2026) — −67%",
+    "Crawled-not-indexed: 1,492 → 2,670 in 84 days (+79%) — index health actively degrading",
+    "AI Overview presence: ~20-40% (May 2025) → 89% (May 2026) on Bernie's top kws",
+    "Store ranks 59 kws total; 75% are branded; only ~6 truly generic / 230 SV/month",
+    "Marvelous Mobility ranks for 0 keywords; 4 of 5 PDPs effectively absent from category SERPs",
+    "3 ACTIVE_MAY URLs = 46% of MoM click loss on 0.4% of URLs (concentrated bleed)",
+    "Spot & Tango grew +2,078% top-10 visibility while Bernie's lost 50% — pattern-driven reshuffle"
+  ],
+  "levers": [
+    {
+      "id": "1",
+      "name": "Top-10 BLOG refresh (S&T pattern)",
+      "priority": "P0 / M1",
+      "color": "blue",
+      "why": "Refresh the 10 audited loser pages using the verified S&T pattern: FAQ section, brand byline + visible publish date, vet credentials cited in body, 5–8 inline product mentions (down from ~36), 'Final Thoughts' wrap-up.",
+      "actions": [
+        { "code": "BLOG-REF-01", "name": "Refresh dog-has-diarrhea-at-night (lost 1,446 clicks; #12 → target #5)", "month": "M1", "effort": "M" },
+        { "code": "BLOG-REF-02", "name": "Refresh help-why-is-my-dog-throwing-up-undigested-food (mirror Pet Honesty pattern)", "month": "M1", "effort": "M" },
+        { "code": "BLOG-REF-03", "name": "Pivot enzymatic-toothpaste-for-dogs to comparative listicle format", "month": "M1", "effort": "M" },
+        { "code": "BLOG-REF-04", "name": "Trim what-to-feed-a-dog-with-inflammatory-bowel-disease → funnel to Perfect Poop PDP", "month": "M1", "effort": "S" },
+        { "code": "BLOG-REF-05", "name": "Refresh its-potty-time (#4 → target #2; highest ROI refresh)", "month": "M1", "effort": "S" },
+        { "code": "BLOG-REF-06", "name": "Refresh signs-my-dog-needs-fiber (#21 → target top-10)", "month": "M2", "effort": "S" },
+        { "code": "BLOG-REF-07", "name": "Refresh black-dog-poop-causes-treatments (#27 → #15)", "month": "M2", "effort": "S" },
+        { "code": "BLOG-REF-08", "name": "Refresh how-do-i-make-my-dogs-poop-smell-better (#16 → #8)", "month": "M2", "effort": "S" },
+        { "code": "BLOG-REF-09", "name": "Refresh help-my-dog-is-throwing-up-white-foam (303 ranked kws, biggest surface)", "month": "M2", "effort": "M" },
+        { "code": "BLOG-REF-10", "name": "Refresh help-my-dog-is-throwing-up-clear-liquid (#14 → #8)", "month": "M2", "effort": "S" }
+      ],
+      "outcome": "Reclaim 30–50% of YoY click loss on the 10 URLs = ~+1,500–2,500 monthly clicks vs current."
+    },
+    {
+      "id": "2",
+      "name": "Store PDP build-out (5 SKUs)",
+      "priority": "P0 / M1–M3",
+      "color": "green",
+      "why": "3,338 in-SKU kws / 2.49M monthly SV with near-zero capture today. PDPs need topical content aligned with category kws + Product/Review/FAQ/Organization schema + internal linking from existing blog content. The Charming Chompers + Marvelous Mobility Q1 wins prove the pattern.",
+      "actions": [
+        { "code": "PDP-01",    "name": "Refresh Perfect Poop PDP — 1.38M SV addressable; H2s = category kws + Product/Review/FAQ schema", "month": "M1", "effort": "L" },
+        { "code": "PDP-02",    "name": "Refresh Healthy Hips PDP — 444K SV; currently 0 store rankings", "month": "M1", "effort": "L" },
+        { "code": "SCHEMA-06", "name": "Sitewide Organization + BreadcrumbList template (prerequisite)", "month": "M1", "effort": "S" },
+        { "code": "SCHEMA-01", "name": "Product+Review+FAQ schema on Perfect Poop PDP", "month": "M1", "effort": "M" },
+        { "code": "SCHEMA-02", "name": "Product+Review+FAQ schema on Healthy Hips PDP", "month": "M1", "effort": "S" },
+        { "code": "PDP-03",    "name": "Refresh OMG Omegas PDP — 426K SV", "month": "M2", "effort": "L" },
+        { "code": "PDP-04",    "name": "Refresh Charming Chompers PDP — 244K SV; 'alternative to Greenies' positioning", "month": "M2", "effort": "L" },
+        { "code": "SCHEMA-03", "name": "Schema on OMG Omegas PDP", "month": "M2", "effort": "S" },
+        { "code": "SCHEMA-04", "name": "Schema on Charming Chompers PDP", "month": "M2", "effort": "S" },
+        { "code": "PDP-05",    "name": "Refresh Marvelous Mobility PDP — composite with Hips", "month": "M3", "effort": "M" },
+        { "code": "SCHEMA-05", "name": "Schema on Marvelous Mobility PDP", "month": "M3", "effort": "S" },
+        { "code": "PDP-INTERLINK", "name": "15 WRONG_URL fixes — add PDP links from ranking blog URLs", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "Capturing even 1% of 2.49M monthly SV = 25K monthly visits = 10× the store's organic traffic. The Charming Chompers Q1 pattern (+69% sessions, +340% tx) shows the upside is real."
+    },
+    {
+      "id": "3",
+      "name": "Index hygiene — restore the not-indexed pile",
+      "priority": "P0 / M1–M2",
+      "color": "amber",
+      "why": "2,670 pages crawled-not-indexed (+1,178 in 84 days). Root causes: URL parameter pollution, duplicate URL paths (root vs /blogs/bernies-blog/), review pagination, blog pagination, thin taxonomy hubs. Restoring even 30% of the not-indexed pages surfaces ~800 already-existing pages.",
+      "actions": [
+        { "code": "IDX-01", "name": "Deploy canonical tags for URL parameter pollution (?_gl, ?utm, ?_pos, ?_sid, ?reviews-page, ?srsltid)", "month": "M1", "effort": "M" },
+        { "code": "IDX-02", "name": "301 redirect duplicate URL paths (root-level → /blogs/bernies-blog/<slug>/)", "month": "M1", "effort": "M" },
+        { "code": "IDX-06", "name": "Weekly GSC Coverage report monitoring + alert if +100 in a week", "month": "M1", "effort": "S" },
+        { "code": "IDX-03", "name": "Review-pagination URLs → rel=canonical to /perfect-poop/reviews/", "month": "M2", "effort": "S" },
+        { "code": "IDX-04", "name": "Blog-pagination loops → rel=canonical to clean URL", "month": "M2", "effort": "S" },
+        { "code": "IDX-05", "name": "Thin-taxonomy audit (/university/<dim>/<value>/) — KEEP / CONSOLIDATE / NOINDEX decisions", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "Restoring index health on 30% of the 2,670 not-indexed pages = ~800 pages back in Google's index. Found revenue without writing new content."
+    },
+    {
+      "id": "4",
+      "name": "Re-target wrong-intent URLs",
+      "priority": "P1 / M1",
+      "color": "purple",
+      "why": "Two URLs competing in SERPs whose audience doesn't match Bernie's customer. Small click recovery; bigger value is freeing content budget.",
+      "actions": [
+        { "code": "RT-01", "name": "/perfect-poop/dog-stool-odor → re-target to 'why does my dog's poop smell so bad' (SV 2,900)", "month": "M1", "effort": "S" },
+        { "code": "RT-02", "name": "/university/dig-deeper/boswellia-frankincense → re-target to dog-specific Boswellia kw OR sunset", "month": "M1", "effort": "S" }
+      ],
+      "outcome": "Small click recovery; frees content budget from un-winnable SERPs."
+    },
+    {
+      "id": "5",
+      "name": "New blog production (S&T pattern)",
+      "priority": "P1 / M2–M3",
+      "color": "indigo",
+      "why": "Resume blog production cadence using the verified S&T pattern. Topics queued from per-SKU PURE_OPPORTUNITY kw lists. Rebuilds long-tail surface area Bernie's lost.",
+      "actions": [
+        { "code": "BLOG-NEW-M2", "name": "4 new blog posts (M2 batch) — S&T pattern checklist", "month": "M2", "effort": "L" },
+        { "code": "BLOG-NEW-M3", "name": "4 new blog posts (M3 batch) — same pattern checklist", "month": "M3", "effort": "L" },
+        { "code": "RES-01",      "name": "Verify additional S&T articles via Wayback (Q4 2025 peak)", "month": "M1", "effort": "S" },
+        { "code": "RES-02",      "name": "Audit AnimalBiome / Native Pet / Wopet patterns (COMPLETED 2026-05-20)", "month": "M1", "effort": "S" }
+      ],
+      "outcome": "3-5 new commercial-intent posts ranking top-20 within 60d post-publish. Monthly compounding effect on long-tail surface."
+    },
+    {
+      "id": "6",
+      "name": "Off-page program — PR stunt + citations + affiliate",
+      "priority": "P0 / M1",
+      "color": "red",
+      "why": "S&T's April 2026 PR stunt generated 111 real-auth backlinks (DR avg 66, traffic 7.4M) — biggest single-event ROI in 5-peer cohort. Bernie's missing 4 of 8 standard business citations all peers have. Affiliate network presence (DR 60-74) provides sustained brand-coupon SERP surface.",
+      "actions": [
+        { "code": "OFF-07", "name": "PR stunt — quirky-job-posting via Businesswire, tied to new SKU launch ($350-$2K)", "month": "M1", "effort": "L" },
+        { "code": "OFF-08", "name": "Claim BBB.org + Glassdoor + RocketReach + LeadIQ + Owler profiles (5 missing citations)", "month": "M1", "effort": "M" },
+        { "code": "OFF-09", "name": "Activate affiliate program (Refersion/Impact/ShareASale) + submit to coupon networks", "month": "M1", "effort": "L" },
+        { "code": "OFF-10", "name": "Monitor HARO/Qwoted/Featured/Connectively daily for pet roundup source calls", "month": "M1", "effort": "M" },
+        { "code": "OFF-01", "name": "Backlink audit + identify referring-domain opportunities", "month": "M1", "effort": "S" },
+        { "code": "OFF-02", "name": "Tier 1 PR outreach batch — 10-15 pitches to DR 70+ publishers", "month": "M1", "effort": "M" },
+        { "code": "OFF-03", "name": "Pet-industry publication outreach — 15-20 pitches", "month": "M2", "effort": "L" },
+        { "code": "OFF-04", "name": "Brand mention reclamation — convert unlinked mentions to links", "month": "M2", "effort": "M" },
+        { "code": "OFF-05", "name": "Tier 3 niche outreach + M1/M2 follow-ups", "month": "M3", "effort": "M" },
+        { "code": "OFF-06", "name": "Q3 off-page close-out review", "month": "M3", "effort": "S" }
+      ],
+      "outcome": "30+ high-DR placements from PR stunt in 30 days. 5 new real-auth refdomains (DR 71-93) from citation claims. 5-7 new affiliate RDs (DR 60-74). 2-3 HARO/Qwoted placements/quarter at DR 85+."
+    }
+  ]
+}

@@ -10,6 +10,7 @@ A way to share HQDM strategic diagnoses with clients (and the HQDM team) as inte
 
 - Index: `https://aleksandar-hqdm.github.io/hqdm-dashboards/`
 - Professional Movers: `https://aleksandar-hqdm.github.io/hqdm-dashboards/clients/professional-movers/`
+- Bernie's Best: `https://aleksandar-hqdm.github.io/hqdm-dashboards/clients/bernies-best/`
 
 ## Access posture
 
@@ -56,6 +57,22 @@ Or any other static server. Opening the HTML over `file://` will fail because th
 | `map_upside` | `{coord, today, m3_target, managed, delta_text}` |
 | `positives`, `negatives` | string arrays |
 | `levers` | array of `{id, name, priority, color, why, actions, outcome}` |
+
+### Optional Bernie's-style sections
+
+| Key | Description |
+|---|---|
+| `ahrefs_trajectory` | 24-month traffic + pages-ranking line chart |
+| `aio_saturation` | AIO presence on top kws, year-over-year + SERP feature bars |
+| `index_health` | GSC Coverage 'crawled - not indexed' growth + root-cause categories |
+| `sku_coverage` | Per-SKU keyword universe, opportunity, priority |
+| `competitor_reshuffle` | Top-10 visibility delta bars (gainers + losers) |
+| `st_pattern_verified` | Content-pattern audit card with adaptation guidance |
+| `top_loser_blogs` | Per-URL YoY click-loss + competitor context |
+| `top_winners_q1yoy` | Per-URL sessions/transactions/CVR YoY |
+| `q3_kpi_targets` | Baseline → target → stretch table |
+
+Each section is only rendered if both the data key exists in `data.json` AND the corresponding container exists in the client's `index.html`.
 
 ## Stack
 

@@ -101,15 +101,9 @@
   <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
-        <div class="flex items-start justify-between gap-4 flex-wrap">
-          <div>
-            <h2 class="text-2xl font-bold tracking-tight">Channel Mix Trend — 18 Months</h2>
-            <p class="text-sm text-ink-500 mt-1" id="trend-headline">Traffic dropping, conversions stable + growing</p>
-          </div>
-          <div class="flex gap-2" id="trend-toggle-group">
-            <button data-mode="sessions" class="trend-toggle bg-brand-500 text-white px-3 py-1.5 rounded text-xs font-semibold">Sessions</button>
-            <button data-mode="conversions" class="trend-toggle bg-slate-100 hover:bg-slate-200 text-ink-700 px-3 py-1.5 rounded text-xs font-semibold">Conversions</button>
-          </div>
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Channel Mix Trend — 18 Months</h2>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Traffic dropping, conversions stable + growing</p>
         </div>
         <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
           <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
@@ -134,9 +128,22 @@
           </label>
         </div>
       </div>
-      <div class="p-6">
-        <div class="h-80 sm:h-96"><canvas id="trend-chart"></canvas></div>
-        <p class="text-xs text-ink-500 mt-4 italic" id="trend-annotation"></p>
+      <div class="p-6 space-y-8">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Sessions</h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Conversions <span class="text-ink-400 font-medium normal-case">(GA4 form_submit events)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
+        </div>
+        <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
       </div>
 
       <!-- Quarterly summary -->
