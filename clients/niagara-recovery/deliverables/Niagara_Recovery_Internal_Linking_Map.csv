@@ -1,0 +1,28 @@
+link_id,push,task_id,month,priority,from_url,to_url,anchor_text,placement,why
+IL-01,Push 1,BC-01,M1,P0,Sitewide footer,/,Niagara Recovery,Footer logo + brand link,Footer brand anchor must use canonical entity name (not RCoN).
+IL-02,Push 1,BC-01,M1,P0,Sitewide header,/,Niagara Recovery,Header logo,Same as IL-01.
+IL-03,Push 3,CN-01,M1,P0,All internal links pointing to /services/alcohol-detoxification-services-in-newfane-ny,/services/alcohol-detoxification-services,Alcohol Detox,Body + nav,Pre-CN-01 301 redirect; update internal links to canonical base URL so the 301 is final-step not transitive.
+IL-04,Push 3,CN-01,M1,P0,All internal links pointing to /services/opioid-detoxification-services-in-newfane-ny,/services/opioid-detoxification-services,Opioid Detox,Body + nav,Same.
+IL-05,Push 3,CN-01,M1,P0,All internal links pointing to /services/drug-detox-services-in-newfane-ny,/services/drug-detox-services,Drug Detox,Body + nav,Same.
+IL-06,Push 3,CN-01,M1,P0,All internal links pointing to /services/benzodiazepines-detoxification-services-in-newfane-ny,/services/benzodiazepines-detoxification,Benzo Detox,Body + nav,Same.
+IL-07,Push 3,CN-01,M1,P0,All internal links pointing to /services/short-term-residential-program-in-newfane-ny,/services/short-term-residential-program,Short-Term Residential,Body + nav,Same.
+IL-08,Push 3,SP-01,M1,P0,/services/alcohol-detoxification-services,/services/drug-detox-services,Drug Detox Services,Body cross-link section,Build cross-link hub between the 5 base service pages.
+IL-09,Push 3,SP-01,M1,P0,/services/alcohol-detoxification-services,/services/suboxone-mat-program,Suboxone MAT Program,Body cross-link,Same hub.
+IL-10,Push 3,SP-01,M1,P0,/services/alcohol-detoxification-services,/admissions,Begin Admissions,Above-fold intake CTA,Convert detox-page visitors to admissions.
+IL-11,Push 3,SP-02,M2,P0,/services/drug-detox-services,/services/alcohol-detoxification-services,Alcohol Detox Services,Body cross-link,Hub.
+IL-12,Push 3,SP-02,M2,P0,/services/drug-detox-services,/services/opioid-detoxification-services,Opioid Detox Services,Body cross-link,Hub.
+IL-13,Push 3,SP-03,M2,P1,/services/suboxone-mat-program (new),/services/drug-detox-services,Drug Detox Services,Body cross-link,Hub.
+IL-14,Push 4,LP-01,M1,P1,/locations/williamsville,/services/alcohol-detoxification-services,Alcohol Detox,Service-links block,Williamsville visitors -> alcohol detox modality (top demand in zone).
+IL-15,Push 4,LP-01,M1,P1,/locations/williamsville,/services/short-term-residential-program,Short-Term Residential,Service-links block,Same.
+IL-16,Push 4,LP-02,M1,P1,/locations/cheektowaga,/services/alcohol-detoxification-services,Alcohol Detox,Service-links block,Same pattern.
+IL-17,Push 4,LP-03,M2,P1,/locations/tonawanda (new),/services/* hub,All 5 services,Service-links block,New page builds service-link hub from scratch.
+IL-18,Push 4,LP-04,M2,P1,/locations/north-tonawanda (new),/services/* hub,All 5 services,Service-links block,Same.
+IL-19,Push 4,LP-05,M2,P1,/locations/lewiston (new),/services/* hub,All 5 services,Service-links block,Same.
+IL-20,Push 4,LP-06,M3,P1,/locations/youngstown (new),/services/* hub,All 5 services,Service-links block,Same.
+IL-21,Push 4,LP-07,M2,P1,/locations/lockport (upgraded),/services/suboxone-mat-program,Suboxone MAT,Service-links block,Lockport addition - suboxone-MAT signal strengthened for ZIP 14094 + nearby.
+IL-22,Push 5,CC-02,M1,P1,blog/what-should-you-pack-for-rehab-stay-in-newfane,/services/short-term-residential-program,Short-Term Residential Program,Body cross-link mid-article,Already-converting blog -> service page (CTA support).
+IL-23,Push 5,CC-02,M1,P1,blog/what-should-you-pack-for-rehab-stay-in-newfane,/admissions,Begin Admissions Today,After-fold CTA,Same.
+IL-24,Push 5,CC-04,M3,P2,Each KEEP blog post,/services/<relevant>,Service anchor text,Body 1-2 internal links,Sitewide linking pass on KEEP blog cohort to consolidate topical-authority hubs.
+IL-25,Push 5,CC-04,M3,P2,Each KEEP blog post,/locations/<relevant anchor city>,Location anchor text,Body 1-2 internal links,Same.
+IL-26,Push 1,BC-04,M1,P0,/locations/buffalo (rewritten),/admissions,Begin Admissions,Above-fold intake CTA,Replace the false ""facility in Buffalo"" framing with intake-focused CTA.
+IL-27,Push 1,BC-04,M1,P0,/locations/buffalo (rewritten),/services/alcohol-detoxification-services,Alcohol Detox,Service-links block,Hub.

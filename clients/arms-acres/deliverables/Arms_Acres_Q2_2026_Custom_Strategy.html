@@ -1,0 +1,3814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arms Acres Q2 2026 Custom Strategy</title>
+  
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #222;
+    max-width: 920px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+  h1 { font-size: 22pt; border-bottom: 2px solid #222; padding-bottom: 6px; margin-top: 28px; }
+  h2 { font-size: 16pt; border-bottom: 1px solid #888; padding-bottom: 4px; margin-top: 24px; page-break-after: avoid; }
+  h3 { font-size: 13pt; margin-top: 18px; page-break-after: avoid; }
+  h4 { font-size: 11.5pt; margin-top: 14px; page-break-after: avoid; }
+  h2 + p, h3 + p, h4 + p { page-break-before: avoid; }
+  p, ul, ol { margin: 6px 0 10px 0; }
+  ul, ol { padding-left: 22px; }
+  code {
+    font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
+    font-size: 9.5pt;
+    background: #f4f4f4;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  pre {
+    background: #f6f8fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    overflow-x: auto;
+    font-size: 9pt;
+    line-height: 1.4;
+    page-break-inside: avoid;
+  }
+  pre code { background: none; padding: 0; font-size: 9pt; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f0f0f0; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafafa; }
+  blockquote {
+    border-left: 4px solid #888;
+    background: #f7f7f7;
+    margin: 10px 0;
+    padding: 8px 14px;
+    color: #444;
+    page-break-inside: avoid;
+  }
+  blockquote p { margin: 4px 0; }
+  hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  .mermaid {
+    text-align: center;
+    margin: 14px 0;
+    page-break-inside: avoid;
+  }
+  /* Major section breaks */
+  h1 { page-break-before: always; }
+  h1:first-of-type { page-break-before: avoid; }
+  /* Avoid orphan headings */
+  h2, h3, h4 { page-break-after: avoid; }
+  table, blockquote, pre { page-break-inside: avoid; }
+</style>
+
+</head>
+<body>
+<h1 id="arms-acres-q2-2026-custom-seo-strategy">Arms Acres — Q2 2026 Custom SEO Strategy</h1>
+<p><strong>Client:</strong> Arms Acres (Drug + Alcohol Addiction Treatment, OASAS-licensed + Joint Commission-accredited, founded 1982, employee-owned, 191-bed facility)
+<strong>Inpatient facility:</strong> 75 Seminary Hill Road, Carmel NY 10512 (Carmel Hamlet, Putnam County / Hudson Valley)
+<strong>Outpatient locations:</strong> Carmel NY, Bronx NY, Queens NY
+<strong>Strategy cycle:</strong> Q2 2026 — second client in HQDM's strategy-first reporting rollout (after Surfpoint Recovery, 2026-05-08)
+<strong>Owner:</strong> Aleksandar Spasevski, Head of Search Intelligence
+<strong>Date:</strong> 2026-05-11
+<strong>Status:</strong> Draft — internal execution strategy for HQDM team (not client-facing)</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<blockquote>
+<p><strong>Arms Acres has the traffic. It does not have the conversion architecture to capture it on the page where the traffic lands.</strong> 167,798 sessions and 531 conversions in 365d — but <strong>97% of GA4-attributed conversions concentrate on just three pages (home + contact + admissions)</strong> because those are the only three pages that host the 4-input intake form. The 6 service pages bring in ~24,000 sessions of high-engagement traffic and show zero <em>directly-attributed</em> conversions, but a portion of those visitors click "Start your treatment here" → /contact and convert there (credit goes to /contact). At the site-wide 0.32% conv rate, the service pages are referring an estimated <strong>~76 conversions/year</strong> that are currently invisible to page-level reporting — 14% of total site conversions originating from a page surface that the data makes look like a dead zone. The Webflow template for the 4-input intake form exists; it was never deployed to service pages. The single highest-leverage M1 fix is deploying it: this both <strong>(a)</strong> captures the navigation-leakage on visitors who don't click through and <strong>(b)</strong> lifts the page-level conversion rate above the referred-baseline by removing the inter-page step. The fix is an attribution + lift play, not a "make a dead page convert" play. In parallel, the site carries three indexable-doorway exposures (71 templated "suburb" pages, 4 city-modifier service duplicates, and one wrong-brand boilerplate string sitting on the homepage og:description) plus a near-total schema gap (Organization only on homepage, zero JSON-LD on service / location / blog). The Q2 plan is asymmetric: rebuild the conversion-capture layer on existing service pages first, clean up the doorway/duplicate exposure in parallel, then layer on schema + topical-cluster content + competitive positioning.</p>
+</blockquote>
+<h3 id="five-headline-findings">Five headline findings</h3>
+<ol>
+<li><strong>Service pages bring 24,000+ sessions per year — zero directly-attributed conversions, ~76 estimated referred conversions/year.</strong> The 6 service pages (<code>/inpatient</code>, <code>/inpatient/detox-program</code>, <code>/inpatient/adult-rehabilitation</code>, <code>/outpatient/carmel-outpatient</code>, <code>/outpatient/bronx-outpatient</code>, <code>/outpatient/queens-outpatient</code>) carry <strong>5,938 / 4,770 / 4,032 / 3,192 / 2,902 / 2,772 sessions in 365d</strong> with engagement rates of <strong>49.4% / 63.6% / 58.9% / 55.2% / 55.1% / 57.2%</strong> and average durations of <strong>64–131 seconds</strong>. Combined: <strong>~23,600 sessions, 1 directly-attributed conversion</strong>. The pages are not non-converting — they have no on-page conversion element and refer visitors via the hero CTA to /contact, where form_submit fires and credit lands. Applying the site-wide 0.32% conv rate as a conservative referral-attribution floor: <strong>~76 estimated conversions/year originate from service-page traffic</strong>. (Tighter funnel estimate using /contact's 3.97% CR × an assumed 10% service-page → /contact CTR ≈ 0.40% — same order of magnitude as the floor.)</li>
+</ol>
+<p>The conversion architecture is <strong>partially functional but structurally and operationally broken</strong>:
+   - <strong>No inline intake form on the page itself.</strong> The only on-page form is a footer newsletter widget (<code>id="email-form"</code>, single email field, label "Subscribe"). The 4-input intake form (Name + Email + Phone + Message) exists only on home, /admissions, and /contact.
+   - <strong>Hero CTA "Start your treatment here" → /contact</strong> is present on 5 of 6 service pages (missing on <code>/inpatient</code> root). When clicked, conversion fires on /contact and is credited to /contact — the service page gets credit for the session but not the conversion (the +222 conversions on /contact partially come from this flow).
+   - <strong>"Call Us" button at the end of each page</strong> is the user-mystery one — and on the 3 outpatient pages it dials a wrong number: visible text says "718-520-1513" (Bronx) / "718-653-1537" (Queens) / "845-225-5202" (Carmel), but the underlying <code>tel:</code> link on all three goes to <strong><code>tel:7178961880</code></strong> — a Pennsylvania-area-code number (717-896-1880). Anyone tapping "Call Us" on an outpatient page calls a wrong number, conversion never happens. The inpatient pages dial correctly (888-227-4641 + 845-225-3400), though <code>/inpatient/detox-program</code> and <code>/inpatient/adult-rehabilitation</code> show a visible-text typo ("845-227-4641" — number doesn't exist; tel: link correctly goes to 845-225-3400).
+   - <strong>Tap-to-call is not tracked as a conversion</strong> — <code>click</code> event count site-wide is 988 in 90d, so any successful tap-to-call from an inpatient page is unmeasured.</p>
+<p><strong>Page-level directly-attributed conversion rates</strong> (what GA4 reports today): 0.004% on service pages vs 0.71% on home vs 3.97% on /contact vs 2.99% on /admissions. The service-page rate is artificially zero because there is no on-page form to fire form_submit on — the conversion fires downstream and credit follows the form. <strong>Page-level effective conversion rate</strong> (referred attribution): ~0.32% on service pages (site-wide floor), and likely higher on the inpatient pages where intent is closer to bottom-funnel. The structural fix is twofold: (a) deploy the inline intake form on all 6 service pages so conversion can fire <em>on</em> the service page (lift estimate: +200–470 conv/year on a 1–2% page-level target, of which <strong>~76 conv/year is attribution recapture</strong> — already happening, just credited to /contact — and <strong>~125–400 conv/year is genuine net new</strong> from visitors who don't click through to /contact today), and (b) fix the broken outpatient <code>tel:</code> links so the phone path actually works. Item (b) is a 30-minute Webflow edit; item (a) is the bigger lift.</p>
+<ol start="2">
+<li>
+<p><strong>Top 3 pages drive 97% of all 531 annual conversions.</strong> Home: 231 conv / 32,555 sess. /contact: 222 conv / 5,588 sess. /admissions: 63 conv / 2,107 sess. <strong>Everything else combined: ~15 conv.</strong> The dominant conversion event (170 of 178 90-day conversions = 96%) is <code>form_submit</code>. Tap-to-call events are not tracked as conversions — the <code>click</code> event count site-wide is 988 in 90d, so any visitor who taps a phone link from a service page is invisible. Secondary signal: of the 522 form_starts in 90d, only 170 complete = <strong>33% form-completion rate</strong> — a separate field-level CRO issue (likely the required Phone field).</p>
+</li>
+<li>
+<p><strong>Three indexable doorway / duplication exposures.</strong> (a) 71 templated <code>/suburb/</code> pages target small CDPs ("Holistic Addiction Treatment Center in Carmel Hamlet, NY", "Effective Rehab Center in Kent Lakes NY") with shared boilerplate text — they pull 348 clicks / 127K impressions / 365d (0.27% CTR), so they're not delivering value but they are <em>exposure</em>. (b) 4 of 5 <code>/service/</code> pages have city-modifier duplicates at <code>/service/&lt;name&gt;-in-carmel-hamlet-ny</code> (equine therapy, fitness/recreation, MAT, psychiatric) with 39% body-text similarity to their non-suffixed originals — both indexable, internal cannibalization. (c) The homepage <code>og:description</code> meta tag contains the literal text <strong>"Bold Steps Behavioral Health is the best drug rehab in Harrisburg PA that empowers people struggling with behavioral health and substance abuse issues."</strong> — wrong-brand boilerplate, live in production. (Confirmed via raw HTTP fetch + regex against homepage HTML — not WebFetch, which would have missed it.)</p>
+</li>
+<li>
+<p><strong>Schema deployment is bare; meta descriptions are empty.</strong> Homepage carries only <code>Organization</code> JSON-LD (no <code>MedicalBusiness</code>, <code>MedicalClinic</code>, or <code>LocalBusiness</code>). The 6 service pages have <strong>zero JSON-LD</strong>. The 3 outpatient location pages have <strong>zero JSON-LD</strong>. The 469 blog posts have <strong>zero <code>Article</code> / <code>BlogPosting</code></strong>. The <code>&lt;meta name="description"&gt;</code> tag is empty across all 19 non-homepage URLs sampled (raw HTML). This is unrecovered schema surface area in a YMYL vertical where Google weighs structured-data signals heavily for trust + clinical context. Also missing: review aggregate (the /reviews page renders no JSON-LD), team/author pages (none exist).</p>
+</li>
+<li>
+<p><strong>Arms Acres ranks nowhere in the top 30 organic for any of 26 priority geo-anchored commercial queries</strong> (DataForSEO Live SERP, US-default location). The clicks the site does get from organic come almost entirely from informational blog content — three-quarters of all 14.5M impressions / 365d come from the blog. Top blog pages are pulling massive impressions on questions that have no commercial intent for Arms Acres: "mix alcohol and tylenol" (767K imp), "hiccups when drunk" (692K imp), "diflucan and alcohol" (302K imp), "valtrex and alcohol" (143K imp). These pages drive ~zero conversions (Organic Search converts at 0.025% non-GBP).</p>
+</li>
+<li>
+<p><strong>GBP reality is worse than expected.</strong> Two claimed Arms Acres GBP listings exist (DataForSEO Business Listings + Maps SERP 2026-05-11):
+   - <strong>Inpatient main</strong> ("Arms Acres: Inpatient Addiction Treatment | Drug &amp; Alcohol Detox Center In New York") at 75 Seminary Hill Rd, Carmel: <strong>3.2★ / 128 reviews</strong>. Category: Addiction treatment center + 4 secondary categories. Claimed. Place ID <code>ChIJwdGAVwxN3YkR9n3sBY9ccZY</code>.
+   - <strong>Outpatient Carmel</strong> titled <strong>"Arm Acres Outpatient Clinic - Carmel NY"</strong> (missing the "s" in the brand name) at 21 Old Rte 6, Carmel: <strong>3.3★ / 7 reviews</strong>. Category: Addiction treatment center, no secondary categories. Claimed. Place ID <code>ChIJ-9-BhN5N3YkR6pyWXMLweIk</code>.</p>
+</li>
+</ol>
+<p>Three compounding issues:
+   - <strong>Brand name is misspelled on the outpatient GBP</strong> ("Arm Acres" vs "Arms Acres") — splits brand-search attribution and signals operational neglect to Google
+   - <strong>Both Carmel GBPs sit at 3.2–3.3 stars</strong> — for a 40+-year-old OASAS-licensed Joint-Commission-accredited 191-bed institution this is a reputation crisis; review velocity has clearly never been a programmatic priority
+   - <strong>The outpatient location has only 7 reviews after years of operation</strong> — likely the result of no review-generation program</p>
+<p>At Carmel coordinates the misspelled outpatient GBP ranks #1 across 10 priority queries — not because the listing is strong but because the local competitive set in Putnam County is thin (the #1 organic competitor at Carmel coords is the Arm Acres outpatient itself; #2 for <code>detox</code> is ShopRite of Carmel, a grocery store).</p>
+<ol start="7">
+<li><strong>GBP map-pack reality — all 4 locations now confirmed (2026-05-11, corrected from earlier draft):</strong> Arms Acres operates <strong>4 claimed GBPs</strong> — I missed the Queens listing in my initial DataForSEO Business Listings search. Direct visual verification surfaced it. Updated picture:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>GBP</th>
+<th>Address</th>
+<th style="text-align: center;">Rating</th>
+<th style="text-align: center;">Reviews</th>
+<th>Status</th>
+<th>Phone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inpatient main</td>
+<td>75 Seminary Hill Rd, Carmel Hamlet NY 10512</td>
+<td style="text-align: center;"><strong>3.2★</strong></td>
+<td style="text-align: center;"><strong>133</strong></td>
+<td>Open 24h, claimed, 4 secondary categories</td>
+<td>888-227-4641</td>
+</tr>
+<tr>
+<td>Carmel outpatient</td>
+<td>21 Old Rte 6, Carmel Hamlet NY 10512</td>
+<td style="text-align: center;">3.3★</td>
+<td style="text-align: center;"><strong>7</strong></td>
+<td>claimed; <strong>brand misspelled as "Arm Acres" (missing 's')</strong></td>
+<td>845-225-5202</td>
+</tr>
+<tr>
+<td><strong>Bronx outpatient</strong></td>
+<td><strong>3584 Jerome Ave, Bronx NY 10467</strong></td>
+<td style="text-align: center;">3.4★</td>
+<td style="text-align: center;">9</td>
+<td>claimed, exists, but <strong>not ranking in top 30</strong> for Bronx queries</td>
+<td>718-653-1537</td>
+</tr>
+<tr>
+<td><strong>Queens outpatient</strong></td>
+<td><strong>90-02 161st St, Jamaica NY 11432</strong></td>
+<td style="text-align: center;"><strong>2.2★</strong></td>
+<td style="text-align: center;"><strong>16</strong></td>
+<td>claimed, exists, but <strong>not ranking</strong> + <strong>lowest rating of all 4</strong> — reputation crisis</td>
+<td>718-520-1513</td>
+</tr>
+</tbody>
+</table>
+<p>Critical issues compound:
+   - <strong>All 4 GBPs are below 4★.</strong> Inpatient at 3.2 / 133 reviews after 40+ years of operation is the largest single reputation gap. Queens at 2.2★ is the most acute.
+   - <strong>Carmel outpatient brand name is misspelled</strong> ("Arm Acres") — signals operational neglect to Google and splits brand-search attribution.
+   - <strong>Bronx + Queens have empty secondary categories.</strong> Inpatient has 4 (Alcoholism treatment program, Mental health clinic, Mental health service, Rehabilitation center) — outpatients have <strong>none</strong>.
+   - <strong>Bronx + Queens GBPs are invisible in their local-pack queries</strong> despite being claimed. At Bronx coords, top-1 is <code>Bronx Recovery</code> (4.6★/9rev); at Queens coords, top-1 is <code>Cornerstone of Medical Arts Center</code> (4.1★/203rev). Both are realistically displaceable through review-velocity + category-completion work — but the gap is wide.</p>
+<p>The reframe: <strong>the M1 GMB action set is not "claim missing GBPs" — it's "fix the 4 GBPs that exist".</strong> Specifically: (a) fix Carmel outpatient spelling; (b) add 4 secondary categories to each outpatient (mirror the inpatient set); (c) launch programmatic review-velocity work prioritizing Queens (2.2★) → Carmel outpatient (7 reviews) → Inpatient (3.2★/133); (d) audit photo / Q&amp;A / posts / service-list completeness on each.</p>
+<ol start="8">
+<li><strong>Website displays the WRONG phone numbers on Bronx + Queens outpatient pages — they're cross-swapped, AND the <code>tel:</code> link goes to a Pennsylvania number.</strong> Triple-compounding bug:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>Visible "Call Us" text shown to user</th>
+<th>tel: link dials</th>
+<th>Correct phone (per GBP)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/outpatient/bronx-outpatient</code></td>
+<td><strong>718-520-1513</strong> (this is the Queens phone)</td>
+<td><strong><code>tel:7178961880</code></strong> (Pennsylvania)</td>
+<td>Should be <strong>718-653-1537</strong></td>
+</tr>
+<tr>
+<td><code>/outpatient/queens-outpatient</code></td>
+<td><strong>718-653-1537</strong> (this is the Bronx phone)</td>
+<td><strong><code>tel:7178961880</code></strong> (Pennsylvania)</td>
+<td>Should be <strong>718-520-1513</strong></td>
+</tr>
+<tr>
+<td><code>/outpatient/carmel-outpatient</code></td>
+<td>845-225-5202 (correct)</td>
+<td><strong><code>tel:7178961880</code></strong> (Pennsylvania)</td>
+<td>tel: should be 845-225-5202</td>
+</tr>
+</tbody>
+</table>
+<p>Net effect: a Bronx visitor sees the Queens phone displayed → calls the Pennsylvania number → conversation lost / wrong-number disconnect. Same shape for Queens visitor. <strong>Both displayed text AND tel: link are wrong on all 3 outpatient pages.</strong> The Carmel outpatient page has correct display text but the tel: link still dials Pennsylvania. This is an M1 action #1a expansion — not just "fix broken tel: links" but "fix the displayed phone numbers, which are swapped between Bronx and Queens pages".</p>
+<h3 id="strategic-focus-statement">Strategic Focus statement</h3>
+<blockquote>
+<p><em>Push </em><em>inpatient detox + adult rehab + MAT</em><em> as the Carmel/Hudson Valley anchor and </em><em>outpatient (Carmel / Bronx / Queens)</em><em> as the NYC-side expansion, by </em><em>(a) deploying the 4-input intake form to all 6 service pages immediately to fix the catastrophic CRO gap, (b) fixing the GBP misspelling + launching a review-velocity program to lift the 3.2★ inpatient + 3.3★ outpatient ratings, (c) auditing whether claimed Bronx + Queens outpatient GBPs exist (or building the case for new claims) since both outpatient locations are currently invisible in the map pack, (d) replacing the wrong-brand <code>og:description</code> and building out LocalBusiness / MedicalClinic / Service schema, (e) rebuilding the 6 service-page narratives with insurance disclosure + trust signals (OASAS, Joint Commission, 1982 founded, 191-bed, employee-owned) currently missing, and (f) clustering the legit core-topic blog content under the service pages to harvest topical authority that's currently uncaptured</em><em>. In parallel, </em><em>delete the 71 suburb doorway pages and 301 the 4 city-modifier service duplicates to remove the doorway-page exposure</em><em>. Lean on </em><em>the brand-aware Direct + GMB-click channel</em><em> (51,739 sess / 259 conv + 5,411 sess / 43 conv 365d = ~57K sess / 302 conv = 57% of all conversions) as the resilience layer keeping revenue flowing during the rebuild — but recognize that the channel is at-risk because the underlying GBPs have weak ratings.</em></p>
+</blockquote>
+<h3 id="top-7-month-1-actions">Top 7 Month 1 actions</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Why this is M1 priority</th>
+<th>Department owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Deploy the 4-input intake form (Name + Email + Phone + Message — same Webflow template currently on home / admissions / contact) to all 6 service pages</strong></td>
+<td>Single largest leverage in the entire site. Adds the conversion-capture layer to 24,000+ existing high-engagement annual sessions. The pages are already referring an estimated ~76 conv/year to /contact (sess × 0.32% site CR) — this fix <strong>(a)</strong> recaptures that attribution on-page so reporting is honest and <strong>(b)</strong> lifts effective CR from the ~0.32% referred-floor toward a 1–2% on-page target. At 2% page-level rate that's +396 net new conv/year against a 531-baseline — ~75% lift.</td>
+<td>On-page (Aleksa Popovic) with web/dev support</td>
+</tr>
+<tr>
+<td>1a</td>
+<td><strong>Fix the phone-number mess on outpatient pages (triple bug):</strong> (i) Displayed text on <code>/outpatient/bronx-outpatient</code> shows the Queens number (718-520-1513) — should show <strong>718-653-1537</strong>; (ii) Displayed text on <code>/outpatient/queens-outpatient</code> shows the Bronx number (718-653-1537) — should show <strong>718-520-1513</strong>; (iii) all 3 outpatient pages' <code>tel:</code> links point to a Pennsylvania number (<code>tel:7178961880</code>) — should match the GBP-canonical number for each page. <strong>Verify against GBP:</strong> Bronx GBP phone 718-653-1537 (3584 Jerome Ave) ; Queens GBP phone 718-520-1513 (90-02 161st St Jamaica) ; Carmel outpatient GBP phone 845-225-5202 (21 Old Rte 6). Also fix the visible-text phone typo on <code>/inpatient/detox-program</code> + <code>/inpatient/adult-rehabilitation</code> ("Call Us 845-227-4641" → "845-225-3400").</td>
+<td>Critical mid-funnel bug — every visitor sees the WRONG local number AND any tap-to-call dials a Pennsylvania number. Conversion path is doubly broken. ~30-minute Webflow edit, zero risk.</td>
+<td>On-page (Aleksa)</td>
+</tr>
+<tr>
+<td>1b</td>
+<td><strong>Delete the 10 legacy sitemaps from GSC</strong> (<code>/sitemap/sitemap1.xml</code> through <code>/sitemap/sitemap10.xml</code>, last downloaded April 2018, collectively claiming ~103,000 URLs of which 13 are indexed)</td>
+<td>8-year-old sitemaps are a site-quality-signal disaster: they tell Google "we have 100K URLs" when the site has 529. 5-minute fix in GSC UI (Settings → Sitemaps → Remove). High-leverage, zero risk — these sitemap paths return 404 on the live site already.</td>
+<td>On-page (Aleksa) — has GSC access</td>
+</tr>
+<tr>
+<td>1c</td>
+<td><strong>File disavow against active PBN attack</strong> — 5 <code>seo-anomaly-s*.xyz</code> domains (spam scores 73–99, first seen April-May 2026) + 7 nonsense <code>blogspot.com</code> PBN domains. Use Google Search Console Disavow Tool.</td>
+<td>Active toxic backlink attack in progress over the last 4 weeks — either negative SEO from a competitor or stale PBN network re-activating. 30-minute file generation + 5-minute disavow submission.</td>
+<td>Off-page (Julce) — file the disavow.txt</td>
+</tr>
+<tr>
+<td>1d</td>
+<td><strong>Fix the 12 broken KEEP+KEEP-AUDIT URLs surfaced by DataForSEO OnPage</strong> (per Section 1.6a): (i) Decide on the 5 removed-program URLs — restore or 301-to-closest-equivalent (<code>/inpatient/young-adult-services</code>, <code>/inpatient/veteran-substance-abuse-program</code>, <code>/service/family-treatment-program</code> + carmel-hamlet duplicate, <code>/service/conferences-and-education</code>); (ii) 301 the 5 alias URLs (<code>/contact-us</code> → <code>/contact</code>, <code>/admissions.html</code> → <code>/admissions</code>, <code>/admissions/insurance</code> to admissions or contact, <code>/contact-me</code> and <code>/contactus</code> to <code>/contact</code>); (iii) Fix Webflow tel: URL bug on <code>/outpatient/carmel-outpatient</code> and <code>/services</code> (links rendered as relative URLs instead of <code>tel:</code> protocol — same root cause as M1 #1a tel: links).</td>
+<td>These URLs are in GSC's index because Google crawled them via internal links or old sitemaps. They contribute to the 8.47% 404 rate from Crawl Stats. Fix in one Webflow pass + GSC URL Inspection re-submit.</td>
+<td>On-page (Aleksa)</td>
+</tr>
+<tr>
+<td>1e</td>
+<td><strong>Delete or NOINDEX the 3 off-topic blog posts with NO title</strong> flagged by OnPage: <code>/blog/list-of-celebrities-who-died-overdose</code>, <code>/blog/valtrex-valacyclovir-and-alcohol</code>, <code>/blog/alcohol-while-taking-macrobid</code>. All 3 are also off-topic per the topical-overlay analysis (Section 1.5). Easy unanimous decision.</td>
+<td>These pages exist with zero <code>&lt;title&gt;</code> tag — both an on-page error and an off-topic content fit. Quick win.</td>
+<td>On-page (Aleksa)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Replace the wrong-brand <code>og:description</code> boilerplate on homepage + audit all <code>og:</code> / <code>meta description</code> site-wide; write proper meta descriptions for the 19 sampled empty URLs (homepage + service + location + core)</strong></td>
+<td>Wrong-brand boilerplate is a quality + reputation signal failure. Empty meta descriptions on commercial pages = Google fills it from on-page text and the brand surrenders SERP snippet control.</td>
+<td>On-page (Aleksa Popovic)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>301 the 4 <code>/service/&lt;name&gt;-in-carmel-hamlet-ny</code> duplicates to their non-suffixed originals; remove from sitemap</strong></td>
+<td>Resolves internal cannibalization that's already costing the canonical service pages organic equity. Low effort, immediately reversible.</td>
+<td>On-page (Aleksa Popovic) + Tech</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Begin retirement of the 71 <code>/suburb/</code> doorway pages — confirm none rank for a converting query, then DELETE+REDIRECT to <code>/service-areas</code> or <code>/outpatient/&lt;closest-location&gt;</code></strong></td>
+<td>Reduces sitewide doorway-page exposure, removes a Google quality-systems risk surface, consolidates link equity onto pages that actually serve buyers. 365d data: 348 clicks / 127K imp / 0 directly-attributed conv. Even applying the referred-attribution test (clicks × 0.32% site CR ≈ <strong>1.1 effective referred conv/year</strong>), the retained value is below noise — and 301-redirecting to <code>/service-areas</code> preserves that floor on the redirect target. Effectively zero downside.</td>
+<td>On-page (Aleksa Popovic) + Tech</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Schema deployment Phase 1 — model from Ascendant NY + Mountainside (reference URLs in Section 1.7a)</strong>: Homepage <code>MedicalClinic</code> + <code>LocalBusiness</code> + <code>Place</code> (Ascendant model) ; service pages <code>MedicalWebPage</code> + <code>BreadcrumbList</code> + <code>FAQPage</code> (Mountainside MAT model) ; outpatient pages <code>MedicalBusiness</code> (each = separate location) ; admissions + reviews + homepage <code>AggregateRating</code> + 5+ <code>Review</code> blocks (Ascendant model).</td>
+<td>Closes the largest single schema gap vs converting competitors. Recovery vertical has zero AI Overview presence today, but Ascendant + Mountainside demonstrate the schema stack that builds LLM-citation eligibility + traditional rich-result eligibility. Validate via HQDM 3-layer pre-deploy gate per SOP.</td>
+<td>On-page (Aleksa Popovic)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>GMB correction package — all 4 GBPs need work (revised 2026-05-11):</strong> (a) fix "Arm Acres" → "Arms Acres" spelling on the Carmel outpatient GBP; (b) add 4 secondary categories to each of the 3 outpatient GBPs (currently empty — mirror inpatient's set: Alcoholism treatment program, Mental health clinic, Mental health service, Rehabilitation center); (c) launch programmatic <strong>review-velocity SOP</strong> prioritized by acuity: <strong>Queens 2.2★/16 first (most acute)</strong> → Carmel outpatient 7 reviews → Inpatient 3.2★/133 → Bronx 3.4★/9; (d) photo + Q&amp;A + post-cadence + services-list completeness audit on each of the 4 GBPs (only inpatient has Services listed); (e) GBP-linked NAP audit (website pages currently display WRONG phones — see action #1a).</td>
+<td>The Maps channel converts at 1.96% organic + 0.79% click-tagged. All 4 GBPs are below 4★. Queens 2.2★ is the single most-acute reputation crisis. Audit + corrections package; HQDM GMB team executes.</td>
+<td>GMB team (audit owned by Aleksandar; corrections land on GMB dept)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Add tap-to-call event tracking + form-funnel field-level analysis</strong></td>
+<td>Tap-to-call clicks are currently invisible to GA4 (<code>click</code> event = 988 site-wide 90d), which means a non-trivial conversion path is uncounted. Form_start → form_submit completion is 33% — the field abandoning needs identification (likely Phone). Both are measurement-and-CRO fixes that gate the visibility of all other M1+M2 work.</td>
+<td>Tech / On-page</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-current-state-diagnosis">1. Current State Diagnosis</h2>
+<h3 id="11-traffic-conversion-shape">1.1 Traffic + conversion shape</h3>
+<p><strong>GA4 — 365 days:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total sessions</td>
+<td style="text-align: right;">167,798</td>
+</tr>
+<tr>
+<td>Total conversions</td>
+<td style="text-align: right;">531</td>
+</tr>
+<tr>
+<td>Site-wide conv rate</td>
+<td style="text-align: right;"><strong>0.32%</strong></td>
+</tr>
+<tr>
+<td>Pages with any sessions</td>
+<td style="text-align: right;">772</td>
+</tr>
+<tr>
+<td>Pages with any conversions</td>
+<td style="text-align: right;">~20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conversion event mix (90d):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th style="text-align: right;">Count</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>form_submit (the conversion)</td>
+<td style="text-align: right;">170</td>
+<td><strong>96% of all 178 90d conversions</strong></td>
+</tr>
+<tr>
+<td>form_start</td>
+<td style="text-align: right;">522</td>
+<td>33% form-completion rate (170/522)</td>
+</tr>
+<tr>
+<td>user_engagement</td>
+<td style="text-align: right;">19,898</td>
+<td>–</td>
+</tr>
+<tr>
+<td>click</td>
+<td style="text-align: right;">988</td>
+<td>Tap-to-call NOT a conversion event</td>
+</tr>
+<tr>
+<td>file_download</td>
+<td style="text-align: right;">35</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conversion concentration by page (365d):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th style="text-align: right;">Sessions</th>
+<th style="text-align: right;">Conv</th>
+<th style="text-align: right;">Conv Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/ (home)</td>
+<td style="text-align: right;">32,555</td>
+<td style="text-align: right;"><strong>231</strong></td>
+<td style="text-align: right;">0.71%</td>
+</tr>
+<tr>
+<td>/contact</td>
+<td style="text-align: right;">5,588</td>
+<td style="text-align: right;"><strong>222</strong></td>
+<td style="text-align: right;">3.97%</td>
+</tr>
+<tr>
+<td>/admissions</td>
+<td style="text-align: right;">2,107</td>
+<td style="text-align: right;"><strong>63</strong></td>
+<td style="text-align: right;">2.99%</td>
+</tr>
+<tr>
+<td>/careers</td>
+<td style="text-align: right;">3,519</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0.28% (probably noise — careers shouldn't convert)</td>
+</tr>
+<tr>
+<td>/services</td>
+<td style="text-align: right;">2,110</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.05%</td>
+</tr>
+<tr>
+<td>/inpatient/detox-program</td>
+<td style="text-align: right;">4,770</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.02%</td>
+</tr>
+<tr>
+<td>/outpatient/carmel-outpatient</td>
+<td style="text-align: right;">3,192</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+<tr>
+<td>/inpatient</td>
+<td style="text-align: right;">5,938</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+<tr>
+<td>/inpatient/adult-rehabilitation</td>
+<td style="text-align: right;">4,032</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+<tr>
+<td>/outpatient/bronx-outpatient</td>
+<td style="text-align: right;">2,902</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+<tr>
+<td>/outpatient/queens-outpatient</td>
+<td style="text-align: right;">2,772</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+<tr>
+<td>Blog (top 20 individual posts, each)</td>
+<td style="text-align: right;">2,000–9,000 each</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read (page-level directly-attributed):</strong> 516 of 531 (97%) conversions concentrate on the top 3 pages — because those three pages are the only ones hosting the 4-input intake form. The remaining 469 blog posts + 6 service pages + 3 outpatient pages have no on-page form, so their visitors' conversions fire on /contact or /admissions and credit lands there.</p>
+<p><strong>Read (page-level effective via referral, conservative site-CR% floor):</strong> applying the 0.32% site-wide CR to each page's session count:</p>
+<table>
+<thead>
+<tr>
+<th>Page bucket</th>
+<th style="text-align: right;">Sessions</th>
+<th style="text-align: right;">Directly-attributed conv</th>
+<th style="text-align: right;">Estimated referred conv (sess × 0.32%)</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6 service pages</td>
+<td style="text-align: right;">23,606</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"><strong>~76</strong></td>
+<td>The "0 conv" framing was a measurement artifact, not a behavior signal</td>
+</tr>
+<tr>
+<td>Blog (top 469 posts)</td>
+<td style="text-align: right;">~140,000</td>
+<td style="text-align: right;">~0</td>
+<td style="text-align: right;"><strong>~450</strong></td>
+<td>The blog IS referring conversions — undercredited by orders of magnitude</td>
+</tr>
+<tr>
+<td>Service + outpatient (full 9)</td>
+<td style="text-align: right;">~23,600</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">~76</td>
+<td>Same dynamic, same fix</td>
+</tr>
+</tbody>
+</table>
+<p>The reframe matters because <strong>none of these pages are "non-converting"</strong> — they're all referring conversions to /contact and /admissions where the form is. The CRO work is <strong>(a) deploying on-page conversion elements so attribution surfaces</strong> (and so visitors who don't navigate to /contact still convert) and <strong>(b) improving the internal-link path from these pages into the funnel</strong>. It is <em>not</em> writing off these pages as dead. The same logic applies to the suburb doorways (Section 1.5) and core-topic blog posts (Section 1.5 audit) — apply traffic × CR% before deciding to delete on conversion grounds.</p>
+<h3 id="12-the-service-page-conversion-gap-the-diagnosis">1.2 The service-page conversion gap (the diagnosis)</h3>
+<p>Hypothesis tested: <em>Service pages show 0 directly-attributed conversions not because they don't convert, but because (a) they lack an on-page intake form, (b) the form they do have is a newsletter, (c) GA4 credits conversions to wherever form_submit fires — which is /contact or /admissions after the visitor clicks the hero CTA and navigates away.</em> The pages ARE converting; the attribution lands on the next URL.</p>
+<p>Confirmation: raw HTML inspection of every service page returned the same result — <code>&lt;form id="email-form" class="footer8_form" method="get"&gt;</code> with a single <code>&lt;input name="Email 2"&gt;</code>. Submit label: blank. Form text: "subscribe". This is identical across all 6 service pages.</p>
+<p>The 4-input intake form (<code>&lt;form id="wf-form-Application" class="contact7_form contact" method="get"&gt;</code> with Name + Email + Phone + Message + Continue button) appears on home, /admissions, and /contact only.</p>
+<p>The Webflow template for the intake form is reusable. Adding it as a section block on each service page is a standard Webflow component-paste operation — no engineering build required. The reason it was never deployed to service pages appears to be a templating choice when those pages were initially built, not a technical limitation.</p>
+<p><strong>Quantification of expected lift (conservative):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Service page</th>
+<th style="text-align: right;">Sessions (365d)</th>
+<th style="text-align: right;">Directly-attributed conv</th>
+<th style="text-align: right;">Est. referred conv (sess × 0.32%)</th>
+<th style="text-align: right;">Est. conv at 2% on-page rate</th>
+<th style="text-align: right;">Net new lift (target − referred)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/inpatient</td>
+<td style="text-align: right;">5,938</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">+100</td>
+</tr>
+<tr>
+<td>/inpatient/detox-program</td>
+<td style="text-align: right;">4,770</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">+79</td>
+</tr>
+<tr>
+<td>/inpatient/adult-rehabilitation</td>
+<td style="text-align: right;">4,032</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">+68</td>
+</tr>
+<tr>
+<td>/outpatient/carmel-outpatient</td>
+<td style="text-align: right;">3,192</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">+54</td>
+</tr>
+<tr>
+<td>/outpatient/bronx-outpatient</td>
+<td style="text-align: right;">2,902</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">+49</td>
+</tr>
+<tr>
+<td>/outpatient/queens-outpatient</td>
+<td style="text-align: right;">2,772</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">+46</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>23,606</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td style="text-align: right;"><strong>~76</strong></td>
+<td style="text-align: right;"><strong>472</strong></td>
+<td style="text-align: right;"><strong>+396 net new</strong> (plus ~76 in attribution recapture)</td>
+</tr>
+</tbody>
+</table>
+<p>Two ways to read the lift:
+- <strong>Net new conversions</strong> (visitors who would NOT have navigated to /contact without an on-page form): +396 conv/year at a 2% target rate ≈ <strong>+75% on the 531-baseline</strong>.
+- <strong>Attribution recapture</strong> (visitors who currently DO navigate to /contact and convert there, but would convert on-page if the form existed): ~76 conv/year shift in page-level credit — no change in total site conversions, but reporting becomes accurate and the page-level CR becomes legible.</p>
+<p>A 2% page-level conversion rate is conservative (homepage runs 0.71% with weaker intent; /contact + /admissions run 3-4% with downstream intent). Service pages should land between those bounds — engaged visitors reading clinical content with their specific service in mind. Even at 1% page-level rate the net new is +160 = +30% lift.</p>
+<h3 id="13-brand-vs-non-brand-split-channel-mix">1.3 Brand vs non-brand split + channel mix</h3>
+<p><strong>GSC — branded vs non-branded (365d):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th style="text-align: right;">Queries</th>
+<th style="text-align: right;">Impressions</th>
+<th style="text-align: right;">Clicks</th>
+<th style="text-align: right;">CTR</th>
+<th style="text-align: right;">Imp Share</th>
+<th style="text-align: right;">Click Share</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Non-branded</td>
+<td style="text-align: right;">224,790</td>
+<td style="text-align: right;">5,089,634</td>
+<td style="text-align: right;">17,133</td>
+<td style="text-align: right;"><strong>0.34%</strong></td>
+<td style="text-align: right;">98.6%</td>
+<td style="text-align: right;"><strong>59.8%</strong></td>
+</tr>
+<tr>
+<td>Branded</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">72,171</td>
+<td style="text-align: right;">11,532</td>
+<td style="text-align: right;"><strong>15.98%</strong></td>
+<td style="text-align: right;">1.4%</td>
+<td style="text-align: right;"><strong>40.2%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong> Branded queries get 1.4% of impressions but 40.2% of clicks. Non-branded queries account for 98.6% of impressions but only 60% of clicks at a 0.34% CTR — Arms Acres is showing up for non-brand queries (largely informational blog) but rarely getting the click, because the position is mid-page-1-to-mid-page-2 and the snippet is weak (empty meta description = Google-generated).</p>
+<p><strong>GA4 — acquisition (365d):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th style="text-align: right;">Sessions</th>
+<th style="text-align: right;">Conv</th>
+<th style="text-align: right;">Conv Rate</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Organic Search (google)</td>
+<td style="text-align: right;">74,566</td>
+<td style="text-align: right;"><strong>81</strong></td>
+<td style="text-align: right;"><strong>0.11%</strong></td>
+<td>Massive volume, very low conv — informational blog dominates</td>
+</tr>
+<tr>
+<td>Direct</td>
+<td style="text-align: right;">51,739</td>
+<td style="text-align: right;"><strong>259</strong></td>
+<td style="text-align: right;"><strong>0.50%</strong></td>
+<td>Brand-aware visitors typing URL or via dark social</td>
+</tr>
+<tr>
+<td>Organic Search (gmb/click)</td>
+<td style="text-align: right;">5,411</td>
+<td style="text-align: right;"><strong>43</strong></td>
+<td style="text-align: right;"><strong>0.79%</strong></td>
+<td>The Maps-tagged subset — highest-converting Organic channel</td>
+</tr>
+<tr>
+<td>Referral (armsacres.com — internal redirect)</td>
+<td style="text-align: right;">3,668</td>
+<td style="text-align: right;"><strong>81</strong></td>
+<td style="text-align: right;"><strong>2.21%</strong></td>
+<td>Internal redirect chain — investigate for cleanup</td>
+</tr>
+<tr>
+<td>Organic Search (bing)</td>
+<td style="text-align: right;">3,631</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0.41%</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Organic Search (GMB/organic)</td>
+<td style="text-align: right;">1,937</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">1.96%</td>
+<td>Other GBP-attributed Organic traffic</td>
+</tr>
+<tr>
+<td>LLM referrers combined (chatgpt + gemini + perplexity + claude + you.com)</td>
+<td style="text-align: right;">~285</td>
+<td style="text-align: right;">~1</td>
+<td style="text-align: right;">0.35%</td>
+<td>Modest volume; will track as quarterly trend</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Brand-aware conversion path (Direct + GMB combined): ~57,150 sessions / 302 conv = 0.53% conv rate / 57% of total conversions</strong> — this is the resilience layer.</p>
+<p><strong>Non-brand path (google + bing organic non-GBP): ~78,200 sessions / 96 conv = 0.12% conv rate</strong> — this is the leak surface that the service-page intake-form deployment is designed to capture.</p>
+<h3 id="14-geographic-reality">1.4 Geographic reality</h3>
+<p><strong>GA4 90d geography (top 15):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Country / Region</th>
+<th style="text-align: right;">Sessions</th>
+<th style="text-align: right;">Conv</th>
+<th style="text-align: right;">Conv Rate</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>US — New York</td>
+<td style="text-align: right;">10,853</td>
+<td style="text-align: right;"><strong>61</strong></td>
+<td style="text-align: right;"><strong>0.56%</strong></td>
+<td>The actual customer geography. <strong>54% of US conversions.</strong></td>
+</tr>
+<tr>
+<td>US — California</td>
+<td style="text-align: right;">2,466</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+<td>Wasted blog-content traffic</td>
+</tr>
+<tr>
+<td>US — Texas</td>
+<td style="text-align: right;">1,970</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.05%</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>US — Virginia</td>
+<td style="text-align: right;">1,855</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.22%</td>
+<td>Same — likely informational blog</td>
+</tr>
+<tr>
+<td>UK — England</td>
+<td style="text-align: right;">1,852</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+<td>Wasted blog traffic — foreign geography</td>
+</tr>
+<tr>
+<td>US — Florida</td>
+<td style="text-align: right;">1,579</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.13%</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Singapore</td>
+<td style="text-align: right;">1,542</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+<td>Wasted — foreign</td>
+</tr>
+<tr>
+<td>US — New Jersey</td>
+<td style="text-align: right;">1,531</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">0.59%</td>
+<td>Adjacent NY catchment</td>
+</tr>
+<tr>
+<td>US — Illinois</td>
+<td style="text-align: right;">1,371</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+<td>Wasted</td>
+</tr>
+<tr>
+<td>US — Connecticut</td>
+<td style="text-align: right;">890</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.11%</td>
+<td>Adjacent (Danbury area)</td>
+</tr>
+<tr>
+<td>US — Massachusetts</td>
+<td style="text-align: right;">859</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">–</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong>
+- <strong>The converting geography is New York + adjacent NJ/CT</strong> — ~13,300 sessions / 71 conversions in 90d = ~21% of all sessions but ~76% of US conversions.
+- <strong>California, Texas, Virginia, UK, Singapore + others</strong> (combined ~12,000+ sessions/90d) are blog-content traffic with ~zero local-intent conversion potential.
+- This is a <strong>content-distribution + cleanup signal</strong>, not a geo-targeting fix — the foreign / out-of-state traffic is captured by informational content, which is fine if the content is topically core (per the topical-relevance correction).</p>
+<h3 id="15-url-inventory-cleanup-playbook">1.5 URL inventory + cleanup playbook</h3>
+<p><strong>Sitemap inventory (529 URLs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">GSC clicks 365d</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Blog</td>
+<td style="text-align: right;">424</td>
+<td style="text-align: right;">63,106</td>
+<td>91% of all clicks, ~0 conversions</td>
+</tr>
+<tr>
+<td>Suburb doorway</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">348</td>
+<td>Templated city-modifier pages, low CTR, doorway-pattern</td>
+</tr>
+<tr>
+<td>Other / misc</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">—</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Core (about, contact, admissions, etc.)</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">3,499</td>
+<td>Working surface</td>
+</tr>
+<tr>
+<td>Inpatient pages</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1,238</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Outpatient pages</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2,084</td>
+<td>–</td>
+</tr>
+<tr>
+<td>Real services</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">112</td>
+<td>Equine, fitness, MAT, psychiatric, recovery-coach, alumni</td>
+</tr>
+<tr>
+<td>Service-in-carmel-hamlet duplicates</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">103</td>
+<td>39% body-text duplicate of originals</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision matrix output (framework + topical-relevance overlay):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Adjusted decision</th>
+<th style="text-align: right;">URLs</th>
+<th style="text-align: right;">Clicks 365d</th>
+<th style="text-align: right;">Imp 365d</th>
+<th style="text-align: right;">Conv 365d</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KEEP-AUDIT (topical core blog)</td>
+<td style="text-align: right;">247</td>
+<td style="text-align: right;">1,767</td>
+<td style="text-align: right;">1,359,313</td>
+<td style="text-align: right;">0</td>
+<td>Legit topical content reclassified from framework-NOINDEX based on topical relevance to addiction-treatment vertical</td>
+</tr>
+<tr>
+<td>AUDIT (unclassified blog + ambiguous)</td>
+<td style="text-align: right;">256</td>
+<td style="text-align: right;">44,996</td>
+<td style="text-align: right;">6,192,572</td>
+<td style="text-align: right;">0</td>
+<td>Needs human-pass topical review</td>
+</tr>
+<tr>
+<td>DELETE+REDIRECT (suburb doorways)</td>
+<td style="text-align: right;">72</td>
+<td style="text-align: right;">348</td>
+<td style="text-align: right;">127,322</td>
+<td style="text-align: right;">0</td>
+<td>Templated city-modifier pages — kill all</td>
+</tr>
+<tr>
+<td>KEEP (homepage + core + service + outpatient pages)</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">21,124</td>
+<td style="text-align: right;">1,072,079</td>
+<td style="text-align: right;"><strong>528</strong></td>
+<td>The working surface, 99.4% of conv</td>
+</tr>
+<tr>
+<td>NOINDEX (off-topic blog with traffic)</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">13,642</td>
+<td style="text-align: right;">3,577,839</td>
+<td style="text-align: right;">1</td>
+<td>Drug-interaction junk pulling impressions with no commercial intent</td>
+</tr>
+<tr>
+<td>DELETE (off-topic + unclassified low-traffic blog)</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">311</td>
+<td style="text-align: right;">351,994</td>
+<td style="text-align: right;">0</td>
+<td>–</td>
+</tr>
+<tr>
+<td>KEEP-AUDIT (other)</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2,333</td>
+<td style="text-align: right;">146,011</td>
+<td style="text-align: right;">1</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key correction from Surfpoint-shape playbook:</strong> the topical-relevance overlay reclassifies 159 blog posts that the framework's pure-conv-data heuristic marked NOINDEX. Posts like "alcohol withdrawal symptoms", "intensive outpatient program iop", "medicaid cover drug and alcohol rehab", "aetna cover rehab treatment", "can gabapentin cause depression" are core-topical content that should remain indexed (and should likely be optimized + linked-from-services, not deleted).</p>
+<p><strong>Cleanup priority order:</strong></p>
+<ol>
+<li><strong>M1</strong>: 72 suburb doorway pages → 301 → relevant service-area or outpatient location</li>
+<li><strong>M1</strong>: 4 service <code>/service/&lt;name&gt;-in-carmel-hamlet-ny</code> duplicates → 301 → non-suffixed originals</li>
+<li><strong>M1</strong>: 14 off-topic blog posts that pull big traffic ("mix-alcohol-and-tylenol", "hiccups-when-drunk", "diflucan-and-alcohol", etc.) → NOINDEX (preserve link equity, stop ranking pollution)</li>
+<li><strong>M2</strong>: 47 off-topic + thin blog posts → DELETE</li>
+<li><strong>M2-M3</strong>: 256 AUDIT blog posts → human-pass review with content team to apply topical-relevance + cannibalization filter</li>
+</ol>
+<p><strong>GSC Crawl Stats (manual export, 89 days 2026-02-10 → ~2026-05-09):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hosts crawled</td>
+<td style="text-align: right;">www.armsacres.com (16,505), armsacres.com (455)</td>
+<td>97% canonical-host crawl share — clean</td>
+</tr>
+<tr>
+<td>Response code: OK (200)</td>
+<td style="text-align: right;"><strong>66.14%</strong></td>
+<td>Mediocre — 1 in 3 crawls hits redirects or errors</td>
+</tr>
+<tr>
+<td>Response code: 301 (redirect)</td>
+<td style="text-align: right;"><strong>17.72%</strong></td>
+<td>High; mostly the legacy 2018 sitemap URLs Google is still re-fetching</td>
+</tr>
+<tr>
+<td>Response code: 404 (not found)</td>
+<td style="text-align: right;"><strong>8.47%</strong></td>
+<td><strong>Real quality-signal concern</strong> — ~1,400 of every ~16,500 crawls hit 404s. Linked to the 10 legacy 2018 sitemaps (M1 #1b) + the suburb doorway pages already returning 404 on http:// versions</td>
+</tr>
+<tr>
+<td>Response code: 304 (not modified)</td>
+<td style="text-align: right;">7.64%</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>Avg response time</td>
+<td style="text-align: right;">123-270ms per day, ~150ms median</td>
+<td>Acceptable, not great</td>
+</tr>
+<tr>
+<td>Purpose breakdown</td>
+<td style="text-align: right;">93.43% Refresh, 6.57% Discovery</td>
+<td>Mature site — Google rarely discovering new pages, which means <strong>adding M2/M3 new pages will need explicit Indexing API push or fresh sitemap entries</strong></td>
+</tr>
+<tr>
+<td>Googlebot type</td>
+<td style="text-align: right;">86.77% Smartphone, 9.28% Desktop, 3.26% Other, 0.16% AdsBot</td>
+<td>Mobile-first indexing confirmed</td>
+</tr>
+<tr>
+<td>File type</td>
+<td style="text-align: right;">66.14% HTML, 25.36% Other (JS/CSS/images), 8.50% Unknown (failed)</td>
+<td>The 8.50% unknown/failed correlates with the 404 + 5xx + can't-reach responses</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong> Crawl-budget waste is real. ~26% of crawls (404 + 301) are landing on URLs Google shouldn't be re-fetching. The M1 cleanup of legacy sitemaps + suburb doorway 301-redirects → consolidate-target should drive the OK% back toward 80%+ within a quarter as Google re-evaluates.</p>
+<p><strong>Indexation truth (URL Inspection API, top 546 by 90-day impressions):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coverage state</th>
+<th style="text-align: right;">Count</th>
+<th style="text-align: right;">%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Submitted and indexed</td>
+<td style="text-align: right;">518</td>
+<td style="text-align: right;"><strong>94.9%</strong></td>
+</tr>
+<tr>
+<td>URL is unknown to Google</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1.8%</td>
+</tr>
+<tr>
+<td>Page with redirect</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.1%</td>
+</tr>
+<tr>
+<td>Discovered – currently not indexed</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1.1%</td>
+</tr>
+<tr>
+<td>Not found (404)</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.7%</td>
+</tr>
+<tr>
+<td>Crawled – currently not indexed</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.4%</td>
+</tr>
+</tbody>
+</table>
+<p>Indexation health is <strong>not</strong> the crisis at Arms Acres (unlike Surfpoint, which had a 756-page active deindexing event). The site has 518 of 546 inspected pages successfully indexed. The 28 non-PASS URLs are mostly old <code>http://</code> protocol versions of suburb doorways already in "page with redirect" state (Google has already cleaned those up partially — confirms the M1 doorway-deletion recommendation is low-risk). Canonical mismatch count: 0 (good).</p>
+<p><strong>Legacy sitemap exposure — separate quality-signal failure:</strong></p>
+<p>GSC currently has <strong>10 sitemaps from April 2018</strong> still submitted (<code>/sitemap/sitemap1.xml</code> through <code>/sitemap/sitemap10.xml</code>), last downloaded by Google in April 2018 (8 years ago). Collectively they reference <strong>~103,000 URLs</strong> but only <strong>13 of those are indexed</strong>. The sitemap paths themselves return 404 on the live site already (they were leftover from a pre-Webflow CMS migration). Google reads this as "this site claims 100K URLs and indexes 0.01% of them" — a textbook site-quality-signal failure.</p>
+<p><strong>Fix:</strong> delete the 10 legacy sitemaps from GSC's Submitted Sitemaps panel. 30-seconds-per-sitemap, 5 minutes total. Zero risk (the URLs don't exist on the live site anyway). Add as M1 action #1b.</p>
+<h3 id="16-core-web-vitals-passed-2026-05-11">1.6 Core Web Vitals — PASSED (2026-05-11)</h3>
+<p>Per Ace's PageSpeed Insights / CrUX Report screenshot:</p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">Value</th>
+<th>Threshold</th>
+<th style="text-align: center;">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Largest Contentful Paint (LCP)</strong></td>
+<td style="text-align: right;">1.3s</td>
+<td>&lt;2.5s</td>
+<td style="text-align: center;">✓ Green</td>
+</tr>
+<tr>
+<td><strong>Interaction to Next Paint (INP)</strong></td>
+<td style="text-align: right;">95ms</td>
+<td>&lt;200ms</td>
+<td style="text-align: center;">✓ Green</td>
+</tr>
+<tr>
+<td><strong>Cumulative Layout Shift (CLS)</strong></td>
+<td style="text-align: right;">0</td>
+<td>&lt;0.1</td>
+<td style="text-align: center;">✓ Green</td>
+</tr>
+<tr>
+<td>First Contentful Paint (FCP)</td>
+<td style="text-align: right;">1.3s</td>
+<td>&lt;1.8s</td>
+<td style="text-align: center;">✓ Green</td>
+</tr>
+<tr>
+<td>Time to First Byte (TTFB)</td>
+<td style="text-align: right;">0.5s</td>
+<td>&lt;0.8s</td>
+<td style="text-align: center;">✓ Green</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Core Web Vitals Assessment: PASSED.</strong> All 5 metrics green across the latest 28-day CrUX window (mobile, various network conditions). Webflow's CDN + the site's structure are delivering. <strong>CWV is not a strategic priority for this engagement</strong> — there's no work to do on this axis. Implication: any future technical-audit conversation should skip CWV and focus on indexation + canonical + schema + crawl-budget.</p>
+<h3 id="16a-onpage-instant-pages-crawl-dataforseo-51-keepkeep-audit-urls-2026-05-11">1.6a OnPage Instant Pages crawl (DataForSEO, 51 KEEP+KEEP-AUDIT URLs, 2026-05-11)</h3>
+<p>Crawled the 51 URLs the decision matrix marked KEEP / KEEP-AUDIT. 49 successful, 2 input failures. Per-page checks output → <code>clients/armsacres/exports/dataforseo/onpage/onpage_pages.csv</code>.</p>
+<p><strong>Three new categories of finding from the crawl:</strong></p>
+<p><strong>(a) 12 KEEP+KEEP-AUDIT URLs return 4xx — these are pages the framework says are critical, but they're broken on the live site:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>URLs</th>
+<th>Likely fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Removed programs (5)</strong></td>
+<td><code>/inpatient/young-adult-services</code>, <code>/inpatient/veteran-substance-abuse-program</code>, <code>/service/family-treatment-program</code>, <code>/service/family-treatment-program-in-carmel-hamlet-ny</code>, <code>/service/conferences-and-education</code></td>
+<td>Either restore (if these are real services Arms Acres still offers) or REMOVE from decision matrix + 301 to closest live equivalent + remove from sitemap</td>
+</tr>
+<tr>
+<td><strong>Alias / wrong-suffix URLs (5)</strong></td>
+<td><code>/contact-us</code>, <code>/admissions.html</code>, <code>/admissions/insurance</code>, <code>/contact-me</code>, <code>/contactus</code></td>
+<td>301 to canonical (<code>/contact</code>, <code>/admissions</code>). These return 404 but Google still crawls them — adds to the 8.47% 404 rate in Crawl Stats</td>
+</tr>
+<tr>
+<td><strong>Webflow tel: URL bug (2)</strong></td>
+<td><code>/outpatient/carmel-outpatient/tel:8882274641</code>, <code>/services/tel:8882274641</code></td>
+<td>The <code>tel:</code> link is being rendered as a RELATIVE URL on these two pages — concatenated to the current path instead of as proper <code>tel:</code> protocol. Google followed those links and got 404s. <strong>Confirms and expands the M1 #1a "broken tel: links" finding to a site-wide rendering bug.</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>M1 expansion:</strong> the cleanup playbook in M1 #4 (suburb doorways) + M1 #1a (broken outpatient tels) now needs a third item — fix the 12 KEEP-bucket 4xx URLs. New action #1d below.</p>
+<p><strong>(b) Title-length + meta integrity:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pages with NO title</td>
+<td><strong>3</strong> (all 3 are KEEP-AUDIT blog posts already flagged as off-topic in topical overlay: <code>/blog/list-of-celebrities-who-died-overdose</code>, <code>/blog/valtrex-valacyclovir-and-alcohol</code>, <code>/blog/alcohol-while-taking-macrobid</code>) — also good DELETE candidates per topical relevance</td>
+</tr>
+<tr>
+<td>Pages with short title (&lt;30 chars)</td>
+<td>9 (Admissions = 23, What-To-Bring = 27, Reviews = 7, Email-Patients = 27, Patient-Rights = 27, Alumni = 19)</td>
+</tr>
+<tr>
+<td>Title length: mean / median / max</td>
+<td>35.8 / 36 / 60 chars</td>
+</tr>
+<tr>
+<td>Description length: mean / median / max</td>
+<td>132 / 133 / 200 chars</td>
+</tr>
+<tr>
+<td>Pages flagged short_title (per DFS rule)</td>
+<td>9 of 49</td>
+</tr>
+<tr>
+<td>Pages flagged long_title</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Pages with <code>is_4xx_code</code></td>
+<td>12 (per above)</td>
+</tr>
+<tr>
+<td>Pages with <code>high_loading_time</code> (per DFS lab check, contradicts CrUX field-data)</td>
+<td>5 — note: this is <strong>lab measurement</strong>, the CrUX 28d field-data showed all green. Lab CWV is unreliable for the field-aggregate. <strong>Defer to the CrUX assessment in Section 1.6</strong> — the 5 lab flags are likely cold-cache transient.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(c) Image alt-text + accessibility gap:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Pages flagged</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no_image_alt</code></td>
+<td><strong>37 of 49</strong> (76%) — sitewide image alt-text gap</td>
+</tr>
+<tr>
+<td><code>no_image_title</code></td>
+<td>37 of 49 — same</td>
+</tr>
+<tr>
+<td><code>seo_friendly_url_keywords_check</code></td>
+<td>36 of 49 — slugs missing target keywords on many pages</td>
+</tr>
+<tr>
+<td><code>seo_friendly_url_relative_length_check</code></td>
+<td>37 of 49 — URL length / structure issues</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong> image alt-text is the most-impactful single missing layer here. On a YMYL site where Joint Commission accreditation, OASAS licensing, and CARF/LegitScript trust signals would ideally be communicated via accessible images of the facility/staff/credentials, having 76% of pages missing all image alts is both an accessibility violation AND a missed SEO surface. Add to M1 #2 or as new M2 #11a.</p>
+<h3 id="16-on-page-integrity-schema-metadata-content">1.6 On-page integrity (schema, metadata, content)</h3>
+<p><strong>Schema deployment (audited via raw HTTP + regex on 21 sampled pages):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page</th>
+<th>JSON-LD found</th>
+<th>Schema present</th>
+<th>Schema missing (recommended)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/ (home)</td>
+<td>1 block</td>
+<td><code>Organization</code></td>
+<td><code>MedicalBusiness</code>, <code>LocalBusiness</code>, <code>Place</code>, <code>FAQPage</code>, <code>BreadcrumbList</code></td>
+</tr>
+<tr>
+<td>/about-us</td>
+<td>1 block</td>
+<td><code>AboutPage</code></td>
+<td><code>Organization</code>, <code>Hospital</code></td>
+</tr>
+<tr>
+<td>/contact</td>
+<td>1 block</td>
+<td><code>ContactPage</code></td>
+<td><code>LocalBusiness</code></td>
+</tr>
+<tr>
+<td>/admissions</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>WebPage</code>, <code>FAQPage</code>, <code>Service</code></td>
+</tr>
+<tr>
+<td>/faqs</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>FAQPage</code></td>
+</tr>
+<tr>
+<td>/reviews</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>AggregateRating</code>, <code>Review</code></td>
+</tr>
+<tr>
+<td>/inpatient</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>MedicalBusiness</code>, <code>Service</code>, <code>MedicalProcedure</code></td>
+</tr>
+<tr>
+<td>/inpatient/detox-program</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>Service</code>, <code>MedicalProcedure</code>, <code>BreadcrumbList</code></td>
+</tr>
+<tr>
+<td>/inpatient/adult-rehabilitation</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>Service</code>, <code>MedicalProcedure</code></td>
+</tr>
+<tr>
+<td>/outpatient/* (all 3)</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>MedicalBusiness</code> (each separate location), <code>Service</code>, <code>LocalBusiness</code></td>
+</tr>
+<tr>
+<td>/service/* (all 9)</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>Service</code>, <code>MedicalProcedure</code></td>
+</tr>
+<tr>
+<td>/blog (and 469 blog posts)</td>
+<td>0 blocks</td>
+<td>none</td>
+<td><code>Article</code> / <code>BlogPosting</code>, <code>BreadcrumbList</code>, author markup</td>
+</tr>
+<tr>
+<td>/suburb/*</td>
+<td>0 blocks</td>
+<td>none</td>
+<td>(slated for DELETE+REDIRECT — no schema needed)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Meta description audit:</strong> empty across <strong>all 19 non-homepage URLs sampled.</strong> Google generates a snippet from page text when meta description is empty — for clinical/sensitive pages this means brand-uncontrolled SERP descriptions.</p>
+<p><strong>Title-tag audit:</strong> mostly fine but some artifacts:
+- <code>/reviews</code> title is literally "Reviews" — no brand, no location modifier, no value prop
+- <code>/suburb</code> title is literally "Suburb" — clearly a CMS leftover, page should not exist as-is
+- <code>/inpatient</code> + <code>/outpatient</code> titles use "Carmel Hamlet, New York" — geographically accurate but the actual searches will be for "Carmel NY", "Putnam County NY", "Hudson Valley NY". Worth A/B testing.</p>
+<p><strong>Wrong-brand boilerplate:</strong> homepage <code>&lt;meta property="og:description"&gt;</code> contains the literal text:</p>
+<blockquote>
+<p>"Bold Steps Behavioral Health is the best drug rehab in Harrisburg PA that empowers people struggling with behavioral health and substance abuse issues."</p>
+</blockquote>
+<p>This is a left-over from a template build pulling from a different rehab brand (Bold Steps Behavioral Health, Harrisburg PA). Live on armsacres.com homepage as of 2026-05-11. <strong>Replace immediately</strong> as part of M1 action #2.</p>
+<p><strong>Trust signal coverage on service pages (current vs benchmark):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th style="text-align: center;">Home</th>
+<th style="text-align: center;">/inpatient</th>
+<th style="text-align: center;">Service pages</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Insurance / Medicaid mentions</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td>Add insurance disclosure block to each service page (Medicaid, Aetna, BCBS, Cigna confirmed per intake — needs final list)</td>
+</tr>
+<tr>
+<td>OASAS / Joint Commission / accreditation mentions</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">3</td>
+<td>Standardize a trust-signal block (logo strip + accreditation list) across all service pages</td>
+</tr>
+<tr>
+<td>1982 founded / 191-bed / employee-owned narrative</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;">sparse</td>
+<td style="text-align: center;">sparse</td>
+<td>Differentiator vs younger competitors — surface on each service page</td>
+</tr>
+<tr>
+<td>Tap-to-call <code>tel:</code> links</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5–6</td>
+<td>Already present (OK)</td>
+</tr>
+<tr>
+<td>4-input intake form</td>
+<td style="text-align: center;">yes</td>
+<td style="text-align: center;"><strong>no</strong></td>
+<td style="text-align: center;"><strong>no</strong></td>
+<td>The headline M1 action</td>
+</tr>
+</tbody>
+</table>
+<h3 id="17a-competitor-service-page-stealable-patterns-added-2026-05-11">1.7a Competitor service-page "stealable patterns" (added 2026-05-11)</h3>
+<p>Pulled 30 service-page samples from 3 real local competitors (Mountainside, Ascendant NY, Cornerstone of Medical Arts Center Queens) and extracted four concrete pattern gaps Arms Acres has against converting competitors. Source: <code>clients/armsacres/exports/competitor_audit/</code>.</p>
+<p><strong>(a) Schema gap (the largest single finding):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Arms Acres</th>
+<th>Mountainside</th>
+<th>Ascendant NY</th>
+<th>Cornerstone NY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Homepage schema</td>
+<td><code>Organization</code> only</td>
+<td><code>Organization</code></td>
+<td><strong><code>MedicalClinic</code></strong></td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>Service-page schema</td>
+<td><strong>none</strong></td>
+<td><code>Organization</code> + <strong><code>FAQPage</code></strong> on MAT pages</td>
+<td><strong><code>MedicalWebPage</code> + <code>BreadcrumbList</code></strong></td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>Reviews / About schema</td>
+<td>(none)</td>
+<td>(none)</td>
+<td><strong><code>AggregateRating</code> + 5 <code>Review</code> blocks</strong></td>
+<td>(none)</td>
+</tr>
+<tr>
+<td>Admissions schema</td>
+<td>(none)</td>
+<td><code>Organization</code></td>
+<td><strong><code>AggregateRating</code> + 5 <code>Review</code> blocks</strong></td>
+<td>(none)</td>
+</tr>
+</tbody>
+</table>
+<p>Ascendant NY's schema stack is the model: <code>MedicalClinic</code> on homepage, <code>MedicalWebPage</code> on every service page, <code>AggregateRating</code> + <code>Review</code> on <code>/about-us</code> + <code>/admissions</code>. Mountainside puts <code>FAQPage</code> on every MAT service page (<code>/suboxone/</code>, <code>/sublocade/</code>, <code>/vivitrol/</code>). Arms Acres has none of this.</p>
+<p><strong>(b) Service-page word-count gap:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Avg word count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arms Acres service pages (sampled)</td>
+<td style="text-align: right;">1,500–2,000</td>
+</tr>
+<tr>
+<td>Mountainside service pages</td>
+<td style="text-align: right;">~7,000–8,000</td>
+</tr>
+<tr>
+<td>Cornerstone NY service pages</td>
+<td style="text-align: right;">~12,000</td>
+</tr>
+<tr>
+<td>Ascendant NY service pages</td>
+<td style="text-align: right;"><strong>~20,000</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ascendant's <code>/alcohol-addiction-treatment/</code> is 20,907 words. Arms Acres' <code>/inpatient/detox-program</code> is 1,444 — <strong>14× shallower</strong>. Even if Ascendant's pages are over-padded for LLM-citation visibility (they likely are), Mountainside at 7K average is a realistic target. The narrative-rebuild action (M2 #9) needs an explicit word-count target and content brief per service page.</p>
+<p><strong>(c) Insurance disclosure depth:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Carriers listed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arms Acres (sampled)</td>
+<td>Medicaid + Beacon</td>
+</tr>
+<tr>
+<td>Mountainside <code>/admissions/paying-for-treatment/</code></td>
+<td><strong>Aetna, Cigna, BCBS, Empire, United, Anthem, Magellan, Beacon, Optum, Tricare, Medicaid, Medicare</strong> (12+)</td>
+</tr>
+<tr>
+<td>Mountainside per-service pages</td>
+<td>5+ carriers each</td>
+</tr>
+<tr>
+<td>Ascendant NY homepage</td>
+<td>Aetna, Cigna, Blue Cross, United, Beacon, Optum</td>
+</tr>
+<tr>
+<td>Cornerstone NY <code>/admissions/</code></td>
+<td>Medicaid, Blue Cross, Empire, United</td>
+</tr>
+</tbody>
+</table>
+<p>Mountainside's <code>/admissions/paying-for-treatment/</code> is the gold-standard format. Arms Acres needs the verified carrier list + a dedicated insurance-disclosure block deployed on each service page (M1 #8 captures this; the format-reference is now Mountainside's <code>paying-for-treatment</code> page).</p>
+<p><strong>(d) Trust-signal stack:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Arms Acres</th>
+<th>Mountainside</th>
+<th>Ascendant NY</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Joint Commission</td>
+<td>✓ site-wide</td>
+<td><strong>✓ on every page audited</strong></td>
+<td>✓</td>
+</tr>
+<tr>
+<td>OASAS</td>
+<td>✓ site-wide</td>
+<td>n/a (CT-based)</td>
+<td>✓</td>
+</tr>
+<tr>
+<td>CARF</td>
+<td>? unverified</td>
+<td><strong>✓</strong></td>
+<td>?</td>
+</tr>
+<tr>
+<td>LegitScript</td>
+<td>? unverified</td>
+<td><strong>✓</strong></td>
+<td>?</td>
+</tr>
+<tr>
+<td>SAMHSA findtreatment listing</td>
+<td>? unverified</td>
+<td>n/a</td>
+<td>claimed</td>
+</tr>
+</tbody>
+</table>
+<p>Mountainside surfaces <strong>Joint Commission + CARF + LegitScript on all 13 sampled pages</strong>. Arms Acres has Joint Commission + OASAS site-wide but doesn't (visibly) mention CARF or LegitScript. <strong>CARF + LegitScript pursuit</strong> is a M2-M3 credentialing action item — separate from on-page work, requires application + audit.</p>
+<p><strong>Stealable-patterns reference table (for the content + on-page team):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pattern to deploy</th>
+<th>Reference URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MedicalClinic</code> schema on homepage</td>
+<td><code>ascendantny.com/</code></td>
+</tr>
+<tr>
+<td><code>MedicalWebPage</code> + <code>BreadcrumbList</code> on every service page</td>
+<td><code>ascendantny.com/alcohol-addiction-treatment/</code></td>
+</tr>
+<tr>
+<td><code>FAQPage</code> schema on every MAT / service page</td>
+<td><code>mountainside.com/treatment/offerings/medication-assisted-treatment/suboxone/</code></td>
+</tr>
+<tr>
+<td><code>AggregateRating</code> + <code>Review</code> schema on <code>/reviews</code>, <code>/about-us</code>, <code>/admissions</code>, homepage</td>
+<td><code>ascendantny.com/about-us/</code>, <code>ascendantny.com/admissions/</code></td>
+</tr>
+<tr>
+<td>Multi-carrier insurance-disclosure block</td>
+<td><code>mountainside.com/admissions/paying-for-treatment/</code></td>
+</tr>
+<tr>
+<td>6,000–8,000-word service pages with structured H2 hierarchy + nested H3s</td>
+<td>All Mountainside <code>/treatment/*</code> pages</td>
+</tr>
+<tr>
+<td>Demographic + service-line landing pages</td>
+<td><code>mountainside.com/alcohol-detox-lp/</code>, <code>mountainside.com/womens-inpatient-rehab-lp/</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="17b-search-volume-sizing-priority-keyword-universe-added-2026-05-11">1.7b Search volume sizing — priority keyword universe (added 2026-05-11)</h3>
+<p>DataForSEO Search Volume triangulation (Google Ads + Bing + Clickstream) on 100 priority keywords across 10 intent groups, 2 locations (US-wide + NYC DMA). The triangulation is mandatory because <strong>Google Ads / Keyword Planner systematically suppresses volume for sensitive-vertical queries</strong>: <code>residential rehab</code> (21,410/mo Bing), <code>drug rehab center</code> (3,830/mo Bing), <code>inpatient rehab</code> (1,220/mo Bing), <code>alcohol rehab</code> (640/mo Bing), and <code>suboxone treatment</code> (940/mo Bing) all return NULL from Google Ads. Bing-only volumes are the only reliable signal for these terms.</p>
+<p><strong>US-wide demand by priority group (max_volume, 10 keywords each, monthly):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th style="text-align: right;">Total /mo</th>
+<th>Top kw</th>
+<th style="text-align: right;">Volume</th>
+<th>Arms Acres positioning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>near_me</strong></td>
+<td style="text-align: right;"><strong>49,120</strong></td>
+<td><code>detox center near me</code></td>
+<td style="text-align: right;">27,100</td>
+<td>No dedicated landing page — opportunity</td>
+</tr>
+<tr>
+<td><strong>inpatient_residential</strong></td>
+<td style="text-align: right;"><strong>24,840</strong></td>
+<td><code>residential rehab</code> (Bing-only)</td>
+<td style="text-align: right;">21,410</td>
+<td><code>/inpatient</code> ranks for some terms (1,238 clicks/365d)</td>
+</tr>
+<tr>
+<td><strong>outpatient</strong></td>
+<td style="text-align: right;"><strong>20,790</strong></td>
+<td><code>outpatient rehab</code></td>
+<td style="text-align: right;">18,100</td>
+<td><code>/outpatient</code> ranks pos 7 (887 clicks/365d)</td>
+</tr>
+<tr>
+<td><strong>drug_broad</strong></td>
+<td style="text-align: right;">14,290</td>
+<td><code>drug detox</code></td>
+<td style="text-align: right;">8,100</td>
+<td>Partial coverage</td>
+</tr>
+<tr>
+<td><strong>detox</strong></td>
+<td style="text-align: right;">13,590</td>
+<td><code>detoxification center</code></td>
+<td style="text-align: right;">8,100</td>
+<td><code>/inpatient/detox-program</code> ranks pos 5 (964 clicks/365d) — under-optimized for the named term</td>
+</tr>
+<tr>
+<td>quality_comparison</td>
+<td style="text-align: right;">3,020</td>
+<td><code>best rehab facility</code></td>
+<td style="text-align: right;">2,900</td>
+<td>No coverage</td>
+</tr>
+<tr>
+<td>opioid_mat</td>
+<td style="text-align: right;">2,600</td>
+<td><code>suboxone treatment</code> (Bing-only)</td>
+<td style="text-align: right;">940</td>
+<td><code>/service/medication-assisted-therapy-in-carmel-hamlet-ny</code> exists but is duplicated + buried</td>
+</tr>
+<tr>
+<td>alcohol</td>
+<td style="text-align: right;">2,350</td>
+<td>mostly Bing-only</td>
+<td style="text-align: right;">790</td>
+<td>Partial</td>
+</tr>
+<tr>
+<td>insurance</td>
+<td style="text-align: right;">630</td>
+<td>—</td>
+<td style="text-align: right;">—</td>
+<td>No coverage (also a content gap)</td>
+</tr>
+<tr>
+<td>dual_diagnosis</td>
+<td style="text-align: right;">230</td>
+<td>—</td>
+<td style="text-align: right;">—</td>
+<td>Niche; service exists but no dedicated page</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Top 5 highest-volume keywords with no canonical Arms Acres landing page:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">US monthly volume</th>
+<th>Source variance</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>detox center near me</code></td>
+<td style="text-align: right;">27,100</td>
+<td>Google Ads</td>
+<td>"Near me" cluster has no AA landing page</td>
+</tr>
+<tr>
+<td><code>residential rehab</code></td>
+<td style="text-align: right;">21,410</td>
+<td>Bing-only</td>
+<td>Google Ads suppresses; AA <code>/inpatient/adult-rehabilitation</code> could rank but title is "Adult Rehabilitation" — keyword mismatch</td>
+</tr>
+<tr>
+<td><code>outpatient rehab</code></td>
+<td style="text-align: right;">18,100</td>
+<td>Google Ads</td>
+<td><code>/outpatient</code> page exists but ranks pos 7</td>
+</tr>
+<tr>
+<td><code>detox near me</code></td>
+<td style="text-align: right;">18,100</td>
+<td>Google Ads</td>
+<td>No AA landing page; could capture via Hudson Valley positioning</td>
+</tr>
+<tr>
+<td><code>drug detox</code> / <code>detoxification center</code></td>
+<td style="text-align: right;">8,100 each</td>
+<td>Google Ads</td>
+<td><code>/inpatient/detox-program</code> underweighted vs <code>drug detox center</code> term cluster</td>
+</tr>
+</tbody>
+</table>
+<p><strong>M2-M3 implications added:</strong>
+- <strong>M2 #12 (Local content build #1)</strong> expands to include a <code>/areas-served/[region]-rehab-near-me</code> or equivalent template — capture the <code>near_me</code> cluster (49K/mo)
+- <strong>M2 #18 expansion</strong>: a <code>residential rehab in Hudson Valley NY</code> landing page targets the 21K/mo <code>residential rehab</code> Bing demand
+- <strong>M3 service-page expansion</strong>: a <code>Suboxone Treatment</code> standalone page (Bing-only 940/mo, no Arms Acres ranking; Mountainside has 3 such pages — Suboxone, Sublocade, Vivitrol — each with FAQPage schema)
+- <strong>Service-page title-tag rewrites</strong> in M1: <code>/inpatient/detox-program</code> title from "Medical Detox Program" → include <code>Drug Detox</code> or <code>Detox Center</code> keywords to match the 8,100/mo <code>drug detox</code> + <code>detoxification center</code> cluster; same for <code>/inpatient/adult-rehabilitation</code> → include <code>residential rehab</code> to match the 21,410/mo demand</p>
+<p>Raw data: <code>clients/armsacres/exports/dataforseo/keywords/search_volume_us.csv</code>, <code>search_volume_nyc.csv</code>, <code>search_volume_by_group.csv</code>.</p>
+<p><strong>Ahrefs enrichment landed 2026-05-11.</strong> 6 Matching Terms reports across seeds: <code>addiction treatment</code>, <code>alcohol withdrawal treatment</code>, <code>intensive outpatient program</code>, <code>alcohol detox dutchess county</code>, <code>alcohol rehab bronx</code>, <code>alcohol rehab queens</code>. Combined 3,635 keyword rows across Arms Acres + 7,813 from Surfpoint reuse = <strong>9,546 unique keywords</strong> in the cross-client master at <a href="../../../data/keywords/master_keywords_latest.csv"><code>HQDM/data/keywords/master_keywords_latest.csv</code></a>.</p>
+<p><strong>(a) Near-me cluster confirms ~60K/mo addressable demand (Ahrefs-confirmed volumes):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Vol /mo</th>
+<th style="text-align: right;">KD</th>
+<th style="text-align: right;">Traffic potential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rehab near me</td>
+<td style="text-align: right;"><strong>14,000</strong></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">8,200</td>
+</tr>
+<tr>
+<td>rehab centers near me</td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9,700</td>
+</tr>
+<tr>
+<td>detox centers near me</td>
+<td style="text-align: right;">8,600</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">15,000</td>
+</tr>
+<tr>
+<td>alcohol rehab near me</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20,000</td>
+</tr>
+<tr>
+<td>methadone clinic near me</td>
+<td style="text-align: right;"><strong>7,600</strong></td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">1,000</td>
+</tr>
+<tr>
+<td>suboxone clinic near me</td>
+<td style="text-align: right;"><strong>6,800</strong></td>
+<td style="text-align: right;"><strong>3</strong></td>
+<td style="text-align: right;">4,300</td>
+</tr>
+<tr>
+<td>detox near me</td>
+<td style="text-align: right;">5,900</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8,000</td>
+</tr>
+<tr>
+<td>rehab facilities near me</td>
+<td style="text-align: right;">5,100</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">16,000</td>
+</tr>
+<tr>
+<td>drug rehab near me</td>
+<td style="text-align: right;">4,800</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">8,200</td>
+</tr>
+<tr>
+<td>inpatient rehab near me</td>
+<td style="text-align: right;">4,100</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">22,000</td>
+</tr>
+<tr>
+<td>alcohol detox near me</td>
+<td style="text-align: right;">3,200</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9,700</td>
+</tr>
+<tr>
+<td>outpatient rehab near me</td>
+<td style="text-align: right;">2,600</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">3,200</td>
+</tr>
+<tr>
+<td>intensive outpatient program near me</td>
+<td style="text-align: right;">2,200</td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td style="text-align: right;">5,800</td>
+</tr>
+<tr>
+<td>addiction treatment near me</td>
+<td style="text-align: right;">2,100</td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td style="text-align: right;">900</td>
+</tr>
+</tbody>
+</table>
+<p><strong>(b) Low-KD high-volume opportunities (KD ≤ 10, vol ≥ 2K) — the easy wins:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Vol</th>
+<th style="text-align: right;">KD</th>
+<th>Use case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>intensive outpatient program</code></td>
+<td style="text-align: right;">9,000</td>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>M3 #18 service-page rebuild target</td>
+</tr>
+<tr>
+<td><code>drug rehab</code></td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Highest absolute vol with very low KD — generic but Arms Acres should own it</td>
+</tr>
+<tr>
+<td><code>detox near me</code></td>
+<td style="text-align: right;">5,900</td>
+<td style="text-align: right;">4</td>
+<td>Near-me cluster anchor</td>
+</tr>
+<tr>
+<td><code>suboxone clinic near me</code></td>
+<td style="text-align: right;">6,800</td>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>MAT-page opportunity (M2 #18 + Bronx/Queens cluster)</td>
+</tr>
+<tr>
+<td><code>intensive outpatient program near me</code></td>
+<td style="text-align: right;">2,200</td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Service-page modifier — practically uncontested</td>
+</tr>
+<tr>
+<td><code>addiction treatment near me</code></td>
+<td style="text-align: right;">2,100</td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Same — KD 1</td>
+</tr>
+<tr>
+<td><code>rehab centers near me</code></td>
+<td style="text-align: right;">10,000</td>
+<td style="text-align: right;">6</td>
+<td></td>
+</tr>
+<tr>
+<td><code>suboxone clinic</code></td>
+<td style="text-align: right;">2,600</td>
+<td style="text-align: right;"><strong>2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><code>inpatient rehab near me</code></td>
+<td style="text-align: right;">4,100</td>
+<td style="text-align: right;">7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>(c) Geo-modified picture for Bronx + Queens outpatients (Ahrefs-confirmed):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Vol /mo</th>
+<th style="text-align: right;">KD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bronx addiction treatment center</code></td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>methadone clinic bronx ny</code></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>drug rehab bronx ny</code></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td><code>outpatient rehab bronx ny</code></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td><code>methadone clinic queens</code></td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td><code>alcohol rehab queens</code></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><code>drug rehab queens ny</code></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>Direct geo-anchored organic volume is small (~350-450/mo combined). <strong>The real opportunity for Bronx + Queens is local-pack visibility on the parent "near me" terms</strong> — <code>methadone clinic near me</code> 7,600/mo + <code>suboxone clinic near me</code> 6,800/mo + <code>outpatient rehab near me</code> 2,600/mo all route to local-pack-derived clicks for searchers in those boroughs. Capturing local-pack rankings via the M1 #6 GBP work (categories + review velocity + photos) is the lever, not direct geo-anchored organic ranking.</p>
+<p><strong>(d) Westchester + Yonkers + Dutchess (adjacent-county demand):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Vol /mo</th>
+<th style="text-align: right;">KD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>alcohol withdrawal treatment yonkers ny</code></td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><code>drug rehab westchester county</code> (+ ny variant)</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><code>alcohol rehab westchester county</code></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><code>drug rehab yonkers ny</code></td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><code>drug rehab dutchess county ny</code></td>
+<td style="text-align: right;">(null — too thin for Ahrefs)</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>Westchester demand is small but real; Yonkers' <code>alcohol withdrawal treatment</code> 100/mo is the single-strongest adjacent-county opportunity (highest commercial intent).</p>
+<p><strong>(e) Ahrefs gaps — flag for follow-up enrichment:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Gap</th>
+<th>Why it matters</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No "Hudson Valley" data</strong> in master</td>
+<td>Arms Acres' homepage tagline uses "Hudson Valley" — no demand sizing for the regional umbrella term</td>
+<td>Pull Matching Terms for seed <code>hudson valley rehab</code></td>
+</tr>
+<tr>
+<td><strong>Only 1 "Carmel" match</strong> (<code>best drug and alcohol rehab carmel</code>, vol null)</td>
+<td>Inpatient main is in Carmel — can't size the hometown demand</td>
+<td>Pull Matching Terms for seed <code>carmel ny rehab</code> or <code>carmel hamlet rehab</code></td>
+</tr>
+<tr>
+<td><strong>No "Putnam County" matching-terms data</strong></td>
+<td>Putnam County is the literal jurisdiction — surely some demand</td>
+<td>Pull Matching Terms for seed <code>putnam county rehab</code></td>
+</tr>
+<tr>
+<td><strong>Limited MAT-specific NY data</strong></td>
+<td>Methadone Bronx + Queens cluster only had ~5 keywords each — likely more under different MAT seeds</td>
+<td>Pull Matching Terms for seed <code>methadone clinic</code> (national) + <code>suboxone clinic</code></td>
+</tr>
+</tbody>
+</table>
+<p>Three fresh Ahrefs pulls would close (e): <code>hudson valley rehab</code>, <code>carmel ny rehab</code>, <code>putnam county rehab</code>. Each ≤ 1000-row cap. Total 3 additional Matching Terms reports.</p>
+<h3 id="17c-local-dominator-scan-analysis-28-scans-across-12-keywords-5-month-trend-window">1.7c Local Dominator scan analysis (28 scans across 12 keywords, 5-month trend window)</h3>
+<p><strong>Revised after full LD inventory</strong> (2026-05-11). Initial draft analyzed only 4 Carmel-anchored scans; the full Arms Acres LD set is <strong>28 scans across 12 keywords spanning Dec 2025 → Apr 2026</strong> (5 months).</p>
+<p><strong>Two distinct grid contexts</strong> the scans cover:</p>
+<p><strong>(a) Carmel-anchored grids</strong> (the keywords <code>carmel recovery</code>, <code>carmel methadone clinic</code>, <code>carmel new york rehab</code> — 3 keywords × 4 scans). Arms Acres' two Carmel GBPs absolutely dominate:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Latest scan</th>
+<th style="text-align: right;">Inpatient avg rank</th>
+<th style="text-align: right;">Inpatient top-3 %</th>
+<th style="text-align: right;">Carmel outpatient avg rank</th>
+<th style="text-align: right;">Carmel outpatient top-3 %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>carmel recovery</td>
+<td>2026-04-22</td>
+<td style="text-align: right;"><strong>1.01</strong></td>
+<td style="text-align: right;"><strong>100%</strong></td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">98.2%</td>
+</tr>
+<tr>
+<td>carmel methadone clinic</td>
+<td>2026-01-27</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">1.99</td>
+<td style="text-align: right;">100%</td>
+</tr>
+<tr>
+<td>carmel new york rehab</td>
+<td>2026-04-22</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">100%</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">100%</td>
+</tr>
+</tbody>
+</table>
+<p>Carmel saturation is total. No offensive map work needed.</p>
+<p><strong>(b) NY-broader / Hudson Valley / NYC grids</strong> (the keywords <code>alcohol detox</code>, <code>alcohol rehab</code>, <code>drug detox</code>, <code>drug rehab</code>, plus their near-me variants and <code>alcohol rehab near me</code>, <code>alcohol rehabilitation</code>, <code>detox center near me</code> — 9 keywords × 18 scans). <strong>Different picture entirely</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Latest scan</th>
+<th style="text-align: right;">Inpatient avg rank</th>
+<th style="text-align: right;">Inpatient top-3 %</th>
+<th style="text-align: right;">Carmel outpatient avg rank</th>
+<th style="text-align: right;">Carmel outpatient top-3 %</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alcohol detox near me</td>
+<td>2026-04-22</td>
+<td style="text-align: right;">2.31</td>
+<td style="text-align: right;"><strong>82.2%</strong></td>
+<td style="text-align: right;">10.94</td>
+<td style="text-align: right;">7.7%</td>
+</tr>
+<tr>
+<td>alcohol detox</td>
+<td>2026-02-09</td>
+<td style="text-align: right;">~2.6</td>
+<td style="text-align: right;">~76%</td>
+<td style="text-align: right;">(further out)</td>
+<td style="text-align: right;">(low)</td>
+</tr>
+<tr>
+<td>alcohol rehab</td>
+<td>2026-02-16</td>
+<td style="text-align: right;">3.22</td>
+<td style="text-align: right;">63.3%</td>
+<td style="text-align: right;">9.99</td>
+<td style="text-align: right;">13.6%</td>
+</tr>
+<tr>
+<td>alcohol rehab near me</td>
+<td>2026-01-27</td>
+<td style="text-align: right;">3.15</td>
+<td style="text-align: right;">68.0%</td>
+<td style="text-align: right;">10.22</td>
+<td style="text-align: right;">9.5%</td>
+</tr>
+<tr>
+<td>alcohol rehabilitation</td>
+<td>2026-01-27</td>
+<td style="text-align: right;">2.56</td>
+<td style="text-align: right;">76.3%</td>
+<td style="text-align: right;">10.09</td>
+<td style="text-align: right;">10.7%</td>
+</tr>
+<tr>
+<td>detox center near me</td>
+<td>2026-04-22</td>
+<td style="text-align: right;">2.53</td>
+<td style="text-align: right;">76.9%</td>
+<td style="text-align: right;">10.11</td>
+<td style="text-align: right;">11.2%</td>
+</tr>
+<tr>
+<td>drug detox</td>
+<td>2026-04-22</td>
+<td style="text-align: right;">2.99</td>
+<td style="text-align: right;">71.6%</td>
+<td style="text-align: right;">9.64</td>
+<td style="text-align: right;">11.8%</td>
+</tr>
+<tr>
+<td>drug detox near me</td>
+<td>2026-02-09</td>
+<td style="text-align: right;">(mid-pack)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>drug rehab</td>
+<td>2026-02-09</td>
+<td style="text-align: right;">(mid-pack)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong> the inpatient GBP punches outside Carmel — it ranks <strong>avg 2.3–3.2 in 63–82% top-3</strong> of the broader NY/Hudson Valley grids. That's a much wider footprint than I first reported. The Carmel outpatient drops to rank ~10 in 8–14% top-3 across these wider grids — it's geographically bounded to Carmel.</p>
+<p><strong>(c) Queens GBP shows up in 5 of the broader scans</strong> (<code>drug detox near me</code> 12/29 + 2/9, <code>drug detox</code> 12/29 + 1/19, <code>drug rehab</code> 12/29 + 1/19 + 2/9): avg rank 5.7–6.7 across 150–169 grid cells. <strong>Queens IS actively appearing in the NY-broader map pack at mid-pack rank</strong> — better than I first thought (when I said "Queens has no GBP" — wrong; "Queens GBP exists but doesn't rank in top-5" is the accurate framing). Queens place_id <code>ChIJC9XFB5hgwokRZdowndxV4uo</code> / CID <code>16925184755630135909</code> (resolved from LD data, 2026-05-11). The Bronx GBP doesn't appear meaningfully in these particular scans — likely the scans don't extend over the Bronx geographically.</p>
+<p><strong>Real competitors that surface in the broader NY grids</strong> (these are who Arms Acres is actually competing with for NYC + Hudson Valley addiction-treatment queries):</p>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Notable scans</th>
+<th style="text-align: right;">Top-5 grid presence</th>
+<th style="text-align: center;">Rating</th>
+<th style="text-align: right;">Reviews</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Richmond Hill Medically Assisted Treatment</td>
+<td>drug detox near me, alcohol detox, alcohol rehab, drug rehab</td>
+<td style="text-align: right;"><strong>169 cells in some scans</strong> (full grid)</td>
+<td style="text-align: center;">3.6</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td>Faith Mission Crisis Center</td>
+<td>drug detox near me, alcohol detox, alcohol rehab</td>
+<td style="text-align: right;">100–118 cells</td>
+<td style="text-align: center;">3.8</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td>Cornerstone of Medical Arts Center</td>
+<td>drug detox near me, alcohol detox, alcohol rehab</td>
+<td style="text-align: right;">60–99 cells</td>
+<td style="text-align: center;">4.1</td>
+<td style="text-align: right;">198</td>
+</tr>
+<tr>
+<td>Van Wyck Residential Treatment</td>
+<td>drug detox near me, alcohol rehab, drug rehab</td>
+<td style="text-align: right;">104–156 cells</td>
+<td style="text-align: center;">2.6</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>Lantana Recovery</td>
+<td>alcohol detox near me, alcohol rehab near me, detox center near me, alcohol rehabilitation</td>
+<td style="text-align: right;">33–76 cells</td>
+<td style="text-align: center;"><strong>4.9</strong></td>
+<td style="text-align: right;">33–36</td>
+</tr>
+<tr>
+<td>We Level Up New York</td>
+<td>alcohol detox near me, alcohol rehab near me, detox center near me, drug detox</td>
+<td style="text-align: right;">54–66 cells</td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>MCCA - McDonough House and Detox</td>
+<td>alcohol detox near me, alcohol rehab near me, detox center near me, drug detox</td>
+<td style="text-align: right;">50–66 cells</td>
+<td style="text-align: center;">3.7</td>
+<td style="text-align: right;">33–36</td>
+</tr>
+<tr>
+<td>The Counseling Center at Yorktown Heights</td>
+<td>alcohol detox near me, alcohol rehab near me, detox center near me</td>
+<td style="text-align: right;">32–61 cells</td>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td>Hudson Valley Addiction Treatment Center</td>
+<td>alcohol detox near me, drug detox, detox center near me</td>
+<td style="text-align: right;">25–36 cells</td>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: right;">9–10</td>
+</tr>
+<tr>
+<td>Lexington Center For Recovery</td>
+<td>alcohol rehab near me, drug detox, alcohol rehabilitation</td>
+<td style="text-align: right;">38–57 cells</td>
+<td style="text-align: center;">4.1–5.0</td>
+<td style="text-align: right;">2–93</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Strategic reframe from the expanded LD set:</strong>
+- <strong>Inpatient main is a real player across the NY-broader grid</strong> — 63–82% top-3 across 7 cluster keywords. The earlier draft underrepresented how strong this signal is.
+- <strong>Carmel outpatient is geographically bounded</strong> — stays in Carmel, drops to rank ~10 in NY-broader grids.
+- <strong>Queens GBP is mid-pack</strong> in the broader scans (rank 5.7–6.7), not absent. The work isn't "claim a Queens GBP" — it's "lift Queens from rank 6 → rank 1–3 via review velocity + categories + signal strengthening."
+- <strong>The actual NY-broader competitive set</strong> is led by Richmond Hill MAT + Cornerstone + Lantana + We Level Up — these are the targets for competitor service-page audit + comparative positioning, NOT the national-chain names that DataForSEO Competitors Domain surfaced.</p>
+<p><strong>Critical scan-coverage gap remaining:</strong> all 28 scans are seeded from Hudson Valley / NY-broader. <strong>There are still zero Bronx-anchored scans</strong> (3584 Jerome Ave) — adding 5 Bronx queries to the LD setup is the highest-priority scan addition for Q2 measurement (proposed list in Appendix A.2).</p>
+<h3 id="17-competitor-landscape">1.7 Competitor landscape</h3>
+<p><strong>Two layers:</strong> the keyword-overlap "competitor" list from DataForSEO Competitors Domain (US-default) is dominated by <strong>national chains + sister HQDM Recovery accounts</strong> — not directly addressable as Carmel-NY local competitors. Per the per-client framing rule, sister accounts are excluded.</p>
+<p><strong>Top "competitors" by keyword overlap (DataForSEO Competitors Domain, US default, filtered for service providers only — sister HQDM accounts removed):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="text-align: right;">Keyword intersections</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>americanaddictioncenters.org</td>
+<td style="text-align: right;">3,976</td>
+<td>National chain</td>
+</tr>
+<tr>
+<td>therecoveryvillage.com</td>
+<td style="text-align: right;">3,894</td>
+<td>National chain</td>
+</tr>
+<tr>
+<td>townsendla.com</td>
+<td style="text-align: right;">2,985</td>
+<td>LA-area</td>
+</tr>
+<tr>
+<td>prescotthouse.com</td>
+<td style="text-align: right;">2,720</td>
+<td>–</td>
+</tr>
+<tr>
+<td>newhorizonscenters.com</td>
+<td style="text-align: right;">2,371</td>
+<td>–</td>
+</tr>
+<tr>
+<td>aristarecovery.com</td>
+<td style="text-align: right;">2,299</td>
+<td>–</td>
+</tr>
+<tr>
+<td>socialrecoverycenter.com</td>
+<td style="text-align: right;">2,234</td>
+<td>–</td>
+</tr>
+<tr>
+<td>springhillwellnessny.com</td>
+<td style="text-align: right;">2,227</td>
+<td><strong>Real NY local competitor</strong></td>
+</tr>
+<tr>
+<td>coachellavalleyrecoverycenter.com</td>
+<td style="text-align: right;">2,053</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Real Carmel-NY / Hudson Valley / NYC competitors (from SERP scrape at NY-anchored queries, top-10 frequency):</strong></p>
+<p>Notable in the top 10 for ≥4 priority NY-anchored queries: <code>mountsinai.org</code>, <code>bronxcare.org</code>, <code>odysseyhousenyc.org</code>, <code>nyp.org</code>, <code>nychealthandhospitals.org</code>, <code>flushinghospital.org</code>, <code>wellbridge.org</code>, <code>springhillwellnessny.com</code>, <code>victoryrp.com</code>, <code>naomedical.com</code>, <code>suboxonetreatmentclinicnyc.com</code>, <code>centerforliving.org</code>, <code>stjoestreatment.org</code>. The Maps SERP run at Carmel + Bronx + Queens coordinates will return the actual map-pack competitors. Add findings here once that completes.</p>
+<p><strong>Arms Acres' position on the 26 NY-anchored priority queries (US-default SERP):</strong> does not appear in top 30 organic for any of them. The site's organic visibility for commercial intent queries is essentially zero. Whatever's driving the 86,569 GSC clicks/365d is informational blog content, not commercial-intent local rankings.</p>
+<h3 id="18-off-page-backlinks-deep-pull">1.8 Off-page / backlinks — deep pull</h3>
+<p><strong>Cross-target backlinks (DataForSEO 2026-05-11) — Arms Acres + 4 real local competitors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th style="text-align: right;">Backlinks</th>
+<th style="text-align: right;">Referring Domains</th>
+<th style="text-align: right;">Spam Score</th>
+<th style="text-align: right;">DFS Rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>armsacres.com</strong></td>
+<td style="text-align: right;"><strong>17,209</strong></td>
+<td style="text-align: right;"><strong>504</strong></td>
+<td style="text-align: right;"><strong>19</strong></td>
+<td style="text-align: right;">293</td>
+</tr>
+<tr>
+<td>mountainside.com</td>
+<td style="text-align: right;">8,138</td>
+<td style="text-align: right;">1,628</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">278</td>
+</tr>
+<tr>
+<td>ascendantny.com</td>
+<td style="text-align: right;">4,267</td>
+<td style="text-align: right;">1,874</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">286</td>
+</tr>
+<tr>
+<td>cornerstoneny.com</td>
+<td style="text-align: right;">882</td>
+<td style="text-align: right;">302</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">202</td>
+</tr>
+<tr>
+<td>bronxrecovery.org</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">23</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three diagnoses:</strong></p>
+<p><strong>(a) 90.9% of Arms Acres' backlinks come from ONE domain.</strong> <code>healthyclass.com</code> (rank 281, spam score 19, sitewide template, first seen 2022-01-16) contributes 15,644 of 17,209 backlinks. Strip the outlier and the realistic profile is <strong>~1,565 backlinks from 503 domains</strong>. Worth investigating whether healthyclass.com is an intentional partner / network member or an accidental footer-template injection. Spam-neutral (19), so no urgent action — but it inflates the headline backlinks count by 11×.</p>
+<p><strong>(b) Real referring-domain diversity gap is 3-4× behind competitors.</strong> Mountainside: 1,628 ref domains. Ascendant NY: 1,874. Arms Acres: 504 (or 503 effective after stripping the sitewide outlier). Cornerstone NY: 302 (Arms Acres is ahead here). The strategy implication is <strong>acquire new editorial referring domains, not more backlinks from existing relationships</strong>. M2 #14 citations work + M3 #19 PR placements address this — but at the realistic acquisition pace (5-10 new editorial domains per month), closing a 1,000-domain gap is a 2-year build, not a quarter.</p>
+<p><strong>(c) Active toxic-link attack in progress (April-May 2026).</strong> The DataForSEO referring-domain pull surfaced 4 PBN domains with the spam signature <code>seo-anomaly-s2/s6/s8/s9/s10.xyz</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="text-align: right;">Backlinks</th>
+<th style="text-align: right;">Spam Score</th>
+<th>First Seen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>seo-anomaly-s10.xyz</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;"><strong>99</strong></td>
+<td>2026-05-05</td>
+</tr>
+<tr>
+<td>seo-anomaly-s9.xyz</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">79</td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>seo-anomaly-s8.xyz</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">79</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>seo-anomaly-s2.xyz</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">79</td>
+<td>2026-04-20</td>
+</tr>
+<tr>
+<td>seo-anomaly-s6.xyz</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">73</td>
+<td>2026-04-19</td>
+</tr>
+</tbody>
+</table>
+<p>Combined: ~116 backlinks with anchor texts like "TELEGRAM @SEO_ANOMALY - SEO BACKLINKS, PBN, TRAFFIC BOOST, LINK IND...". First-seen dates cluster April 14 - May 5, 2026 — <strong>active in the last 4 weeks.</strong> Plus ~7 nonsense-named <code>blogspot.com</code> PBN domains with similar patterns. Anchor-text artifacts include OCR character substitutions ("De T Oxiﬁca I N" with ﬁ ligature) and tab characters in anchor text — classic PBN signatures.</p>
+<p>Read on the attack: either (a) negative SEO from a competitor (more likely given the timing concentration and the inflammatory "SEO_ANOMALY" anchor text designed to look like a Google-trigger phrase), or (b) old PBN-buy exposure being re-activated through a spam network. Either way, <strong>disavow is the safe action</strong> — these links don't help and may hurt.</p>
+<p><strong>Surprisingly favorable framing</strong>: Arms Acres' top-100 referring-domain spam-score profile is the <strong>cleanest of the 4 competitors</strong> I sampled — avg spam score 13.1 vs Mountainside 16.3 vs Cornerstone NY 23.3 vs <strong>Ascendant NY 51.0</strong> (Ascendant's link profile is 79% high-spam — borderline trash, despite their LLM brand presence). Arms Acres isn't suffering from a quality problem in its existing backlink graph; the gap is volume and diversity, plus the new active attack to clean up.</p>
+<p><strong>Cross-reference: GSC Top Linking Sites export (manual, 298 domains, 2026-05-11):</strong> GSC shows the same sitewide-template pattern from a different angle — its top-2 linking sites are:</p>
+<table>
+<thead>
+<tr>
+<th>Site</th>
+<th style="text-align: right;">Linking pages</th>
+<th style="text-align: right;">Target pages</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>addiction-programs.net</strong></td>
+<td style="text-align: right;"><strong>2,203</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Sitewide template — single target page, 2,203 referring pages</td>
+</tr>
+<tr>
+<td><strong>americanaddictionfoundation.com</strong></td>
+<td style="text-align: right;"><strong>1,642</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td>Same shape — sitewide template</td>
+</tr>
+<tr>
+<td>ziprecruiter.com</td>
+<td style="text-align: right;">117</td>
+<td style="text-align: right;">1</td>
+<td>Job-listing reference</td>
+</tr>
+<tr>
+<td>batchgeo.com</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;"><strong>20</strong></td>
+<td>Legit map citation tool — distributes</td>
+</tr>
+<tr>
+<td>alcoholrehabus.org</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">1</td>
+<td>Sitewide template</td>
+</tr>
+<tr>
+<td>yellowpages.com</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">1</td>
+<td>Generic directory</td>
+</tr>
+<tr>
+<td><strong>springhillwellnessny.com</strong></td>
+<td style="text-align: right;"><strong>15</strong></td>
+<td style="text-align: right;"><strong>13</strong></td>
+<td><strong>NY competitor linking to AA across 13 pages — interesting peer link</strong></td>
+</tr>
+<tr>
+<td>robinrecovery.com</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">11</td>
+<td>Peer rehab linking diverse pages</td>
+</tr>
+<tr>
+<td>socialrecoverycenter.com</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td>Peer rehab, distributed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Combined read across the two backlink data sources:</strong> the GSC export + DataForSEO Backlinks agree — Arms Acres' link graph is <strong>mostly volume from a few sitewide-template referers</strong> (healthyclass.com, addiction-programs.net, americanaddictionfoundation.com) and a long tail of moderate single-page citations. The <strong>editorial diversity gap</strong> vs Mountainside/Ascendant is the real story; the <strong>acquisition focus should be on diverse-target peer + directory linking</strong> (robinrecovery.com pattern: 11 pages linked across 11 different AA URLs is the gold-standard shape).</p>
+<p><strong>Action set (added to M1 + M2):</strong>
+- <strong>M1 (urgent)</strong>: file a disavow against the 5 <code>seo-anomaly-s*.xyz</code> domains + the 7 nonsense <code>blogspot.com</code> PBN domains. Send to Search Console disavow tool. Off-page (Julce) executes; 30-minute file write.
+- <strong>M1 investigation</strong>: confirm whether <code>healthyclass.com</code> sitewide link is intentional (Arms Acres partner / employee-owned-network link / etc.) — if accidental, decide whether to leave alone (spam-neutral) or have it cleaned up. Low priority.
+- <strong>M2 #13/14 reframed</strong>: the citations rebuild and the link-acquisition work address the diversity gap. Realistic target Q2: +200-300 new referring domains via OASAS/SAMHSA/JointCommission/Psychology Today + 5-10 PR placements. Closes ~15% of the diversity gap to Mountainside in one quarter.</p>
+<h3 id="19-llm-ai-overview-visibility-measured">1.9 LLM / AI Overview visibility — measured</h3>
+<p>Two distinct surfaces:</p>
+<p><strong>(a) Google AI Overview presence: zero across all 26 priority queries scraped.</strong> Addiction-treatment local queries in NY don't currently trigger AI Overviews. This is consistent with Google's stated caution on YMYL / medical AIO surfacing.</p>
+<p><strong>(b) LLM chat-response visibility (ChatGPT, Gemini, Perplexity — queried via DataForSEO <code>ai_optimization/llm_responses/live</code>, 16 prompts × 3 LLMs = 48 responses). Claude endpoint rejected the model name we tried; framework gap noted for follow-up.</strong></p>
+<p><strong>Brand-mention rate (Arms Acres named in response body) — final 16 prompts:</strong></p>
+<table>
+<thead>
+<tr>
+<th>LLM</th>
+<th style="text-align: center;">Commercial-local (8 prompts)</th>
+<th style="text-align: center;">Research-phase (8 prompts)</th>
+<th style="text-align: center;">Overall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perplexity</strong></td>
+<td style="text-align: center;"><strong>5 / 8 = 62.5%</strong></td>
+<td style="text-align: center;">0 / 8 = 0%</td>
+<td style="text-align: center;">5 / 16 = 31%</td>
+</tr>
+<tr>
+<td><strong>ChatGPT</strong></td>
+<td style="text-align: center;"><strong>2 / 8 = 25%</strong></td>
+<td style="text-align: center;">0 / 8 = 0%</td>
+<td style="text-align: center;">2 / 16 = 13%</td>
+</tr>
+<tr>
+<td><strong>Gemini</strong></td>
+<td style="text-align: center;">0 / 8 = 0%</td>
+<td style="text-align: center;">0 / 8 = 0%</td>
+<td style="text-align: center;"><strong>0 / 16 = 0%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Per-prompt detail (commercial-local — which models name Arms Acres):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Commercial-local prompt</th>
+<th>Models mentioning Arms Acres</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is the best inpatient drug rehab in Carmel NY?</td>
+<td>ChatGPT, Perplexity</td>
+</tr>
+<tr>
+<td>Inpatient detox center near Putnam County NY</td>
+<td>ChatGPT, Perplexity</td>
+</tr>
+<tr>
+<td>Best alcohol rehab in Hudson Valley NY</td>
+<td>Perplexity</td>
+</tr>
+<tr>
+<td>OASAS-licensed rehab in upstate New York</td>
+<td>Perplexity</td>
+</tr>
+<tr>
+<td>Outpatient rehab clinic in the Bronx</td>
+<td>Perplexity</td>
+</tr>
+<tr>
+<td>Drug rehab that accepts Medicaid in New York</td>
+<td>— <em>(none)</em></td>
+</tr>
+<tr>
+<td>Joint Commission accredited drug rehab in New York State</td>
+<td>— <em>(none)</em></td>
+</tr>
+<tr>
+<td>Suboxone clinic in Queens NY</td>
+<td>— <em>(none)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three patterns:</strong>
+- <strong>Perplexity is the Arms Acres-friendly LLM</strong> — 62.5% mention rate on commercial-local queries, driven by Perplexity's preference for directory profiles (<code>rehabs.org/arms-acres-inpatient/</code>, <code>addictionresource.com/listings/arms-acres-inpatient-carmel-new-york/</code>) that index Arms Acres explicitly.
+- <strong>ChatGPT mentions Arms Acres on the most-specific Carmel/Putnam queries but not on adjacent queries</strong> — suggests ChatGPT has a knowledge surface for the brand but it doesn't fire on queries that don't hit the right entity match.
+- <strong>Gemini doesn't know Arms Acres at all</strong> (0% across all 16 prompts). Confirms the Knowledge-Graph entity gap. Gemini's responses lean heavily on government directories (<code>findtreatment.samhsa.gov</code>, <code>oasas.ny.gov</code>).
+- <strong>Zero mentions on research-phase / informational queries</strong> ("How long is inpatient rehab?", "What insurance covers drug rehab?") across all 4 LLMs — informational LLM responses default to government + nonprofit sources, not specific providers.</p>
+<p><strong>Second audit (v2) — "Best inpatient recovery clinic in [location]" pattern across 8 catchment locations:</strong></p>
+<p>A second audit (8 prompts, same 3 working LLMs + Claude with corrected model_name <code>claude-sonnet-4-5</code> for next quarter) targeted the "best X in [location]" prompt shape across Arms Acres' actual geographic footprint. The geographic-coverage gap is now measurable:</p>
+<table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>LLMs that named Arms Acres</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Best inpatient recovery clinic in Putnam County NY</strong></td>
+<td>ChatGPT + Gemini + Perplexity (<strong>3 of 4 — strongest signal</strong>)</td>
+</tr>
+<tr>
+<td>Top-rated inpatient rehab in Mahopac NY</td>
+<td>ChatGPT + Perplexity (2)</td>
+</tr>
+<tr>
+<td>Best inpatient drug rehab in Westchester County NY</td>
+<td>Perplexity only (1)</td>
+</tr>
+<tr>
+<td>Best alcohol detox center in Dutchess County NY</td>
+<td>Perplexity only (1)</td>
+</tr>
+<tr>
+<td>Best inpatient addiction treatment center in NYC</td>
+<td><strong>none (0)</strong></td>
+</tr>
+<tr>
+<td>Best inpatient drug rehab in Beacon NY</td>
+<td><strong>none (0)</strong></td>
+</tr>
+<tr>
+<td>Best inpatient recovery clinic in Poughkeepsie NY</td>
+<td><strong>none (0)</strong></td>
+</tr>
+<tr>
+<td>Best inpatient drug detox program in Yonkers NY</td>
+<td><strong>none (0)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Brand-mention rate on best-in-[location] prompts:</strong> Perplexity 50% / ChatGPT 25% / Gemini 12.5% / Claude 0% (API model-name fix landed mid-session; next quarterly re-run will include Claude).</p>
+<p><strong>Key geographic insight:</strong> Arms Acres' LLM brand awareness is <strong>concentrated within ~10-mile radius of the Carmel facility</strong> (Putnam County, Mahopac) and <strong>drops off sharply into adjacent counties</strong> (Westchester, Dutchess — Perplexity only), and is <strong>completely absent for NYC, Beacon, Poughkeepsie, Yonkers</strong>. This matches the entity-recognition pattern: LLMs have learned Arms Acres = Putnam County / Carmel from directory profiles, but haven't generalized the brand to the wider Hudson Valley catchment Arms Acres serves. Action: directory-profile work needs to explicitly tag Arms Acres as serving each of these adjacent locations (not just "Carmel, NY") — Westchester, Dutchess, Beacon, Poughkeepsie, Yonkers should be enumerated in the regulatory + directory listings so the entity-location association builds.</p>
+<p><strong>v2 top cited domains (171 citations across 8 prompts × 3 working LLMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="text-align: right;">Citations</th>
+<th style="text-align: right;">Unique prompts</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recovery.com</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">7</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td><strong>armsacres.com</strong></td>
+<td style="text-align: right;"><strong>11</strong></td>
+<td style="text-align: right;"><strong>4</strong></td>
+<td><strong>chatgpt, perplexity</strong></td>
+</tr>
+<tr>
+<td>oasas.ny.gov</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">6</td>
+<td>gemini, perplexity</td>
+</tr>
+<tr>
+<td>google.com</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td>chatgpt</td>
+</tr>
+<tr>
+<td>psychologytoday.com</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>nyp.org</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td>chatgpt, perplexity</td>
+</tr>
+<tr>
+<td>rehabs.com</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>detox.net</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>addictions.com</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>mountainside.com</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>ascendantny.com</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td>chatgpt, perplexity</td>
+</tr>
+<tr>
+<td>rehabnet.com</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td>perplexity</td>
+</tr>
+<tr>
+<td>cityofyonkers.com</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td>chatgpt</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notable shifts from v1 to v2:</strong>
+- <strong>Direct armsacres.com citations doubled in rate</strong>: 8/16 prompts in v1 (~0.5 per prompt) → 11/8 prompts in v2 (~1.4 per prompt). "Best in [location]" prompts trigger LLMs to cite the brand site directly more often than the v1 mixed-intent prompts.
+- <strong>psychologytoday.com surfaces here but not in v1</strong> — Perplexity uses the Psychology Today rehab directory for some queries. Add to citation-target list.
+- <strong>Real local competitors (Mountainside, Ascendant NYC) get LLM citations</strong> for the broader NY queries where Arms Acres doesn't surface. These are the competitors LLMs are actively recommending in the markets Arms Acres should be serving.</p>
+<p><strong>Combined v1 + v2 (24 prompts, 3 working LLMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>LLM</th>
+<th style="text-align: center;">Brand mention rate</th>
+<th style="text-align: right;">Direct armsacres.com citations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: center;">9/24 = 38%</td>
+<td style="text-align: right;">~15</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: center;">4/24 = 17%</td>
+<td style="text-align: right;">~4</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td style="text-align: center;">1/24 = 4%</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Third audit (v3) — GMB-location-balanced coverage (4 prompts per GBP location × 4 LLMs):</strong></p>
+<p>v1+v2 over-indexed on Carmel/Putnam inpatient queries. v3 fills the gap with 4 prompts each for Carmel outpatient + Bronx outpatient + Queens outpatient (the 3 GBP locations). Same prompt template set for each: <code>Best outpatient rehab in {loc}</code>, <code>Best drug rehab clinic in {loc}</code>, <code>Best alcohol rehab in {loc}</code>, <code>Best MAT clinic for opioid addiction in {loc}</code>. Claude included this time using corrected model_name <code>claude-sonnet-4-5</code>.</p>
+<p><strong>Mention rate by GMB location:</strong></p>
+<table>
+<thead>
+<tr>
+<th>GMB Location</th>
+<th>GBP status</th>
+<th style="text-align: center;">ChatGPT</th>
+<th style="text-align: center;">Claude</th>
+<th style="text-align: center;">Gemini</th>
+<th style="text-align: center;">Perplexity</th>
+<th style="text-align: center;"><strong>Combined / 16 prompts</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Carmel outpatient</strong></td>
+<td>claimed but misspelled, 3.3★/7rev</td>
+<td style="text-align: center;"><strong>4/4 (100%)</strong></td>
+<td style="text-align: center;">2/4 (50%)</td>
+<td style="text-align: center;">0/4 (0%)</td>
+<td style="text-align: center;"><strong>4/4 (100%)</strong></td>
+<td style="text-align: center;"><strong>10/16 = 62.5%</strong></td>
+</tr>
+<tr>
+<td>Bronx outpatient</td>
+<td>claimed at 3584 Jerome Ave, 3.4★/9rev, NOT in map pack</td>
+<td style="text-align: center;">1/4 (25%)</td>
+<td style="text-align: center;">0/4 (0%)</td>
+<td style="text-align: center;">0/4 (0%)</td>
+<td style="text-align: center;">1/4 (25%)</td>
+<td style="text-align: center;">2/16 = 12.5%</td>
+</tr>
+<tr>
+<td>Queens outpatient</td>
+<td><strong>no GBP exists</strong></td>
+<td style="text-align: center;">0/4 (0%)</td>
+<td style="text-align: center;">1/4 (25%)</td>
+<td style="text-align: center;">0/4 (0%)</td>
+<td style="text-align: center;">1/4 (25%)</td>
+<td style="text-align: center;">2/16 = 12.5%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Per-prompt detail (commercial-local pattern):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>Mentions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best outpatient rehab in Carmel NY</td>
+<td>ChatGPT + Perplexity + Claude (3/4)</td>
+</tr>
+<tr>
+<td>Best drug rehab clinic in Carmel NY</td>
+<td>ChatGPT + Perplexity</td>
+</tr>
+<tr>
+<td>Best alcohol rehab in Carmel NY</td>
+<td>ChatGPT + Perplexity</td>
+</tr>
+<tr>
+<td>Best MAT clinic for opioid addiction in Carmel NY</td>
+<td>ChatGPT + Perplexity + Claude (3/4)</td>
+</tr>
+<tr>
+<td>Best outpatient rehab in the Bronx NY</td>
+<td>ChatGPT only</td>
+</tr>
+<tr>
+<td>Best drug rehab clinic in the Bronx NY</td>
+<td>Perplexity only</td>
+</tr>
+<tr>
+<td>Best alcohol rehab in the Bronx NY</td>
+<td><strong>— none —</strong></td>
+</tr>
+<tr>
+<td>Best MAT clinic for opioid addiction in the Bronx NY</td>
+<td><strong>— none —</strong></td>
+</tr>
+<tr>
+<td>Best outpatient rehab in Queens NY</td>
+<td>Perplexity only</td>
+</tr>
+<tr>
+<td>Best drug rehab clinic in Queens NY</td>
+<td>Claude only</td>
+</tr>
+<tr>
+<td>Best alcohol rehab in Queens NY</td>
+<td><strong>— none —</strong></td>
+</tr>
+<tr>
+<td>Best MAT clinic for opioid addiction in Queens NY</td>
+<td><strong>— none —</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Strategic read:</strong></p>
+<p>The LLM visibility map mirrors the GBP ecosystem exactly. <strong>Where Arms Acres has a strong-cited GBP + directory presence (Carmel), LLM mention rate is 62.5%. Where they have a weak/under-claimed GBP (Bronx, in maps but not ranking), it's 12.5%. Where they have no GBP at all (Queens), it's 12.5% — and those mentions are likely brand-bleed from Carmel-related knowledge, not actual location awareness.</strong></p>
+<p><strong>Two specific service-line gaps:</strong> "alcohol rehab" and "MAT clinic" prompts in <strong>both Bronx and Queens</strong> got <strong>zero mentions across all 4 LLMs</strong>. Even when Bronx + Queens get a mention on "outpatient rehab" or "drug rehab", neither location surfaces for alcohol-specific or MAT-specific queries. Action: when the GBP claim work for Bronx + Queens lands (M1 #6 + new Queens claim), the categories MUST include "Alcoholism treatment program" + "Mental health clinic" + "Mental health service" + "Rehabilitation center" (mirroring the categories the Carmel inpatient GBP has — currently the Bronx outpatient has none of these secondary categories, and Queens doesn't exist).</p>
+<p><strong>v3 top cited domains (273 citation rows across 12 prompts × 4 LLMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="text-align: right;">Citations</th>
+<th style="text-align: right;">Unique prompts</th>
+<th style="text-align: right;">Unique locations</th>
+<th>Models</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>google.com</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td>ChatGPT</td>
+</tr>
+<tr>
+<td><strong>armsacres.com</strong></td>
+<td style="text-align: right;"><strong>17</strong></td>
+<td style="text-align: right;"><strong>7</strong></td>
+<td style="text-align: right;"><strong>2</strong></td>
+<td>ChatGPT + Perplexity</td>
+</tr>
+<tr>
+<td>rehabs.org</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td>ChatGPT</td>
+</tr>
+<tr>
+<td>recovery.com</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td>Perplexity</td>
+</tr>
+<tr>
+<td><strong>startyourrecovery.org</strong></td>
+<td style="text-align: right;"><strong>13</strong></td>
+<td style="text-align: right;"><strong>10</strong></td>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Perplexity</td>
+</tr>
+<tr>
+<td>oasas.ny.gov</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3</td>
+<td>Gemini + Perplexity</td>
+</tr>
+</tbody>
+</table>
+<p>Note: v3 had the <strong>highest direct armsacres.com citation rate of any audit</strong> — 17 citations across 7 unique prompts, all chatgpt or perplexity, all concentrated in the Carmel prompts. Bronx + Queens contribute 0 of the 17 armsacres.com citations.</p>
+<p><strong>Combined v1+v2+v3 (36 prompts, 4 LLMs where Claude valid):</strong></p>
+<table>
+<thead>
+<tr>
+<th>LLM</th>
+<th style="text-align: center;">Combined brand-mention rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Perplexity</strong></td>
+<td style="text-align: center;"><strong>15/36 = 42%</strong></td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: center;">9/36 = 25%</td>
+</tr>
+<tr>
+<td>Claude (v3 only, 12 prompts)</td>
+<td style="text-align: center;">3/12 = 25%</td>
+</tr>
+<tr>
+<td>Gemini</td>
+<td style="text-align: center;">2/36 = 6%</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Bronx + Queens visibility gap is the single sharpest data point</strong> in this entire baseline — both LLMs and Maps SERP confirm Arms Acres is functionally invisible outside Carmel/Putnam County. The M1 GMB actions (#6 GBP fix + Queens claim) close this gap; the M2 directory work (#14 with multi-region tagging requirement added) reinforces it.</p>
+<p><strong>Citation pattern — where LLMs route users (top 15 cited domains across all 16 prompts × 3 LLMs):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Domain</th>
+<th style="text-align: right;">Citations</th>
+<th>Models</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>oasas.ny.gov</strong></td>
+<td style="text-align: right;"><strong>30</strong></td>
+<td>chatgpt, gemini, perplexity</td>
+<td>NY State licensing body — top cited overall by 2.5× margin</td>
+</tr>
+<tr>
+<td>google.com</td>
+<td style="text-align: right;">16</td>
+<td>chatgpt</td>
+<td>Search-result links emitted by ChatGPT</td>
+</tr>
+<tr>
+<td><strong>recovery.com</strong></td>
+<td style="text-align: right;"><strong>9</strong></td>
+<td>perplexity</td>
+<td>Rehab directory — Perplexity preferred citation source</td>
+</tr>
+<tr>
+<td><strong>armsacres.com</strong></td>
+<td style="text-align: right;"><strong>8</strong></td>
+<td>chatgpt, perplexity</td>
+<td><strong>Direct brand-site citation (5 unique prompts) — 6.6% of all citations</strong></td>
+</tr>
+<tr>
+<td><strong>rehabs.org</strong></td>
+<td style="text-align: right;"><strong>8</strong></td>
+<td>chatgpt</td>
+<td>Rehab directory — ChatGPT citations carry <code>?utm_source=openai</code> tracking</td>
+</tr>
+<tr>
+<td><strong>rehabs.com</strong></td>
+<td style="text-align: right;"><strong>8</strong></td>
+<td>perplexity</td>
+<td>Rehab directory</td>
+</tr>
+<tr>
+<td>jointcommission.org</td>
+<td style="text-align: right;">6</td>
+<td>perplexity</td>
+<td>Accreditation body</td>
+</tr>
+<tr>
+<td>suboxonetreatmentclinicnyc.com</td>
+<td style="text-align: right;">6</td>
+<td>chatgpt, perplexity</td>
+<td>Provider site (NYC competitor)</td>
+</tr>
+<tr>
+<td><strong>startyourrecovery.org</strong></td>
+<td style="text-align: right;"><strong>6</strong></td>
+<td>perplexity</td>
+<td>Patrick J Kennedy Foundation directory</td>
+</tr>
+<tr>
+<td>integritytreatmentpartners.com</td>
+<td style="text-align: right;">6</td>
+<td>chatgpt</td>
+<td>Provider site</td>
+</tr>
+<tr>
+<td>samhsa.gov</td>
+<td style="text-align: right;">6</td>
+<td>gemini, perplexity</td>
+<td>Federal SAMHSA</td>
+</tr>
+<tr>
+<td>americanaddictioncenters.org</td>
+<td style="text-align: right;">6</td>
+<td>chatgpt, perplexity</td>
+<td>National-chain provider</td>
+</tr>
+<tr>
+<td>addictions.com</td>
+<td style="text-align: right;">5</td>
+<td>perplexity</td>
+<td>Rehab directory</td>
+</tr>
+<tr>
+<td><strong>findtreatment.samhsa.gov</strong></td>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>gemini</td>
+<td>Federal SAMHSA treatment locator — Gemini's top choice</td>
+</tr>
+<tr>
+<td>odysseyhousenyc.org</td>
+<td style="text-align: right;">4</td>
+<td>chatgpt, perplexity</td>
+<td>NYC competitor</td>
+</tr>
+<tr>
+<td>bronxcare.org</td>
+<td style="text-align: right;">4</td>
+<td>chatgpt, gemini, perplexity</td>
+<td>Bronx healthcare system</td>
+</tr>
+<tr>
+<td>addictionresource.com</td>
+<td style="text-align: right;">4</td>
+<td>perplexity</td>
+<td>Rehab directory (carries Arms Acres listing)</td>
+</tr>
+<tr>
+<td>sobercentersofamerica.com</td>
+<td style="text-align: right;">4</td>
+<td>chatgpt</td>
+<td>Rehab directory (with <code>?utm_source=openai</code>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Direct armsacres.com citations (8 total, 5 unique prompts):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Prompt</th>
+<th>LLM</th>
+<th>Cited URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is the best inpatient drug rehab in Carmel NY?</td>
+<td>Perplexity</td>
+<td>https://www.armsacres.com</td>
+</tr>
+<tr>
+<td>Best alcohol rehab in Hudson Valley NY</td>
+<td>Perplexity (×2)</td>
+<td>https://www.armsacres.com</td>
+</tr>
+<tr>
+<td>Inpatient detox center near Putnam County NY</td>
+<td>ChatGPT (×2), Perplexity</td>
+<td>https://www.armsacres.com</td>
+</tr>
+<tr>
+<td>Outpatient rehab clinic in the Bronx</td>
+<td>Perplexity</td>
+<td>https://www.armsacres.com/outpatient/bronx-outpatient</td>
+</tr>
+<tr>
+<td>OASAS-licensed rehab in upstate New York</td>
+<td>Perplexity</td>
+<td>https://www.armsacres.com</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Perplexity is the only LLM that links directly to armsacres.com's deep page (<code>/outpatient/bronx-outpatient</code>) — that's the kind of cite-the-specific-page behavior the LLM-citation work is trying to scale.</p>
+<p><strong>Read:</strong>
+- Arms Acres is <strong>named and described</strong> in LLM responses to commercial Carmel/Hudson Valley queries — strongest on Perplexity (62.5% mention rate), weaker on ChatGPT (25%), absent on Gemini (0%).
+- <strong>armsacres.com is directly cited 8 times across 5 unique prompts</strong> (6.6% of all 122 citations) — better than initially estimated. Perplexity is responsible for 6 of 8 direct citations; ChatGPT 2. Gemini emitted zero armsacres.com links across all 16 prompts. The citation surface is still mediated mostly by government + directory sources, but Perplexity is actively willing to link the brand site directly.
+- <strong>The dominant citation domains are NY State + Federal regulatory bodies</strong> (oasas.ny.gov at 30 citations, samhsa.gov + findtreatment.samhsa.gov combined at 11, jointcommission.org at 6, dasny.org at 2). Combined regulatory: ~50 of 122 citations = 41%. <strong>Owning the regulatory-directory profile surface is the highest-leverage M2 lever</strong>.
+- <strong>Rehab directories are the second-tier citation source</strong> (recovery.com 9, rehabs.org 8, rehabs.com 8, startyourrecovery.org 6, addictions.com 5, addictionresource.com 4, sobercentersofamerica.com 4 = 44 citations, 36% of total). Owning these profiles is M2 lever #2.
+- <strong>Gemini gap is real and isolated</strong>: Gemini emits 0 armsacres.com citations and 0 brand mentions even on the Carmel-specific query. Almost certainly a Knowledge Graph entity gap — Gemini falls back to government directories when it doesn't have a high-confidence entity match. Action: Wikidata + Wikipedia + Google Knowledge Panel claim audit.
+- <strong>Research-phase queries get zero brand mentions across all LLMs</strong> — confirms that informational LLM responses default to government + nonprofit sources, not specific providers. The LLM-citation play is on commercial-local queries only, not on informational topical content.</p>
+<p><strong>Strategic implications (replaces prior "track + small-bet" framing):</strong></p>
+<ol>
+<li><strong>The LLM-citation play is to own the directory + regulatory profile surface that LLMs cite, not to win citations to armsacres.com directly</strong> (low-feasibility — LLMs systematically prefer 3rd-party + government sources for YMYL queries).</li>
+<li><strong>Highest-leverage citation targets:</strong> verify and update Arms Acres profiles on <code>oasas.ny.gov</code> Find-a-Provider (NY State directory — LLMs' #1 cited domain), <code>findtreatment.samhsa.gov</code>, <code>qualitycheck.org</code> / <code>jointcommission.org</code> quality directories, <code>rehabs.org</code>, <code>recovery.com</code>, <code>sobercentersofamerica.com</code>, <code>rehabs.com</code>, <code>addictionresource.com</code>.</li>
+<li><strong>For Gemini specifically</strong>: Knowledge Graph entity claim + Wikidata + Wikipedia presence audit (Arms Acres is a 40+ year-old institution — sufficient notability for Wikipedia).</li>
+<li><strong>Direct armsacres.com LLM-citation work</strong> (FAQ schema, first-person Q&amp;A formatting, named-entity-rich pages) is still M2-M3 worth doing, but with the realistic expectation that LLMs will continue to prefer 3rd-party sources for YMYL queries even after improvements. The realistic ceiling is ~10-15% direct citation rate, not 50%+.</li>
+</ol>
+<p><strong>LLM referrer traffic (GA4 90d) — actual user flow today:</strong> combined ~96 sessions from chatgpt + gemini + perplexity + claude + you.com. Modest, but the <em>citation surface</em> analysis above shows the brand-awareness floor is much higher than the referrer count suggests — users are seeing "Arms Acres" in LLM answers and clicking through to either the brand directly (untracked) or to directory profiles. The 96 measured sessions is a floor, not a ceiling, for LLM-driven awareness.</p>
+<h3 id="17d-gbp-review-sentiment-the-underlying-operational-issues">1.7d GBP review sentiment — the underlying operational issues</h3>
+<p>DataForSEO Reviews pull, 2026-05-11. <strong>66 review samples across 3 GBPs</strong> (Queens GBP returned no reviews via API — needs alternative pull):</p>
+<table>
+<thead>
+<tr>
+<th>GBP</th>
+<th style="text-align: center;">Reviews returned</th>
+<th style="text-align: center;">Avg rating in sample</th>
+<th style="text-align: center;">1★ count</th>
+<th style="text-align: center;">5★ count</th>
+<th style="text-align: center;">1★ rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inpatient main</td>
+<td style="text-align: center;">50 (of 133)</td>
+<td style="text-align: center;">2.70</td>
+<td style="text-align: center;"><strong>24</strong></td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">48%</td>
+</tr>
+<tr>
+<td>Carmel outpatient</td>
+<td style="text-align: center;">7 (of 7)</td>
+<td style="text-align: center;">3.29</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">43%</td>
+</tr>
+<tr>
+<td>Bronx outpatient</td>
+<td style="text-align: center;">9 (of 9)</td>
+<td style="text-align: center;">3.44</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">33%</td>
+</tr>
+<tr>
+<td><strong>Queens outpatient</strong></td>
+<td style="text-align: center;"><strong>16 (of 16)</strong></td>
+<td style="text-align: center;"><strong>2.2</strong></td>
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: center;"><strong>62.5%</strong> ← most acute</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Owner-response rate in the inpatient sample: 0 of 50.</strong> Nobody at Arms Acres responds to reviews — positive or negative.</p>
+<p><strong>Themes in the 1-star reviews (inpatient main — most acute):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Sample quotes</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Medical / medication errors</strong></td>
+<td>"daughter given the WRONG AMOUNT OF MEDICATION — went into CARDIAC ARREST"; "over-medicated me"; "blood pressure medication for anxiety instead of what they offer"</td>
+<td><strong>Patient-safety / clinical</strong></td>
+</tr>
+<tr>
+<td><strong>Deaths during/after care</strong></td>
+<td>"ended up giving up and going to use drugs and overdosing and dying"; "son almost died after being discharged in a serious accident while taking their medications"</td>
+<td><strong>Clinical outcomes</strong></td>
+</tr>
+<tr>
+<td><strong>Theft / lost property</strong></td>
+<td>"brother left valuables nobody answers calls"; "duffle bag with all his clothes — everything is gone"</td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Communication failures</strong></td>
+<td>"intake department hour hold time hang up when they answer"; "don't communicate with concerned families"; "no communication whatsoever"</td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Understaffing</strong></td>
+<td>"1 staff member is expected to supervise 15+ patients"; "short staff and no patience"</td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Facility cleanliness</strong></td>
+<td>"disgusting and dirty"; "filthy place"; "scuff marks dark fluorescent lights"</td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Discrimination claims</strong></td>
+<td>"discriminated cause I'm black by a white guard"; "documents being sent to NYS"</td>
+<td><strong>Compliance</strong></td>
+</tr>
+<tr>
+<td><strong>Patient-on-patient incidents</strong></td>
+<td>"threatened by patients"; "nightshift employee instigated argument with patient and attempted to make it physical"</td>
+<td><strong>Compliance / safety</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Themes in Carmel outpatient 1-stars</strong> ("Manipulative, lying, no desire to help just make money"; "filthy disgusting place that cares nothing about you but your insurance. Hopefully will get shut down due to the documents being sent to NYS"; "constant lies from case managers, faulty tests indicating substances never used"):
+- Money-not-care perception (insurance abuse framing)
+- Documentation/testing accuracy disputes
+- Allegations of regulatory complaints filed</p>
+<p><strong>Themes in Bronx outpatient 1-stars</strong>: missed-appointment / staff-no-show pattern at the Zoom group + urine-testing sessions; lack of post-discharge follow-up support.</p>
+<p><strong>Themes in Queens outpatient 1-stars (62.5% 1-star — most-acute):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Sample quotes</th>
+<th>Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Insurance/money extraction allegations</strong> (8 of 10 1-stars mention)</td>
+<td>"only interested in your Insurance Benefits Money. Don't waste your time"; "trys to keep you in the program for insurance money if you are court mandated"; "they really is trying to keep you longer to get paid by the insurance companies"; "Their accounting is horrible"</td>
+<td><strong>Compliance</strong></td>
+</tr>
+<tr>
+<td><strong>Court-mandate / DUI exploitation</strong></td>
+<td>"I came here for a court order assessment for a DUI... they will recommend treat to get that money in to their pockets"; "Only needed a drug Assessment to be cleared to go back to work and my urine came back clean they still told me I have to do 6 weeks"</td>
+<td><strong>Compliance / regulatory</strong></td>
+</tr>
+<tr>
+<td><strong>Counselor / clinician unresponsive</strong></td>
+<td>"she has not been called back by her doctor that she has left numerous messages for in the past whole week and a half"; "Sat there 6 hours for nothing"; "groups consisted of 3-4 people, sometimes just myself and the counselor"</td>
+<td>Operational</td>
+</tr>
+<tr>
+<td><strong>Suboxone / MAT continuity gap</strong></td>
+<td>"since one medication was suboxone... they left me with nothing" — patient-safety implication for opioid-replacement continuity</td>
+<td><strong>Clinical</strong></td>
+</tr>
+<tr>
+<td><strong>Tiny / shrinking groups</strong></td>
+<td>"groups were consistent of 3 or 4 people, sometimes just myself" — operational under-utilization or program winding down</td>
+<td>Operational</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Queens-specific theme is sharply different from inpatient.</strong> Inpatient 1-stars are about clinical safety + facility conditions. Queens 1-stars are about <strong>alleged insurance-fraud / over-billing patterns + court-mandate referral abuse</strong> — these are compliance-level operational allegations that, if substantiated, are above-SEO concerns. <strong>Pre-launch ops escalation is non-optional for Queens.</strong></p>
+<p><strong>Themes in positive (5-star) reviews</strong> (mostly inpatient): individual staff praise — specific nurses or counselors named, gratitude for getting clean, family members thanking staff for saving loved ones. <strong>Pattern:</strong> positive experience is <strong>person-dependent (individual nurse / counselor / case manager)</strong>, negative experience is <strong>system-dependent (intake, communication, medication management, security).</strong> This is consistent with an under-resourced operational system where outcomes depend on which staff a patient happens to encounter.</p>
+<p><strong>Strategic implication — this is bigger than SEO:</strong></p>
+<p>A pure review-velocity program (asking happy clients for Google reviews) WITHOUT addressing the underlying operational concerns will just generate more 1-star reviews at the same 33–48% rate. The strategy item is correctly: <strong>escalate ops-level findings to HQDM principal / Arms Acres leadership BEFORE launching a review-acquisition push.</strong> Specifically:</p>
+<ol>
+<li><strong>Cardiac-arrest medication-error claim</strong> — if true, this is a clinical-incident-report issue, not a Google-reviews issue</li>
+<li><strong>Owner-response rate 0%</strong> — start responding to ALL reviews (positive AND negative) within 48 hours. Standard HQDM GMB workflow.</li>
+<li><strong>Communication operational fix</strong> — the "hour hold time, hang up when answer" pattern appears across multiple 1-star reviews and across years. That's the front-line phone team, which is also Mountainside's #1 differentiator (Mountainside's reviews praise call-center responsiveness).</li>
+<li><strong>Per the Tier 0 exposure memo:</strong> absolutely <strong>no fake review / review-gating / suppression tactics</strong>. The HQDM legitimate-program path is owner-response + programmatic ask-from-current-clients.</li>
+</ol>
+<p>The Asana data shows 217 GMB Ops tasks (16.1% of all work) over 24 months — but the GBPs are still at 2.2-3.4★ with 0% owner-response. The GMB workflow is recurring but not actually moving the needle on reputation. Worth an Asana cross-check on what those 217 tasks were and why they didn't impact ratings.</p>
+<h3 id="110a-asana-task-mix-analysis-711-day-engagement-history">1.10a Asana task-mix analysis (711-day engagement history)</h3>
+<p>1,345 Asana tasks across 711 days of HQDM engagement (2024-05-30 → 2026-05-11). Task-mix by category (mirroring the Surfpoint analysis methodology):</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th style="text-align: right;">Tasks</th>
+<th style="text-align: right;">% of total</th>
+<th style="text-align: right;">Completion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content (blog + production)</td>
+<td style="text-align: right;"><strong>654</strong></td>
+<td style="text-align: right;"><strong>48.6%</strong></td>
+<td style="text-align: right;">active production cycle</td>
+</tr>
+<tr>
+<td>Other (intake / misc / setup)</td>
+<td style="text-align: right;">314</td>
+<td style="text-align: right;">23.4%</td>
+<td style="text-align: right;">86.6% done</td>
+</tr>
+<tr>
+<td><strong>GMB Ops</strong></td>
+<td style="text-align: right;"><strong>217</strong></td>
+<td style="text-align: right;">16.1%</td>
+<td style="text-align: right;">2.3% done (mostly recurring monthly review/reply tasks)</td>
+</tr>
+<tr>
+<td>Off-page (link building + PR)</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">6.5%</td>
+<td style="text-align: right;">76.1% done</td>
+</tr>
+<tr>
+<td>Audit / Reporting</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">2.3%</td>
+<td style="text-align: right;">67.7% done</td>
+</tr>
+<tr>
+<td>Meeting / Sync</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1.1%</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td><strong>On-page</strong></td>
+<td style="text-align: right;"><strong>13</strong></td>
+<td style="text-align: right;"><strong>1.0%</strong></td>
+<td style="text-align: right;">69.2% done</td>
+</tr>
+<tr>
+<td>Strategy</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0.6%</td>
+<td style="text-align: right;">37.5% done</td>
+</tr>
+<tr>
+<td>Technical</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.3%</td>
+<td style="text-align: right;">50% done</td>
+</tr>
+<tr>
+<td><strong>Schema</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+<td style="text-align: right;"><strong>0.07%</strong></td>
+<td style="text-align: right;">100% (but the schema is still missing from the live site — see Section 1.6)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Read:</strong> 48.6% of work over 24 months went into content production. <strong>On-page + Schema + Technical combined = 1.4% of total work.</strong> The structural lever Arms Acres has been pulled is content + GMB + off-page; the conversion-architecture levers (forms, schema, on-page rebuilds) have been near-zero allocation. This is consistent with the diagnoses in Sections 1.2 (no forms on service pages), 1.6 (no schema), and 1.8 (link-acquisition diversity gap) — it's not a team-capacity problem, it's an allocation problem.</p>
+<p><strong>Engagement quirks</strong> (per the "don't over-weight stale Asana WIP" rule, noting but not centering):
+- 3 tasks in <code>Order Backlinks</code> section, all open, median age 711 days — abandoned tickets, not active stall
+- 1 task in <code>Schema Markup</code> section, marked complete — but live site has zero schema beyond <code>Organization</code> on homepage. Either the schema was deployed and removed, or the task closed without actual deployment.</p>
+<p>Recent activity (last 90 days, 250 new tasks): Content Posted (25), Order Gigs (10), Content Being Written (7), Content Ready To Post (7), Intake (4), Reporting (3), Content Ordering (3), On Page Optimizations (1). The mix has not shifted — still 95%+ content-side.</p>
+<p><strong>Strategic implication for M1 ordering:</strong> the M1 actions in this strategy (intake form deployment, schema, doorway cleanup, GBP fixes, phone-number repair, disavow filing) are precisely the work that has been under-allocated for 24 months. The first quarterly cycle of the strategy-first reporting rollout is mostly about <strong>redirecting some of the content allocation toward the structural fixes</strong>.</p>
+<h3 id="110-form-funnel-cro-secondary-issue">1.10 Form-funnel CRO secondary issue</h3>
+<p>Independent of the service-page form-deployment gap above, the existing intake form (on home / admissions / contact) shows a <strong>33% form-completion rate</strong> (522 form_starts → 170 form_submits in 90d). For a 4-input form on a rehab intake, that's roughly industry-typical but improvable. Likely culprits (to be diagnosed in M1-M2):</p>
+<ul>
+<li>Phone field required → users uncomfortable disclosing phone before knowing the program</li>
+<li>Message textarea required → friction; consider optional</li>
+<li>No field-level analytics → can't see where the drop happens</li>
+</ul>
+<p>Recommend implementing field-level form analytics (Hotjar form-tracking, or GA4 enhanced form events) as part of M1 action #7.</p>
+<hr />
+<h2 id="2-three-month-plan">2. Three-Month Plan</h2>
+<blockquote>
+<p>Each item: action description, strategy area, department owner, scheduled month, expected outcome (numeric where possible), effort estimate (S/M/L), attribution-confidence flag (H/M/L), risk note. Items are sorted by impact within each month.</p>
+</blockquote>
+<h3 id="month-1-foundation-highest-leverage">Month 1 — Foundation (highest leverage)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Area</th>
+<th>Dept</th>
+<th>Month</th>
+<th>Expected outcome</th>
+<th>Effort</th>
+<th>Attribution conf.</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Deploy 4-input intake form (Name + Email + Phone + Message — same Webflow template currently on home/admissions/contact) on all 6 service pages (<code>/inpatient</code>, <code>/inpatient/detox-program</code>, <code>/inpatient/adult-rehabilitation</code>, <code>/outpatient/carmel-outpatient</code>, <code>/outpatient/bronx-outpatient</code>, <code>/outpatient/queens-outpatient</code>)</td>
+<td>Website</td>
+<td>On-page (Aleksa) + Web</td>
+<td>M1</td>
+<td>+200 to +470 form_submit conversions /365d at 1–2% page-level rate (current: 1/year)</td>
+<td>M</td>
+<td><strong>H</strong> — pre/post conversion measurable on each service-page URL</td>
+<td>Low — Webflow component-paste, reversible</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Replace homepage <code>og:description</code> (wrong-brand "Bold Steps Behavioral Health / Harrisburg PA" boilerplate). Author proper <code>og:description</code> for home + meta descriptions for 19 sampled empty URLs. <strong>Also expand to address OnPage findings (Section 1.6a)</strong>: (a) rewrite 9 short-title pages — Admissions (currently 23 chars), Reviews (7 chars), What-To-Bring-To-Arms-Acres (27), Email-Patients (27), Patient-Rights (27), Alumni (19), plus 3 others — target 50–60 chars including geographic modifier; (b) add <code>alt</code> + <code>title</code> attributes to images sitewide — 37 of 49 KEEP pages currently have ZERO image alt-text (76% coverage gap); (c) extend meta-description coverage to the broader KEEP set, not just the 19 manually sampled.</td>
+<td>Website</td>
+<td>On-page</td>
+<td>M1</td>
+<td>CTR lift 0.3% → 0.5% on non-brand impressions (~2.5K → ~4K clicks /90d). Snippet brand control. Image alts close a YMYL accessibility + image-SEO gap.</td>
+<td>M</td>
+<td><strong>M</strong> — CTR change measurable in GSC; image-alt coverage measurable via DFS OnPage re-crawl post-fix</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>3</td>
+<td>301-redirect 4 <code>/service/&lt;name&gt;-in-carmel-hamlet-ny</code> URLs to non-suffixed originals (equine therapy, fitness/recreation, MAT, psychiatric). Remove from sitemap.</td>
+<td>Website</td>
+<td>On-page + Tech</td>
+<td>M1</td>
+<td>Resolves duplicate-content cannibalization; consolidate ranking equity to 1 canonical URL per service</td>
+<td>S</td>
+<td><strong>M</strong></td>
+<td>Low</td>
+</tr>
+<tr>
+<td>4</td>
+<td>301-redirect 71 <code>/suburb/*</code> doorway pages to closest matching <code>/service-areas</code>, <code>/outpatient/&lt;carmel|bronx|queens&gt;-outpatient</code>, or <code>/contact</code>. Remove from sitemap. Confirm none rank for commercial query before redirecting.</td>
+<td>Website</td>
+<td>On-page + Tech</td>
+<td>M1</td>
+<td>Removes doorway-page exposure; reduces site's "Crawled — not indexed" thin-content surface (likely meaningful — verify with gsc_inspect Coverage data when manual export lands)</td>
+<td>M</td>
+<td><strong>M</strong></td>
+<td>Medium — review for any unexpected backlinks pointing to doorway pages before redirecting</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Schema deployment Phase 1: Homepage <code>MedicalBusiness</code> + <code>LocalBusiness</code> + <code>Place</code> + <code>BreadcrumbList</code>; service pages <code>Service</code> + <code>MedicalProcedure</code>; 3 outpatient pages <code>MedicalBusiness</code> (one per location, each with own address + phone); admissions <code>WebPage</code> + <code>FAQPage</code>; reviews <code>AggregateRating</code> + <code>Review</code></td>
+<td>Website</td>
+<td>On-page</td>
+<td>M1</td>
+<td>Sets structured-data foundation; closes the largest schema gap in a YMYL vertical. Use HQDM schema validation cascade per SOP.</td>
+<td>M</td>
+<td>L</td>
+<td>Low — validate each schema with the 3-layer pre-deploy gate</td>
+</tr>
+<tr>
+<td>6</td>
+<td>GMB audit (DataForSEO Business Data + Maps SERP at Carmel + Bronx + Queens): verify primary category, secondary categories, services list, hours, photo cadence, Q&amp;A, review velocity. Verify 3 outpatient locations each have their own claimed GBP. Output: gap inventory + assignable recommendations to GMB dept.</td>
+<td>GMB</td>
+<td>Aleksandar audit → GMB dept execution</td>
+<td>M1</td>
+<td>Each gap identified gets an assignable line item for the GMB team (which is currently a flagged bottleneck per the HQDM ops memo).</td>
+<td>M</td>
+<td>M</td>
+<td>Low (audit-only)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Add <code>tap-to-call</code> event tracking to GA4 (custom event on <code>tel:</code> link click, marked as secondary conversion) + Hotjar or GA4 field-level form-event tracking on home/admissions/contact intake forms</td>
+<td>Tracking</td>
+<td>Tech / On-page</td>
+<td>M1</td>
+<td>Tap-to-call channel becomes visible (~0 → ~thousands of measurable events/year). Form abandon-field becomes identifiable.</td>
+<td>S</td>
+<td><strong>H</strong> for the measurement itself; M for downstream optimization</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Rewrite the 6 service-page narratives to add: trust-signal block (OASAS + Joint Commission + 1982 + 191-bed + employee-owned), insurance disclosure (Medicaid + carriers list once intake-confirmed), real photos of the facility / staff, 2-3 testimonial quotes pulled from existing review base</td>
+<td>Content + Website</td>
+<td>Content team brief → Aleksa for on-page implementation</td>
+<td>M1-M2</td>
+<td>Lift in service-page form-completion rate from baseline (post-action #1 measurement)</td>
+<td>M</td>
+<td>M</td>
+<td>Low — content review against compliance / OASAS messaging rules</td>
+</tr>
+</tbody>
+</table>
+<h3 id="month-2-build-compound-on-m1-foundation">Month 2 — Build (compound on M1 foundation)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Area</th>
+<th>Dept</th>
+<th>Month</th>
+<th>Expected outcome</th>
+<th>Effort</th>
+<th>Attribution conf.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9</td>
+<td>Service-page narrative + trust-signal rebuild (continuation of M1 #8 if not complete). <strong>Target word count: 6,000–8,000 per service page (Mountainside model — see Section 1.7a)</strong>. Structured H2/H3 hierarchy; embedded multi-carrier insurance disclosure block per <code>mountainside.com/admissions/paying-for-treatment/</code> format; FAQ section eligible for FAQPage schema.</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M2</td>
+<td>Service-page conv rate moves from 1% (post-form-deploy) to 1.5-2%; topical authority + LLM-citation surface increases</td>
+<td>L</td>
+<td>M</td>
+</tr>
+<tr>
+<td>9a</td>
+<td><strong>Pursue CARF accreditation + LegitScript certification</strong> (currently unverified on Arms Acres but standard on Mountainside). Both are independent audits that take 3-6 months to acquire. Initiate applications M2 so credentials land in M3 or Q3.</td>
+<td>Risk + Compliance</td>
+<td>Aleksandar coordinates → operations + clinical leadership</td>
+<td>M2-M3 (applications)</td>
+<td>Joint Commission + OASAS + CARF + LegitScript = full YMYL credential stack matching converting competitors</td>
+<td>L</td>
+<td>L — measurable as credential acquisition + downstream visibility lift</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Topical cluster build</strong>: cluster the 247 KEEP-AUDIT (core topical) blog posts under the 6 service pages via internal-linking templates. E.g., posts on "alcohol withdrawal symptoms", "medicaid cover rehab", "intensive outpatient program iop" → linked from /inpatient/detox-program, /admissions, /outpatient/* respectively. Build a topical-cluster spreadsheet mapping each blog post to its parent service page.</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M2</td>
+<td>Topical authority signal builds. Recovery of organic ranking on commercial queries within 2-3 months.</td>
+<td>L</td>
+<td>M</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>47 off-topic blog posts → DELETE</strong>. <strong>14 off-topic-but-high-traffic posts → NOINDEX</strong>. Use the topical overlay output (<code>decision_matrix_with_topical.csv</code>) as the manifest.</td>
+<td>Content + Website</td>
+<td>On-page + Tech</td>
+<td>M2</td>
+<td>Removes ~62K thin-content imp/90d that's pulling no commercial intent; consolidates indexable surface around topical core</td>
+<td>M</td>
+<td>M</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Local content build #1</strong>: Carmel NY / Hudson Valley landing page rebuild (currently <code>/service-areas</code> is the area page and <code>/inpatient</code> carries the geographic-modifier title). Add: explicit Putnam County + Westchester + Dutchess + Mahopac + Brewster + Lake Carmel + Mount Kisco coverage; embedded GBP map; distance-to-facility from each neighborhood; transit/driving directions.</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M2</td>
+<td>Captures geo-modified non-brand queries that Arms Acres currently doesn't rank for</td>
+<td>M</td>
+<td>M</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Backlinks audit &amp; disavow assessment</strong> (DataForSEO Backlinks deep pull: anchor profile, referring domain spam-score distribution, page-level backlink targeting). Surface toxic-pattern referring domains for disavow review.</td>
+<td>Off-page</td>
+<td>Off-page (Julce)</td>
+<td>M2</td>
+<td>Disavow file (if warranted); identification of priority pages under-supported by links</td>
+<td>M</td>
+<td>L</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Citations rebuild (now LLM-citation-aligned)</strong>: foundational vertical-specific citations prioritized by LLM-citation frequency from the audit: <strong>(1) NYS OASAS Find a Provider</strong> (<code>oasas.ny.gov</code> — top cited domain across both audits, 41+ citations combined), <strong>(2) SAMHSA findtreatment.gov</strong> + <code>findtreatment.samhsa.gov</code>, <strong>(3) Joint Commission Quality Check</strong> (<code>qualitycheck.org</code> + <code>jointcommission.org</code>), <strong>(4) directory profiles</strong>: <code>rehabs.org</code>, <code>recovery.com</code> <em>(Perplexity's #1 directory, 21 combined citations)</em>, <code>rehabs.com</code>, <code>psychologytoday.com</code> <em>(surfaced in v2 best-in-location audit)</em>, <code>addictionresource.com</code>, <code>sobercentersofamerica.com</code>, <code>startyourrecovery.org</code>, <code>addictions.com</code>, <strong>(5) regional</strong>: NY State Department of Health behavioral health directory, BBB Putnam NY, LegitScript certification listing if granted. <strong>Each profile listing must explicitly enumerate all 5 served regions</strong> (Putnam County / Carmel + Westchester + Dutchess + Bronx + Queens + Hudson Valley + Beacon + Poughkeepsie + Yonkers) — v2 audit showed Arms Acres' LLM entity-recognition is concentrated within ~10mi of Carmel and drops to zero for NYC/Beacon/Poughkeepsie/Yonkers. Forcing the location-association into the citation graph is how LLMs learn the broader catchment.</td>
+<td>Off-page</td>
+<td>Off-page (Julce)</td>
+<td>M2</td>
+<td>Anchors the citation foundation that's currently underbuilt AND is the actual path LLMs use to surface Arms Acres in chat responses; closes the geographic-coverage gap for adjacent counties</td>
+<td>M</td>
+<td>M</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>Author / team page deployment</strong>: clinical team page with bios + credentials + Joint Commission + OASAS license numbers; add <code>Person</code> schema.</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M2</td>
+<td>E-E-A-T signal for YMYL vertical; foundation for medical-author markup on blog</td>
+<td>M</td>
+<td>L</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>Bronx + Queens outpatient location pages — separate GBP-anchored landing pages</strong> with each location's own NAP, hours, phone, photos, services, transit info. Each gets its own MedicalBusiness schema (deployed in M1 #5).</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M2</td>
+<td>Outpatient locations gain their own local-pack representation rather than being collapsed under inpatient Carmel</td>
+<td>M</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<h3 id="month-3-expand-reinforce">Month 3 — Expand + Reinforce</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Area</th>
+<th>Dept</th>
+<th>Month</th>
+<th>Expected outcome</th>
+<th>Effort</th>
+<th>Attribution conf.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td><strong>Topical cluster build continuation</strong>: extend the M2 internal-linking map to cover the additional ~250 AUDIT-category blog posts (after human-pass review). Map each retained post to either a service page, an outpatient location page, or to a higher-funnel topical hub.</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M3</td>
+<td>Compound the M2 topical authority signal</td>
+<td>L</td>
+<td>M</td>
+</tr>
+<tr>
+<td>18</td>
+<td><strong>Service-page expansion</strong>: build (currently missing) service pages for client's actually-offered services that don't yet have their own URL: MAT-standalone (currently buried in /service/medication-assisted-therapy-in-carmel-hamlet-ny), dual diagnosis (no current page despite mention in clinical offerings), aftercare / alumni program (currently /service/alumni — thin)</td>
+<td>Content + Website</td>
+<td>Content + On-page</td>
+<td>M3</td>
+<td>Captures non-brand commercial queries for MAT + dual diagnosis (no current ranking)</td>
+<td>M</td>
+<td>M</td>
+</tr>
+<tr>
+<td>19</td>
+<td><strong>PR / digital-PR placements targeting authority recovery + behavioral-health domains</strong> (no specific list yet — drive from M2 backlinks audit). Target: 2-3 placements in NY-regional or addiction-recovery-specific authoritative outlets</td>
+<td>Off-page</td>
+<td>Off-page (Julce)</td>
+<td>M3</td>
+<td>Authority signal lift to specific priority pages</td>
+<td>L</td>
+<td>L</td>
+</tr>
+<tr>
+<td>20</td>
+<td><strong>LLM visibility build (reframed per LLM audit)</strong>: (a) Structured FAQ blocks on service pages with FAQPage schema + first-person Q&amp;A formatting for the highest-volume LLM prompts the audit surfaced (Carmel/Hudson Valley/Putnam County addiction-treatment queries, insurance-coverage queries, OASAS/Joint Commission accreditation queries); (b) <strong>Wikidata + Wikipedia entity presence audit</strong> — Arms Acres at 40+ years old, OASAS-licensed, Joint Commission-accredited, 191-bed has notability for Wikipedia; this is the highest-leverage Gemini-visibility lever (Gemini's 0% brand-mention rate in the audit suggests Knowledge Graph gap); (c) Google Knowledge Panel claim if not already done; (d) named-entity-rich content with explicit address/phone/credential mentions structured to be quotable by LLMs; (e) re-run the LLM audit quarterly to track shift.</td>
+<td>Website + Content</td>
+<td>On-page + Content</td>
+<td>M3</td>
+<td>Realistic ceiling: 10-15% direct armsacres.com LLM-citation rate (vs current 1.6%); Gemini brand-mention rate 0% → 30%+ via Wikipedia/Knowledge Graph; foundational entity surface for AI Overview (when YMYL surfacing activates)</td>
+<td>M</td>
+<td>L — measurable as LLM-audit re-run quarterly + GA4 LLM-referrer trend</td>
+</tr>
+<tr>
+<td>21</td>
+<td><strong>Local Dominator scan deployment</strong>: set up Arms Acres LD grid for <code>drug rehab carmel ny</code>, <code>alcohol rehab carmel ny</code>, <code>inpatient rehab hudson valley</code>, <code>outpatient rehab bronx</code>, <code>outpatient rehab queens</code>. Baseline scan after M1+M2 work lands. Compare grid coverage vs Surfpoint's tracked patterns.</td>
+<td>GMB + Tracking</td>
+<td>Aleksandar</td>
+<td>M3 (one-time setup; ongoing monthly thereafter)</td>
+<td>Per-cluster grid baseline for the next quarter's strategic review</td>
+<td>S</td>
+<td>–</td>
+</tr>
+<tr>
+<td>22</td>
+<td><strong>Q3 2026 strategy refresh prep</strong>: pull updated decision_matrix; re-run topical overlay; re-run SERP scrape; document M1+M2+M3 actual outcomes vs expected; identify next-quarter levers</td>
+<td>All</td>
+<td>Aleksandar</td>
+<td>end of M3</td>
+<td>Quarterly cycle continuation</td>
+<td>M</td>
+<td>–</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-strategic-focus-what-to-push-consolidated">3. Strategic Focus — what to push (consolidated)</h2>
+<p>Push, in priority order:</p>
+<ol>
+<li><strong>Inpatient detox + adult rehab</strong> (Carmel NY, Hudson Valley) — the differentiated 191-bed clinical product that no NYC outpatient-focused competitor matches.</li>
+<li><strong>Outpatient (Carmel + Bronx + Queens)</strong> — three separate map-pack opportunities, each with its own GBP. Currently underbuilt: outpatient locations don't have their own schema, distinct LocalBusiness profiles, or location-specific content depth.</li>
+<li><strong>MAT (medication-assisted therapy)</strong> — currently buried in service-modifier URL. Standalone service-page rebuild captures non-brand MAT queries in NYC + Hudson Valley.</li>
+<li><strong>Insurance acceptance</strong> — Medicaid is the qualifying claim that opens a large NY-state customer base (NYS OASAS-licensed + Medicaid acceptance is a differentiator). Currently absent from service-page copy entirely.</li>
+</ol>
+<p>Do <strong>not</strong> push:
+- The <code>/suburb/</code> doorway tree — actively kill it
+- The off-topic drug-interaction blog content — NOINDEX or delete
+- The duplicated <code>/service/&lt;name&gt;-in-carmel-hamlet-ny</code> URLs — redirect to canonical
+- LLM AIO optimization as M1 priority (track + foundation only — the vertical doesn't surface AIO yet)</p>
+<hr />
+<h2 id="4-resilience-layer">4. Resilience Layer</h2>
+<p>Brand-driven traffic (Direct + GMB-click combined: ~57,150 sessions / 302 conv / 365d = ~57% of all conversions) is the resilience layer. The cleanup + intake-form work in M1-M2 is the <em>expansion</em> layer. Loss of either kills revenue; the brand-driven channel is the floor and the M1+M2 work is what raises the ceiling.</p>
+<p><strong>Risk:</strong> none of the M1 actions touch the homepage or the GMB profile in ways that risk the brand-driven channel — except action #2 (homepage <code>og:description</code>), which is <em>replacing</em> a defect, not introducing one. Action #5 (schema deployment on homepage) needs the 3-layer validation cascade pre-deploy.</p>
+<hr />
+<h2 id="5-open-questions-items-to-determine-during-execution">5. Open Questions — Items to Determine During Execution</h2>
+<p>The strategy is defensible end-to-end without these answers, but each one shapes the execution of specific M1-M3 items. Tracked here so they don't get lost.</p>
+<h3 id="51-binary-verifications-yesno-shift-specific-items">5.1 Binary verifications (yes/no, shift specific items)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>What hangs on the answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Is Arms Acres CARF-accredited?</strong></td>
+<td>If yes → drop M2 #9a "pursue CARF" and instead "surface existing CARF badge on every service page + footer + GBP." If no → keep #9a as a 3-6 month application track.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Is Arms Acres LegitScript-certified?</strong></td>
+<td>Same logic. If yes → surface. If no → applies. LegitScript is a YMYL trust signal that Mountainside surfaces on every page.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Is Arms Acres listed on findtreatment.samhsa.gov?</strong></td>
+<td>If yes → confirm listing accuracy + secondary categories. If no → file the listing in M2 (this is the #1 LLM-cited domain by Gemini).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Is Arms Acres listed on the NY OASAS Find-a-Provider directory?</strong> (oasas.ny.gov)</td>
+<td>Top-cited domain in LLM responses (30 citations across audits). If listed → verify accuracy + service description. If not → file the listing — top citation-acquisition target.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Is <code>healthyclass.com</code> an intentional partner / network member, or accidental?</strong></td>
+<td>15,644 of 17,209 backlinks (90.9%) come from this one sitewide-template referer. Spam-neutral (19), so no urgent action — but worth knowing whether to leave alone or clean up. Same question for <code>addiction-programs.net</code> (2,203 GSC linking pages) and <code>americanaddictionfoundation.com</code> (1,642).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-operational-clinical-context-shape-priority">5.2 Operational + clinical context (shape priority)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>What hangs on the answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td><strong>What insurance carriers does Arms Acres actually accept</strong> (in-network)?</td>
+<td>Confirmed from site copy: Medicaid + Beacon. Industry-standard for OASAS-licensed rehabs is also Aetna / Cigna / BCBS / Empire / UHC / Tricare / Medicare. Action: confirm with intake team, then populate the insurance-disclosure block (M1 #8) and the per-service-page disclosure (M2 #9). Mountainside's gold-standard list is 12+ carriers.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Has Arms Acres had any prior Google penalties or GMB suspensions?</strong></td>
+<td>Affects how aggressively M1 cleanup can move. Live indexation looks healthy (95% indexed), so probably no current action — but quarterly history would confirm.</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Are the medication-error / cardiac-arrest / discrimination claims surfaced in 1-star reviews currently in litigation or regulatory escalation?</strong></td>
+<td>Affects how M2/M3 review-velocity work is sequenced. <strong>HQDM cannot run a review-acquisition program when active complaints are unresolved.</strong> Compliance gate before launch.</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Is there a known operational fix in progress for the "intake department phone never answers" pattern surfaced in 5+ reviews?</strong></td>
+<td>Frontline phone responsiveness is the single most-cited negative pattern. SEO can't fix this — it's an ops finding. Needs principal-level escalation to Arms Acres leadership.</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Is there a Queens outpatient operational reality (real intake clinicians, full hours, full services) that matches the website page?</strong></td>
+<td>The Queens GBP exists at 90-02 161st St Jamaica with 2.2★/16 reviews — but if the location is staffed only part-time / not at parity with Bronx + Carmel, the review-velocity push will surface those gaps.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-strategic-context-shape-sequencing">5.3 Strategic context (shape sequencing)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Question</th>
+<th>What hangs on the answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>11</td>
+<td><strong>What was the last quarter's strategy (if any), and what items rolled in/out?</strong></td>
+<td>Affects M1 ordering — we don't want to re-relitigate work already started or sequenced last quarter.</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Was the wrong-brand "Bold Steps Behavioral Health" og:description and the cross-swapped Bronx/Queens phone numbers noticed by the team before this audit?</strong></td>
+<td>Tells me whether these are net-new findings (red flag for QA process) or known issues with backlog reasons. Not blocking, but informs the team conversation.</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Is Milica or the Arms Acres AM setting the priority ordering of M1 items, or am I?</strong></td>
+<td>Two of the M1 items (review-velocity launch, healthyclass.com cleanup decision) are best-handled at AM-level.</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Does Arms Acres want HQDM to recommend Local Dominator scan setup for Bronx + Queens</strong> (which keywords + grid sizes)?</td>
+<td>Recommended set in Section A below; needs LD admin to set up the scans.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-questions-for-the-team-early-cycle-followups">6. Questions for the Team (early-cycle followups)</h2>
+<p>Items that need direct conversation with Milica, Aleksa, Julce, Marija, or the GMB team owner before the strategy doc moves to the Tracker:</p>
+<ul>
+<li><strong>Account Manager (TBD — Arms Acres AM not yet identified to me):</strong> Asana intake → confirm the Q2 strategy doc is the deliverable (vs a strategy meeting + tracker entries). Confirm review-velocity-program launch is OK before clinical-incident issues are confirmed-cleared.</li>
+<li><strong>Aleksa (On-page lead):</strong> Walkthrough of the M1 items that are on-page deliverables (#1, #1a phone fix, #1b sitemap removal, #2 og:description fix, #3 service-duplicate redirects, #5 schema deployment) — capacity + sequencing.</li>
+<li><strong>Julce (Off-page lead):</strong> Walkthrough of M1 #1c disavow filing + M2 #14 citation rebuild prioritization. The disavow file structure I can hand over; what's Julce's existing GSC disavow workflow?</li>
+<li><strong>Marija (Reporting lead):</strong> What attribution model is Marija using for the Quarterly Strategy Tracker <code>Result/Notes</code> column? Each M1 item has an Expected Outcome (numeric) — does Marija want pre/post measurement done at the URL level, the page-section level, or the channel level?</li>
+<li><strong>Milica (Principal):</strong> Two items need principal-level visibility before execution: (a) the cardiac-arrest medication-error review claim and what it means for review-velocity timing; (b) the <code>healthyclass.com</code> 90.9% backlink concentration — known partnership or to-be-investigated?</li>
+<li><strong>GMB team owner:</strong> Why have 217 GMB Ops tasks over 24 months not moved the inpatient rating above 3.2★, and which sub-tasks were actually executed vs theatre? Workflow audit before launching new programmatic review-velocity work.</li>
+</ul>
+<hr />
+<h2 id="appendix-a-pending-data-open-data-pulls">Appendix A — Pending data + open data-pulls</h2>
+<h3 id="a1-data-items-still-expected-from-ace">A.1 Data items still expected from Ace</h3>
+<ul>
+<li>~~Web Vitals reports~~ ✓ <strong>DELIVERED</strong> 2026-05-11 (Section 1.6). CWV passed; no further action.</li>
+<li>~~GSC manual exports~~ ✓ <strong>DELIVERED</strong> 2026-05-11. Crawl Stats (Section 1.5), Top Linking Sites (Section 1.8), Top Target Pages (used for internal-link distribution audit).</li>
+<li>~~Asana intake CSV~~ ✓ <strong>DELIVERED</strong> 2026-05-11 (Section 1.10a).</li>
+<li>~~Local Dominator scans~~ ✓ <strong>PARTIAL</strong> — 4 scans delivered (3 keywords × Carmel coords). Pending: Bronx + Queens coordinate scans.</li>
+<li>Confirmation of Open-Questions items in Sections 5.1–5.3.</li>
+</ul>
+<h3 id="a2-recommended-local-dominator-scan-additions">A.2 Recommended Local Dominator scan additions</h3>
+<p>Based on the Carmel-grid 100% dominance + the Bronx + Queens visibility gap, the highest-value LD scan set to add:</p>
+<p><strong>Bronx outpatient grid (anchor: 3584 Jerome Ave, ~40.8748 / -73.8995):</strong>
+- <code>outpatient rehab bronx</code>
+- <code>drug rehab bronx</code>
+- <code>alcohol rehab bronx</code>
+- <code>MAT clinic bronx</code>
+- <code>suboxone clinic bronx</code></p>
+<p><strong>Queens outpatient grid (anchor: 90-02 161st St Jamaica, ~40.7099 / -73.7903):</strong>
+- <code>outpatient rehab queens</code>
+- <code>drug rehab queens</code>
+- <code>alcohol rehab queens</code>
+- <code>MAT clinic queens</code>
+- <code>methadone clinic queens</code></p>
+<p><strong>Carmel grid expansions (since current 4 scans confirm domination — these would track risk):</strong>
+- <code>outpatient rehab carmel ny</code>
+- <code>MAT treatment hudson valley</code>
+- <code>inpatient rehab putnam county</code></p>
+<p>Total proposed scan set: 13. At HQDM-standard 169-point grids, monthly cadence, this is the right size to track meaningful trend without LD-budget bloat.</p>
+<h3 id="a3-keywords-where-ahrefs-enrichment-would-tighten-the-analysis">A.3 Keywords where Ahrefs enrichment would tighten the analysis</h3>
+<p>DataForSEO Search Volume Phase 2 returned Bing-only data on several high-value commercial-intent terms (Google Ads suppresses sensitive-vertical volumes):</p>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Google Ads vol</th>
+<th style="text-align: right;">Bing vol</th>
+<th style="text-align: right;">DataForSEO max</th>
+<th>Ahrefs reuse opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>residential rehab</code></td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">21,410</td>
+<td style="text-align: right;">21,410</td>
+<td><strong>Reuse from Surfpoint</strong> — relevant for both Hudson Valley + NYC catchments</td>
+</tr>
+<tr>
+<td><code>inpatient rehab</code></td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">1,220</td>
+<td style="text-align: right;">1,220</td>
+<td><strong>Reuse from Surfpoint</strong></td>
+</tr>
+<tr>
+<td><code>alcohol rehab</code></td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">640</td>
+<td style="text-align: right;">640</td>
+<td><strong>Reuse from Surfpoint</strong></td>
+</tr>
+<tr>
+<td><code>drug rehab center</code></td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">3,830</td>
+<td style="text-align: right;">3,830</td>
+<td><strong>Reuse from Surfpoint</strong></td>
+</tr>
+<tr>
+<td><code>suboxone treatment</code></td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">940</td>
+<td style="text-align: right;">940</td>
+<td><strong>Reuse from Surfpoint</strong> if MAT enrichment was pulled</td>
+</tr>
+<tr>
+<td><code>MAT treatment carmel ny</code></td>
+<td style="text-align: right;">(not pulled in v2 set)</td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">—</td>
+<td><strong>Need fresh Ahrefs</strong> — Carmel/Putnam-specific MAT volumes</td>
+</tr>
+<tr>
+<td><code>outpatient rehab bronx</code></td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">—</td>
+<td><strong>Need fresh Ahrefs</strong> — Bronx-specific outpatient volumes</td>
+</tr>
+<tr>
+<td><code>methadone clinic bronx</code></td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">—</td>
+<td><strong>Need fresh Ahrefs</strong> — Bronx MAT</td>
+</tr>
+<tr>
+<td><code>outpatient rehab queens</code></td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">—</td>
+<td><strong>Need fresh Ahrefs</strong> — Queens-specific</td>
+</tr>
+<tr>
+<td><code>methadone clinic queens</code></td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">(not pulled)</td>
+<td style="text-align: right;">—</td>
+<td><strong>Need fresh Ahrefs</strong> — Queens MAT</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reuse-from-Surfpoint set:</strong> the 5 generic terms above (residential rehab, inpatient rehab, alcohol rehab, drug rehab center, suboxone treatment) have national volumes that apply to Arms Acres' Hudson Valley + NYC catchments equally — no need to re-enrich.</p>
+<p><strong>Fresh Ahrefs needed:</strong> Bronx + Queens + Carmel-specific geo-modified terms (5 from the Bronx set, 5 from the Queens set, 3 from the Carmel expansion). 13 keywords × Ahrefs Keywords Explorer = the volume + parent-topic data DataForSEO can't supply for these geo-modifiers. Worth pulling.</p>
+<h3 id="a4-pending-data-pulls-dataforseo-refinements">A.4 Pending data-pulls / DataForSEO refinements</h3>
+<ul>
+<li><strong>Queens GBP reviews</strong> (Queens CID couldn't be resolved via DataForSEO Business Listings even with location_coordinate at Jamaica + brand description; the listing exists but DFS's index doesn't surface it through that filter). Alternative: pull via DataForSEO SERP Knowledge Panel for <code>Arms Acres Outpatient Queens</code> query, or pull via direct place_id (need to fetch from Google Maps URL).</li>
+<li><strong>Carmel outpatient + Bronx outpatient reviews via DataForSEO Reviews task_post</strong> — currently the script returned ratings but not review-text bodies on these two; depth-50 hit only inpatient. May need separate pulls with location-coord at each location to seed the task properly.</li>
+</ul>
+<hr />
+<p><em>Per Ace 2026-05-11: HQDM does not deliver execution — items above are assignable to HQDM departments (On-page = Aleksa Popovic, Off-page = Julce Bartolome, Content team, GMB team) for execution, with Aleksandar owning the strategy + measurement + reporting alignment with Marija.</em></p>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    flowchart: { useMaxWidth: true, htmlLabels: true }
+  });
+</script>
+
+</body>
+</html>

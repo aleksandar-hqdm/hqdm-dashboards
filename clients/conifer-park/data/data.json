@@ -1,0 +1,1079 @@
+{
+  "meta": {
+    "client": "Conifer Park",
+    "domain": "coniferpark.com",
+    "tagline": "Glenville NY inpatient + 6 outpatient locations · Capital Region",
+    "tier": "Tier 1 Recovery",
+    "founded": 1983,
+    "years_in_business": 43,
+    "prepared_date": "2026-05-14",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q2 2026",
+    "doc_subtitle": "7-pin Maps win at 3.3★ avg rating · Plattsburgh template replication across 5 outpatient pages · service-page un-geo-lock · architectural pollution cleanup · rating-lift review velocity."
+  },
+  "tldr": "Conifer Park is <strong>#1 or #2 in the Map Pack at every one of its 7 GBP locations</strong> — but average rating across the 7 is <strong>3.3★</strong> (3 pins below 4.0★, 2 at 2.7★). The Maps win is fragile and the LLM-citation surface is closed below 4★. Plattsburgh is the proof template — only <code>/outpatient/&lt;city&gt;/</code> URL with trailing slash + the only GBP pointing to its city page (not homepage); ranks <strong>pos 5.5 organic at 3.38% CTR</strong> while the other 5 outpatient pages sit at pos 9.4–11.8 / 0.82–1.63% CTR. Q2 = replicate the Plattsburgh pattern across 5 outpatient pages (Troy+Schenectady M2, Glens Falls+Syracuse+Rochester M3), un-geo-lock 6 <code>/service/*-in-glenville-ny</code> pages, kill architectural pollution (<code>tel:</code> URL spawning, case-sensitive duplicates, 71 suburb doorways, WordPress debris), and run the intake-side review-velocity SOP on all 7 facilities to lift the rating floor. HQDM GBP access scoped to Glenville Inpatient + Troy Outpatient only; 5 unmanaged pins documented for on-page rebuilds + off-page playbook + LD monitoring (no Manager access needed). Asymmetric play: defend GBP/click (5.8× organic conv rate), un-geo-lock the services, then rebuild.",
+  "kpis": [
+    {
+      "label": "Map Pack rank across 7 pins",
+      "value": "#1–#2 (7/7)",
+      "sentiment": "positive",
+      "detail": "Glenville #1/12 anchors · Troy #1–2 · Schenectady #4 outpatient / #2 suboxone · Glens Falls #1 drug rehab · Plattsburgh #1 drug rehab + opioid · Syracuse/Liverpool #1 both anchors · Rochester #1 both anchors. Map Pack ownership is the working channel."
+    },
+    {
+      "label": "Avg rating across 7 GBPs",
+      "value": "3.3★",
+      "sentiment": "negative",
+      "detail": "Glenville 3.2★ × 153 · Troy 3.9★ × 27 · Schenectady 2.7★ × 10 · Glens Falls 3.9★ × 25 · Plattsburgh 4.2★ × 16 · Syracuse 3.4★ × 27 · Rochester 2.7★ × 36. 3 pins below 4★ threshold close LLM citation surface."
+    },
+    {
+      "label": "GBP/click conversion rate",
+      "value": "2.48%",
+      "sentiment": "positive",
+      "detail": "GA4 365d: gmb/click 7,656 sess → 190 conv (29% of all conversions from 6.2% of all traffic). 5.8× the Google organic rate (0.43%). This is the working channel — defend + extract."
+    },
+    {
+      "label": "Plattsburgh template gap",
+      "value": "1/7 pins replicated",
+      "sentiment": "negative",
+      "detail": "Only Plattsburgh GBP points to /outpatient/plattsburgh/ city page (pos 5.5, 3.38% CTR, 612 clicks). The other 6 GBPs dump traffic on homepage. No UTMs on 7/7 pins → gmb/click invisible by location in GA4."
+    },
+    {
+      "label": "Service pages geo-locked",
+      "value": "6 pages · pos 22–40",
+      "sentiment": "negative",
+      "detail": "All 6 /service/*-in-glenville-ny URLs locked to Glenville-only intent. Combined 79 clicks / 365d / 0 conv. NOT IN TOP 100 for Albany / Saratoga / Capital Region queries. Single-fix lever — drop the -in-glenville-ny suffix."
+    },
+    {
+      "label": "Architectural pollution",
+      "value": "71 suburbs + tel: + caps",
+      "sentiment": "negative",
+      "detail": "71 /suburb/* doorways with adjective-stuffed slugs (failed USGS GNIS validation on 4+). tel:8009896446 path-segment spawning at template layer. 4 confirmed case-sensitive URL duplicates (/OUTPATIENT/TROY etc). WordPress migration debris (/program/, /2013/, /author/matt) still indexed."
+    }
+  ],
+  "trend": {
+    "headline": "Branded share of clicks growing in short windows (85% 30d vs 50% 365d) — non-brand clicks decaying faster than brand. Blog informational mass losing rankings.",
+    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. Brand engine (~17.5% CTR, 81K branded imp) stable; non-brand blog impressions (4.95M, 0.29% CTR) decaying. May 2026 partial (first 13 days).",
+    "may_extrapolation_note": "May 2026 partial — first 13 days at trailing pace.",
+    "months": [
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        7200,
+        7150,
+        7050,
+        6800,
+        6650,
+        6400,
+        6200,
+        6450,
+        6650,
+        6900,
+        6300,
+        2600
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        1140,
+        1110,
+        1090,
+        1060,
+        1030,
+        1000,
+        970,
+        990,
+        1010,
+        1040,
+        980,
+        410
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 9,
+        "label": "Mar 2026 — last full month peak",
+        "type": "positive"
+      },
+      {
+        "month_index": 10,
+        "label": "Apr 2026 — non-brand blog decay accelerating",
+        "type": "negative"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q3 2025",
+        "org_sess": 21400,
+        "org_conv": 3340,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 19250,
+        "org_conv": 3000,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 20000,
+        "org_conv": 3040,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr–May to date)",
+        "org_sess": 8900,
+        "org_conv": 1390,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  },
+  "per_keyword": [
+    {
+      "keyword": "rehab upstate new york (Glenville, 9.4wk)",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 2.83,
+      "may_avg": 1.81,
+      "pos_gained": 1.02,
+      "feb_top3": 136,
+      "may_top3": 156
+    },
+    {
+      "keyword": "drug rehab near me (Glenville, 9.4wk)",
+      "feb_cells": 162,
+      "may_cells": 166,
+      "feb_avg": 4.48,
+      "may_avg": 3.92,
+      "pos_gained": 0.56,
+      "feb_top3": 100,
+      "may_top3": 110
+    },
+    {
+      "keyword": "alcohol rehab (Glenville, 9.4wk)",
+      "feb_cells": 153,
+      "may_cells": 154,
+      "feb_avg": 4.95,
+      "may_avg": 4.55,
+      "pos_gained": 0.4,
+      "feb_top3": 71,
+      "may_top3": 84
+    },
+    {
+      "keyword": "rehab near me (Glenville, 9.4wk)",
+      "feb_cells": 143,
+      "may_cells": 143,
+      "feb_avg": 6.57,
+      "may_avg": 5.55,
+      "pos_gained": 1.02,
+      "feb_top3": 38,
+      "may_top3": 54
+    },
+    {
+      "keyword": "outpatient rehab troy (Troy, 2.6wk)",
+      "feb_cells": 168,
+      "may_cells": 169,
+      "feb_avg": 1.74,
+      "may_avg": 1.18,
+      "pos_gained": 0.57,
+      "feb_top3": 168,
+      "may_top3": 169
+    },
+    {
+      "keyword": "drug rehab troy (Troy, 2.6wk)",
+      "feb_cells": 168,
+      "may_cells": 169,
+      "feb_avg": 2.0,
+      "may_avg": 2.0,
+      "pos_gained": 0.0,
+      "feb_top3": 168,
+      "may_top3": 169
+    },
+    {
+      "keyword": "drug rehab near me (Troy, 2.6wk)",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 9.51,
+      "may_avg": 6.35,
+      "pos_gained": 3.16,
+      "feb_top3": 1,
+      "may_top3": 17
+    },
+    {
+      "keyword": "alcohol rehab near me (Troy, 2.6wk)",
+      "feb_cells": 158,
+      "may_cells": 168,
+      "feb_avg": 12.45,
+      "may_avg": 8.52,
+      "pos_gained": 3.93,
+      "feb_top3": 0,
+      "may_top3": 4
+    },
+    {
+      "keyword": "outpatient rehab near me (Troy, 2.6wk) DEFEND",
+      "feb_cells": 168,
+      "may_cells": 169,
+      "feb_avg": 5.39,
+      "may_avg": 4.61,
+      "pos_gained": 0.78,
+      "feb_top3": 50,
+      "may_top3": 35
+    }
+  ],
+  "ld_leaderboard": [
+    {
+      "name": "Conifer Park Glenville Inpatient (this GBP)",
+      "may_top3": 584,
+      "delta_top3": 19,
+      "may_avg_rank": 3.96,
+      "delta_avg_rank": 0.76,
+      "cells": 632,
+      "note": "Reference line — gained +19 top-10 cells across 4 queries Feb→Apr; #1 at facility coord, hardening across the 3-mi grid",
+      "is_client": true
+    },
+    {
+      "name": "St. Peter's Addiction Recovery",
+      "may_top3": 311,
+      "delta_top3": 132,
+      "may_avg_rank": 5.1,
+      "delta_avg_rank": 0.9,
+      "cells": 480,
+      "note": "Top rising threat — Capital Region organic leader now pushing on Maps (Glenville grid)",
+      "is_client": false
+    },
+    {
+      "name": "BriteLife Recovery at Lexington",
+      "may_top3": 143,
+      "delta_top3": 99,
+      "may_avg_rank": 6.5,
+      "delta_avg_rank": 0.7,
+      "cells": 290,
+      "note": "+99 cells across Glenville queries — new entrant climbing fast",
+      "is_client": false
+    },
+    {
+      "name": "Hedgerow House",
+      "may_top3": 245,
+      "delta_top3": 83,
+      "may_avg_rank": 5.8,
+      "delta_avg_rank": 0.45,
+      "cells": 310,
+      "note": "Consistent gain across Glenville grid",
+      "is_client": false
+    },
+    {
+      "name": "Every1 Center (Inpatient Detox & Rehab)",
+      "may_top3": 527,
+      "delta_top3": 64,
+      "may_avg_rank": 4.2,
+      "delta_avg_rank": 0.3,
+      "cells": 560,
+      "note": "Strong existing position + still gaining — competitive reality",
+      "is_client": false
+    },
+    {
+      "name": "Capital District Recovery Center",
+      "may_top3": 42,
+      "delta_top3": -197,
+      "may_avg_rank": 12.5,
+      "delta_avg_rank": -1.85,
+      "cells": 130,
+      "note": "Vacated Glenville SERP — freed cells partially absorbed by Conifer",
+      "is_client": false
+    },
+    {
+      "name": "Healing Springs Recovery Community Center",
+      "may_top3": 299,
+      "delta_top3": -132,
+      "may_avg_rank": 6.4,
+      "delta_avg_rank": -0.75,
+      "cells": 380,
+      "note": "Collapsing across Glenville grid",
+      "is_client": false
+    },
+    {
+      "name": "Addictions Care Center of Albany",
+      "may_top3": 46,
+      "delta_top3": -125,
+      "may_avg_rank": 11.2,
+      "delta_avg_rank": -1.2,
+      "cells": 145,
+      "note": "Glenville grid collapse (-125) BUT Troy grid surge (+260) — geographic redistribution",
+      "is_client": false
+    },
+    {
+      "name": "Sunnyview Rehabilitation Hospital",
+      "may_top3": 252,
+      "delta_top3": -112,
+      "may_avg_rank": 7.1,
+      "delta_avg_rank": -0.65,
+      "cells": 320,
+      "note": "Glenville grid contraction",
+      "is_client": false
+    },
+    {
+      "name": "New Choices Recovery",
+      "may_top3": 215,
+      "delta_top3": -86,
+      "may_avg_rank": 6.9,
+      "delta_avg_rank": -0.5,
+      "cells": 290,
+      "note": "Beats Conifer at #1 Schenectady Map Pack with 4.2★ × 28 reviews — Conifer has 153 reviews on Glenville, rating drag is the wedge",
+      "is_client": false
+    },
+    {
+      "name": "Hospitality House TC (Troy grid)",
+      "may_top3": 411,
+      "delta_top3": 258,
+      "may_avg_rank": 4.8,
+      "delta_avg_rank": 1.2,
+      "cells": 460,
+      "note": "Troy grid +258 across 5 queries — Troy-side competitive surge",
+      "is_client": false
+    },
+    {
+      "name": "Whitney M Young Rehab Clinic (Troy grid)",
+      "may_top3": 301,
+      "delta_top3": 155,
+      "may_avg_rank": 5.4,
+      "delta_avg_rank": 0.9,
+      "cells": 380,
+      "note": "Primary 'outpatient rehab near me' top-3 threat — pushing into Troy's defended cells",
+      "is_client": false
+    }
+  ],
+  "gsc_decline": [
+    {
+      "month": "2025-07",
+      "label": "Jul 2025",
+      "pages": 460,
+      "imp": 1180000,
+      "clicks": 7150,
+      "delta_pct": 0
+    },
+    {
+      "month": "2025-10",
+      "label": "Oct 2025",
+      "pages": 470,
+      "imp": 1090000,
+      "clicks": 6650,
+      "delta_pct": -8
+    },
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "pages": 478,
+      "imp": 1050000,
+      "clicks": 6450,
+      "delta_pct": -11
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026",
+      "pages": 482,
+      "imp": 1075000,
+      "clicks": 6650,
+      "delta_pct": -9
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026 peak",
+      "pages": 490,
+      "imp": 1115000,
+      "clicks": 6900,
+      "delta_pct": -5
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026 decay",
+      "pages": 478,
+      "imp": 980000,
+      "clicks": 6300,
+      "delta_pct": -17
+    },
+    {
+      "month": "2026-05*",
+      "label": "May partial",
+      "pages": 425,
+      "imp": 410000,
+      "clicks": 2600,
+      "delta_pct": -65
+    }
+  ],
+  "keyword_buckets": [
+    {
+      "bucket": "Organic Search — google/organic",
+      "keywords": 50142,
+      "pct": 40.3,
+      "posture": "0.43% conv (217 conv) — non-brand mass landing on blog"
+    },
+    {
+      "bucket": "Direct (brand-aware)",
+      "keywords": 23337,
+      "pct": 18.8,
+      "posture": "0.81% conv (190 conv) — typed-URL + branded-search returning visitors"
+    },
+    {
+      "bucket": "Organic Search — gmb/click",
+      "keywords": 7656,
+      "pct": 6.2,
+      "posture": "2.48% conv (190 conv, 29% share) — working channel · 5.8× organic"
+    },
+    {
+      "bucket": "Organic Search — bing/organic",
+      "keywords": 6245,
+      "pct": 5.0,
+      "posture": "0.54% conv (34 conv) — secondary surface"
+    },
+    {
+      "bucket": "Organic Search — yahoo + duckduckgo + others",
+      "keywords": 1727,
+      "pct": 1.4,
+      "posture": "0.93% blended — LLM referrals (chatgpt 132 sess) emerging"
+    }
+  ],
+  "top_urls": [
+    {
+      "url": "/blog/how-long-does-kratom-last",
+      "imp_90d": 653760,
+      "clicks_90d": 2617,
+      "pos": 12.17,
+      "class": "blog",
+      "lever": "CN-01 refresh M1 (title + FAQ schema)"
+    },
+    {
+      "url": "/blog/get-rid-of-alcohol-breath",
+      "imp_90d": 618685,
+      "clicks_90d": 1722,
+      "pos": 9.63,
+      "class": "blog",
+      "lever": "CN-01 refresh M1"
+    },
+    {
+      "url": "/blog/signs-that-my-body-is-detoxing",
+      "imp_90d": 528471,
+      "clicks_90d": 7331,
+      "pos": 12.04,
+      "class": "blog",
+      "lever": "CN-01 refresh M1 (top click winner)"
+    },
+    {
+      "url": "/",
+      "imp_90d": 212027,
+      "clicks_90d": 8317,
+      "pos": 22.12,
+      "class": "home",
+      "lever": "Brand engine — keep"
+    },
+    {
+      "url": "/?utm_source=gmb&utm_medium=click",
+      "imp_90d": 98816,
+      "clicks_90d": 5751,
+      "pos": 4.73,
+      "class": "home",
+      "lever": "GBP/click working channel — defend"
+    },
+    {
+      "url": "/outpatient/rochester",
+      "imp_90d": 51508,
+      "clicks_90d": 422,
+      "pos": 9.36,
+      "class": "outpatient",
+      "lever": "CN-03 CRO brief M1 → SP-05 rebuild M3"
+    },
+    {
+      "url": "/outpatient/troy",
+      "imp_90d": 48845,
+      "clicks_90d": 438,
+      "pos": 4.66,
+      "class": "outpatient",
+      "lever": "SP-01 redirect reverse M1 → SP-02 audit/rebuild M2"
+    },
+    {
+      "url": "/outpatient/syracuse",
+      "imp_90d": 38385,
+      "clicks_90d": 354,
+      "pos": 11.75,
+      "class": "outpatient",
+      "lever": "SP-05 rebuild M3 (Liverpool/Syracuse disambiguation)"
+    },
+    {
+      "url": "/outpatient/schenectady",
+      "imp_90d": 37630,
+      "clicks_90d": 401,
+      "pos": 5.91,
+      "class": "outpatient",
+      "lever": "SP-03 rebuild M2 (Suboxone/MAT anchor)"
+    },
+    {
+      "url": "/outpatient/plattsburgh",
+      "imp_90d": 18127,
+      "clicks_90d": 612,
+      "pos": 5.5,
+      "class": "outpatient",
+      "lever": "PROOF TEMPLATE — do not touch (3.38% CTR)"
+    },
+    {
+      "url": "/outpatient/glens-falls",
+      "imp_90d": 15672,
+      "clicks_90d": 255,
+      "pos": 10.04,
+      "class": "outpatient",
+      "lever": "SP-05 rebuild M3 (encoding artifact fix)"
+    },
+    {
+      "url": "/admissions",
+      "imp_90d": 63242,
+      "clicks_90d": 696,
+      "pos": 4.0,
+      "class": "conversion",
+      "lever": "TS-01 trust signals + payor list M3"
+    },
+    {
+      "url": "/inpatient",
+      "imp_90d": 58924,
+      "clicks_90d": 818,
+      "pos": 7.5,
+      "class": "conversion",
+      "lever": "OS-01 per-page schema M3"
+    },
+    {
+      "url": "/service/*-in-glenville-ny (6 pages)",
+      "imp_90d": 4800,
+      "clicks_90d": 79,
+      "pos": 28.0,
+      "class": "service",
+      "lever": "SP-04 un-geo-lock M2 (drop -in-glenville-ny)"
+    }
+  ],
+  "positives": [
+    "Map Pack ownership at all 7 pins (#1 or #2) — Glenville #1/12 anchors, Plattsburgh #1 drug rehab + opioid, Syracuse/Rochester #1 both anchors",
+    "Glenville flagship gained +19 top-10 cells across 4 queries Feb→Apr 2026 — hardening (5–14× improvement-to-regression ratio)",
+    "Troy outpatient gained +107 top-10 cells across 5 queries Apr→May 2026 — branded local terms locked at #1–#2 across the entire 0.5-mi neighborhood grid",
+    "GBP/click converts at 2.48% (29% of conversions from 6.2% of traffic) — 5.8× the Google organic rate; this is the working channel",
+    "Plattsburgh is the proof template — only city-page URL with trailing slash + GBP pointing to city page; pos 5.5, 3.38% CTR, 612 clicks",
+    "Schema architecture already rich (global @graph: MedicalOrganization + 6× MedicalClinic + 4× MedicalProcedure) — refactor not rebuild",
+    "Returning Organic Search visitors convert at 1.71% (1.75× new-visitor rate) — brand-pull → return-visit pathway is highest-value flow",
+    "Capital District Recovery Center vacated Glenville SERP (-197 cells) — freed cells partially absorbed by Conifer (+19)",
+    "OASAS Operating Certificate #10018 (founded 1983, 225-bed Glenville facility, Liberty Behavioral Management parent)"
+  ],
+  "negatives": [
+    "Avg rating 3.3★ across 7 pins — Schenectady 2.7★ × 10, Rochester 2.7★ × 36 (worst rating × most reviews = biggest drag); 3 pins below 4★ LLM citation threshold",
+    "Only 1/7 GBPs (Plattsburgh) points to its city page; the other 6 dump on homepage. Zero UTMs on 7/7 pins → gmb/click invisible by location",
+    "6 /service/*-in-glenville-ny pages geo-locked to Glenville intent — pos 22–40 in GSC, NOT IN TOP 100 for Albany/Saratoga/Capital Region queries",
+    "Troy URL canonicalization backwards — /outpatient/troy is what Google indexes (438 clicks / pos 4.66) but 301s to /outpatient-rehab-troy-ny (0 traffic)",
+    "Rochester CRO catastrophe — 51,508 imp / pos 9.36 / 0.819% CTR (worst on the site) + 2.7★ × 36 rating drag = compounding affordability friction",
+    "Architectural pollution: tel:8009896446 spawning at template layer (dozens of indexed URLs) + 4 case-sensitive duplicates (/OUTPATIENT/TROY etc) + WordPress migration debris (/program/, /2013/, /author/matt)",
+    "71 /suburb/* adjective-stuffed doorway pages (4+ failed USGS GNIS — Honeywell Corners, Cedar Bluffs, Huntleigh, Harmony Corners) — March 2024 spam-policy exposure",
+    "GBP photo gap: 5/7 pins below 25-photo benchmark (Plattsburgh null, Troy 3, Glens Falls 3, Rochester 5, Syracuse 6, Schenectady 9). Plattsburgh also has null description",
+    "Trust-signal layer absent — no Joint Commission, CARF, LegitScript visible. Insurance payor list public-side missing. Competitive set (Mountainside/Hazelden/AAC) all carry visible accreditation",
+    "Glens Falls GBP title typo 'Glen Falls'; Rochester GBP secondary categories spam-tier (Coaching center / Fitness program); Syracuse GBP says 'Liverpool' while site says 'Syracuse'"
+  ],
+  "levers": [
+    {
+      "id": "A",
+      "name": "Plattsburgh template replication — 5 outpatient page rebuilds",
+      "priority": "High · 90d",
+      "color": "blue",
+      "why": "Plattsburgh ranks pos 5.5 / 3.38% CTR / 612 clicks because it's the only /outpatient/<city>/ URL with trailing slash + the only GBP pointing to its city page. The other 5 outpatient pages sit at pos 9.4–11.8 / 0.82–1.63% CTR — same Map Pack rank, very different on-page conversion architecture.",
+      "actions": [
+        {
+          "code": "SP-01",
+          "name": "Reverse Troy redirect — /outpatient/troy becomes canonical (1-hr fix, matches Plattsburgh pattern)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "SP-02",
+          "name": "Audit /outpatient/troy post-redirect → rebuild only if thin (per §1c competitor pressure on 'outpatient rehab near me')",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SP-03",
+          "name": "Rebuild /outpatient/schenectady (Suboxone/MAT anchor — beats New Choices #1 only if 2.7★ floor lifts)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-05",
+          "name": "Rebuild /outpatient/glens-falls + /outpatient/syracuse + /outpatient/rochester (3 pages, M3 cohort)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "CN-03",
+          "name": "Rochester CRO diagnosis — GA4 funnel diff feeds SP-05 Rochester brief (51K imp / 0.82% CTR / 2.7★ × 36)",
+          "month": "M1",
+          "effort": "M"
+        }
+      ],
+      "outcome": "5 outpatient pages rebuilt to Plattsburgh template by M3 close. Each page-rebuild target: 2× CTR floor + 1 intake form + per-pin MedicalClinic schema. Plattsburgh untouched (proof template stays)."
+    },
+    {
+      "id": "B",
+      "name": "Service-page un-geo-lock + site architecture cleanup",
+      "priority": "High · 60d",
+      "color": "green",
+      "why": "6 /service/*-in-glenville-ny URLs locked to Glenville-only intent (pos 22–40, NOT IN TOP 100 for Albany/Saratoga). Architectural pollution (tel: URL spawning, case-sensitive duplicates, 71 adjective-stuffed suburbs, WordPress debris) leaks the Maps win and exposes March 2024 spam-policy risk.",
+      "actions": [
+        {
+          "code": "SP-04",
+          "name": "Un-geo-lock 6 /service/*-in-glenville-ny → /services/* (network-wide service pages with areaServed NY)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SA-02",
+          "name": "Consolidate 4 cannibal URLs (/serving-all-of-troy-ny, /professional-outpatient-rehab-in-troy-ny-cornifer-park, /rochester-review, /liverpoolreview) → 301 to canonical",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "SA-01_M1",
+          "name": "Suburb audit — 71-URL decision matrix sign-off (12 DELETE non-USGS, 59 NOINDEX adjective-stuffed)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "SA-01_M3",
+          "name": "Execute 71-suburb decisions + WordPress debris purge (/2013/*, /category/*, /author/matt, /admissions.html)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "OS-01",
+          "name": "Page-level schema refactor — 16 URLs (per-page MedicalClinic / Service / Review, not global @graph everywhere)",
+          "month": "M3",
+          "effort": "L"
+        }
+      ],
+      "outcome": "6 service pages rank for non-Glenville Capital Region queries by M3. 71 suburbs + WordPress debris purged. Schema page-level specificity passes RRT on ≥80% of touched URLs."
+    },
+    {
+      "id": "C",
+      "name": "Glenville + Troy GBP build-out (HQDM-scoped pins)",
+      "priority": "High · 90d",
+      "color": "indigo",
+      "why": "HQDM GBP Manager access is scoped to Glenville Inpatient + Troy Outpatient only (per Owner Item #1). Defensive Posts cadence + NAP fix + descriptions + services list + UTMs + photos = closes the cleanest GBP-side gaps. Glenville is hardening (+19 top-10 cells); Troy is climbing (+107) but Whitney M Young + Hope House Outpatient pushing into 'outpatient rehab near me' top-3.",
+      "actions": [
+        {
+          "code": "LG-GV-01",
+          "name": "Glenville GBP description light polish (credentials + Capital Region catchment, ≤750 chars)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-GV-02",
+          "name": "Glenville GBP services audit (15+ existing → URL pointers to real /services/* pages post-SP-04)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-GV-03",
+          "name": "Glenville GBP attribute completion + UTM landing repoint (gmb/click split by location in GA4)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-GV-04",
+          "name": "Glenville GBP Posts cadence — 24 posts × 12 weeks (defensive)",
+          "month": "M1-M3",
+          "effort": "M"
+        },
+        {
+          "code": "LG-GV-05",
+          "name": "Owner-reply to all 14 Glenville <4★ reviews (13× 1-star + 1× 2-star)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "LG-GV-06",
+          "name": "ExifTool keyword-injection on existing 26 Glenville photos (no new intake needed)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-TR-01",
+          "name": "Troy NAP fix (2431 vs 2435 6th Ave — gated on Owner Ask #4) + GBP description build (~720 chars)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-TR-02",
+          "name": "Troy GBP services-list build from scratch (currently 0 services) + UTM landing",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-TR-03",
+          "name": "Troy GBP Posts cadence — 24 posts × 12 weeks (offensive — competitive pressure)",
+          "month": "M1-M3",
+          "effort": "M"
+        },
+        {
+          "code": "LG-TR-04",
+          "name": "Troy 'outpatient rehab near me' targeted defense vs Whitney M Young + Hope House Outpatient",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LG-TR-05",
+          "name": "Owner-reply to Troy <4★ reviews (per Reviews_Plan tab)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "LG-TR-06",
+          "name": "Troy photo blitz 3 → 25 (gated on Owner Ask #6 photo content) + ExifTool injection",
+          "month": "M1",
+          "effort": "M"
+        }
+      ],
+      "outcome": "Glenville rating 3.2★ → 4.0★+ by M3. Troy NAP aligned + photos at 25 + 24 Posts shipped. gmb/click traffic splits by location in GA4 for the first time."
+    },
+    {
+      "id": "D",
+      "name": "Review velocity SOP across 7 facilities + LD monitoring infrastructure",
+      "priority": "High · 90d",
+      "color": "purple",
+      "why": "Avg rating 3.3★ across 7 pins is the single highest-leverage GBP lever — and it's HQDM-shippable only via intake-side workflow (not from outside the facility). LG-UP-06 deploys SMS + printed-QR card SOP at all 7 facilities (workflow doesn't require GBP Manager access). LD monitoring on 5 unmanaged pins (Glenville + Troy already baselined) closes the rank-tracking loop for the unmanaged pin work in Lever E.",
+      "actions": [
+        {
+          "code": "LG-UP-06",
+          "name": "Review velocity intake-side SOP — 7 facility rollout (SMS + QR card; HQDM tooling, client distributes)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LG-INF-01",
+          "name": "LD grid setup on remaining 5 pins (Schenectady + Glens Falls + Plattsburgh + Syracuse + Rochester)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "LG-INF-02",
+          "name": "Competitor watch list per §1b + §1c (Glenville rising threats: St. Peter's +132 / BriteLife +99; Troy threats: Whitney M Young +155 / Hope House Outpatient +99)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INF-03",
+          "name": "M3 Maps SERP re-pull at all 7 coords + LD grid compare vs baseline (win/hold/lose per pin)",
+          "month": "M3",
+          "effort": "M"
+        }
+      ],
+      "outcome": "+15 reviews per pin M2-M3 target across all 7 facilities. <4★ % trends down on Schenectady + Rochester. Weekly LD scans landing for all 7 pins. M3 close-loop delta sheet per pin."
+    },
+    {
+      "id": "E",
+      "name": "Off-page (Embedinator + Cloud Page + Citations + Disavow) — site-side signal build",
+      "priority": "Medium · 90d",
+      "color": "amber",
+      "why": "Off-page signal build targets page URLs + GBP coords externally — doesn't require GBP Manager access. Narrowed to Embedinator (all 7 pins) + Cloud Page (3 weakest) + citation buildout on the 2 in-scope pins. SEO Neo / DAS / GBP Blast / Sniper / RD100 / AI Articles / NAP-overlay stack removed per 2026-05-13 program halt.",
+      "actions": [
+        {
+          "code": "OFF-01_M1",
+          "name": "Citation Tier-1 — Glenville + Troy on 5 surfaces (SAMHSA, OASAS, BBB, Apple Maps, Bing Places)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-01_M2",
+          "name": "Citation vertical-SUD — Healthgrades + Psychology Today + Recovery.com + ShatterproofATLAS + Rehabs.com (Glenville + Troy)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-01_M3",
+          "name": "Citation Tier-2 + local NY (Manta + Foursquare + Addictioncenter + Rehabspot + NY Combat Heroin)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-03",
+          "name": "Pitch contributed article to behavioralhealthnews.org (Capital Region SUD trends byline)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-04",
+          "name": "Psychology Today profile audit + completion (Glenville + Troy, clinician-roster gated)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-06",
+          "name": "Disavow file generation (toxic-links scan only) + GSC upload (gated on Owner Ask #8)",
+          "month": "M3",
+          "effort": "M"
+        }
+      ],
+      "outcome": "7 Embedinator stacks live. 3 Cloud Pages live for offensive pins. 30+ Tier-1/2 citations submitted (Glenville + Troy). Disavow file ready for client GSC upload."
+    },
+    {
+      "id": "F",
+      "name": "Content refresh + trust-signal close (no net-new blog content)",
+      "priority": "Medium · 90d",
+      "color": "teal",
+      "why": "Brand engine is the working surface (49.7% of clicks at 17.5% CTR). Top 5 high-impression blogs are the highest-leverage refresh targets: 'signs that my body is detoxing' (7,331 clicks / 528K imp), 'how long do alcoholics live' (5,094 / 241K), 'how long does kratom last' (2,617 / 653K). Trust-signal layer (Joint Commission / CARF / LegitScript / insurance payor list) absent — competitive YMYL gap.",
+      "actions": [
+        {
+          "code": "CN-01_M1",
+          "name": "Top-5 blog refresh M1 — title rewrite + FAQ schema (kratom + alcoholics live + detoxing + acid spinal + alcohol kill)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CN-01_M2",
+          "name": "Top-5 blog refresh M2 — contextual content + internal link cluster reinforcement",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CN-01_M3",
+          "name": "Top-5 blog refresh M3 — measurement + delta vs M1 baseline",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "CN-02",
+          "name": "3 supporting articles — MAT first appointment + Schenectady insurance + Rochester affordability",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "TS-01",
+          "name": "Trust-signal close — Joint Commission/CARF/LegitScript pursuit + insurance payor list (gated on Owner Asks #2 + #3 + #5)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "RP-01",
+          "name": "Q2 close-out report — planned → executed → impact per task (% Reports With Full Correlation format)",
+          "month": "M3",
+          "effort": "M"
+        }
+      ],
+      "outcome": "5 blogs refreshed with 2026-stat updates + FAQ schema → CTR delta logged by M3. 3 supporting articles ship. Trust-signal status documented per badge; insurance payor list published on /admissions."
+    }
+  ],
+  "deliverables": [
+    {
+      "label": "Q2 Custom Strategy (651-line internal, Markdown)",
+      "path": "Conifer_Park_Q2_2026_Custom_Strategy.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 Custom Strategy (DOCX)",
+      "path": "Conifer_Park_Q2_2026_Custom_Strategy.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Q2 Strategy Condensed (3-page team doc)",
+      "path": "Conifer_Park_Q2_2026_Strategy_Condensed.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 Strategy Condensed (DOCX)",
+      "path": "Conifer_Park_Q2_2026_Strategy_Condensed.docx",
+      "type": "docx"
+    },
+    {
+      "label": "3-Month Execution Plan (long-form)",
+      "path": "coniferpark_3month_plan.md",
+      "type": "md"
+    },
+    {
+      "label": "3-Month Execution Plan (DOCX)",
+      "path": "coniferpark_3month_plan.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Q2 Tasks (FINAL, SEO-NEO filtered)",
+      "path": "Conifer_Park_3Month_Tasks_FINAL.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Owner Conversation Items (10 asks)",
+      "path": "Conifer_Park_Owner_Conversation_Items.md",
+      "type": "md"
+    },
+    {
+      "label": "Owner Conversation Items (DOCX)",
+      "path": "Conifer_Park_Owner_Conversation_Items.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Rochester CRO Brief (CN-03)",
+      "path": "CN-03_Rochester_CRO_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Rochester CRO Brief (DOCX)",
+      "path": "CN-03_Rochester_CRO_Brief.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Glenville GBP Description Rewrite",
+      "path": "LG-GV-01_Description_Rewrite.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Troy GBP Description Rewrite + NAP Fix",
+      "path": "LG-TR-01_Description_Rewrite.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Outpatient Pages Plan (SP-02 / SP-03 / SP-05 rebuilds)",
+      "path": "Conifer_Park_Outpatient_Pages_Plan.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Cannibal Pages Plan (4 URLs × 301 or rewrite)",
+      "path": "Conifer_Park_Cannibal_Pages_Plan.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Service Pages Un-Geo-Lock (6 pages × new slug + 301)",
+      "path": "Conifer_Park_Service_Pages_UnGeoLock.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Suburb Decisions (71 URLs × DELETE/NOINDEX/KEEP)",
+      "path": "Conifer_Park_Suburb_Decisions.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Off-Page Stack 3-Month (Embedinator + Cloud Page)",
+      "path": "Conifer_Park_OffPage_Stack_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "GBP Posts 3-Month (Glenville 24 + Troy 24)",
+      "path": "Conifer_Park_GBP_Posts_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "GBP Hygiene Plan (NAP/title/category/photos/UTMs)",
+      "path": "Conifer_Park_GBP_Hygiene_Plan.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Citations 3-Month (7 pins × 15 surfaces)",
+      "path": "Conifer_Park_Citations_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Reviews Plan 3-Month (owner replies + velocity targets)",
+      "path": "Conifer_Park_Reviews_Plan_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Blog Refresh (top-5 + 3 supporting)",
+      "path": "Conifer_Park_Blog_Refresh.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Schema Plan (16-URL page-level refactor map)",
+      "path": "Conifer_Park_Schema_Plan.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Trust Signals Tracker (per-badge status)",
+      "path": "Conifer_Park_Trust_Signals_Tracker.xlsx",
+      "type": "xlsx"
+    }
+  ],
+  "owner_asks": [
+    "CARF / Joint Commission / LegitScript / SAMHSA accreditation status — per badge: accredited? certified? what year/level? Gates TS-01 trust-signal close + LLM citation surface unlock.",
+    "Insurance payor list — full named list for inpatient (Glenville) and per outpatient location, plus any sliding-fee or self-pay program details. Gates Rochester rebuild (SP-05) affordability hook + /admissions conversion lift.",
+    "Troy address verification — GBP says 2431 6th Ave, site copy says 2435 Sixth Avenue. Which is ground-truth? Gates LG-TR-01 NAP fix + citation cleanup; Troy is on an upward momentum window we don't want NAP drift to confuse.",
+    "Sliding fee / self-pay program — does Conifer offer sliding fee at Rochester (or anywhere)? Detox scholarships? Self-pay package pricing? Gates Rochester rebuild hook against 2.7★ × 36 affordability friction.",
+    "Troy photo content — can client supply 25 interior + exterior + staff photos (no patient faces, with media-release approval)? Gates LG-TR-06 photo blitz (3 → 25); no HQDM photo stock currently exists for Conifer.",
+    "Intake-side review SOP — does intake/discharge team have a current review-request workflow? Can we deploy SMS + printed-QR card distribution at all 7 facilities? Gates LG-UP-06 (rating lift is the highest-leverage GBP move and can't be HQDM-shipped externally).",
+    "GSC access for sc-domain:coniferpark.com + disavow approval — who has GSC access? Can we get the OFF-06 disavow file approved + uploaded by M3 wk2?",
+    "Schema sign-off — any named clinical leadership to reference in OS-01 schema medicalSpecialty / Person blocks? Any specific awards/recognitions to surface in `award` properties?",
+    "5 unmanaged GBP ownership — Schenectady, Glens Falls, Plattsburgh, Syracuse/Liverpool, Rochester — pins are claimed but HQDM has no Manager access. Same domain, same brand, distinct AM. Flagged for Milica escalation if access becomes possible (Q3+).",
+    "Driving Directions program — OFF-07f Tier-0 tactic flagged for principal-level awareness per project_hqdm_tier0_exposure.md (Orlando regression-window: peak rank 3.44 → 7.54 ~8 weeks post-completion). M2 light cadence on weak pins only; no client ask."
+  ],
+  "kpi_targets": [
+    {
+      "kpi": "Avg rating across 7 pins (review velocity)",
+      "baseline": "3.3★",
+      "target": "≥3.7★",
+      "stretch": "≥4.0★ (LLM citation threshold)"
+    },
+    {
+      "kpi": "Outpatient pages above pos 7 (5 rebuilt pages, ex-Plattsburgh)",
+      "baseline": "0/5",
+      "target": "≥3/5",
+      "stretch": "≥4/5"
+    },
+    {
+      "kpi": "Outpatient CTR (Rochester 0.82%, Syracuse 0.92%, Troy 0.90%)",
+      "baseline": "0.88% avg",
+      "target": "≥1.5%",
+      "stretch": "≥2.5% (Plattsburgh-parity)"
+    },
+    {
+      "kpi": "Service pages out of Glenville geo-lock (top-100 capture)",
+      "baseline": "0/6",
+      "target": "≥4/6 ranking for Capital Region terms",
+      "stretch": "6/6"
+    },
+    {
+      "kpi": "GBP photo count (Glenville + Troy)",
+      "baseline": "26 / 3",
+      "target": "26 / ≥25",
+      "stretch": "30+ / 30+"
+    },
+    {
+      "kpi": "gmb/click GA4 attribution split by location (7 pins)",
+      "baseline": "0/7",
+      "target": "≥2/7 (Glenville + Troy)",
+      "stretch": "7/7 (all pins)"
+    },
+    {
+      "kpi": "Architectural pollution surface (71 suburbs + WP debris + caps + tel:)",
+      "baseline": "100% indexed",
+      "target": "≥80% NOINDEX/410",
+      "stretch": "100%"
+    },
+    {
+      "kpi": "Trust-signal badges visible (JCAHO/CARF/LegitScript/payor list)",
+      "baseline": "0/4",
+      "target": "≥2/4 (or status documented)",
+      "stretch": "4/4 visible"
+    }
+  ]
+}

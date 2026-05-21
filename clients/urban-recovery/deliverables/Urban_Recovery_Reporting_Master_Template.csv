@@ -1,0 +1,71 @@
+section,month,url_or_query,metric,baseline_value,target_60d,target_90d,m1_actual,m2_actual,m3_actual,status,notes
+Per-URL Rank,M1,/,avg_pos brand,2.26,2.0,2.0,,,,baseline,Brand-query position; expect maintained post-HP-01 NAP fix
+Per-URL Rank,M1,/services/alcohol-detoxification-service,rank_alcohol-rehab-brooklyn,2.16 grid avg,top-3,top-3,,,,baseline,Tied to SP-01 upgrade (M2 publish)
+Per-URL Rank,M1,/services/alcohol-detoxification-service,ctr_recovery-center-brooklyn,0% (13.77K imp 0 clicks),measure-after-SP-01,≥3%,,,,baseline,Conversion-leak headline metric; SP-01 + ON-02 stack drives this
+Per-URL Rank,M2,/services/opioid-detoxification-services,rank_opioid-detox-brooklyn,measure baseline,top-5,top-3,,,,not-built,Tied to SP-02 upgrade (M3 publish)
+Per-URL Rank,M2,/services/short-term-residential-program,rank_inpatient-rehab-brooklyn,~pos 1-4 / near-zero CTR,top-5,top-5,,,,baseline,Tied to ON-02-Inpatient page refresh (M2)
+Per-URL Rank,M1,/locations/red-hook-ny,rank_rehab-red-hook,30,15,top-12,,,,baseline,Tied to LP-02_M1 upgrade
+Per-URL Rank,M1,/locations/carroll-gardens-red-hook,rank_rehab-carroll-gardens,32.6,20,top-15,,,,baseline,Tied to LP-02_M1 upgrade
+Per-URL Rank,M1,/locations/gowanus,rank_rehab-gowanus,22.6,15,top-12,,,,baseline,Tied to LP-02_M1 upgrade
+Per-URL Rank,M2,/locations/park-slope-ny,rank_rehab-park-slope,measure baseline,20,top-15,,,,baseline,Tied to LP-02_M2 upgrade
+Per-URL Rank,M2,/locations/boerum-hill-ny,rank_rehab-boerum-hill,measure baseline,15,top-12,,,,baseline,Tied to LP-02_M2 upgrade
+Per-URL Rank,M2,/locations/recovery-center-in-sunset-park-ny,rank_rehab-sunset-park,19.58,12,top-10,,,,baseline,Tied to LP-02_M2 upgrade; strongest cross-borough URL
+Per-URL Rank,M3,/locations/leading-rehab-center-in-downtown-brooklyn-ny,rank_rehab-downtown-brooklyn,21.1,18,top-15,,,,baseline,Tied to LP-02_M3 upgrade (M3 conditional)
+Per-URL Rank,M3,/locations/rehab-center-in-crown-heights-ny,rank_rehab-crown-heights,23,18,top-15,,,,baseline,Tied to LP-02_M3 upgrade (M3 conditional)
+Per-URL Rank,M3,/blog/medicaid-detox-brooklyn,rank_medicaid-detox-brooklyn,not-existent,top-30,top-20,,,,not-built,Tied to CON-03 Q-format article (PA-24)
+Per-URL Rank,M3,/blog/lgbtq-affirming-rehab-red-hook,rank_lgbtq-rehab-brooklyn,not-existent,top-30,top-20,,,,not-built,Tied to CON-03 Q-format article (PA-25)
+Per-URL Rank,M3,/blog/women-owned-rehab-brooklyn,rank_women-owned-rehab-brooklyn,not-existent,top-30,top-20,,,,not-built,Tied to CON-03 Q-format article (PA-26)
+Maps-Grid,Q,grid-pos-alcohol-rehab,avg_rank_1344cells,4.48,maintain,maintain,,,,baseline,Owned/Climbing — defend in M1-M3
+Maps-Grid,Q,grid-pos-drug-rehab,avg_rank_1344cells,5.64,maintain,maintain,,,,baseline,Owned/Climbing — defend
+Maps-Grid,Q,grid-pos-alcohol-rehab-brooklyn,avg_rank_1344cells,2.16,2.0,2.0,,,,baseline,Owned
+Maps-Grid,Q,grid-pos-drug-rehab-brooklyn,avg_rank_1344cells,2.05,2.0,2.0,,,,baseline,Owned
+Maps-Grid,Q,grid-pos-rehab-brooklyn,avg_rank_1344cells,2.10,2.0,2.0,,,,baseline,Owned
+Maps-Grid,Q,grid-pos-detox-brooklyn,avg_rank_1344cells,2.25,2.0,2.0,,,,baseline,Owned
+Maps-Grid,Q,grid-pos-inpatient-rehab,cells_top10,75,90,100+,,,,baseline,SNF drift counter — Brooklyn Center for Rehab and Nursing 0→102 cells gain target via ON-02-Inpatient + GBP Posts
+Maps-Grid,Q,grid-coverage-pct-8kws,pct_cells_held,92.8,maintain,maintain,,,,baseline,1247 of 1344 cells; hold ≥92%
+Maps-Cross-Borough,Q,5-coord-matrix-8-queries,cells_occupied,8/40,12/40,14/40+,,,,baseline,All 8 at Red Hook pin; M3 target = radiate to ≥2 adjacent coords (Sunset Park + Downtown Brooklyn)
+GBP-Signals,M1,Posts published,count_monthly,1 in scrape window,4,4,,,,baseline,GBP-01_M1 P0
+GBP-Signals,M2,Posts published,count_monthly,4 (M1),4,4,,,,baseline,GBP-05_M2 P0
+GBP-Signals,M3,Posts published,count_monthly,4 (M2),4,4,,,,baseline,GBP-06_M3 P0
+GBP-Signals,Q,Photos,count_total,7,—,30+,,,,baseline,GBP-04 owner-gated; competitor benchmark Ascendant 90 / Mountainside 30
+GBP-Signals,Q,Reviews,count_total,111,150,170+,,,,baseline,GBP-03 review-velocity SOP; +20/month
+GBP-Signals,Q,Rating,avg_star,3.8,4.0,4.1+,,,,baseline,Positive-volume dilution
+GBP-Signals,Q,1-star share,pct_of_total,23% (26/111),20%,<18%,,,,baseline,Same velocity push reduces share
+GBP-Signals,M3,Owner replies to <4★ reviews,count_replied,0 of 30,—,30 of 30,,,,baseline,GBP-07 M3
+GSC-Aggregate,M1,homepage GBP-tagged (/?utm_source=gmb),clicks_365d,3275 / 1.18% CTR,maintain,3500+,,,,baseline,Highest non-blog converting URL on site
+GSC-Aggregate,M1,brand urban recovery,clicks_365d,1357,maintain,maintain,,,,baseline,Brand engine
+GSC-Aggregate,M1,brand urban recovery brooklyn,clicks_365d,290,maintain,maintain,,,,baseline,Brand engine
+GSC-Aggregate,M1,site-total,impressions_28d,measure,baseline-set,>baseline,,,,baseline,Trajectory tracking
+GSC-Aggregate,M1,site-total,clicks_28d,measure,baseline-set,>baseline,,,,baseline,Total commercial click trajectory
+GSC-Aggregate,M1,cross-borough-queries-combined,impressions_90d,measure baseline,>baseline,>baseline + 30%,,,,baseline,Sunset Park + Downtown Brooklyn + Crown Heights + Park Slope + Boerum Hill query family
+GSC-Aggregate,M1,cross-borough-queries-combined,avg_pos,~20-23,15,12,,,,baseline,Once LP-02 upgrades publish
+Off-Page-Output,M1,Disavow upload,disavow_uploaded,0,1 (uploaded),1 (uploaded),,,,planned,OFF-Disavow_M1 — per Decisions sheet
+Off-Page-Output,M3,Disavow re-pull,disavow_repulled,0,—,1 (re-pull),,,,planned,OFF-Disavow_M3
+Off-Page-Output,M1,Citations Tier 1 (SAMHSA + Psych Today + CARF),submissions_complete,0,3-5,3-5,,,,planned,OFF-Citations_M1
+Off-Page-Output,M2,Citations Tier 2 (LegitScript + NAATP + insurance),submissions_complete,0,3-5,3-5,,,,planned,OFF-Citations_M2 (gated on Owner Items #1 + #2)
+Off-Page-Output,M3,Citations Tier 3 (recovery-vertical + Brooklyn-local),submissions_complete,0,—,5,,,,planned,OFF-Citations_M3
+Off-Page-Output,M2,PR pitch (LGBTQ+-affirming detox),pitch_sent,0,1,1 (response logged),,,,planned,OFF-PR_M2 — gated on Owner Items #4
+Off-Page-Output,M1,SEO_Neo articles published,count_monthly,0,4,4,,,,planned,Per OffPage_Stack_Template
+Off-Page-Output,M2,SEO_Neo articles published,count_monthly,0,4,4,,,,planned,Per OffPage_Stack_Template
+Off-Page-Output,M3,SEO_Neo articles published,count_monthly,0,4,4,,,,planned,Per OffPage_Stack_Template
+Off-Page-Output,M1,AI Articles published,count_monthly,0,25,25,,,,planned,OFF-AIArticles_M1 — 25/month per HQDM stack SOP
+Off-Page-Output,M2,AI Articles published,count_monthly,0,25,25,,,,planned,OFF-AIArticles_M2
+Off-Page-Output,M3,AI Articles published,count_monthly,0,25,25,,,,planned,OFF-AIArticles_M3
+Off-Page-Output,M1,Driving Directions published,routes_published_monthly,0,3,3,,,,planned,DD-01/02/03 (gap coords) — per pin sheet
+Off-Page-Output,M2,Driving Directions published,routes_published_monthly,0,3,3,,,,planned,DD-04/05/06 (adjacency + Williamsburg test)
+Off-Page-Output,M3,Driving Directions published,routes_published_monthly,0,3,3,,,,planned,DD-07/08/09 (M3 cross-borough + adjacency)
+Off-Page-Output,M1,GMB Pin Support events,pin_events_M1,0,2,2,,,,planned,OFF-GMBPin_M1 — Downtown Brooklyn + Sunset Park
+LLM-Citation,M1,LGBTQ+ affirming rehab brooklyn,citation_rate_5surfaces,unknown,measure-baseline,baseline-set,,,,planned,Baseline audit M1 — 5 surfaces (Google AIO + ChatGPT + Perplexity + Claude + Gemini)
+LLM-Citation,M1,women owned rehab brooklyn,citation_rate_5surfaces,unknown,measure-baseline,baseline-set,,,,planned,Baseline audit M1
+LLM-Citation,M1,medicaid drug rehab brooklyn,citation_rate_5surfaces,unknown,measure-baseline,baseline-set,,,,planned,Baseline audit M1; CON-03 Q-format target query
+LLM-Citation,M1,inpatient drug rehab brooklyn,citation_rate_5surfaces,unknown,measure-baseline,baseline-set,,,,planned,Baseline audit M1; SNF-counter measurement
+Location-Cleanup,M1,/locations/* — 96 URL audit,gsc_pull_complete,0,1,1,,,,planned,LP-01_M1 W1 GSC pull on all 96 URLs into Location_Pages_Plan workbook
+Location-Cleanup,M1,/locations/* — refresh batch M1,refresh_complete,0,3,3,,,,planned,LP-01_M1 W2-W4 — top 3 bleeding by impression volume
+Location-Cleanup,M1,/locations/* — 0-click cohort,redirects_deployed,0,—,all-deployed,,,,planned,LP-01_M1 — 301 to /locations/red-hook-ny OR /services/* OR 410
+Location-Cleanup,M2,/locations/* — refresh batch M2,refresh_complete,0,3,3,,,,planned,LP-01_M2
+Location-Cleanup,M3,/locations/* — refresh batch M3,refresh_complete,0,3,3,,,,planned,LP-01_M3
+GA4-Conversion,M1,site-total,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,Downstream from organic + GBP channels
+GA4-Conversion,M1,site-total,phone_call_clicks_30d,measure,baseline-set,>baseline,,,,baseline,Same
+GA4-Conversion,M2,by-landing-page-bucket-service,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,SP-01 + SP-02 conversion attribution
+GA4-Conversion,M2,by-landing-page-bucket-location,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,LP-02_M1/M2 conversion attribution
+GA4-Conversion,M2,by-landing-page-bucket-GBP-tagged,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,/?utm_source=gmb conversion trajectory

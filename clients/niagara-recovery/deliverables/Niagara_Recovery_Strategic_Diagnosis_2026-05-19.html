@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Niagara Recovery — Q2 2026 Strategic Diagnosis</title>
+<style>
+  @page { size: A4; margin: 11mm 11mm 11mm 11mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font: 7pt/1.18 -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: #0b1726; background: white; }
+  .banner { background: linear-gradient(90deg, #c97a17 0 10px, transparent 10px); padding: 4px 0 4px 16px; margin-bottom: 4px; }
+  .banner .label { background: #c97a17; color: white; font-weight: 700; font-size: 7.5pt; padding: 2px 7px; letter-spacing: 0.4px; }
+  .banner .meta { font-size: 7.5pt; color: #5b6671; margin-left: 8px; }
+  h1 { font-size: 15pt; line-height: 1.12; margin: 4px 0 3px; color: #0b1726; font-weight: 700; }
+  .subtitle { font-size: 8.5pt; color: #5b6671; margin: 0 0 7px; max-width: 760px; }
+  h2 { font-size: 9pt; margin: 5px 0 3px; padding-bottom: 1.5px; border-bottom: 1.5px solid #0b1726; color: #0b1726; }
+  h2 .num { background: #0b1726; color: white; font-size: 7pt; padding: 1.5px 5px; margin-right: 5px; font-weight: 700; }
+  p { margin: 3px 0 4px; }
+  strong { color: #0b1726; }
+  .lead p { margin: 2px 0 4px; font-size: 8pt; line-height: 1.3; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 6px; margin: 3px 0 5px; }
+  .tile { border: 1px solid #ddd; border-top: 3px solid #1f7a3a; padding: 4px 6px; }
+  .tile.warn { border-top-color: #d97706; }
+  .tile.neg { border-top-color: #b91c1c; }
+  .tile.info { border-top-color: #0e7490; }
+  .tile .lbl { font-size: 6.5pt; color: #5b6671; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600; line-height: 1.15; }
+  .tile .val { font-size: 13pt; font-weight: 700; color: #0b1726; line-height: 1.05; margin: 1px 0 2px; }
+  .tile .cap { font-size: 7pt; color: #5b6671; line-height: 1.22; }
+  table { width: 100%; border-collapse: collapse; margin: 2px 0 4px; font-size: 7pt; }
+  th { background: #0b1726; color: white; text-align: left; padding: 2px 4px; font-weight: 700; font-size: 7pt; }
+  td { padding: 1.5px 4px; border-bottom: 1px solid #e8eaee; vertical-align: top; line-height: 1.18; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 1px 5px; font-size: 6.8pt; font-weight: 700; }
+  .pill.pos { background: #c6efce; color: #1f7a3a; }
+  .pill.neg { background: #ffc7ce; color: #b91c1c; }
+  .pill.warn { background: #fff4c2; color: #92400e; }
+  .pill.info { background: #cffafe; color: #0e7490; }
+  .rc { border-left: 3px solid #b91c1c; background: #fff5f5; padding: 2px 6px; margin: 2px 0; }
+  .rc.rc-p0 { border-left-color: #7f1d1d; background: #fee2e2; }
+  .rc.sec { border-left-color: #d97706; background: #fffbeb; }
+  .rc.opp { border-left-color: #0e7490; background: #ecfeff; }
+  .rc.pos { border-left-color: #1f7a3a; background: #f0fdf4; }
+  .rc .tag { display: inline-block; background: #b91c1c; color: white; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.3px; padding: 1px 5px; margin-right: 4px; }
+  .rc.rc-p0 .tag { background: #7f1d1d; }
+  .rc.sec .tag { background: #d97706; }
+  .rc.opp .tag { background: #0e7490; }
+  .rc.pos .tag { background: #1f7a3a; }
+  .rc strong.title { font-size: 8pt; }
+  .rc p { margin: 1px 0; font-size: 7pt; line-height: 1.2; }
+  .div-row { display: grid; grid-template-columns: 180px 1fr 80px; gap: 3px; align-items: center; padding: 0.5px 0; font-size: 7pt; }
+  .div-row .label { text-align: right; padding-right: 3px; color: #0b1726; line-height: 1.15; }
+  .div-row.bb { background: #fffbe6; }
+  .div-row.bb .label { font-weight: 700; }
+  .div-track { position: relative; height: 9px; }
+  .div-track .axis { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c0c5cd; }
+  .div-bar { position: absolute; top: 0; height: 9px; }
+  .div-bar.pos { background: #1f7a3a; }
+  .div-bar.neg { background: #b91c1c; }
+  .div-val { font-size: 7pt; font-variant-numeric: tabular-nums; text-align: left; }
+  .caption { font-size: 7pt; color: #5b6671; line-height: 1.28; margin: 3px 0 5px; }
+  ul.tight { margin: 3px 0 4px; padding-left: 16px; }
+  ul.tight li { margin: 1.5px 0; font-size: 7.5pt; line-height: 1.28; }
+  @page { @bottom-right { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #5b6671; font-family: -apple-system, Arial, sans-serif; } }
+  .pgbreak { page-break-before: always; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  h2 { page-break-after: avoid; }
+  .tiles, .rc, .grid-2, .div-row, table { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE 1 ====== -->
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 1 RECOVERY</span>
+  <span class="meta">Prepared 2026-05-19 · Aleksandar, Head of Search Intelligence · HQDM</span>
+</div>
+
+<h1>Niagara Recovery: Q2 2026 v2 Strategic Diagnosis</h1>
+<p class="subtitle">The engine dominates Niagara County core (100% LD cell coverage 0-15mi from pin) but bleeds 41% of branded demand to an old brand variant, and non-branded discovery collapsed 87% over the last year. Five pushes, not site-rebuild — brand canonical, GBP service-area swap, service-page consolidation, location-page break-out, content cleanup.</p>
+
+<h2><span class="num">01</span>Executive Summary</h2>
+<div class="lead">
+<p><strong>The Newfane engine works.</strong> Across the 9 tracked Local Dominator keywords scanned 2026-02-22 → 2026-04-30 on a 13×13 grid at Newfane (158 cells, ~36mi × 36mi span covering Niagara County + the WNY metro fringe), Niagara Recovery sits in 100% of cells within 0-15mi of pin at avg rank #1-2 across alcohol-rehab, alcohol-detox-near-me, addiction-rehab, and addiction-treatment-center. The 4.3★/47-review GBP at 2600 William St is #1-2 in every neighborhood from Olcott through Lockport through Ransomville. <strong>The dominance is structural and durable</strong> — no defensive engineering required there.</p>
+<p><strong>Where the engine stalls.</strong> Three quantified drags. First, brand-conflict bleed: in the GBP's own 6-month search log (Dec 2025 – May 2026, 11,019 profile views), "recovery center of niagara" pulled <strong>363 searches</strong> against "niagara recovery" + variants at 528 — the old brand still draws <strong>41% of branded demand</strong> 6 months in, because the site uses two brand entities (homepage/footer = "Niagara Recovery"; about/admissions/contact/treatments/areas-served titles + LocalBusiness JSON-LD = "Recovery Center of Niagara"). Second, non-branded discovery collapse: GSC last-30d shows non-branded clicks at 47 against 3,967 over 365d — non-branded discovery has effectively halted (87% extrapolated decline) while the 670-post blog continues publishing (22 new posts shipped 2026-04-15 → 2026-05-18, plus 9 new suburb-doorway pages of the same template that v1 said to consolidate). Third, geographic break-out gap: the GBP service area is at the 20-entry cap, with <strong>13 of 20 entries sitting on just 3 ZIPs</strong> (7 on 14094 Lockport, 3 on 14008 Appleton, 3 on 14172 Wilson) — of which 11 are redundant micros that consolidate to 2 keeps — blocking entries for the 8 WNY anchor towns where Niagara already has 100% LD coverage and top-3 rank but no entity declaration.</p>
+<p><strong>Five pushes, M1-M3.</strong> Push 1 = brand canonical sitewide (one entity, one schema, one image, kill the [phone number] placeholder + Buffalo-14215 fabrication). Push 2 = GBP service-area swap (drop 11 redundant micros, claim Lockport + Cambria + Pendleton + Sanborn + Wheatfield + Lewiston + Youngstown + Clarence + N. Tonawanda) + photo blitz 6→25 + weekly Posts. Push 3 = service-page consolidation (10 URLs → 5 via 301 content-merge; MedicalBusiness schema floor; SP rewrites). Push 4 = location-page architecture (BUILD Tonawanda + N. Tonawanda where 404s exist; UPGRADE Williamsville + Cheektowaga + Lockport + NF + Amherst; REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorways to anchor city pages). Push 5 = content cleanup (NOINDEX/410 ~300 off-vertical posts; refresh 5 high-CTR conversion blogs with intake CTAs; pause the suburb-doorway production firehose). Competitive landscape is winnable: Renaissance/BestSelf (2.7★/22), Beacon (3.6★/16), Casa Di Vita (5.0★/3 tiny base), Pathways CHS (3.3★/69) all beatable on ratings + topical density. The unlock is on-page + GBP, not budget — existing off-page rotation continues.</p>
+</div>
+
+<h2><span class="num">02</span>Health Snapshot</h2>
+<div class="tiles">
+  <div class="tile">
+    <div class="lbl">LD coverage 0–15mi of pin</div>
+    <div class="val">100%</div>
+    <div class="cap">158-cell grid 2026-04-30 — Niagara holds every cell in Niagara-County core at rank #1-2 across alcohol-rehab + detox + addiction-rehab kws. Structural dominance.</div>
+  </div>
+  <div class="tile">
+    <div class="lbl">Branded search CTR 365d</div>
+    <div class="val">17.1%</div>
+    <div class="cap">2,605 clicks / 15,237 imp on 20 branded queries. The brand pulls intent reliably — the engine is winning what brand-search delivers.</div>
+  </div>
+  <div class="tile info">
+    <div class="lbl">GBP service area</div>
+    <div class="val">20 / 20</div>
+    <div class="cap">At Google's cap. 13 entries on 3 ZIPs (14094 ×7, 14008 ×3, 14172 ×3) — 11 redundant micros. Swap is the only path to claim Lockport / NF / Williamsville / Buffalo metro.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">Non-branded clicks 30d vs 365d/12</div>
+    <div class="val">−87%</div>
+    <div class="cap">47 clicks last 30d vs 330/mo extrapolated from 3,967/365d. Non-branded discovery has collapsed even as 670-post blog continues publishing 22 new posts in 5 weeks.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">Brand demand leaking to old name</div>
+    <div class="val">41%</div>
+    <div class="cap">"Recovery Center of Niagara" = 363 GBP searches over Dec-May vs "Niagara Recovery" variants at 528. Title + schema entity must consolidate to one brand.</div>
+  </div>
+  <div class="tile warn">
+    <div class="lbl">Production firehose continues</div>
+    <div class="val">+31</div>
+    <div class="cap">22 PAA blogs + 9 suburb-doorway pages (Millville / Eagle Harbor / Abbott McKinley / Cowlesville / Marilla / Blossom / Attica / E. Oakville / E. Pembroke) shipped 2026-04-15 to 2026-05-18 — same doorway template v1 said to consolidate.</div>
+  </div>
+</div>
+
+<h2><span class="num">03</span>LD apples-to-apples 2026-02-22 → 2026-04-30 (158 cells visible both dates, addiction-clean intent only)</h2>
+<p class="caption">Of 9 keywords scanned at both dates, 6 are addiction-clean (per intent split: 1,500+ addiction-vertical listings per scan, &lt;120 medical-rehab contamination). "niagara rehab" is the clearest intent collapse — owned by Niagara Rehabilitation-Nursing + Niagara Health & Rehab Centre (medical/elder facilities, not addiction); Google is correctly disambiguating. Recommend dropping it as a target. "rehab near me" is intent-ambiguous (50/50 medical vs addiction); deprioritize. <strong>The strategic queries are alcohol-rehab + alcohol-detox-near-me + addiction-rehab(+ near me) + addiction-treatment-center + inpatient-rehab-near-me.</strong></p>
+<table>
+  <thead>
+    <tr>
+      <th>Keyword</th>
+      <th class="num">Coverage 2/22</th>
+      <th class="num">Coverage 4/30</th>
+      <th class="num">Top-3% 2/22</th>
+      <th class="num">Top-3% 4/30</th>
+      <th>Movement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>alcohol rehab</td><td class="num">88.0%</td><td class="num">87.3%</td><td class="num">70.9%</td><td class="num"><span class="pill pos">70.3%</span></td><td>Flat dominant — defend</td></tr>
+    <tr><td>alcohol detox near me</td><td class="num">95.6%</td><td class="num">91.1%</td><td class="num">72.8%</td><td class="num"><span class="pill pos">70.9%</span></td><td>Flat dominant — defend</td></tr>
+    <tr><td>addiction rehab</td><td class="num">87.3%</td><td class="num">85.4%</td><td class="num">65.8%</td><td class="num">60.8%</td><td>−5.0pt — Renaissance pressure</td></tr>
+    <tr><td>addiction rehab near me</td><td class="num">89.9%</td><td class="num">86.7%</td><td class="num">65.8%</td><td class="num">60.8%</td><td>−5.0pt — Renaissance + Casa Di Vita</td></tr>
+    <tr><td>addiction treatment center</td><td class="num">84.8%</td><td class="num">79.1%</td><td class="num">62.7%</td><td class="num"><span class="pill neg">54.4%</span></td><td>−8.3pt — biggest regression</td></tr>
+    <tr><td>inpatient rehab near me</td><td class="num">87.3%</td><td class="num">83.5%</td><td class="num">62.7%</td><td class="num">61.4%</td><td>Flat — holding under medical-rehab contamination</td></tr>
+    <tr><td>inpatient rehab</td><td class="num">79.7%</td><td class="num">76.6%</td><td class="num">51.3%</td><td class="num">51.3%</td><td>Flat — heavy medical-rehab contamination</td></tr>
+    <tr><td>rehab near me</td><td class="num">74.1%</td><td class="num">69.0%</td><td class="num">44.3%</td><td class="num">41.1%</td><td>50/50 intent ambiguous — deprioritize</td></tr>
+    <tr><td>niagara rehab</td><td class="num">17.1%</td><td class="num">8.9%</td><td class="num">17.1%</td><td class="num"><span class="pill warn">8.9%</span></td><td>Owned by medical-rehab — STOP CHASING</td></tr>
+  </tbody>
+</table>
+<p class="caption">Chart-spec for AI rendering: 2-bar grouped horizontal chart per keyword, x = top-3% / 0-100 scale, two bars per keyword (2/22 light, 4/30 dark navy), color top-3% &lt; 50 in red, 50-70 in amber, ≥70 in green. Sort: addiction-clean queries top, intent-ambiguous bottom, "niagara rehab" last with red bar.</p>
+
+<!-- ====== PAGE 2 ====== -->
+<h2><span class="num">04</span>GBP Service-Area Swap Proposal + Critical Issues (Push 1 + Push 2 anchors)</h2>
+<div class="grid-2">
+  <table>
+    <thead><tr><th>GBP service-area swap (current → proposed)</th><th>Decision</th></tr></thead>
+    <tbody>
+      <tr><td><strong>KEEP 9 entries:</strong> Newfane / Burt / Olcott / Appleton / Wilson / Barker / Hartland / Ransomville / Johnson Creek (unique ZIPs, 0-11mi)</td><td><span class="pill pos">KEEP ×9</span></td></tr>
+      <tr><td><strong>DROP 7 micros on ZIP 14094:</strong> Ridgewood / North Ridge / Highland Park / Cambria Center / Hickory Corners / Warrens Corners / Wrights Corners (all are Lockport neighborhoods)</td><td><span class="pill neg">DROP ×7</span></td></tr>
+      <tr><td><strong>DROP 2 dupes on ZIP 14008:</strong> West Somerset / North Hartland (consolidated into Appleton)</td><td><span class="pill neg">DROP ×2</span></td></tr>
+      <tr><td><strong>DROP 2 dupes on ZIP 14172:</strong> South Wilson / Hopkins Beach (consolidated into Wilson)</td><td><span class="pill neg">DROP ×2</span></td></tr>
+      <tr><td><strong>ADD Lockport (14094):</strong> 13 cells in grid · 100% cov · avg rank 1.4 — single largest entity-claim win</td><td><span class="pill info">ADD</span></td></tr>
+      <tr><td><strong>ADD Clarence (14031):</strong> 40 cells in grid · 100% cov · avg rank 3.4 — biggest break-out lever (eastern grid)</td><td><span class="pill info">ADD</span></td></tr>
+      <tr><td><strong>ADD Cambria (14094) · Pendleton · Sanborn · Wheatfield · Youngstown · Lewiston</strong> — all 100% cov, rank 1-6, claimable today</td><td><span class="pill info">ADD ×6</span></td></tr>
+      <tr><td><strong>ADD N. Tonawanda (14120):</strong> 90% cov · rank 9.7 — Buffalo-metro entity claim</td><td><span class="pill warn">ADD</span></td></tr>
+      <tr><td><strong>Reserve 2 slots</strong> for Q3 (Niagara Falls / Amherst / Williamsville post-Push 4 location-page lift)</td><td><span class="pill info">Q3</span></td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Critical issue (live-fetched 2026-05-19)</th><th>Sev</th></tr></thead>
+    <tbody>
+      <tr><td>Sitewide brand fracture: 5/8 core pages use "Recovery Center of Niagara" in title; homepage uses "Niagara Recovery"; LocalBusiness JSON-LD ambiguous</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>"[phone number]" placeholder LIVE on /services/alcohol-detoxification-services + -in-newfane-ny dupe</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>Buffalo location page fabricates "our facility in Buffalo, NY 14215" — NAP-integrity risk for Maps</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>LocalBusiness JSON-LD references niagararecovery.com/wp-content/* image (WP debris on Webflow build)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>10 /services/* URLs (5 base + 5 -in-newfane-ny dupes) for 3 clicks / 365d combined</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>0 schema on 5 service pages + admissions + treatments + areas-served + 8/8 location pages</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>/locations/tonawanda + /locations/north-tonawanda return 404 (gap matches Buffalo-metro Maps black hole)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>Lockport / NF / Amherst location pages = 276-278w thin doorways (vs Williamsville 986w / Cheektowaga 679w real content)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>670-post blog + 22 new PAA blogs + 9 new doorway pages shipped in last 5 weeks (same template v1 said to consolidate)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>All 21 pages sampled have null meta_description; Press Release stuck 7mo (Oct 2025)</td><td><span class="pill info">P2 + Owner</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2><span class="num">05</span>WNY addiction-treatment competitor scoreboard — apples-to-apples cell delta (2/22 → 4/30)</h2>
+<p class="caption">Competitors AHEAD of Niagara across the 158-cell grid for 9 priority queries. Sorted: gainers (cells_present positive delta) above, Niagara mid-axis, losers below. Renaissance/BestSelf (BestSelf WNY 2.7★/22) is the most-frequent ahead-of-Niagara competitor for "addiction rehab" and "addiction treatment center" in southern grid cells — beatable on ratings and topical density. Casa Di Vita (Cazenovia Recovery, 5.0★/3) outranks in 78 cells but the tiny review base is the weakness. Buffalo Rehab Group and Niagara Rehabilitation-Nursing are out-of-vertical (physical therapy / elder rehab) — disambiguate intent, do not engineer to compete with them.</p>
+<div style="margin: 4px 0;">
+  <div class="div-row"><div class="label">Casa Di Vita (Caz Recovery, 5.0★/3)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 40%;"></div></div><div class="div-val">+78 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Pathways (CHS Buffalo, 3.3★/69)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 39%;"></div></div><div class="div-val">+77 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Renaissance/BestSelf (2.7★/22)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 39%;"></div></div><div class="div-val">+76 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Amity Club (4.4★/61)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 38%;"></div></div><div class="div-val">+75 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Beacon Center (3.6★/16)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 38%;"></div></div><div class="div-val">+75 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Cazenovia Manor / Caz Recovery</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 33%;"></div></div><div class="div-val">+65 cells (addiction)</div></div>
+  <div class="div-row"><div class="label">Horizon Village Terrace House</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 28%;"></div></div><div class="div-val">+55 cells (addiction)</div></div>
+  <div class="div-row bb"><div class="label"><strong>Niagara Recovery (us)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 50%; background: #0b1726;"></div></div><div class="div-val"><strong>121–151 cells/kw · r1-5</strong></div></div>
+  <div class="div-row"><div class="label">Niagara Rehabilitation-Nursing</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 50%;"></div></div><div class="div-val">+314 ⚠ medical (intent)</div></div>
+  <div class="div-row"><div class="label">Buffalo Rehab Group (4.9★/114)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 48%;"></div></div><div class="div-val">+306 ⚠ PT (intent)</div></div>
+  <div class="div-row"><div class="label">Niagara Health & Rehab (4.9★/1053)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 44%;"></div></div><div class="div-val">+275 ⚠ medical (intent)</div></div>
+</div>
+<p class="caption">Three of the five "losing" rows in red are intent-mismatched (medical/elder rehab competing on the "rehab" keyword family) — they're not actually losing to Niagara, Niagara just shouldn't engineer to beat them. The genuine addiction-vertical competitors are all winnable on rating + review-content + topical density: Renaissance (2.7), Beacon (3.6), Pathways (3.3), Casa Di Vita (review count 3). Push 2 photo blitz + Posts cadence + Push 5 topical-density cleanup translate directly to cell wins against this stack.</p>
+
+<!-- ====== PAGE 3 ====== -->
+<h2><span class="num">06</span>Root Cause, Ranked</h2>
+
+<div class="rc rc-p0">
+  <span class="tag">PRIMARY · P0</span>
+  <strong class="title">Sitewide brand fracture is bleeding 41% of branded demand and starving the entity authority signal.</strong>
+  <p>Title + footer say "Niagara Recovery"; about/admissions/contact/treatments/areas-served titles say "Recovery Center of Niagara"; LocalBusiness JSON-LD ambiguous + references niagararecovery.com/wp-content/* image (WP debris on Webflow). Searchers respond: "recovery center of niagara" = 363 GBP searches Dec-May vs new-brand variants at 528. Entity-consolidation touches branded CTR, non-branded authority, and Maps disambiguation in one move.</p>
+</div>
+
+<div class="rc">
+  <span class="tag">PRIMARY</span>
+  <strong class="title">Non-branded discovery has collapsed 87% YoY while the production firehose keeps shipping the same template.</strong>
+  <p>GSC last-30d: 47 non-branded clicks vs extrapolated 330/mo from 3,967/365d historical — CTR 0.18% effectively flat. Yet 22 new PAA blogs + 9 new doorway pages shipped 2026-04-15 → 2026-05-18 (same template v1 said to consolidate). Blog has 670 posts at 96% of impressions, diluting toward off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) + Newfane-only modifiers, not WNY break-out terrain. Push 5 = NOINDEX/410 the ~300 off-vertical posts, bolt intake CTAs onto 5 already-converting assets (~2,400 clicks/365d combined), pause the suburb-doorway pipeline.</p>
+</div>
+
+<div class="rc sec">
+  <span class="tag">SECONDARY</span>
+  <strong class="title">Location-page architecture is mis-allocated: Williamsville + Cheektowaga have real content but no schema or ranking lift; Tonawanda + N. Tonawanda are 404; Lockport / Niagara Falls / Amherst are thin doorways.</strong>
+  <p>Williamsville (986w) + Cheektowaga (679w) have substantive content but zero schema, no ratings module, no NAP markers — failing to rank (Williamsville 60-80% LD cov rank 5-6; Cheektowaga 37-50% rank 8-10). Tonawanda + N. Tonawanda = 404 (gap matches Buffalo-metro 0/7 cell black hole). Lockport/NF/Amherst pages = 276-278w thin doorways. Push 4: UPGRADE Williamsville + Cheektowaga (schema + ratings + NAP + service links + FAQ); BUILD Tonawanda + N. Tonawanda + Lewiston + Youngstown; UPGRADE Lockport + NF + Amherst; REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorways to anchor city pages (small-level 301s per fill-not-kill).</p>
+</div>
+
+<div class="rc opp">
+  <span class="tag">OPPORTUNITY</span>
+  <strong class="title">11 of 20 GBP service-area slots are duplicate micros on 3 ZIPs — block 8 winnable WNY-anchor entries the team can claim today.</strong>
+  <p>7 entries on ZIP 14094 (Lockport neighborhoods: Ridgewood / N. Ridge / Highland Park / Cambria Center / Hickory Corners / Warrens Corners / Wrights Corners); 3 on 14008 (Appleton area); 3 on 14172 (Wilson area). Consolidating frees 11 slots. Push 2 fills 8: Lockport (13c/100%/r1.4), Cambria (4c/100%/r1.2), Pendleton (6c/100%/r2.1), Sanborn (2c/r3.5), Wheatfield (3c/r6.0), Youngstown (2c/r1.3), Lewiston (2c/r4.2), Clarence (40c/100%/r3.4 — largest break-out lever). N. Tonawanda (90%/r9.7) mid-tier; NF/Amherst/Williamsville (rank 10+) deferred to Q3.</p>
+</div>
+
+<div class="rc pos">
+  <span class="tag">POSITIVE</span>
+  <strong class="title">Newfane core dominance is structural — 100% LD cell coverage at #1-2 rank 0-15mi from pin. No defensive work required there; all engineering capacity routes to break-out.</strong>
+  <p>Across alcohol-rehab + alcohol-detox-near-me + addiction-rehab + addiction-rehab-near-me + addiction-treatment-center + inpatient-rehab-near-me, Niagara holds 100% cell coverage 0-15mi at avg rank 1.0-1.7. Olcott / Burt / Wilson / Barker / Hartland / Ransomville / Lockport / Cambria / Pendleton / Sanborn / Youngstown — every anchor at 100% / rank 1-3. The 4.3★/47-review GBP is the entity authority for this zone; needs only maintenance (Posts + photo blitz + the brand-canonical fix that lifts the whole site).</p>
+</div>
+
+<h2><span class="num">07</span>Strategic Priorities — Q2 2026 v2 (5 pushes · 7 lever rows · 32 task rows · each → specific sheet)</h2>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 28px;">#</th>
+      <th>Lever and action</th>
+      <th style="width: 86px;">Owner</th>
+      <th style="width: 154px;">Sheet</th>
+      <th style="width: 60px;">Impact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>P1</td><td><strong>Brand canonical sitewide.</strong> One entity (Niagara Recovery), one schema (MedicalBusiness floor sitewide, LocalBusiness on contact only), one image (live Webflow asset, kill wp-content debris). Title rewrites on about / admissions / contact / treatments / areas-served. Kill "[phone number]" placeholder. Fix Buffalo-NY-14215 fabrication.</td><td>On-Page (Aleksa)</td><td>Pages_Action_List · Schema_Plan</td><td><span class="pill neg">P0</span></td></tr>
+    <tr><td>P2</td><td><strong>GBP service-area swap + photo blitz + Posts.</strong> Drop 11 redundant micros (7×14094, 2×14008, 2×14172). Add 9 anchor towns (Lockport, Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, Clarence, N. Tonawanda). Photo 6→25 with category mix (treatment / facility / staff / outdoor / Newfane). Weekly Posts cadence keyed to addiction-clean kws + service-modality + payor.</td><td>Off-Page + AM (Julce + Miroslava)</td><td>GBP_Action_List · GBP_Service_Area_Swap</td><td><span class="pill neg">P0</span></td></tr>
+    <tr><td>P3</td><td><strong>Service-page consolidation + schema floor.</strong> 301 the 5 -in-newfane-ny dupes to the 5 base /services URLs (content merge). Deploy MedicalBusiness+Service schema on all 5 base service pages. Rewrite SP-01 (alcohol detox, 790/mo Bing volume), SP-02 (drug detox, 6,600/mo), SP-03 (suboxone — top GBP-search demand). Add per-page meta_description.</td><td>On-Page (Aleksa)</td><td>Pages_Action_List · Service_Pages_Plan · Schema_Plan</td><td><span class="pill warn">High</span></td></tr>
+    <tr><td>P4</td><td><strong>Location-page architecture: build / upgrade / redirect.</strong> BUILD Tonawanda + N. Tonawanda + Lewiston + Youngstown (4 new ~800-1000w pages with schema + NAP + ratings + service links). UPGRADE Williamsville + Cheektowaga + Lockport + Niagara Falls + Amherst from thin to substantive. REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorway URLs to the relevant anchor city's location page (small-level 301s).</td><td>On-Page + Content (Aleksa + Marija)</td><td>Pages_Action_List · Cannibal_Cleanup_Plan · Internal_Linking_Map</td><td><span class="pill warn">High</span></td></tr>
+    <tr><td>P5</td><td><strong>Content cleanup + cannibal consolidation.</strong> NOINDEX/410 the off-vertical high-imp posts (porn-addiction 350K imp; vape-by-country; social-media addiction; ~300 posts via decision-matrix scoring). Refresh 5 high-CTR conversion blog assets with intake CTAs. <strong>Pause the suburb-doorway production firehose</strong> (the Attica / E. Oakville / E. Pembroke / Renowned / Famous / Leading pipeline) — this is an owner/ops policy change.</td><td>Content (Marija) + Owner</td><td>Cannibal_Cleanup_Plan · Page_Refresh_Pages</td><td><span class="pill warn">High</span></td></tr>
+    <tr><td>P6</td><td><strong>Off-page rotation + reporting (existing cadence continues).</strong> SEO Neo monthly · AI Articles (4/mo entity-anchored: Lockport / Williamsville / N. Tonawanda / Buffalo metro) · Driving Direction Pins monthly (Buffalo / N. Tonawanda / Williamsville / Amherst → Newfane) · GBP Posts weekly · Citations Tier 1/2/3 · GA4 now wired (192 conv / 794 pp / 365d) · LD recurring (6 coords × 8 kws weekly) · M3 close-out scorecard.</td><td>Off-Page + Reporting (Julce + Marija)</td><td>OffPage_Stack_Template · Reporting_Master_Template</td><td><span class="pill info">Medium</span></td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">08</span>Marginal-Value KPIs and Owner-Side Asks</h2>
+<ul class="tight">
+  <li><strong>M3 LD targets (apples-to-apples per-keyword top-3%):</strong> alcohol rehab ≥75 · alcohol detox near me ≥75 · addiction rehab ≥65 · addiction rehab near me ≥65 · addiction treatment center ≥60 (recover the −8.3pt slip) · inpatient rehab near me ≥65 — anchored on Push 2 entity claims at Lockport / Clarence / Pendleton / Sanborn.</li>
+  <li><strong>M3 GSC + non-branded recovery:</strong> rebuild non-branded clicks 47/30d → 200/30d (4×) via Push 3 service-page schema + Push 4 location-page upgrade. Branded CTR hold ≥15%. Service-page combined clicks 3/365d → 50/M3 (5 base URLs after 301 consolidation).</li>
+  <li><strong>M3 GBP scorecard:</strong> Photos 6 → 25 (category-mixed). Posts 1 recent → 12 cumulative (weekly). Reviews 47 → 60 (+13 net via intake handoff). Service-area = 9 KEEPs + 9 ADDs + 2 buffer (per the swap proposal). M3 close-out maps to Asana Custom Strategy Tracking sheet.</li>
+  <li><strong>Owner asks (one short call):</strong> (1) Approve brand canonical = "Niagara Recovery" as the title-of-record everywhere; (2) Decide SAB vs storefront posture for GBP (recommend storefront — 24/7 inpatient supports it); (3) Confirm CARF / LegitScript / SAMHSA / OASAS listings for trust-page deployment; (4) <strong>Approve pause on suburb-doorway production pipeline</strong> (the Attica / E. Oakville / Renowned / Famous / Leading content stream); (5) Press Release task stuck since 2025-10-11 — approve or close.</li>
+</ul>
+
+<p class="caption" style="margin-top: 5px;"><strong>Companion docs (Drive):</strong> Niagara_Recovery_Q2_2026_Strategy_Condensed · Niagara_Recovery_Q2_2026_Tasks · Niagara_Recovery_Pages_Action_List · Niagara_Recovery_Internal_Linking_Map · Niagara_Recovery_GBP_Action_List · Niagara_Recovery_GBP_Service_Area_Swap · Niagara_Recovery_Driving_Direction_Pins · Niagara_Recovery_OffPage_Stack_Template · Niagara_Recovery_Reporting_Master_Template · 5 Push briefs (P1-P5).</p>
+
+</body>
+</html>

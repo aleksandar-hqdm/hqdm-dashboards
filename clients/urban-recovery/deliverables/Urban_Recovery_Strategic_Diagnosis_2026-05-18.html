@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Urban Recovery — Q2 2026 Strategic Diagnosis</title>
+<style>
+  @page { size: A4; margin: 11mm 11mm 11mm 11mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font: 7.6pt/1.24 -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif; color: #0b1726; background: white; }
+
+  .banner { background: linear-gradient(90deg, #c97a17 0 10px, transparent 10px); padding: 4px 0 4px 16px; margin-bottom: 4px; }
+  .banner .label { background: #c97a17; color: white; font-weight: 700; font-size: 7.5pt; padding: 2px 7px; letter-spacing: 0.4px; }
+  .banner .meta { font-size: 7.5pt; color: #5b6671; margin-left: 8px; }
+
+  h1 { font-size: 15pt; line-height: 1.12; margin: 4px 0 3px; color: #0b1726; font-weight: 700; }
+  .subtitle { font-size: 8.5pt; color: #5b6671; margin: 0 0 7px; max-width: 760px; }
+
+  h2 { font-size: 9.5pt; margin: 7px 0 4px; padding-bottom: 2px; border-bottom: 1.5px solid #0b1726; color: #0b1726; }
+  h2 .num { background: #0b1726; color: white; font-size: 7pt; padding: 1.5px 5px; margin-right: 5px; font-weight: 700; }
+
+  p { margin: 3px 0 4px; }
+  strong { color: #0b1726; }
+  .lead p { margin: 2px 0 3px; font-size: 7.5pt; line-height: 1.25; }
+
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 6px; margin: 3px 0 5px; }
+  .tile { border: 1px solid #ddd; border-top: 3px solid #1f7a3a; padding: 4px 6px; }
+  .tile.warn { border-top-color: #d97706; }
+  .tile.neg { border-top-color: #b91c1c; }
+  .tile.info { border-top-color: #0e7490; }
+  .tile .lbl { font-size: 6.5pt; color: #5b6671; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600; line-height: 1.15; }
+  .tile .val { font-size: 13pt; font-weight: 700; color: #0b1726; line-height: 1.05; margin: 1px 0 2px; }
+  .tile .cap { font-size: 7pt; color: #5b6671; line-height: 1.22; }
+
+  table { width: 100%; border-collapse: collapse; margin: 2px 0 4px; font-size: 7.1pt; }
+  th { background: #0b1726; color: white; text-align: left; padding: 2px 4px; font-weight: 700; font-size: 7.1pt; }
+  td { padding: 1.5px 4px; border-bottom: 1px solid #e8eaee; vertical-align: top; line-height: 1.22; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+  .pill { display: inline-block; padding: 1px 5px; font-size: 6.8pt; font-weight: 700; }
+  .pill.pos { background: #c6efce; color: #1f7a3a; }
+  .pill.neg { background: #ffc7ce; color: #b91c1c; }
+  .pill.warn { background: #fff4c2; color: #92400e; }
+  .pill.info { background: #cffafe; color: #0e7490; }
+
+  .rc { border-left: 3px solid #b91c1c; background: #fff5f5; padding: 2px 6px; margin: 2px 0; }
+  .rc.rc-p0 { border-left-color: #7f1d1d; background: #fee2e2; }
+  .rc.sec { border-left-color: #d97706; background: #fffbeb; }
+  .rc.opp { border-left-color: #0e7490; background: #ecfeff; }
+  .rc.pos { border-left-color: #1f7a3a; background: #f0fdf4; }
+  .rc .tag { display: inline-block; background: #b91c1c; color: white; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.3px; padding: 1px 5px; margin-right: 4px; }
+  .rc.rc-p0 .tag { background: #7f1d1d; }
+  .rc.sec .tag { background: #d97706; }
+  .rc.opp .tag { background: #0e7490; }
+  .rc.pos .tag { background: #1f7a3a; }
+  .rc strong.title { font-size: 7.6pt; }
+  .rc p { margin: 1px 0; font-size: 7.1pt; line-height: 1.22; }
+
+  .div-row { display: grid; grid-template-columns: 180px 1fr 55px; gap: 3px; align-items: center; padding: 0.5px 0; font-size: 7pt; }
+  .div-row .label { text-align: right; padding-right: 3px; color: #0b1726; line-height: 1.15; }
+  .div-row.bb { background: #fffbe6; }
+  .div-row.bb .label { font-weight: 700; }
+  .div-track { position: relative; height: 9px; }
+  .div-track .axis { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c0c5cd; }
+  .div-bar { position: absolute; top: 0; height: 9px; }
+  .div-bar.pos { background: #1f7a3a; }
+  .div-bar.neg { background: #b91c1c; }
+  .div-val { font-size: 7pt; font-variant-numeric: tabular-nums; text-align: left; }
+
+  .caption { font-size: 7pt; color: #5b6671; line-height: 1.28; margin: 3px 0 5px; }
+  ul.tight { margin: 3px 0 4px; padding-left: 16px; }
+  ul.tight li { margin: 1px 0; font-size: 7.1pt; line-height: 1.22; }
+
+  @page { @bottom-right { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #5b6671; font-family: -apple-system, Arial, sans-serif; } }
+  .pgbreak { page-break-before: always; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+</style>
+</head>
+<body>
+
+<!-- ====== PAGE 1 ====== -->
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 1</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h1>Urban Recovery: Q2 2026 Strategic Diagnosis</h1>
+<p class="subtitle">Single Red Hook pin in Brooklyn inpatient detox + rehab. The pin held the 13×13 grid while the market churned. Where the marginal dollar lifts in the next 90 days.</p>
+
+<h2><span class="num">01</span>Executive Summary</h2>
+<div class="lead">
+<p>Urban Recovery <strong>held the Red Hook grid while the market churned hard around it.</strong> Pooled top-10 cells across 8 priority queries × 13×13 grid went <strong>+21 cells Jan 27 → Apr 22 2026</strong> (1,092 → 1,113) — the only Brooklyn addiction-treatment pin gaining net top-10 cells in the window. Broad terms improved meaningfully: alcohol rehab <strong>5.71 → 4.48</strong>, drug rehab <strong>6.49 → 5.64</strong>. Within the 13×13 grid UR covers <strong>92.8% of cells (1,247 of 1,344)</strong> with rank 2.0–2.2 on Brooklyn-tagged queries. Brand engine works: urban recovery <strong>1,357 clicks/365d @ pos 2.26</strong>; the GBP-tagged homepage (/?utm_source=gmb) drives <strong>3,275 clicks/365d at 1.18% CTR</strong> — the live GBP→site→intake conversion path.</p>
+
+<p>The "we're winning" Maps read is real within 3.25 mi of the pin but masks four structural ceilings. <strong>(a)</strong> Cross-borough diffusion is at zero — DataForSEO Maps SERP at 5 Brooklyn anchor coords (Downtown Brooklyn / Williamsburg / Crown Heights / Sunset Park / Coney Island) returns UR in <strong>8 of 40 cells, all at the Red Hook pin</strong>. <strong>(b)</strong> GBP signal is starved: <strong>7 photos</strong> vs Ascendant 90 / Mountainside 30; <strong>1 Post</strong> in the scrape window; <strong>3.8★ with 23% 1-star share</strong> (26 of 111 reviews); place_topics null. <strong>(c)</strong> Service-page conversion surface is thin — /services/* (5 URLs) sit on doorway templates with <strong>zero JSON-LD</strong> and <strong>9,269 local-intent queries</strong> ranking pos 1–3 at near-zero CTR (recovery center brooklyn <strong>13.77K imp / 0 clicks @ pos 3.55</strong> is the headline). <strong>(d)</strong> Off-page profile shows <strong>PBN exposure</strong> — 1,642 BL / 642 unique RDs / domain spam-score 42, with <strong>395 RDs (61%) at spam-rating ≥30</strong> and <strong>216 RDs in the anomaly-seo-* PBN cluster</strong>.</p>
+
+<p>Next 90 days of lift sit on five pushes. <strong>(1)</strong> GBP depth surge — photos 7 → 30+, Posts ≥4/mo, reviews +20/mo (1-star share 23% → &lt;18%). <strong>(2)</strong> Service-page rebuild + homepage NAP — HP-01 (646-960-6656 → 646-347-1892), SP-01 alcohol-detox upgrade M2, SP-02 opioid-detox + MAT M3, ON-02 page refresh on 12 conversion-intent URLs. <strong>(3)</strong> Cross-borough location-page upgrades — 8 existing /locations/* (red-hook + carroll-gardens + gowanus + park-slope + boerum-hill + sunset-park + downtown-brooklyn + crown-heights) get content audit + LocalBusiness + BreadcrumbList schema; LP-01 data-driven 96-URL cleanup. <strong>(4)</strong> Counter SNF category drift on inpatient rehab (85 → 75 cells; <strong>Brooklyn Center for Rehabilitation and Nursing 0 → 102 cells</strong> in 90d) via explicit "Inpatient Drug & Alcohol Rehab Brooklyn" framing on /services/short-term-residential-program. <strong>(5)</strong> Off-page disavow (data-warranted) + YMYL trust citations + 6-strategy stack at gap coords + 3 Q-format LLM articles (Medicaid/LGBTQ+/women-owned).</p>
+
+<p>Three competitive realities. <strong>Direct competitor watch — Detox & Drug/Alcohol Rehab Center In Brooklyn NY</strong> (1,165 → 1,217, <strong>+52</strong>, 3.7★ × 66, gaining rank on every tracked query). <strong>SNF category entrant — Brooklyn Center for Rehabilitation and Nursing</strong> (0 → 102 cells on inpatient rehab alone). <strong>Competitor collapses</strong> — Addiction Treatment Brooklyn vanished (−138), Upper East Side Rehab Nursing −104, Samaritan Village vanished (−52). <strong>Q2 spend posture: maintain budget, redirect Aaron-style SEO Neo / link-velocity into the 5 pushes pending Off-page Risk Assessment resolution.</strong></p>
+</div>
+
+<h2><span class="num">02</span>Health Snapshot</h2>
+<div class="tiles">
+  <div class="tile">
+    <div class="lbl">Grid coverage (13×13 × 8 kws)</div>
+    <div class="val">92.8%</div>
+    <div class="cap">1,247 of 1,344 cells held. UR owns the Red Hook 3.25-mi radius.</div>
+  </div>
+  <div class="tile">
+    <div class="lbl">Top-10 cells gained Jan→Apr</div>
+    <div class="val">+21</div>
+    <div class="cap">1,092 → 1,113. Only Brooklyn addiction pin gaining top-10 cells.</div>
+  </div>
+  <div class="tile">
+    <div class="lbl">Brand engine (365d)</div>
+    <div class="val">1,357 clicks</div>
+    <div class="cap">urban recovery pos 2.26. Brand fires correctly + GBP-tagged / drives 3,275 clicks @ 1.18% CTR.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">Cross-borough Maps reach</div>
+    <div class="val">8 / 40</div>
+    <div class="cap">All 8 at Red Hook pin. Zero at Downtown Bk / Williamsburg / Crown Heights / Sunset Park / Coney Island.</div>
+  </div>
+  <div class="tile warn">
+    <div class="lbl">GBP depth (photos / posts / rating)</div>
+    <div class="val">7 / 1 / 3.8★</div>
+    <div class="cap">Ascendant 90 photos. 23% 1-star share (26/111). place_topics null.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">PBN exposure (61% RDs spam ≥30)</div>
+    <div class="val">395 RDs</div>
+    <div class="cap">Of 642 unique. 216 in anomaly-seo-* cluster (top spam-94). Domain spam-score 42.</div>
+  </div>
+</div>
+
+<h2><span class="num">03</span>Eight-Query LD Grid Baseline (Jan 27 → Apr 22 2026)</h2>
+<p class="caption">DataForSEO Local-Dominator 13×13 grid (1,344-cell universe per scan) centered on Red Hook pin coord 40.6754, −74.0148. Per-keyword avg rank computed on cells visible both dates. Positive Δ-cells = top-10 cells gained.</p>
+
+<table>
+  <thead>
+    <tr><th>Keyword</th><th>Δ top-10 cells</th><th>Avg rank Jan → Apr</th><th>Cells held (Apr)</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>alcohol rehab</td><td class="num"><span class="pill pos">gain</span></td><td class="num">5.71 → <strong>4.48</strong></td><td class="num">~200</td><td><span class="pill info">Climbing</span></td></tr>
+    <tr><td>drug rehab</td><td class="num"><span class="pill pos">gain</span></td><td class="num">6.49 → <strong>5.64</strong></td><td class="num">~200</td><td><span class="pill info">Climbing</span></td></tr>
+    <tr><td>alcohol rehab brooklyn</td><td class="num"><span class="pill pos">hold</span></td><td class="num">2.20 → <strong>2.16</strong></td><td class="num">~210</td><td><span class="pill pos">Owned</span></td></tr>
+    <tr><td>drug rehab brooklyn</td><td class="num"><span class="pill pos">hold</span></td><td class="num">2.05 → <strong>2.05</strong></td><td class="num">~210</td><td><span class="pill pos">Owned</span></td></tr>
+    <tr><td>rehab brooklyn</td><td class="num"><span class="pill pos">hold</span></td><td class="num">2.10 → <strong>2.10</strong></td><td class="num">~210</td><td><span class="pill pos">Owned</span></td></tr>
+    <tr><td>detox brooklyn</td><td class="num"><span class="pill pos">hold</span></td><td class="num">2.30 → <strong>2.25</strong></td><td class="num">~180</td><td><span class="pill pos">Owned</span></td></tr>
+    <tr><td>inpatient rehab</td><td class="num"><span class="pill neg">−10</span></td><td class="num">4.5 → 5.2</td><td class="num">75</td><td><span class="pill neg">SNF drift</span></td></tr>
+    <tr><td>rehab new york</td><td class="num"><span class="pill warn">hold</span></td><td class="num">8.5 → 8.0</td><td class="num">~160</td><td><span class="pill info">Climbing</span></td></tr>
+    <tr style="background: #fffbe6;"><td><strong>POOLED TOTAL</strong></td><td class="num"><strong>+21</strong></td><td>—</td><td class="num"><strong>1,247 / 1,344 (92.8%)</strong></td><td><strong>Only Brooklyn pin gaining top-10 cells</strong></td></tr>
+  </tbody>
+</table>
+<p class="caption">Six queries owned or climbing inside the Red Hook radius. One weakening — <strong>inpatient rehab</strong> — where a skilled-nursing facility (Brooklyn Center for Rehabilitation and Nursing) entered the category from 0 to 102 cells in 90 days and pulled UR from 85 → 75 cells. Category ambiguity not addiction-treatment competition; sharpening lever in Push 4.</p>
+
+<!-- ====== PAGE 2 ====== -->
+<div class="pgbreak"></div>
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 1</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h2><span class="num">04</span>Service-Area Priority Matrix &amp; Critical Issues</h2>
+<div class="grid-2">
+  <table>
+    <thead><tr><th>Cluster</th><th>Dist</th><th>Q2 priority</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Red Hook (pin)</strong> — Columbia Waterfront + Brooklyn Heights + DUMBO + Fort Greene</td><td>0 mi</td><td><span class="pill info">Defend</span></td></tr>
+      <tr><td><strong>Carroll Gardens / Cobble Hill / Gowanus / Boerum Hill</strong></td><td>0.4–1.0 mi NE</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td><strong>Park Slope / South Park Slope / Windsor Terrace</strong></td><td>1.5–2.0 mi E</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td><strong>Sunset Park / Bay Ridge</strong></td><td>1.5–2.5 mi S</td><td><span class="pill pos">Push (organic + Maps)</span></td></tr>
+      <tr><td><strong>Downtown Brooklyn / Brooklyn Heights / DUMBO</strong></td><td>1.0–2.0 mi NE</td><td><span class="pill pos">Push (organic only)</span></td></tr>
+      <tr><td><strong>Crown Heights / Bed-Stuy / Prospect Heights</strong></td><td>3.5–4.0 mi NE</td><td><span class="pill pos">Push (organic only)</span></td></tr>
+      <tr><td>Williamsburg / Bushwick</td><td>5–6 mi NE</td><td>Defer Q3</td></tr>
+      <tr><td>Coney Island / Brighton Beach</td><td>4–5 mi S</td><td>Ceded to Surfpoint sister</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Critical issue</th><th>Severity</th></tr></thead>
+    <tbody>
+      <tr><td>Service-page conversion leak — 9,269 local-intent kws @ pos 1–3 near-zero CTR (recovery center brooklyn 13.77K imp / 0 clicks pos 3.55)</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>Homepage JSON-LD telephone (646-960-6656) ≠ GBP canonical (646-347-1892) — only schema block sitewide is misaligned</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>GBP photos 7 (vs Ascendant 90, Mountainside 30, ACI 12)</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>GBP Posts cadence: 1 in scrape window (competitor benchmark = weekly)</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>23% 1-star review share (26 of 111) — YMYL Maps deprioritization signal</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>SNF entering inpatient rehab — Brooklyn Center for Rehab and Nursing 0 → 102 cells in 90d; UR −10 cells</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>Cross-borough 5-coord matrix 8/40 cells (all at Red Hook pin; Maps reach ~3.25 mi cap)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>61% RDs at spam ≥30 (395/642) · 216 anomaly-seo cluster · domain spam-score 42</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>96 /locations/* doorways with verbose + clean-slug duplicates (LP-01 data-driven cleanup)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>Detox & Drug/Alcohol Rehab Center In Brooklyn NY +52 cells — direct competitor gaining on every kw</td><td><span class="pill info">Watch</span></td></tr>
+      <tr><td>Maps reach physically capped at ~3.25mi from Red Hook pin</td><td><span class="pill info">N/A</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2><span class="num">05</span>Competitor Churn — Direct Competitor Gaining; Three Pins Vanished</h2>
+<p class="caption">Top-10 cell delta pooled across 8 priority queries × 13×13 LD grid × 2 dates. Per-GBP standalone (place_id-matched). HQDM-portfolio sister clients flagged but visible. Top 7 gainers + UR (highlighted) + top 5 losers.</p>
+
+<div style="margin: 4px 0;">
+  <div class="div-row"><div class="label">Elevate Point – Alcohol &amp; Drug Rehab NYC (14 rev · 5.0★)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 44.0%;"></div></div><div class="div-val">+88</div></div>
+  <div class="div-row"><div class="label">Teen Challenge Inc. (33 rev · 4.0★)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 26.5%;"></div></div><div class="div-val">+53</div></div>
+  <div class="div-row"><div class="label"><strong>Detox &amp; Drug/Alcohol Rehab Ctr Bk NY (direct comp)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 26.0%;"></div></div><div class="div-val"><strong>+52</strong></div></div>
+  <div class="div-row"><div class="label">Downtown Brooklyn Nursing &amp; Rehab (SNF)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 22.5%;"></div></div><div class="div-val">+45</div></div>
+  <div class="div-row"><div class="label"><strong>Brooklyn Center for Rehab &amp; Nursing (SNF — inpatient rehab entrant)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 19.5%;"></div></div><div class="div-val"><strong>+39</strong></div></div>
+  <div class="div-row"><div class="label">Mountainside Treatment Center NYC</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 17.0%;"></div></div><div class="div-val">+34</div></div>
+  <div class="div-row"><div class="label">Surfpoint Recovery (HQDM sister · Coney Island)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 16.5%;"></div></div><div class="div-val">+33</div></div>
+  <div class="div-row bb"><div class="label"><strong>Urban Recovery (us)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 10.5%; background: #0b1726;"></div></div><div class="div-val"><strong>+21 · held grid</strong></div></div>
+  <div class="div-row"><div class="label">LSA Recovery – Crown Heights</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 19.0%;"></div></div><div class="div-val">−38</div></div>
+  <div class="div-row"><div class="label">Wellbridge Drug &amp; Alcohol Rehab NYC</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 19.5%;"></div></div><div class="div-val">−39</div></div>
+  <div class="div-row"><div class="label">Samaritan Village (vanished)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 26.0%;"></div></div><div class="div-val">−52</div></div>
+  <div class="div-row"><div class="label">Upper East Side Rehab &amp; Nursing</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 52.0%;"></div></div><div class="div-val">−104</div></div>
+  <div class="div-row"><div class="label"><strong>Addiction Treatment Brooklyn (vanished)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 69.0%;"></div></div><div class="div-val"><strong>−138</strong></div></div>
+</div>
+
+<p class="caption">Urban Recovery held the grid (+21 top-10 cells) while three competitors vanished or collapsed (Addiction Treatment Brooklyn −138, Upper East Side Rehab Nursing −104, Samaritan Village −52) and the field churned. The standout: <strong>Detox &amp; Drug/Alcohol Rehab Center In Brooklyn NY</strong> is gaining rank on every single tracked query while UR holds — this is the direct competitor whose mechanism deserves M1 forensic pull. <strong>Brooklyn Center for Rehabilitation &amp; Nursing</strong> (SNF) entered inpatient rehab from zero — this is the category-drift pressure UR needs to counter on-page in Push 4.</p>
+
+<!-- ====== PAGE 3 ====== -->
+<div class="pgbreak"></div>
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 1</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h2><span class="num">06</span>Root Cause, Ranked</h2>
+
+<div class="rc rc-p0">
+  <span class="tag">PRIMARY · P0</span>
+  <strong class="title">Service-page conversion surface is thin → 9,269 local-intent queries rank pos 1–3 at near-zero CTR</strong>
+  <p>/services/* (5 URLs: alcohol-detox / drug-detox / opioid-detox / benzo-detox / short-term-residential) sit on doorway templates with <strong>zero JSON-LD</strong>. recovery center brooklyn ranks pos 3.55 with <strong>13,770 impressions / 0 clicks in last 180d</strong>. drug rehab new york city ranks 7,100 imp / 1 click. The GBP authority converts on the GBP-tagged homepage path (/?utm_source=gmb = 3,275 clicks / 1.18% CTR) but the organic SERP service-page entries leak 100% of clicks. <strong>SP-01 + SP-02 + HP-01 + ON-02</strong> = the structural conversion fix; HP-01 alone is a one-line schema edit.</p>
+</div>
+
+<div class="rc">
+  <span class="tag">PRIMARY</span>
+  <strong class="title">GBP depth gap on the pin — photos 7 / Posts 1 / 1-star share 23%</strong>
+  <p>Ascendant 90 photos / Mountainside 30 / ACI Inpatient 12. UR at 7 is dramatically under-indexed. Photo count is documented E-E-A-T proxy + Maps freshness ranker. 23% 1-star share (26 of 111 reviews) is documented YMYL Maps deprioritization signal — positive-volume dilution via +20 reviews/month is the only competitive lever a single-location pin can pull at this scale. Compounded by place_topics null. <strong>GBP-01 through GBP-08</strong> directly target this gap (Push 1).</p>
+</div>
+
+<div class="rc sec">
+  <span class="tag">SECONDARY</span>
+  <strong class="title">Cross-borough Maps non-diffusion — 8/40 cells at 5-coord matrix</strong>
+  <p>UR doesn't appear once at Downtown Brooklyn / Williamsburg / Crown Heights / Sunset Park / Coney Island. Single Red Hook pin Maps reach hard-capped at the 3.25-mi grid radius. Cross-borough capture is <strong>organic-only</strong> — <strong>LP-02 upgrades</strong> on existing /locations/* URLs (data-validated: every cross-borough target already has a verbose-slug page with 800-1,700 words, no schema, getting impressions but zero clicks). Highest-leverage cross-borough URL: /locations/recovery-center-in-sunset-park-ny at 1,722 words / 3,152 imp / 26 clicks / pos 19.58 — one push from page 1.</p>
+</div>
+
+<div class="rc opp">
+  <span class="tag">OPPORTUNITY</span>
+  <strong class="title">SNF category drift on inpatient rehab — 85 → 75 cells driven by Brooklyn Center for Rehab and Nursing 0 → 102</strong>
+  <p>Skilled-nursing facility is not an addiction-treatment competitor but shares the entity-class signal. UR's /services/short-term-residential-program doesn't use "inpatient" in primary framing. <strong>ON-02 page refresh M2</strong> lands explicit "Inpatient Drug & Alcohol Rehab Brooklyn — 24-Hour Medical Supervision" framing. GBP Posts use "Inpatient" phrasing 1×/month. <strong>Forensic pull M3</strong> on SNF mechanism (category change? GBP edits? review velocity?). Full SP-03 rebuild Q3 after SP-01/SP-02 template proven.</p>
+</div>
+
+<div class="rc pos">
+  <span class="tag">POSITIVE</span>
+  <strong class="title">Brand engine works · GBP→site→intake path proven · 13×13 grid held while market churned hard</strong>
+  <p>Brand queries (urban recovery 1,357 clicks/365d pos 2.26; urban recovery brooklyn 290 clicks pos 1.83) + GBP-tagged homepage (/?utm_source=gmb 3,275 clicks @ 1.18% CTR) are highest-converting organic entries. Improving on broad terms (alcohol rehab 5.71 → 4.48; drug rehab 6.49 → 5.64). Brand differentiators real (women-owned + LGBTQ+-affirming + transgender-safespace GBP attributes — real commercial-intent signals in NYC recovery). Q2 marginal lift is <strong>structural</strong> (HQDM-side work).</p>
+</div>
+
+<h2><span class="num">07</span>Strategic Priorities — Q2 Pushes (5 pillars · 47 task rows · each → specific sheet)</h2>
+<table>
+  <thead><tr><th style="width: 22px;">#</th><th>Push and action</th><th style="width: 80px;">Owner</th><th style="width: 130px;">Sheet</th><th style="width: 64px;">Impact</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>GBP depth surge (defend Red Hook + diffuse).</strong> M1: GBP-01 Posts ≥4/mo + GBP-03 reviews +20/mo + GBP-02 services/attributes audit. M2: GBP-04 photo blitz 7 → 30+ (owner-gated). M3: GBP-06 Posts + Services audit + GBP-07 owner replies. Reviews 111 → 170+, 1-star share 23% → &lt;18%.</td><td>HQDM Local/GBP + Owner (photos)</td><td>GBP_Action_List + OffPage_Stack</td><td><span class="pill warn">High · 60-90d</span></td></tr>
+    <tr><td>2</td><td><strong>Service-page rebuild + homepage NAP + page refresh.</strong> M1: HP-01 homepage JSON-LD NAP fix. M2: SP-01 /services/alcohol-detoxification-service upgrade + ON-02 page refresh on 12 conversion-intent URLs. M3: SP-02 /services/opioid-detoxification-services + MAT. Converts GBP authority into organic clicks on 9,269 bleeding kws.</td><td>HQDM On-Page + Content + Local</td><td>Pages_Action_List + Internal_Linking_Map</td><td><span class="pill neg">P0 · 60d</span></td></tr>
+    <tr><td>3</td><td><strong>Cross-borough location-page upgrades + LP-01 data-driven cleanup.</strong> M1: LP-02_M1 in-radius anchors (red-hook + carroll-gardens + gowanus) + LP-01_M1 96-URL GSC pull + 0-click 301 cohort. M2: LP-02_M2 adjacency + cross-borough (park-slope + boerum-hill + sunset-park). M3: LP-02_M3 cross-borough conditional (downtown-brooklyn + crown-heights). NEVER bulk NOINDEX.</td><td>HQDM On-Page + Content + Dev</td><td>Pages_Action_List + Internal_Linking_Map</td><td><span class="pill neg">P0 · 60-90d</span></td></tr>
+    <tr><td>4</td><td><strong>Counter SNF category drift on inpatient rehab.</strong> M2: ON-02-Inpatient = explicit "Inpatient Drug &amp; Alcohol Rehab Brooklyn — 24-Hour Medical Supervision" framing on /services/short-term-residential-program. Internal-link consolidation around "Inpatient" anchor across LP-02 + service hubs. GBP Posts 1× "Inpatient"/mo. M3: forensic pull on Brooklyn Center for Rehab and Nursing mechanism.</td><td>HQDM On-Page + Local</td><td>Pages_Action_List + Internal_Linking_Map</td><td><span class="pill warn">Med · 90d</span></td></tr>
+    <tr><td>5</td><td><strong>Off-page disavow + YMYL trust + 6-strategy stack + Q-format LLM articles.</strong> M1: OFF-Disavow_M1 + OFF-Citations_M1 (SAMHSA + Psych Today + CARF) + DAS/GBP Blast/AI Articles/DD/GMB Pin at gap coords. M2: OFF-PR_M2 LGBTQ+-affirming + OFF-Citations_M2. M3: OFF-Disavow_M3 re-pull + CON-03 3 Q-format LLM articles (Medicaid/LGBTQ+/women-owned) + OFF-Citations_M3.</td><td>HQDM Off-Page (Julce) + Content + Aleksandar</td><td>OffPage_Stack + Driving_Direction_Pins + Disavow_Plan</td><td><span class="pill warn">Med · 90d</span></td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">08</span>Marginal-Value KPIs and Owner-Side Asks</h2>
+<ul class="tight">
+  <li><strong>LD grid coverage (8 queries × 1,344 cells):</strong> Apr baseline 92.8%. M3 target hold ≥ 92% + close inpatient rehab gap 75 → 100+ cells via Push 4. Drop below 88% → reassess Pushes 1+4.</li>
+  <li><strong>Cross-borough 5-coord matrix (8 queries × 5 coords):</strong> baseline 8/40 (all at Red Hook). M3 target ≥ 14/40 — radiation to ≥ 2 adjacent coords via Push 3 LP-02 + Push 5 off-page micro-area work.</li>
+  <li><strong>Single-URL forensic tracking:</strong> recovery center brooklyn (pos 3.55 / 13,770 imp / 0 clicks → CTR ≥3% via SP-01 + ON-02); /locations/recovery-center-in-sunset-park-ny (pos 19.58 / 3,152 imp / 26 clicks → pos ≤ 12 gated on LP-02_M2 schema).</li>
+  <li><strong>GBP signals:</strong> Photos 7 → ≥30 (M2 owner-gated). Posts 1 → ≥4/mo sustained M1-M3. Reviews 111 → ≥170 (M3 intake-SOP). 1-star share 23% → &lt;18%.</li>
+  <li><strong>Off-page profile:</strong> Disavow uploaded M1 (per Decisions sheet); re-pull M3. Domain spam-score 42 tracked but not Q2 target (lag indicator).</li>
+  <li><strong>Owner asks (4 items · one 20-min call):</strong> <strong>#1</strong> CARF certification status — gates SP-01/SP-02 E-E-A-T + OFF-Citations_M1 (substitute Joint Commission if not in place). <strong>#2</strong> Insurance carrier in-network confirmation (Aetna + Cigna + BCBS) — gates OFF-Citations_M2 + SP-01/SP-02 insurance accuracy. <strong>#3</strong> GBP photo upload schedule — Push 1 GBP-04 gated on this; HQDM delivers photo brief, owner uploads 30+ photos within 60d. <strong>#4</strong> Clinical lead photo + bio + quotable consent — gates Psychology Today profile (OFF-Citations_M1) + OFF-PR_M2 LGBTQ+-affirming pitch.</li>
+</ul>
+
+<p class="caption" style="margin-top: 5px;"><strong>Companion docs (Drive):</strong> Urban_Recovery_Q2_2026_Tasks.csv (47 task rows) · Urban_Recovery_Pages_Action_List.csv (29 page actions) · Urban_Recovery_Internal_Linking_Map.csv (62 link changes) · Urban_Recovery_GBP_Action_List.csv (8 GBP edits) · Urban_Recovery_Driving_Direction_Pins.csv (9 lat/lng pins) · Urban_Recovery_OffPage_Stack_Template.csv (8 tabs × 3 months) · Urban_Recovery_Reporting_Master_Template.csv (KPI tracker) · 5 push briefs (Push1_GBP_Surge, Push2_Service_Pages, Push3_Location_Diffusion, Push4_Inpatient_Counter, Push5_OffPage_Trust) · Urban_Recovery_Disavow_Plan.xlsx Decisions tab · Urban_Recovery_Location_Pages_Plan_3Month.xlsx.</p>
+
+</body>
+</html>

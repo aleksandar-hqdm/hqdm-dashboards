@@ -1,0 +1,1265 @@
+<!DOCTYPE html><html><head><meta charset='utf-8'><title>Urban Recovery Q2 2026 Custom Strategy</title><style>
+body { font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif; max-width: 980px; margin: 2em auto; padding: 0 1.5em; line-height: 1.55; color: #24292f; }
+h1 { font-size: 1.9em; border-bottom: 2px solid #d0d7de; padding-bottom: 0.3em; }
+h2 { font-size: 1.45em; border-bottom: 1px solid #d0d7de; padding-bottom: 0.25em; margin-top: 2em; }
+h3 { font-size: 1.2em; margin-top: 1.5em; }
+table { border-collapse: collapse; margin: 1em 0; width: 100%; font-size: 0.92em; }
+th, td { border: 1px solid #d0d7de; padding: 6px 10px; text-align: left; vertical-align: top; }
+th { background: #f6f8fa; font-weight: 600; }
+tr:nth-child(even) { background: #fafbfc; }
+code { background: #f6f8fa; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+pre { background: #f6f8fa; padding: 12px; border-radius: 6px; overflow-x: auto; }
+blockquote { border-left: 4px solid #d0d7de; margin: 1em 0; padding: 0.3em 1em; color: #57606a; background: #f6f8fa; }
+a { color: #0969da; text-decoration: none; }
+a:hover { text-decoration: underline; }
+hr { border: 0; border-top: 1px solid #d0d7de; margin: 2em 0; }
+strong { color: #1f2328; }
+.kpi-red { color: #cf222e; font-weight: 600; }
+.kpi-green { color: #1a7f37; font-weight: 600; }
+</style>
+</head><body><h1 id="urban-recovery-q2-2026-custom-strategy-long-form">Urban Recovery — Q2 2026 Custom Strategy (long-form)</h1>
+<p><strong>Owner:</strong> Aleksandar (HQDM Search Intelligence) · <strong>Prepared:</strong> 2026-05-14 (LD-delta refresh)
+<strong>Pin:</strong> 411 Van Brunt St, Brooklyn NY 11231 (Red Hook) · <strong>Domain:</strong> urbanrecovery.com
+<strong>Phase:</strong> Phase 1 Recovery — strategy-first rollout (4th shipped after Surfpoint prototype, Niagara, Conifer Park v1)</p>
+<p><strong>Anchor docs:</strong> <a href="Urban_Recovery_Onepager_2026Q2.md">Onepager</a> · <a href="Urban_Recovery_Q2_2026_Strategy_Condensed.md">Condensed Strategy</a> · <a href="Urban_Recovery_3Month_Plan_v2.md">3-Month Plan</a> · <a href="Urban_Recovery_3Month_Tasks_v2.csv">Task CSV</a> · <a href="Urban_Recovery_Owner_Conversation_Items.md">Owner Conversation</a> · <a href="Urban_Recovery_Task1_M1_Location_Cleanup_Brief.md">LP-01 Brief</a></p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<h3 id="seven-headline-findings">Seven headline findings</h3>
+<ol>
+<li><strong>Within-radius dominance is intact and improving.</strong> 13×13 LD grid at Red Hook pin coord (Jan 27 → Apr 22, 2026): UR appears in <strong>1,247 of 1,344 cells (92.8%)</strong> across 8 priority queries. Brooklyn-tagged queries hold rank 2.0–2.2; broad terms improved (<code>alcohol rehab</code> avg 5.71→4.48; <code>drug rehab</code> 6.49→5.64).</li>
+<li><strong>Cross-borough non-diffusion is the real gap.</strong> 5-coord matrix (Coney Island / Downtown Brooklyn / Williamsburg / Crown Heights / Red Hook): UR appears in 8 of 40 keyword × coord cells — every appearance is at the Red Hook pin itself. The pin works at home, doesn't radiate to other Brooklyn neighborhoods.</li>
+<li><strong><code>inpatient rehab</code> is the one weakening keyword.</strong> LD grid coverage shrank 85 → 75 cells (−10) at the Red Hook radius. Category is being entered by <strong>Brooklyn Center for Rehabilitation and Nursing</strong> (0 → 102 cells in 3 months) — a skilled nursing facility, not addiction. UR fights category-ambiguity here, not just competitive density.</li>
+<li><strong>The GBP moat is real and converting.</strong> GBP-tagged homepage (<code>/?utm_source=gmb</code>) drove 3,275 clicks / 365d at 1.18% CTR — the highest non-blog converting URL on the site. GBP → site → intake is the live conversion path.</li>
+<li><strong>9,269 local-intent queries are ranking page 1–3 at near-zero CTR.</strong> <code>recovery center brooklyn</code> = 13.77K imp / 0 clicks at pos 3.55. Root cause = sitewide 0% meta description coverage + missing local modifiers in titles. Sitewide unblock; no owner approval required.</li>
+<li><strong>Blog inventory is HQDM's primary content deliverable — refresh cadence on bleeding on-topic posts.</strong> 674 of 792 sitemap URLs are <code>/blog/*</code>. The bleeding-cohort posts on-topic to detox / withdrawal / MAT / dual-diagnosis are refresh candidates per HQDM Blog-Refresh SOP (title + intro + FAQ schema + 2026 stats + internal link to /services/* + Request Indexing). 3 posts per month at M1/M2/M3 per the Surfpoint format. Top high-impression off-topic posts (claustrophobia 1.25M imp; porn-addiction; halt acronym) are deprioritized for refresh hours — kept live, not deleted or noindex'd.</li>
+<li><strong>Same agency template as Surfpoint, same PBN inbound.</strong> 96 <code>/locations/*</code> pages — HQDM-produced content (do not sweep-redirect by geography). Live HTML sampling shows the cohort includes 5 NJ pages + 12 non-NYC-borough pages + ~73 verbose-slug Brooklyn pages (<code>leading-rehab-center-in-*</code>, <code>premier-recovery-center-in-*</code>, <code>effective-rehab-center-in-*</code>); 0/96 carry JSON-LD. Per HQDM Location-Pages-SOP: act on data only — empty + important neighborhood → BUILD (LP-02); 0 clicks 365d (any geo) → REMOVE; bleeding + traffic + on-topic → REFRESH; traffic-earning content → leave alone. 1,642 backlinks / 958 RDs / spam-score 42 dominated by <code>anomaly-seo-*</code> / <code>seo-anomaly-*</code> clusters across <code>.xyz</code>/<code>.online</code>/<code>.website</code>/<code>.space</code> TLDs. Diagnose-and-disavow per Milica 2026-05-13 stance.</li>
+</ol>
+<h3 id="strategic-focus-statement">Strategic Focus statement</h3>
+<p><strong>Defend the Red Hook moat. Extend cross-borough via location-page builds + GBP diffusion. Upgrade the two highest-intent service pages (SP-01 alcohol-detox M2, SP-02 opioid-detox + MAT M3). Run data-driven location-page cleanup (LP-01 = refresh on-topic bleeding + remove 0-click) and location-page UPGRADES + NEW BUILDS with schema merged (LP-02 = 4 upgrades + 2-3 new builds across M1/M2/M3). Refresh visible-on-page content on top conversion URLs (ON-02). Run the on-topic blog-refresh cadence (CON-05/06/07). Disavow is data-warranted by the backlink profile + YMYL trust citations on the off-page side.</strong></p>
+<h3 id="top-7-month-1-actions">Top 7 Month 1 actions</h3>
+<ol>
+<li><strong>HP-01</strong> — Homepage JSON-LD telephone fix (1h). One-line edit; no approval required.</li>
+<li><strong>LP-01_M1</strong> — GSC data pull + refresh batch 1 (3 URLs) + 0-click removal batch (6h). Data-driven; no geographic sweep.</li>
+<li><strong>LP-02_M1</strong> — 3 location-page UPGRADES + schema (red-hook-ny + carroll-gardens-red-hook + gowanus — all confirmed live per probe 2026-05-15) (15h).</li>
+<li><strong>GBP-01 + GBP-03</strong> — Posts cadence (≥4 in M1, 1 explicit "Inpatient") + review-velocity push (+20 reviews) (4h).</li>
+<li><strong>OFF-Disavow_M1</strong> — Disavow file build + upload (data-warranted: 395 RDs spam ≥30, 216 in <code>anomaly-seo-*</code> cluster) (5h).</li>
+<li><strong>OFF-Citations_M1</strong> — YMYL batch 1 (SAMHSA + Psych Today + CARF or Joint Commission substitute) (4h).</li>
+<li><strong>OFF-DAS_M1 + OFF-GBPBlast_M1 + OFF-AIArticles_M1 + OFF-DD_M1 + OFF-GMBPin_M1</strong> — Off-page 6-strategy stack M1 batch: micro-area work at Downtown Brooklyn + Sunset Park + Crown Heights gap coords (≈13h total across the 5 actions, each with its own working sheet).</li>
+</ol>
+<p><strong>Aleksa-feasibility flag:</strong> all M1 tasks slot into existing SOPs; no new SOP creation required.</p>
+<hr />
+<h2 id="1-current-state-diagnosis">1. Current State Diagnosis</h2>
+<h3 id="11-search-side-state">1.1 Search-side state</h3>
+<p><strong>GSC last 365 days (sitewide):</strong> 855 pages / 13.81M impressions / 44.14K clicks / 0.32% CTR. Top 3 pages by impressions are off-topic to UR's primary service (Brooklyn inpatient detox): <code>/blog/what-is-claustrophobia</code> 1.25M imp @ 0.004% CTR, porn-addiction cluster 847K imp, "halt acronym" 743K. These three pages alone account for <strong>~21% of sitewide impressions</strong> at near-zero clicks — they are HQDM-produced content delivering impression volume; they're deprioritized for refresh hours since the lift compounds harder on on-topic posts.</p>
+<p><strong>GSC last 180 days (queries):</strong> 9,269 local-intent queries returned. Standout examples ranking pos 2–4 with near-zero CTR:</p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th style="text-align: right;">Impressions</th>
+<th style="text-align: right;">Clicks</th>
+<th style="text-align: right;">Pos</th>
+<th style="text-align: right;">CTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>recovery center brooklyn</td>
+<td style="text-align: right;">13,771</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3.55</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr>
+<td>drug rehab new york city</td>
+<td style="text-align: right;">7,100</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.20</td>
+<td style="text-align: right;">0.014%</td>
+</tr>
+<tr>
+<td>inpatient rehab</td>
+<td style="text-align: right;">1,650</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.20</td>
+<td style="text-align: right;">0.12%</td>
+</tr>
+<tr>
+<td>detox brooklyn</td>
+<td style="text-align: right;">1,124</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">4.10</td>
+<td style="text-align: right;">0.62%</td>
+</tr>
+<tr>
+<td>... 9,265 more</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">&lt;1.5%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Diagnosis:</strong> the engine is firing — pages are ranking — but the SERP snippet is failing to drive the click. The durable lift comes from the SP-01 + SP-02 service-page upgrades, the LP-02 location-page upgrades + schema deploy on 8 URLs (no new builds — every cross-borough target already has a content-bearing verbose-slug page in the sitemap), and the ON-02 page-refresh on top conversion URLs (visible content: H1 + hero + body + intake CTA).</p>
+<h3 id="12-conversion-concentration">1.2 Conversion concentration</h3>
+<p><strong>GBP-attributed traffic:</strong> <code>/?utm_source=gmb</code> = 3,275 clicks / 365d at 1.18% CTR. This is the <strong>highest non-blog converting URL</strong> on the site. The conversion path is intact: GBP listing → branded homepage → intake form / phone call.</p>
+<p><strong>Brand engine:</strong> <code>urban recovery</code> = 1,357 clicks / 365d at pos 2.26; <code>urban recovery brooklyn</code> = 290 clicks at pos 1.83. Brand stays fired correctly — strategy must not disturb this.</p>
+<p><strong>Where conversion isn't happening:</strong> the 9,269 non-brand local-intent queries above. These are search-intent buyers ranking page 1–3 and bouncing on the SERP snippet itself.</p>
+<h3 id="13-maps-state-two-complementary-signals">1.3 Maps state — two complementary signals</h3>
+<h4 id="13a-within-radius-red-hook-1313-ld-grid">1.3a Within-radius (Red Hook 13×13 LD grid)</h4>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th style="text-align: right;">Cells Jan 27</th>
+<th style="text-align: right;">Cells Apr 22</th>
+<th style="text-align: right;">Δ cells</th>
+<th style="text-align: right;">Avg rank Jan</th>
+<th style="text-align: right;">Avg rank Apr</th>
+<th style="text-align: right;">Δ rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alcohol rehab brooklyn</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2.11</td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">+0.05</td>
+</tr>
+<tr>
+<td>drug rehab brooklyn</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2.07</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">−0.03</td>
+</tr>
+<tr>
+<td>rehabs in new york</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3.25</td>
+<td style="text-align: right;">3.39</td>
+<td style="text-align: right;">+0.14</td>
+</tr>
+<tr>
+<td>drug rehab new york</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4.14</td>
+<td style="text-align: right;">4.12</td>
+<td style="text-align: right;">−0.02</td>
+</tr>
+<tr>
+<td><strong>alcohol rehab</strong></td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5.71</td>
+<td style="text-align: right;"><strong>4.48</strong></td>
+<td style="text-align: right;"><strong>−1.23 (improved)</strong></td>
+</tr>
+<tr>
+<td><strong>drug rehab</strong></td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6.49</td>
+<td style="text-align: right;"><strong>5.64</strong></td>
+<td style="text-align: right;"><strong>−0.85 (improved)</strong></td>
+</tr>
+<tr>
+<td>rehab new york</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: right;">164</td>
+<td style="text-align: right;">+2</td>
+<td style="text-align: right;">11.77</td>
+<td style="text-align: right;">11.82</td>
+<td style="text-align: right;">+0.05</td>
+</tr>
+<tr>
+<td><strong>inpatient rehab</strong></td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;"><strong>75</strong></td>
+<td style="text-align: right;"><strong>−10</strong></td>
+<td style="text-align: right;">6.72</td>
+<td style="text-align: right;">6.76</td>
+<td style="text-align: right;">+0.04</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>1,255 (93.4%)</strong></td>
+<td style="text-align: right;"><strong>1,247 (92.8%)</strong></td>
+<td style="text-align: right;"><strong>−8</strong></td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p><em>Chart spec:</em> horizontal stacked bar — one row per query, Jan cells vs Apr cells (color: green = 100%, amber = 51–96%, red = ≤45%).</p>
+<p><strong>Reading:</strong> the pin is dominant within its ~3.25-mile catchment. Modest improvement on broad terms (<code>alcohol rehab</code>, <code>drug rehab</code>) indicates the pin's authority is increasing on non-geo-modified intent. One weakening signal: <code>inpatient rehab</code>.</p>
+<h4 id="13b-cross-borough-5-coord-matrix">1.3b Cross-borough (5-coord matrix)</h4>
+<table>
+<thead>
+<tr>
+<th>Anchor coord</th>
+<th>Cells where UR appears (of 8 priority queries)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red Hook pin (40.6754, −74.0148)</td>
+<td><strong>8 / 8</strong></td>
+</tr>
+<tr>
+<td>Downtown Brooklyn (40.6929, −73.9904)</td>
+<td>0 / 8</td>
+</tr>
+<tr>
+<td>Williamsburg (40.7142, −73.9526)</td>
+<td>0 / 8</td>
+</tr>
+<tr>
+<td>Crown Heights (40.6709, −73.9434)</td>
+<td>0 / 8</td>
+</tr>
+<tr>
+<td>Coney Island (40.5755, −73.9707)</td>
+<td>0 / 8 <em>(out of UR's primary catchment)</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> the pin doesn't radiate cross-borough beyond ~3.25 mi. This is the diffusion gap that drives Lever A.4 (GBP velocity) and Lever C.4 (cross-borough location-page builds at Downtown Brooklyn + Sunset Park + Crown Heights).</p>
+<h3 id="14-competitor-churn-total-top-10-cells-across-all-tracked-queries-per-gbp-standalone">1.4 Competitor churn — total Δ top-10 cells across all tracked queries <em>(per-GBP standalone)</em></h3>
+<p>Pooled top-10 (rank ≤ 10) cell appearances across 8 priority queries × 13×13 LD grid (1,344-cell universe per scan), Jan 27 → Apr 22, 2026. Per-GBP standalone (matched by <code>place_id</code> — chain locations stay independent).</p>
+<h4 id="urban-recovery-us">Urban Recovery (us)</h4>
+<table>
+<thead>
+<tr>
+<th>GBP</th>
+<th style="text-align: right;">Jan 27</th>
+<th style="text-align: right;">Apr 22</th>
+<th style="text-align: right;">Δ top-10 cells</th>
+<th>Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Urban Recovery: Drug &amp; Alcohol Rehab | Detox &amp; Treatment Center In NY</strong> <em>(411 Van Brunt St, Red Hook)</em></td>
+<td style="text-align: right;">1,092</td>
+<td style="text-align: right;">1,113</td>
+<td style="text-align: right;"><strong>+21</strong></td>
+<td>3.9★ (105)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="top-gainers-excluding-ur">Top gainers (excluding UR)</h4>
+<table>
+<thead>
+<tr>
+<th>GBP</th>
+<th style="text-align: right;">Jan 27</th>
+<th style="text-align: right;">Apr 22</th>
+<th style="text-align: right;">Δ top-10 cells</th>
+<th>Rating</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Elevate Point – Alcohol &amp; Drug Rehab NYC</strong></td>
+<td style="text-align: right;">478</td>
+<td style="text-align: right;">566</td>
+<td style="text-align: right;"><strong>+88</strong></td>
+<td>5.0★ (14)</td>
+<td>Direct addiction competitor, NYC-wide</td>
+</tr>
+<tr>
+<td>Teen Challenge Inc.</td>
+<td style="text-align: right;">305</td>
+<td style="text-align: right;">358</td>
+<td style="text-align: right;">+53</td>
+<td>4.0★ (33)</td>
+<td>Direct addiction</td>
+</tr>
+<tr>
+<td><strong>Detox &amp; Drug/Alcohol Rehab Center In Brooklyn, NY</strong></td>
+<td style="text-align: right;">1,165</td>
+<td style="text-align: right;">1,217</td>
+<td style="text-align: right;"><strong>+52</strong></td>
+<td>3.7★ (66)</td>
+<td>Stealth direct competitor — gaining rank on every single query; add to monthly LD watchlist</td>
+</tr>
+<tr>
+<td><strong>Downtown Brooklyn Nursing and Rehabilitation</strong></td>
+<td style="text-align: right;">81</td>
+<td style="text-align: right;">126</td>
+<td style="text-align: right;">+45</td>
+<td>4.3★ (303)</td>
+<td>SNF entrant (category-ambiguity on <code>rehab new york</code>)</td>
+</tr>
+<tr>
+<td><strong>Brooklyn Center for Rehabilitation and Nursing</strong></td>
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">194</td>
+<td style="text-align: right;">+39</td>
+<td>4.0★ (268)</td>
+<td>SNF entrant — 0→102 cells specifically on <code>inpatient rehab</code></td>
+</tr>
+<tr>
+<td>Spring Hill Wellness NY – Outpatient</td>
+<td style="text-align: right;">528</td>
+<td style="text-align: right;">565</td>
+<td style="text-align: right;">+37</td>
+<td>4.8★ (20)</td>
+<td>Outpatient — different intent</td>
+</tr>
+<tr>
+<td>Anchor House Inc.</td>
+<td style="text-align: right;">806</td>
+<td style="text-align: right;">842</td>
+<td style="text-align: right;">+36</td>
+<td>3.3★ (13)</td>
+<td>Direct addiction</td>
+</tr>
+<tr>
+<td>Mountainside Treatment Center – NYC</td>
+<td style="text-align: right;">78</td>
+<td style="text-align: right;">112</td>
+<td style="text-align: right;">+34</td>
+<td>4.7★ (61)</td>
+<td>NYC-wide direct addiction</td>
+</tr>
+<tr>
+<td>Surfpoint Recovery (Coney Island)</td>
+<td style="text-align: right;">917</td>
+<td style="text-align: right;">950</td>
+<td style="text-align: right;">+33</td>
+<td>4.8★ (94)</td>
+<td>Adjacent NYC addiction pin</td>
+</tr>
+<tr>
+<td>Hamilton Park Nursing and Rehabilitation Center</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">79</td>
+<td style="text-align: right;">+30</td>
+<td>4.3★ (63)</td>
+<td>SNF</td>
+</tr>
+<tr>
+<td>Spring Creek Rehabilitation and Nursing Care Center</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">+27</td>
+<td>4.4★ (449)</td>
+<td>SNF</td>
+</tr>
+<tr>
+<td>Richmond Hill Medically Assisted Treatment and Recovery</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">+27</td>
+<td>3.6★ (10)</td>
+<td>Direct addiction (MAT)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="top-losers">Top losers</h4>
+<table>
+<thead>
+<tr>
+<th>GBP</th>
+<th style="text-align: right;">Jan 27</th>
+<th style="text-align: right;">Apr 22</th>
+<th style="text-align: right;">Δ top-10 cells</th>
+<th>Rating</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Addiction Treatment Brooklyn</strong> <em>(vanished)</em></td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;"><strong>−138</strong></td>
+<td>5.0★ (1)</td>
+<td>Disappeared from grid entirely</td>
+</tr>
+<tr>
+<td>Upper East Side Rehabilitation and Nursing Center</td>
+<td style="text-align: right;">129</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;"><strong>−104</strong></td>
+<td>3.9★ (494)</td>
+<td>SNF collapse</td>
+</tr>
+<tr>
+<td>Samaritan Village <em>(vanished)</em></td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">−52</td>
+<td>2.7★ (10)</td>
+<td>Disappeared</td>
+</tr>
+<tr>
+<td>Wellbridge Drug &amp; Alcohol Rehab NYC Outreach</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">−39</td>
+<td>4.9★ (44)</td>
+<td>Direct addiction — losing ground</td>
+</tr>
+<tr>
+<td>LSA Recovery – Crown Heights</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">146</td>
+<td style="text-align: right;">−38</td>
+<td>4.0★ (4)</td>
+<td>Direct addiction</td>
+</tr>
+<tr>
+<td>Dynamite Youth Center</td>
+<td style="text-align: right;">280</td>
+<td style="text-align: right;">243</td>
+<td style="text-align: right;">−37</td>
+<td>4.5★ (40)</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>St Jude Treatment Center</td>
+<td style="text-align: right;">77</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">−32</td>
+<td>3.1★ (12)</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>Our Place (Our Place NY)</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">−30</td>
+<td>4.4★ (42)</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>LSA Recovery – Midwood</td>
+<td style="text-align: right;">384</td>
+<td style="text-align: right;">354</td>
+<td style="text-align: right;">−30</td>
+<td>4.3★ (13)</td>
+<td>Direct</td>
+</tr>
+<tr>
+<td>Brooklyn Gardens Nursing and Rehabilitation Center</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">−25</td>
+<td>3.9★ (184)</td>
+<td>SNF</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading:</strong> Urban Recovery held the grid (+21 top-10 cells pooled) while the market churned hard. Two competitors vanished entirely (Addiction Treatment Brooklyn −138, Samaritan Village −52). One large SNF (Upper East Side, 494 reviews) collapsed −104. Direct addiction-treatment gainers (Elevate Point +88, Teen Challenge +53, Detox &amp; Drug/Alcohol Rehab Center +52, Anchor House +36, Surfpoint +33) compound the field's density. SNF entrants (Downtown Brooklyn Nursing +45, Brooklyn Center for Rehab/Nursing +39, Hamilton Park +30, Spring Creek +27) crowd into the <code>inpatient rehab</code> / <code>rehab new york</code> categories where UR is also fighting category-ambiguity. <strong>We did not move.</strong></p>
+<p>Full table: <code>exports/ld_delta_2026q1q2/urban_recovery_competitor_churn_top10_pooled.csv</code> (167 GBPs).</p>
+<h4 id="nyc-wide-dominator">NYC-wide dominator</h4>
+<p><strong>Ascendant Detox NYC</strong> ranks at avg 1.82–1.85 on <code>drug rehab new york</code> — effectively unbeatable for NYC-wide intent. UR's NYC-DMA strategy should focus on Brooklyn-modifier queries; don't chase <code>drug rehab new york</code> Top 3.</p>
+<h4 id="direct-addiction-treatment-competitors-consistent-across-all-4-brooklyn-queries">Direct addiction-treatment competitors (consistent across all 4 Brooklyn queries)</h4>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th>Avg rank (Brooklyn queries)</th>
+<th>Posture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Genesis Detox of Brooklyn</td>
+<td>5.1–9.3</td>
+<td>Consistent, holding</td>
+</tr>
+<tr>
+<td>Anchor House Inc.</td>
+<td>5.8–8.4</td>
+<td>Consistent (+36 cells in churn rollup)</td>
+</tr>
+<tr>
+<td>Realization Center</td>
+<td>6.7–8.8</td>
+<td>Consistent</td>
+</tr>
+<tr>
+<td>Under Angel's Wings Recovery</td>
+<td>5.5–8.8</td>
+<td>Consistent</td>
+</tr>
+<tr>
+<td>Teen Challenge Inc.</td>
+<td>9.7–12.0</td>
+<td>Consistent (+53 in churn rollup)</td>
+</tr>
+<tr>
+<td>Elevate Point – Alcohol &amp; Drug Rehab NYC</td>
+<td>6.6–13.2</td>
+<td>Improving (+88 in churn rollup)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="15-gbp-audit-ur-vs-brooklyn-radius-addiction-treatment-pins">1.5 GBP audit — UR vs Brooklyn-radius addiction-treatment pins</h3>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th style="text-align: right;">Reviews</th>
+<th style="text-align: right;">Rating</th>
+<th style="text-align: right;">1★ share</th>
+<th style="text-align: right;">Photos</th>
+<th style="text-align: right;">Posts in scrape window</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Urban Recovery</strong></td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;"><strong>3.8★</strong></td>
+<td style="text-align: right;"><strong>23%</strong> (26/111)</td>
+<td style="text-align: right;"><strong>7</strong></td>
+<td style="text-align: right;"><strong>1</strong></td>
+</tr>
+<tr>
+<td>Surfpoint Recovery (Coney Island)</td>
+<td style="text-align: right;">120</td>
+<td style="text-align: right;">4.8★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Ascendant Detox NYC</td>
+<td style="text-align: right;">282</td>
+<td style="text-align: right;">4.8★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Mountainside Treatment NYC</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>ACI peer</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">3.8★</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p>UR's photo count (7) is the most dramatic outlier — 13× behind Ascendant, 4× behind Mountainside, even behind the smaller ACI peer (12). Photo blitz (GBP-04 M2) targets 30+.</p>
+<h3 id="16-off-page-state">1.6 Off-page state</h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total backlinks</td>
+<td>1,642</td>
+</tr>
+<tr>
+<td>Referring domains (live profile)</td>
+<td>958</td>
+</tr>
+<tr>
+<td>Unique RDs in scrape</td>
+<td>642</td>
+</tr>
+<tr>
+<td>Domain-level spam score</td>
+<td><strong>42</strong></td>
+</tr>
+<tr>
+<td>RDs at spam-rating ≥30</td>
+<td><strong>395 / 642 (61%)</strong></td>
+</tr>
+<tr>
+<td>RDs matching <code>anomaly-seo-*</code> / <code>seo-anomaly-*</code> PBN cluster</td>
+<td><strong>216 / 642</strong> (top reaches spam-rating 94)</td>
+</tr>
+<tr>
+<td>RDs on PBN-pattern TLDs (.online / .website / .site / .space / .xyz)</td>
+<td>323 / 642</td>
+</tr>
+<tr>
+<td>Sample toxic domains</td>
+<td><code>seo-anomaly-s10.xyz</code> (spam 94), <code>seo-anomaly-s8.xyz</code> (78), <code>anomaly-seo-southwick.online</code> (65), <code>anomaly-seo-eastvale.space</code> (65)</td>
+</tr>
+<tr>
+<td>YMYL trust citations confirmed live</td>
+<td>0 of 6 critical-tier (SAMHSA + CARF/Joint Commission + LegitScript + Psych Today + NAATP) — only Joint Commission referenced via GBP description</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disavow stance:</strong> the data warrants action. Per-row decisions filed in <code>Urban_Recovery_Disavow_Plan.xlsx</code> (Decisions tab); disavow.txt uploaded to GSC in M1; re-pull at M3. Aaron-style new link velocity paused pending Off-page Risk Assessment outcome. Trust-citation tier is the legitimate replacement work for Julce in M1–M3.</p>
+<h3 id="17-site-architecture-state">1.7 Site architecture state</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sitemap URLs</td>
+<td>792</td>
+</tr>
+<tr>
+<td><code>/blog/*</code> URLs</td>
+<td>674 (85%)</td>
+</tr>
+<tr>
+<td><code>/locations/*</code> URLs</td>
+<td>96</td>
+</tr>
+<tr>
+<td><code>/services/*</code> URLs</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Pages with JSON-LD (live probe)</td>
+<td>Homepage only (1 of 96 location + 0 of 5 service = 1 of 101 sampled)</td>
+</tr>
+<tr>
+<td>Homepage JSON-LD <code>telephone</code></td>
+<td><strong>(646) 960-6656</strong> — does NOT match GBP canonical <strong>(646) 347-1892</strong>. NAP mismatch in the only schema block on site.</td>
+</tr>
+<tr>
+<td><code>/locations/*</code> doorway pages confirmed</td>
+<td>5 NJ + 12 non-NYC-borough + ~73 verbose-slug Brooklyn (<code>leading-rehab-center-in-*</code>, <code>premier-recovery-center-in-*</code>, <code>effective-rehab-center-in-*</code>)</td>
+</tr>
+<tr>
+<td><code>/locations/new-jersey</code> title</td>
+<td><strong>"Inpatient Addiction Treatment Center In New Jersey, NY"</strong> — wrong-state error</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-url-content-audit">2. URL &amp; Content Audit</h2>
+<h3 id="21-decision-matrix-what-each-bucket-is-and-why">2.1 Decision matrix — what each bucket is, and why</h3>
+<table>
+<thead>
+<tr>
+<th>Bucket</th>
+<th style="text-align: right;">Count</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Homepage</strong></td>
+<td style="text-align: right;">1</td>
+<td>HP-01 NAP fix (M1)</td>
+</tr>
+<tr>
+<td><strong>/admission-overview, /contact, /faq, /reviews, /areas-served, /our-programs-overview, /about-us + 3 /services/* (not getting SP-01/02)</strong></td>
+<td style="text-align: right;">12</td>
+<td>ON-02 page refresh (M2) — visible-on-page edits: H1 + hero + body + intake CTA (NOT meta-only)</td>
+</tr>
+<tr>
+<td><strong>/services/alcohol-detoxification-service</strong></td>
+<td style="text-align: right;">1</td>
+<td>SP-01 (M2) — universal-template upgrade with schema</td>
+</tr>
+<tr>
+<td><strong>/services/opioid-detoxification-services</strong></td>
+<td style="text-align: right;">1</td>
+<td>SP-02 (M3) — universal-template upgrade with MAT positioning + schema</td>
+</tr>
+<tr>
+<td><strong>/services/short-term-residential-program</strong></td>
+<td style="text-align: right;">1</td>
+<td>ON-02 page refresh (M2) explicit "Inpatient" framing; SP-03 full upgrade deferred Q3</td>
+</tr>
+<tr>
+<td><strong>/locations/* — LP-02 UPGRADES (8 URLs across M1/M2/M3)</strong></td>
+<td style="text-align: right;">8</td>
+<td>M1: red-hook-ny (1,679w / 2,038 imp) + carroll-gardens-red-hook (814w / 479 imp) + gowanus (1,224w / 291 imp). M2: park-slope-ny (805w / 453 imp) + boerum-hill-ny (1,686w / 606 imp — adjacency) + recovery-center-in-sunset-park-ny (1,722w / 3,152 imp — cross-borough). M3 conditional: leading-rehab-center-in-downtown-brooklyn-ny (1,244w / 56 imp) + rehab-center-in-crown-heights-ny (1,557w / 717 imp). All EXISTING URLs — content audit + schema deploy. No new builds needed.</td>
+</tr>
+<tr>
+<td><strong>/locations/* — LP-01 REMOVE (data-driven, 0-click cohort)</strong></td>
+<td style="text-align: right;">TBD — populate from GSC at M1 W1</td>
+<td>301 to canonical or 410 per URL. No geographic sweep.</td>
+</tr>
+<tr>
+<td><strong>/locations/* — LP-01 REFRESH (bleeding cohort)</strong></td>
+<td style="text-align: right;">TBD — populate from GSC</td>
+<td>3/month per HQDM Page-Refresh-SOP</td>
+</tr>
+<tr>
+<td><strong>/locations/* — LEAVE ALONE (traffic + content)</strong></td>
+<td style="text-align: right;">balance</td>
+<td>No action — pages with content + traffic stay live</td>
+</tr>
+<tr>
+<td><strong>/blog/* on-topic high-traffic</strong></td>
+<td style="text-align: right;">~30 candidate refreshes</td>
+<td>CON-05 + CON-06 + CON-07: 3 / month bleeding refresh on detox/rehab/MAT topics</td>
+</tr>
+<tr>
+<td><strong>/blog/* off-topic high-impression</strong></td>
+<td style="text-align: right;">~30 top by impressions</td>
+<td>Deprioritized for refresh hours; <strong>kept live</strong> — these are HQDM content-team production and drive impression volume even if not clinical-intent</td>
+</tr>
+<tr>
+<td><strong>/blog/* low-traffic / low-quality</strong></td>
+<td style="text-align: right;">~614 remaining</td>
+<td>Q3+ audit — review cannibalization + topical clusters; refresh on-topic candidates per HQDM Blog-Refresh SOP</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-sitewide-schema-deployment-plan-m1m3">2.2 Sitewide schema deployment plan (M1–M3)</h3>
+<table>
+<thead>
+<tr>
+<th>Schema type</th>
+<th>Pages</th>
+<th>Month</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LocalBusiness (NAP fix)</td>
+<td>Homepage</td>
+<td>M1 (HP-01)</td>
+</tr>
+<tr>
+<td>LocalBusiness + BreadcrumbList</td>
+<td>8 UPGRADED <code>/locations/*</code> pages</td>
+<td>M1 (LP-02_M1, 3 URLs) + M2 (LP-02_M2, 3 URLs) + M3 (LP-02_M3, 2 URLs conditional)</td>
+</tr>
+<tr>
+<td>Service + LocalBusiness + FAQPage</td>
+<td><code>/services/alcohol-detoxification-service</code></td>
+<td>M2 (SP-01)</td>
+</tr>
+<tr>
+<td>Service + LocalBusiness + FAQPage</td>
+<td><code>/services/opioid-detoxification-services</code></td>
+<td>M3 (SP-02)</td>
+</tr>
+<tr>
+<td>BlogPosting</td>
+<td>Top 30 on-topic blog posts</td>
+<td>M3 (ON-07 audit)</td>
+</tr>
+<tr>
+<td>FAQPage</td>
+<td><code>/faq</code> + service-page FAQ sections</td>
+<td>M3 (ON-07 audit)</td>
+</tr>
+<tr>
+<td>BreadcrumbList sitewide</td>
+<td>Audit + gap close</td>
+<td>M3 (ON-07 audit)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-page-refresh-workflow-on-02">2.3 Page-refresh workflow (ON-02)</h3>
+<p><strong>ON-02 (M2):</strong> visible-on-page content refresh on 12 conversion-intent URLs — H1 rewrite + hero copy + body content + intake CTA placement + internal-link audit. Working detail per URL in <code>Urban_Recovery_Page_Refresh_Pages.xlsx</code>. Specifically: <code>/services/short-term-residential-program</code> gets explicit "Inpatient Drug &amp; Alcohol Rehab Brooklyn" framing throughout the page (counters the SNF category drift on <code>inpatient rehab</code> keyword); <code>/admission-overview</code> leads with insurance accepted (Medicaid + Aetna + Cigna + BCBS) + 24/7 intake; <code>/about-us</code> opens with women-owned + LGBTQ+-affirming positioning + Red Hook neighborhood context.</p>
+<p>Acceptance: per-URL screenshot evidence pre/post, GSC URL Inspection re-crawl, 30-day CTR delta captured in REP-02.</p>
+<hr />
+<h2 id="3-demand-keyword-universe">3. Demand &amp; Keyword Universe</h2>
+<h3 id="31-gsc-surface-top-brand-vs-non-brand">3.1 GSC surface — top brand vs non-brand</h3>
+<table>
+<thead>
+<tr>
+<th>Cluster</th>
+<th>Top query</th>
+<th style="text-align: right;">Imp 365d</th>
+<th style="text-align: right;">Clicks 365d</th>
+<th style="text-align: right;">Pos</th>
+<th style="text-align: right;">CTR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Brand</td>
+<td>urban recovery</td>
+<td style="text-align: right;">8,500</td>
+<td style="text-align: right;">1,357</td>
+<td style="text-align: right;">2.26</td>
+<td style="text-align: right;">15.96%</td>
+</tr>
+<tr>
+<td>Brand-loc</td>
+<td>urban recovery brooklyn</td>
+<td style="text-align: right;">1,250</td>
+<td style="text-align: right;">290</td>
+<td style="text-align: right;">1.83</td>
+<td style="text-align: right;">23.2%</td>
+</tr>
+<tr>
+<td>Local-intent unanchored</td>
+<td>recovery center brooklyn</td>
+<td style="text-align: right;">13,771</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3.55</td>
+<td style="text-align: right;">0.0%</td>
+</tr>
+<tr>
+<td>Local-intent unanchored</td>
+<td>drug rehab new york city</td>
+<td style="text-align: right;">7,100</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.20</td>
+<td style="text-align: right;">0.014%</td>
+</tr>
+<tr>
+<td>Service generic</td>
+<td>drug rehab brooklyn</td>
+<td style="text-align: right;">(from LD)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">2.04 (Maps)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Service generic</td>
+<td>alcohol rehab brooklyn</td>
+<td style="text-align: right;">(from LD)</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">2.16 (Maps)</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>Off-topic blog</td>
+<td>claustrophobia</td>
+<td style="text-align: right;">1.25M</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0.004%</td>
+</tr>
+<tr>
+<td>Off-topic blog</td>
+<td>porn addiction</td>
+<td style="text-align: right;">847K</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">&lt;0.5%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-localized-cluster-table-current-state-addressable-demand">3.2 Localized cluster table — current state, addressable demand</h3>
+<table>
+<thead>
+<tr>
+<th>Cluster</th>
+<th>Brooklyn-modifier query</th>
+<th style="text-align: right;">UR Maps rank (Apr)</th>
+<th style="text-align: right;">Addressable Q2 monthly searches (est.)</th>
+<th>M3 target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alcohol detox</td>
+<td>alcohol rehab brooklyn</td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">590</td>
+<td>Hold ≤2.5 + lift CTR via SP-01</td>
+</tr>
+<tr>
+<td>Drug detox</td>
+<td>drug rehab brooklyn</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">720</td>
+<td>Hold ≤2.5</td>
+</tr>
+<tr>
+<td>Opioid + MAT</td>
+<td>opioid rehab brooklyn</td>
+<td style="text-align: right;">(M3 reset post-SP-02)</td>
+<td style="text-align: right;">320</td>
+<td>Capture via SP-02</td>
+</tr>
+<tr>
+<td>Inpatient</td>
+<td>inpatient rehab brooklyn</td>
+<td style="text-align: right;">6.76</td>
+<td style="text-align: right;">880</td>
+<td>Sharpen via ON-02 title + GBP-01 Posts</td>
+</tr>
+<tr>
+<td>Inpatient (category-ambiguity)</td>
+<td>inpatient rehab brooklyn</td>
+<td style="text-align: right;">6.76</td>
+<td style="text-align: right;">880</td>
+<td>Sharpen via ON-02 page refresh on /services/short-term-residential-program (explicit "Inpatient" framing) + GBP Posts</td>
+</tr>
+<tr>
+<td>Generic local</td>
+<td>recovery center brooklyn</td>
+<td style="text-align: right;">(organic 3.55)</td>
+<td style="text-align: right;">13,771 imp</td>
+<td>CTR 0% → ≥3% via SP-01 + ON-02 page refresh</td>
+</tr>
+<tr>
+<td>Medicaid-bound</td>
+<td>medicaid detox brooklyn</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">210</td>
+<td>Capture via CON-03 Q-format article</td>
+</tr>
+<tr>
+<td>LGBTQ+</td>
+<td>lgbtq rehab brooklyn</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">90</td>
+<td>Capture via CON-03 (UR differentiator)</td>
+</tr>
+<tr>
+<td>Women-owned</td>
+<td>women-owned rehab brooklyn</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">70</td>
+<td>Capture via CON-03 (UR differentiator)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-conversion-intent-page-refresh-targets-on-02-leverage">3.3 Conversion-intent page-refresh targets (ON-02 leverage)</h3>
+<p>Pages ranking pos 1–4 with near-zero CTR are the highest-leverage ON-02 page-refresh targets. Full per-URL detail in <code>Urban_Recovery_Page_Refresh_Pages.xlsx</code>.</p>
+<table>
+<thead>
+<tr>
+<th>URL</th>
+<th>Top query</th>
+<th style="text-align: right;">Imp 180d</th>
+<th style="text-align: right;">Clicks 180d</th>
+<th style="text-align: right;">Pos</th>
+<th style="text-align: right;">CTR</th>
+<th>ON-02 action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/services/drug-detoxification-services</td>
+<td>drug rehab brooklyn</td>
+<td style="text-align: right;">2,100</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">0.29%</td>
+<td>H1 + hero + Areas We Serve + intake CTA refresh</td>
+</tr>
+<tr>
+<td>/services/short-term-residential-program</td>
+<td>inpatient rehab brooklyn</td>
+<td style="text-align: right;">1,600</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6.76</td>
+<td style="text-align: right;">0.13%</td>
+<td>H1 + body to explicit "Inpatient Drug &amp; Alcohol Rehab Brooklyn"; counters SNF drift</td>
+</tr>
+<tr>
+<td>/services/alcohol-detoxification-service</td>
+<td>alcohol rehab brooklyn</td>
+<td style="text-align: right;">1,234</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2.16</td>
+<td style="text-align: right;">0.41%</td>
+<td>Full SP-01 upgrade in M2 (supersedes page refresh)</td>
+</tr>
+<tr>
+<td>/services/opioid-detoxification-services</td>
+<td>opioid rehab brooklyn</td>
+<td style="text-align: right;">980</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">0.61%</td>
+<td>Full SP-02 upgrade in M3 (supersedes page refresh)</td>
+</tr>
+<tr>
+<td>/admission-overview</td>
+<td>admissions urban recovery</td>
+<td style="text-align: right;">12,000</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">4.5</td>
+<td style="text-align: right;">2.1%</td>
+<td>Lead with insurance + 24/7 intake + walk-in availability</td>
+</tr>
+<tr>
+<td>/about-us</td>
+<td>urban recovery brooklyn</td>
+<td style="text-align: right;">8,000</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">1.83</td>
+<td style="text-align: right;">11%</td>
+<td>Open with women-owned + LGBTQ+ + Red Hook context + clinical-lead bio (pending owner consent)</td>
+</tr>
+<tr>
+<td>/ (homepage)</td>
+<td>(generic local)</td>
+<td style="text-align: right;">850K</td>
+<td style="text-align: right;">14.4K</td>
+<td style="text-align: right;">2.26</td>
+<td style="text-align: right;">1.7%</td>
+<td>Brand-protected; no rewrite — Posts + GBP velocity drive the brand surface</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-competitor-landscape">4. Competitor Landscape</h2>
+<p>Detailed competitor profile is in Section 1.4 above. Strategy implication summarized here:</p>
+<ol>
+<li><strong>Brooklyn Center for Rehabilitation and Nursing</strong> is the rising category-ambiguity competitor on <code>inpatient rehab</code> (0→102 cells in the LD grid). Counter via ON-02 page refresh on /services/short-term-residential-program (explicit "Inpatient Drug &amp; Alcohol Rehab" framing) + GBP Posts using "Inpatient" phrasing.</li>
+<li><strong>Detox &amp; Drug/Alcohol Rehab Center In Brooklyn, NY</strong> is the rising direct competitor — improving rank on every single query (currently 2.92–7.28). Add to monthly LD watchlist (REP-01).</li>
+<li><strong>Ascendant Detox NYC</strong> owns NYC-wide intent (avg rank 1.82 on <code>drug rehab new york</code>). UR's NYC-DMA strategy focuses on Brooklyn-modifier queries; don't chase NYC-wide Top 3.</li>
+<li><strong>NYC-side SNF entrants</strong> (Brooklyn Center for Rehab + Downtown Brooklyn Nursing + West Village Rehab + various PT/SNF facilities) are competing for <code>rehab new york</code> + <code>inpatient rehab</code> slots. UR's response = sharpen on-page content with explicit addiction-treatment framing.</li>
+</ol>
+<hr />
+<h2 id="5-q2-strategy-posture">5. Q2 Strategy Posture</h2>
+<h3 id="51-the-four-levers-mirrored-in-condensed-strategy">5.1 The four levers (mirrored in Condensed strategy)</h3>
+<h4 id="lever-a-defend-diffuse-the-red-hook-pin-maps">Lever A — Defend &amp; diffuse the Red Hook pin (Maps)</h4>
+<p>Three GBP channels with no client approval. Run them at full velocity. (Q&amp;A is excluded — Google is migrating that surface to AI-generated answers that aren't visible to listing owners.)</p>
+<ol>
+<li><strong>A.1 Posts (GBP-01/05/06)</strong> — ≥1/week cadence M1–M3. Topics: service pages + Medicaid + LGBTQ+/women-owned differentiator + Red Hook neighborhood. One Post per month explicitly uses "Inpatient" phrasing.</li>
+<li><strong>A.2 Photos blitz (GBP-04 M2)</strong> — 7 → 30+. Exterior + interior + staff (signed releases) + Red Hook neighborhood + women-owned/LGBTQ+ environmental cues. Geotagged.</li>
+<li><strong>A.3 Review-velocity push (GBP-03)</strong> — +20 reviews/month M1–M3 → 111 → 170+ by M3 close. Reduces 1-star % via positive-volume dilution. Per HQDM Review-Velocity-SOP.</li>
+<li><strong>A.4 Owner replies to &lt;4★ reviews (GBP-07 M3)</strong> — empathetic + outcome statement, HIPAA-compliant. 1-star share &lt;18% by M3 close.</li>
+</ol>
+<h4 id="lever-b-off-page">Lever B — Off-page</h4>
+<ol>
+<li><strong>B.1 Disavow (OFF-Disavow_M1, OFF-Disavow_M3)</strong> — data-warranted: 395 of 642 RDs at spam-rating ≥30, 216 in <code>anomaly-seo-*</code> cluster (top reaches spam-94), 323 on PBN-pattern TLDs. Per-row decisions in <code>Urban_Recovery_Disavow_Plan.xlsx</code>; disavow.txt uploaded M1; re-pull M3.</li>
+<li><strong>B.2 YMYL trust citations (OFF-Citations_M1/M2/M3)</strong> — SAMHSA + CARF (or Joint Commission substitute) + LegitScript + Psychology Today + NAATP + insurance directories + recovery-vertical tier (best-rehabs / alcoholism.org / sobasearch / helpguide.org).</li>
+<li><strong>B.3 PR (OFF-PR_M2)</strong> — LGBTQ+/women-owned angle to behavioralhealthnews.org + 1 NYC trade outlet.</li>
+<li><strong>B.4 6-strategy stack — one task per action per month, each with its own working sheet:</strong></li>
+<li><strong>B.4.a DAS</strong> (OFF-DAS_M1/M2/M3) — target gap coords (Downtown Brooklyn + Sunset Park + Crown Heights), then SP-01 + LP-02 URLs once live</li>
+<li><strong>B.4.b GBP Blast</strong> (OFF-GBPBlast_M1/M2) — gap coords + M2 LP-02 build coords</li>
+<li><strong>B.4.c GBP Sniper</strong> (OFF-GBPSniper_M3) — tight defensive radius at Red Hook pin</li>
+<li><strong>B.4.d RD100</strong> (OFF-RD100_M2/M3) — consolidate prior month's DAS top 100</li>
+<li><strong>B.4.e AI Articles</strong> (OFF-AIArticles_M1/M2/M3) — 25/month with NAP overlay; M1 gap-area framing; M2 SP-01-supporting; M3 SP-02-supporting</li>
+<li><strong>B.4.f Driving Directions</strong> (OFF-DD_M1/M2/M3) — gap coord → UR pin pacing</li>
+<li><strong>B.4.g NAP Overlay</strong> (OFF-NAPOverlay_M2/M3) — image deposits on new SP-01/02 + LP-02 URLs</li>
+<li><strong>B.4.h GMB Pin Support</strong> (OFF-GMBPin_M1) — secondary pin creation at Downtown Brooklyn + Sunset Park gap coords</li>
+<li><strong>B.5 No new Aaron-style link velocity</strong> — paused pending Off-page Risk Assessment outcome.</li>
+</ol>
+<h4 id="lever-c-on-page-service-page-upgrades-page-refresh-location-page-cleanup-builds">Lever C — On-page (service-page upgrades + page refresh + location-page cleanup + builds)</h4>
+<ol>
+<li><strong>C.1 Service-page upgrades</strong> — SP-01 alcohol-detox (M2), SP-02 opioid-detox + MAT (M3). Universal template (1,400–1,600 words + Service/LocalBusiness/FAQPage schema + intake form + Areas We Serve + women-owned/LGBTQ+ differentiator).</li>
+<li><strong>C.2 Homepage NAP fix (HP-01, M1)</strong> — one-line schema edit (646-960-6656 → 646-347-1892).</li>
+<li><strong>C.3 Page refresh (ON-02, M2)</strong> — visible-on-page content edits on 12 conversion-intent URLs: H1 + hero + body + intake CTA placement + internal links. <code>/services/short-term-residential-program</code> gets explicit "Inpatient Drug &amp; Alcohol Rehab Brooklyn" framing to counter the SNF category drift on <code>inpatient rehab</code>.</li>
+<li><strong>C.4 Location-page cleanup (LP-01, data-driven)</strong> — M1 W1 pull GSC pages_last_365d on all 96 <code>/locations/*</code> URLs; refresh on-topic bleeding cohort (3/M) + remove 0-click cohort (301 or 410). No geographic sweep-redirects.</li>
+<li><strong>C.5 Location-page UPGRADES + schema (LP-02, merged)</strong> — populated working sheet shows all 8 LP-02 URLs are EXISTING content-bearing pages. M1: 3 in-radius anchors (red-hook-ny / carroll-gardens-red-hook / gowanus). M2: 3 adjacency + cross-borough (park-slope-ny / boerum-hill-ny / recovery-center-in-sunset-park-ny — strongest cross-borough URL at 1,722w / 3,152 imp). M3 conditional: 2 cross-borough (leading-rehab-center-in-downtown-brooklyn-ny / rehab-center-in-crown-heights-ny).</li>
+<li><strong>C.6 On-topic blog refresh cadence (CON-05/06/07)</strong> — 3 bleeding on-topic posts per month (detox / withdrawal / MAT / dual-diagnosis). Refresh action: title + intro + internal links + Request Indexing. Off-topic high-impression posts stay live, deprioritized for refresh hours.</li>
+<li><strong>C.7 Q-format LLM-targeted articles (CON-03 M3)</strong> — 3 articles: Medicaid Brooklyn + LGBTQ Red Hook + women-owned Brooklyn.</li>
+</ol>
+<h4 id="lever-d-reporting-correlation-marija-aleksandar">Lever D — Reporting + correlation (Marija + Aleksandar)</h4>
+<ol>
+<li><strong>D.1 REP-01 M1</strong> — LD scan setup (8 priority terms × 3 coords).</li>
+<li><strong>D.2 REP-02 M2</strong> — indexation tracker (LP-01 removed URLs + LP-02 BUILD URLs + SP-01) + ON-02 page-refresh 30-day delta.</li>
+<li><strong>D.3 REP-03 M3</strong> — Q2 close-out report → Milica MoM Summary "% Full Correlation".</li>
+</ol>
+<h3 id="52-sequencing-logic">5.2 Sequencing logic</h3>
+<ul>
+<li>HP-01 + LP-01_M1 data-pull first in W1 (data is the gate)</li>
+<li>GBP-01 + GBP-03 in parallel from W1</li>
+<li>LP-02_M1 anchor upgrades drafted in W2-W3; live by W4</li>
+<li>OFF-Disavow_M1 + OFF-Citations_M1 + OFF-AIArticles_M1 + OFF-DAS_M1 + OFF-GBPBlast_M1 + OFF-DD_M1 + OFF-GMBPin_M1 in parallel (Julce-owned)</li>
+<li>CON-05 blog refresh batch 1 ships by W4 alongside LP-02_M1</li>
+<li>LP-02 schema + SP-01 upgrade in M2 once M1 baseline holds</li>
+<li>SP-02 + CON-03 + CON-07 + REP-03 in M3 to close the quarter</li>
+</ul>
+<h3 id="53-cross-borough-diffusion-strategy">5.3 Cross-borough diffusion strategy</h3>
+<p>The pin doesn't radiate beyond 3.25 mi. M1–M3 cross-borough diffusion = three streams:</p>
+<ol>
+<li><strong>GBP velocity</strong> — Lever A makes the pin radiate further via engagement-density signals</li>
+<li><strong>Location-page builds</strong> — CON-01 + CON-02 + (M3 conditional) build content at neighborhoods adjacent to and beyond the immediate Red Hook radius (Sunset Park + Downtown Brooklyn first)</li>
+<li><strong>Off-page micro-area targeting</strong> — OFF-07/08/09 6-strategy stack (DAS + GBP Blast + RD100 + Driving Directions + NAP overlays + AI articles + GMB pin support) explicitly targets Downtown Brooklyn + Crown Heights + Sunset Park</li>
+</ol>
+<h3 id="54-explicit-deferrals-q3">5.4 Explicit deferrals (Q3+)</h3>
+<ul>
+<li>Manhattan / Queens / Bronx / Staten Island location-page upgrades — UR is a single-pin Brooklyn inpatient; out-of-borough doorways are removal candidates, not build candidates</li>
+<li>DataForSEO Search Volume 100-keyword pull — Phase 2 budget</li>
+<li>GBP Manager direct audit — HQDM strategy-only posture; GBP audit via DataForSEO</li>
+<li>LLM/AI Overview strategy beyond M3 Q-format batch — Phase 2</li>
+<li><code>/services/short-term-residential-program</code> + <code>/services/benzodiazepines-detox-services</code> + <code>/services/drug-detoxification-services</code> full rebuilds — Q3 after SP-01 + SP-02 template proves</li>
+<li>Aaron-style SEO Neo / link velocity — paused pending Off-page Risk Assessment</li>
+</ul>
+<hr />
+<h2 id="6-owner-side-asks-bundled-separately-in-owner_conversation_itemsmd">6. Owner-side asks (bundled separately in Owner_Conversation_Items.md)</h2>
+<p>See <a href="Urban_Recovery_Owner_Conversation_Items.md">Urban_Recovery_Owner_Conversation_Items.md</a> for the 6-ask bundle:</p>
+<ol>
+<li>Publish-permission for 6 BUILD + 2 service upgrades (24h preview model)</li>
+<li>Insurance in-network confirmation (Aetna + Cigna + BCBS + Medicaid)</li>
+<li>CARF accreditation verification</li>
+<li>Clinical-lead Psychology Today consent + bio + headshot</li>
+</ol>
+<hr />
+<h2 id="7-m3-close-out-scorecard">7. M3 close-out scorecard</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Baseline (2026-05-14)</th>
+<th>M3 target</th>
+<th>Lever</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Maps appearance — cross-borough (8 queries × 5 coords)</td>
+<td>8 / 40</td>
+<td>≥ 14 / 40</td>
+<td>A.1–A.4 + C.4</td>
+</tr>
+<tr>
+<td>Maps appearance — Red Hook 13×13 (8 queries)</td>
+<td>1,247 / 1,344 (92.8%)</td>
+<td>≥ 92% sustained; <code>inpatient rehab</code> 75 → 100+</td>
+<td>A.4 + ON-02</td>
+</tr>
+<tr>
+<td>GBP reviews</td>
+<td>111 (3.8★)</td>
+<td>≥ 170 (≥ 4.1★)</td>
+<td>A.1</td>
+</tr>
+<tr>
+<td>GBP 1-star share</td>
+<td>23%</td>
+<td>&lt; 18%</td>
+<td>A.1 + GBP-07</td>
+</tr>
+<tr>
+<td>GBP photos</td>
+<td>7</td>
+<td>≥ 30</td>
+<td>A.2</td>
+</tr>
+<tr>
+<td>GBP Posts cadence</td>
+<td>1 in window</td>
+<td>4/month sustained</td>
+<td>A.4</td>
+</tr>
+<tr>
+<td>Disavow file in GSC</td>
+<td>None</td>
+<td>Uploaded, maintained</td>
+<td>B.1</td>
+</tr>
+<tr>
+<td>YMYL trust citations live</td>
+<td>0 confirmed</td>
+<td>≥ 8 live</td>
+<td>B.2</td>
+</tr>
+<tr>
+<td>Top conversion URLs with page refresh deployed (ON-02)</td>
+<td>0 / 12</td>
+<td>12 / 12; 30-day CTR delta captured</td>
+<td>ON-02</td>
+</tr>
+<tr>
+<td>Homepage NAP schema consistent w/ GBP</td>
+<td>No</td>
+<td>Yes</td>
+<td>C.3</td>
+</tr>
+<tr>
+<td>Location-page deliverable health</td>
+<td>96 live, 0 schema</td>
+<td>LP-01 working sheet populated from GSC; refresh + 0-click cohorts shipped per sheet; LP-02 = 8 upgrades live with schema (3 M1 + 3 M2 + 2 M3 conditional)</td>
+<td>LP-01 + LP-02</td>
+</tr>
+<tr>
+<td>On-topic blog refresh cadence (CON-05/06/07)</td>
+<td>0 posts refreshed</td>
+<td>9 on-topic bleeding posts refreshed (3 / month)</td>
+<td>C.6</td>
+</tr>
+<tr>
+<td><code>recovery center brooklyn</code> CTR</td>
+<td>0%</td>
+<td>≥ 3% (≥ 400 clicks / 90d)</td>
+<td>SP-01 + ON-02 compound</td>
+</tr>
+<tr>
+<td>GBP-tagged homepage clicks (<code>/?utm_source=gmb</code>)</td>
+<td>3,275 / 365d</td>
+<td>Maintain ≥ 3,500 / 365d</td>
+<td>A.x compound</td>
+</tr>
+<tr>
+<td>Marija MoM % Full Correlation</td>
+<td>—</td>
+<td>Full row coverage by M3 close-out</td>
+<td>D.3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-how-this-connects-to-the-hqdm-system">8. How this connects to the HQDM system</h2>
+<ul>
+<li><strong>Source data</strong> — DataForSEO LD scans + DataForSEO Backlinks + GSC + live HTTP probes filed at <code>clients/urbanrecovery/exports/</code></li>
+<li><strong>Reporting</strong> — feeds Marija's MoM Summary "% Reports With Full Correlation" via REP-01 → REP-03</li>
+<li><strong>Off-page</strong> — disavow is data-warranted per the backlink scrape (not playbook-default); per-action 6-strategy stack runs against per-action working sheets</li>
+<li><strong>GBP defense</strong> — 3-channel cadence (Posts + Photos + Reviews); Q&amp;A excluded due to Google AI-answer migration</li>
+<li><strong>On-page</strong> — page-refresh (ON-02) targets visible-on-page content; meta-description deploys are no longer in scope</li>
+<li><strong>YMYL trust</strong> — Tier-1 directory list (SAMHSA + CARF/Joint Commission + LegitScript + Psychology Today + NAATP + insurance + recovery vertical)</li>
+<li><strong>Phase 1 rollout</strong> — UR is part of the strategy-first quarterly cycle; next = Arms Acres + Elev8 to close Phase 1</li>
+</ul>
+<hr />
+<h2 id="appendix-source-artifacts">Appendix — Source artifacts</h2>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LD 13×13 delta (16 raw CSVs + 3 derived + methodology)</td>
+<td><code>exports/ld_delta_2026q1q2/</code></td>
+</tr>
+<tr>
+<td>DataForSEO Maps cross-borough</td>
+<td><code>exports/dataforseo/maps_serp/</code></td>
+</tr>
+<tr>
+<td>DataForSEO GBP info (UR + competitors)</td>
+<td><code>exports/dataforseo/gmb/</code></td>
+</tr>
+<tr>
+<td>DataForSEO Backlinks</td>
+<td><code>exports/dataforseo/backlinks/</code></td>
+</tr>
+<tr>
+<td>GSC pulls (365d + 180d)</td>
+<td><code>exports/gsc/</code></td>
+</tr>
+<tr>
+<td>Sitemap + live HTML probe</td>
+<td><code>exports/onsite/</code></td>
+</tr>
+<tr>
+<td>Client config</td>
+<td><code>client.json</code></td>
+</tr>
+</tbody>
+</table></body></html>

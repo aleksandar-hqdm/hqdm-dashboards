@@ -1,0 +1,37 @@
+category,entry_label,zip,mi_from_pin,nearest_ld_anchor,anchor_cells_in_grid,client_coverage_pct_at_anchor,client_avg_rank_at_anchor,zip_redundancy_count,decision,decision_reason
+CURRENT_SA,"Olcott, NY",14126,3.5,Olcott,1,100.0,1.0,1,KEEP (unique ZIP / catchment),hyper-local (3.5mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Olcott)
+CURRENT_SA,"Newfane, NY",14108,0.0,Newfane (pin),4,100.0,1.0,1,KEEP (pin-proximate core),hyper-local (0.0mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Newfane (pin))
+CURRENT_SA,"Burt, NY",14028,2.4,Burt,1,100.0,1.0,1,KEEP (pin-proximate core),hyper-local (2.4mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Burt)
+CURRENT_SA,"Barker, NY",14012,8.5,Barker,31,100.0,1.2,1,KEEP (unique ZIP / catchment),client already at 100% cov / rank 1.2 at nearest anchor (Barker)
+CURRENT_SA,"Wilson, NY",14172,5.8,Wilson,3,100.0,1.0,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14172 has 3 entries) | hyper-local (5.8mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Wilson)
+CURRENT_SA,"Appleton, NY",14008,3.5,Appleton,4,100.0,1.0,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14008 has 3 entries) | hyper-local (3.5mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Appleton)
+CURRENT_SA,"Hartland, NY",14067,9.0,Lockport,13,100.0,1.4,1,KEEP (unique ZIP / catchment),client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CURRENT_SA,"Ridgewood, NY",14094,7.2,Lockport,13,100.0,1.4,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (7.2mi from pin) | client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CURRENT_SA,"North Ridge, NY",14094,6.5,Cambria,4,100.0,1.2,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (6.5mi from pin) | client already at 100% cov / rank 1.2 at nearest anchor (Cambria)
+CURRENT_SA,"Ransomville, NY",14131,10.0,Ransomville,4,100.0,1.2,1,KEEP (unique ZIP / catchment),client already at 100% cov / rank 1.1 at nearest anchor (Ransomville)
+CURRENT_SA,"South Wilson, NY",14172,5.5,Wilson,3,100.0,1.0,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14172 has 3 entries) | hyper-local (5.5mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Wilson)
+CURRENT_SA,"Highland Park, NY",14094,6.8,Lockport,13,100.0,1.4,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (6.8mi from pin) | client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CURRENT_SA,"Hopkins Beach, NY",14172,6.7,Wilson,3,100.0,1.0,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14172 has 3 entries) | hyper-local (6.7mi from pin) | client already at 100% cov / rank 1.0 at nearest anchor (Wilson)
+CURRENT_SA,"Johnson Creek, NY",14105,11.3,Barker,31,100.0,1.2,1,KEEP (unique ZIP / catchment),client already at 100% cov / rank 1.2 at nearest anchor (Barker)
+CURRENT_SA,"West Somerset, NY",14008,7.4,Barker,31,100.0,1.2,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14008 has 3 entries) | hyper-local (7.4mi from pin) | client already at 100% cov / rank 1.2 at nearest anchor (Barker)
+CURRENT_SA,"Cambria Center, NY",14094,9.0,Cambria,4,100.0,1.2,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | client already at 100% cov / rank 1.2 at nearest anchor (Cambria)
+CURRENT_SA,"North Hartland, NY",14008,8.9,Barker,31,100.0,1.2,3,DROP-EXCEPT-ONE (consolidate to one ZIP entry),ZIP-redundancy (ZIP 14008 has 3 entries) | client already at 100% cov / rank 1.2 at nearest anchor (Barker)
+CURRENT_SA,"Hickory Corners, NY",14094,7.9,Lockport,13,100.0,1.4,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (7.9mi from pin) | client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CURRENT_SA,"Warrens Corners, NY",14094,7.3,Lockport,13,100.0,1.4,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (7.3mi from pin) | client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CURRENT_SA,"Wrights Corners, NY",14094,6.9,Lockport,13,100.0,1.4,7,DROP (ZIP-redundant micro-neighborhood),ZIP-redundancy (ZIP 14094 has 7 entries) | hyper-local (6.9mi from pin) | client already at 100% cov / rank 1.4 at nearest anchor (Lockport)
+CANDIDATE,"Lockport, NY",14094,8.2,Lockport,13,100.0,1.4,-,ADD (winnable + already top-3 — solidify entity),8.2mi from pin | 13 cells in grid at this anchor | client coverage 100% | rank 1.4
+CANDIDATE,"Cambria, NY",14094,9.0,Cambria,4,100.0,1.2,-,ADD (winnable + already top-3 — solidify entity),9.0mi from pin | 4 cells in grid at this anchor | client coverage 100% | rank 1.2
+CANDIDATE,"Sanborn, NY",14132,13.5,Sanborn,2,100.0,3.5,-,ADD (holding + winnable rank),13.5mi from pin | 2 cells in grid at this anchor | client coverage 100% | rank 3.5
+CANDIDATE,"Lewiston, NY",14092,18.0,Lewiston,2,100.0,4.2,-,ADD (holding + winnable rank),18.0mi from pin | 2 cells in grid at this anchor | client coverage 100% | rank 4.2
+CANDIDATE,"Youngstown, NY",14174,17.2,Youngstown,2,100.0,1.3,-,ADD (winnable + already top-3 — solidify entity),17.2mi from pin | 2 cells in grid at this anchor | client coverage 100% | rank 1.3
+CANDIDATE,"Niagara Falls, NY",14304,21.0,Niagara Falls,1,100.0,10.6,-,SKIP (weak coverage / high rank — SA alone won't fix),21.0mi from pin | 1 cells in grid at this anchor | client coverage 100% | rank 10.6
+CANDIDATE,"Wheatfield, NY",14304,16.3,Wheatfield,3,100.0,6.0,-,ADD (holding + winnable rank),16.3mi from pin | 3 cells in grid at this anchor | client coverage 100% | rank 6.0
+CANDIDATE,"North Tonawanda, NY",14120,18.9,North Tonawanda,2,90.0,9.7,-,CONSIDER (mid-coverage break-out zone),18.9mi from pin | 2 cells in grid at this anchor | client coverage 90% | rank 9.7
+CANDIDATE,"Tonawanda, NY",14150,22.0,Tonawanda,1,0.0,,-,SKIP (weak coverage / high rank — SA alone won't fix),22.0mi from pin | 1 cells in grid at this anchor | client coverage 0% | rank nan
+CANDIDATE,"Pendleton, NY",14094,13.5,Pendleton,6,100.0,2.1,-,ADD (winnable + already top-3 — solidify entity),13.5mi from pin | 6 cells in grid at this anchor | client coverage 100% | rank 2.1
+CANDIDATE,"Williamsville, NY",14221,22.5,Williamsville,5,68.0,11.8,-,SKIP (weak coverage / high rank — SA alone won't fix),22.5mi from pin | 5 cells in grid at this anchor | client coverage 68% | rank 11.8
+CANDIDATE,"Amherst, NY",14228,21.9,Amherst,3,26.6,13.8,-,SKIP (weak coverage / high rank — SA alone won't fix),21.9mi from pin | 3 cells in grid at this anchor | client coverage 27% | rank 13.8
+CANDIDATE,"Clarence, NY",14031,22.0,Clarence,40,100.0,3.4,-,ADD (holding + winnable rank),22.0mi from pin | 40 cells in grid at this anchor | client coverage 100% | rank 3.4
+CANDIDATE,"Cheektowaga, NY",14225,26.7,Cheektowaga,2,0.0,,-,SKIP (weak coverage / high rank — SA alone won't fix),26.7mi from pin | 2 cells in grid at this anchor | client coverage 0% | rank nan
+CANDIDATE,"Kenmore, NY",14217,23.7,Kenmore,4,0.0,,-,SKIP (weak coverage / high rank — SA alone won't fix),23.7mi from pin | 4 cells in grid at this anchor | client coverage 0% | rank nan
+CANDIDATE,"Grand Island, NY",14072,21.7,Grand Island,4,65.0,12.5,-,SKIP (weak coverage / high rank — SA alone won't fix),21.7mi from pin | 4 cells in grid at this anchor | client coverage 65% | rank 12.5

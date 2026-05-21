@@ -1,0 +1,1109 @@
+{
+  "meta": {
+    "client": "Arms Acres",
+    "domain": "armsacres.com",
+    "tagline": "Carmel NY inpatient + 3 NYC-metro outpatient · Liberation Programs Inc.",
+    "tier": "Tier 1 / YMYL",
+    "founded": 1976,
+    "years_in_business": 50,
+    "prepared_date": "2026-05-14",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q2 2026",
+    "doc_subtitle": "Carmel Map Pack dominated · Queens top-3 pushable · Bronx data gap · service-page form missing · 3-of-4 GBPs pending access · insurance-article cluster 214K imp at <0.5% CTR."
+  },
+  "tldr": "Arms Acres' Inpatient Carmel pin is dominating Putnam County across 169 grid cells and scan-over-scan is <em>still improving</em>: drug rehab top-3 +10 cells (101→111), alcohol rehab near me +8 (115→123), detox center near me +2 (128→130). 100% top-20 coverage on the 3 high-intent queries. Carmel OP co-ranks at #2 alongside Inpatient at #1 across the Carmel-branded grid — but does NOT appear in top-20 on the generic queries Inpatient solo-dominates. Queens OP holds 100% top-20 / 93-95% top-10 / 12-25% top-3 across its 169-cell grid. Bronx OP has no grid baseline (data gap, M1 setup). The lift now comes from 5 structural moves: deploy the service-page intake form (24K sessions/365d → 0 conv because no form, +480-720 conv potential at 2-3% rate); close GBP profile-depth gap on 3 of 4 unmanaged pins (Queens 33-char vs Ascendant 750-char description); CTR-lift the 10-article insurance cluster ranking 11-20 (214K imp/180d at <0.5% CTR → projected ~14× at top-3 CTR); ship /alcohol-rehab-new-york + /detox-new-york NY-state pages; and deploy LocalBusiness + Service + FAQPage schema across Tier-1 surfaces (currently Organization on homepage only).",
+  "kpis": [
+    {
+      "label": "Inpatient Carmel grid coverage (3 high-intent kws)",
+      "value": "100% top-20",
+      "sentiment": "positive",
+      "detail": "169-cell grid, monthly cadence at 41.587, -73.908. drug rehab top-3 +10 cells Jan→Apr (101→111). alcohol rehab near me top-3 +8 (115→123). detox center near me top-3 +2 (128→130). Median rank 2-8. Dominating + improving on the revenue-engine pin."
+    },
+    {
+      "label": "Carmel OP rank on generic queries",
+      "value": "0 / 169 cells",
+      "sentiment": "negative",
+      "detail": "Carmel OP co-ranks at #2 across 169 cells on Carmel-branded queries (carmel recovery · carmel new york rehab · carmel methadone clinic) — but does NOT appear in top-20 on drug rehab / alcohol rehab near me / detox center near me / rehab. Access opportunity: push Carmel OP onto the same generic queries Inpatient already owns."
+    },
+    {
+      "label": "Service-page conversion mechanism",
+      "value": "24K sess → 0 conv",
+      "sentiment": "negative",
+      "detail": "24,000 sessions/365d on /service/* + /inpatient/* + /outpatient/* produce 0 form-conversions because there's no form on the page — only a Call Now button. At 2-3% form-completion rates, this is +480 to +720 annual conversions left on the table vs the entire portfolio's current 531/yr baseline."
+    },
+    {
+      "label": "GBP manager access (4 pins)",
+      "value": "1 / 4",
+      "sentiment": "negative",
+      "detail": "HQDM has manager access only to Inpatient Carmel (75 Seminary Hill Rd). Carmel OP (21 Old Rte 6) + Bronx OP (3584 Jerome Ave) + Queens OP (90-02 161st St) are AA-managed. Queens description = 33 chars vs Ascendant 750. 41 staged tasks blocked in Pending CSV."
+    },
+    {
+      "label": "Insurance-article CTR-lift cluster",
+      "value": "214K imp @ <0.5% CTR",
+      "sentiment": "positive",
+      "detail": "10 insurance / payor / cost articles ranking 11-20 with 214K combined impressions / 180d at <0.5% CTR. Top-3 average CTR ≈ 30%. Title + FAQ-schema rewrites on already-ranking pages = projected ~14× clicks at top-3 average CTR (~17K clicks vs ~1.2K today)."
+    },
+    {
+      "label": "Schema coverage (Tier-1 pages)",
+      "value": "0 / 17 pages",
+      "sentiment": "negative",
+      "detail": "Organization schema on homepage only. Zero JSON-LD on 3 outpatient location pages + /inpatient/adult-rehabilitation + /inpatient/detox-program + every /service/* (12 URLs incl 4 near-dupes). Closes rich-result eligibility + AI-Overview / LLM citation surface gap."
+    }
+  ],
+  "trend": {
+    "headline": "Stable Carmel-anchored organic with Apr-May 2026 inflection — homepage + insurance-article cluster gaining, blog informational cohort facing AIO pullback",
+    "annotation_text": "Source: GSC Search Analytics 365d daily window aggregated to month. Homepage at pos 17 with 1.7K clicks / 482K imp 365d. Insurance article cluster (10 articles) at pos 11-20 with 214K imp/180d — title + FAQ-schema CN-01 batch is the M1 CTR lever. May 2026 partial (first 14 days at trailing pace).",
+    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        1820,
+        2010,
+        2150,
+        2240,
+        2180,
+        2070,
+        1920,
+        2150,
+        2390,
+        2580,
+        2810,
+        2960,
+        1450
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        320,
+        355,
+        380,
+        395,
+        385,
+        365,
+        340,
+        380,
+        422,
+        455,
+        495,
+        522,
+        256
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 11,
+        "label": "Apr 2026 — homepage + insurance cluster gaining",
+        "type": "positive"
+      },
+      {
+        "month_index": 12,
+        "label": "May 2026 — partial (first 14d)",
+        "type": "neutral"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "org_sess": 1993,
+        "org_conv": 352,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 2163,
+        "org_conv": 387,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 2047,
+        "org_conv": 362,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 2593,
+        "org_conv": 452,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr-May to date)",
+        "org_sess": 4410,
+        "org_conv": 778,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  },
+  "per_keyword": [
+    {
+      "keyword": "carmel methadone clinic",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 1.2,
+      "may_avg": 1.2,
+      "pos_gained": 0.0,
+      "feb_top3": 169,
+      "may_top3": 169
+    },
+    {
+      "keyword": "carmel recovery",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 1.0,
+      "may_avg": 1.01,
+      "pos_gained": -0.01,
+      "feb_top3": 169,
+      "may_top3": 169
+    },
+    {
+      "keyword": "carmel new york rehab",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 1.0,
+      "may_avg": 1.0,
+      "pos_gained": 0.0,
+      "feb_top3": 169,
+      "may_top3": 169
+    },
+    {
+      "keyword": "detox center near me",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 2.62,
+      "may_avg": 2.53,
+      "pos_gained": 0.09,
+      "feb_top3": 128,
+      "may_top3": 130
+    },
+    {
+      "keyword": "alcohol detox near me",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 2.57,
+      "may_avg": 2.31,
+      "pos_gained": 0.26,
+      "feb_top3": 128,
+      "may_top3": 139
+    },
+    {
+      "keyword": "drug rehab",
+      "feb_cells": 169,
+      "may_cells": 169,
+      "feb_avg": 3.61,
+      "may_avg": 3.29,
+      "pos_gained": 0.32,
+      "feb_top3": 101,
+      "may_top3": 111
+    },
+    {
+      "keyword": "alcohol rehab near me",
+      "feb_cells": 169,
+      "may_cells": 168,
+      "feb_avg": 3.15,
+      "may_avg": 2.87,
+      "pos_gained": 0.28,
+      "feb_top3": 115,
+      "may_top3": 123
+    },
+    {
+      "keyword": "rehab (broadest)",
+      "feb_cells": 105,
+      "may_cells": 88,
+      "feb_avg": 14.5,
+      "may_avg": 14.8,
+      "pos_gained": -0.3,
+      "feb_top3": 24,
+      "may_top3": 21
+    }
+  ],
+  "ld_leaderboard": [
+    {
+      "name": "Arms Acres Inpatient Carmel",
+      "may_top3": 692,
+      "delta_top3": 17,
+      "may_avg_rank": 2.31,
+      "delta_avg_rank": 0.26,
+      "cells": 169,
+      "note": "Revenue-engine pin · 133 reviews / 3.2★ / 9 photos · improving on 3 of 4 high-intent kws (managed)",
+      "is_client": true
+    },
+    {
+      "name": "Arms Acres Carmel OP (co-rank)",
+      "may_top3": 169,
+      "delta_top3": 0,
+      "may_avg_rank": 2.01,
+      "delta_avg_rank": 0.0,
+      "cells": 169,
+      "note": "7 reviews / 3.3★ · co-ranks at #2 alongside Inpatient on Carmel-branded queries · 0 cells in top-20 on generic queries · ACCESS OPPORTUNITY",
+      "is_client": true
+    },
+    {
+      "name": "CoveCare Center (Carmel)",
+      "may_top3": 95,
+      "delta_top3": 8,
+      "may_avg_rank": 4.1,
+      "delta_avg_rank": 0.2,
+      "cells": 169,
+      "note": "48 reviews / 3.0★ / 46 photos · only direct addiction-treatment competitor in Carmel Map Pack · #2 outside Map Pack",
+      "is_client": false
+    },
+    {
+      "name": "Cornerstone of Medical Arts (Bronx)",
+      "may_top3": 285,
+      "delta_top3": -5,
+      "may_avg_rank": 4.5,
+      "delta_avg_rank": -0.1,
+      "cells": 169,
+      "note": "198-203 reviews / 4.1★ / 61 photos · #2 across Queens grid · biggest Queens-grid displacement target",
+      "is_client": false
+    },
+    {
+      "name": "Ascendant NY (Manhattan)",
+      "may_top3": 152,
+      "delta_top3": 22,
+      "may_avg_rank": 13.5,
+      "delta_avg_rank": 1.1,
+      "cells": 169,
+      "note": "272-284 reviews / 4.8★ / 90 photos / 750-char description · strongest organic competitor (17 SERP appearances, avg pos 15.9)",
+      "is_client": false
+    },
+    {
+      "name": "Samaritan Daytop Village",
+      "may_top3": 145,
+      "delta_top3": 12,
+      "may_avg_rank": 7.5,
+      "delta_avg_rank": 0.4,
+      "cells": 169,
+      "note": "Multi-site NY chain (Richmond Hill MAT + Van Wyck + Ed Thompson Veterans + outpatient Jamaica) · CARF / startyourrecovery / alcoholism.org links",
+      "is_client": false
+    },
+    {
+      "name": "Helio Health (Syracuse)",
+      "may_top3": 22,
+      "delta_top3": 3,
+      "may_avg_rank": 18.5,
+      "delta_avg_rank": 0.2,
+      "cells": 169,
+      "note": "Regional SUD chain · ranks organic on Carmel queries · CARF + startyourrecovery + behavioralhealthnews.org coverage",
+      "is_client": false
+    },
+    {
+      "name": "Mountainside Treatment (NYC)",
+      "may_top3": 35,
+      "delta_top3": 5,
+      "may_avg_rank": 16.2,
+      "delta_avg_rank": 0.3,
+      "cells": 169,
+      "note": "71 reviews / 4.7★ / 30 photos / 702-char description · GBP-depth competitor",
+      "is_client": false
+    },
+    {
+      "name": "Wellbridge Drug & Alcohol Rehab NYC",
+      "may_top3": 65,
+      "delta_top3": 8,
+      "may_avg_rank": 9.5,
+      "delta_avg_rank": 0.2,
+      "cells": 169,
+      "note": "38 reviews / 4.9★ · UES outreach office · spillover Queens grid presence",
+      "is_client": false
+    },
+    {
+      "name": "Bronx Recovery (Bronx Maps-only)",
+      "may_top3": 88,
+      "delta_top3": 6,
+      "may_avg_rank": 5.2,
+      "delta_avg_rank": 0.1,
+      "cells": 169,
+      "note": "9 reviews / 4.6★ · #1 Bronx Map Pack on 9 backlinks total · 0 organic top-30 · beat with citations + reviews not content",
+      "is_client": false
+    }
+  ],
+  "gsc_decline": [
+    {
+      "month": "2025-11",
+      "label": "Nov 2025",
+      "pages": 165,
+      "imp": 380000,
+      "clicks": 1920,
+      "delta_pct": 0
+    },
+    {
+      "month": "2025-12",
+      "label": "Dec 2025",
+      "pages": 168,
+      "imp": 420000,
+      "clicks": 2150,
+      "delta_pct": 10
+    },
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "pages": 172,
+      "imp": 455000,
+      "clicks": 2390,
+      "delta_pct": 19
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026",
+      "pages": 178,
+      "imp": 482000,
+      "clicks": 2580,
+      "delta_pct": 27
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026 peak",
+      "pages": 185,
+      "imp": 510000,
+      "clicks": 2810,
+      "delta_pct": 34
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026",
+      "pages": 188,
+      "imp": 545000,
+      "clicks": 2960,
+      "delta_pct": 41
+    },
+    {
+      "month": "2026-05*",
+      "label": "May partial",
+      "pages": 188,
+      "imp": 264000,
+      "clicks": 1450,
+      "delta_pct": -50
+    }
+  ],
+  "keyword_buckets": [
+    {
+      "bucket": "Tier A — Carmel grid owned (avg rank ≤3)",
+      "keywords": 5,
+      "pct": 6,
+      "posture": "Defend + light Posts cadence · don't touch with off-page tactics"
+    },
+    {
+      "bucket": "Tier B — Climbing / mid-funnel (pos 4-20)",
+      "keywords": 28,
+      "pct": 33,
+      "posture": "Push to top-3 — primary Q2 lever (insurance article 214K imp + Queens grid 12-25% top-3 → expand)"
+    },
+    {
+      "bucket": "Tier C — Deep gap (pos 21-100 / Bronx unmeasured)",
+      "keywords": 52,
+      "pct": 61,
+      "posture": "Build NY-state pages + audit-improve doorways + measure Bronx baseline"
+    }
+  ],
+  "top_urls": [
+    {
+      "url": "/",
+      "imp_90d": 182675,
+      "clicks_90d": 2013,
+      "pos": 17.15,
+      "class": "home",
+      "lever": "CP-02 Lever A · og:description fix M1"
+    },
+    {
+      "url": "/inpatient",
+      "imp_90d": 19000,
+      "clicks_90d": 240,
+      "pos": 5.6,
+      "class": "service",
+      "lever": "SP-03 Lever A · top-3 push at 77K/365d (M1 highest leverage)"
+    },
+    {
+      "url": "/blog/mix-alcohol-and-tylenol",
+      "imp_90d": 360398,
+      "clicks_90d": 591,
+      "pos": 4.87,
+      "class": "blog",
+      "lever": "informational cohort · top traffic but low conversion intent"
+    },
+    {
+      "url": "/blog/signs-of-body-detoxing",
+      "imp_90d": 272705,
+      "clicks_90d": 2391,
+      "pos": 5.61,
+      "class": "blog",
+      "lever": "informational — defend, no expansion"
+    },
+    {
+      "url": "/blog/insurance-cover-drug-and-alcohol-rehab",
+      "imp_90d": 8621,
+      "clicks_90d": 5,
+      "pos": 11.6,
+      "class": "insurance",
+      "lever": "CN-01_M1 Lever C · title + FAQ schema (8.6K imp / 0.05% CTR)"
+    },
+    {
+      "url": "/blog/how-to-get-insurance-to-pay-for-inpatient-rehab",
+      "imp_90d": 14134,
+      "clicks_90d": 74,
+      "pos": 14.5,
+      "class": "insurance",
+      "lever": "CN-01_M1 Lever C · conversion-intent · top priority"
+    },
+    {
+      "url": "/blog/aetna-cover-rehab-treatment",
+      "imp_90d": 11440,
+      "clicks_90d": 17,
+      "pos": 20.1,
+      "class": "insurance",
+      "lever": "CN-01_M1 Lever C · payor-specific"
+    },
+    {
+      "url": "/blog/how-much-does-drug-rehab-cost-without-insurance",
+      "imp_90d": 17040,
+      "clicks_90d": 41,
+      "pos": 16.5,
+      "class": "insurance",
+      "lever": "CN-01_M1 Lever C · cost objection-handling"
+    },
+    {
+      "url": "/outpatient/queens-outpatient",
+      "imp_90d": 2100,
+      "clicks_90d": 12,
+      "pos": 22.0,
+      "class": "outpatient",
+      "lever": "SP-04 Lever D · map widget shows Carmel addr (P0 fix)"
+    },
+    {
+      "url": "/outpatient/bronx-outpatient",
+      "imp_90d": 1450,
+      "clicks_90d": 6,
+      "pos": 24.5,
+      "class": "outpatient",
+      "lever": "SP-05 Lever D · NAP + neighborhoods + LD grid setup"
+    },
+    {
+      "url": "/suburb/dedicated-recovery-center-in-the-bronx-ny",
+      "imp_90d": 5295,
+      "clicks_90d": 1,
+      "pos": 2.6,
+      "class": "suburb",
+      "lever": "SA-01 Lever D · doorway audit-and-improve cohort"
+    },
+    {
+      "url": "/suburb/quality-recovery-center-in-queens-ny",
+      "imp_90d": 2884,
+      "clicks_90d": 1,
+      "pos": 2.7,
+      "class": "suburb",
+      "lever": "SA-01 Lever D · doorway audit-and-improve cohort"
+    }
+  ],
+  "positives": [
+    "Inpatient Carmel dominating AND improving — 169-cell grid, 100% top-20 on 3 high-intent queries, scan-over-scan top-3 deltas all positive (drug rehab +10, alcohol rehab near me +8, detox center near me +2)",
+    "Carmel-branded queries owned across 169 cells — both AA pins co-rank at #1 and #2 on carmel recovery / carmel new york rehab / carmel methadone clinic",
+    "Queens OP grid 100% top-20 + 93-95% top-10 — visibility is solved, the lever is converting more top-10 cells into top-3 (currently 12-25%)",
+    "Insurance article cluster ranking 11-20 with 214K imp/180d at <0.5% CTR — top-3 CTR target ≈ 30% projects ~14× click lift on already-ranking pages (title + FAQ-schema work only)",
+    "First-mover GBP Q&A opportunity — 0 owner-answered Q&As across the entire local SUD competitive set (Ascendant 13/0, Cornerstone 27/0). 40 owner-answered at ~3 hrs of work puts AA 5× ahead",
+    "17,209 backlinks / 426 ref domains — 2.5× any direct competitor. Link gap is quality not volume",
+    "armsacres.com homepage clicks growing month-over-month — 26→208 weekly clicks Jan→Apr (12% of GSC clicks come from /?utm_source=gmb GBP referral)",
+    "Liberation Programs Inc. 50-year operating history + statewide multi-pin footprint = baseline E-E-A-T strength competitors lack"
+  ],
+  "negatives": [
+    "Service-page form is MISSING — 24K sessions/365d on /service/* + /inpatient/* + /outpatient/* convert at 0% because Call Now button only (+480 to +720 annual conv potential lost)",
+    "GBP manager access on 3 of 4 pins (Carmel OP + Bronx OP + Queens OP) — Queens description = 33 chars vs Ascendant 750-char · 41 staged tasks blocked in Pending CSV",
+    "Bronx OP grid baseline does not exist — no LD coverage at 3584 Jerome Ave / Norwood. Any 'invisible in Bronx' claim before LG-INF-01 setup is unsupported",
+    "Wrong-brand homepage og:description LIVE: 'Bold Steps Behavioral Health is the best drug rehab in Harrisburg PA' — every social share renders this until CP-02 ships",
+    "Schema deployment is bare — Organization on homepage only. Zero JSON-LD on /service/* + /inpatient/* + /outpatient/*. AI-Overview / LLM citation surface gap",
+    "71 templated /suburb/* doorway pages + 4 city-modifier /service/* near-duplicates (39% body overlap) — internal cannibalization + thin-content trust-quality risk",
+    "GBP photo + description starvation on 3 unmanaged pins — Carmel OP 2/201 chars · Bronx OP 1/314 chars · Queens OP 2/33 chars (vs Ascendant 90/750)",
+    "Inpatient 36.8% one-star content density + Queens 62.5% one-star — both below the 4-star LLM-citation threshold (Gemini + ChatGPT filter at 4.0★). Intake-side review SOP is the structural fix",
+    "Missing CARF citation — 3 of 3 direct competitors have carf.org (highest-trust SUD signal + AI Overview citation source). CARF status verification gated on AA compliance"
+  ],
+  "levers": [
+    {
+      "id": "A",
+      "name": "Service-page conversion + Tier-1 page improvements",
+      "priority": "High · 60-90d",
+      "color": "blue",
+      "why": "24K sessions/365d on /service/* + /inpatient/* + /outpatient/* convert at 0% because there's no form — only a Call Now button. At 2-3% form-completion this is +480 to +720 annual conversions vs the entire portfolio's 531/yr baseline. /inpatient parent already captures 77K imp/365d at pos 5.6 — top-3 push delivers ~10× the click base. Homepage og:description renders wrong-brand boilerplate ('Bold Steps Behavioral Health... Harrisburg PA') on every social share.",
+      "actions": [
+        {
+          "code": "CP-01",
+          "name": "Service-page CTA + tracking audit → 4-input form-deploy recommendation memo (24K sess × 2-3% rate)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CP-02",
+          "name": "Rewrite homepage og:description + meta — replace 'Bold Steps Harrisburg PA' wrong-brand boilerplate",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "SP-03",
+          "name": "Improve /inpatient PARENT page — insurance-by-name + Medicaid prominent + FAQ schema (77K imp/365d at pos 5.6)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "SP-01",
+          "name": "Ship /alcohol-rehab-new-york NY-state-level page (880-vol cluster, 3-competitor consensus)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "SP-02",
+          "name": "Ship /detox-new-york NY-state-level page (260-vol cluster, 3-competitor consensus)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "SP-07",
+          "name": "Insurance-carrier anchored sections on /admissions (Aetna · Medicare · Medicaid · Tricare · Cigna · BCBS)",
+          "month": "M3",
+          "effort": "M"
+        }
+      ],
+      "outcome": "+480 to +720 annual conversions from service-page form. /inpatient parent reaches top-3 within 60-90d at 77K imp/365d. 2 net-new NY-state pages indexed and ranking. Homepage social-share preview no longer renders wrong-brand text."
+    },
+    {
+      "id": "B",
+      "name": "Insurance + payor article CTR-lift cluster",
+      "priority": "High · 90d",
+      "color": "indigo",
+      "why": "10 insurance / payor / cost articles ranking pos 11-20 with 214K combined imp/180d at <0.5% CTR. Top-3 average CTR ≈ 30% projects ~14× clicks (~17K vs ~1.2K today) on already-ranking pages. Title rewrites + FAQ schema first (M1 lowest-effort), contextual content + interlinks second (M2), measurement third (M3). Highest-leverage commercial-intent surface AA already has. Paired with CP-01 service-page form, the new traffic converts.",
+      "actions": [
+        {
+          "code": "CN-01_M1",
+          "name": "Insurance article batch — 5 articles title + meta + FAQ schema (insurance-cover-rehab · how-to-get-insurance-to-pay-for-inpatient-rehab · medicare · tricare · aetna)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CN-01_M2",
+          "name": "Insurance article batch — 2026 stats + payor FAQ block + 3-5 contextual internal links per article",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CN-01_M3",
+          "name": "Insurance article batch — M3 measurement + amplification or diagnosis flag",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "CN-02",
+          "name": "Already-ranking blog batch — 3 title-only (percocet-overview 40K imp at 0.10% CTR + ambien + xanax) + 2 content-update (alcohol-recovery-statistics + cost-without-insurance)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CN-03",
+          "name": "M3 supporting articles — 3 NEW tied to /alcohol-rehab-new-york + /detox-new-york + /inpatient/adult-rehabilitation",
+          "month": "M3",
+          "effort": "L"
+        }
+      ],
+      "outcome": "5 insurance articles reach top-5 average position within 90d. ~14× click lift on already-ranking pages. CN-01 batch validated, M3 measurement informs Q3 scaling. Tier-1 NY-state pages have supporting article cluster on M3 ship."
+    },
+    {
+      "id": "C",
+      "name": "GBP base optimization — Inpatient Carmel managed pin (defend + extend)",
+      "priority": "High · 60d",
+      "color": "green",
+      "why": "Inpatient Carmel is the only AA pin with manager access. It's also dominating + improving on the high-intent grid (3 of 4 queries scan-over-scan positive). Defend posture only — don't apply spam-pattern signals to a winning pin. Description refresh (536→750 chars) + categories (5→7) + attributes (2→6) + Q&A (25/0 owner-answered → 40+ with site-URL anchors) + Posts (10→34) + ExifTool on existing 9 photos = full-stack signal lift on the managed surface.",
+      "actions": [
+        {
+          "code": "LG-INPC-01",
+          "name": "GBP description refresh — 536→750 chars (insurance carriers + MAT + dual-dx + Hudson Valley)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INPC-02",
+          "name": "GBP services-list completion — 7+ items, each linked to /inpatient/* or /service/* page",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INPC-03",
+          "name": "GBP category expansion — 5→7 (add Detox center + Counselor)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INPC-04",
+          "name": "GBP attribute completion — 2→6 (accessibility + service_options + amenities + payments)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INPC-05",
+          "name": "GBP Posts cadence — 24 posts across M1-M3 with site-page links + ExifTool image injection",
+          "month": "M1-M3",
+          "effort": "M"
+        },
+        {
+          "code": "LG-INPC-06",
+          "name": "Owner-reply to all <4-star reviews (~49 negative on Inpatient at 36.8% one-star density)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LG-INPC-07",
+          "name": "GBP Q&A — answer 25 existing + seed 10-15 more (first-mover: zero competitor owner-answered)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INPC-08",
+          "name": "ExifTool keyword-injection + re-upload existing 9 photos (vs Ascendant 90 photos)",
+          "month": "M1",
+          "effort": "S"
+        }
+      ],
+      "outcome": "GBP signal completeness (description + services + categories + attributes + Q&A + Posts + photo metadata) reaches competitor parity within 60d on the managed pin. Inpatient Carmel grid coverage holds + extends into mid-funnel substance-specific queries (rehab pos 14.5 → top-10)."
+    },
+    {
+      "id": "D",
+      "name": "Site architecture cleanup + Bronx LD grid setup + measurement",
+      "priority": "High · 90d",
+      "color": "purple",
+      "why": "71 templated /suburb/* doorway pages + 4 city-modifier /service/* near-duplicates (39% body overlap) are an internal-cannibalization + thin-content trust-quality risk. Surfpoint AUDIT-back pattern (don't blanket-NOINDEX) preserves 348 clicks / 127K imp / 365d. Schema bare on Tier-1 surfaces. Bronx LD grid is the missing 4th grid — without measurement we can't size Bronx work or claim 'invisible in Bronx'. SP-04 Queens map-widget shows Carmel address (signals wrong city to Maps users).",
+      "actions": [
+        {
+          "code": "SP-04",
+          "name": "Audit + fix + expand /outpatient/queens-outpatient — map widget shows Carmel addr (P0 fix) + neighborhood enumeration + LocalBusiness schema",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SP-05",
+          "name": "Audit + fix + expand /outpatient/bronx-outpatient — same pattern (Fordham + Williamsbridge + Norwood + Tremont)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SP-06",
+          "name": "Service-page ↔ GBP services-list gap audit + Q3 page-build plan (IOP + dual-dx + family therapy candidates)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "SA-01_M1",
+          "name": "/suburb/* audit + per-URL bucketing (71 URLs · KEEP / AUDIT / NOINDEX)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "SA-01_M2",
+          "name": "/suburb/* improvement cohort — first 10 highest-traffic thin pages",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SA-01_M3",
+          "name": "/suburb/* improvement cohort — next 10 thin pages",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "SA-02",
+          "name": "De-duplicate 4 /service/<x>-in-carmel-hamlet-ny near-duplicate pairs (equine + fitness + MAT + psychiatric)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "OS-01",
+          "name": "Schema deployment — LocalBusiness + Service + FAQPage on Tier-1 pages (homepage Organization only today)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "LG-INF-01",
+          "name": "LD grid setup — Bronx OP (3584 Jerome Ave) 169-cell weekly, 4-week baseline by M2 close",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INF-02",
+          "name": "Maps SERP re-pull at Bronx + Queens coords — M3 passive measurement vs M1 baseline",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "LG-INF-03",
+          "name": "LD coverage analysis + per-pin per-cluster delta report (3-grid setup: Queens + Inpatient + Bronx)",
+          "month": "M3",
+          "effort": "M"
+        }
+      ],
+      "outcome": "Queens + Bronx OP location pages match table-stakes bar (NAP correct + neighborhoods + schema). 20 /suburb/* pages improved (preserve 348 click base). 4 service-page near-duplicates canonicalized. Schema rich-result eligibility on ≥80% of touched URLs. Bronx grid baseline established. Q2 framework decision input ready for Q3 planning."
+    },
+    {
+      "id": "E",
+      "name": "Off-page — citations + disavow + local PR (SEO NEO stack REMOVED)",
+      "priority": "Medium · 90d",
+      "color": "amber",
+      "why": "Per 2026-05-13 off-page program halt: SEO Neo / DAS / GBP Blast / GBP Sniper / RD100 / AI Articles / NAP-overlay / GMB-pin-creation stack REMOVED. Replaced with: (1) citation buildout per HQDM Citation SOP — 15 citations across foundational gov + vertical SUD directories + local NY (M1/M2/M3 batches of 5); (2) disavow file for 17K backlinks / 504 RDs / spam 19 (pure-spam-pattern only, AA-side GSC upload); (3) local PR + Hudson Valley editorial pitches (Hudson Valley Magazine + Press-Republican + Times Union); (4) carf.org + startyourrecovery.org + behavioralhealthnews.org placements gated on Owner Conversation verification (CARF + 501c3 + clinical roster); (5) Driving Directions program at Bronx + Queens remains Tier-0 separate decision per Owner Item 13.",
+      "actions": [
+        {
+          "code": "OFF-01_M1",
+          "name": "Citation buildout — foundational + gov (SAMHSA + OASAS + startyourrecovery + psychologytoday + AA-specific gap)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-01_M2",
+          "name": "Citation buildout — vertical SUD directories (alcoholism + best-rehabs + rehab.com + addictionresource + rehabspot)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-01_M3",
+          "name": "Citation buildout — local NY + recovery community (Putnam County + Carmel + Dutchess/Westchester + NYC HRA + NAMI Hudson Valley)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-02",
+          "name": "Pitch contributed article to behavioralhealthnews.org (Hudson Valley SUD trends 2026 byline, 4-6 week lead M2→M3)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-03",
+          "name": "Psychology Today profile audit + completion (4 facilities + clinician roster)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-04",
+          "name": "Linkable asset concept v1 — 3 concept briefs for Q3 commission",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-05",
+          "name": "Disavow review + spam-domain cleanup (17K BLs / 504 RDs / spam 19 → pure-spam-pattern .txt for AA-side upload)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-06",
+          "name": "Local PR + Hudson Valley press placement (HV Mag / Press-Republican / Poughkeepsie Journal / Times Union pitches)",
+          "month": "M2",
+          "effort": "M"
+        }
+      ],
+      "outcome": "15 net-new citation surfaces (gov + vertical + local). 1+ editorial placement (behavioralhealthnews + Hudson Valley PR). Disavow staged for AA-side upload. CARF + 501c3 citations live conditional on Owner Conversation verification. Q3 link-acquisition queue ready."
+    },
+    {
+      "id": "F",
+      "name": "Reporting + reviews-velocity + Q2 close-out",
+      "priority": "Medium · 90d",
+      "color": "teal",
+      "why": "Recovery accounts strategy framework requires planned → executed → impact correlation. Marija's MoM Summary '% Reports With Full Correlation' = the metric Phase 1 rollout is judged against. Reviews velocity = the only structural fix for Queens 2.2★ / 62.5% one-star + Inpatient 36.8% one-star (both below the 4★ LLM-citation threshold). Intake-side SOP gated on Owner Conversation Item 9.",
+      "actions": [
+        {
+          "code": "RP-01",
+          "name": "Q2 close-out report — planned → executed → impact (every task → action → outcome metric for Marija's Phase-1 evaluation)",
+          "month": "M3",
+          "effort": "L"
+        }
+      ],
+      "outcome": "Single client-facing close-out report shipped with every row populated (Result/Notes + Evidence). Phase 1 strategy-first model validated."
+    }
+  ],
+  "deliverables": [
+    {
+      "label": "Q2 2026 Custom Strategy (long-form)",
+      "path": "Arms_Acres_Q2_2026_Custom_Strategy.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Custom Strategy (HTML render)",
+      "path": "Arms_Acres_Q2_2026_Custom_Strategy.html",
+      "type": "html"
+    },
+    {
+      "label": "Q2 2026 Strategy Condensed (Strategic Diagnosis)",
+      "path": "Arms_Acres_Q2_2026_Strategy_Condensed.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Strategy Condensed (HTML render)",
+      "path": "Arms_Acres_Q2_2026_Strategy_Condensed.html",
+      "type": "html"
+    },
+    {
+      "label": "3-Month Execution Plan",
+      "path": "arms_acres_3month_plan.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Tasks (FINAL, SEO-NEO filtered)",
+      "path": "Arms_Acres_3Month_Tasks_FINAL.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Q2 2026 Tasks (full original, includes halted stack)",
+      "path": "Arms_Acres_3Month_Tasks.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Pending GBP-Access Tasks (queue activates on access)",
+      "path": "Arms_Acres_Pending_GBP_Access_Tasks.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Ownership Conversation Items",
+      "path": "Arms_Acres_Ownership_Conversation.md",
+      "type": "md"
+    },
+    {
+      "label": "M1 Priorities (pages + articles + links)",
+      "path": "arms_acres_m1_priorities.md",
+      "type": "md"
+    },
+    {
+      "label": "Competitor Analysis Brief",
+      "path": "arms_acres_competitor_brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Strategy Item 1 — Competitor Analysis",
+      "path": "strategy_item_1_competitor_analysis.md",
+      "type": "md"
+    },
+    {
+      "label": "Strategy Item 2 — GMB Audit",
+      "path": "strategy_item_2_gmb_audit.md",
+      "type": "md"
+    },
+    {
+      "label": "Strategy Item 3 — Supporting Knowledge Pages",
+      "path": "strategy_item_3_supporting_knowledge_pages.md",
+      "type": "md"
+    },
+    {
+      "label": "Strategy Item 4 — Authority Page AIO Rewrite",
+      "path": "strategy_item_4_authority_page_aio_rewrite.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — LG-INPC-01 GBP Description Rewrite",
+      "path": "briefs/LG-INPC-01_Description_Rewrite.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — LG-INPC-07 Q&A Audit",
+      "path": "briefs/LG-INPC-07_QA_Audit.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — SP-04 Queens OP Rebuild",
+      "path": "briefs/SP-04_Queens_OP_Rebuild.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — SP-05 Bronx OP Rebuild",
+      "path": "briefs/SP-05_Bronx_OP_Rebuild.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — SP-06 GBP↔Site Service Map",
+      "path": "briefs/SP-06_GBP_to_Site_Service_Map.md",
+      "type": "md"
+    },
+    {
+      "label": "Push brief — LG-INPC-01 (docx)",
+      "path": "briefs/LG-INPC-01_Description_Rewrite.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push brief — LG-INPC-07 (docx)",
+      "path": "briefs/LG-INPC-07_QA_Audit.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push brief — SP-04 (docx)",
+      "path": "briefs/SP-04_Queens_OP_Rebuild.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push brief — SP-05 (docx)",
+      "path": "briefs/SP-05_Bronx_OP_Rebuild.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push brief — SP-06 (docx)",
+      "path": "briefs/SP-06_GBP_to_Site_Service_Map.docx",
+      "type": "docx"
+    },
+    {
+      "label": "GBP Posts plan — 24 posts × 3 months",
+      "path": "Arms_Acres_GBP_Posts_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "GBP Services list — Inpatient (with site-URL map)",
+      "path": "Arms_Acres_GBP_Services_Inpatient.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "GBP Attributes — Inpatient target set",
+      "path": "Arms_Acres_GBP_Attributes_Inpatient.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Schema Plan — 3-month deployment matrix",
+      "path": "Arms_Acres_Schema_Plan_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Meta Refresh Pages — insurance article batch",
+      "path": "Arms_Acres_Meta_Refresh_Pages.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Blog Refresh — 3-month batch (CN-02)",
+      "path": "Arms_Acres_Blog_Refresh_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Suburb Pages 3-month cohort (xlsx)",
+      "path": "Arms_Acres_Suburb_Pages_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Suburb Pages 3-month cohort (csv)",
+      "path": "Arms_Acres_Suburb_Pages_3Month.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Off-Page Citations — 3-month batch (15 citations)",
+      "path": "Arms_Acres_OffPage_Citations_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Off-Page Stack 3-month (original, pre-halt reference)",
+      "path": "Arms_Acres_OffPage_Stack_3Month.xlsx",
+      "type": "xlsx"
+    }
+  ],
+  "owner_asks": [
+    "GBP manager access on Carmel OP + Bronx OP + Queens OP — add info@hqdm.io as Manager on the 3 unmanaged pins (Single biggest Q2 unlock — activates ~41 staged tasks in Pending CSV)",
+    "CARF accreditation status — confirm whether Arms Acres is currently CARF-accredited (3 of 3 direct competitors have carf.org citation; highest-trust SUD signal + AI Overview citation source). If yes → supply credentials for listing claim.",
+    "501(c)(3) status + EIN — confirm Liberation Programs Inc operates as 501(c)(3); unlocks charitynavigator.org (3 competitors have it)",
+    "LegitScript verification — confirm certified yes/no (gates any Q3+ paid acquisition; no immediate organic impact)",
+    "MICA / dual-diagnosis residential program confirmation — which facility serves Mentally Ill / Chemical Abusers (30/mo cluster, 2-competitor gap, gates /mica-program M3 page)",
+    "OTP / MAT license status per facility — which facilities can dispense methadone vs Suboxone-only (gates /medication-assisted-treatment or /opioid-treatment-program page, 40/mo cluster)",
+    "Residential mental health licensure confirmation (90/mo cluster, 2-competitor gap)",
+    "Clinical roster + named-clinician approval — clinical lead name + credentials + bio + photo (with release) gates behavioralhealthnews byline + E-E-A-T block + Counselor/Psychiatrist/Psychologist GBP categories",
+    "GBP photo intake commitment — 25 photos × 4 locations = 100 total OR photographer commission (~$2,500 for 3 NYC-metro + Carmel; stock/AI imagery NOT viable on a clinical SUD brand)",
+    "Intake-side review-request SOP — front-desk + discharge team commits to SMS + QR card + verbal ask (target +20 reviews on Inpatient + +10 on Queens by M1 close; Queens 2.2★ blocks LLM citation eligibility)",
+    "Insurance carrier list — authoritative current list per facility with logos AA is brand-approved to use (powers M2 article batch + /admissions M3 sub-sections; HQDM cannot promise carriers AA doesn't actually take)",
+    "Disavow file approval + GSC upload — AA-side approval to upload HQDM-prepared disavow.txt (M2 start; spam score 19 moderate, no acute risk but cleanup measurable in M3 Backlinks re-pull)",
+    "Schema deployment sign-off — Webflow access path + internal QC owner for M3 sitewide deployment (LocalBusiness + Service + FAQPage)",
+    "Driving Directions Tier-0 decision — AA + Milica + Aleksandar joint review for Q3 Bronx/Queens deployment (Orlando regression-window flag: peak rank 3.44 → 7.54 ~8 weeks post-completion. Defer to M3 — let M1/M2 conventional GBP work establish Maps baseline first)"
+  ],
+  "kpi_targets": [
+    {
+      "kpi": "Inpatient Carmel grid pooled top-3 (3 high-intent kws × 169 cells × 2 dates)",
+      "baseline": "+20",
+      "target": "Maintain ≥+25",
+      "stretch": ">+40"
+    },
+    {
+      "kpi": "Service-page form-conversions (24K sessions/365d × form rate)",
+      "baseline": "0/yr",
+      "target": "+200/yr",
+      "stretch": "+480-720/yr"
+    },
+    {
+      "kpi": "Insurance article cluster — average position (10 articles, 214K imp/180d)",
+      "baseline": "15.6",
+      "target": "≤10",
+      "stretch": "≤6"
+    },
+    {
+      "kpi": "Insurance article cluster — average CTR",
+      "baseline": "<0.5%",
+      "target": "≥3%",
+      "stretch": "≥8%"
+    },
+    {
+      "kpi": "GBP manager access (4 pins)",
+      "baseline": "1/4",
+      "target": "4/4 by M2",
+      "stretch": "4/4 by M1 close"
+    },
+    {
+      "kpi": "Schema coverage on Tier-1 pages (17 URLs)",
+      "baseline": "0",
+      "target": "≥14",
+      "stretch": "17 (100%)"
+    },
+    {
+      "kpi": "Bronx OP LD grid baseline",
+      "baseline": "—",
+      "target": "M2 4-week baseline",
+      "stretch": "M2 + M3 delta sheet"
+    },
+    {
+      "kpi": "Queens OP top-3 cells (alcohol rehab + drug rehab grid)",
+      "baseline": "~30",
+      "target": "≥60",
+      "stretch": "≥100"
+    },
+    {
+      "kpi": "Total GA4 annual conversions (organic + GBP)",
+      "baseline": "531",
+      "target": "≥800",
+      "stretch": "≥1,200"
+    },
+    {
+      "kpi": "Inpatient GBP review count",
+      "baseline": "133",
+      "target": "≥155",
+      "stretch": "≥175"
+    },
+    {
+      "kpi": "Citation surfaces live (gov + vertical + local)",
+      "baseline": "0",
+      "target": "≥12",
+      "stretch": "15 (full plan)"
+    }
+  ]
+}

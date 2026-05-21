@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Arms Acres Q2 2026 Strategy Condensed</title>
+
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 10.5pt;
+    line-height: 1.45;
+    color: #222;
+    max-width: 960px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+  h1 { font-size: 22pt; border-bottom: 2px solid #222; padding-bottom: 6px; margin-top: 28px; }
+  h2 { font-size: 16pt; border-bottom: 1px solid #888; padding-bottom: 4px; margin-top: 24px; page-break-after: avoid; }
+  h3 { font-size: 13pt; margin-top: 18px; page-break-after: avoid; }
+  h4 { font-size: 11.5pt; margin-top: 14px; page-break-after: avoid; }
+  h2 + p, h3 + p, h4 + p { page-break-before: avoid; }
+  p, ul, ol { margin: 6px 0 10px 0; }
+  ul, ol { padding-left: 22px; }
+  code {
+    font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;
+    font-size: 9.5pt;
+    background: #f4f4f4;
+    padding: 1px 5px;
+    border-radius: 3px;
+  }
+  pre {
+    background: #f6f8fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px 12px;
+    overflow-x: auto;
+    font-size: 9pt;
+    line-height: 1.4;
+    page-break-inside: avoid;
+  }
+  pre code { background: none; padding: 0; font-size: 9pt; }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 12px 0;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 5px 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f0f0f0; font-weight: 600; }
+  tr:nth-child(even) td { background: #fafafa; }
+  blockquote {
+    border-left: 4px solid #c44;
+    background: #fff8f6;
+    margin: 10px 0;
+    padding: 8px 14px;
+    color: #333;
+    page-break-inside: avoid;
+  }
+  blockquote p { margin: 4px 0; }
+  hr { border: none; border-top: 1px solid #ccc; margin: 20px 0; }
+  a { color: #0066cc; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { font-weight: 600; }
+  em { font-style: italic; }
+  h1:first-of-type { page-break-before: avoid; }
+  td:first-child { white-space: nowrap; }
+  td:nth-child(2) { font-weight: 500; }
+</style>
+
+</head>
+<body>
+<h1>Arms Acres — Q2 2026 Strategic Diagnosis</h1>
+<p><strong>Account tier:</strong> Tier 1 / YMYL · <strong>Prepared:</strong> 2026-05-14 · <strong>Author:</strong> Aleksandar Spasevski, HQDM Search Intelligence<br />
+<strong>Scope:</strong> Inpatient Carmel NY + 3 NYC-metro Outpatient clinics. Identify where the visibility surface is dominating, where it leaks, and where the next quarter of execution routes.<br />
+<strong>Data sources:</strong> Local Dominator grids (Queens OP + Inpatient Carmel), DataForSEO Maps SERP + Business Data, GSC pages + queries, on-site crawl, public-side GBP profile audit across 4 pins + 5 competitor pins.</p>
+<hr />
+<h2>TL;DR</h2>
+<p><strong>Inpatient Carmel is dominating Putnam County across 169 cells and 4 priority generic queries — and it's getting better.</strong> Jan 27 → Apr 22 scan-over-scan: top-3 coverage improving on <code>drug rehab</code> (101→111 cells), <code>alcohol rehab near me</code> (115→123), <code>detox center near me</code> (128→130). 100% top-20 coverage across all 169 cells on those 3 queries. Carmel OP additionally co-ranks alongside Inpatient at #1+#2 on the Carmel-branded queries (carmel recovery / carmel new york rehab / carmel methadone clinic) across 100% of cells — but Carmel OP does <strong>not</strong> appear in top-20 on the generic high-intent terms where Inpatient solo-dominates. <strong>The Carmel OP rank-pushing opportunity is real</strong>: access would unlock pushing it onto the same generic queries Inpatient already owns.</p>
+<p><strong>Queens is competitive with rank-pushing headroom</strong>, not invisible. The 169-cell Jamaica-Queens grid shows AA in 100% of cells in top-20, 93-95% in top-10, 12-25% in top-3, median rank 5 on alcohol rehab + drug rehab. The lever is converting more cells from top-10 into top-3, not building visibility from zero.</p>
+<p><strong>Bronx is a data gap.</strong> No LD grid exists at AA's actual Norwood pin coord. Any "Bronx visibility" claim before that grid lands is unsupported by measurement.</p>
+<p><strong>Four forces stacked, in order of explanatory weight:</strong></p>
+<ol>
+<li><strong>Service-page conversion mechanism is missing.</strong> 24,000 sessions / 365d on /service/<em> + /inpatient/</em> + /outpatient/* produce 0 form-conversions because there is no form on the page — only a Call Now button. At conservative 2-3% form-completion rates on high-intent SUD service pages, this is +480 to +720 annual conversions left on the table, comparable to or exceeding the entire portfolio's current 531/yr baseline.</li>
+<li><strong>GBP profile depth gap on 3 of 4 pins, all AA-managed.</strong> HQDM has manager access only to Inpatient Carmel. Carmel OP description = 201 chars, Queens OP = 33 chars (vs Ascendant 750). Categories, attributes, Q&amp;A, Posts, photos all well below competitive depth on the 3 unmanaged pins.</li>
+<li><strong>Schema deployment is bare.</strong> Organization on homepage only; nothing on /service/<em> or /inpatient/</em> or /outpatient/*. Closes the rich-result eligibility gap on the highest-intent pages.</li>
+<li><strong>71 templated /suburb/<em> doorway pages + 4 city-modifier /service/</em> near-duplicates.</strong> Doorway surface needs audit-and-improve treatment, not blanket-NOINDEX — 348 clicks / 127K imp / 365d is real signal to preserve while quality is fixed.</li>
+</ol>
+<hr />
+<h2>§1 Maps grid trend — per pin, per query</h2>
+<p>Three pins have grid coverage. Inpatient Carmel and Carmel OP are <strong>separate GMB listings tracked separately</strong> — they share the same geography but appear in different LD scans depending on the keyword tracked.</p>
+<h3>Inpatient Carmel (75 Seminary Hill Rd) — 169-cell grid, ~2-mi spacing, monthly cadence</h3>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Jan 27 cells appearing</th>
+<th style="text-align: right;">Jan 27 top-3</th>
+<th style="text-align: right;">Apr 22 cells appearing</th>
+<th style="text-align: right;">Apr 22 top-3</th>
+<th style="text-align: right;">Δ top-3 (Jan→Apr)</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>drug rehab</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">101</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">111</td>
+<td style="text-align: right;"><strong>+10</strong></td>
+<td>Improving</td>
+</tr>
+<tr>
+<td>alcohol rehab near me</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">115</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">123</td>
+<td style="text-align: right;"><strong>+8</strong></td>
+<td>Improving</td>
+</tr>
+<tr>
+<td>detox center near me</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;"><strong>+2</strong></td>
+<td>Steady, near-saturation</td>
+</tr>
+<tr>
+<td>rehab <em>(broadest)</em></td>
+<td style="text-align: right;">105</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;"><strong>−3</strong></td>
+<td>Slight decline; weakest query</td>
+</tr>
+</tbody>
+</table>
+<p>100% top-20 coverage on all 3 high-intent queries. Median rank 2-8. The <code>rehab</code> plain-vanilla query is the only slipping signal — broadest term, hardest to defend.</p>
+<h3>Carmel OP (21 Old Rte 6) — appears in branded-query scans only</h3>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Carmel OP appearance</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>carmel recovery (Jan 27 + Apr 22)</td>
+<td>169/169 cells at rank 2</td>
+<td>Co-ranks alongside Inpatient at #1+#2 in every cell</td>
+</tr>
+<tr>
+<td>carmel new york rehab (Apr 22)</td>
+<td>169/169 cells at rank 2</td>
+<td>Same co-rank pattern</td>
+</tr>
+<tr>
+<td>carmel methadone clinic (Jan 27)</td>
+<td>169/169 cells at rank 2</td>
+<td>Same co-rank pattern</td>
+</tr>
+<tr>
+<td>drug rehab / alcohol rehab near me / detox center near me / rehab</td>
+<td><strong>0/169 cells</strong></td>
+<td>Carmel OP <strong>does not appear in top-20</strong> on the generic high-intent queries Inpatient dominates solo. <strong>This is the access opportunity</strong> — Carmel OP has rank-pushing headroom on the queries Inpatient already owns.</td>
+</tr>
+</tbody>
+</table>
+<h3>Queens OP (90-02 161st St) — 169-cell grid, ~0.5-mi spacing, weekly cadence</h3>
+<table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th style="text-align: right;">Top-3 cells</th>
+<th style="text-align: right;">Top-10 cells</th>
+<th style="text-align: right;">Top-20 cells</th>
+<th style="text-align: right;">Median rank</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alcohol rehab</td>
+<td style="text-align: right;">42 (25%)</td>
+<td style="text-align: right;">158 (93%)</td>
+<td style="text-align: right;">169 (100%)</td>
+<td style="text-align: right;">5</td>
+<td>2026-02-16</td>
+</tr>
+<tr>
+<td>drug rehab</td>
+<td style="text-align: right;">20 (12%)</td>
+<td style="text-align: right;">160 (95%)</td>
+<td style="text-align: right;">169 (100%)</td>
+<td style="text-align: right;">5</td>
+<td>2026-02-16</td>
+</tr>
+</tbody>
+</table>
+<p>100% top-20 across the grid. Median rank 5. Headroom = converting more of the top-10 cohort into top-3.</p>
+<h3>Bronx OP (3584 Jerome Ave)</h3>
+<p><strong>No LD grid configured.</strong> Task <code>LG-INF-01</code> is the M1 setup. Any "AA invisible in Bronx" claim before this lands is unsupported by measurement.</p>
+<p><em>Chart spec:</em> per-pin grid-coverage matrix. Rows = keywords (grouped: generic high-intent / Carmel-branded / outer ring). Columns = pins (Inpatient / Carmel OP / Queens OP / Bronx OP). Cells colored by % top-3 coverage: dark green ≥60%, green 30-60%, amber 10-30%, red &lt;10%, grey unmeasured. Annotate the 0-cells row "Carmel OP not in top-20 on generic queries — access opportunity."</p>
+<hr />
+<h2>§2 Organic-side metrics (KPI snapshot)</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Value</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inpatient Carmel grid coverage — 4 priority queries, Jan→Apr</td>
+<td>100% top-20 / top-3 share IMPROVING on 3 of 4 kws</td>
+<td>Dominating + extending</td>
+</tr>
+<tr>
+<td>Carmel OP grid coverage on generic queries</td>
+<td>0/169 cells in top-20 (Carmel OP doesn't appear on drug rehab / alcohol rehab near me / detox center near me / rehab)</td>
+<td>Access opportunity</td>
+</tr>
+<tr>
+<td>Both pins on Carmel-branded queries</td>
+<td>100% co-rank #1+#2 across 169 cells</td>
+<td>Branded queries owned</td>
+</tr>
+<tr>
+<td>Queens OP grid coverage (alcohol rehab + drug rehab)</td>
+<td>100% top-20 · 93-95% top-10 · 12-25% top-3</td>
+<td>Competitive — top-3 headroom</td>
+</tr>
+<tr>
+<td>Bronx OP grid coverage</td>
+<td>Unmeasured</td>
+<td>Data gap</td>
+</tr>
+<tr>
+<td>GBP manager access (of 4 pins)</td>
+<td>1 of 4 (Inpatient Carmel only)</td>
+<td>Constraint</td>
+</tr>
+<tr>
+<td>Service-page sessions → conversions / 365d</td>
+<td>24,000 → 0</td>
+<td>Form missing</td>
+</tr>
+<tr>
+<td>Total annual GA4 conversions</td>
+<td>531</td>
+<td>Baseline</td>
+</tr>
+<tr>
+<td>Insurance article cluster ranking 11-20</td>
+<td>10 articles, 214K imp / 180d at &lt;0.5% CTR</td>
+<td>CTR-lift lever</td>
+</tr>
+<tr>
+<td>Schema coverage</td>
+<td>Organization on homepage only</td>
+<td>Bare</td>
+</tr>
+<tr>
+<td>Backlinks</td>
+<td>17,209 from 426 ref domains, spam 19</td>
+<td>Healthy volume, moderate spam</td>
+</tr>
+<tr>
+<td>GBP Q&amp;A owner-answered across competitive set</td>
+<td>0 of any pin (AA or competitors)</td>
+<td>First-mover opportunity</td>
+</tr>
+<tr>
+<td>Doorway surface</td>
+<td>71 /suburb/<em> pages + 4 /service/</em> near-duplicates</td>
+<td>Audit-and-improve target</td>
+</tr>
+</tbody>
+</table>
+<p><em>Chart spec:</em> single-row KPI cards. Pills: "Dominating" green · "Competitive" amber · "Data gap" grey · "Constraint" amber · "Form missing" red · "CTR-lift lever" green · "Bare" red · "Healthy" green · "First-mover" green · "Audit target" amber.</p>
+<hr />
+<h2>§3 Indexation breakdown <em>(/suburb/</em> + /service/<em> scope)</em></h2>
+<p>GSC URL Inspection rollup focused on the highest-risk surfaces. Full sitewide breakdown deferred to a separate pass.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th style="text-align: right;">/suburb/* (71 URLs)</th>
+<th style="text-align: right;">/service/* (12 URLs incl 4 near-dupes)</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Indexed</td>
+<td style="text-align: right;">TBD — pending audit</td>
+<td style="text-align: right;">TBD — pending audit</td>
+<td>Sub-task C1-S1 outputs this</td>
+</tr>
+<tr>
+<td>Crawled, not indexed</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td></td>
+</tr>
+<tr>
+<td>Discovered, not crawled</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td></td>
+</tr>
+<tr>
+<td>Canonical mismatch</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">likely on 4 city-modifier dupes</td>
+<td></td>
+</tr>
+<tr>
+<td>Noindex</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Action:</strong> the suburb-page improvement work (task <code>LP-01_M2</code>/<code>M3</code>) and the service-page near-duplicate dedup (task <code>SP-04</code>) both depend on this breakdown. Pull it in M1 before committing to the cohort to improve vs the cohort to redirect.</p>
+<hr />
+<h2>§4 Competitive Landscape — direct service providers</h2>
+<p>No historical LD scan series exists for AA outside Carmel, so a time-series competitor delta (Surfpoint Δ Oct→Apr style) isn't computable yet. Current-state snapshot of the direct service-provider competitive set:</p>
+<table>
+<thead>
+<tr>
+<th>Competitor</th>
+<th style="text-align: right;">Reviews</th>
+<th style="text-align: right;">Rating</th>
+<th style="text-align: right;">Photos</th>
+<th style="text-align: right;">Description chars</th>
+<th style="text-align: right;">Categories</th>
+<th style="text-align: right;">Q&amp;A captured</th>
+<th>Where they win</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arms Acres Inpatient (us — managed)</strong></td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">536</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">25 (0 owner-answered)</td>
+<td>Carmel grid 100% top-3</td>
+</tr>
+<tr>
+<td><strong>Arms Acres Carmel OP (us — AA-managed)</strong></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">201</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>Carmel grid 100% top-3 (co-rank)</td>
+</tr>
+<tr>
+<td><strong>Arms Acres Bronx OP (us — AA-managed)</strong></td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">314</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3 (0 owner-answered)</td>
+<td>Unmeasured</td>
+</tr>
+<tr>
+<td><strong>Arms Acres Queens OP (us — AA-managed)</strong></td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">2.2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4 (0 owner-answered)</td>
+<td>Queens grid 100% top-20</td>
+</tr>
+<tr>
+<td>Ascendant NY (Manhattan)</td>
+<td style="text-align: right;">284</td>
+<td style="text-align: right;">4.8</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">750</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">13 (0 owner-answered)</td>
+<td>NYC organic + GBP depth</td>
+</tr>
+<tr>
+<td>Mountainside Treatment (NYC)</td>
+<td style="text-align: right;">71</td>
+<td style="text-align: right;">4.7</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">702</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5 (0 owner-answered)</td>
+<td>GBP depth + smaller review base</td>
+</tr>
+<tr>
+<td>Cornerstone of Medical Arts (Bronx)</td>
+<td style="text-align: right;">203</td>
+<td style="text-align: right;">4.1</td>
+<td style="text-align: right;">61</td>
+<td style="text-align: right;">329</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">27 (0 owner-answered)</td>
+<td>Bronx multi-borough</td>
+</tr>
+<tr>
+<td>Bronx Recovery</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">4.6</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td style="text-align: right;">TBD</td>
+<td>Bronx Map Pack #1 with 9 backlinks total</td>
+</tr>
+<tr>
+<td>CoveCare (Carmel)</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">276</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td>Carmel #2 outside Map Pack</td>
+</tr>
+</tbody>
+</table>
+<p><em>Chart spec:</em> horizontal stacked bar comparing AA 4 pins (self, highlighted) vs competitors on a depth-composite score (review_count_log + photos + desc_chars/100 + categories + Q&amp;A_captured). Sort desc. AA pins in dark/neutral, competitors in light blue.</p>
+<hr />
+<h2>§5 Service-Level Maps Coverage — Carmel anchor</h2>
+<p>DataForSEO Maps SERP at Carmel-Hamlet center (41.43, -73.68) across 5 service clusters. Avg rank for AA's primary pin per cluster (Inpatient if returned, else Carmel OP).</p>
+<table>
+<thead>
+<tr>
+<th>Service cluster</th>
+<th>Tracked queries</th>
+<th style="text-align: right;">AA avg rank</th>
+<th>In-pack</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inpatient rehab</td>
+<td>drug rehab · alcohol rehab · inpatient rehab · inpatient drug rehab · rehab near me</td>
+<td style="text-align: right;">1.0</td>
+<td>5/5</td>
+<td>Dominating</td>
+</tr>
+<tr>
+<td>Detox</td>
+<td>detox · alcohol detox · drug detox · alcohol detox near me · drug detox near me</td>
+<td style="text-align: right;">1.0–3.0</td>
+<td>5/5</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Addiction treatment</td>
+<td>addiction treatment · drug rehab carmel · alcohol rehab carmel · rehab</td>
+<td style="text-align: right;">1.0–2.0</td>
+<td>4/4</td>
+<td>Dominating</td>
+</tr>
+<tr>
+<td>Mid-funnel substance terms</td>
+<td>substance use facilities · substance use facilities near me · alcoholic counseling</td>
+<td style="text-align: right;">3.6–7.9</td>
+<td>3/3</td>
+<td>Headroom — push toward top-3</td>
+</tr>
+<tr>
+<td>Generic broad</td>
+<td>rehab (no modifier)</td>
+<td style="text-align: right;">14.5</td>
+<td>1/1</td>
+<td>Headroom — pin-extension play</td>
+</tr>
+</tbody>
+</table>
+<p><em>Chart spec:</em> heatmap. Rows = service clusters (sorted by AA avg rank asc). Columns = 4 AA pins (Inpatient + Carmel OP + Bronx + Queens). Cell color = green ≤3 / amber 4-10 / red 11+ / grey unmeasured. Inpatient + Carmel OP show all-green for top-3 rows; Bronx + Queens cells mostly grey/unmeasured at Carmel coord (correct — they're different catchment).</p>
+<hr />
+<h2>§5b Multi-Location Coverage — 2 priority kws × 4 pin coords</h2>
+<p>How AA performs on <code>alcohol rehab</code> + <code>drug rehab</code> across the 4 pin coords + spillover catchment.</p>
+<table>
+<thead>
+<tr>
+<th>Anchor coord</th>
+<th>alcohol rehab</th>
+<th>drug rehab</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Carmel Hamlet (41.43, -73.68)</td>
+<td>Inpatient #1 / Carmel OP #2</td>
+<td>Inpatient #1 / Carmel OP #2</td>
+<td>Dominating</td>
+</tr>
+<tr>
+<td>Mahopac (41.37, -73.74) — Carmel catchment</td>
+<td>Inpatient ~1-3 (per LD grid)</td>
+<td>Inpatient ~1-3</td>
+<td>Strong spillover</td>
+</tr>
+<tr>
+<td>Putnam Lake (41.49, -73.55) — Carmel catchment</td>
+<td>Inpatient ~1-3 (per LD grid)</td>
+<td>Inpatient ~1-3</td>
+<td>Strong spillover</td>
+</tr>
+<tr>
+<td>Jamaica Queens (40.75, -73.86) — Queens OP pin</td>
+<td>Queens OP median 5 / 25% top-3</td>
+<td>Queens OP median 5 / 12% top-3</td>
+<td>Top-3 headroom</td>
+</tr>
+<tr>
+<td>Norwood Bronx (40.88, -73.89) — Bronx OP pin</td>
+<td>Unmeasured (no grid)</td>
+<td>Unmeasured (no grid)</td>
+<td>Data gap</td>
+</tr>
+</tbody>
+</table>
+<p><em>Chart spec:</em> heatmap. Rows = anchor coords (Carmel + spillover at top, Queens next, Bronx last). Columns = 2 keywords. Cells colored by rank: dark green = #1, green = #2-3, amber = #4-10, red = #11+, grey = unmeasured.</p>
+<p>Each grey cell in the Bronx row maps directly to task <code>OFF-07_M1</code> (Bronx LD grid setup as the first OFF-stack target).</p>
+<hr />
+<h2>§6 Root Cause, Ranked</h2>
+<p><strong>A. PRIMARY — Service-page form is missing.</strong> 24K sessions / 365d on /service/<em> + /inpatient/</em> + /outpatient/* convert at 0% because there's no form on the page (Call Now button only). At 2-3% form-completion on high-intent SUD service pages, this is +480 to +720 annual conversions — comparable to the entire portfolio's 531/yr baseline. Requires AA dev approval. → tasks <code>CP-01</code> (form deployment recommendation), <code>SP-06</code> (sub-page rebuilds inherit the form).</p>
+<p><strong>B. SECONDARY — GBP profile depth on 3 of 4 pins, all AA-managed.</strong> Carmel OP description = 201 chars, Bronx OP = 314, <strong>Queens OP = 33</strong> (vs Ascendant 750). Categories, attributes, photos, Posts, Q&amp;A all well below competitive depth. Closing the gap requires manager access. → tasks <code>LG-INPC-*</code> (managed pin work shippable now), <code>LG-PENDING-*</code> (queue activates on access grant — bundled in Owner Conversation Items).</p>
+<p><strong>C. SECONDARY — Schema deployment is bare.</strong> Organization on homepage only. 0 LocalBusiness on locations, 0 Service on /service/*, 0 FAQPage on the insurance article cluster. → task <code>OS-01</code> (Schema deploy across location pages + service pages + FAQ on article batch).</p>
+<p><strong>D. CONTRIBUTOR — Site architecture surface needs audit-and-improve.</strong> 71 templated /suburb/<em> doorway pages + 4 city-modifier /service/</em> near-duplicates. Surfpoint AUDIT-back pattern: don't blanket-NOINDEX; per-URL audit + improve highest-traffic thin pages over M2-M3. The 4 /service/* near-duplicate pairs need a content-merge decision (canonical the strong + 301 the dupe, or genuinely differentiate). → tasks <code>SA-01</code> (suburb audit + monthly improvement cohort), <code>SA-02</code> (service-page near-duplicate dedup).</p>
+<p><strong>E. CONTRIBUTOR — Missing NY-state Tier-1 pages.</strong> <code>/alcohol-rehab-new-york</code> (880-vol cluster, 3-competitor consensus) + <code>/detox-new-york</code> (260-vol, 3-competitor consensus). Both buildable in Q2 as Service Pages with content merged from existing /inpatient/* anchor. → tasks <code>SP-01</code> (alcohol-rehab-new-york), <code>SP-02</code> (detox-new-york).</p>
+<p><strong>F. CONTRIBUTOR — Wrong-brand homepage <code>og:description</code>.</strong> Live in production: "Bold Steps Behavioral Health is the best drug rehab in Harrisburg PA." 5-minute fix; not load-bearing but ship M1. → task <code>CP-02</code>.</p>
+<p><strong>G. POSITIVE — Inpatient Carmel is dominating AND improving.</strong> 169-cell grid, 4 priority queries, scan-over-scan deltas: <code>drug rehab</code> top-3 +10 (101→111 cells), <code>alcohol rehab near me</code> top-3 +8 (115→123), <code>detox center near me</code> top-3 +2 (128→130). 100% top-20 on the 3 high-intent queries. Inpatient is the revenue-engine pin and the dominance is durable, not flat. Defend posture only on the managed pin; don't apply spam-pattern signals to a winning pin.</p>
+<p><strong>G2. POSITIVE/OPPORTUNITY — Carmel OP has rank-pushing upside on generic queries.</strong> Carmel OP co-ranks at #2 alongside Inpatient at #1 on Carmel-branded queries (carmel recovery / carmel new york rehab / carmel methadone clinic) across 100% of cells. But Carmel OP does <strong>not appear in top-20</strong> on the generic high-intent queries Inpatient solo-dominates (drug rehab / alcohol rehab near me / detox center near me / rehab). Access on Carmel OP unlocks pushing it onto those same queries. → Owner Conversation Item 0 + tasks <code>P-COP-*</code>.</p>
+<p><strong>H. POSITIVE — Insurance article cluster ranking 11-20.</strong> 10 articles at 214K imp / 180d with &lt;0.5% CTR. Title + FAQ-schema rewrites on already-ranking pages, no new content production, projected ~14× clicks at top-3 average CTR. → tasks <code>CN-01_M1</code> / <code>_M2</code> / <code>_M3</code> (3-month cadence).</p>
+<p><strong>I. POSITIVE — First-mover Q&amp;A opportunity.</strong> Zero competitor in the local SUD set has any owner-answered Q&amp;As across their public profiles. AA Inpatient seeding 10-15 + answering existing 25 puts AA 5× ahead of any direct competitor at ~3 hours of work. → task <code>LG-INPC-07</code>.</p>
+<hr />
+<h2>§7 Open Items / Follow-Up Data Pulls</h2>
+<ul>
+<li><strong>Bronx OP LD grid</strong> at 3584 Jerome Ave / Norwood coord. Without measurement we can't claim "invisible in Bronx" and we can't size the OFF-07 Bronx-pin work. M1 setup, M2 baseline. → task <code>OFF-07_M1</code>.</li>
+<li><strong>GSC URL Inspection</strong> on /suburb/<em> + /service/</em> + /inpatient/<em> + /outpatient/</em> (full set). Feeds §3 indexation breakdown + the SA-01 audit-and-improve cohort + SA-02 dedup canonical decisions.</li>
+<li><strong>CARF accreditation verification.</strong> Gates link gap #1 (carf.org citation, 3-of-3 competitor coverage) + LLM authority signal.</li>
+<li><strong>501(c)(3) status verification.</strong> Gates charitynavigator.org listing.</li>
+<li><strong>LegitScript verification.</strong> Gates any paid-acquisition motion in Q3+.</li>
+<li><strong>MICA / dual-diagnosis residential program confirmation.</strong> Gates <code>/dual-diagnosis</code> service page recommendation.</li>
+<li><strong>OTP / MAT license per facility.</strong> Gates the dedicated MAT/OTP service page + GBP services-list mapping per pin.</li>
+<li><strong>Clinical roster + named-clinician bios.</strong> Gates E-E-A-T block on /inpatient/adult-rehabilitation + behavioralhealthnews.org contributed-article pitch.</li>
+<li><strong>Insurance carrier authoritative list.</strong> Gates /admissions insurance sub-sections + GBP description insurance line.</li>
+<li><strong>Intake-side review-request SOP.</strong> Only structural fix for the 36-62% one-star content density on Inpatient + Queens reviews.</li>
+<li><strong>GBP manager access on Carmel OP + Bronx OP + Queens OP.</strong> Single highest unlock — activates 41 staged pending-access tasks.</li>
+</ul>
+<p>All bundled in <code>Arms_Acres_Owner_Conversation_Items.md</code> for one consolidated 30-min call.</p>
+<hr />
+<h2>Appendix A — Data sources and methodology</h2>
+<ul>
+<li><strong>Local Dominator</strong>: 169-cell grids (13×13). Queens OP grid weekly at 40.749, -73.857 (~0.5 mi cell spacing). Inpatient Carmel grid monthly at 41.587, -73.908 (~2 mi cell spacing). Co-tracks Carmel OP in every cell. Bronx OP grid: not yet configured.</li>
+<li><strong>DataForSEO Maps SERP + Business Data</strong>: live pulls on 5 AA + competitor pins. Maps SERP at Carmel-Hamlet center across 10 priority queries. Business Data scrape for public-profile depth (description / categories / attributes / photos / Q&amp;A / Posts).</li>
+<li><strong>GSC</strong>: pages + queries CSVs at 30/90/180/365d. URL Inspection pulls deferred (M1 task).</li>
+<li><strong>On-site crawl</strong>: sitemap.xml + page snapshots for /service/<em> + /inpatient/</em> + /outpatient/<em> + /suburb/</em> + /admissions + homepage. JSON-LD extraction via raw HTTP + regex per HQDM schema-audit methodology.</li>
+</ul>
+<hr />
+<h2>Appendix B — Related deliverables</h2>
+<ul>
+<li><code>Arms_Acres_3Month_Tasks.csv</code> — executable Q2 task sheet (Asana-intake-ready, 12 columns + sop_reference)</li>
+<li><code>Arms_Acres_Pending_GBP_Access_Tasks.csv</code> — queue activated on access grant for Carmel OP + Bronx OP + Queens OP</li>
+<li><code>Arms_Acres_Owner_Conversation_Items.md</code> — owner-side asks bundled for one 30-min call</li>
+<li><code>arms_acres_competitor_brief.md</code> — long-form competitor analysis + content gap + link gap</li>
+<li><code>arms_acres_m1_priorities.md</code> — top pages / articles / links with rationale</li>
+</ul>
+</body>
+</html>

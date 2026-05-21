@@ -1,0 +1,209 @@
+# Surfpoint Recovery — Google Search Console Disavow File
+# Generated: 2026-05-12
+# Source: DataForSEO referring_domains.csv (386 referring domains)
+# Auto-disavow entries: 183
+# Flagged for manual review (NOT in this file): 42 — see Surfpoint_Disavow_Review.txt
+# Kept (clean / mainstream / gov-edu): 161
+#
+# Format: 'domain:example.com' disavows all URLs on that domain.
+# Upload via: https://search.google.com/search-console/disavow-links
+# After upload, allow 2-4 weeks before re-evaluating ranking impact.
+
+# ==== 1. Link-blast network (bhs-links-*) (5 domains) ====
+domain:bhs-links-bg.xyz  # spam=82 bl=36 rank=0 — spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0
+domain:bhs-links-fr.xyz  # spam=82 bl=15 rank=0 — spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0
+domain:bhs-links-rt.xyz  # spam=82 bl=37 rank=0 — spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0
+domain:bhs-links-yt.xyz  # spam=82 bl=36 rank=0 — spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0
+domain:bhs-links-gb.xyz  # spam=81 bl=30 rank=0 — spam_score=81; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=81; all-nofollow + spam_score=81 + rank=0
+
+# ==== 2. SEO-anomaly PBN cluster (106 domains) ====
+domain:seo-anomaly-s10.xyz  # spam=94 bl=10 rank=0 — spam_score=94; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=94; all-nofollow + spam_score=94 + rank=0
+domain:seo-anomaly-s6.xyz  # spam=83 bl=10 rank=0 — spam_score=83; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=83; all-nofollow + spam_score=83 + rank=0
+domain:seo-anomaly-s2.xyz  # spam=77 bl=12 rank=0 — spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0
+domain:seo-anomaly-s8.xyz  # spam=77 bl=12 rank=0 — spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0
+domain:seo-anomaly-s9.xyz  # spam=77 bl=12 rank=0 — spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0
+domain:seo-anomaly-s7.xyz  # spam=75 bl=1 rank=0 — spam_score=75; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=75; all-nofollow + spam_score=75 + rank=0
+domain:seo-anomaly-alttext.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-alttext.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-alttext.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-alttext.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-anchor.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-anchor.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-anchor.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-anchor.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-authority.online  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-authority.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-authority.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-authority.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-backlink.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-backlink.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-backlink.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-backlink.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-black.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-black.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-black.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-black.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-bounce.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-bounce.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-bounce.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-bounce.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-canonical.online  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-canonical.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-canonical.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-canonical.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-conversion.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-conversion.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-conversion.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-conversion.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawlbudget.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawlbudget.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawlbudget.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawlbudget.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawling.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawling.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawling.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-crawling.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-ctr.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-ctr.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-ctr.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-ctr.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-dofollow.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-dofollow.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-dofollow.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-dofollow.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-domain.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-domain.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-domain.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-domain.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-engagement.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-engagement.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-engagement.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-engagement.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-hreflang.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-hreflang.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-hreflang.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-index.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-index.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-index.website  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-indexing.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-indexing.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-indexing.space  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-indexing.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-keydensity.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-keydensity.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-keydensity.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-keydensity.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-linkbuilding.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-linkbuilding.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-linkbuilding.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-linkbuilding.website  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-master.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-metadata.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-metadata.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-metadata.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-metadata.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-organic.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-organic.site  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-organic.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-organic.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-rock.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-seoaudit.online  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-seoaudit.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-seoaudit.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-seoaudit.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-serp.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-serp.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-serp.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-serp.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-sitemap.online  # spam=60 bl=1 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-sitemap.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-sitemap.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-snippet.online  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-snippet.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-snippet.space  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-snippet.website  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0
+domain:seo-anomaly-teacher.site  # spam=60 bl=2 rank=0 — name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0
+
+# ==== 3. AustralianWebDirectory PBN ring (3 domains) ====
+domain:australianwebdirectory.pro  # spam=70 bl=1 rank=0 — spam_score=70; name pattern /^australianwebdirectory\b/
+domain:australianwebdirectory.shop  # spam=70 bl=1 rank=0 — spam_score=70; name pattern /^australianwebdirectory\b/; soft-spam TLD .shop + spam_score=70
+domain:australianwebdirectory.info  # spam=65 bl=1 rank=0 — name pattern /^australianwebdirectory\b/; soft-spam TLD .info + spam_score=65; all-nofollow + spam_score=65 + rank=0
+
+# ==== 4. Spammy TLD + spam score (4 domains) ====
+domain:belonnanotservice.ga  # spam=85 bl=1 rank=0 — spam_score=85; hard-spam TLD .ga + spam_score=85
+domain:what-happens-next.xyz  # spam=85 bl=1 rank=0 — spam_score=85; hard-spam TLD .xyz + spam_score=85
+domain:thebestbacklinksavailable.click  # spam=65 bl=1 rank=0 — name pattern /bestbacklinks/; hard-spam TLD .click + spam_score=65
+domain:quero.party  # spam=50 bl=2 rank=0 — hard-spam TLD .party + spam_score=50; all-nofollow + spam_score=50 + rank=0
+
+# ==== 5. Spammy SEO TLD + spam score (44 domains) ====
+domain:mundotecnologia.info  # spam=65 bl=1 rank=0 — soft-spam TLD .info + spam_score=65
+domain:sergechel.info  # spam=60 bl=1 rank=0 — soft-spam TLD .info + spam_score=60
+domain:seo-cartel-11.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-12.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-13.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-16.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-20.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-22.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-25.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-26.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-27.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-29.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-30.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-33.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-34.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-35.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-36.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-39.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-40.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-43.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-45.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-50.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-51.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-53.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-69.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-71.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-75.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-77.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-80.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-82.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-83.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-86.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-89.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-90.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-92.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-93.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-94.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-96.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-98.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:seo-cartel-99.online  # spam=55 bl=1 rank=0 — soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0
+domain:alljobs.info  # spam=50 bl=2 rank=0 — soft-spam TLD .info + spam_score=50
+domain:buzzshrink.website  # spam=50 bl=1 rank=0 — soft-spam TLD .website + spam_score=50; all-nofollow + spam_score=50 + rank=0
+domain:bye.fyi  # spam=50 bl=2 rank=0 — soft-spam TLD .fyi + spam_score=50; all-nofollow + spam_score=50 + rank=0
+domain:ycm.info  # spam=50 bl=1 rank=0 — soft-spam TLD .info + spam_score=50
+
+# ==== 6. Other known spam patterns (3 domains) ====
+domain:browseallexpireddomains.us  # spam=65 bl=1 rank=0 — name pattern /expireddomain/
+domain:great-choice-for-pbn-domains.co.uk  # spam=65 bl=1 rank=0 — name pattern /-pbn[-.]/
+domain:getwebsiteworth.com  # spam=60 bl=2 rank=0 — name pattern /^getwebsiteworth\./
+
+# ==== 7. High spam score (>=70) (1 domains) ====
+domain:violationfunding.com  # spam=85 bl=2 rank=0 — spam_score=85
+
+# ==== 8. All-nofollow + spam + rank 0 (17 domains) ====
+domain:appguri.com.br  # spam=80 bl=2 rank=0 — spam_score=80; all-nofollow + spam_score=80 + rank=0
+domain:hps-plastering.co.uk  # spam=75 bl=1 rank=0 — spam_score=75; all-nofollow + spam_score=75 + rank=0
+domain:primebeautylounge.com  # spam=70 bl=4 rank=0 — spam_score=70; all-nofollow + spam_score=70 + rank=0
+domain:australiandir.com  # spam=55 bl=1 rank=0 — all-nofollow + spam_score=55 + rank=0
+domain:magnumcompanies.co  # spam=55 bl=1 rank=0 — all-nofollow + spam_score=55 + rank=0
+domain:andmax.fr  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:batizens.vn  # spam=50 bl=3 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:drjack.world  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:fusioncreations.co.uk  # spam=50 bl=8 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:jake.eu  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:lukang-audio.com  # spam=50 bl=3 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:mainpg88.com  # spam=50 bl=4 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:mltboron.com  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:olivare.com.ar  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:screenshots.wiki  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:shortenurls.eu  # spam=50 bl=2 rank=0 — all-nofollow + spam_score=50 + rank=0
+domain:simedia.co.th  # spam=50 bl=1 rank=0 — all-nofollow + spam_score=50 + rank=0

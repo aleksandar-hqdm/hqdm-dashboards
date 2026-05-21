@@ -1,0 +1,63 @@
+link_id,push,task_id,month,priority,from_url,to_url,anchor_text,placement,why
+IL-01,2,SP-01,M2,P0-must,/,/services/alcohol-detoxification-service,Alcohol Detox in Brooklyn,Primary nav under Services + homepage hero CTA,Routes alcohol-detox commercial intent to upgraded service page
+IL-02,2,SP-01,M2,P0-must,/locations/red-hook-ny,/services/alcohol-detoxification-service,Medical alcohol detox in Red Hook,Body section "Services we offer",Routes Red Hook hub residents to alcohol-detox service
+IL-03,2,SP-01,M2,P0-must,/locations/carroll-gardens-red-hook,/services/alcohol-detoxification-service,Medical alcohol detox,Body section "Services",Routes Carroll Gardens residents to alcohol-detox service
+IL-04,2,SP-01,M2,P0-must,/locations/gowanus,/services/alcohol-detoxification-service,Medical alcohol detox,Body section "Services",Routes Gowanus residents to alcohol-detox service
+IL-05,2,SP-01,M2,P0-must,/services/alcohol-detoxification-service,/admission-overview,Same-day admission for alcohol detox,Hero CTA + end-block,Conversion pull-through to admission overview
+IL-06,2,SP-01,M2,P0-must,/services/alcohol-detoxification-service,/services/opioid-detoxification-services,Co-occurring opioid use disorder,Body section "Polysubstance use",Cross-link to opioid-detox service
+IL-07,2,SP-02,M3,P0-must,/,/services/opioid-detoxification-services,Opioid Detox & MAT in Brooklyn,Primary nav under Services,Routes opioid-detox commercial intent
+IL-08,2,SP-02,M3,P0-must,/locations/red-hook-ny,/services/opioid-detoxification-services,MAT and opioid detox,Body section "Services",Routes Red Hook hub residents
+IL-09,2,SP-02,M3,P0-must,/services/opioid-detoxification-services,/services/alcohol-detoxification-service,Alcohol co-occurring detox,Body section "Polysubstance use",Reciprocal cross-link
+IL-10,2,SP-02,M3,P0-must,/services/opioid-detoxification-services,/admission-overview,Same-day MAT admission,Hero CTA,Conversion pull-through
+IL-11,2,SP-02,M3,P0-must,/blog/medicaid-detox-brooklyn,/services/opioid-detoxification-services,Medicaid MAT in Brooklyn,Body section + end-block CTA,Q-format article commercial pull-through (PA-24)
+IL-12,4,ON-02-Inpatient,M2,P0-must,/services/short-term-residential-program,/services/alcohol-detoxification-service,Alcohol inpatient detox,Body section "Substances we treat",Inpatient page routes to specific-substance detox pages
+IL-13,4,ON-02-Inpatient,M2,P0-must,/services/short-term-residential-program,/services/opioid-detoxification-services,Opioid inpatient detox + MAT,Body section "Substances we treat",Inpatient page routes to MAT service
+IL-14,4,ON-02-Inpatient,M2,P0-must,/services/short-term-residential-program,/admission-overview,Same-day inpatient admission,Hero CTA,Conversion pull-through
+IL-15,4,ON-02-Inpatient,M2,P0-must,/locations/red-hook-ny,/services/short-term-residential-program,Inpatient drug & alcohol rehab,Body section "Services" with explicit "Inpatient" anchor,Reinforces "Inpatient" anchor-text density on /short-term-residential
+IL-16,4,ON-02-Inpatient,M2,P0-must,/locations/recovery-center-in-sunset-park-ny,/services/short-term-residential-program,Inpatient rehab in Brooklyn,Body section "Services" with explicit "Inpatient" anchor,Counters SNF category drift via cross-borough anchor text
+IL-17,4,ON-02-Inpatient,M2,P0-must,/locations/leading-rehab-center-in-downtown-brooklyn-ny,/services/short-term-residential-program,24-hour inpatient rehab,Body section "Services",Cross-borough URL anchor consolidation
+IL-18,4,ON-02-Inpatient,M2,P0-must,/locations/rehab-center-in-crown-heights-ny,/services/short-term-residential-program,Inpatient drug & alcohol rehab,Body section "Services",Cross-borough URL anchor consolidation
+IL-19,3,LP-02_M1,M1,P0-must,/,/locations/red-hook-ny,Red Hook Brooklyn,Footer "Service Areas" + primary nav,Red Hook hub entry point from homepage
+IL-20,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services we offer at Red Hook",Hub-to-service routing
+IL-21,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/services/drug-detoxification-services,Drug detox,Body section "Services",Hub-to-service routing
+IL-22,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/services/opioid-detoxification-services,Opioid detox & MAT,Body section "Services",Hub-to-service routing
+IL-23,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/services/benzodiazepines-detox-services,Benzodiazepine detox,Body section "Services",Hub-to-service routing
+IL-24,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/services/short-term-residential-program,Inpatient rehab,Body section "Services",Hub-to-service routing
+IL-25,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/locations/carroll-gardens-red-hook,Carroll Gardens,Body section "Nearby neighborhoods",Sibling-anchor cross-link
+IL-26,3,LP-02_M1,M1,P0-must,/locations/red-hook-ny,/locations/gowanus,Gowanus,Body section "Nearby neighborhoods",Sibling-anchor cross-link
+IL-27,3,LP-02_M1,M1,P0-must,/locations/carroll-gardens-red-hook,/locations/red-hook-ny,Red Hook,Body section "Nearby neighborhoods",Sibling-anchor cross-link
+IL-28,3,LP-02_M1,M1,P0-must,/locations/gowanus,/locations/red-hook-ny,Red Hook,Body section "Nearby neighborhoods",Sibling-anchor cross-link
+IL-29,3,LP-02_M2,M2,P0-must,/,/locations/recovery-center-in-sunset-park-ny,Sunset Park,Footer "Service Areas",Cross-borough hub entry
+IL-30,3,LP-02_M2,M2,P0-must,/,/locations/park-slope-ny,Park Slope,Footer "Service Areas",Adjacency hub entry
+IL-31,3,LP-02_M2,M2,P0-must,/,/locations/boerum-hill-ny,Boerum Hill,Footer "Service Areas",Adjacency hub entry
+IL-32,3,LP-02_M2,M2,P0-must,/locations/recovery-center-in-sunset-park-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services",Cross-borough hub-to-service routing
+IL-33,3,LP-02_M2,M2,P0-must,/locations/recovery-center-in-sunset-park-ny,/services/opioid-detoxification-services,Opioid detox & MAT,Body section "Services",Cross-borough hub-to-service routing
+IL-34,3,LP-02_M2,M2,P0-must,/locations/recovery-center-in-sunset-park-ny,/locations/red-hook-ny,Red Hook location (3 mi N),Body section "How to reach us",Cross-borough to anchor hub
+IL-35,3,LP-02_M2,M2,P0-must,/locations/park-slope-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services",Hub-to-service routing
+IL-36,3,LP-02_M2,M2,P0-must,/locations/park-slope-ny,/locations/red-hook-ny,Red Hook location,Body section "How to reach us",Adjacency to anchor
+IL-37,3,LP-02_M2,M2,P0-must,/locations/boerum-hill-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services",Hub-to-service routing
+IL-38,3,LP-02_M2,M2,P0-must,/locations/boerum-hill-ny,/locations/red-hook-ny,Red Hook location,Body section "How to reach us",Adjacency to anchor
+IL-39,3,LP-02_M3,M3,P1-should,/,/locations/leading-rehab-center-in-downtown-brooklyn-ny,Downtown Brooklyn,Footer "Service Areas",Cross-borough hub entry
+IL-40,3,LP-02_M3,M3,P1-should,/,/locations/rehab-center-in-crown-heights-ny,Crown Heights,Footer "Service Areas",Cross-borough hub entry
+IL-41,3,LP-02_M3,M3,P1-should,/locations/leading-rehab-center-in-downtown-brooklyn-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services",Cross-borough hub-to-service routing
+IL-42,3,LP-02_M3,M3,P1-should,/locations/leading-rehab-center-in-downtown-brooklyn-ny,/services/opioid-detoxification-services,Opioid detox & MAT,Body section "Services",Cross-borough hub-to-service routing
+IL-43,3,LP-02_M3,M3,P1-should,/locations/leading-rehab-center-in-downtown-brooklyn-ny,/locations/red-hook-ny,Red Hook location (2 mi SW),Body section "How to reach us",Cross-borough to anchor
+IL-44,3,LP-02_M3,M3,P1-should,/locations/rehab-center-in-crown-heights-ny,/services/alcohol-detoxification-service,Alcohol detox,Body section "Services",Cross-borough hub-to-service routing
+IL-45,3,LP-02_M3,M3,P1-should,/locations/rehab-center-in-crown-heights-ny,/services/opioid-detoxification-services,Opioid detox & MAT,Body section "Services",Cross-borough hub-to-service routing
+IL-46,3,LP-02_M3,M3,P1-should,/locations/rehab-center-in-crown-heights-ny,/locations/red-hook-ny,Red Hook location (4 mi SW),Body section "How to reach us",Cross-borough to anchor
+IL-47,5,CON-03,M3,P1-should,/blog/medicaid-detox-brooklyn,/services/alcohol-detoxification-service,Medicaid alcohol detox in Brooklyn,Intro CTA box + end-block,Q-format article commercial pull-through
+IL-48,5,CON-03,M3,P1-should,/blog/medicaid-detox-brooklyn,/admission-overview,Same-day Medicaid admission,Intro CTA,Conversion pull-through
+IL-49,5,CON-03,M3,P1-should,/blog/lgbtq-affirming-rehab-red-hook,/about-us,Our LGBTQ+-affirming clinical approach,Body section + end-block,Q-format article reinforces about-us differentiator
+IL-50,5,CON-03,M3,P1-should,/blog/lgbtq-affirming-rehab-red-hook,/admission-overview,Same-day LGBTQ+-affirming admission,Intro CTA,Conversion pull-through
+IL-51,5,CON-03,M3,P1-should,/blog/women-owned-rehab-brooklyn,/about-us,Our women-owned clinical model,Body section + end-block,Q-format article reinforces about-us differentiator
+IL-52,5,CON-03,M3,P1-should,/blog/women-owned-rehab-brooklyn,/admission-overview,Same-day admission,Intro CTA,Conversion pull-through
+IL-53,2,HP-01,M1,P0-must,/,/admission-overview,24-hour same-day admission,Homepage hero CTA + sticky nav,Reinforce intake routing post-NAP-fix
+IL-54,2,ON-02,M2,P0-must,/admission-overview,/services/alcohol-detoxification-service,Alcohol detox program,Body section "Programs we offer",Admission overview to service routing
+IL-55,2,ON-02,M2,P0-must,/admission-overview,/services/drug-detoxification-services,Drug detox program,Body section "Programs we offer",Admission overview to service routing
+IL-56,2,ON-02,M2,P0-must,/admission-overview,/services/opioid-detoxification-services,Opioid detox & MAT,Body section "Programs we offer",Admission overview to service routing
+IL-57,2,ON-02,M2,P0-must,/admission-overview,/services/short-term-residential-program,Inpatient rehab,Body section "Programs we offer" with "Inpatient" anchor,Admission overview to inpatient routing + anchor density
+IL-58,3,LP-01_M1,M1,P0-must,/locations/* — 0-click cohort,/locations/red-hook-ny OR /services/*,(per-URL canonical),(redirect target — internal-link cleanup post-301),"After LP-01 0-click 301s deploy, scan for internal links pointing to the 301'd URLs and update per the working sheet — prevents 301 chain dilution."
+IL-59,3,LP-01_M1,M1,P0-must,/locations/* — refresh bleeding cohort,/services/* + /admission-overview,(per-URL contextual anchors),Internal links added to refreshed URLs,"Refresh batch URLs gain internal-link block to /services/* + /admission-overview during the title/intro/internal-links rewrite."
+IL-60,1,GBP-01,M1,P0-must,GBP Posts M1 → site,/services/* OR /locations/red-hook-ny OR /admission-overview,(per-Post target),GBP Post body link,Each GBP Post links to a relevant /services/* page or Red Hook hub or /admission-overview
+IL-61,1,GBP-05,M2,P0-must,GBP Posts M2 → site,/services/alcohol-detoxification-service OR LP-02_M1 URLs,(per-Post target),GBP Post body link,M2 GBP Posts route to upgraded SP-01 + LP-02_M1 anchors
+IL-62,1,GBP-06,M3,P0-must,GBP Posts M3 → site,/services/opioid-detoxification-services OR LP-02_M2/M3 URLs + CON-03 articles,(per-Post target),GBP Post body link,M3 GBP Posts route to SP-02 + new cross-borough URLs + Q-format articles

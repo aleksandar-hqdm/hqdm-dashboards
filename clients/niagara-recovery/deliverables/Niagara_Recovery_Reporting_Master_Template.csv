@@ -1,0 +1,38 @@
+section,month,url_or_query,metric,baseline_value,target_60d,target_90d,m1_actual,m2_actual,m3_actual,status,notes
+LD,Baseline,alcohol rehab,top-3 pct,70.3,72,75,,,,Pending,Per niagara_apples_to_apples_summary.csv 2026-04-30.
+LD,Baseline,alcohol detox near me,top-3 pct,70.9,73,75,,,,Pending,Same.
+LD,Baseline,addiction rehab,top-3 pct,60.8,63,65,,,,Pending,Same.
+LD,Baseline,addiction rehab near me,top-3 pct,60.8,63,65,,,,Pending,Same.
+LD,Baseline,addiction treatment center,top-3 pct,54.4,58,60,,,,Pending,Recover the -8.3pt slip.
+LD,Baseline,inpatient rehab near me,top-3 pct,61.4,63,65,,,,Pending,Same.
+LD,Baseline,inpatient rehab,top-3 pct,51.3,52,53,,,,Pending,Intent-contaminated; modest target.
+LD,Baseline,rehab near me,top-3 pct,41.1,42,43,,,,Pending,Intent-ambiguous; modest target.
+LD,Baseline,niagara rehab,top-3 pct,8.9,N/A,N/A,N/A,N/A,N/A,Dropped,Intent mismatch (medical rehab). Stop chasing.
+Maps,Baseline,Niagara Recovery GBP,Profile views Dec-May,11019,3000/mo,3500/mo,,,,Pending,From GBP intake 2026-05-19.
+Maps,Baseline,Niagara Recovery GBP,Photo count,6,18,25,,,,Pending,GBP-05 photo blitz target.
+Maps,Baseline,Niagara Recovery GBP,Posts last 30d,1,4,12 cumulative,,,,Pending,Weekly cadence target.
+Maps,Baseline,Niagara Recovery GBP,Reviews,47,55,60,,,,Pending,Intake-handoff +13 net.
+Maps,Baseline,Niagara Recovery GBP,Star rating,4.3,4.4,4.4,,,,Pending,Holding 4.3+ minimum.
+GSC,Baseline,Sitewide,Non-branded clicks 30d,47,100,200,,,,Pending,Rebuild from collapsed baseline; CTR 0.18% currently.
+GSC,Baseline,Sitewide,Non-branded impressions 30d,26563,30000,35000,,,,Pending,Maintain impression baseline; CTR drives click growth.
+GSC,Baseline,Sitewide,Branded CTR 30d,15.09%,15%,15%,,,,Pending,Hold +15% on branded queries (1299 imp baseline).
+GSC,Baseline,Sitewide,Total pages indexed,760,650,580,,,,Pending,Drop ~180 pages post-CC-01 NOINDEX/410 (~300 off-vertical posts).
+GSC,Baseline,/services/*,Combined clicks 365d,3,30,50,,,,Pending,Service-page consolidation (10->5 URLs) + schema + rewrites.
+GSC,Baseline,/locations/*,Combined clicks 365d,16,40,80,,,,Pending,Push 4 location-page architecture (BUILD + UPGRADE + REDIRECT).
+GA4,Baseline,Sitewide,Conversions 30d,26,40,60,,,,Pending,From GA4 pull 2026-05-19 (now wired).
+GA4,Baseline,Sitewide,Conversions 365d,192,N/A,250 (annualized),,,,Pending,Same baseline.
+GA4,Baseline,Sitewide,Sessions 30d,3263,4000,5500,,,,Pending,GA4 pull 2026-05-19.
+GA4,Baseline,/services/*,Conversions,TBD,5,10,,,,Pending,Need GA4 page-level filter for /services/* contributions.
+GA4,Baseline,Maps channel,Sessions,TBD,TBD,TBD,,,,Pending,Wire Maps-channel attribution per REP-01.
+LLM_Citations,Baseline,Niagara Recovery in ChatGPT addiction-rehab queries,Citation count,Unknown,1+,3+,,,,Pending,Baseline measurement at REP-01.
+LLM_Citations,Baseline,Niagara Recovery in Perplexity queries,Citation count,Unknown,1+,3+,,,,Pending,Same.
+LLM_Citations,Baseline,Niagara Recovery in Google AI Overview SERP,SERP feature appearance count,Unknown,1+,2+,,,,Pending,Same.
+Cannibal,Baseline,Off-vertical blog posts,Count remaining,~300 (off-vertical 670-pool),100,0,,,,Pending,CC-01 NOINDEX/410 target.
+Cannibal,Baseline,Doorway location pages,Count remaining,~70,30,0 (all 301'd),,,,Pending,LP-10 redirects mass.
+Cannibal,Baseline,Service-page dupes (-in-newfane-ny),Count indexable,5,0,0,,,,Pending,CN-01 301 merge.
+OffPage,Baseline,SEO Neo batches,Monthly count,N/A (continuing existing rotation),1/mo,3 cumulative,,,,Pending,SEO-NEO_M1/M2/M3.
+OffPage,Baseline,AI Articles,Monthly count,N/A,4/mo,12 cumulative,,,,Pending,AI-ART_M1/M2/M3.
+OffPage,Baseline,Driving Direction Pins,Monthly count,N/A (1 completed Apr 20),4/mo,12 cumulative,,,,Pending,DD-PIN_M1/M2/M3.
+OffPage,Baseline,Citations,Monthly count,N/A,10+15+20,45 cumulative,,,,Pending,CIT_M1/M2/M3.
+Reporting,M1,REP-01,LD recurring scan setup,Not deployed,Live,Live,,,,Pending,6 anchor coords x 8 priority kws weekly.
+Reporting,M3,REP-02,M3 scorecard close-out,N/A,N/A,Complete,,,,Pending,Drives Q3 strategy refresh.

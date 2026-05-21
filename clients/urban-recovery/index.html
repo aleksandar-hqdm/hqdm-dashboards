@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Urban Recovery · Q2 2026 Strategic Dashboard · HQDM</title>
+  <meta name="description" content="Q2 2026 strategic dashboard for Urban Recovery — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 400: '#3b82f6', 300: '#8ecae6' },
+            accent: { teal: '#0ea5a4', amber: '#f59e0b', red: '#ef4444', green: '#10b981', indigo: '#6366f1', purple: '#8b5cf6', blue: '#3b82f6' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <!-- ============== STICKY HEADER ============== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="../../index.html" class="text-xs text-ink-500 hover:text-ink-800 hidden sm:inline">← HQDM Dashboards</a>
+        <span class="text-ink-300 hidden sm:inline">/</span>
+        <div class="min-w-0">
+          <div class="font-semibold text-sm sm:text-base truncate" id="hdr-client">Urban Recovery</div>
+          <div class="text-xs text-ink-500 truncate"><span id="hdr-quarter">Q2 2026</span> Strategic Dashboard</div>
+        </div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
+        <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
+        <a href="#gbp-movement" class="px-3 py-1.5 rounded hover:bg-slate-100">GBP</a>
+        <a href="#competition" class="px-3 py-1.5 rounded hover:bg-slate-100">Competition</a>
+        <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
+        <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
+        <a href="#deliverables" class="px-3 py-1.5 rounded hover:bg-slate-100">Deliverables</a>
+      </nav>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">2026-05-18</div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,0.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span id="hero-tier">Tier 1 Recovery</span>
+        <span class="text-brand-300/50">·</span>
+        <span>HQDM Search Intelligence</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight" id="hero-h1">Urban Recovery</h1>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">Brooklyn inpatient detox + rehab · Red Hook pin</p>
+      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">13×13 grid 92.8% held · GBP depth surge · service-page rebuild + NAP fix · cross-borough location upgrades · counter SNF drift on inpatient rehab · disavow + YMYL trust citations.</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono" id="hero-prepared">2026-05-18</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> <span id="hero-author">Aleksandar Spasevski</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono" id="hero-domain">urbanrecovery.com</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TL;DR ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR</div>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed" id="tldr-text"></p>
+    </div>
+  </section>
+
+  <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
+  <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-2xl font-bold tracking-tight">Health Snapshot</h2>
+      <span class="text-xs text-ink-500">6 KPIs · click for detail</span>
+    </div>
+    <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- ============== HEADLINE TRAFFIC CHART ============== -->
+  <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">GSC Organic Trend — 13 Months</h2>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="organic" checked class="rounded accent-brand-500">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#1d5b8a"></span>
+            <span>GSC Organic</span>
+          </label>
+        </div>
+      </div>
+      <div class="p-6 space-y-8">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Clicks</h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Impressions <span class="text-ink-400 font-medium normal-case">(thousand)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
+        </div>
+        <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
+      </div>
+    </div>
+
+    <!-- GSC decline chart (auto-rendered if data.gsc_decline) -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold">GSC Month-Over-Month Impressions</h3>
+      <p class="text-xs text-ink-500 mt-1">Apr 2026 surge driven by blog cohort (porn-addiction + claustrophobia + acronym-halt page-1 jumps). Service-page + GBP-tagged homepage conversion path remained stable through quarter.</p>
+      <div class="h-64 mt-4"><canvas id="gsc-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- ============== GBP MOVEMENT (LD scan delta) ============== -->
+  <section id="gbp-movement" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+
+    <!-- Per-keyword Maps movement -->
+    <div>
+      <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">GBP Movement — 8 Tracked Maps Queries</h2>
+          <p class="text-sm text-ink-500 mt-1">DataForSEO LocalDominator 13×13 grid (1,344 cells per scan) centered on Red Hook pin coord 40.6754, −74.0148. Jan 27 → Apr 22 2026. UR is the only Brooklyn addiction pin gaining net top-10 cells in the window (+21).</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="kw-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">Keyword</th>
+                <th class="text-right font-semibold py-3 px-4">Jan cells</th>
+                <th class="text-right font-semibold py-3 px-4">Apr cells</th>
+                <th class="text-right font-semibold py-3 px-4">Jan avg</th>
+                <th class="text-right font-semibold py-3 px-4">Apr avg</th>
+                <th class="text-right font-semibold py-3 px-4">Pos gained</th>
+                <th class="text-right font-semibold py-3 px-4">Jan top-3</th>
+                <th class="text-right font-semibold py-3 px-4">Apr top-3</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Competitor leaderboard -->
+    <div>
+      <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">LD Competitor Leaderboard</h2>
+          <p class="text-sm text-ink-500 mt-1">Pooled top-10 cell appearances across 8 priority queries × 13×13 grid. Urban Recovery highlighted. Click headers to sort. "Held the grid while the market churned."</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="ld-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="name">Pin</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="may_top3">Apr top-10</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="delta_top3">Δ top-10</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="may_avg_rank">Apr avg rank</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="delta_avg_rank">Δ avg rank</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="cells">Cells</th>
+                <th class="text-left font-semibold py-3 px-4">Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TOP URLS + KEYWORD BUCKETS ============== -->
+  <section id="competition" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Keyword buckets -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">Commercial Keyword Tiers</h3>
+        <p class="text-xs text-ink-500 mt-1">Where the 9,269 local-intent commercial queries Urban Recovery already touches sit in the rank distribution.</p>
+        <div class="h-64 mt-4"><canvas id="buckets-chart"></canvas></div>
+        <div class="mt-4 space-y-2 text-xs" id="buckets-legend"></div>
+      </div>
+
+      <!-- Top URLs Push Concentration -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="p-6 pb-4">
+          <h3 class="text-lg font-bold">Top URLs (GSC last 90d)</h3>
+          <p class="text-xs text-ink-500 mt-1">URLs by impression volume. "Lever" column shows the Q2 plan assignment.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="top-urls-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">URL</th>
+                <th class="text-right font-semibold py-3 px-4">Imp 90d</th>
+                <th class="text-right font-semibold py-3 px-4">Pos</th>
+                <th class="text-left font-semibold py-3 px-4">Lever</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POSITIVES VS NEGATIVES ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Positives vs Negatives</h2>
+    <p class="text-sm text-ink-500 max-w-4xl mb-6"><strong>Net:</strong> Urban Recovery held the Red Hook 13×13 grid (92.8% coverage, +21 net top-10 cells) while every other Brooklyn addiction pin churned — but the structural blockers (thin service-page conversion surface, GBP depth gap, PBN exposure, cross-borough non-diffusion) cap the ceiling. Q2 marginal lift is HQDM-side service-page builds + GBP depth + disavow + cross-borough location upgrades.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-3 text-emerald-700 font-bold uppercase tracking-wider text-xs">
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 010 1.4l-7.8 7.8a1 1 0 01-1.4 0L3.3 10.3a1 1 0 011.4-1.4L8 12.2l7-7a1 1 0 011.4 0z"/></svg>
+          <span>Positives</span>
+        </div>
+        <ul class="space-y-2 text-sm" id="positives-list"></ul>
+      </div>
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-3 text-rose-700 font-bold uppercase tracking-wider text-xs">
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M14.7 5.3a1 1 0 010 1.4L11.4 10l3.3 3.3a1 1 0 01-1.4 1.4L10 11.4l-3.3 3.3a1 1 0 01-1.4-1.4L8.6 10 5.3 6.7a1 1 0 011.4-1.4L10 8.6l3.3-3.3a1 1 0 011.4 0z"/></svg>
+          <span>Negatives</span>
+        </div>
+        <ul class="space-y-2 text-sm" id="negatives-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== STRATEGY — LEVERS ============== -->
+  <section id="strategy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-6 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Q2 Strategy — 5 Levers</h2>
+        <p class="text-sm text-ink-500 mt-1">Click any lever card to expand its action list. SEO Neo / DAS / GBP Blast / GBP Sniper / RD100 / NAP-overlay / AI Articles / GMB-Pin-Support / Driving-Directions stack <strong>removed</strong> per 2026-05-13 off-page program halt. Off-page work replaced with data-warranted disavow + YMYL trust citations + LGBTQ+-affirming PR + Q-format LLM articles.</p>
+      </div>
+    </div>
+    <div id="lever-cards" class="space-y-3"></div>
+  </section>
+
+  <!-- ============== ALL TASKS — FILTERABLE ============== -->
+  <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">All Q2 Actions</h2>
+        <p class="text-sm text-ink-500 mt-1">Filterable list of every action across the 5 levers. <strong>SEO Neo + AI Articles + DAS + GBP Blast/Sniper + RD100 + NAP-Overlay + GMB-Pin-Support + Driving-Directions tasks removed.</strong></p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <input id="task-search" type="search" placeholder="Search…" class="px-3 py-1.5 text-sm border border-slate-300 rounded focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" />
+        <select id="task-lever-filter" class="px-3 py-1.5 text-sm border border-slate-300 rounded outline-none focus:ring-2 focus:ring-brand-500">
+          <option value="">All levers</option>
+        </select>
+        <select id="task-month-filter" class="px-3 py-1.5 text-sm border border-slate-300 rounded outline-none focus:ring-2 focus:ring-brand-500">
+          <option value="">All months</option>
+          <option value="M1">M1</option>
+          <option value="M2">M2</option>
+          <option value="M3">M3</option>
+        </select>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="tasks-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Lever</th>
+              <th class="text-left font-semibold py-3 px-4 font-mono">Code</th>
+              <th class="text-left font-semibold py-3 px-4">Action</th>
+              <th class="text-center font-semibold py-3 px-4">Month</th>
+              <th class="text-center font-semibold py-3 px-4">Effort</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+      <div class="px-4 py-3 text-xs text-ink-500 border-t border-slate-200" id="tasks-summary"></div>
+    </div>
+  </section>
+
+  <!-- ============== KPI TARGETS ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl font-bold tracking-tight">Q2 KPI Targets</h2>
+    <p class="text-sm text-ink-500 mt-1">Baseline (Apr–May 2026) → Q2 target (Aug 2026) → Stretch.</p>
+    <div class="mt-4 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="kpi-targets-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">KPI</th>
+              <th class="text-right font-semibold py-3 px-4">Baseline</th>
+              <th class="text-right font-semibold py-3 px-4">Q2 Target</th>
+              <th class="text-right font-semibold py-3 px-4">Stretch</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== OWNER ASKS ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl font-bold tracking-tight">Owner Asks</h2>
+    <p class="text-sm text-ink-500 mt-1">Bundled for one 20-minute call. Each gates a downstream lever.</p>
+    <ol class="mt-6 space-y-3 list-decimal list-inside text-sm text-ink-700" id="owner-asks-list"></ol>
+  </section>
+
+  <!-- ============== DELIVERABLES ============== -->
+  <section id="deliverables" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl font-bold tracking-tight">All Deliverables</h2>
+    <p class="text-sm text-ink-500 mt-1">Strategy docs, push briefs, action CSVs, and the SEO-NEO-filtered final task list. Stored under <code class="text-[11px] bg-slate-100 px-1.5 py-0.5 rounded">HQDM/clients/urbanrecovery/deliverable/</code>.</p>
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="deliverables-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Deliverable</th>
+              <th class="text-left font-semibold py-3 px-4">Type</th>
+              <th class="text-left font-semibold py-3 px-4">File</th>
+              <th class="text-right font-semibold py-3 px-4">Open</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="border-t border-slate-200 bg-white mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-xs text-ink-500 space-y-3">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 items-center">
+        <span><strong class="text-ink-700">HQDM Search Intelligence</strong></span>
+        <span>Q2 2026 Strategic Dashboard · Urban Recovery</span>
+        <span>Prepared 2026-05-18 by Aleksandar Spasevski</span>
+      </div>
+      <div>
+        Data sources cross-verified: GSC live API (365d daily window through 2026-05-14, 855 pages / 13.81M imp / 44.14K clicks), DataForSEO LocalDominator 13×13 grid (Jan 27 + Apr 22 2026, 1,344 cells × 8 queries), DataForSEO Maps SERP (8 queries × 5 Brooklyn anchor coords), DataForSEO GBP info (UR + 6 competitors), DataForSEO Backlinks (1,642 BL / 958 RDs / 642 unique / spam-score 42), live HTTP probe (2026-05-15) of 7 priority /locations/* URLs. SEO Neo / DAS / GBP Blast / Sniper / RD100 / NAP-overlay / AI-Articles / GMB-Pin-Support / Driving-Directions tasks removed per 2026-05-13 off-page program halt.
+      </div>
+      <div class="text-ink-400">
+        Confidential — internal use + authorized client viewing only. <code class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">noindex</code> set; not indexable by search engines.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dashboard.js"></script>
+
+  <!-- Recovery-template inline renderers: tldr, kpi_targets, owner_asks, deliverables -->
+  <script>
+    (async function() {
+      const DATA = await fetch('./data/data.json').then(r => r.json()).catch(() => null);
+      if (!DATA) return;
+
+      // TL;DR
+      if (DATA.tldr) {
+        const el = document.getElementById('tldr-text');
+        if (el) el.innerHTML = DATA.tldr;
+      }
+
+      // KPI targets table
+      if (DATA.kpi_targets) {
+        const tbody = document.querySelector('#kpi-targets-table tbody');
+        if (tbody) tbody.innerHTML = DATA.kpi_targets.map(r => `
+          <tr>
+            <td class="py-3 px-4">${escapeHtml(r.kpi)}</td>
+            <td class="py-3 px-4 text-right font-mono">${escapeHtml(r.baseline)}</td>
+            <td class="py-3 px-4 text-right font-mono text-brand-500 font-semibold">${escapeHtml(r.target)}</td>
+            <td class="py-3 px-4 text-right font-mono text-emerald-700">${escapeHtml(r.stretch)}</td>
+          </tr>
+        `).join('');
+      }
+
+      // Owner asks
+      if (DATA.owner_asks) {
+        const ol = document.getElementById('owner-asks-list');
+        if (ol) ol.innerHTML = DATA.owner_asks.map(a => `<li class="leading-relaxed">${escapeHtml(a)}</li>`).join('');
+      }
+
+      // Deliverables table — one-click open in new tab
+      if (DATA.deliverables) {
+        const tbody = document.querySelector('#deliverables-table tbody');
+        if (tbody) tbody.innerHTML = DATA.deliverables.map(d => {
+          const href = `./deliverables/${encodeURIComponent(d.path)}`;
+          return `
+          <tr class="hover:bg-slate-50 cursor-pointer" onclick="if(!event.target.closest('a')){window.open('${href}', '_blank')}">
+            <td class="py-3 px-4"><a href="${href}" target="_blank" rel="noopener" class="text-brand-500 hover:text-brand-700 hover:underline font-medium">${escapeHtml(d.label)}</a></td>
+            <td class="py-3 px-4"><span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold uppercase ${typeBadgeClass(d.type)}">${escapeHtml(d.type)}</span></td>
+            <td class="py-3 px-4 font-mono text-[11px] text-ink-500">${escapeHtml(d.path)}</td>
+            <td class="py-3 px-4 text-right"><a href="${href}" target="_blank" rel="noopener" class="inline-flex items-center gap-1 text-xs text-brand-500 hover:text-brand-700 font-semibold whitespace-nowrap">Open <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/></svg></a></td>
+          </tr>`;
+        }).join('');
+      }
+
+      function typeBadgeClass(t) {
+        return {
+          pdf:  'bg-rose-100 text-rose-800',
+          md:   'bg-slate-100 text-slate-800',
+          csv:  'bg-emerald-100 text-emerald-800',
+          xlsx: 'bg-green-100 text-green-800',
+          docx: 'bg-blue-100 text-blue-800',
+          html: 'bg-amber-100 text-amber-800'
+        }[t] || 'bg-slate-100 text-slate-700';
+      }
+      function escapeHtml(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      }
+    })();
+  </script>
+</body>
+</html>

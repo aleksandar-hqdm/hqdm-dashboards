@@ -1,0 +1,68 @@
+SURFPOINT RECOVERY - PAGES TO CREATE (M1-M3 Q2 2026)
+
+Page type,Count,Months
+Service sub-pages (/treatments/*),6,M1: 2 / M2: 2 / M3: 2
+Insurance carrier landing pages (/insurance/*),4,M3: 4
+Location pages MISSING from real catchment,0,(none needed)
+TOTAL NEW PAGES TO CREATE M1-M3:,10,
+
+
+=== PAGES TO CREATE (DETAIL) ===
+
+Page URL,Type,Wave,Month,Anchor query,Addressable monthly vol,KD effective,Leverage score,Word target,Redirect FROM (orphan),Why priority
+/treatments/alcohol-detox,Service sub-page,Wave 1,M1,alcohol detox brooklyn,4583,41.5,110,"1,400-1,600",/services/alcohol-detox-services,Largest aligned cluster. Map pack already rank 1.47 - captures highest-ROI map -> on-page conversion vector.
+/treatments/dual-diagnosis,Service sub-page,Wave 1,M1,dual diagnosis treatment brooklyn,551,2.9,190,"1,300-1,500",(new URL - no orphan),Smallest competition in entire keyword universe. LLM citation gap. Service differentiator vs Genesis/ACI/TBH.
+/treatments/opioid-detox,Service sub-page (dual cluster - MAT),Wave 2,M2,opioid detox brooklyn + medication assisted treatment brooklyn,718,3.3,218,"1,500-1,800",/services/opioid-detox-services,"MAT cluster structurally underclaimed by inpatient providers - top 3 (Mount Sinai, Seek, One Brooklyn) are ALL outpatient."
+/treatments/short-term-rehab,Service sub-page,Wave 2,M2,short term inpatient brooklyn,180,20,9,"1,300-1,500",/services/comprehensive-short-term-rehab,Lowest competition in SERP universe - only Urban Recovery ranks in top 12 among real providers.
+/treatments/drug-detox,Service sub-page (hub parent),Wave 3,M3,drug detox brooklyn,6130,46.9,131,"1,400-1,600",/services/drug-detox-services,Biggest cluster but hardest competition. Build last - inherits internal-link backing from 4 prior sub-pages.
+/treatments/benzodiazepine-detox,Service sub-page (orphan capture),Wave 3,M3,benzodiazepine detox brooklyn,1300,35,37,"1,400-1,600",/services/benzodiazepine-detox-services,"Captures HIGHEST-IMPRESSION orphan (1,925 imp/365d at avg pos 18-30). Redirect = highest-revenue infrastructure move of Q2."
+/insurance/medicaid,Insurance carrier landing,M3,M3,medicaid drug rehab brooklyn,,,,~600-800,(new URL - no orphan),Uncontested query surface - no direct competitor has dedicated carrier pages. Reuses M1-M2 content blocks (~3-4h vs ~10-14h per service page).
+/insurance/aetna,Insurance carrier landing,M3,M3,aetna detox brooklyn,,,,~600-800,(new URL - no orphan),Uncontested. Same pattern.
+/insurance/cigna,Insurance carrier landing,M3,M3,cigna dual diagnosis brooklyn,,,,~600-800,(new URL - no orphan),Uncontested. Same pattern.
+/insurance/bluecross-blueshield,Insurance carrier landing,M3,M3,bcbs inpatient rehab brooklyn,,,,~600-800,(new URL - no orphan),Uncontested. Same pattern.
+
+
+=== LOCATION PAGE COVERAGE ===
+
+Total /locations/* URLs on site:,105
+Real-catchment neighborhoods defined in client.json:,27
+Catchment neighborhoods with at least one existing location page:,27
+Catchment neighborhoods MISSING a location page:,0
+
+VERDICT: NO MISSING LOCATIONAL PAGES in the real catchment.
+"The 105 existing /locations/* URLs cover all 27 catchment neighborhoods. The problem with locations is QUALITY (doorway-style stuffed slugs), NOT coverage."
+
+Catchment neighborhood (client.json),Existing /locations/* slug match,Status
+coney-island,/locations/leading-rehabilitation-center-in-coney-island-creek-ny,PRESENT
+brighton-beach,/locations/brighton-beach-ny,PRESENT
+bay-ridge,/locations/leading-addiction-rehab-in-bay-ridge-towers-ny,PRESENT
+sunset-park,/locations/patient-focused-rehabilitation-services-in-sunset-park-ny,PRESENT
+bath-beach,/locations/bath-beach,PRESENT
+bensonhurst,/locations/holistic-rehabilitation-center-in-bensonhurst-west-ny,PRESENT
+borough-park,/locations/holistic-rehabilitation-services-in-borough-park-ny,PRESENT
+gravesend,/locations/comprehensive-rehabilitation-center-in-gravesend-bay-ny,PRESENT
+sheepshead-bay,/locations/sheepshead-bay,PRESENT
+dyker-heights,/locations/recovery-center-in-dyker-heights-ny,PRESENT
+manhattan-beach,/locations/most-effective-addiction-rehab-in-manhattan-beach-ny,PRESENT
+marine-park,/locations/recovery-center-in-marine-park-ny,PRESENT
+flatlands,/locations/flatlands,PRESENT
+old-mill-basin,/locations/old-mill-basin,PRESENT
+stillwell,/locations/recommended-addiction-rehab-in-stillwell-brooklyn,PRESENT
+neptune-avenue,/locations/best-addiction-treatment-in-neptune-avenue-brooklyn,PRESENT
+shore-road,/locations/highly-recommended-rehab-in-shore-road-ny,PRESENT
+starrett-city,/locations/starrett-city,PRESENT
+seagate,/locations/recovery-center-in-seagate-ny,PRESENT
+sea-gate,/locations/recovery-center-in-seagate-ny,PRESENT (same as seagate)
+midwood,/locations/east-midwood,PARTIAL (east-midwood exists; pure midwood does not)
+east-midwood,/locations/east-midwood,PRESENT
+ditmas-park,/locations/rehab-center-in-ditmas-park-ny,PRESENT
+new-utrecht,/locations/rehab-center-in-new-utrecht-ny,PRESENT
+mapleton,/locations/rehab-center-in-mapleton-ny,PRESENT
+flatbush,/locations/professional-rehab-center-in-east-flatbush-ny,PRESENT
+fort-hamilton,/locations/dependable-rehab-in-fort-hamilton-ny,PRESENT
+
+"Recommended location-page work in M1-M3 (per parent plan, NOT 'create' work):"
+1. M1-M2 AUDIT triage on all 105 URLs (per Pillar 2 of the 3-month plan)
+2. M2-P6 service-area on-page enhancement (Services Available in [Neighborhood] block + per-location quality pass)
+"3. Slug rewrites (doorway-style to clean) - case-by-case, AFTER content quality pass"
+4. /areas-served rebuild in M3-P5 as the canonical neighborhood hub

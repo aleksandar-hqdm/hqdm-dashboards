@@ -1,0 +1,45 @@
+section,month,url_or_query,metric,baseline_value,target_60d,target_90d,m1_actual,m2_actual,m3_actual,status,notes
+Per-URL Rank,M1,/,avg_pos,5.8,5.0,5.0,,,,baseline,Brand-query position - expect maintained as commercial queries split off
+Per-URL Rank,M1,/drug-rehab-new-york-city,rank_drug-rehab-in-new-york-city,not-existent,30,8,,,,not-built,Tied to HP-01
+Per-URL Rank,M1,/alcohol-treatment-new-york-city,rank_alcohol-treatment-new-york-city,not-existent,30,8,,,,not-built,Tied to HP-02
+Per-URL Rank,M2,/drug-treatment-nyc,rank_drug-treatment-nyc,not-existent,30,8,,,,not-built,Tied to HP-03
+Per-URL Rank,M2,/rehab-centers-nyc,rank_rehab-centers-in-nyc,not-existent,30,8,,,,not-built,Tied to HP-04
+Per-URL Rank,M1,/locations/brooklyn,rank_rehab-brooklyn,not-existent,30,10,,,,not-built,Tied to BH-01
+Per-URL Rank,M2,/locations/queens,rank_rehab-queens,not-existent,30,10,,,,not-built,Tied to BH-02
+Per-URL Rank,M3,/locations/bronx,rank_rehab-bronx,81,30,10,,,,baseline,Tied to BH-03 (existing page being upgraded)
+Per-URL Rank,M1,/services/medication-assisted-treatment,rank_methadone-clinic-harlem,9.7,top-5,top-3,,,,baseline,Tied to MAT-01
+Per-URL Rank,M2,/services/dual-diagnosis,rank_dual-diagnosis-rehab-nyc,not-existent,30,15,,,,not-built,Tied to DD-01
+Per-URL Rank,M1,/suburb/upper-east-side,rank_upper-east-side-rehab,24,15,10,,,,baseline,Tied to UES-01
+Per-URL Rank,M1,/suburb/central-harlem-ny,rank_rehab-harlem,5.7,top-3,top-3,,,,baseline,Authority strengthened by CON-01 consolidation
+Per-URL Rank,M2,/blog/suboxone-strips-vs-suboxone-pills,rank_suboxone-strips,16,top-10,top-5,,,,baseline,Tied to MAT-02 - blog refresh boosts rank
+Maps,Q,grid-pos-dual-diagnosis-treatment-centers-nyc,avg_rank_140cells,1.98,maintain,maintain,,,,baseline,Owned - defend
+Maps,Q,grid-pos-inpatient-drug-rehab-nyc,avg_rank_140cells,3.42,top-3,top-3,,,,baseline,Owned - push to consistent top-3
+Maps,Q,grid-pos-inpatient-alcohol-rehab-nyc,avg_rank_140cells,3.39,top-3,top-3,,,,baseline,Owned - push to consistent top-3
+Maps,Q,grid-pos-alcohol-rehab-nyc,avg_rank_140cells,3.79,top-3,top-3,,,,baseline,Climbing - push to consistent top-3
+Maps,Q,grid-pos-alcohol-rehab-near-me,avg_rank_140cells,5.57,top-5,top-5,,,,baseline,Climbing
+Maps,Q,grid-pos-addiction-treatment-nyc,avg_rank_140cells,6.61,top-5,top-5,,,,baseline,Climbing
+Maps,Q,grid-pos-detox-near-me,avg_rank_140cells,5.47,top-5,top-5,,,,baseline,Stuck - NYS Detox forensic + place_topics expansion needed
+Maps,Q,grid-pos-addiction-rehab-ny,avg_rank_140cells,3.56,top-3,top-3,,,,baseline,Pushing
+GSC-Aggregate,M1,homepage-only,impressions_28d,28101,maintain,maintain,,,,baseline,Branded queries
+GSC-Aggregate,M1,homepage-only,clicks_28d,270,maintain,maintain,,,,baseline,Branded queries
+GSC-Aggregate,M1,site-total,impressions_28d,~1500000,maintain,>1500000,,,,baseline,Includes blog decline + commercial gains
+GSC-Aggregate,M1,site-total,clicks_28d,measure,baseline-set,>baseline,,,,baseline,Total commercial click trajectory
+GSC-Aggregate,M1,borough-queries-combined,impressions_28d,~575,maintain,800+,,,,baseline,Brooklyn + Queens + Bronx queries
+GSC-Aggregate,M1,borough-queries-combined,avg_pos,~50,30,15,,,,baseline,Once borough hubs publish
+LLM-Citation,M1,dual-diagnosis-treatment-centers-nyc,citation_rate_5surfaces,unknown,measure,baseline-set,,,,planned,Tied to DD-02 baseline audit
+LLM-Citation,M1,inpatient-drug-rehab-nyc,citation_rate_5surfaces,unknown,measure,baseline-set,,,,planned,Tied to DD-02 baseline audit
+LLM-Citation,M1,methadone-clinic-harlem,citation_rate_5surfaces,unknown,measure,baseline-set,,,,planned,Tied to DD-02 baseline audit
+Cannibal-Consolidation,M1,Harlem-3-way,301_deployed,0_of_2,2_of_2,2_of_2,,,,planned,CON-01
+Cannibal-Consolidation,M1,Hamilton-Heights-2way,301_deployed,0_of_1,1_of_1,1_of_1,,,,planned,CON-02
+Cannibal-Consolidation,M1,Morningside-Heights-2way,301_deployed,0_of_1,1_of_1,1_of_1,,,,planned,CON-03
+Cannibal-Consolidation,M2,Riverside-2way,301_deployed,0_of_2,2_of_2,2_of_2,,,,planned,CON-04
+Cannibal-Consolidation,M2,Mount-Eden-2way,301_deployed,0_of_2,2_of_2,2_of_2,,,,planned,CON-05
+Off-Page-Output,M1,SEO-Neo-Month1,articles_published,0,4,4,,,,planned,NEO-01_M1
+Off-Page-Output,M1,AI-Articles-Month1,articles_published,0,4,4,,,,planned,AI-01_M1
+Off-Page-Output,M1,Driving-Directions-Month1,routes_published,0,3,3,,,,planned,DD-01_M1
+Off-Page-Output,M1,GBP-Posts-Month1,posts_published,0,4,4,,,,planned,GBP-01_M1
+Off-Page-Output,M1,Citations-Month1,submissions_complete,0,3-5,3-5,,,,planned,CIT-01_M1
+GA4-Conversion,M1,site-total,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,Track downstream from organic + GBP channels
+GA4-Conversion,M1,site-total,phone_call_clicks_30d,measure,baseline-set,>baseline,,,,baseline,Same
+GA4-Conversion,M1,by-landing-page-bucket-suburb,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,Track which /suburb/ pages actually convert
+GA4-Conversion,M1,by-landing-page-bucket-service,form_submissions_30d,measure,baseline-set,>baseline,,,,baseline,Existing 5 service pages vs new 5 (HP-01 through HP-04 + MAT + DD)

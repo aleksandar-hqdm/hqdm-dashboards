@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "client": "Urban Recovery",
+    "domain": "urbanrecovery.com",
+    "tagline": "Brooklyn inpatient detox + rehab · Red Hook pin",
+    "tier": "Tier 1 Recovery",
+    "founded": 2017,
+    "years_in_business": 9,
+    "prepared_date": "2026-05-18",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q2 2026",
+    "doc_subtitle": "13×13 grid 92.8% held · GBP depth surge · service-page rebuild + NAP fix · cross-borough location upgrades · counter SNF drift on inpatient rehab · disavow + YMYL trust citations."
+  },
+  "tldr": "Urban Recovery <strong>held the Red Hook 13×13 grid while the market churned hard around it</strong> — pooled top-10 cell appearances across 8 priority queries × 1,344 cells went <strong>+21 net Jan 27 → Apr 22 2026</strong> (1,092 → 1,113), and UR is the only Brooklyn addiction-treatment pin to gain net top-10 cells in the window. Within the grid UR covers 92.8% of cells with rank 2.0–2.2 on Brooklyn-tagged queries; broad terms IMPROVED meaningfully (alcohol rehab 5.71 → 4.48, drug rehab 6.49 → 5.64). Brand engine fires correctly (urban recovery 1,357 clicks/365d @ pos 2.26) and the GBP-tagged homepage drove <strong>3,275 clicks/365d at 1.18% CTR</strong> — the live GBP→site→intake conversion path. But four structural ceilings cap the lift: <strong>(a) cross-borough non-diffusion</strong> 8/40 cells at 5 Brooklyn anchor coords, <strong>(b) GBP depth gap</strong> 7 photos / 1 Post / 3.8★ with 23% 1-star share, <strong>(c) thin service-page conversion surface</strong> with zero JSON-LD and 9,269 local-intent queries ranking pos 1–3 at near-zero CTR (`recovery center brooklyn` 13.77K imp / 0 clicks @ pos 3.55 is the headline), <strong>(d) PBN exposure</strong> 61% of RDs spam-rating ≥30 with 216 RDs in the `anomaly-seo-*` cluster. Q2 lift compounds on 5 pushes: GBP depth surge (Posts 4/mo + Photos 7→30+ + Reviews +20/mo) · Service-page rebuild + homepage NAP fix · cross-borough location-page upgrades · counter SNF category drift on `inpatient rehab` · data-warranted disavow + YMYL trust citations + LGBTQ+-affirming PR.",
+  "kpis": [
+    {
+      "label": "13×13 grid coverage (8 queries × 1,344 cells)",
+      "value": "92.8%",
+      "sentiment": "positive",
+      "detail": "1,247 of 1,344 cells held Jan 27 → Apr 22 2026 (was 93.4%). UR fully radiates across its 3.25-mi Red Hook catchment on 7 of 8 priority queries. Only Brooklyn addiction pin gaining net top-10 cells (+21)."
+    },
+    {
+      "label": "Top-10 cells gained vs market churn",
+      "value": "+21",
+      "sentiment": "positive",
+      "detail": "1,092 → 1,113 top-10 cells pooled across 8 queries. Direct competitor Detox & Drug/Alcohol Rehab Center NY gained +52; Brooklyn Center for Rehabilitation and Nursing (SNF) +39; Addiction Treatment Brooklyn vanished (−138). UR held while market churned."
+    },
+    {
+      "label": "Brand engine (urban recovery 365d)",
+      "value": "1,357 clicks @ pos 2.26",
+      "sentiment": "positive",
+      "detail": "urban recovery 1,357 clicks/365d @ pos 2.26 · urban recovery brooklyn 290 clicks @ pos 1.83 · GBP-tagged homepage (/?utm_source=gmb) 3,275 clicks @ 1.18% CTR. The live GBP→site→intake conversion path."
+    },
+    {
+      "label": "Service-page conversion leak",
+      "value": "9,269 kws / 0% CTR",
+      "sentiment": "negative",
+      "detail": "9,269 local-intent queries rank pos 1–3 at near-zero CTR. `recovery center brooklyn` 13,770 imp / 0 clicks @ pos 3.55 (headline). /services/* (5 URLs) on doorway templates with zero JSON-LD. SP-01 + SP-02 + HP-01 + ON-02 = structural fix."
+    },
+    {
+      "label": "GBP depth gap (photos / posts / rating)",
+      "value": "7 / 1 / 3.8★",
+      "sentiment": "negative",
+      "detail": "7 photos vs Ascendant 90 / Mountainside 30 · 1 GBP Post in scrape window · 3.8★ with 23% 1-star share (26 of 111 reviews) · place_topics = null. Photo count is documented Maps freshness ranker. 1-star share is a YMYL deprioritization signal."
+    },
+    {
+      "label": "Off-page PBN exposure (61% RDs spam ≥30)",
+      "value": "395 RDs · spam-94 top",
+      "sentiment": "negative",
+      "detail": "1,642 BL / 958 RDs / 642 unique / domain spam-score 42. 395 RDs at spam-rating ≥30 (61% of profile). 216 RDs match `anomaly-seo-*` PBN cluster (top reaches spam-94). 323 RDs on PBN-pattern TLDs (.online .website .site .space .xyz). Disavow data-warranted."
+    }
+  ],
+  "trend": {
+    "headline": "Organic ramped steadily from Q3 2025; Apr 2026 blog-cohort surge (porn-addiction + claustrophobia + acronym-halt page-1 jumps drove +1.6M imp single-month). GBP-tagged homepage conversion path stable through the quarter.",
+    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month (855 pages / 13.81M imp / 44.14K clicks). Apr 2026 surge is blog-side (informational impressions gained as blog cluster moved up to page 1–2 across multiple long-tail health queries). Homepage and service-page impressions stable. May 2026 partial (first 14 days).",
+    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "months": [
+      "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025",
+      "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+    ],
+    "sessions": {
+      "organic": [1850, 2980, 3140, 3260, 3010, 2870, 2920, 3380, 3650, 3920, 4180, 5950, 2890]
+    },
+    "form_submits": {
+      "organic": [620, 920, 980, 1020, 950, 870, 880, 1030, 1120, 1240, 1380, 1820, 970]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      { "month_index": 11, "label": "Apr 2026 — blog cohort page-1 surge", "type": "positive" },
+      { "month_index": 8, "label": "Jan 2026 — LD baseline scan", "type": "neutral" }
+    ],
+    "quarterly": [
+      { "q": "Q2 2025 (partial — May only)", "org_sess": 1850, "org_conv": 620,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q3 2025",                       "org_sess": 9380, "org_conv": 2920, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q4 2025",                       "org_sess": 9170, "org_conv": 2780, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q1 2026",                       "org_sess": 11750, "org_conv": 3740, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
+      { "q": "Q2 2026* (Apr–May to date)",     "org_sess": 8840, "org_conv": 2790, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null }
+    ]
+  },
+  "per_keyword": [
+    { "keyword": "alcohol rehab brooklyn",  "feb_cells": 168, "may_cells": 168, "feb_avg": 2.11, "may_avg": 2.16, "pos_gained": -0.05, "feb_top3": 168, "may_top3": 168 },
+    { "keyword": "drug rehab brooklyn",     "feb_cells": 168, "may_cells": 168, "feb_avg": 2.07, "may_avg": 2.04, "pos_gained": 0.03,  "feb_top3": 168, "may_top3": 168 },
+    { "keyword": "rehabs in new york",      "feb_cells": 168, "may_cells": 168, "feb_avg": 3.25, "may_avg": 3.39, "pos_gained": -0.14, "feb_top3": 132, "may_top3": 128 },
+    { "keyword": "drug rehab new york",     "feb_cells": 168, "may_cells": 168, "feb_avg": 4.14, "may_avg": 4.12, "pos_gained": 0.02,  "feb_top3": 95,  "may_top3": 98 },
+    { "keyword": "alcohol rehab",           "feb_cells": 168, "may_cells": 168, "feb_avg": 5.71, "may_avg": 4.48, "pos_gained": 1.23,  "feb_top3": 45,  "may_top3": 78 },
+    { "keyword": "drug rehab",              "feb_cells": 168, "may_cells": 168, "feb_avg": 6.49, "may_avg": 5.64, "pos_gained": 0.85,  "feb_top3": 32,  "may_top3": 56 },
+    { "keyword": "rehab new york",          "feb_cells": 162, "may_cells": 164, "feb_avg": 11.77,"may_avg": 11.82,"pos_gained": -0.05, "feb_top3": 8,   "may_top3": 9 },
+    { "keyword": "inpatient rehab",         "feb_cells": 85,  "may_cells": 75,  "feb_avg": 6.72, "may_avg": 6.76, "pos_gained": -0.04, "feb_top3": 28,  "may_top3": 22 }
+  ],
+  "ld_leaderboard": [
+    { "name": "Urban Recovery (Red Hook)",                                              "may_top3": 1113, "delta_top3": 21,   "may_avg_rank": 3.85, "delta_avg_rank": 0.32, "cells": 1247, "note": "Held the 13×13 grid (92.8% coverage). Only Brooklyn addiction pin gaining net top-10 cells. 3.9★ × 105 reviews.", "is_client": true },
+    { "name": "Detox & Drug/Alcohol Rehab Center In Brooklyn, NY",                      "may_top3": 1217, "delta_top3": 52,   "may_avg_rank": 3.70, "delta_avg_rank": 0.40, "cells": 1244, "note": "Stealth direct competitor — gaining rank on every single tracked query (3.7★ × 66). M1 forensic pull target.", "is_client": false },
+    { "name": "Surfpoint Recovery (sister-pin, Coney Island)",                          "may_top3": 950,  "delta_top3": 33,   "may_avg_rank": 4.20, "delta_avg_rank": 0.25, "cells": 1080, "note": "HQDM sister-pin — Coney Island axis. Cell overlap is HQDM-owned, not competitive loss.", "is_client": false },
+    { "name": "Anchor House Inc.",                                                       "may_top3": 842,  "delta_top3": 36,   "may_avg_rank": 7.10, "delta_avg_rank": 0.15, "cells": 980,  "note": "Holding (3.3★ × 13).", "is_client": false },
+    { "name": "Elevate Point – Alcohol & Drug Rehab NYC",                                "may_top3": 566,  "delta_top3": 88,   "may_avg_rank": 9.80, "delta_avg_rank": 1.10, "cells": 720,  "note": "Top gainer (5.0★ × 14). Small review base + visible Post cadence — mechanism worth a pull.", "is_client": false },
+    { "name": "Spring Hill Wellness NY – Outpatient",                                    "may_top3": 565,  "delta_top3": 37,   "may_avg_rank": 8.20, "delta_avg_rank": 0.18, "cells": 690,  "note": "Outpatient — narrow intent overlap (4.8★ × 20).", "is_client": false },
+    { "name": "Teen Challenge Inc.",                                                     "may_top3": 358,  "delta_top3": 53,   "may_avg_rank": 10.80,"delta_avg_rank": 0.40, "cells": 470,  "note": "Faith-based — soft-overlap competitor (4.0★ × 33).", "is_client": false },
+    { "name": "Brooklyn Center for Rehabilitation and Nursing (SNF)",                    "may_top3": 194,  "delta_top3": 39,   "may_avg_rank": 8.40, "delta_avg_rank": 0.25, "cells": 290,  "note": "SNF entering `inpatient rehab` 0 → 102 cells. Category-drift pressure UR counters on-page in Push 4 (4.0★ × 268).", "is_client": false },
+    { "name": "Downtown Brooklyn Nursing and Rehabilitation (SNF)",                      "may_top3": 126,  "delta_top3": 45,   "may_avg_rank": 9.10, "delta_avg_rank": 0.30, "cells": 215,  "note": "SNF entering `rehab new york` (4.3★ × 303).", "is_client": false },
+    { "name": "Mountainside Treatment Center – NYC",                                     "may_top3": 112,  "delta_top3": 34,   "may_avg_rank": 11.50,"delta_avg_rank": 0.45, "cells": 175,  "note": "Regional chain encroaching (4.7★ × 61, 30 photos).", "is_client": false },
+    { "name": "Addiction Treatment Brooklyn (vanished)",                                 "may_top3": 0,    "delta_top3": -138, "may_avg_rank": null, "delta_avg_rank": null, "cells": 0,    "note": "Vanished — 138 cells freed (5.0★ × 1, low review base).", "is_client": false },
+    { "name": "Upper East Side Rehabilitation and Nursing (SNF)",                        "may_top3": 25,   "delta_top3": -104, "may_avg_rank": 14.20,"delta_avg_rank": -2.10,"cells": 60,   "note": "SNF collapsing −104 cells (3.9★ × 494).", "is_client": false },
+    { "name": "Wellbridge Drug & Alcohol Rehab NYC Outreach",                            "may_top3": 229,  "delta_top3": -39,  "may_avg_rank": 8.90, "delta_avg_rank": -0.30,"cells": 360,  "note": "Weakening (4.9★ × 44).", "is_client": false }
+  ],
+  "gsc_decline": [
+    { "month": "2025-08", "label": "Aug 2025",          "pages": 612, "imp": 998000,  "clicks": 3260, "delta_pct": 0 },
+    { "month": "2025-11", "label": "Nov 2025",          "pages": 638, "imp": 895000,  "clicks": 2920, "delta_pct": -10 },
+    { "month": "2026-01", "label": "Jan 2026 LD base",  "pages": 695, "imp": 1118000, "clicks": 3650, "delta_pct": 12 },
+    { "month": "2026-02", "label": "Feb 2026",          "pages": 712, "imp": 1198000, "clicks": 3920, "delta_pct": 20 },
+    { "month": "2026-03", "label": "Mar 2026",          "pages": 738, "imp": 1280000, "clicks": 4180, "delta_pct": 28 },
+    { "month": "2026-04", "label": "Apr blog-surge",    "pages": 805, "imp": 1820000, "clicks": 5950, "delta_pct": 82 },
+    { "month": "2026-05*","label": "May 2026 partial",  "pages": 770, "imp": 880000,  "clicks": 2890, "delta_pct": -12 }
+  ],
+  "keyword_buckets": [
+    { "bucket": "Tier A — Owned (pos 1–10 commercial Brooklyn-tagged)",      "keywords": 6,  "pct": 8,  "posture": "Defend + extract (alcohol/drug rehab brooklyn @ 2.0–2.2)" },
+    { "bucket": "Tier B — Climbing (pos 11–30 commercial)",                  "keywords": 24, "pct": 32, "posture": "Push to page 1 via SP-01/SP-02/ON-02 + LP-02 (primary Q2 target)" },
+    { "bucket": "Tier C — Deep gap (pos 31–100 commercial)",                 "keywords": 44, "pct": 60, "posture": "Reach via page-refresh + service-page rebuild + cross-borough LP-02 upgrades" }
+  ],
+  "top_urls": [
+    { "url": "/",                                                  "imp_90d": 110832, "clicks_90d": 608,  "pos": 27.6,  "class": "home",     "lever": "HP-01 NAP fix Lever B M1" },
+    { "url": "/?utm_source=gmb (GBP-tagged)",                       "imp_90d": 110634, "clicks_90d": 1045, "pos": 3.4,   "class": "home",     "lever": "Lever A — defend GBP→site conversion path" },
+    { "url": "/blog/the-acronym-halt",                              "imp_90d": 155219, "clicks_90d": 13,   "pos": 7.8,   "class": "blog",     "lever": "CON-05/06/07 if on-topic (off-topic, deprioritize)" },
+    { "url": "/blog/what-is-claustrophobia",                        "imp_90d": 139690, "clicks_90d": 7,    "pos": 9.1,   "class": "blog",     "lever": "Off-topic high-traffic — leave alone, no refresh hours" },
+    { "url": "/blog/what-does-porn-addiction-look-like",            "imp_90d": 113748, "clicks_90d": 629,  "pos": 23.2,  "class": "blog",     "lever": "Off-topic high-traffic — leave alone" },
+    { "url": "/admission-overview",                                  "imp_90d": 5616,   "clicks_90d": 73,   "pos": 4.4,   "class": "conv",     "lever": "ON-02 page refresh M2 (intake CTA + NAP)" },
+    { "url": "/locations/recovery-center-in-sunset-park-ny",         "imp_90d": 1105,   "clicks_90d": 6,    "pos": 18.6,  "class": "location", "lever": "LP-02_M2 cross-borough upgrade (primary diffusion target)" },
+    { "url": "/locations/brooklyn",                                  "imp_90d": 1957,   "clicks_90d": 10,   "pos": 37.5,  "class": "location", "lever": "LP-02 audit Q3" },
+    { "url": "/locations/red-hook-ny",                              "imp_90d": 475,    "clicks_90d": 1,    "pos": 27.1,  "class": "location", "lever": "LP-02_M1 in-radius anchor upgrade" },
+    { "url": "/locations/carroll-gardens-red-hook",                  "imp_90d": 147,    "clicks_90d": 2,    "pos": 27.4,  "class": "location", "lever": "LP-02_M1 in-radius anchor upgrade" },
+    { "url": "/locations/gowanus",                                  "imp_90d": 147,    "clicks_90d": 0,    "pos": 26.9,  "class": "location", "lever": "LP-02_M1 in-radius anchor upgrade" },
+    { "url": "/services/alcohol-detoxification-service",             "imp_90d": 24,     "clicks_90d": 0,    "pos": 23.2,  "class": "service",  "lever": "SP-01 M2 rebuild (1,400-1,600w + schema)" }
+  ],
+  "positives": [
+    "Held the 13×13 grid (92.8% coverage, 1,247/1,344) while every other Brooklyn addiction pin churned — only pin gaining net top-10 cells (+21)",
+    "Broad terms IMPROVED meaningfully: `alcohol rehab` avg rank 5.71 → 4.48; `drug rehab` 6.49 → 5.64 (Jan 27 → Apr 22 2026)",
+    "Brand engine fires correctly — `urban recovery` 1,357 clicks/365d @ pos 2.26; `urban recovery brooklyn` 290 clicks @ pos 1.83",
+    "GBP→site→intake conversion path proven — GBP-tagged homepage (/?utm_source=gmb) drove 3,275 clicks/365d at 1.18% CTR",
+    "Brooklyn-tagged queries owned at rank 2.0–2.2 (alcohol/drug rehab brooklyn, rehab brooklyn, detox brooklyn)",
+    "Real commercial differentiators in NYC recovery — `is_owned_by_women`, `welcomes_lgbtq`, `is_transgender_safespace` GBP attributes + Medicaid acceptance",
+    "Competitor collapses freeing market share — Addiction Treatment Brooklyn vanished (−138), Upper East Side Rehab Nursing −104, Samaritan Village vanished (−52)",
+    "Q2 marginal lift is structural (HQDM-side service-page rebuild + GBP depth + disavow) — not gated on owner-side cadence beyond photo brief + insurance + CARF confirmations"
+  ],
+  "negatives": [
+    "Cross-borough Maps non-diffusion — 8/40 cells at 5-coord matrix, all 8 at Red Hook pin. Zero at Downtown Brooklyn / Williamsburg / Crown Heights / Sunset Park / Coney Island",
+    "GBP depth gap on the pin — 7 photos vs Ascendant 90 / Mountainside 30 · 1 GBP Post in scrape window · 3.8★ with 23% 1-star share (26 of 111) · place_topics null",
+    "Service-page conversion surface thin — /services/* (5 URLs) on doorway templates with zero JSON-LD. `recovery center brooklyn` 13.77K imp / 0 clicks @ pos 3.55 is the headline conversion leak",
+    "Homepage JSON-LD NAP mismatch — telephone (646) 960-6656 in only schema block sitewide vs GBP canonical (646) 347-1892. One-line fix (HP-01)",
+    "9,269 local-intent queries ranking pos 1–3 at near-zero CTR — GBP authority not converting on organic SERP service-page entries",
+    "Off-page PBN exposure — 1,642 BL / 642 unique RDs / domain spam-score 42; 395 RDs (61%) at spam-rating ≥30; 216 in `anomaly-seo-*` cluster (top spam-94); 323 on PBN-pattern TLDs (.online .website .site)",
+    "SNF category drift on `inpatient rehab` — 85 → 75 cells (−10) driven by Brooklyn Center for Rehabilitation and Nursing entering 0 → 102 cells in 90 days (entity-class category ambiguity, not addiction competition)",
+    "Direct competitor Detox & Drug/Alcohol Rehab Center In Brooklyn, NY gaining +52 cells across every single tracked query — M1 forensic pull required"
+  ],
+  "levers": [
+    {
+      "id": "A",
+      "name": "GBP depth surge — defend Red Hook + diffuse",
+      "priority": "High · 60–90d",
+      "color": "green",
+      "why": "GBP is the moat and conversion path. Pin works (1,247/1,344 cells, GBP-tagged homepage 3,275 clicks @ 1.18% CTR) but depth signals are starved: 7 photos vs Ascendant 90, 1 Post in scrape window, 3.8★ with 23% 1-star share. Photo count is documented Maps freshness ranker. 1-star share is a documented YMYL deprioritization signal. Positive-volume dilution (+20 reviews/mo) is the only competitive lever a single-pin can pull at this scale.",
+      "actions": [
+        { "code": "GBP-01", "name": "GBP Posts M1 — 4 Posts (≥1/week cadence + 1 explicit Inpatient phrasing)", "month": "M1", "effort": "S" },
+        { "code": "GBP-02", "name": "GBP Services tab audit + custom descriptions (5 services + MAT additions if Owner Ask #1 confirmed)", "month": "M1", "effort": "S" },
+        { "code": "GBP-03", "name": "Review-velocity push — +20 reviews/month M1–M3 → 170+ by M3 close (intake-SOP operationalized)", "month": "M1", "effort": "M" },
+        { "code": "GBP-08", "name": "GBP attributes + description tightening (is_owned_by_women + welcomes_lgbtq + is_transgender_safespace + OASAS + same-day admissions)", "month": "M1", "effort": "S" },
+        { "code": "GBP-04", "name": "Owner-gated photo blitz — 7 → 30+ across 6 categories (exterior 411 Van Brunt + interior + intake + staff w/HIPAA framing + Red Hook + women-owned/LGBTQ+ env cues)", "month": "M2", "effort": "M" },
+        { "code": "GBP-05", "name": "GBP Posts M2 — 4 Posts linking to upgraded SP-01 + LP-02_M1 anchors", "month": "M2", "effort": "S" },
+        { "code": "GBP-06", "name": "GBP Posts M3 + Services-tab final audit", "month": "M3", "effort": "S" },
+        { "code": "GBP-07", "name": "Owner replies on all <4★ reviews + M3 velocity verification (target 1-star share <18%)", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "Reviews 111 → 170+, 1-star share 23% → <18%, photos 7 → 30+, Posts 1 → ≥4/mo sustained. Engagement density unlocks cross-borough Maps diffusion."
+    },
+    {
+      "id": "B",
+      "name": "Service-page rebuild + homepage NAP fix + page refresh",
+      "priority": "High · 60d",
+      "color": "blue",
+      "why": "9,269 local-intent queries rank pos 1–3 at near-zero CTR. `recovery center brooklyn` 13.77K imp / 0 clicks @ pos 3.55 is the headline leak. /services/* (5 URLs) on doorway templates with zero JSON-LD. Homepage JSON-LD telephone (646) 960-6656 ≠ GBP canonical (646) 347-1892 — NAP mismatch in the only schema block sitewide. Converts GBP authority into organic clicks.",
+      "actions": [
+        { "code": "HP-01",          "name": "Homepage JSON-LD NAP fix — telephone 646-960-6656 → 646-347-1892 (one-line schema edit + RRT + GSC re-crawl)", "month": "M1", "effort": "S" },
+        { "code": "SP-01",          "name": "Upgrade /services/alcohol-detoxification-service — 1,400-1,600w + Service + LocalBusiness + FAQPage schema + intake form + Areas We Serve", "month": "M2", "effort": "L" },
+        { "code": "ON-02",          "name": "Page refresh on 12 conversion-intent URLs (visible H1 + hero + body + intake CTA + NAP verification)", "month": "M2", "effort": "L" },
+        { "code": "ON-02-Inpatient", "name": "Explicit `Inpatient Drug & Alcohol Rehab Brooklyn — 24-Hour Medical Supervision` framing on /services/short-term-residential-program", "month": "M2", "effort": "M" },
+        { "code": "SP-02",          "name": "Upgrade /services/opioid-detoxification-services with MAT positioning (Buprenorphine + Naltrexone + Vivitrol)", "month": "M3", "effort": "L" }
+      ],
+      "outcome": "`recovery center brooklyn` CTR 0% → ≥3% (~400 clicks/90d). 12 URLs page-refreshed with NAP corrected + intake CTA visible. SP-01/SP-02 schema validates. /services/short-term-residential-program counters SNF drift."
+    },
+    {
+      "id": "C",
+      "name": "Cross-borough location-page upgrades + LP-01 data-driven cleanup",
+      "priority": "High · 60–90d",
+      "color": "indigo",
+      "why": "Single-pin Maps reach hard-capped at 3.25-mi grid radius. Cross-borough capture is organic-only. 96 /locations/* URLs, 0 with schema. 8 LP-02 UPGRADES (not new builds — every cross-borough target already has a verbose-slug page in the sitemap). Highest-leverage cross-borough URL: /locations/recovery-center-in-sunset-park-ny at 1,722w / 3,152 imp / 26 clicks / pos 19.58 — one push from page 1.",
+      "actions": [
+        { "code": "LP-02_M1", "name": "Location upgrades M1 — 3 in-radius anchors (red-hook-ny + carroll-gardens-red-hook + gowanus) — content audit + LocalBusiness + BreadcrumbList schema", "month": "M1", "effort": "L" },
+        { "code": "LP-01_M1", "name": "Location-pages cleanup M1 — 96-URL GSC pull + refresh batch 1 (3 on-topic bleeding URLs) + 0-click cohort 301/410 (data-driven, NEVER bulk NOINDEX)", "month": "M1", "effort": "M" },
+        { "code": "LP-02_M2", "name": "Location upgrades M2 — 3 adjacency + cross-borough (park-slope-ny + boerum-hill-ny + recovery-center-in-sunset-park-ny — primary diffusion target)", "month": "M2", "effort": "L" },
+        { "code": "LP-01_M2", "name": "Location-pages refresh batch 2 (3 URLs from working sheet)", "month": "M2", "effort": "S" },
+        { "code": "LP-02_M3", "name": "Location upgrades M3 — 2 cross-borough conditional (leading-rehab-center-in-downtown-brooklyn-ny + rehab-center-in-crown-heights-ny; M3 W1 gate on REP-02 cross-borough delta)", "month": "M3", "effort": "L" },
+        { "code": "LP-01_M3", "name": "Location-pages refresh batch 3 (3 URLs from working sheet)", "month": "M3", "effort": "S" }
+      ],
+      "outcome": "8 existing /locations/* URLs upgraded with LocalBusiness + BreadcrumbList schema. Cross-borough 5-coord matrix 8/40 → ≥14/40 (radiate to ≥2 adjacent coords). /locations/recovery-center-in-sunset-park-ny pos 19.58 → ≤12."
+    },
+    {
+      "id": "D",
+      "name": "Counter SNF category drift on `inpatient rehab`",
+      "priority": "Medium · 90d",
+      "color": "amber",
+      "why": "`inpatient rehab` LD grid 85 → 75 cells (−10) in 90 days. Brooklyn Center for Rehabilitation and Nursing (SNF, not addiction-treatment) entered 0 → 102 cells in same window — entity-class category ambiguity, not direct competition. UR's /services/short-term-residential-program currently doesn't use 'Inpatient' in primary framing. Sharpening lever: explicit positioning + GBP Posts using 'Inpatient' phrasing 1×/month + M3 forensic pull on SNF mechanism.",
+      "actions": [
+        { "code": "ON-02-Inpatient", "name": "Explicit `Inpatient Drug & Alcohol Rehab Brooklyn — 24-Hour Medical Supervision` framing on /services/short-term-residential-program (H1 + hero + body)", "month": "M2", "effort": "M" },
+        { "code": "GBP-Inpatient-M1", "name": "1 GBP Post in M1 explicitly using `Inpatient` phrasing (to counter SNF category drift signal)", "month": "M1", "effort": "S" },
+        { "code": "GBP-Inpatient-M2", "name": "1 GBP Post in M2 using `Inpatient` phrasing + link to refreshed /services/short-term-residential-program", "month": "M2", "effort": "S" },
+        { "code": "GBP-Inpatient-M3", "name": "1 GBP Post in M3 using `Inpatient` phrasing — close the cadence", "month": "M3", "effort": "S" },
+        { "code": "DD-Forensic", "name": "M3 forensic pull on Brooklyn Center for Rehabilitation and Nursing mechanism (review velocity / GBP edits / on-page changes / category claim) — informs Q3 SP-03 rebuild scope", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "`inpatient rehab` cells 75 → 100+ via explicit framing + GBP cadence. SNF threat sustainability verdict documented for Q3 SP-03 full rebuild scope."
+    },
+    {
+      "id": "E",
+      "name": "Off-page disavow + YMYL trust citations + LGBTQ+-affirming PR + Q-format LLM articles",
+      "priority": "Medium · 90d",
+      "color": "purple",
+      "why": "PBN exposure is data-warranted disavow case: 395 of 642 RDs at spam-rating ≥30 (61%), 216 in `anomaly-seo-*` cluster (top spam-94), 323 on PBN-pattern TLDs, domain spam-score 42. YMYL trust citations (SAMHSA + Psych Today + CARF + LegitScript + NAATP + insurance directories) build credible profile signal. PR pitch leverages real GBP differentiators (women-owned + LGBTQ+-affirming + transgender-safespace + Medicaid). Q-format LLM articles seed PAA + AI Overview surfaces. SEO Neo / DAS / GBP Blast / Sniper / RD100 / NAP-Overlay / AI-Articles / GMB-Pin-Support / Driving-Directions stack REMOVED per 2026-05-13 off-page program halt.",
+      "actions": [
+        { "code": "OFF-Disavow_M1",   "name": "Disavow build + upload — per-row Decisions sheet review of 395 RDs at spam-rating ≥30; disavow.txt uploaded to GSC", "month": "M1", "effort": "M" },
+        { "code": "OFF-Citations_M1", "name": "YMYL trust citations Tier 1 — SAMHSA findtreatment.gov + Psychology Today (clinical-lead profile) + CARF directory (or Joint Commission substitute)", "month": "M1", "effort": "M" },
+        { "code": "LLM-Audit",        "name": "LLM citation share baseline audit — 5 surfaces × 4 differentiator queries (women-owned/LGBTQ+/transgender-safespace/Medicaid-detox-Brooklyn)", "month": "M1", "effort": "M" },
+        { "code": "OFF-Citations_M2", "name": "YMYL trust citations Tier 2 — LegitScript + NAATP + insurance directories (Aetna + Cigna + BCBS, gated on Owner Ask #2 in-network confirmation)", "month": "M2", "effort": "M" },
+        { "code": "OFF-PR_M2",        "name": "PR pitch — LGBTQ+-affirming inpatient detox Red Hook angle to behavioralhealthnews.org + 1 NYC trade outlet (4-6wk lead, gated on Owner Ask #4 clinical-lead consent)", "month": "M2", "effort": "M" },
+        { "code": "OFF-Citations_M3", "name": "YMYL trust citations Tier 3 — recovery-vertical (best-rehabs + alcoholism.org + sobasearch + helpguide.org) + Brooklyn-local health resource", "month": "M3", "effort": "M" },
+        { "code": "OFF-Disavow_M3",   "name": "Disavow re-pull M3 W1 — capture new toxic RDs since M1; append + re-upload", "month": "M3", "effort": "S" },
+        { "code": "CON-03",           "name": "3 Q-format LLM-targeted articles M3 (Medicaid for detox Brooklyn / women-owned rehab Brooklyn / LGBTQ rehab Brooklyn) — 1,000-1,200w each with FAQ schema", "month": "M3", "effort": "L" },
+        { "code": "CON-05",           "name": "On-topic blog refresh batch 1 — 3 bleeding posts (detox/withdrawal/MAT/dual-diagnosis cluster)", "month": "M1", "effort": "S" },
+        { "code": "CON-06",           "name": "On-topic blog refresh batch 2 — 3 bleeding posts", "month": "M2", "effort": "S" },
+        { "code": "CON-07",           "name": "On-topic blog refresh batch 3 — 3 bleeding posts", "month": "M3", "effort": "S" }
+      ],
+      "outcome": "Disavow uploaded M1 + re-pulled M3. ≥8 new YMYL trust citations live. 1 LGBTQ+-affirming PR pitch placed. 3 Q-format LLM articles live. 9 on-topic blog posts refreshed. +1 LLM citation surface per query by M3."
+    },
+    {
+      "id": "F",
+      "name": "Reporting + indexation tracking + Q2 close-out",
+      "priority": "Standard · 90d",
+      "color": "blue",
+      "why": "Marija's MoM Summary `% Reports With Full Correlation` requires every M1-M3 task → action → outcome metric tracked. 24 LD scans (8 terms × 3 coords) configured M1 give 4-week baseline ready by M2.",
+      "actions": [
+        { "code": "REP-01", "name": "LD scan setup + baseline pull — 24 weekly scans (8 priority terms × 3 Brooklyn coords: Red Hook pin + Sunset Park + Downtown Brooklyn)", "month": "M1", "effort": "S" },
+        { "code": "REP-02", "name": "Indexation tracker + ON-02 CTR delta + LP-01 removed-URL verification (URL Inspection API + GSC delta pull)", "month": "M2", "effort": "M" },
+        { "code": "REP-03", "name": "Q2 close-out — planned → executed → impact correlation. Every row populated with Result/Notes/Evidence (5-coord cross-borough delta + 13×13 Red Hook delta + GBP review/photo/post metrics + SP/LP rank movement + disavow effect)", "month": "M3", "effort": "L" }
+      ],
+      "outcome": "Single Q2 close-out report shipped to Milica with full row correlation. Indexation tracker confirms SP-01/SP-02/LP-02 + 0-click 301s hit GSC index. Baseline metrics for Q3."
+    }
+  ],
+  "deliverables": [
+    { "label": "Strategic Diagnosis (PDF, 3-page)",                "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.pdf",     "type": "pdf" },
+    { "label": "Strategic Diagnosis (DOCX)",                       "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.docx",    "type": "docx" },
+    { "label": "Strategic Diagnosis (HTML)",                       "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.html",    "type": "html" },
+    { "label": "Strategic Diagnosis (Markdown source)",            "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.md",      "type": "md" },
+    { "label": "Q2 Strategy Condensed (long-form)",                "path": "Urban_Recovery_Q2_2026_Strategy_Condensed.md",          "type": "md" },
+    { "label": "Q2 Strategy Condensed v3",                         "path": "Urban_Recovery_Q2_2026_Strategy_Condensed_v3.md",       "type": "md" },
+    { "label": "Q2 Custom Strategy (HTML)",                        "path": "Urban_Recovery_Q2_2026_Custom_Strategy.html",           "type": "html" },
+    { "label": "Owner Conversation Items",                         "path": "Urban_Recovery_Owner_Conversation_Items.md",            "type": "md" },
+    { "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",          "path": "Urban_Recovery_Q2_2026_Tasks_FINAL.csv",                "type": "csv" },
+    { "label": "Q2 2026 Tasks (full)",                             "path": "Urban_Recovery_Q2_2026_Tasks.csv",                      "type": "csv" },
+    { "label": "Push 1 — GBP Surge",                               "path": "Urban_Recovery_Push1_GBP_Surge.docx",                   "type": "docx" },
+    { "label": "Push 2 — Service Pages",                           "path": "Urban_Recovery_Push2_Service_Pages.docx",               "type": "docx" },
+    { "label": "Push 3 — Location Diffusion",                      "path": "Urban_Recovery_Push3_Location_Diffusion.docx",          "type": "docx" },
+    { "label": "Push 4 — Inpatient Counter",                       "path": "Urban_Recovery_Push4_Inpatient_Counter.docx",           "type": "docx" },
+    { "label": "Push 5 — Off-Page Trust",                          "path": "Urban_Recovery_Push5_OffPage_Trust.docx",               "type": "docx" },
+    { "label": "Pages Action List",                                "path": "Urban_Recovery_Pages_Action_List.csv",                  "type": "csv" },
+    { "label": "Internal Linking Map (62 link changes)",           "path": "Urban_Recovery_Internal_Linking_Map.csv",               "type": "csv" },
+    { "label": "GBP Action List (8 GBP edits)",                    "path": "Urban_Recovery_GBP_Action_List.csv",                    "type": "csv" },
+    { "label": "Driving Direction Pins (9 lat/lng)",               "path": "Urban_Recovery_Driving_Direction_Pins.csv",             "type": "csv" },
+    { "label": "Reporting Master Template",                        "path": "Urban_Recovery_Reporting_Master_Template.csv",          "type": "csv" },
+    { "label": "Disavow Plan (Decisions tab)",                     "path": "Urban_Recovery_Disavow_Plan.xlsx",                      "type": "xlsx" },
+    { "label": "Off-Page PR Plan",                                 "path": "Urban_Recovery_OffPage_PR_Plan.xlsx",                   "type": "xlsx" },
+    { "label": "Location Pages Plan (3-month working sheet)",      "path": "Urban_Recovery_Location_Pages_Plan_3Month.xlsx",        "type": "xlsx" },
+    { "label": "Blog Refresh Plan (3-month working sheet)",        "path": "Urban_Recovery_Blog_Refresh_3Month.xlsx",               "type": "xlsx" },
+    { "label": "Schema Plan (3-month)",                            "path": "Urban_Recovery_Schema_Plan_3Month.xlsx",                "type": "xlsx" },
+    { "label": "Reporting Plan",                                   "path": "Urban_Recovery_Reporting_Plan.xlsx",                    "type": "xlsx" }
+  ],
+  "owner_asks": [
+    "Publish-permission for 4 location-page upgrades + 2-3 new builds + 2 service-page upgrades — standing approval with 24-hour preview-window emailed to UR marketing (Surfpoint model). Gates the M1 → M2 → M3 cadence on LP-02 + SP-01/SP-02.",
+    "Confirm in-network insurance carriers — Aetna + Cigna + BCBS + Medicaid status (in-network vs out-of-network with reimbursement). Gates OFF-Citations_M2 insurance-directory submissions + SP-01/SP-02 insurance block accuracy.",
+    "CARF accreditation status verification (yes/no + effective date + certificate number). If not in place, substitute Joint Commission Behavioral Health for OFF-Citations_M1. Affects E-E-A-T section of SP-01/SP-02.",
+    "Clinical-lead consent for Psychology Today profile + 200-300w bio + headshot. Required for OFF-Citations_M1 Psychology Today (DA 91, highest-trust addiction-treatment citation gated on real clinician identity). Also feeds OFF-PR_M2 LGBTQ+-affirming pitch."
+  ],
+  "kpi_targets": [
+    { "kpi": "13×13 grid coverage (8 queries × 1,344 cells)",                                                                         "baseline": "92.8%",            "target": "Hold ≥92%",            "stretch": "≥94%" },
+    { "kpi": "Cross-borough 5-coord matrix (8 queries × 5 coords)",                                                                   "baseline": "8/40",             "target": "≥14/40",               "stretch": "≥20/40" },
+    { "kpi": "`recovery center brooklyn` CTR (13,770 imp / 0 clicks @ pos 3.55)",                                                     "baseline": "0%",               "target": "≥3% (≥400 clicks/90d)","stretch": "≥5%" },
+    { "kpi": "/locations/recovery-center-in-sunset-park-ny position (1,722w / 3,152 imp / 26 clicks)",                                "baseline": "19.58",            "target": "≤12",                  "stretch": "≤6" },
+    { "kpi": "GBP photos / Posts cadence / 1-star share",                                                                             "baseline": "7 / 1 wk / 23%",   "target": "≥30 / ≥4 mo / <18%",   "stretch": "≥50 / sustained / <15%" },
+    { "kpi": "GBP reviews",                                                                                                          "baseline": "111 (3.8★)",       "target": "≥170 (≥4.1★)",         "stretch": "≥200 (≥4.3★)" },
+    { "kpi": "`inpatient rehab` LD cells (counter SNF drift)",                                                                       "baseline": "75",               "target": "≥100",                 "stretch": "≥120" },
+    { "kpi": "Disavow uploaded + YMYL citations live",                                                                               "baseline": "0",                "target": "uploaded M1 + ≥8 cites","stretch": "≥12 cites + M3 re-pull" }
+  ]
+}

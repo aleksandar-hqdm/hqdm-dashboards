@@ -1,0 +1,387 @@
+domain,decision,reason,spam_score,backlinks,rank
+seo-anomaly-s10.xyz,AUTO,spam_score=94; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=94; all-nofollow + spam_score=94 + rank=0,94,10,0
+belonnanotservice.ga,AUTO,spam_score=85; hard-spam TLD .ga + spam_score=85,85,1,0
+violationfunding.com,AUTO,spam_score=85,85,2,0
+what-happens-next.xyz,AUTO,spam_score=85; hard-spam TLD .xyz + spam_score=85,85,1,0
+seo-anomaly-s6.xyz,AUTO,spam_score=83; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=83; all-nofollow + spam_score=83 + rank=0,83,10,0
+bhs-links-bg.xyz,AUTO,spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0,82,36,0
+bhs-links-fr.xyz,AUTO,spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0,82,15,0
+bhs-links-rt.xyz,AUTO,spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0,82,37,0
+bhs-links-yt.xyz,AUTO,spam_score=82; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=82; all-nofollow + spam_score=82 + rank=0,82,36,0
+bhs-links-gb.xyz,AUTO,spam_score=81; name pattern /^bhs-links-/; hard-spam TLD .xyz + spam_score=81; all-nofollow + spam_score=81 + rank=0,81,30,0
+appguri.com.br,AUTO,spam_score=80; all-nofollow + spam_score=80 + rank=0,80,2,0
+seo-anomaly-s2.xyz,AUTO,spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0,77,12,0
+seo-anomaly-s8.xyz,AUTO,spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0,77,12,0
+seo-anomaly-s9.xyz,AUTO,spam_score=77; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=77; all-nofollow + spam_score=77 + rank=0,77,12,0
+hps-plastering.co.uk,AUTO,spam_score=75; all-nofollow + spam_score=75 + rank=0,75,1,0
+seo-anomaly-s7.xyz,AUTO,spam_score=75; name pattern /^seo-anomaly-/; hard-spam TLD .xyz + spam_score=75; all-nofollow + spam_score=75 + rank=0,75,1,0
+australianwebdirectory.pro,AUTO,spam_score=70; name pattern /^australianwebdirectory\b/,70,1,0
+australianwebdirectory.shop,AUTO,spam_score=70; name pattern /^australianwebdirectory\b/; soft-spam TLD .shop + spam_score=70,70,1,0
+primebeautylounge.com,AUTO,spam_score=70; all-nofollow + spam_score=70 + rank=0,70,4,0
+australianwebdirectory.info,AUTO,name pattern /^australianwebdirectory\b/; soft-spam TLD .info + spam_score=65; all-nofollow + spam_score=65 + rank=0,65,1,0
+browseallexpireddomains.us,AUTO,name pattern /expireddomain/,65,1,0
+great-choice-for-pbn-domains.co.uk,AUTO,name pattern /-pbn[-.]/,65,1,0
+mundotecnologia.info,AUTO,soft-spam TLD .info + spam_score=65,65,1,0
+thebestbacklinksavailable.click,AUTO,name pattern /bestbacklinks/; hard-spam TLD .click + spam_score=65,65,1,0
+getwebsiteworth.com,AUTO,name pattern /^getwebsiteworth\./,60,2,0
+seo-anomaly-alttext.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-alttext.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-alttext.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-alttext.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-anchor.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-anchor.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-anchor.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-anchor.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-authority.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-authority.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-authority.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-authority.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-backlink.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-backlink.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-backlink.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-backlink.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-black.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-black.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-black.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-black.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-bounce.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-bounce.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-bounce.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-bounce.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-canonical.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-canonical.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-canonical.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-canonical.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-conversion.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-conversion.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-conversion.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-conversion.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawlbudget.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawlbudget.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawlbudget.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawlbudget.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawling.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawling.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawling.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-crawling.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-ctr.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-ctr.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-ctr.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-ctr.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-dofollow.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-dofollow.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-dofollow.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-dofollow.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-domain.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-domain.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-domain.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-domain.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-engagement.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-engagement.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-engagement.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-engagement.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-hreflang.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-hreflang.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-hreflang.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-index.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-index.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-index.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-indexing.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-indexing.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-indexing.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-indexing.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-keydensity.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-keydensity.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-keydensity.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-keydensity.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-linkbuilding.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-linkbuilding.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-linkbuilding.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-linkbuilding.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-master.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-metadata.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-metadata.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-metadata.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-metadata.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-organic.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-organic.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-organic.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-organic.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-rock.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-seoaudit.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-seoaudit.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-seoaudit.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-seoaudit.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-serp.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-serp.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-serp.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-serp.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-sitemap.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,1,0
+seo-anomaly-sitemap.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-sitemap.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-snippet.online,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .online + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-snippet.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-snippet.space,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .space + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-snippet.website,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .website + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+seo-anomaly-teacher.site,AUTO,name pattern /^seo-anomaly-/; soft-spam TLD .site + spam_score=60; all-nofollow + spam_score=60 + rank=0,60,2,0
+sergechel.info,AUTO,soft-spam TLD .info + spam_score=60,60,1,0
+australiandir.com,AUTO,all-nofollow + spam_score=55 + rank=0,55,1,0
+magnumcompanies.co,AUTO,all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-11.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-12.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-13.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-16.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-20.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-22.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-25.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-26.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-27.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-29.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-30.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-33.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-34.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-35.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-36.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-39.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-40.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-43.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-45.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-50.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-51.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-53.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-69.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-71.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-75.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-77.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-80.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-82.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-83.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-86.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-89.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-90.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-92.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-93.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-94.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-96.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-98.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+seo-cartel-99.online,AUTO,soft-spam TLD .online + spam_score=55; all-nofollow + spam_score=55 + rank=0,55,1,0
+alljobs.info,AUTO,soft-spam TLD .info + spam_score=50,50,2,0
+andmax.fr,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+batizens.vn,AUTO,all-nofollow + spam_score=50 + rank=0,50,3,0
+buzzshrink.website,AUTO,soft-spam TLD .website + spam_score=50; all-nofollow + spam_score=50 + rank=0,50,1,0
+bye.fyi,AUTO,soft-spam TLD .fyi + spam_score=50; all-nofollow + spam_score=50 + rank=0,50,2,0
+drjack.world,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+fusioncreations.co.uk,AUTO,all-nofollow + spam_score=50 + rank=0,50,8,0
+jake.eu,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+lukang-audio.com,AUTO,all-nofollow + spam_score=50 + rank=0,50,3,0
+mainpg88.com,AUTO,all-nofollow + spam_score=50 + rank=0,50,4,0
+mltboron.com,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+olivare.com.ar,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+quero.party,AUTO,hard-spam TLD .party + spam_score=50; all-nofollow + spam_score=50 + rank=0,50,2,0
+screenshots.wiki,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+shortenurls.eu,AUTO,all-nofollow + spam_score=50 + rank=0,50,2,0
+simedia.co.th,AUTO,all-nofollow + spam_score=50 + rank=0,50,1,0
+ycm.info,AUTO,soft-spam TLD .info + spam_score=50,50,1,0
+aweblist.org,KEEP,no flag,37,2,0
+abnews-wire.blogspot.com,KEEP,safety allowlist,35,8,0
+sici.uk,KEEP,no flag,35,2,0
+dbsdirectory.com,KEEP,no flag,30,1,0
+efdir.com,KEEP,no flag,30,1,0
+marlene-durocher.pages.dev,KEEP,no flag,30,1,0
+aboutqplant.com,KEEP,no flag,25,1,0
+arcticdirectory.com,KEEP,no flag,25,1,0
+cdj-bouffort.com,KEEP,no flag,25,2,0
+dcoutesnjacob.com,KEEP,no flag,25,4,0
+idealnet.com.hk,KEEP,no flag,25,5,0
+unipv.it,KEEP,no flag,25,1,0
+vilagrad.com,KEEP,no flag,25,2,0
+lebazzar-demadous.site,KEEP,no flag,22,2,0
+alligatorlaundromat.com,KEEP,no flag,20,2,0
+danielle-newton.pages.dev,KEEP,no flag,20,1,0
+digitalatto.io,KEEP,no flag,20,1,0
+grokipedia.com,KEEP,no flag,20,4,0
+nashglobalgroup.com,KEEP,no flag,20,2,0
+poordirectory.com,KEEP,no flag,20,2,0
+stablegeeksstaffing.com,KEEP,no flag,20,1,0
+windowssearch-exp.com,KEEP,no flag,20,25,33
+fedclear.co.za,KEEP,no flag,17,2,0
+academia.edu.gt,KEEP,gov/edu,15,3,0
+anakarolinapsicologa.com,KEEP,no flag,15,3,0
+b-cdn.net,KEEP,no flag,15,4,26
+centrumperto.pl,KEEP,no flag,15,1,0
+eklipsinvestmentghltd.com,KEEP,no flag,15,1,0
+furndek.com.sg,KEEP,no flag,15,1,0
+miami-restaurant.com,KEEP,no flag,15,1,0
+nanochem.com.vn,KEEP,no flag,15,1,0
+pianolaureescientifiche.it,KEEP,no flag,15,1,7
+rarar.com.bd,KEEP,no flag,15,1,0
+rbexcellentairportservicesinc.ca,KEEP,no flag,15,1,0
+startyourrecovery.org,KEEP,no flag,15,2,35
+unitedstatesbd.com,KEEP,no flag,15,2,8
+pochiwinebarde.com,KEEP,no flag,12,2,30
+batchgeo.com,KEEP,no flag,11,33,101
+blackandbluedirectory.com,KEEP,no flag,10,2,0
+blackgreendirectory.com,KEEP,no flag,10,2,0
+coolestgadgetsandgizmos.com,KEEP,no flag,10,1,0
+csnakliyat.com,KEEP,no flag,10,1,0
+diyprinting.shop,KEEP,no flag,10,1,0
+grupoalpes.com.br,KEEP,no flag,10,1,0
+hercampus.com,KEEP,no flag,10,1,0
+jody-law.pages.dev,KEEP,no flag,10,1,0
+konditorei-kalt.de,KEEP,no flag,10,1,0
+marketminute.com,KEEP,no flag,10,2,0
+siteprice.org,KEEP,no flag,10,1,0
+wegosell.co.za,KEEP,no flag,10,1,0
+zoominfo.com,KEEP,no flag,10,1,0
+flokii.com,KEEP,no flag,8,3,68
+takechargechicago.org,KEEP,no flag,8,3,40
+ctc.edu.za,KEEP,gov/edu,5,1,0
+dojowell.com,KEEP,no flag,5,1,0
+drivingtesthelp.ca,KEEP,no flag,5,1,0
+gtmarine.ru,KEEP,no flag,5,1,0
+larimercenter.org,KEEP,no flag,5,1,23
+lifeinvelvet.com,KEEP,no flag,5,1,7
+linkcenter.com,KEEP,no flag,5,1,0
+mbcm.in,KEEP,no flag,5,4,0
+mvtransindia.com,KEEP,no flag,5,1,0
+neverbounce.com,KEEP,no flag,5,1,0
+nuekin.com,KEEP,no flag,5,4,0
+olimposs.com,KEEP,no flag,5,4,0
+servicii24.ro,KEEP,no flag,5,1,0
+southasia.com.bd,KEEP,no flag,5,1,0
+zimgateway.com,KEEP,no flag,5,1,0
+myrnjobs.com,KEEP,no flag,3,6,68
+avareno.ca,KEEP,no flag,2,2,0
+friendlyneighborhoodrepublican.com,KEEP,no flag,2,4,0
+300mind.studio,KEEP,no flag,0,1,0
+abnewswire.com,KEEP,no flag,0,2,0
+acirehab.org,KEEP,no flag,0,2,0
+adlandpro.com,KEEP,no flag,0,2,0
+alcoholism.org,KEEP,no flag,0,1,23
+anationofmoms.com,KEEP,no flag,0,1,0
+anchorpointteentreatment.com,KEEP,no flag,0,2,0
+arrowheadlodgerecovery.com,KEEP,no flag,0,2,0
+attainbh.com,KEEP,no flag,0,2,0
+backstageviral.com,KEEP,no flag,0,1,0
+birchtreerecovery.com,KEEP,no flag,0,1,0
+birjetkirala.com,KEEP,no flag,0,1,0
+bizhwy.com,KEEP,no flag,0,2,0
+bronxsober.com,KEEP,no flag,0,4,79
+buchveroeffentlichen.com,KEEP,no flag,0,3,0
+bunity.com,KEEP,no flag,0,2,0
+carf.org,KEEP,no flag,0,1,0
+carolinaenergetics.com,KEEP,no flag,0,1,0
+couponler.com,KEEP,no flag,0,1,51
+dcmdmaonlineshop.com,KEEP,no flag,0,2,19
+decaturdailydemocrat.com,KEEP,no flag,0,1,0
+detox.com,KEEP,no flag,0,1,0
+detoxtorehab.com,KEEP,no flag,0,2,51
+dexknows.com,KEEP,no flag,0,1,0
+dgsac.com.pe,KEEP,no flag,0,4,0
+dmtdc.com,KEEP,no flag,0,2,3
+erafame.com,KEEP,no flag,0,1,7
+fyple.com,KEEP,no flag,0,1,0
+garmento.net,KEEP,no flag,0,2,0
+goldmanlaboratories.com,KEEP,no flag,0,6,0
+ieit.vn,KEEP,no flag,0,1,0
+imagetou.com,KEEP,no flag,0,1,0
+imagingtrade.com.np,KEEP,no flag,0,1,0
+johnnylist.org,KEEP,no flag,0,1,0
+joshcolbycounseling.com,KEEP,no flag,0,1,0
+kemahpalms.com,KEEP,no flag,0,1,0
+latesthealthtricks.com,KEEP,no flag,0,1,7
+linkcentre.com,KEEP,no flag,0,1,0
+loc8nearme.com,KEEP,no flag,0,1,0
+luxury-rehabs.com,KEEP,no flag,0,1,0
+mainspringrecovery.com,KEEP,no flag,0,2,0
+manhattansober.com,KEEP,no flag,0,4,79
+martoncare.com,KEEP,no flag,0,1,0
+masonjarbreakfast.com,KEEP,no flag,0,1,0
+metroatlantadetox.com,KEEP,no flag,0,1,0
+miamioutpatientdetox.com,KEEP,no flag,0,1,0
+mj-service.pl,KEEP,no flag,0,1,0
+nameshype.com,KEEP,no flag,0,1,0
+newhorizonscenters.com,KEEP,no flag,0,4,13
+newjerseyoutpatientdetox.com,KEEP,no flag,0,2,0
+njaddictionhotline.com,KEEP,no flag,0,6,0
+northridgeaddiction.com,KEEP,no flag,0,1,0
+oasisrecovery.com,KEEP,no flag,0,9,46
+on-mend.com,KEEP,no flag,0,2,7
+osadazbojecka.pl,KEEP,no flag,0,1,0
+peachtreeliving.net,KEEP,no flag,0,1,0
+perrysbridgereptilepark.com,KEEP,no flag,0,3,0
+pornaddictiontest.com,KEEP,no flag,0,1,0
+pressreleasecc.com,KEEP,no flag,0,7,0
+proplayersports.com,KEEP,no flag,0,1,0
+provenexpert.com,KEEP,no flag,0,1,0
+psbios.com,KEEP,no flag,0,1,0
+punxsutawneyspirit.com,KEEP,no flag,0,1,0
+qualitypoint.com.do,KEEP,no flag,0,1,0
+recovered.org,KEEP,no flag,0,4,79
+recovery.com,KEEP,no flag,0,2,0
+recoveryhelper.org,KEEP,no flag,0,1,0
+recoveryhomepa.com,KEEP,no flag,0,1,0
+reelsmedia.co.uk,KEEP,no flag,0,1,0
+rehabangels.org,KEEP,no flag,0,4,79
+sanatyips.com,KEEP,no flag,0,1,0
+santabarbararecovery.com,KEEP,no flag,0,1,0
+smartcabsnorwich.co.uk,KEEP,no flag,0,1,0
+stlrecovery.com,KEEP,no flag,0,1,0
+storiesradius.com,KEEP,no flag,0,1,7
+talbh.com,KEEP,no flag,0,2,0
+tampaoutpatientdetox.com,KEEP,no flag,0,8,23
+thecelebportal.com,KEEP,no flag,0,1,0
+thehopeinstitutenj.com,KEEP,no flag,0,1,0
+thevillatreatmentcenter.com,KEEP,no flag,0,5,3
+threebestrated.com,KEEP,no flag,0,2,0
+timeshealthmag.com,KEEP,no flag,0,1,7
+ukvapescene.com,KEEP,no flag,0,1,0
+vivaesthetique.com,KEEP,no flag,0,2,0
+vuink.com,KEEP,no flag,0,8,0
+winsavvy.com,KEEP,no flag,0,1,0
+wisconsinmuslimjournal.org,KEEP,no flag,0,1,0
+yellowplace.org,KEEP,no flag,0,4,0
+yobizniz.com,KEEP,no flag,0,1,51
+zumvu.com,KEEP,no flag,0,1,0
+booksreadr.org,REVIEW,spam_score=60,60,1,0
+globalecommerce.org,REVIEW,spam_score=60,60,1,0
+musweb.org,REVIEW,spam_score=60,60,1,0
+read.org.in,REVIEW,spam_score=60,60,1,0
+runningwebsites.net,REVIEW,spam_score=60,60,1,0
+way2check.cv,REVIEW,spam_score=60,60,1,0
+agmermer.pro,REVIEW,spam_score=55,55,1,0
+tunca.org,REVIEW,spam_score=50,50,1,0
+wallpapers.pro,REVIEW,spam_score=50,50,1,0
+websiterace.com,REVIEW,spam_score=50,50,1,0
+culture-echecs.eu,REVIEW,all-nofollow + low-rank,45,2,0
+ecovs.cn,REVIEW,all-nofollow + low-rank,45,3,0
+protechshine.com,REVIEW,all-nofollow + low-rank,45,6,0
+rankgrow.agency,REVIEW,all-nofollow + low-rank,45,1,0
+seobacklinks.agency,REVIEW,all-nofollow + low-rank,45,1,0
+primepag.com.br,REVIEW,all-nofollow + low-rank,43,5,0
+acelb.co,REVIEW,all-nofollow + low-rank,42,7,0
+acgconsulting.com.vn,REVIEW,all-nofollow + low-rank,40,1,0
+itxoft.com,REVIEW,all-nofollow + low-rank,40,1,0
+phinova.org,REVIEW,all-nofollow + low-rank,40,1,0
+securelivelihoods.org,REVIEW,all-nofollow + low-rank,40,4,0
+simplygaurav.com,REVIEW,all-nofollow + low-rank,40,8,0
+angelinamargo.com,REVIEW,all-nofollow + low-rank,35,1,0
+ggpartnersconsortium.com,REVIEW,all-nofollow + low-rank,35,5,0
+hessentours.de,REVIEW,all-nofollow + low-rank,35,1,0
+icylv5.azurewebsites.net,REVIEW,all-nofollow + low-rank,35,3,0
+lopezexpressgt.com,REVIEW,all-nofollow + low-rank,35,1,0
+presale-vancouver.ca,REVIEW,all-nofollow + low-rank,35,1,0
+rongqin-ai.com,REVIEW,all-nofollow + low-rank,35,3,0
+rosamarques.pt,REVIEW,all-nofollow + low-rank,35,1,0
+silveronetattoo.com,REVIEW,all-nofollow + low-rank,35,1,0
+smartparentresources.org,REVIEW,all-nofollow + low-rank,35,1,0
+technewsmail.com,REVIEW,all-nofollow + low-rank,35,2,0
+92101urbanliving.com,REVIEW,all-nofollow + low-rank,30,1,0
+atechnos.com,REVIEW,all-nofollow + low-rank,30,2,0
+bas-ir.com,REVIEW,all-nofollow + low-rank,30,1,0
+bnksp.org,REVIEW,all-nofollow + low-rank,30,1,0
+businessinsurance.com,REVIEW,all-nofollow + low-rank,30,1,0
+gener8.space,REVIEW,all-nofollow + low-rank,30,4,0
+mosaiceventsoman.com,REVIEW,all-nofollow + low-rank,30,2,0
+seo-cartel-7.online,REVIEW,all-nofollow + low-rank,30,1,0
+seo-cartel-9.online,REVIEW,all-nofollow + low-rank,30,1,0

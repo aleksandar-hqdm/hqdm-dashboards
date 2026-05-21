@@ -1,0 +1,67 @@
+link_id,push,task_id,month,priority,from_url,to_url,anchor_text,placement,why
+IL-01,1,HP-01,M1,P0-must,/,/drug-rehab-new-york-city,Drug Rehab NYC,Primary nav + homepage hero CTA,Routes commercial drug-rehab intent off homepage to dedicated landing page
+IL-02,1,HP-01,M1,P0-must,/rehab-centers-nyc,/drug-rehab-new-york-city,Drug rehab programs,Body section "Program directory",Cross-link landing-page suite
+IL-03,1,HP-01,M1,P0-must,/drug-rehab-new-york-city,/services/drug-detox-services,Medical detox in NYC,Levels-of-care section anchor 1,Internal-link continuum from rehab landing to detox service
+IL-04,1,HP-01,M1,P0-must,/drug-rehab-new-york-city,/services/inpatient-rehabilitation-services,Inpatient drug rehab,Levels-of-care anchor 2,Continuum link
+IL-05,1,HP-01,M1,P0-must,/drug-rehab-new-york-city,/services/medication-assisted-treatment,MAT for opioid addiction,Substances-treated section,Routes substance-specific intent to MAT hub (once PA-09 ships)
+IL-06,1,HP-01,M1,P0-must,/drug-rehab-new-york-city,/services/dual-diagnosis,Co-occurring disorders treatment,Clinical model section,Routes mental-health overlap to DD hub (once PA-14 ships)
+IL-07,1,HP-02,M1,P0-must,/,/alcohol-treatment-new-york-city,Alcohol Treatment NYC,Primary nav + homepage hero,Routes alcohol intent off homepage
+IL-08,1,HP-02,M1,P0-must,/rehab-centers-nyc,/alcohol-treatment-new-york-city,Alcohol treatment programs,Body section,Cross-link
+IL-09,1,HP-02,M1,P0-must,/alcohol-treatment-new-york-city,/services/alcohol-detox-program,Medical alcohol detox,Levels-of-care section,Continuum link
+IL-10,1,HP-02,M1,P0-must,/alcohol-treatment-new-york-city,/blog/alcohol-detox-drink,Why at-home detox is dangerous,Body section,Reciprocal-link with BLG-01 informational pull-through
+IL-11,1,HP-03,M2,P0-must,/,/drug-treatment-nyc,Drug Treatment NYC,Primary nav,Routes treatment-phrase variant intent
+IL-12,1,HP-04,M2,P0-must,/,/rehab-centers-nyc,Rehab Centers NYC,Primary nav,Routes centers-plural variants
+IL-13,2,BH-01,M1,P0-must,/,/locations/brooklyn,Brooklyn,Footer "Service Areas",Borough hub entry point
+IL-14,2,BH-01,M1,P0-must,/rehab-centers-nyc,/locations/brooklyn,Rehab access from Brooklyn,Body section "Borough access",Routes Brooklyn-resident intent
+IL-15,2,BH-01,M1,P0-must,/locations/brooklyn,/services/drug-detox-services,Medical detox for Brooklyn residents,Levels-of-care section,Service continuum
+IL-16,2,BH-01,M1,P0-must,/locations/brooklyn,/services/inpatient-rehabilitation-services,Inpatient rehab,Levels-of-care section,Service continuum
+IL-17,2,BH-01,M1,P0-must,/locations/brooklyn,/services/medication-assisted-treatment,MAT for Brooklyn residents,Levels-of-care section,Service continuum
+IL-18,2,BH-01,M1,P0-must,/locations/brooklyn,/services/dual-diagnosis,Dual diagnosis care,Levels-of-care section,Service continuum
+IL-19,2,BH-02,M2,P0-must,/,/locations/queens,Queens,Footer "Service Areas",Borough hub entry
+IL-20,2,BH-02,M2,P0-must,/rehab-centers-nyc,/locations/queens,Rehab access from Queens,Body "Borough access",Routes Queens intent
+IL-21,2,BH-02,M2,P0-must,/locations/queens,/suburb/rehab-center-in-ditmars-steinway,Ditmars-Steinway neighborhood,Neighborhoods section,Routes to existing /suburb/ Queens page
+IL-22,2,BH-02,M2,P0-must,/locations/queens,/suburb/preferred-rehabilitation-facility-in-hunters-point-ny,Hunters Point access,Neighborhoods section,Routes to existing /suburb/
+IL-23,2,BH-02,M2,P0-must,/locations/queens,/suburb/premium-rehabilitation-facility-in-astoria-heights-ny,Astoria Heights,Neighborhoods section,Routes to existing /suburb/
+IL-24,2,BH-02,M2,P0-must,/locations/queens,/services/drug-detox-services,Medical detox,Levels-of-care section,Service continuum
+IL-25,2,BH-02,M2,P0-must,/locations/queens,/services/medication-assisted-treatment,MAT in Queens-to-Harlem proximity,Levels-of-care section,Service continuum
+IL-26,2,BH-03,M3,P0-must,/,/locations/bronx,Bronx,Footer "Service Areas",Borough hub entry (existing page being upgraded)
+IL-27,2,BH-03,M3,P0-must,/rehab-centers-nyc,/locations/bronx,Rehab access from Bronx,Body "Borough access",Routes Bronx intent
+IL-28,2,BH-03,M3,P0-must,/locations/bronx,/suburb/south-bronx,South Bronx,Neighborhoods section,Routes to existing /suburb/
+IL-29,2,BH-03,M3,P0-must,/locations/bronx,/suburb/mott-haven,Mott Haven,Neighborhoods section,Routes to existing /suburb/
+IL-30,2,BH-03,M3,P0-must,/locations/bronx,/suburb/hunts-point,Hunts Point,Neighborhoods section,Routes to existing /suburb/
+IL-31,2,BH-03,M3,P0-must,/locations/bronx,/suburb/rehab-center-in-highbridge-ny,Highbridge,Neighborhoods section,Routes to existing /suburb/
+IL-32,2,BH-03,M3,P0-must,/locations/bronx,/suburb/rehab-center-in-tremont-ny,Tremont,Neighborhoods section,Routes to existing /suburb/ (also a Push5 target - declining page +31 pos)
+IL-33,2,BH-03,M3,P0-must,/locations/bronx,/suburb/morris-heights-ny,Morris Heights,Neighborhoods section,Routes to existing /suburb/
+IL-34,2,BH-03,M3,P0-must,/locations/bronx,/services/drug-detox-services,Medical detox,Levels-of-care section,Service continuum
+IL-35,2,BH-03,M3,P0-must,/locations/bronx,/services/medication-assisted-treatment,MAT in Bronx-to-Harlem proximity,Levels-of-care section,Service continuum
+IL-36,2,BH-03,M3,P0-must,/locations/bronx,/services/dual-diagnosis,Co-occurring disorders care,Levels-of-care section,Service continuum
+IL-37,3,MAT-01,M1,P0-must,/,/services/medication-assisted-treatment,MAT,Primary nav under Services,MAT hub entry from homepage
+IL-38,3,MAT-01,M1,P0-must,/services/drug-detox-services,/services/medication-assisted-treatment,Post-detox transition to MAT,Body section "After detox",Detox-to-MAT continuum
+IL-39,3,MAT-01,M1,P0-must,/services/inpatient-rehabilitation-services,/services/medication-assisted-treatment,MAT during inpatient care,Body section "Levels of care",Continuum
+IL-40,3,MAT-01,M1,P0-must,/services/medication-assisted-treatment,/services/drug-detox-services,Medical detox before MAT,Body section,Reverse continuum
+IL-41,3,MAT-01,M1,P0-must,/services/medication-assisted-treatment,/services/dual-diagnosis,Dual diagnosis care,Body section,Mental-health overlap
+IL-42,3,MAT-02,M2,P0-must,/blog/suboxone-strips-vs-suboxone-pills,/services/medication-assisted-treatment,Same-day MAT admissions in Harlem,Intro CTA box + end-block,Commercial pull-through from informational blog (15300 vol)
+IL-43,3,MAT-02,M2,P0-must,/blog/suboxone-strips-vs-suboxone-pills,/services/medication-assisted-treatment,Learn more about MAT,Sidebar related-posts top position,Reinforcement link
+IL-44,3,BLG-01,M2,P1-stretch,/blog/alcohol-detox-drink,/services/alcohol-detox-program,Get professional alcohol detox,Intro CTA box,Commercial pull-through (2000 vol)
+IL-45,3,BLG-01,M2,P1-stretch,/blog/alcohol-detox-drink,/services/alcohol-detox-program,Medically-supervised alcohol detox,End-block "When you actually need professional detox",Reinforcement link
+IL-46,3,BLG-02,M2,P1-stretch,/blog/what-are-the-signs-that-my-body-is-detoxing,/services/drug-detox-services,Medical drug detox,Intro CTA,Commercial pull-through (1900 vol)
+IL-47,3,BLG-02,M2,P1-stretch,/blog/what-are-the-signs-that-my-body-is-detoxing,/services/alcohol-detox-program,Medical alcohol detox,End-block,Commercial pull-through second route
+IL-48,3,BLG-03,M3,P1-stretch,/blog/what-is-rehab,/drug-rehab-new-york-city,Drug rehab in NYC,Intro CTA,Routes to new PA-01 commercial page (2400 vol)
+IL-49,3,BLG-03,M3,P1-stretch,/blog/what-is-rehab,/alcohol-treatment-new-york-city,Alcohol treatment in NYC,End-block,Routes to new PA-02
+IL-50,4,DD-01,M2,P0-must,/,/services/dual-diagnosis,Dual Diagnosis,Primary nav under Services,DD hub entry
+IL-51,4,DD-01,M2,P0-must,/services/inpatient-rehabilitation-services,/services/dual-diagnosis,Co-occurring disorders treatment,Body section "When dual diagnosis matters",Continuum
+IL-52,4,DD-01,M2,P0-must,/services/intensive-outpatient-program-iop,/services/dual-diagnosis,Dual diagnosis outpatient care,Body section,Continuum
+IL-53,4,DD-01,M2,P0-must,/services/medication-assisted-treatment,/services/dual-diagnosis,Dual diagnosis support during MAT,Body section,Continuum
+IL-54,5,UES-01,M1,P0-must,/,/suburb/upper-east-side,UES rehab access,Footer "Manhattan Neighborhoods",UES entry from homepage
+IL-55,5,UES-01,M1,P0-must,/rehab-centers-nyc,/suburb/upper-east-side,From Upper East Side,Body "Borough access" section,UES entry from rehab-centers landing
+IL-56,5,UES-01,M1,P0-must,/suburb/upper-east-side,/services/medication-assisted-treatment,MAT access for UES residents,Body section,UES-to-MAT routing
+IL-57,5,UES-01,M1,P0-must,/suburb/upper-east-side,/services/dual-diagnosis,Confidential dual-diagnosis treatment,Body section,UES privacy + dual-diagnosis appeal
+IL-58,5,UES-01,M1,P0-must,/suburb/upper-east-side,/suburb/central-harlem-ny,Elev8 location in Harlem,Body section "About our facility",Sister-page cross-link
+IL-59,5,UES-01,M1,P0-must,/suburb/lenox-hill-ny,/suburb/upper-east-side,UES rehab options,Body "Related areas" section,Sub-neighborhood to parent neighborhood
+IL-60,5,UES-01,M1,P0-must,/suburb/yorkville,/suburb/upper-east-side,UES rehab options,Body "Related areas",Sub-neighborhood to parent
+IL-61,5,CON-01,M1,P0-must,/ + 6 other pages linking to /suburb/stress-free-recovery-center-in-west-harlem-ny,/suburb/central-harlem-ny,(replace existing anchors),Wherever the 301'd URLs currently appear as internal links,Internal-link cleanup after 301 - prevents 301 chain dilution
+IL-62,5,CON-01,M1,P0-must,/ + N pages linking to /suburb/rehab-center-in-east-harlem-ny,/suburb/central-harlem-ny,(replace existing anchors),Wherever the 301'd URLs currently appear,Same cleanup
+IL-63,5,CON-02,M1,P1-stretch,Pages linking to /suburb/hamilton-heights-ny,/suburb/dedicated-recovery-center-in-hamilton-heights-ny,(replace),Wherever 301'd URL appears,Same cleanup
+IL-64,5,CON-03,M1,P1-stretch,Pages linking to /suburb/morningside-heights-ny,/suburb/premier-recovery-center-in-morningside-heights-ny,(replace),Wherever 301'd URL appears,Same cleanup
+IL-65,5,CON-04,M2,P1-stretch,Pages linking to riverside variants,/suburb/upper-west-side,(replace),Wherever 301'd URLs appear,Same cleanup
+IL-66,5,CON-05,M3,P1-stretch,Pages linking to mount-eden variants,/locations/bronx,(replace),Wherever 301'd URLs appear,Same cleanup after BH-03 ships
