@@ -1043,79 +1043,14 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 2026 Custom Strategy (long-form)",
-      "path": "Arms_Acres_Q2_2026_Custom_Strategy.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 2026 Custom Strategy (HTML render)",
-      "path": "Arms_Acres_Q2_2026_Custom_Strategy.html",
-      "type": "html"
-    },
-    {
-      "label": "Q2 2026 Strategy Condensed (Strategic Diagnosis)",
-      "path": "Arms_Acres_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 2026 Strategy Condensed (HTML render)",
-      "path": "Arms_Acres_Q2_2026_Strategy_Condensed.html",
-      "type": "html"
-    },
-    {
-      "label": "3-Month Execution Plan",
-      "path": "arms_acres_3month_plan.md",
-      "type": "md"
-    },
-    {
       "label": "Q2 2026 Tasks (FINAL, SEO-NEO filtered)",
       "path": "Arms_Acres_3Month_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Q2 2026 Tasks (full original, includes halted stack)",
-      "path": "Arms_Acres_3Month_Tasks.csv",
       "type": "csv"
     },
     {
       "label": "Pending GBP-Access Tasks (queue activates on access)",
       "path": "Arms_Acres_Pending_GBP_Access_Tasks.csv",
       "type": "csv"
-    },
-    {
-      "label": "Ownership Conversation Items",
-      "path": "Arms_Acres_Ownership_Conversation.md",
-      "type": "md"
-    },
-    {
-      "label": "M1 Priorities (pages + articles + links)",
-      "path": "arms_acres_m1_priorities.md",
-      "type": "md"
-    },
-    {
-      "label": "Competitor Analysis Brief",
-      "path": "arms_acres_competitor_brief.md",
-      "type": "md"
-    },
-    {
-      "label": "Strategy Item 1 — Competitor Analysis",
-      "path": "strategy_item_1_competitor_analysis.md",
-      "type": "md"
-    },
-    {
-      "label": "Strategy Item 2 — GMB Audit",
-      "path": "strategy_item_2_gmb_audit.md",
-      "type": "md"
-    },
-    {
-      "label": "Strategy Item 3 — Supporting Knowledge Pages",
-      "path": "strategy_item_3_supporting_knowledge_pages.md",
-      "type": "md"
-    },
-    {
-      "label": "Strategy Item 4 — Authority Page AIO Rewrite",
-      "path": "strategy_item_4_authority_page_aio_rewrite.md",
-      "type": "md"
     },
     {
       "label": "Push brief — LG-INPC-01 GBP Description Rewrite",

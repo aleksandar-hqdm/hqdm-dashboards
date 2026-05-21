@@ -38,6 +38,7 @@
     setText('trend-headline', DATA.trend.headline);
     setText('trend-annotation', (DATA.trend.may_extrapolation_note || '') + ' ' + (DATA.trend.annotation_text || ''));
     if (DATA.trend.quarterly) renderQuarterlyTable(DATA.trend.quarterly);
+    if (DATA.trend.yoy_growth && document.getElementById('yoy-chart')) renderYoYChart(DATA.trend.yoy_growth);
     const trendCharts = renderStackedTrendCharts(DATA.trend);
     wireTrendSeriesToggles(trendCharts, DATA.trend);
   }
@@ -70,6 +71,7 @@
   // === Bernie's-specific sections ===
   if (DATA.meta && DATA.meta.mini_reports && document.querySelector('#mini-reports-grid')) renderMiniReports(DATA.meta.mini_reports);
   if (DATA.quarterly_yoy_infographic && document.querySelector('#yoy-panels')) renderYoyInfographic(DATA.quarterly_yoy_infographic);
+  if (DATA.quarterly_chart && document.querySelector('#quarterly-chart-panels')) renderQuarterlyChart(DATA.quarterly_chart);
   if (DATA.ahrefs_trajectory && document.querySelector('#ahrefs-chart')) renderAhrefsTrajectory(DATA.ahrefs_trajectory);
   if (DATA.aio_saturation && document.querySelector('#aio-may26')) renderAIOSaturation(DATA.aio_saturation);
   if (DATA.index_health && document.querySelector('#index-health-table')) renderIndexHealth(DATA.index_health);
@@ -216,18 +218,20 @@ function renderStackedTrendCharts(trend) {
     }));
     Object.keys(projectionByChannel).forEach(channel => {
       const data = kind === 'sessions' ? projectionByChannel[channel].sessions : projectionByChannel[channel].tx;
+      const color = colors[channel] || '#6b7280';
       base.push({
-        label: (labels[channel] || channel) + ' (May proj.)',
+        label: (labels[channel] || channel) + ' — May projection (run-rate)',
         data,
-        borderColor: colors[channel] || '#6b7280',
+        borderColor: color,
         backgroundColor: 'transparent',
-        borderDash: [6, 4],
-        borderWidth: 2,
-        pointRadius: 4,
+        borderDash: [10, 6],
+        borderWidth: 3,
+        pointRadius: 7,
+        pointHoverRadius: 9,
         pointStyle: 'rectRot',
         pointBackgroundColor: '#fff',
-        pointBorderColor: colors[channel] || '#6b7280',
-        pointBorderWidth: 2,
+        pointBorderColor: color,
+        pointBorderWidth: 3,
         spanGaps: true,
         hidden: !visible[channel]
       });
@@ -235,12 +239,17 @@ function renderStackedTrendCharts(trend) {
     return base;
   };
 
+  const hasProjection = Object.keys(projectionByChannel).length > 0;
   const baseOptions = {
     responsive: true,
     maintainAspectRatio: false,
     interaction: { mode: 'index', intersect: false },
     plugins: {
-      legend: { display: false },
+      legend: {
+        display: hasProjection,
+        position: 'bottom',
+        labels: { font: { size: 11 }, boxWidth: 30, padding: 12, usePointStyle: false }
+      },
       tooltip: {
         backgroundColor: '#0b1220',
         padding: 12,
@@ -305,9 +314,14 @@ function renderQuarterlyTable(quarterly) {
   const isCompact = colCount <= 4;
 
   tbody.innerHTML = quarterly.map(q => {
+    const rowClass = q.kind === 'estimate'
+      ? 'text-ink-600 bg-amber-50/40 border-t-2 border-dashed border-amber-300'
+      : q.kind === 'current'
+        ? 'text-ink-800 bg-blue-50/40 font-semibold'
+        : 'text-ink-700';
     if (isCompact) {
       return `
-        <tr class="text-ink-700">
+        <tr class="${rowClass}">
           <td class="py-2 pr-4 font-medium">${escapeHtml(q.q)}</td>
           <td class="py-2 pr-4 text-right">${fmtNum(q.org_sess)}</td>
           <td class="py-2 pr-4 text-right">${fmtNum(q.org_conv)}</td>
@@ -316,7 +330,7 @@ function renderQuarterlyTable(quarterly) {
       `;
     }
     return `
-      <tr class="text-ink-700">
+      <tr class="${rowClass}">
         <td class="py-2 pr-4 font-medium">${escapeHtml(q.q)}</td>
         <td class="py-2 pr-4 text-right">${fmtNum(q.org_sess)}</td>
         <td class="py-2 pr-4 text-right">${fmtNum(q.org_conv)}</td>
@@ -327,6 +341,111 @@ function renderQuarterlyTable(quarterly) {
       </tr>
     `;
   }).join('');
+}
+
+// ============================================================
+// YoY growth chart — grouped bars: current (solid) + est. (dashed)
+// ============================================================
+function renderYoYChart(yoy) {
+  const canvas = document.getElementById('yoy-chart');
+  if (!canvas || typeof Chart === 'undefined') return;
+  if (yoy.reading) setText('yoy-reading', yoy.reading);
+
+  const labels = yoy.metrics.map(m => m.label);
+  const currentData = yoy.metrics.map(m => m.current_yoy_pct);
+  const estimateData = yoy.metrics.map(m => m.estimate_yoy_pct);
+
+  // Color each bar by sign (red = down, green = up)
+  const colorFor = (val, alpha) => {
+    if (val == null) return `rgba(148,163,184,${alpha})`;
+    return val >= 0 ? `rgba(16,185,129,${alpha})` : `rgba(239,68,68,${alpha})`;
+  };
+  const currentBg  = currentData.map(v => colorFor(v, 0.85));
+  const currentBd  = currentData.map(v => colorFor(v, 1.0));
+  const estimateBg = estimateData.map(v => colorFor(v, 0.30));
+  const estimateBd = estimateData.map(v => colorFor(v, 0.9));
+
+  if (canvas._chart) canvas._chart.destroy();
+  canvas._chart = new Chart(canvas.getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: yoy.current_label || 'Current (partial)',
+          data: currentData,
+          backgroundColor: currentBg,
+          borderColor: currentBd,
+          borderWidth: 1.5,
+          borderRadius: 4,
+          categoryPercentage: 0.72,
+          barPercentage: 0.92
+        },
+        {
+          label: yoy.estimate_label || 'Full-Q estimate',
+          data: estimateData,
+          backgroundColor: estimateBg,
+          borderColor: estimateBd,
+          borderWidth: 1.5,
+          borderDash: [5, 4],
+          borderRadius: 4,
+          categoryPercentage: 0.72,
+          barPercentage: 0.92
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      indexAxis: 'x',
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          align: 'end',
+          labels: { boxWidth: 14, font: { size: 11 }, color: '#4b5563' }
+        },
+        tooltip: {
+          backgroundColor: '#0b1220',
+          padding: 12,
+          callbacks: {
+            label: (ctx) => {
+              const m = yoy.metrics[ctx.dataIndex];
+              const isCurrent = ctx.datasetIndex === 0;
+              const val = ctx.parsed.y;
+              const sign = val >= 0 ? '+' : '';
+              const lines = [
+                `${ctx.dataset.label}: ${sign}${val.toFixed(1)}% YoY`,
+                `Q2 2025 baseline: ${m.is_ratio ? m.q2_2025.toFixed(1) + '%' : m.q2_2025.toLocaleString()}`,
+                `${isCurrent ? 'Current' : 'Estimate'}: ${m.is_ratio ? (isCurrent ? m.current : m.estimate).toFixed(1) + '%' : (isCurrent ? m.current : m.estimate).toLocaleString()}`
+              ];
+              if (m.is_ratio) {
+                const pts = isCurrent ? m.pts_delta_current : m.pts_delta_estimate;
+                if (pts != null) lines.push(`Point delta: ${pts >= 0 ? '+' : ''}${pts.toFixed(1)} pts`);
+              }
+              return lines;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { font: { size: 11 }, color: '#4b5563', maxRotation: 0, autoSkip: false }
+        },
+        y: {
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          ticks: {
+            font: { size: 10 },
+            color: '#6b7280',
+            callback: (v) => (v >= 0 ? '+' : '') + v + '%'
+          },
+          title: { display: true, text: 'YoY % change vs Q2 2025', font: { size: 11, weight: '600' }, color: '#4b5563' }
+        }
+      }
+    }
+  });
 }
 
 // ============================================================
@@ -1367,6 +1486,173 @@ function renderYoyInfographic(yoy) {
       </div>
     `;
   }).join('');
+}
+
+// ============================================================
+// Bernie's: Quarterly 3-panel chart (Sessions / Transactions / CVR)
+// with big YoY chips per panel + value labels per quarter, mirroring
+// the matplotlib triple-panel layout in the PDF deliverable.
+// ============================================================
+function renderQuarterlyChart(qc) {
+  if (!qc) return;
+  setText('quarterly-chart-headline', qc.headline);
+  setText('quarterly-chart-subtitle', qc.subtitle || '');
+  setText('quarterly-chart-estimate-note', qc.estimate_note || '');
+  const wrap = document.getElementById('quarterly-chart-panels');
+  if (!wrap) return;
+
+  const isEst = qc.is_estimate || qc.quarters.map(() => false);
+
+  // Build a per-panel value-label plugin via closure — each panel captures
+  // its own formatter, so we don't need Chart.js's clunky plugin options API.
+  const makeValueLabelsPlugin = (fmt) => ({
+    id: 'qc-value-labels',
+    afterDatasetsDraw(chart) {
+      const { ctx } = chart;
+      const dataset = chart.data.datasets[0];
+      if (!dataset) return;
+      const meta = chart.getDatasetMeta(0);
+      ctx.save();
+      ctx.font = 'bold 11px Inter, system-ui, sans-serif';
+      ctx.textAlign = 'center';
+      meta.data.forEach((point, i) => {
+        const v = dataset.data[i];
+        if (v == null) return;
+        ctx.fillStyle = isEst[i] ? '#9ca3af' : '#0b1220';
+        const yOffset = chart.config.type === 'bar' ? -6 : -10;
+        ctx.fillText(fmt(v), point.x, point.y + yOffset);
+      });
+      ctx.restore();
+    }
+  });
+
+  const panels = [
+    {
+      key: 'sessions',
+      title: 'Sessions (per quarter)',
+      data: qc.sessions,
+      type: 'line',
+      color: '#1d4ed8',
+      fillBg: 'rgba(29, 78, 216, 0.18)',
+      yoyPct: qc.yoy_q1.sessions_pct,
+      fmt: (v) => v.toLocaleString(),
+      pointStyle: 'circle',
+      pointRadius: 7
+    },
+    {
+      key: 'tx',
+      title: 'Transactions (completed purchases)',
+      data: qc.transactions,
+      type: 'bar',
+      color: '#475569',
+      yoyPct: qc.yoy_q1.transactions_pct,
+      fmt: (v) => v.toLocaleString(),
+    },
+    {
+      key: 'cvr',
+      title: 'Conversion rate (transactions ÷ sessions, quarterly)',
+      data: qc.cvr,
+      type: 'line',
+      color: '#15803d',
+      fillBg: 'rgba(21, 128, 61, 0.18)',
+      yoyPct: qc.yoy_q1.cvr_pct,
+      fmt: (v) => v.toFixed(2) + '%',
+      pointStyle: 'rectRot',
+      pointRadius: 8
+    }
+  ];
+
+  // Render skeleton (one card per panel) — each contains a canvas + an
+  // absolutely-positioned YoY chip in the top-right.
+  wrap.innerHTML = panels.map((p, i) => {
+    const arrow = p.yoyPct > 0 ? '▲' : '▼';
+    const positive = (p.key === 'sessions' ? p.yoyPct > 0 : p.yoyPct > 0);
+    const chipColor = positive ? 'rgb(21, 128, 61)' : 'rgb(185, 28, 28)';
+    const chipBg = positive ? '#f0fdf4' : '#fef2f2';
+    return `
+      <div class="relative border border-slate-200 rounded-lg p-4">
+        <div class="text-sm font-bold text-ink-700">${escapeHtml(p.title)}</div>
+        <div class="absolute right-4 top-3 z-10">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded border-2 font-extrabold text-lg"
+               style="color: ${chipColor}; border-color: ${chipColor}; background: ${chipBg};">
+            <span>${arrow}</span><span>${p.yoyPct > 0 ? '+' : ''}${p.yoyPct}%</span>
+          </div>
+          <div class="text-[10px] text-right text-ink-500 italic mt-1">Q1 2025 → Q1 2026 (YoY)</div>
+        </div>
+        <div class="h-44 sm:h-52 mt-3"><canvas id="qc-canvas-${p.key}"></canvas></div>
+      </div>
+    `;
+  }).join('');
+
+  // Now instantiate each chart
+  panels.forEach((p) => {
+    const ctx = document.getElementById('qc-canvas-' + p.key);
+    if (!ctx) return;
+
+    const dataset = p.type === 'line' ? {
+      label: p.title,
+      data: p.data,
+      borderColor: p.color,
+      backgroundColor: p.fillBg,
+      fill: true,
+      tension: 0.25,
+      borderWidth: 2.5,
+      pointRadius: p.data.map((_, i) => isEst[i] ? p.pointRadius : p.pointRadius),
+      pointStyle: p.data.map((_, i) => isEst[i] ? p.pointStyle : p.pointStyle),
+      pointBackgroundColor: p.data.map((_, i) => isEst[i] ? '#ffffff' : p.color),
+      pointBorderColor: p.data.map((_, i) => isEst[i] ? '#9ca3af' : p.color),
+      pointBorderWidth: p.data.map((_, i) => isEst[i] ? 2 : 1.5),
+      segment: {
+        borderDash: (segCtx) => isEst[segCtx.p1DataIndex] ? [8, 5] : undefined,
+        borderColor: (segCtx) => isEst[segCtx.p1DataIndex] ? '#9ca3af' : p.color
+      }
+    } : {
+      label: p.title,
+      data: p.data,
+      backgroundColor: p.data.map((_, i) => isEst[i] ? 'rgba(156, 163, 175, 0.5)' : p.color),
+      borderColor: p.data.map((_, i) => isEst[i] ? '#9ca3af' : p.color),
+      borderWidth: p.data.map((_, i) => isEst[i] ? 2 : 0),
+      borderDash: p.data.map((_, i) => isEst[i] ? [6, 4] : undefined),
+      barPercentage: 0.7,
+      categoryPercentage: 0.8
+    };
+
+    new Chart(ctx.getContext('2d'), {
+      type: p.type,
+      data: { labels: qc.quarters, datasets: [dataset] },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        layout: { padding: { top: 26, right: 10 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#0b1220',
+            padding: 12,
+            titleColor: '#fff',
+            bodyColor: '#e5e7eb',
+            borderColor: '#374151',
+            borderWidth: 1,
+            callbacks: {
+              label: (ctx) => `${p.title}: ${p.fmt(ctx.raw)}${isEst[ctx.dataIndex] ? ' (est)' : ''}`
+            }
+          }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10, weight: 'bold' } } },
+          y: {
+            grid: { color: 'rgba(0,0,0,0.05)' },
+            beginAtZero: true,
+            ticks: {
+              font: { size: 10 },
+              callback: (v) => p.key === 'cvr' ? v.toFixed(2) + '%' : Number(v).toLocaleString()
+            }
+          }
+        }
+      },
+      plugins: [makeValueLabelsPlugin(p.fmt)]
+    });
+  });
 }
 
 // ============================================================

@@ -30,7 +30,6 @@ LLM_Citations,Baseline,Niagara Recovery in Google AI Overview SERP,SERP feature 
 Cannibal,Baseline,Off-vertical blog posts,Count remaining,~300 (off-vertical 670-pool),100,0,,,,Pending,CC-01 NOINDEX/410 target.
 Cannibal,Baseline,Doorway location pages,Count remaining,~70,30,0 (all 301'd),,,,Pending,LP-10 redirects mass.
 Cannibal,Baseline,Service-page dupes (-in-newfane-ny),Count indexable,5,0,0,,,,Pending,CN-01 301 merge.
-OffPage,Baseline,SEO Neo batches,Monthly count,N/A (continuing existing rotation),1/mo,3 cumulative,,,,Pending,SEO-NEO_M1/M2/M3.
 OffPage,Baseline,AI Articles,Monthly count,N/A,4/mo,12 cumulative,,,,Pending,AI-ART_M1/M2/M3.
 OffPage,Baseline,Driving Direction Pins,Monthly count,N/A (1 completed Apr 20),4/mo,12 cumulative,,,,Pending,DD-PIN_M1/M2/M3.
 OffPage,Baseline,Citations,Monthly count,N/A,10+15+20,45 cumulative,,,,Pending,CIT_M1/M2/M3.

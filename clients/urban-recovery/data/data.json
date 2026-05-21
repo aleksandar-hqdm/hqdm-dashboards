@@ -1150,53 +1150,8 @@
   ],
   "deliverables": [
     {
-      "label": "Strategic Diagnosis (PDF, 3-page)",
-      "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.pdf",
-      "type": "pdf"
-    },
-    {
-      "label": "Strategic Diagnosis (DOCX)",
-      "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Strategic Diagnosis (HTML)",
-      "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.html",
-      "type": "html"
-    },
-    {
-      "label": "Strategic Diagnosis (Markdown source)",
-      "path": "Urban_Recovery_Strategic_Diagnosis_2026-05-18.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Strategy Condensed (long-form)",
-      "path": "Urban_Recovery_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Strategy Condensed v3",
-      "path": "Urban_Recovery_Q2_2026_Strategy_Condensed_v3.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Custom Strategy (HTML)",
-      "path": "Urban_Recovery_Q2_2026_Custom_Strategy.html",
-      "type": "html"
-    },
-    {
-      "label": "Owner Conversation Items",
-      "path": "Urban_Recovery_Owner_Conversation_Items.md",
-      "type": "md"
-    },
-    {
       "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",
       "path": "Urban_Recovery_Q2_2026_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Q2 2026 Tasks (full)",
-      "path": "Urban_Recovery_Q2_2026_Tasks.csv",
       "type": "csv"
     },
     {

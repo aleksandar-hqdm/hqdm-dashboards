@@ -1184,64 +1184,9 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 2026 Custom Strategy (long form)",
-      "path": "Surfpoint_Recovery_Q2_2026_Custom_Strategy.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 2026 Strategy Condensed",
-      "path": "Surfpoint_Recovery_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
-      "label": "Strategic Approach (why this, in this order)",
-      "path": "Surfpoint_Strategic_Approach_2026-05-12.md",
-      "type": "md"
-    },
-    {
-      "label": "One-Pager — Organic Visibility Diagnosis (2026-05-14)",
-      "path": "Surfpoint_Onepager_2026Q2.md",
-      "type": "md"
-    },
-    {
-      "label": "3-Month Plan (Q2-Q3)",
-      "path": "Surfpoint_3Month_Plan_2026Q2-Q3.md",
-      "type": "md"
-    },
-    {
       "label": "3-Month Tasks (final, SEO-NEO filtered)",
       "path": "Surfpoint_3Month_Tasks_FINAL.csv",
       "type": "csv"
-    },
-    {
-      "label": "Owner Conversation Items (one 30-min call)",
-      "path": "Surfpoint_Owner_Conversation_Items.md",
-      "type": "md"
-    },
-    {
-      "label": "GBP Audit + Competitive Position",
-      "path": "Surfpoint_GBP_Audit_2026-05-12.md",
-      "type": "md"
-    },
-    {
-      "label": "GBP Rationale",
-      "path": "Surfpoint_GBP_Rationale.md",
-      "type": "md"
-    },
-    {
-      "label": "Backlinks + Citations Strategy",
-      "path": "Surfpoint_Backlinks_Citations_Strategy.md",
-      "type": "md"
-    },
-    {
-      "label": "Backlinks + Citations Strategy (docx)",
-      "path": "Surfpoint_Backlinks_Citations_Strategy.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Citations + Links Rationale",
-      "path": "Surfpoint_Citations_Links_Rationale.md",
-      "type": "md"
     },
     {
       "label": "Disavow file (183 AUTO + 42 borderline)",
@@ -1286,31 +1231,6 @@
     {
       "label": "SubPage Brief — Opioid Detox",
       "path": "Surfpoint_SubPage_Opioid_Detox_Brief.md",
-      "type": "md"
-    },
-    {
-      "label": "Site Architecture Rationale",
-      "path": "Surfpoint_Site_Architecture_Rationale.md",
-      "type": "md"
-    },
-    {
-      "label": "Site Architecture Audit Methodology",
-      "path": "Surfpoint_Site_Architecture_Audit_Methodology.md",
-      "type": "md"
-    },
-    {
-      "label": "Site Structure Link Management Explainer",
-      "path": "Surfpoint_Site_Structure_Link_Management_Explainer.md",
-      "type": "md"
-    },
-    {
-      "label": "Landing Pages Rationale",
-      "path": "Surfpoint_Landing_Pages_Rationale.md",
-      "type": "md"
-    },
-    {
-      "label": "Crawl Budget Rationale",
-      "path": "Surfpoint_Crawl_Budget_Rationale.md",
       "type": "md"
     },
     {

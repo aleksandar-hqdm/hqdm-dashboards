@@ -1071,26 +1071,6 @@
   ],
   "deliverables": [
     {
-      "label": "Strategic Diagnosis (PDF, 3-page)",
-      "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.pdf",
-      "type": "pdf"
-    },
-    {
-      "label": "Strategic Diagnosis (HTML source)",
-      "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.html",
-      "type": "html"
-    },
-    {
-      "label": "Q2 2026 Strategy Condensed (long-form)",
-      "path": "Niagara_Recovery_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 2026 Custom Strategy (v1 reference)",
-      "path": "Niagara_Recovery_Q2_2026_Custom_Strategy.md",
-      "type": "md"
-    },
-    {
       "label": "Q2 2026 Tasks (FINAL — SEO Neo + AI Articles filtered)",
       "path": "Niagara_Recovery_Q2_2026_Tasks_FINAL.csv",
       "type": "csv"
@@ -1164,11 +1144,6 @@
       "label": "Reporting Master Template",
       "path": "Niagara_Recovery_Reporting_Master_Template.csv",
       "type": "csv"
-    },
-    {
-      "label": "Owner Conversation Items (5-item bundle)",
-      "path": "Niagara_Recovery_Owner_Conversation_Items.md",
-      "type": "md"
     }
   ],
   "owner_asks": [

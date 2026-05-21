@@ -952,21 +952,6 @@
   ],
   "deliverables": [
     {
-      "label": "Strategic Diagnosis (PDF, 3-page)",
-      "path": "Elev8_Strategic_Diagnosis_2026-05-18.pdf",
-      "type": "pdf"
-    },
-    {
-      "label": "Strategic Diagnosis (Markdown source)",
-      "path": "Elev8_Strategic_Diagnosis_2026-05-18.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Strategy Condensed (long-form)",
-      "path": "Elev8_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
       "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",
       "path": "Elev8_Q2_2026_Tasks_FINAL.csv",
       "type": "csv"

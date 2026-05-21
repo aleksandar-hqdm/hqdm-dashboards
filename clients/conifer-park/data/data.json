@@ -1139,49 +1139,9 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 Custom Strategy (651-line internal, Markdown)",
-      "path": "Conifer_Park_Q2_2026_Custom_Strategy.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Custom Strategy (DOCX)",
-      "path": "Conifer_Park_Q2_2026_Custom_Strategy.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Q2 Strategy Condensed (3-page team doc)",
-      "path": "Conifer_Park_Q2_2026_Strategy_Condensed.md",
-      "type": "md"
-    },
-    {
-      "label": "Q2 Strategy Condensed (DOCX)",
-      "path": "Conifer_Park_Q2_2026_Strategy_Condensed.docx",
-      "type": "docx"
-    },
-    {
-      "label": "3-Month Execution Plan (long-form)",
-      "path": "coniferpark_3month_plan.md",
-      "type": "md"
-    },
-    {
-      "label": "3-Month Execution Plan (DOCX)",
-      "path": "coniferpark_3month_plan.docx",
-      "type": "docx"
-    },
-    {
       "label": "Q2 Tasks (FINAL, SEO-NEO filtered)",
       "path": "Conifer_Park_3Month_Tasks_FINAL.csv",
       "type": "csv"
-    },
-    {
-      "label": "Owner Conversation Items (10 asks)",
-      "path": "Conifer_Park_Owner_Conversation_Items.md",
-      "type": "md"
-    },
-    {
-      "label": "Owner Conversation Items (DOCX)",
-      "path": "Conifer_Park_Owner_Conversation_Items.docx",
-      "type": "docx"
     },
     {
       "label": "Rochester CRO Brief (CN-03)",
@@ -1239,11 +1199,6 @@
       "type": "xlsx"
     },
     {
-      "label": "Citations 3-Month (7 pins × 15 surfaces)",
-      "path": "Conifer_Park_Citations_3Month.xlsx",
-      "type": "xlsx"
-    },
-    {
       "label": "Reviews Plan 3-Month (owner replies + velocity targets)",
       "path": "Conifer_Park_Reviews_Plan_3Month.xlsx",
       "type": "xlsx"
@@ -1256,6 +1211,11 @@
     {
       "label": "Schema Plan (16-URL page-level refactor map)",
       "path": "Conifer_Park_Schema_Plan.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Citations Submission List 3-Month",
+      "path": "Conifer_Park_Citations_3Month.xlsx",
       "type": "xlsx"
     },
     {

@@ -229,6 +229,21 @@
     "channel_colors": { "organic": "#1d5b8a" },
     "channel_labels": { "organic": "Organic Search" }
   },
+  "quarterly_chart": {
+    "headline": "Bernie's Best — Organic Search · quarterly: traffic fell sharply, but the buyers who remained converted at materially higher rates",
+    "subtitle": "Q1 2025 → Q1 2026. Q2 2026 (est) shown hatched/dashed — Apr 2026 actual + May run-rate projection + June projected from May.",
+    "quarters": ["Q1 2025", "Q2 2025", "Q3 2025", "Q4 2025", "Q1 2026", "Q2 2026* (est)"],
+    "sessions":     [27617, 19581, 16014, 13527, 13160, 12162],
+    "transactions": [186,   165,   189,   243,   286,   259],
+    "cvr":          [0.67,  0.84,  1.18,  1.80,  2.17,  2.13],
+    "yoy_q1": {
+      "sessions_pct":     -52,
+      "transactions_pct":  54,
+      "cvr_pct":          223
+    },
+    "is_estimate": [false, false, false, false, false, true],
+    "estimate_note": "Q2 2026 (est) = Apr 2026 (3,728 sess / 87 tx) + projected May (4,217 / 86 from May 1-21 run-rate) + projected June (using May run-rate as proxy). Sessions trend continues down; CVR holds the new ~2.1% plateau."
+  },
   "quarterly_yoy_infographic": {
     "headline": "Q1 2025 vs Q1 2026 — the headline inversion in one frame",
     "subtitle": "Organic only. Fewer visitors, more buyers, materially higher conversion.",
