@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Professional Movers.com · Q3 2026 Strategic Dashboard · HQDM</title>
+  <meta name="description" content="Q3 2026 strategic dashboard for Professional Movers.com — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 400: '#3b82f6', 300: '#8ecae6' },
+            accent: { teal: '#0ea5a4', amber: '#f59e0b', red: '#ef4444', green: '#10b981', indigo: '#6366f1', purple: '#8b5cf6', blue: '#3b82f6' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <!-- ============== STICKY HEADER ============== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="../../index.html" class="text-xs text-ink-500 hover:text-ink-800 hidden sm:inline">← HQDM Dashboards</a>
+        <span class="text-ink-300 hidden sm:inline">/</span>
+        <div class="min-w-0">
+          <div class="font-semibold text-sm sm:text-base truncate" id="hdr-client">Professional Movers.com</div>
+          <div class="text-xs text-ink-500 truncate"><span id="hdr-quarter">Q3 2026</span> Strategic Dashboard</div>
+        </div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
+        <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
+        <a href="#maps" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#competition" class="px-3 py-1.5 rounded hover:bg-slate-100">Competition</a>
+        <a href="#potential" class="px-3 py-1.5 rounded hover:bg-slate-100">Potential</a>
+        <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
+        <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
+      </nav>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">2026-05-22</div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,0.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span id="hero-tier">Tier 3</span>
+        <span class="text-brand-300/50">·</span>
+        <span>HQDM Search Intelligence</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight" id="hero-h1">Professional Movers.com</h1>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">Award-Winning Moving Company in Detroit, MI · Founded 1978</p>
+      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">Walled Lake HQ pin + Detroit Woodward GBP claim + Rochester GBP claim + organic recovery + earned-channel rebuild.</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono" id="hero-prepared">2026-05-22</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> <span id="hero-author">Aleksandar Spasevski</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono" id="hero-domain">professionalmovers.com</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TL;DR ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR</div>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
+        PM operates <strong>3 physical offices but manages 1 GBP</strong> (Walled Lake HQ). DataForSEO Maps SERP live at 8 metro coords shows PM has Maps reach in <strong>3 of 8</strong> — Walled Lake (1.0), Novi (2.0), Detroit Woodward (2.7 via pin-bleed). <strong>The entire eastern half of the declared service area is invisible</strong> on Maps. Organic search is the cliff: <strong>monthly imp 319K (Aug 2025) → 82K (May 2026), −74%</strong>, with the long-tail (pos 51+) wiped 435 → 3 keywords. Mid-Sept 2025 inflection overlaps the Sept 2025 core update. <strong>256 keywords sit at pos 11–50</strong> — the explicit recovery upside. Recovery is <strong>5 levers + 1 P0 prerequisite</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
+  <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-2xl font-bold tracking-tight">Health Snapshot</h2>
+      <span class="text-xs text-ink-500">6 KPIs · click for detail</span>
+    </div>
+    <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- ============== HEADLINE CHART ============== -->
+  <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Channel Mix Trend — 18 Months</h2>
+            <p class="text-sm text-ink-500 mt-1" id="trend-headline">Traffic dropping, conversions stable + growing</p>
+          </div>
+          <div class="flex gap-2" id="trend-toggle-group">
+            <button data-mode="sessions" class="trend-toggle bg-brand-500 text-white px-3 py-1.5 rounded text-xs font-semibold">Sessions</button>
+            <button data-mode="conversions" class="trend-toggle bg-slate-100 hover:bg-slate-200 text-ink-700 px-3 py-1.5 rounded text-xs font-semibold">Conversions</button>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="organic" checked class="rounded accent-brand-500">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#1d5b8a"></span>
+            <span>Organic</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="gbp" checked class="rounded accent-accent-amber">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#f59e0b"></span>
+            <span>GBP</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="direct" class="rounded accent-accent-red">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#ef4444"></span>
+            <span>Direct (excluded by default — scale)</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="llm" checked class="rounded accent-accent-purple">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#8b5cf6"></span>
+            <span>LLM (emerging)</span>
+          </label>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="h-80 sm:h-96"><canvas id="trend-chart"></canvas></div>
+        <p class="text-xs text-ink-500 mt-4 italic" id="trend-annotation"></p>
+      </div>
+
+      <!-- Quarterly summary -->
+      <div class="border-t border-slate-200 p-6 bg-slate-50/60">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-xs" id="trend-quarterly-table">
+            <thead class="text-ink-500">
+              <tr>
+                <th class="text-left font-semibold py-2 pr-4">Quarter</th>
+                <th class="text-right font-semibold py-2 pr-4">Organic sess/mo</th>
+                <th class="text-right font-semibold py-2 pr-4">Org conv/mo</th>
+                <th class="text-right font-semibold py-2 pr-4">Org CR</th>
+                <th class="text-right font-semibold py-2 pr-4">GBP sess/mo</th>
+                <th class="text-right font-semibold py-2 pr-4">GBP conv/mo</th>
+                <th class="text-right font-semibold py-2">GBP CR</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MAPS PRESENCE ============== -->
+  <section id="maps" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Maps Presence Audit</h2>
+        <p class="text-sm text-ink-500 mt-1">DataForSEO Maps SERP live (2026-05-22) at 8 metro coordinates × 6 commercial queries = 48 live SERPs.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="maps-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Coord</th>
+              <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Distance / Context</th>
+              <th class="text-right font-semibold py-3 px-4">PM avg rank</th>
+              <th class="text-right font-semibold py-3 px-4">Top-3 / 6</th>
+              <th class="text-right font-semibold py-3 px-4">Top-20 / 6</th>
+              <th class="text-left font-semibold py-3 px-4 hidden lg:table-cell">Dominant winners</th>
+              <th class="text-left font-semibold py-3 px-4">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="text-sm text-ink-600 mt-4 max-w-4xl">
+      <strong>The reading:</strong> PM has Maps reach in 3 of 8 tested coords. The WL pin reaches itself + Novi proximity + downtown Detroit via pin-bleed where PM ranks #3 on every Detroit-modified query <em>despite no managed GBP</em>. The entire eastern metro is invisible. Even Farmington Hills (real catchment) shows non-mover businesses outranking PM. <strong>The two pin-claim moves are the single highest-leverage actions in the entire Q3 plan.</strong>
+    </p>
+  </section>
+
+  <!-- ============== LD GRID + PER-KEYWORD ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+
+    <!-- LD Leaderboard -->
+    <div>
+      <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">LD 13×13 Grid — Competitor Leaderboard</h2>
+          <p class="text-sm text-ink-500 mt-1">May 1 2026 rank-quality view across the western Detroit metro. Click headers to sort.</p>
+        </div>
+        <div class="text-xs text-ink-500 font-mono">PM is highlighted</div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="ld-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="name">Pin</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="may_top3">May top-3</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="delta_top3">Δ top-3</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="may_avg_rank">May avg rank</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="delta_avg_rank">Δ avg rank</th>
+                <th class="text-right font-semibold py-3 px-4 cursor-pointer hover:bg-slate-100" data-sort="cells">Cells</th>
+                <th class="text-left font-semibold py-3 px-4">Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- LD heatmap loop: PM vs top 3 competitors x 3 keywords x Feb<->May -->
+    <div>
+      <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">LD Grid Heatmap — Time-Lapse Comparison</h2>
+          <p class="text-sm text-ink-500 mt-1">PM vs top 3 competitors across 3 proximity queries. Each panel is the 13×13 LD grid; cells colored by rank. Animation auto-loops Feb 2 ↔ May 1, 2026.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <!-- Keyword tabs + controls -->
+        <div class="border-b border-slate-200 p-4 flex flex-wrap items-center justify-between gap-3 bg-slate-50/60">
+          <div class="flex gap-2 flex-wrap" id="hm-keyword-tabs"></div>
+          <div class="flex items-center gap-3">
+            <span class="text-xs font-mono text-ink-500">Date:</span>
+            <div class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold">
+              <button data-date="feb" class="hm-date-btn px-3 py-1.5">Feb 2</button>
+              <button data-date="may" class="hm-date-btn px-3 py-1.5 bg-brand-500 text-white">May 1</button>
+            </div>
+            <button id="hm-play-pause" class="px-3 py-1.5 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded inline-flex items-center gap-1.5">
+              <svg id="hm-icon-pause" class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M6 4h3v12H6V4zm5 0h3v12h-3V4z"/></svg>
+              <svg id="hm-icon-play" class="w-3.5 h-3.5 hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4l11 6-11 6V4z"/></svg>
+              <span id="hm-play-label">Pause</span>
+            </button>
+            <label class="text-xs inline-flex items-center gap-1.5 cursor-pointer">
+              <input type="checkbox" id="hm-cycle-kw" class="rounded accent-brand-500">
+              <span>Cycle keywords</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 4-column comparison -->
+        <div class="p-4 sm:p-6">
+          <div id="hm-panels" class="grid grid-cols-2 lg:grid-cols-4 gap-4"></div>
+        </div>
+
+        <!-- Legend -->
+        <div class="border-t border-slate-200 p-4 bg-slate-50/40 flex flex-wrap items-center gap-4 text-xs">
+          <span class="font-bold uppercase tracking-wider text-ink-600">Rank legend:</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#047857"></span>1–3</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#10b981"></span>4–6</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#84cc16"></span>7–10</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#f97316"></span>21–50</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top-N / off-grid</span>
+          <span class="text-ink-500 ml-auto">Hover any cell for exact rank.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Per-keyword movement -->
+    <div>
+      <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">Per-Keyword Movement — Feb 2 → May 1 2026</h2>
+          <p class="text-sm text-ink-500 mt-1">PM gained ground on hard Detroit-modified queries (+1.5 to +2.2 positions) but lost reach on `detroit moving company` (−94 cells) and slightly regressed on easier "near me" queries.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="kw-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">Keyword</th>
+                <th class="text-right font-semibold py-3 px-4">Feb cells</th>
+                <th class="text-right font-semibold py-3 px-4">May cells</th>
+                <th class="text-right font-semibold py-3 px-4">Feb avg</th>
+                <th class="text-right font-semibold py-3 px-4">May avg</th>
+                <th class="text-right font-semibold py-3 px-4">Pos gained</th>
+                <th class="text-right font-semibold py-3 px-4">Feb top-3</th>
+                <th class="text-right font-semibold py-3 px-4">May top-3</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GSC DECLINE + URL CLASS ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <!-- GSC Decline -->
+      <div class="lg:col-span-3 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">GSC Organic Decline</h3>
+        <p class="text-xs text-ink-500 mt-1">Mid-September 2025 inflection overlaps the Sept 2025 core update. Pages-with-imp stable (178 → 187). Impressions-per-page collapsed ~1,710 → ~436.</p>
+        <div class="h-64 mt-4"><canvas id="gsc-chart"></canvas></div>
+      </div>
+
+      <!-- URL class share -->
+      <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">URL-Class Contribution (last 30d)</h3>
+        <p class="text-xs text-ink-500 mt-1">Service pages contribute 43% of imp / 50% of clicks. Burb-templated cohort: 1.3% of imp despite 70+ URLs in sitemap.</p>
+        <div class="h-64 mt-4"><canvas id="urlclass-chart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Brand vs non-brand -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold">Brand-Pull Dominance</h3>
+      <p class="text-xs text-ink-500 mt-1" id="brand-pull-note"></p>
+      <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4" id="brand-pull-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============== COMPETITION ============== -->
+  <section id="competition" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="mb-4">
+      <h2 class="text-2xl font-bold tracking-tight">Organic SERP Competition</h2>
+      <p class="text-sm text-ink-500 mt-1">PM's local-pack competitors (Bos, Moving Made Easy, etc.) do not appear in the organic SERP set. Organic competition is the national-mover + comparison-site cohort. <strong>Lever B page builds must compete with national-mover-grade depth.</strong></p>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="org-comp-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Domain</th>
+              <th class="text-right font-semibold py-3 px-4">Shared keywords</th>
+              <th class="text-left font-semibold py-3 px-4">Type</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POTENTIAL ============== -->
+  <section id="potential" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+    <div>
+      <h2 class="text-2xl font-bold tracking-tight">Where the Volume Sits</h2>
+      <p class="text-sm text-ink-500 mt-1">256 keywords in the ship-ready band (pos 11–50) per DFS Labs Ranked Keywords. ETV ≈ 1,282/mo.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Keyword buckets -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">Keyword Bucket Distribution</h3>
+        <div class="h-64 mt-4"><canvas id="buckets-chart"></canvas></div>
+        <div class="mt-4 space-y-2 text-xs" id="buckets-legend"></div>
+      </div>
+
+      <!-- Map upside -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="p-6 pb-4">
+          <h3 class="text-lg font-bold">Map Presence Upside (today → M3 target)</h3>
+          <p class="text-xs text-ink-500 mt-1">If both pins claim + 5 DD pins land + WL pin defended: <strong>3/8 coords reached → 6/8 by M3.</strong> Doubles PM's effective Maps surface area.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="upside-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">Coord</th>
+                <th class="text-left font-semibold py-3 px-4">Today</th>
+                <th class="text-left font-semibold py-3 px-4">M3 target</th>
+                <th class="text-center font-semibold py-3 px-4">Action</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top URLs push concentration -->
+    <div>
+      <h3 class="text-lg font-bold">Single-URL Push Concentration (GSC last 90d)</h3>
+      <p class="text-xs text-ink-500 mt-1">Top URLs by impression volume. Sorted by impressions; "Lever" column shows the Q3 plan assignment.</p>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mt-4">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="top-urls-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">URL</th>
+                <th class="text-right font-semibold py-3 px-4">Imp 90d</th>
+                <th class="text-right font-semibold py-3 px-4">Clicks 90d</th>
+                <th class="text-right font-semibold py-3 px-4">Pos</th>
+                <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Class</th>
+                <th class="text-left font-semibold py-3 px-4">Lever</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POSITIVES VS NEGATIVES ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Positives vs Negatives</h2>
+    <p class="text-sm text-ink-500 max-w-4xl mb-6"><strong>Net:</strong> Positives are structural + brand-anchored; negatives are mostly methodological (off-page) + geometric (single-pin Maps reach). Both fixable inside HQDM's execution scope.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-3 text-emerald-700 font-bold uppercase tracking-wider text-xs">
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M16.7 5.3a1 1 0 010 1.4l-7.8 7.8a1 1 0 01-1.4 0L3.3 10.3a1 1 0 011.4-1.4L8 12.2l7-7a1 1 0 011.4 0z"/></svg>
+          <span>Positives</span>
+        </div>
+        <ul class="space-y-2 text-sm" id="positives-list"></ul>
+      </div>
+      <div class="bg-rose-50 border border-rose-200 rounded-xl p-6">
+        <div class="flex items-center gap-2 mb-3 text-rose-700 font-bold uppercase tracking-wider text-xs">
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path d="M14.7 5.3a1 1 0 010 1.4L11.4 10l3.3 3.3a1 1 0 01-1.4 1.4L10 11.4l-3.3 3.3a1 1 0 01-1.4-1.4L8.6 10 5.3 6.7a1 1 0 011.4-1.4L10 8.6l3.3-3.3a1 1 0 011.4 0z"/></svg>
+          <span>Negatives</span>
+        </div>
+        <ul class="space-y-2 text-sm" id="negatives-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== STRATEGY — LEVERS ============== -->
+  <section id="strategy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-6 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Q3 Strategy — 5 Levers + P0 Prerequisite</h2>
+        <p class="text-sm text-ink-500 mt-1">Click any lever card to expand its action list. The map-presence work + page surgery + link hygiene compound — none require new business surface.</p>
+      </div>
+    </div>
+    <div id="lever-cards" class="space-y-3"></div>
+  </section>
+
+  <!-- ============== ALL TASKS — FILTERABLE ============== -->
+  <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">All Q3 Actions</h2>
+        <p class="text-sm text-ink-500 mt-1">Filterable list of every action across the P0 prerequisite + 5 levers.</p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <input id="task-search" type="search" placeholder="Search…" class="px-3 py-1.5 text-sm border border-slate-300 rounded focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" />
+        <select id="task-lever-filter" class="px-3 py-1.5 text-sm border border-slate-300 rounded outline-none focus:ring-2 focus:ring-brand-500">
+          <option value="">All levers</option>
+        </select>
+        <select id="task-month-filter" class="px-3 py-1.5 text-sm border border-slate-300 rounded outline-none focus:ring-2 focus:ring-brand-500">
+          <option value="">All months</option>
+          <option value="M1">M1</option>
+          <option value="M2">M2</option>
+          <option value="M3">M3</option>
+        </select>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="tasks-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Lever</th>
+              <th class="text-left font-semibold py-3 px-4 font-mono">Code</th>
+              <th class="text-left font-semibold py-3 px-4">Action</th>
+              <th class="text-center font-semibold py-3 px-4">Month</th>
+              <th class="text-center font-semibold py-3 px-4">Effort</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+      <div class="px-4 py-3 text-xs text-ink-500 border-t border-slate-200" id="tasks-summary"></div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="border-t border-slate-200 bg-white mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 text-xs text-ink-500 space-y-3">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 items-center">
+        <span><strong class="text-ink-700">HQDM Search Intelligence</strong></span>
+        <span>Q3 2026 Strategic Dashboard · Professional Movers.com</span>
+        <span>Prepared 2026-05-22 by Aleksandar Spasevski</span>
+      </div>
+      <div>
+        Data sources cross-verified: GSC live API (2026-05-20), GA4 live API (2026-05-20), DataForSEO Labs Ranked Keywords + Maps SERP + Organic SERP + Backlinks (live 2026-05-22), Local Dominator scans (Feb 2 + May 1 2026), Ahrefs subdomain export (2026-05-20).
+      </div>
+      <div class="text-ink-400">
+        Confidential — internal use + authorized client viewing only. <code class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">noindex</code> set; not indexable by search engines.
+      </div>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "client": "Professional Movers.com",
+    "domain": "professionalmovers.com",
+    "tagline": "Award-Winning Moving Company in Detroit, MI",
+    "tier": "Tier 3",
+    "founded": 1978,
+    "years_in_business": 48,
+    "prepared_date": "2026-05-22",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q3 2026",
+    "doc_subtitle": "Walled Lake HQ pin + Detroit Woodward GBP claim + Rochester GBP claim + organic recovery + earned-channel rebuild."
+  },
+  "kpis": [
+    {
+      "label": "Maps reach by metro coord",
+      "value": "3 / 8",
+      "sentiment": "negative",
+      "detail": "Top-20 at Walled Lake (1.0), Novi (2.0), Detroit Woodward (2.7 pin-bleed). Zero at Rochester / Royal Oak / Birmingham / Farmington Hills / Plymouth."
+    },
+    {
+      "label": "LD grid avg rank",
+      "value": "7.9",
+      "sentiment": "neutral",
+      "detail": "Across 906 cell-appearances / 6 kws (May 1). #3 in market by rank quality (Bos 6.5, Moving Made Easy 7.2, PM 7.9, Two Men 9.6)."
+    },
+    {
+      "label": "Offices vs managed GBPs",
+      "value": "1 / 3",
+      "sentiment": "negative",
+      "detail": "Walled Lake HQ managed. Rochester (419 Golf View Ln) + Detroit Woodward (1001 Woodward Ave) published on site but unmanaged."
+    },
+    {
+      "label": "Organic impressions, 12mo",
+      "value": "−74%",
+      "sentiment": "negative",
+      "detail": "GSC monthly imp 319K (Aug 2025) → 82K (May 2026). Long-tail (51+) wiped 435 → 3 in Ahrefs."
+    },
+    {
+      "label": "Ship-ready keyword band",
+      "value": "256 @ pos 11–50",
+      "sentiment": "positive",
+      "detail": "DFS Labs Ranked Keywords: 45 at 1–10, 83 at 11–20, 258 at 21–50, 196 at 51+. The 256 in 11–50 is Lever B's primary target."
+    },
+    {
+      "label": "Backlinks · conversion events",
+      "value": "990 · ~190/mo",
+      "sentiment": "neutral",
+      "detail": "DFS Backlinks: 990 total, 247 ref domains, 17 Telegram-spam anchors. GA4 form_submit fires ~190/mo across all channels — not flagged as conversion event (P0 5-min fix)."
+    }
+  ],
+  "trend": {
+    "headline": "Traffic dropping, conversions stable + growing",
+    "annotation_text": "Organic traffic fell 32% Q2 2025 → Q1 2026 (709 → 484 sessions/mo) while GBP conversions held flat and are now growing. P0 prerequisite is a 5-minute GA4 settings fix + CallRail for phone attribution.",
+    "months": [
+      "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025",
+      "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025",
+      "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+    ],
+    "sessions": {
+      "organic": [572, 582, 503, 494, 659, 703, 765, 760, 618, 592, 536, 561, 473, 492, 471, 488, 504, 556],
+      "gbp":     [0,   0,   49,  103, 141, 123, 141, 143, 155, 133, 132, 109, 140, 137, 132, 142, 151, 155],
+      "direct":  [2689, 2934, 2220, 2122, 2235, 2125, 1723, 2137, 2201, 6781, 16109, 3224, 3000, 2930, 2821, 2934, 2313, 2251],
+      "llm":     [0, 3, 3, 1, 1, 12, 17, 20, 11, 23, 20, 8, 6, 10, 8, 7, 4, 17]
+    },
+    "form_submits": {
+      "organic": [48, 44, 34, 56, 47, 65, 64, 64, 44, 71, 63, 57, 58, 36, 31, 49, 51, 43],
+      "gbp":     [0,  0,  3,  12, 20, 18, 19, 24, 19, 19, 18, 19, 15, 19, 20, 20, 20, 37],
+      "direct":  [82, 82, 55, 79, 85, 70, 100, 111, 93, 76, 95, 71, 80, 72, 36, 40, 49, 76],
+      "llm":     [0, 0, 0, 0, 0, 1, 4, 2, 0, 1, 0, 0, 2, 0, 0, 2, 0, 3]
+    },
+    "may_extrapolation_note": "May 2026 conservatively extrapolated: 20 days actual + 11 days at trailing-12-month historical daily rate.",
+    "events": [
+      { "month_index": 8, "label": "Cliff onset (Sep 2025 core update)", "type": "negative" },
+      { "month_index": 9, "label": "ATB direct spike (Oct 2025)", "type": "anomaly" }
+    ],
+    "quarterly": [
+      { "q": "Dec 2024", "org_sess": 572, "org_conv": 48, "org_cr": 8.4, "gbp_sess": 0,   "gbp_conv": 0,  "gbp_cr": null },
+      { "q": "Q1 2025",  "org_sess": 526, "org_conv": 45, "org_cr": 8.5, "gbp_sess": 51,  "gbp_conv": 5,  "gbp_cr": 10.0 },
+      { "q": "Q2 2025 (peak)", "org_sess": 709, "org_conv": 59, "org_cr": 8.3, "gbp_sess": 135, "gbp_conv": 19, "gbp_cr": 14.1 },
+      { "q": "Q3 2025 (cliff)", "org_sess": 657, "org_conv": 60, "org_cr": 9.2, "gbp_sess": 144, "gbp_conv": 21, "gbp_cr": 14.3 },
+      { "q": "Q4 2025",  "org_sess": 523, "org_conv": 59, "org_cr": 11.3, "gbp_sess": 127, "gbp_conv": 17, "gbp_cr": 13.6 },
+      { "q": "Q1 2026 (trough)", "org_sess": 484, "org_conv": 39, "org_cr": 8.0, "gbp_sess": 137, "gbp_conv": 20, "gbp_cr": 14.4 },
+      { "q": "Q2 2026*", "org_sess": 537, "org_conv": 50, "org_cr": 9.2, "gbp_sess": 150, "gbp_conv": 26, "gbp_cr": 17.5 }
+    ]
+  },
+  "maps_presence": [
+    { "coord": "Walled Lake HQ (pin)", "ll": "42.538,−83.481", "distance": "0 mi", "managed": true,  "avg_rank": 1.0, "top3": 6, "top20": 6, "winners": "PM, Irelo Moving, Rental Crates.com", "action": "Defend — GBP optimize, review velocity, photo set" },
+    { "coord": "Novi", "ll": "42.481,−83.476", "distance": "4 mi S", "managed": false, "avg_rank": 2.0, "top3": 5, "top20": 5, "winners": "Premier Relocations, Signature Professional Movers of Novi, PM", "action": "Defend — extension of WL pin reach" },
+    { "coord": "Detroit Woodward", "ll": "42.332,−83.046", "distance": "PM unmanaged office", "managed": false, "avg_rank": 2.7, "top3": 6, "top20": 6, "winners": "Affordable Muscle Movers, Bellhop Moving, PM (pin-bleed)", "action": "CLAIM + MANAGE — closes #3 → #1 on every Detroit-modified query" },
+    { "coord": "Rochester office", "ll": "42.680,−83.134", "distance": "PM unmanaged office", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Auto Hauler Exchange, The Delia Group, Service First Logistics (non-movers)", "action": "CLAIM + MANAGE — zero Maps presence despite physical office" },
+    { "coord": "Royal Oak", "ll": "42.490,−83.145", "distance": "18 mi E (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "O'Sullivan Moving, College Hunks, New Beginnings Moving, Wondermove", "action": "Driving Directions pin — proximity-decay structural" },
+    { "coord": "Birmingham", "ll": "42.547,−83.211", "distance": "12 mi E (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Kenway Moving, Modern Moving Michigan, Schea Van Lines, Stevens Greater Detroit", "action": "Driving Directions pin" },
+    { "coord": "Farmington Hills", "ll": "42.499,−83.368", "distance": "7 mi SE (real catchment)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "EZ Storage, Penguin Junk Removal (non-movers)", "action": "Driving Directions pin — even non-movers outrank PM here" },
+    { "coord": "Plymouth", "ll": "42.372,−83.470", "distance": "10 mi S (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Stow and Go Self Storage, Dakota Lines, Expedited Freightways (non-movers)", "action": "Driving Directions pin" }
+  ],
+  "ld_leaderboard": [
+    { "name": "Bos Moving & Service",         "may_top3": 180, "delta_top3": 0,   "may_avg_rank": 6.5, "delta_avg_rank": -0.1, "cells": 384,   "note": "#1 by rank quality — defend-against", "is_client": false },
+    { "name": "Moving Made Easy",             "may_top3": 141, "delta_top3": -20, "may_avg_rank": 7.2, "delta_avg_rank": -0.5, "cells": 509,   "note": "#2 by rank quality", "is_client": false },
+    { "name": "Professional Movers.com",      "may_top3": 340, "delta_top3": -8,  "may_avg_rank": 7.9, "delta_avg_rank": null, "cells": 906,   "note": "#3 by rank quality; #2 by placements", "is_client": true },
+    { "name": "Elite Piano Movers",           "may_top3": 83,  "delta_top3": 6,   "may_avg_rank": 8.4, "delta_avg_rank": 0.3,  "cells": 247,   "note": "Specialty vertical", "is_client": false },
+    { "name": "Quick and Careful Moving",     "may_top3": 95,  "delta_top3": -28, "may_avg_rank": 8.7, "delta_avg_rank": -0.9, "cells": 591,   "note": "Biggest collapse — freed cells", "is_client": false },
+    { "name": "Affordable Movers",            "may_top3": 122, "delta_top3": 59,  "may_avg_rank": 8.8, "delta_avg_rank": 0.5,  "cells": 732,   "note": "Sharp gainer", "is_client": false },
+    { "name": "Alpha Moving Company",         "may_top3": 96,  "delta_top3": -14, "may_avg_rank": 8.8, "delta_avg_rank": -0.4, "cells": 420,   "note": "—", "is_client": false },
+    { "name": "Reasonable Movers",            "may_top3": 109, "delta_top3": -24, "may_avg_rank": 9.3, "delta_avg_rank": -0.6, "cells": 436,   "note": "Losing share", "is_client": false },
+    { "name": "Two Men and a Truck Moving",   "may_top3": 352, "delta_top3": -12, "may_avg_rank": 9.6, "delta_avg_rank": 0.5,  "cells": 1392,  "note": "Multi-pin aggregate; leader by placements", "is_client": false },
+    { "name": "University Moving and Storage","may_top3": 57,  "delta_top3": -3,  "may_avg_rank": 9.8, "delta_avg_rank": -0.1, "cells": 523,   "note": "—", "is_client": false },
+    { "name": "A2 MOVING (new entrant)",      "may_top3": 98,  "delta_top3": 98,  "may_avg_rank": 10.3,"delta_avg_rank": 4.8,  "cells": 583,   "note": "Top placement gainer", "is_client": false },
+    { "name": "Premier Relocations",          "may_top3": 52,  "delta_top3": -9,  "may_avg_rank": 11.1,"delta_avg_rank": -0.1, "cells": 362,   "note": "Dominates Novi cells", "is_client": false }
+  ],
+  "per_keyword": [
+    { "keyword": "movers detroit",          "feb_cells": 219, "may_cells": 223, "feb_avg": 14.1, "may_avg": 12.6, "pos_gained": 1.5,  "feb_top3": 2,  "may_top3": 2 },
+    { "keyword": "detroit moving company",  "feb_cells": 248, "may_cells": 154, "feb_avg": 16.6, "may_avg": 14.4, "pos_gained": 2.2,  "feb_top3": 1,  "may_top3": 0 },
+    { "keyword": "moving companies",        "feb_cells": 131, "may_cells": 130, "feb_avg": 4.7,  "may_avg": 4.8,  "pos_gained": -0.1, "feb_top3": 73, "may_top3": 72 },
+    { "keyword": "movers",                  "feb_cells": 132, "may_cells": 133, "feb_avg": 3.9,  "may_avg": 4.2,  "pos_gained": -0.3, "feb_top3": 89, "may_top3": 87 },
+    { "keyword": "moving company near me",  "feb_cells": 133, "may_cells": 133, "feb_avg": 3.6,  "may_avg": 3.9,  "pos_gained": -0.3, "feb_top3": 92, "may_top3": 87 },
+    { "keyword": "movers near me",          "feb_cells": 133, "may_cells": 133, "feb_avg": 3.3,  "may_avg": 3.4,  "pos_gained": -0.1, "feb_top3": 91, "may_top3": 92 }
+  ],
+  "gsc_decline": [
+    { "month": "2025-08", "label": "peak",   "pages": 187, "imp": 319405, "clicks": 396, "delta_pct": 0 },
+    { "month": "2025-09", "label": "cliff",  "pages": 181, "imp": 205856, "clicks": 366, "delta_pct": -36 },
+    { "month": "2025-12", "label": "",       "pages": 196, "imp": 139022, "clicks": 245, "delta_pct": -56 },
+    { "month": "2026-02", "label": "",       "pages": 209, "imp": 83509,  "clicks": 209, "delta_pct": -74 },
+    { "month": "2026-05", "label": "current","pages": 187, "imp": 81538,  "clicks": 148, "delta_pct": -74 }
+  ],
+  "url_class": [
+    { "class": "service",         "pages": 79, "imp": 50720, "imp_pct": 43.1, "clicks": 131, "clicks_pct": 50.4 },
+    { "class": "home",            "pages": 1,  "imp": 34268, "imp_pct": 29.1, "clicks": 69,  "clicks_pct": 26.5 },
+    { "class": "blog",            "pages": 49, "imp": 15831, "imp_pct": 13.4, "clicks": 15,  "clicks_pct": 5.8 },
+    { "class": "location_other",  "pages": 2,  "imp": 5815,  "imp_pct": 4.9,  "clicks": 8,   "clicks_pct": 3.1 },
+    { "class": "other / about",   "pages": 52, "imp": 9384,  "imp_pct": 7.9,  "clicks": 34,  "clicks_pct": 13.1 },
+    { "class": "burb_templated",  "pages": 10, "imp": 1586,  "imp_pct": 1.3,  "clicks": 3,   "clicks_pct": 1.2 }
+  ],
+  "brand_pull": {
+    "brand":     { "imp": 18651,  "imp_pct": 12.1, "clicks": 147, "clicks_pct": 53.8 },
+    "non_brand": { "imp": 135466, "imp_pct": 87.9, "clicks": 126, "clicks_pct": 46.2 },
+    "note": "Brand carries 54% of clicks from 12% of impressions — classic brand-pull pattern. Non-brand CTR collapsed to 0.09%."
+  },
+  "organic_competitors": [
+    { "domain": "twomenandatruck.com",    "shared": 324, "type": "Multi-pin local + national brand" },
+    { "domain": "hireahelper.com",        "shared": 281, "type": "Aggregator / comparison" },
+    { "domain": "moveadvisor.com",        "shared": 211, "type": "Aggregator / comparison" },
+    { "domain": "allied.com",             "shared": 181, "type": "National van line" },
+    { "domain": "allmysons.com",          "shared": 181, "type": "National chain" },
+    { "domain": "extraspace.com",         "shared": 174, "type": "Storage adjacent" },
+    { "domain": "homedepot.com",          "shared": 171, "type": "DIY truck rental adjacent" },
+    { "domain": "movinghelp.com",         "shared": 168, "type": "U-Haul-owned labor marketplace" }
+  ],
+  "keyword_buckets": [
+    { "bucket": "Pos 1–10 (Owned)",             "keywords": 45,  "pct": 8,  "posture": "Defend" },
+    { "bucket": "Pos 11–20 (Ship-ready primary)", "keywords": 83,  "pct": 14, "posture": "Lever B + C primary target" },
+    { "bucket": "Pos 21–50 (Build territory)",   "keywords": 258, "pct": 44, "posture": "Depth + internal-link consolidation" },
+    { "bucket": "Pos 51+ (Deep gap)",            "keywords": 196, "pct": 34, "posture": "Long-term — Q4 onward" }
+  ],
+  "top_urls": [
+    { "url": "/", "imp_90d": 86283, "clicks_90d": 215, "pos": 26.1, "class": "home", "lever": "HP-01..05 Lever B" },
+    { "url": "/residential/hot-tub-moving-services/", "imp_90d": 38000, "clicks_90d": 80, "pos": 14.7, "class": "service", "lever": "SP-01 Lever B" },
+    { "url": "/about-us/contact/", "imp_90d": 11884, "clicks_90d": 29, "pos": 30.5, "class": "core", "lever": "nav" },
+    { "url": "/residential/piano-moving-services/", "imp_90d": 29000, "clicks_90d": 10, "pos": 19.7, "class": "service", "lever": "SP-02 Lever B" },
+    { "url": "/senior-moving/flat-screen-tv-moving/", "imp_90d": 18000, "clicks_90d": 250, "pos": 10.6, "class": "service", "lever": "Exemplar (1.36% CTR niche model)" },
+    { "url": "/artwork-moving/", "imp_90d": 19000, "clicks_90d": 10, "pos": 21.9, "class": "service", "lever": "SP-03 Lever B" },
+    { "url": "/office/", "imp_90d": 17000, "clicks_90d": 5, "pos": 39.3, "class": "service", "lever": "depth target" },
+    { "url": "/office/furniture-installation-services/", "imp_90d": 29000, "clicks_90d": 8, "pos": 40.7, "class": "service", "lever": "SP-06 Lever B (biggest rank-lift)" },
+    { "url": "/senior-moving/", "imp_90d": 14000, "clicks_90d": 15, "pos": 17.0, "class": "service", "lever": "SP-04 Lever B" },
+    { "url": "/residential/local-moving-services/", "imp_90d": 13000, "clicks_90d": 2, "pos": 21.7, "class": "service", "lever": "SP-05 Lever B" }
+  ],
+  "map_upside": [
+    { "coord": "Walled Lake HQ",  "today": "#1 avg",       "m3_target": "Defend #1",          "managed": true,  "delta_text": "Defend" },
+    { "coord": "Novi",            "today": "#2 avg",       "m3_target": "Defend #2 or improve","managed": false, "delta_text": "Defend" },
+    { "coord": "Detroit Woodward","today": "#2.7 pin-bleed","m3_target": "#1 with managed pin","managed": false, "delta_text": "Claim" },
+    { "coord": "Rochester",       "today": "not in top-20","m3_target": "top-5 with managed pin","managed": false, "delta_text": "Claim" },
+    { "coord": "Royal Oak",       "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
+    { "coord": "Birmingham",      "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
+    { "coord": "Farmington Hills","today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
+    { "coord": "Plymouth",        "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
+    { "coord": "Bloomfield Hills","today": "not tested",   "m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" }
+  ],
+  "positives": [
+    "#1 Maps rank at Walled Lake coord on 8/8 priority queries (DFS live)",
+    "#3 in market by LD grid avg rank quality (7.9, behind Bos 6.5 + Moving Made Easy 7.2; ahead of Two Men 9.6 multi-pin)",
+    "45-year brand · USDOT 266582 · MCICC 178368 · CVED L19032 · 'Best Moving Company' Detroit Free Press + Oakland Press",
+    "256 keywords at pos 11–50 ship-ready band",
+    "/senior-moving/flat-screen-tv-moving/ 1.36% CTR niche model exists on-site",
+    "/residential/long-distance-moving-services/ is national-mover-grade depth model",
+    "Brand-pull strong (54% of clicks from 12% of imp)",
+    "Service pages contribute 43% imp / 50% clicks"
+  ],
+  "negatives": [
+    "5 of 8 metro coords zero Maps reach — entire eastern metro invisible",
+    "Feb→May reach loss: 90 cells / 8 net top-3 placements / 94 cells on 'detroit moving company'",
+    "Rochester + Detroit Woodward GBPs unmanaged despite physical offices",
+    "Organic monthly imp −74% Aug 2025 → May 2026",
+    "60+ burb pages effectively deindexed; SEO Neo-precursor stack still active in Asana",
+    "49.6% Ahrefs-flagged spam backlinks; 17 confirmed Telegram-spam anchors via DFS",
+    "Non-brand CTR 0.09%; AI-Overview + local-pack suppression structural",
+    "GA4 returns 0 conversions across 65K sessions — measurement broken"
+  ],
+  "levers": [
+    {
+      "id": "P0",
+      "name": "Conversion tracking restoration",
+      "priority": "P0 prerequisite",
+      "color": "amber",
+      "why": "GA4 returns 0 conversions across 65K sessions / 901 pages / 365d. Until that's fixed everything else is invisible. form_submit IS firing (~190 events/mo across all channels) but the property-settings flag was never set.",
+      "actions": [
+        { "code": "AN-01", "name": "Mark form_submit as conversion event in GA4 property settings", "month": "M1", "effort": "S" },
+        { "code": "AN-02", "name": "Deploy CallRail phone-call tracking integrated with GA4", "month": "M1", "effort": "M" },
+        { "code": "AN-03", "name": "Verify GBP UTM ?utm_source=gmb fires into GA4", "month": "M1", "effort": "S" },
+        { "code": "AN-04", "name": "Build Q3 reporting baseline using fresh conversion data", "month": "M2", "effort": "S" },
+        { "code": "AN-05", "name": "First monthly report with M1 cleanup landed", "month": "M2", "effort": "S" },
+        { "code": "AN-06", "name": "Q3 to Q4 quarterly comparison frame", "month": "M3", "effort": "S" }
+      ],
+      "outcome": "Conversion + call-attribution data available for all subsequent reporting. Owner authorization required for CallRail deployment (OCI Ask 3)."
+    },
+    {
+      "id": "A",
+      "name": "Map presence expansion",
+      "priority": "Highest priority",
+      "color": "green",
+      "why": "PM has Maps reach in 3 of 8 tested metro coords. Two managed-GBP claims (Detroit Woodward + Rochester) plus 5 Driving Direction pins close the geometric ceiling that a single Walled Lake pin can't.",
+      "actions": [
+        { "code": "GBP-01", "name": "Claim + manage Detroit Woodward GBP (1001 Woodward Ave) — #2.7 pin-bleed closes to #1", "month": "M1", "effort": "M" },
+        { "code": "GBP-02", "name": "Claim + manage Rochester GBP (419 Golf View Ln) — zero Maps reach today", "month": "M1", "effort": "M" },
+        { "code": "GBP-03..09", "name": "Walled Lake HQ pin optimization (description, products, photos, attributes, posts, reviews)", "month": "M1", "effort": "L" },
+        { "code": "DD-01..05", "name": "Driving Direction pins at Birmingham / Royal Oak / Farmington Hills / Plymouth / Bloomfield Hills", "month": "M1", "effort": "M" },
+        { "code": "GBP-10", "name": "Detroit Woodward post-claim optimization", "month": "M2", "effort": "M" },
+        { "code": "GBP-11", "name": "Rochester post-claim optimization", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "3/8 coords with PM in top-3 → 6/8 (M3 target). Detroit Woodward → #1 within 30d of claim. Rochester → top-5 within 60d."
+    },
+    {
+      "id": "B",
+      "name": "Page surgery (cleanup + improvement + new pages)",
+      "priority": "High priority",
+      "color": "blue",
+      "why": "60+ of 70 burb pages effectively deindexed but still in sitemap, polluting site-quality signal. 256 keywords sit at pos 11–50 ship-ready. Homepage forced to rank for 9+ commercial queries at avg pos 26.",
+      "actions": [
+        { "code": "PA-02..22", "name": "26 burb-page DELETE+301 redirects per Pages_Action_List", "month": "M1", "effort": "L" },
+        { "code": "PA-23..26", "name": "Upgrade 4 surviving burb pages into real location pages", "month": "M1", "effort": "M" },
+        { "code": "SP-01", "name": "/residential/hot-tub-moving-services/ (173K imp pos 14.7) brand-specific upgrade", "month": "M1", "effort": "L" },
+        { "code": "SP-02", "name": "/residential/piano-moving-services/ (125K imp pos 19.7) depth upgrade", "month": "M1", "effort": "L" },
+        { "code": "SP-03", "name": "/artwork-moving/ (76K imp pos 21.9) custom crating + museum case studies", "month": "M2", "effort": "L" },
+        { "code": "SP-04", "name": "/senior-moving/ (59K imp pos 17.0) senior-community partnerships", "month": "M2", "effort": "L" },
+        { "code": "SP-05", "name": "/residential/local-moving-services/ (52K imp pos 21.7) homepage-split cross-links", "month": "M2", "effort": "M" },
+        { "code": "SP-06", "name": "/office/furniture-installation-services/ (29K imp pos 40.7) biggest rank-lift potential", "month": "M2", "effort": "L" },
+        { "code": "SP-07", "name": "/residential/internal-small-moving/ (20K imp pos 35.0) niche specialty", "month": "M3", "effort": "M" },
+        { "code": "HP-01", "name": "Build /movers-detroit-mi/ national-mover-grade depth", "month": "M1", "effort": "L" },
+        { "code": "HP-02", "name": "Build /moving-companies-detroit-mi/ separate intent split", "month": "M2", "effort": "L" },
+        { "code": "HP-03", "name": "Build /movers-walled-lake-mi/ AI-Overview-citation-optimized", "month": "M2", "effort": "L" },
+        { "code": "HP-04", "name": "Build /moving-companies-michigan/ statewide cluster", "month": "M3", "effort": "L" },
+        { "code": "HP-05", "name": "Refocus / on brand + 3-office overview + nav into HP-01..04", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "Each homepage-split page reaches pos 8–12. 3 of 5 priority service pages reach top-10 by M3. Site-wide quality signal lifts as burb pages drop."
+    },
+    {
+      "id": "C",
+      "name": "Internal linking + schema",
+      "priority": "Medium priority",
+      "color": "indigo",
+      "why": "Service pages share homepage nav + footer but lack cross-cluster links. Blog packing posts (4,884 imp 30d) don't link to commercial /packing/. Equity not routed to the ship-ready surface.",
+      "actions": [
+        { "code": "IL-001..020", "name": "Priority nav + body changes routing equity into Lever B targets; footer to HP-01..04 sitewide", "month": "M1", "effort": "M" },
+        { "code": "IL-021..040", "name": "Blog-to-commercial pull-through + service-cluster hub-and-spoke", "month": "M2", "effort": "M" },
+        { "code": "IL-041..050", "name": "Areas-served hub-to-spoke (Walled Lake hub → surviving burb pages)", "month": "M3", "effort": "S" },
+        { "code": "SCH-01..14", "name": "Schema markup deploy on all new + upgraded pages (LocalBusiness + Service + FAQ + BreadcrumbList)", "month": "M1-M3", "effort": "M" }
+      ],
+      "outcome": "Service-page rankings lift 3-8 positions across the ship-ready 256-keyword band via internal-link equity routing. Schema improves SERP feature acquisition."
+    },
+    {
+      "id": "D",
+      "name": "Content (blog refresh + new commercial-intent articles)",
+      "priority": "Medium priority",
+      "color": "purple",
+      "why": "Top-imp blog gets tons of impressions but few clicks (how-to-pack-dishes 4,884 imp / 1 click). Adding commercial pull-through converts impressions into authority + click-through. New Detroit commercial-intent blog targets the 196 pos-51+ keywords.",
+      "actions": [
+        { "code": "BLG-01", "name": "/2025/09/16/how-to-pack-dishes-for-moving/ → add /packing/ links + Detroit context", "month": "M1", "effort": "S" },
+        { "code": "BLG-02", "name": "/2025/09/16/how-to-move-a-pool-table/ → add piano-moving cross-link", "month": "M1", "effort": "S" },
+        { "code": "BLG-03", "name": "/2025/09/16/how-to-move-a-refrigerator/ → add local-moving cross-link", "month": "M1", "effort": "S" },
+        { "code": "BLG-04", "name": "New: Moving cost Detroit MI 2026", "month": "M2", "effort": "M" },
+        { "code": "BLG-05", "name": "New: Best moving company Detroit reviews — what to look for", "month": "M2", "effort": "M" },
+        { "code": "BLG-06", "name": "New: How much to tip movers in Detroit", "month": "M2", "effort": "S" },
+        { "code": "BLG-07", "name": "PAA Implementation per existing Asana task", "month": "M2", "effort": "M" },
+        { "code": "BLG-08", "name": "New: piano-moving-cost (niche-service replica of TV exemplar)", "month": "M3", "effort": "M" },
+        { "code": "BLG-09", "name": "New: hot-tub-moving-cost", "month": "M3", "effort": "M" },
+        { "code": "BLG-10", "name": "New: artwork-moving-cost / museum-grade-handling", "month": "M3", "effort": "M" }
+      ],
+      "outcome": "3–5 new commercial-intent posts ranking top-20 within 60d post-publish. Existing high-imp blog converts more clicks via commercial pull-through."
+    },
+    {
+      "id": "E",
+      "name": "Link hygiene + local PR + citations + local links",
+      "priority": "High priority (compliance)",
+      "color": "red",
+      "why": "DFS Backlinks shows 990 / 247 ref domains with 17 confirmed Telegram-spam anchors. Ahrefs flags 211 of 425 (49.6%) as spam. SEO Neo-precursor stack still active in Asana. Earned-channel rebuild replaces the automated stack.",
+      "actions": [
+        { "code": "OP-01", "name": "Export full backlink profile via DataForSEO Backlinks (per-URL granularity)", "month": "M1", "effort": "S" },
+        { "code": "OP-02", "name": "Build disavow file: 17 Telegram-spam + 211 Ahrefs-flagged + 44 templated anchor", "month": "M1", "effort": "M" },
+        { "code": "OP-03", "name": "Submit disavow via GSC (owner authorization OCI Ask 3)", "month": "M1", "effort": "S" },
+        { "code": "OP-04", "name": "HALT all active SEO Neo-precursor campaigns in Asana — principal instruction to Julce", "month": "M1", "effort": "S" },
+        { "code": "CIT-01..05", "name": "Top 20 local citations (BBB / Yelp / Yellow Pages / Foursquare + 10 MI directories)", "month": "M1", "effort": "M" },
+        { "code": "CIT-06..10", "name": "Industry citations (AMSA / ProMover / MoversAuthority / Moving.com / Mover Stars)", "month": "M2", "effort": "M" },
+        { "code": "PR-01", "name": "Detroit Free Press re-engagement on 'Best Moving Company' relationship", "month": "M2", "effort": "M" },
+        { "code": "PR-02", "name": "Oakland Press follow-up", "month": "M2", "effort": "S" },
+        { "code": "PR-03", "name": "Expert-quote pitches to Mover Magazine + Moving.com editorial", "month": "M3", "effort": "M" },
+        { "code": "LL-01", "name": "Realtor moving-niche partner outreach (Detroit area)", "month": "M2", "effort": "M" },
+        { "code": "LL-02", "name": "Oakland University relocation partner (Rochester office near OU)", "month": "M2", "effort": "M" },
+        { "code": "LL-03", "name": "Senior community partner (PM offers Senior Moving service)", "month": "M2", "effort": "M" },
+        { "code": "LL-04..05", "name": "Partner agreement follow-up", "month": "M3", "effort": "S" }
+      ],
+      "outcome": "Backlink toxicity drops as disavow processes. New automated-pattern links stop accruing. First earned link from vetted publication by M3. Citation completeness 90%+. 2-3 partner links live."
+    }
+  ]
+}

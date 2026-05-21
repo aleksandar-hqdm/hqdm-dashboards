@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+*.log
+.env
+.env.*
+
+# Local-only extraction scripts (have hardcoded paths to HQDM Search Intelligence workspace)
+**/_extract_*.py
+.claude/launch.json
