@@ -46,10 +46,13 @@
         </div>
       </div>
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#headline" class="px-3 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
         <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
+        <a href="#discrepancy" class="px-3 py-1.5 rounded hover:bg-slate-100">GA4↔GSC</a>
         <a href="#maps" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
         <a href="#competition" class="px-3 py-1.5 rounded hover:bg-slate-100">Competition</a>
+        <a href="#llm" class="px-3 py-1.5 rounded hover:bg-slate-100">LLM</a>
         <a href="#potential" class="px-3 py-1.5 rounded hover:bg-slate-100">Potential</a>
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
@@ -85,6 +88,27 @@
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
         PM operates <strong>3 physical offices but manages 1 GBP</strong> (Walled Lake HQ). DataForSEO Maps SERP live at 8 metro coords shows PM has Maps reach in <strong>3 of 8</strong> — Walled Lake (1.0), Novi (2.0), Detroit Woodward (2.7 via pin-bleed). <strong>The entire eastern half of the declared service area is invisible</strong> on Maps. Organic search is the cliff: <strong>monthly imp 319K (Aug 2025) → 82K (May 2026), −74%</strong>, with the long-tail (pos 51+) wiped 435 → 3 keywords. Mid-Sept 2025 inflection overlaps the Sept 2025 core update. <strong>256 keywords sit at pos 11–50</strong> — the explicit recovery upside. Recovery is <strong>5 levers + 1 P0 prerequisite</strong>.
       </p>
+    </div>
+  </section>
+
+  <!-- ============== HEADLINE PANEL — traffic-down / conversions-up ============== -->
+  <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-amber-50 shadow-sm overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div class="flex-1 min-w-0">
+            <div class="text-[11px] font-bold uppercase tracking-widest text-accent-amber">THE HEADLINE</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1.5 text-ink-900" id="headline-h2">—</h2>
+            <p class="text-sm sm:text-base text-ink-600 mt-3 leading-relaxed max-w-4xl" id="headline-lede">—</p>
+          </div>
+          <a id="headline-mini-report" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-lg bg-ink-900 text-white hover:bg-ink-700 transition flex-shrink-0" href="#" target="_self">
+            View detailed mini-report
+            <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-stat-tiles"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4" id="headline-callouts"></div>
+      </div>
     </div>
   </section>
 
@@ -134,14 +158,20 @@
             <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Sessions</h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
-          <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
+          <div class="relative">
+            <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
+            <div id="yoy-badges-sessions" class="absolute top-2 right-2 flex flex-col items-end gap-1.5 pointer-events-none z-10"></div>
+          </div>
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
             <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Conversions <span class="text-ink-400 font-medium normal-case">(GA4 form_submit events)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
-          <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
+          <div class="relative">
+            <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
+            <div id="yoy-badges-conversions" class="absolute top-2 right-2 flex flex-col items-end gap-1.5 pointer-events-none z-10"></div>
+          </div>
         </div>
         <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
       </div>
@@ -165,7 +195,84 @@
             <tbody class="divide-y divide-slate-200"></tbody>
           </table>
         </div>
+        <p class="text-[11px] text-ink-500 italic mt-3 leading-relaxed" id="quarterly-footnote">
+          <strong>* "Q2 2026* current (partial)"</strong> = April 2026 actual + May 2026 with last 11 days extrapolated at trailing-12-month daily rate (state as of 2026-05-21). 2-month quarterly avg through 5/31. <strong>"Q2 2026 est. (full-Q)"</strong> adds a June projection at the same trailing rate — that's the full-quarter estimate, shown dashed in the YoY chart below.
+        </p>
       </div>
+
+      <!-- YoY chart -->
+      <div class="border-t border-slate-200 p-6 bg-white">
+        <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">YoY change — Q2 2026 vs Q2 2025 (peak)</h3>
+            <p class="text-xs text-ink-500 mt-0.5" id="yoy-reading">—</p>
+          </div>
+          <div class="flex items-center gap-3 text-[11px] text-ink-600">
+            <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3 h-3 rounded-sm bg-brand-500"></span>Current (partial)</span>
+            <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3 h-3 rounded-sm bg-brand-300 border border-dashed border-brand-500"></span>Full-Q estimate</span>
+          </div>
+        </div>
+        <div class="h-72 sm:h-80"><canvas id="yoy-chart"></canvas></div>
+        <p class="text-[11px] text-ink-500 italic mt-3 leading-relaxed">Bars show YoY % change vs Q2 2025 (the prior peak). Organic CR + GBP CR shown as relative % change of the conversion-rate number (point-deltas in tooltip). Estimate bars (lighter + dashed border) project June at the trailing-12-month daily rate.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== GA4 vs GSC DISCREPANCY ============== -->
+  <section id="discrepancy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">GA4 ↔ GSC Discrepancy</h2>
+        <p class="text-sm text-ink-500 mt-1" id="discrepancy-headline">—</p>
+      </div>
+      <a id="discrepancy-mini-report" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-lg bg-ink-900 text-white hover:bg-ink-700 transition" href="#">
+        View detailed mini-report
+        <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+      </a>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <p class="text-sm text-ink-700 leading-relaxed max-w-5xl" id="discrepancy-lede">—</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-6">
+      <!-- Comparison table -->
+      <div class="lg:col-span-3 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="px-6 pt-6 pb-3 border-b border-slate-200">
+          <h3 class="text-base font-bold text-ink-900">Side-by-side: GSC vs GA4</h3>
+          <p class="text-xs text-ink-500 mt-1">Both data sources pulled 2026-05-20 — last 30 / 90 / 365 days.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="discrepancy-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">Metric</th>
+                <th class="text-right font-semibold py-3 px-4">GSC</th>
+                <th class="text-right font-semibold py-3 px-4">GA4</th>
+                <th class="text-center font-semibold py-3 px-4">Ratio</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Reasons + trust matrix -->
+      <div class="lg:col-span-2 space-y-4">
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <h3 class="text-base font-bold text-ink-900">Why they diverge — 4 structural reasons</h3>
+          <ul class="mt-3 space-y-3" id="discrepancy-reasons"></ul>
+        </div>
+        <div class="bg-amber-50 rounded-xl border border-amber-200 p-6">
+          <h3 class="text-base font-bold text-amber-900">Which to trust for which question</h3>
+          <div class="mt-3 space-y-2 text-sm" id="discrepancy-trust"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key takeaways -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="text-base font-bold text-ink-900">Key takeaways</h3>
+      <ul class="mt-3 space-y-2 list-disc list-inside text-sm text-ink-700" id="discrepancy-takeaways"></ul>
     </div>
   </section>
 
@@ -356,6 +463,91 @@
           </thead>
           <tbody class="divide-y divide-slate-200"></tbody>
         </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== LLM VISIBILITY ============== -->
+  <section id="llm" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">LLM Visibility — AI Overview Saturation</h2>
+        <p class="text-sm text-ink-500 mt-1" id="llm-headline">—</p>
+      </div>
+      <a id="llm-mini-report" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-lg bg-ink-900 text-white hover:bg-ink-700 transition" href="#">
+        View detailed mini-report
+        <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+      </a>
+    </div>
+
+    <!-- Lede -->
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <p class="text-sm text-ink-700 leading-relaxed max-w-5xl" id="llm-lede">—</p>
+    </div>
+
+    <!-- Totals tiles -->
+    <div id="llm-totals" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-4"></div>
+
+    <!-- Per-keyword 20-row table -->
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mt-6">
+      <div class="px-6 pt-6 pb-3 border-b border-slate-200 flex items-end justify-between flex-wrap gap-2">
+        <div>
+          <h3 class="text-base font-bold text-ink-900">20 priority queries — AIO presence, PM rank, AIO citation winners</h3>
+          <p class="text-xs text-ink-500 mt-1">DFS SERP API live pull · 2026-05-22 · US default · ~$0.10 total spend</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-[11px] font-semibold" id="llm-bucket-filter">
+          <button data-bucket="" class="llm-bucket-btn bg-brand-500 text-white px-2.5 py-1 rounded">All</button>
+          <button data-bucket="commercial_geo" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Commercial geo</button>
+          <button data-bucket="commercial_service" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Commercial service</button>
+          <button data-bucket="informational" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Informational</button>
+          <button data-bucket="midfunnel_commercial" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Mid-funnel commercial</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="llm-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Keyword</th>
+              <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Bucket</th>
+              <th class="text-center font-semibold py-3 px-4">AIO</th>
+              <th class="text-center font-semibold py-3 px-4 hidden sm:table-cell">Local Pack</th>
+              <th class="text-center font-semibold py-3 px-4">PM rank</th>
+              <th class="text-center font-semibold py-3 px-4">PM cited?</th>
+              <th class="text-left font-semibold py-3 px-4 hidden lg:table-cell">AIO citation winners</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Two-col: top cited domains + implications -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <!-- Top cited domains -->
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="px-6 pt-6 pb-3 border-b border-slate-200">
+          <h3 class="text-base font-bold text-ink-900">Top cited domains across all AIOs</h3>
+          <p class="text-xs text-ink-500 mt-1">Who Google is parsing for moving-related AIO answers.</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="llm-cited-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">Domain</th>
+                <th class="text-right font-semibold py-3 px-4">Citations</th>
+                <th class="text-right font-semibold py-3 px-4">Unique queries</th>
+                <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Note</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Implications -->
+      <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+        <h3 class="text-base font-bold text-indigo-900">What this means for PM's Q3 plan</h3>
+        <ul class="mt-3 space-y-2.5 text-sm text-indigo-900" id="llm-implications"></ul>
       </div>
     </div>
   </section>

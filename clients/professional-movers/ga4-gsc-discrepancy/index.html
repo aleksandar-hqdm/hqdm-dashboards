@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>GA4 ↔ GSC Discrepancy · Professional Movers · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] }, colors: { ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' }, brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a' } } } } }
+  </script>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="../" class="text-xs text-ink-500 hover:text-ink-800">← PM Dashboard</a>
+        <span class="text-ink-300">/</span>
+        <span class="font-semibold text-sm truncate">Mini-report: GA4 ↔ GSC discrepancy</span>
+      </div>
+      <a href="../../../index.html" class="text-[11px] text-ink-500 hover:text-ink-800 hidden sm:inline">HQDM Dashboards</a>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-brand-300 mb-2">MINI-REPORT · MEASUREMENT</div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">GA4 and GSC tell different stories. Both are right — they measure different things.</h1>
+      <p class="text-base sm:text-lg mt-4 text-brand-300 max-w-3xl">A reconciliation framework + trust-matrix for the monthly report.</p>
+    </div>
+  </section>
+
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+
+    <!-- The thesis -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h2 class="text-xl font-bold">The thesis</h2>
+      <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+        GSC says PM's organic search clicks fell <strong>74%</strong> over 12 months. GA4 says PM's <em>Organic Search</em> channel is <strong>2.2–2.7× larger</strong> than GSC reports across every time window. Neither is wrong. <strong>GSC measures clicks on Google's search results page; GA4 measures sessions on the site, however the user arrived.</strong> Four structural gaps account for the divergence — and one of them (GBP click-through) is the reason GBP looks so strong in GA4 but invisible in GSC.
+      </p>
+    </section>
+
+    <!-- 30/90/365 -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-bold">Full reconciliation — last 30 / 90 / 365 days</h2>
+        <p class="text-xs text-ink-500 mt-1">Pulled 2026-05-20 from GSC live API + GA4 property 385147451 live API. Numbers consistent within a few percent of the Looker-style summary; small drift expected due to query-time-vs-pull-time sampling.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-50 text-ink-500 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Window</th>
+              <th class="text-right font-semibold py-3 px-4">GSC clicks</th>
+              <th class="text-right font-semibold py-3 px-4">GSC impressions</th>
+              <th class="text-right font-semibold py-3 px-4">GA4 Direct</th>
+              <th class="text-right font-semibold py-3 px-4">GA4 Organic Search</th>
+              <th class="text-right font-semibold py-3 px-4">— google/organic</th>
+              <th class="text-right font-semibold py-3 px-4">— gmb/click</th>
+              <th class="text-center font-semibold py-3 px-4">Ratio Org÷GSC</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 font-mono text-sm">
+            <tr><td class="py-3 px-4 font-semibold">Last 30d</td><td class="text-right">260</td><td class="text-right">117,732</td><td class="text-right">2,198</td><td class="text-right font-bold">673</td><td class="text-right text-ink-600">389</td><td class="text-right text-amber-700">149</td><td class="text-center font-bold text-rose-700">2.6×</td></tr>
+            <tr><td class="py-3 px-4 font-semibold">Last 90d</td><td class="text-right">707</td><td class="text-right">296,998</td><td class="text-right">7,504</td><td class="text-right font-bold">1,903</td><td class="text-right text-ink-600">1,084</td><td class="text-right text-amber-700">421</td><td class="text-center font-bold text-rose-700">2.7×</td></tr>
+            <tr><td class="py-3 px-4 font-semibold">Last 365d</td><td class="text-right">3,928</td><td class="text-right">2,291,825</td><td class="text-right">48,837</td><td class="text-right font-bold">8,588</td><td class="text-right text-ink-600">5,555</td><td class="text-right text-amber-700">543</td><td class="text-center font-bold text-rose-700">2.2×</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="p-4 bg-slate-50 border-t border-slate-200">
+        <p class="text-xs text-ink-600 leading-relaxed"><strong>Ratio is stable across all windows</strong> (2.2× – 2.7×). The divergence is structural, not seasonal. Even apples-to-apples (google/organic only): GA4 reports 1.4–1.5× more sessions than GSC reports clicks — a session/click unit mismatch + bot-filter divergence that's inherent to the two measurement systems.</p>
+      </div>
+    </section>
+
+    <!-- 4 structural reasons in depth -->
+    <section>
+      <h2 class="text-xl font-bold mb-4">The four structural reasons — in depth</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold">1</span>
+            <h3 class="text-base font-bold">GBP click-through (the big one)</h3>
+          </div>
+          <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+            GBP's "Click to website" button sends <code>?utm_source=gmb&amp;utm_medium=click</code> — GA4 buckets these into Organic Search. GSC never sees them because they bypass Google Search results entirely. ~149/mo (30d), ~421/mo (90d), ~543/yr (365d). <strong>Fastest-growing slice of GA4 Organic.</strong> Every GSC-only report undercounts PM's true converting traffic by 30–40%.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold">2</span>
+            <h3 class="text-base font-bold">Non-Google engines</h3>
+          </div>
+          <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+            Bing (50 sess 30d), DuckDuckGo (42), Yahoo (42), MSN (9). ~134 sessions/mo in GA4's "Organic Search" channel that GSC by definition cannot report. Small but real residual traffic source — and the only place where PM's branded queries can compound without Google's local-pack suppression.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold">3</span>
+            <h3 class="text-base font-bold">Sessions ≠ clicks (unit gap)</h3>
+          </div>
+          <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+            One GSC click = one Google search-result click. One GA4 session = up to 30 minutes of inactivity, multiple pageviews, can include same-user same-day repeat searches as one session vs N clicks. Most of the residual 1.4–1.5× google/organic gap is this — the multiplier varies by site but is structural.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-brand-500 text-white text-sm font-bold">4</span>
+            <h3 class="text-base font-bold">Sampling + bot-filter divergence</h3>
+          </div>
+          <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+            GA4 has property-level bot/spam filtering. GSC has its own (independent) heuristics. Neither is documented in full. Small residual gap is unavoidable. <strong>Tracking month-over-month change is reliable; absolute cross-platform parity is not.</strong> The PM Direct anomaly Sept–Oct 2025 (spike to 16K) is a tell: bot artifact slipped GA4's filter, distorted Direct, did not show in GSC at all.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trust matrix -->
+    <section class="bg-amber-50 border border-amber-200 rounded-xl p-6">
+      <h2 class="text-xl font-bold text-amber-900">Trust matrix — which tool answers which question</h2>
+      <div class="mt-4 overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-xs uppercase tracking-wider text-amber-900">
+            <tr>
+              <th class="text-left font-semibold py-2 px-3">Question</th>
+              <th class="text-left font-semibold py-2 px-3">Trust</th>
+              <th class="text-left font-semibold py-2 px-3">Why</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-amber-200">
+            <tr><td class="py-3 px-3">How much organic search traffic do we get?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">GA4</span></td><td class="py-3 px-3 text-amber-900 text-xs">Includes all engines + measures sessions which approximate real visits.</td></tr>
+            <tr><td class="py-3 px-3">How is the site ranking on Google?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-bold">GSC</span></td><td class="py-3 px-3 text-amber-900 text-xs">Position, impressions, clicks, CTR per query and per page only exist in GSC.</td></tr>
+            <tr><td class="py-3 px-3">What's converting?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">GA4</span></td><td class="py-3 px-3 text-amber-900 text-xs">Conversion events, channel attribution, <code>form_submit</code> live in GA4.</td></tr>
+            <tr><td class="py-3 px-3">How much traffic is GBP driving?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">GA4 (gmb/click)</span></td><td class="py-3 px-3 text-amber-900 text-xs">Only the UTM captures GBP click-through. GSC can't measure it. CR ~17.5% — the highest-converting channel.</td></tr>
+            <tr><td class="py-3 px-3">Is Google visibility improving or declining?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-bold">GSC</span></td><td class="py-3 px-3 text-amber-900 text-xs">Cleanest SERP-side signal — impressions, position, click-loss.</td></tr>
+            <tr><td class="py-3 px-3">Brand-pull vs non-brand?</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-bold">GSC</span></td><td class="py-3 px-3 text-amber-900 text-xs">Query-level data (GSC: 54% clicks from brand queries = 12% imp) — GA4 doesn't have query-level visibility.</td></tr>
+            <tr><td class="py-3 px-3">Direct-channel anomaly check</td><td class="py-3 px-3"><span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-xs font-bold">GA4</span></td><td class="py-3 px-3 text-amber-900 text-xs">Direct is GA4-only. Cross-reference with conv rate to spot bot inflation (Sept–Oct 2025 16K spike).</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Recommended monthly report -->
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h2 class="text-xl font-bold">Recommended monthly report shape</h2>
+      <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+        Every monthly report should triangulate. <strong>Never quote GSC clicks alone</strong> — it understates the converting channel by half. <strong>Never quote GA4 Organic Search sessions alone</strong> — it conflates Google search with GBP click-through. The format:
+      </p>
+      <ol class="mt-4 space-y-3 text-sm text-ink-700 list-decimal list-inside leading-relaxed">
+        <li><strong>Headline chart</strong>: GA4 sessions per channel (Organic / GBP / Direct / LLM) + GA4 conversions per channel — split-axis, 18 months.</li>
+        <li><strong>GSC mini-table</strong>: clicks / impressions / position / CTR last 30d vs prior 30d — diagnoses SERP-side ranking only.</li>
+        <li><strong>Channel attribution panel</strong>: Direct + Organic + GBP + LLM + Referral + Paid each as a stack on conv volume + conv rate. GBP must be its own row (utm_source=gmb), not folded into Organic.</li>
+        <li><strong>Top-mover panel</strong>: query-level winners + losers from GSC (rank, clicks); URL-level winners + losers from GA4 (sessions, conv).</li>
+        <li><strong>Footnote</strong>: every report should restate the GSC/GA4 ratio for the current month so future readers understand the unit mismatch isn't a bug.</li>
+      </ol>
+    </section>
+
+    <!-- Cross-link to other mini-reports -->
+    <section class="bg-slate-100 rounded-xl border border-slate-200 p-6">
+      <h2 class="text-base font-bold">Related</h2>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        <li>→ <a class="text-brand-700 underline" href="../headline-traffic-vs-conversions/">Headline — traffic down / conversions up</a></li>
+        <li>→ <a class="text-brand-700 underline" href="../p0-conversion-tracking/">P0 — Conversion tracking restoration (5-min fix + CallRail)</a></li>
+        <li>→ <a class="text-brand-700 underline" href="../llm-visibility/">LLM Visibility — 20-keyword AIO baseline</a></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white mt-10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 text-xs text-ink-500 space-y-2">
+      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Q3 2026 Strategic Dashboard · Professional Movers.com · Mini-report</div>
+      <div>Prepared 2026-05-22 by Aleksandar Spasevski · Sources: GSC live API + GA4 property 385147451, both pulled 2026-05-20.</div>
+      <div class="text-ink-400">Confidential — internal use + authorized client viewing only. <code class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">noindex</code> set.</div>
+    </div>
+  </footer>
+</body>
+</html>

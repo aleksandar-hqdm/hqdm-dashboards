@@ -39,6 +39,7 @@
     setText('trend-annotation', (DATA.trend.may_extrapolation_note || '') + ' ' + (DATA.trend.annotation_text || ''));
     if (DATA.trend.quarterly) renderQuarterlyTable(DATA.trend.quarterly);
     if (DATA.trend.yoy_growth && document.getElementById('yoy-chart')) renderYoYChart(DATA.trend.yoy_growth);
+    if (DATA.trend.yoy_growth) renderYoYBadges(DATA.trend.yoy_growth);
     const trendCharts = renderStackedTrendCharts(DATA.trend);
     wireTrendSeriesToggles(trendCharts, DATA.trend);
   }
@@ -341,6 +342,50 @@ function renderQuarterlyTable(quarterly) {
       </tr>
     `;
   }).join('');
+}
+
+// ============================================================
+// YoY badges — Bernie's-style annotation badges on time-series chart panels
+// ============================================================
+function renderYoYBadges(yoy) {
+  if (!yoy || !yoy.metrics) return;
+  const find = (label) => yoy.metrics.find(m => m.label === label);
+
+  const badgeHTML = (pct, caption) => {
+    if (pct == null) return '';
+    const isUp = pct >= 0;
+    const borderCls = isUp ? 'border-emerald-500' : 'border-rose-500';
+    const txtCls    = isUp ? 'text-emerald-600'   : 'text-rose-600';
+    const arrow     = isUp ? '▲' : '▼';
+    const sign      = isUp ? '+' : '';
+    return `
+      <div class="bg-white/95 backdrop-blur ${borderCls} border-2 rounded-lg shadow-md px-3 py-1.5">
+        <div class="flex items-center gap-1.5">
+          <span class="${txtCls} text-base font-bold leading-none">${arrow}</span>
+          <span class="${txtCls} text-xl sm:text-2xl font-extrabold leading-none">${sign}${Math.round(pct)}%</span>
+        </div>
+        <div class="text-[9px] text-ink-500 italic mt-1 text-right leading-tight whitespace-nowrap">${escapeHtml(caption)}</div>
+      </div>
+    `;
+  };
+
+  const sessionsBox = document.getElementById('yoy-badges-sessions');
+  if (sessionsBox) {
+    const org = find('Organic sess/mo');
+    const gbp = find('GBP sess/mo');
+    sessionsBox.innerHTML =
+      (org ? badgeHTML(org.current_yoy_pct, "Organic · Q2'25 → Q2'26*") : '') +
+      (gbp ? badgeHTML(gbp.current_yoy_pct, "GBP · Q2'25 → Q2'26*")     : '');
+  }
+
+  const convBox = document.getElementById('yoy-badges-conversions');
+  if (convBox) {
+    const org = find('Organic conv/mo');
+    const gbp = find('GBP conv/mo');
+    convBox.innerHTML =
+      (org ? badgeHTML(org.current_yoy_pct, "Organic conv · Q2'25 → Q2'26*") : '') +
+      (gbp ? badgeHTML(gbp.current_yoy_pct, "GBP conv · Q2'25 → Q2'26*")     : '');
+  }
 }
 
 // ============================================================

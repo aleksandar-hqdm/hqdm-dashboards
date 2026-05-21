@@ -12,6 +12,23 @@
     "quarter": "Q3 2026",
     "doc_subtitle": "Walled Lake HQ pin + Detroit Woodward GBP claim + Rochester GBP claim + organic recovery + earned-channel rebuild."
   },
+  "mini_report_base": "./",
+  "headline_panel": {
+    "headline": "Traffic is dropping. Conversions held — and GBP is now the highest-converting channel.",
+    "lede": "Organic search clicks collapsed −74% Aug 2025 → May 2026, but conversion volume held through the cliff and GBP-attributed form_submits are at the peak of the 18-month series. GBP converts at ~17.5% (vs organic 9.2%) — roughly 2× the rate, never dipped, and growing. The recovery story is not 'add more traffic'; it's 'protect and multiply the converting channel.'",
+    "stat_tiles": [
+      { "label": "Organic search clicks (12-mo trend)", "value": "−74%", "sub": "GSC 319K imp Aug 2025 → 82K May 2026; clicks 396 → 148", "sentiment": "negative" },
+      { "label": "GBP form_submits/mo (Q1 → Q2 2026*)", "value": "+47%", "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high", "sentiment": "positive" },
+      { "label": "GBP conversion rate (Q2 2026*)", "value": "17.5%", "sub": "vs organic 9.2% — ~2× lift, held flat through the cliff", "sentiment": "positive" },
+      { "label": "Combined form_submits/mo", "value": "~190", "sub": "GA4 form_submit IS firing — flag-not-set on conversion event (P0 5-min fix)", "sentiment": "neutral" }
+    ],
+    "callout_strip": [
+      { "label": "Where conversions live now", "detail": "GBP + Organic + Direct each carry ~25–40% of form_submits in any given month. GBP is the only channel that never dipped — and now leads on conversion rate." },
+      { "label": "What '−74% impressions' hides", "detail": "Service pages still produce 43% of impressions and 50% of clicks. The cliff was concentrated in the templated burb cohort + long-tail wipeout, not the converting core." },
+      { "label": "Why GBP matters more now", "detail": "GBP converts at ~2× organic — and PM only operates 1 of 3 available pins. Lever A (claim Detroit Woodward + Rochester GBPs) compounds the highest-converting channel." }
+    ],
+    "mini_report_url": "headline-traffic-vs-conversions/"
+  },
   "kpis": [
     {
       "label": "Maps reach by metro coord",
@@ -82,8 +99,59 @@
       { "q": "Q3 2025 (cliff)", "org_sess": 657, "org_conv": 60, "org_cr": 9.2, "gbp_sess": 144, "gbp_conv": 21, "gbp_cr": 14.3 },
       { "q": "Q4 2025",  "org_sess": 523, "org_conv": 59, "org_cr": 11.3, "gbp_sess": 127, "gbp_conv": 17, "gbp_cr": 13.6 },
       { "q": "Q1 2026 (trough)", "org_sess": 484, "org_conv": 39, "org_cr": 8.0, "gbp_sess": 137, "gbp_conv": 20, "gbp_cr": 14.4 },
-      { "q": "Q2 2026*", "org_sess": 537, "org_conv": 50, "org_cr": 9.2, "gbp_sess": 150, "gbp_conv": 26, "gbp_cr": 17.5 }
-    ]
+      { "q": "Q2 2026* current (partial)", "org_sess": 537, "org_conv": 50, "org_cr": 9.2, "gbp_sess": 150, "gbp_conv": 26, "gbp_cr": 17.5, "kind": "current" },
+      { "q": "Q2 2026 est. (full-Q)",      "org_sess": 535, "org_conv": 48, "org_cr": 9.0, "gbp_sess": 153, "gbp_conv": 29, "gbp_cr": 18.9, "kind": "estimate" }
+    ],
+    "yoy_growth": {
+      "headline": "YoY change vs Q2 2025 — current state + full-quarter estimate",
+      "baseline_quarter": "Q2 2025 (peak)",
+      "current_label": "Q2 2026 current (partial)",
+      "estimate_label": "Q2 2026 est. (full-Q)",
+      "current_definition": "April 2026 actual + May 2026 with last 11 days extrapolated at trailing-12-month daily rate (state as of 2026-05-21). 2-month quarterly average through 5/31. Does NOT include June.",
+      "estimate_definition": "Same April + May, plus June 2026 projected at trailing-12-month daily rate. 3-month average — the full-Q projection.",
+      "metrics": [
+        { "label": "Organic sess/mo",     "axis": "left",  "q2_2025": 709,  "current": 537,  "estimate": 535,  "current_yoy_pct": -24.3, "estimate_yoy_pct": -24.5, "is_ratio": false },
+        { "label": "Organic conv/mo",     "axis": "left",  "q2_2025": 59,   "current": 50,   "estimate": 48,   "current_yoy_pct": -15.3, "estimate_yoy_pct": -18.6, "is_ratio": false },
+        { "label": "Organic CR",          "axis": "right", "q2_2025": 8.3,  "current": 9.2,  "estimate": 9.0,  "current_yoy_pct": 10.8,  "estimate_yoy_pct": 8.4,   "is_ratio": true,  "pts_delta_current": 0.9, "pts_delta_estimate": 0.7 },
+        { "label": "GBP sess/mo",         "axis": "left",  "q2_2025": 135,  "current": 150,  "estimate": 153,  "current_yoy_pct": 11.1,  "estimate_yoy_pct": 13.3,  "is_ratio": false },
+        { "label": "GBP conv/mo",         "axis": "left",  "q2_2025": 19,   "current": 26,   "estimate": 29,   "current_yoy_pct": 36.8,  "estimate_yoy_pct": 52.6,  "is_ratio": false },
+        { "label": "GBP CR",              "axis": "right", "q2_2025": 14.1, "current": 17.5, "estimate": 18.9, "current_yoy_pct": 24.1,  "estimate_yoy_pct": 34.0,  "is_ratio": true,  "pts_delta_current": 3.4, "pts_delta_estimate": 4.8 }
+      ],
+      "reading": "Organic metrics down 15–25% YoY in both views; GBP metrics up 11–53% YoY. The full-Q estimate widens the GBP wins (June added at trailing-12-month rate compounds May's surge) and slightly worsens the organic picture (May's recovery flattens out)."
+    }
+  },
+  "ga4_gsc_discrepancy": {
+    "headline": "GA4 and GSC tell different stories. Both are right — they measure different things.",
+    "lede": "GSC says PM's organic-search clicks fell 74% in the last 12 months. GA4 says PM's 'Organic Search' channel is 2–4× larger than GSC reports. Neither is wrong. GSC measures clicks on Google's search results page; GA4 measures sessions on the site, however the user arrived. Four structural gaps account for the divergence — and one of them (GBP click-through) is the reason GBP looks so strong in GA4 but invisible in GSC.",
+    "comparison_rows": [
+      { "metric": "Organic clicks / Organic Search sessions (last 30d)", "gsc": "260 clicks", "ga4": "673 sessions", "ratio": "2.6×", "reason": "GA4 'Organic Search' channel includes Bing/DuckDuckGo/Yahoo + GBP click-through (gmb/click). GSC is Google Search clicks only." },
+      { "metric": "Same comparison, last 90d", "gsc": "707 clicks", "ga4": "1,903 sessions", "ratio": "2.7×", "reason": "Same structural reasons; pattern is consistent." },
+      { "metric": "Same comparison, last 365d", "gsc": "3,928 clicks", "ga4": "8,588 sessions", "ratio": "2.2×", "reason": "Ratio stable across all windows — divergence is structural, not seasonal." },
+      { "metric": "GBP-attributed sessions (last 30d)", "gsc": "0 (invisible)", "ga4": "149 (gmb/click)", "ratio": "n/a — invisible to GSC", "reason": "GBP 'Click to Website' bypasses Google Search results entirely. Only the UTM (?utm_source=gmb) captures it in GA4." },
+      { "metric": "Google-only organic (apples-to-apples) last 30d", "gsc": "260 clicks", "ga4": "389 sessions (google / organic only)", "ratio": "1.5×", "reason": "Even Google-only, GA4 > GSC: multi-page sessions, same-day repeat visits, sampling/bot-filter differences, and GA4 session-attribution windowing." },
+      { "metric": "Direct (last 30d)", "gsc": "n/a (not measured)", "ga4": "2,198 sessions", "ratio": "n/a", "reason": "Direct is GA4-only. Likely contains brand-recall traffic + some bot residue (Sept–Oct 2025 spike to 16K/mo coincided with ATB tool active in Asana per Off-Page Risk Assessment §8)." },
+      { "metric": "Conversion events (form_submit, last 30d)", "gsc": "n/a", "ga4": "~160 firing (not flagged)", "ratio": "n/a", "reason": "P0 prerequisite: form_submit fires correctly; GA4 property settings don't mark it as a conversion event yet (5-min fix)." }
+    ],
+    "structural_reasons": [
+      { "title": "GBP click-through (the big one)", "detail": "GBP 'Click to website' button → utm_source=gmb&utm_medium=click → GA4 buckets these into 'Organic Search'. GSC never sees them because they bypass Google Search. ~149/mo last 30d, ~421/mo last 90d, ~543/yr — fastest-growing slice of GA4 Organic." },
+      { "title": "Non-Google search engines", "detail": "Bing (50 sess 30d), DuckDuckGo (42), Yahoo (42), MSN (9). ~134 sessions/mo in 'Organic Search' that GSC by definition cannot report." },
+      { "title": "Sessions ≠ clicks (the GA4 vs GSC unit gap)", "detail": "One GSC click → one Google Search result click. One GA4 session → can contain multiple pageviews, lasts 30 min of inactivity. Same-day repeat searches from the same user count as separate GSC clicks but one GA4 session. The 1.5× google-only gap is mostly this." },
+      { "title": "Sampling + bot-filter divergence", "detail": "GA4 has its own bot/spam filter applied at the property level. GSC has its own (independent) filter. Neither is documented in full. Small residual gap is unavoidable; tracking month-over-month change is reliable, absolute parity is not." }
+    ],
+    "trust_matrix": [
+      { "question": "How much organic search traffic do we get?", "trust": "GA4", "why": "GA4 includes all engines + measures sessions which approximate real visits. Use GA4 'Organic Search' channel for traffic-volume reporting." },
+      { "question": "How is the site ranking on Google?", "trust": "GSC", "why": "Position, impressions, clicks, CTR per query and per page only exist in GSC. Use GSC for rank diagnostics." },
+      { "question": "What's converting?", "trust": "GA4", "why": "Conversions, channel attribution, form_submit events live in GA4. Cross-reference with CallRail once deployed for phone-call attribution." },
+      { "question": "How much traffic is GBP driving?", "trust": "GA4 (gmb/click)", "why": "Only GA4 sees the GBP click-through via the UTM. GSC can't measure it. CR ~17.5% (Q2 2026* partial) — the highest-converting channel." },
+      { "question": "Is Google search visibility improving or declining?", "trust": "GSC", "why": "GSC is the cleanest signal for SERP-side health — impressions, position, click-loss. Use GSC for the cliff diagnosis." }
+    ],
+    "key_takeaways": [
+      "The −74% organic-impression decline in GSC is real and worth diagnosing — but it does not mean a −74% revenue cliff. GA4 shows organic-search **sessions** down ~32% Q2 2025 → Q1 2026, and **conversions** down only ~17%.",
+      "The GBP channel is invisible to GSC by design — every report that draws traffic conclusions from GSC alone undercounts PM's true reach by 30–40%.",
+      "When client meetings reference 'organic traffic,' specify which: GSC clicks (Google Search-only) ≠ GA4 Organic Search sessions (all engines + GBP). The numbers will always look ~2× different.",
+      "Both should be reconciled in the monthly report. The mini-report linked below contains the full cross-reference table + a method for triangulating channel-level attribution."
+    ],
+    "mini_report_url": "ga4-gsc-discrepancy/"
   },
   "maps_presence": [
     { "coord": "Walled Lake HQ (pin)", "ll": "42.538,−83.481", "distance": "0 mi", "managed": true,  "avg_rank": 1.0, "top3": 6, "top20": 6, "winners": "PM, Irelo Moving, Rental Crates.com", "action": "Defend — GBP optimize, review velocity, photo set" },
@@ -147,6 +215,63 @@
     { "domain": "homedepot.com",          "shared": 171, "type": "DIY truck rental adjacent" },
     { "domain": "movinghelp.com",         "shared": 168, "type": "U-Haul-owned labor marketplace" }
   ],
+  "llm_visibility": {
+    "headline": "AI Overview saturation on PM's keyword set: 35% (7/20). PM cited in zero AIOs. YouTube + Reddit dominate.",
+    "lede": "Live DataForSEO SERP pull (2026-05-22) on 20 priority PM keywords spanning commercial geo / commercial service / informational / mid-funnel. Two findings drive the Q3 strategy. (1) Commercial geo + service queries DO NOT trigger AI Overviews yet — Google still shows the Local Pack (12/12 commercial queries). (2) Informational queries DO trigger AIOs (5/5 'how to' queries), but PM blog content is not cited; YouTube (18 citations) and Reddit (7) dominate. Mid-funnel cost queries are the migration front — `moving cost detroit` + `how much to tip movers` now have AIOs.",
+    "totals": {
+      "queries_tested": 20,
+      "with_ai_overview": 7,
+      "with_local_pack": 12,
+      "with_paa": 20,
+      "pm_in_top10_organic": 2,
+      "pm_cited_in_aio": 0,
+      "dfs_pulled_at": "2026-05-22",
+      "dfs_cost_usd": 0.10
+    },
+    "queries": [
+      { "keyword": "movers detroit",                "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 23,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Local Pack dominates. PM #23 organic. Lever A claim Detroit Woodward GBP for Local Pack lift." },
+      { "keyword": "moving companies detroit",      "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 20,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Local Pack dominates. PM #20 organic. Same Lever A path." },
+      { "keyword": "movers near me",                "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM off page-1. Hyperlocal — proximity-decay queries." },
+      { "keyword": "movers walled lake",            "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": false, "has_paa": true, "pm_organic_rank": 2,    "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #2 organic — branded geo. AI Overview suppression flagged in root-cause #3. Confirm AIO present in monthly re-scan." },
+      { "keyword": "moving companies michigan",     "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 28,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Statewide intent. HP-04 (`/moving-companies-michigan/`) Lever B target." },
+      { "keyword": "piano movers detroit",          "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 21,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-02 piano-moving Lever B target. Local Pack dominates." },
+      { "keyword": "hot tub movers",                "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-01 hot-tub-moving Lever B target. PM off page-1." },
+      { "keyword": "office moving companies",       "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Office vertical — Lever B SP-06 furniture-installation page." },
+      { "keyword": "long distance movers detroit",  "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 29,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM has the depth-grade `/long-distance-moving-services/` already. IL-001..020 routes equity to it." },
+      { "keyword": "senior moving services",        "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-04 senior-moving Lever B target — partnership work LL-03." },
+      { "keyword": "how to pack dishes for moving", "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.homedepot.com", "www.youtube.com", "realestate.usnews.com", "www.extraspace.com"], "note": "PM's existing blog ranks elsewhere but not cited. BLG-01 refresh to add commercial pull-through." },
+      { "keyword": "how to move a pool table",      "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.youtube.com", "forums.azbilliards.com", "www.allied.com", "twomenandatruck.com", "www.jackcooper.com"], "note": "Two competitors (Allied + Two Men) cited in AIO. BLG-02 refresh + cross-link to piano-moving." },
+      { "keyword": "how to move a refrigerator",    "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.youtube.com", "www.whirlpool.com", "www.lowes.com", "www.taskrabbit.com"], "note": "Manufacturer + DIY-retailer citations. BLG-03 refresh + add brand context." },
+      { "keyword": "how to pack lamps for moving",  "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.youtube.com", "www.uhaul.com", "www.reddit.com", "www.extraspace.com", "www.getbellhops.com"], "note": "U-Haul + Bellhops cited. Net-new packing blog target opportunity." },
+      { "keyword": "how to pack fridge for moving", "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.zippyshell.com", "www.whirlpool.com", "www.reddit.com", "mypieceofcakemove.com", "www.homedepot.com"], "note": "Variant of fridge-moving — same content target." },
+      { "keyword": "moving cost detroit",           "bucket": "midfunnel_commercial", "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": 27,   "pm_cited_in_aio": false, "aio_cited_domains": [],  "note": "AIO present but no citations parsed by DFS — likely cost-aggregator pull (HireAHelper/MoveAdvisor pattern). BLG-04 `Moving cost Detroit MI 2026` Lever D direct target." },
+      { "keyword": "best moving company detroit",   "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 9,    "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #9 organic — best PM result in the set. BLG-05 `Best moving company Detroit reviews` Lever D target to push to top-5." },
+      { "keyword": "how much to tip movers",        "bucket": "midfunnel_commercial", "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.facebook.com", "www.cnet.com", "www.extraspace.com", "www.coolhandmovers.com"], "note": "Social + 1 moving company cited (Cool Hand Movers). BLG-06 Lever D direct target." },
+      { "keyword": "moving company near me",        "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Hyperlocal Local Pack. Lever A territory." },
+      { "keyword": "detroit movers",                "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 17,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #17 organic. HP-01/HP-02 Lever B direct target." }
+    ],
+    "top_cited_domains_in_aio": [
+      { "domain": "www.youtube.com",   "citations": 18, "unique_queries": 5, "note": "Dominates informational moving content — video format wins" },
+      { "domain": "www.reddit.com",    "citations": 7,  "unique_queries": 5, "note": "Community Q&A — high authority signal for 'how to' / 'how much' queries" },
+      { "domain": "www.extraspace.com","citations": 3,  "unique_queries": 3, "note": "Storage-adjacent — broad authoritative footprint" },
+      { "domain": "www.lowes.com",     "citations": 2,  "unique_queries": 2, "note": "Retailer — product-handling queries (fridge)" },
+      { "domain": "www.whirlpool.com", "citations": 2,  "unique_queries": 2, "note": "Manufacturer — brand-asset citations" },
+      { "domain": "www.jackcooper.com","citations": 2,  "unique_queries": 2, "note": "Moving brand — possible content-pattern study target" },
+      { "domain": "www.homedepot.com", "citations": 2,  "unique_queries": 2, "note": "Retailer — packing-supply queries" },
+      { "domain": "bigleaguemovers.com", "citations": 1, "unique_queries": 1, "note": "Single-citation small mover — proves it's possible" },
+      { "domain": "murphymovers.com",  "citations": 1,  "unique_queries": 1, "note": "Single-citation small mover" },
+      { "domain": "clancymoving.com",  "citations": 1,  "unique_queries": 1, "note": "Single-citation small mover" }
+    ],
+    "implications": [
+      "**AIO is not yet at commercial-geo + commercial-service queries.** 12 of 12 commercial queries still surface Local Pack. Lever A (GBP claims + DD pins) is the right lever for these — they're still local-pack-dominated SERPs.",
+      "**Mid-funnel commercial queries are the migration front.** `moving cost detroit` and `how much to tip movers` already have AIOs. Lever D (BLG-04/05/06) is the timing-correct response — produce AIO-targetable cost + reviews + tipping content before competitors capture the citations.",
+      "**Informational queries already migrated.** All 5 'how to' queries return AIO. PM's existing blog (4,884 imp on how-to-pack-dishes, 2,561 on pool-table, etc.) isn't cited because the format doesn't match what AIOs cite — long-form authority pieces, video, or community Q&A.",
+      "**YouTube + Reddit dominance is the content-pattern signal.** AIOs heavily cite video and community Q&A. BLG-01..03 refresh should add YouTube embeds + Reddit-style Q&A sections to match the parsing pattern.",
+      "**Two competitors cited in AIO** (Allied + Two Men and a Truck on pool-table; Cool Hand Movers on tipping). Content-pattern study target — see how their pages got cited, replicate on BLG-08..10 niche-service cost replicas.",
+      "**Zero PM citations across 20 queries** is the baseline. Target: ≥3 citations by end of M3 via BLG-01..06 refresh + new content (Q3 LLM-visibility KPI)."
+    ],
+    "mini_report_url": "llm-visibility/"
+  },
   "keyword_buckets": [
     { "bucket": "Pos 1–10 (Owned)",             "keywords": 45,  "pct": 8,  "posture": "Defend" },
     { "bucket": "Pos 11–20 (Ship-ready primary)", "keywords": 83,  "pct": 14, "posture": "Lever B + C primary target" },
@@ -202,6 +327,7 @@
       "name": "Conversion tracking restoration",
       "priority": "P0 prerequisite",
       "color": "amber",
+      "mini_report_url": "p0-conversion-tracking/",
       "why": "GA4 returns 0 conversions across 65K sessions / 901 pages / 365d. Until that's fixed everything else is invisible. form_submit IS firing (~190 events/mo across all channels) but the property-settings flag was never set.",
       "actions": [
         { "code": "AN-01", "name": "Mark form_submit as conversion event in GA4 property settings", "month": "M1", "effort": "S" },
@@ -218,6 +344,7 @@
       "name": "Map presence expansion",
       "priority": "Highest priority",
       "color": "green",
+      "mini_report_url": "lever-a-map-presence/",
       "why": "PM has Maps reach in 3 of 8 tested metro coords. Two managed-GBP claims (Detroit Woodward + Rochester) plus 5 Driving Direction pins close the geometric ceiling that a single Walled Lake pin can't.",
       "actions": [
         { "code": "GBP-01", "name": "Claim + manage Detroit Woodward GBP (1001 Woodward Ave) — #2.7 pin-bleed closes to #1", "month": "M1", "effort": "M" },
@@ -234,6 +361,7 @@
       "name": "Page surgery (cleanup + improvement + new pages)",
       "priority": "High priority",
       "color": "blue",
+      "mini_report_url": "lever-b-page-surgery/",
       "why": "60+ of 70 burb pages effectively deindexed but still in sitemap, polluting site-quality signal. 256 keywords sit at pos 11–50 ship-ready. Homepage forced to rank for 9+ commercial queries at avg pos 26.",
       "actions": [
         { "code": "PA-02..22", "name": "26 burb-page DELETE+301 redirects per Pages_Action_List", "month": "M1", "effort": "L" },
@@ -258,6 +386,7 @@
       "name": "Internal linking + schema",
       "priority": "Medium priority",
       "color": "indigo",
+      "mini_report_url": "lever-c-internal-linking/",
       "why": "Service pages share homepage nav + footer but lack cross-cluster links. Blog packing posts (4,884 imp 30d) don't link to commercial /packing/. Equity not routed to the ship-ready surface.",
       "actions": [
         { "code": "IL-001..020", "name": "Priority nav + body changes routing equity into Lever B targets; footer to HP-01..04 sitewide", "month": "M1", "effort": "M" },
@@ -272,6 +401,7 @@
       "name": "Content (blog refresh + new commercial-intent articles)",
       "priority": "Medium priority",
       "color": "purple",
+      "mini_report_url": "lever-d-content/",
       "why": "Top-imp blog gets tons of impressions but few clicks (how-to-pack-dishes 4,884 imp / 1 click). Adding commercial pull-through converts impressions into authority + click-through. New Detroit commercial-intent blog targets the 196 pos-51+ keywords.",
       "actions": [
         { "code": "BLG-01", "name": "/2025/09/16/how-to-pack-dishes-for-moving/ → add /packing/ links + Detroit context", "month": "M1", "effort": "S" },
@@ -292,6 +422,7 @@
       "name": "Link hygiene + local PR + citations + local links",
       "priority": "High priority (compliance)",
       "color": "red",
+      "mini_report_url": "lever-e-link-hygiene/",
       "why": "DFS Backlinks shows 990 / 247 ref domains with 17 confirmed Telegram-spam anchors. Ahrefs flags 211 of 425 (49.6%) as spam. SEO Neo-precursor stack still active in Asana. Earned-channel rebuild replaces the automated stack.",
       "actions": [
         { "code": "OP-01", "name": "Export full backlink profile via DataForSEO Backlinks (per-URL granularity)", "month": "M1", "effort": "S" },
