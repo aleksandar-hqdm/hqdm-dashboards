@@ -48,14 +48,13 @@
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
         <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
         <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
-        <a href="#trajectory" class="px-3 py-1.5 rounded hover:bg-slate-100">Trajectory</a>
-        <a href="#aio" class="px-3 py-1.5 rounded hover:bg-slate-100">AIO</a>
-        <a href="#index-health" class="px-3 py-1.5 rounded hover:bg-slate-100">Index Health</a>
+        <a href="#yoy" class="px-3 py-1.5 rounded hover:bg-slate-100">YoY</a>
         <a href="#store-gap" class="px-3 py-1.5 rounded hover:bg-slate-100">Store Gap</a>
-        <a href="#reshuffle" class="px-3 py-1.5 rounded hover:bg-slate-100">Reshuffle</a>
-        <a href="#winners" class="px-3 py-1.5 rounded hover:bg-slate-100">Winners</a>
+        <a href="#reshuffle" class="px-3 py-1.5 rounded hover:bg-slate-100">S&amp;T 20-pair</a>
+        <a href="#top50" class="px-3 py-1.5 rounded hover:bg-slate-100">Top 50</a>
+        <a href="#cadence" class="px-3 py-1.5 rounded hover:bg-slate-100">Cadence</a>
+        <a href="#site-level" class="px-3 py-1.5 rounded hover:bg-slate-100">Template upgrades</a>
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
-        <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
       </nav>
       <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">2026-05-19</div>
     </div>
@@ -84,11 +83,17 @@
   <!-- ============== TL;DR ============== -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
-      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR — the headline inversion</div>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        Bernie's lost <strong>52.5% of GSC clicks YoY 90d</strong> (16,411 → 7,800) — driven by Google's <strong>Aug 2025 core update + AI Overview saturation</strong> (0-40% → <strong>89%</strong> on top 18 kws). The pre-2025 fundamentals held (vet credentials on 10/10 audited URLs). Parallel issue: <strong>GSC Coverage 'Crawled - not indexed' grew 1,492 → 2,670 (+79% in 84 days)</strong> from URL parameter pollution + duplicate paths + thin taxonomy. Reshuffle had winners: <strong>Spot & Tango +2,078% top-10 visibility</strong>, pattern now verified. Three observations make Q3 clear: <strong>(1)</strong> remaining organic traffic converts <strong>3.2× higher</strong> (CVR 0.67% → 2.17%); <strong>(2)</strong> the store ranks for <strong>only 59 kws</strong>, 75% branded — the 2.49M monthly SV in-SKU universe is the biggest untapped lever; <strong>(3)</strong> Google won't index ~2,700 of Bernie's pages today regardless of content quality. Six Q3 levers + 45 actions.
+        Bernie's lost <strong>52.5% of GSC clicks YoY 90d</strong> (16,411 → 7,800) — driven by Google's <strong>Aug 2025 core update + AI Overview saturation</strong> (0-40% → <strong>89%</strong> on top 18 kws). But the <strong>remaining organic traffic converts 3.2× higher</strong>: <strong>sessions ▼-52%, transactions ▲+54%, CVR ▲+223%</strong> Q1 YoY. The audience that survived the AIO collapse is materially more commercial-intent than the 2025 cohort. Parallel issue: <strong>GSC Coverage 'Crawled - not indexed' grew 1,492 → 2,670 (+79% in 84 days)</strong> from URL parameter pollution + duplicate paths + thin taxonomy. The reshuffle had winners — <strong>S&amp;T +2,078% top-10 visibility</strong>, pattern now verified across <strong>20 head-to-head article pairs</strong> (<a href="st-pattern/" class="underline text-brand-500 hover:text-brand-700">st-pattern/</a>). Q3 plan: 6 levers + ~50 task rows including <strong>10 site-level template upgrades</strong> (<a href="site-level-upgrades/" class="underline text-brand-500 hover:text-brand-700">site-level-upgrades/</a>), <strong>top-50 BLOG refresh</strong> connected to the Ideal Sitemap workflow (<a href="top-50-losers/" class="underline text-brand-500 hover:text-brand-700">top-50-losers/</a>), and capturing the <strong>2.49M-SV store gap</strong> (<a href="store-gap/" class="underline text-brand-500 hover:text-brand-700">store-gap/</a>).
       </p>
     </div>
+  </section>
+
+  <!-- ============== MINI REPORTS / DEEP DIVES ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-6">
+    <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Deep-dive reports</div>
+    <div id="mini-reports-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
   </section>
 
   <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
@@ -100,25 +105,14 @@
     <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </section>
 
-  <!-- ============== HEADLINE CHART ============== -->
+  <!-- ============== HEADLINE CHART (Organic-only, monthly, May dashed) ============== -->
   <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">GA4 Channel Performance — 18 Months</h2>
-          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Sessions fell sharply, but the buyers who stayed convert 3× more</p>
-        </div>
-        <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
-          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
-            <input type="checkbox" data-series="organic" checked class="rounded accent-brand-500">
-            <span class="inline-block w-3 h-3 rounded-full" style="background:#1d5b8a"></span>
-            <span>Organic Search</span>
-          </label>
-          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
-            <input type="checkbox" data-series="direct" checked class="rounded accent-accent-red">
-            <span class="inline-block w-3 h-3 rounded-full" style="background:#ef4444"></span>
-            <span>Direct</span>
-          </label>
+          <h2 class="text-2xl font-bold tracking-tight">Organic Search — monthly trend (with May 2026 projection)</h2>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Less traffic, more buyers — sessions ▼-52%, transactions ▲+54%, CVR ▲+223% Q1 YoY</p>
+          <p class="text-xs text-ink-500 mt-2">May 2026 is partial through May 21 (21 of 31 days). The dashed continuation extends to the straight-run-rate full-May projection.</p>
         </div>
       </div>
       <div class="p-6 space-y-8">
@@ -156,6 +150,18 @@
           </table>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ============== QUARTERLY YOY INFOGRAPHIC ============== -->
+  <section id="yoy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <div class="mb-2">
+        <h2 class="text-2xl font-bold tracking-tight" id="yoy-headline">Q1 2025 vs Q1 2026 — the headline inversion in one frame</h2>
+        <p class="text-sm text-ink-500 mt-1" id="yoy-subtitle">Organic only. Fewer visitors, more buyers, materially higher conversion.</p>
+      </div>
+      <div id="yoy-panels" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6"></div>
+      <p class="text-xs text-ink-500 italic mt-6">Q1 = Jan + Feb + Mar combined. Sessions and transactions are GA4 quarterly totals (property 308252309). CVR computed at the quarterly aggregate level (Q1 transactions ÷ Q1 sessions), not as an average of monthly CVRs.</p>
     </div>
   </section>
 
@@ -250,9 +256,28 @@
 
   <!-- ============== STORE GAP / SKU COVERAGE ============== -->
   <section id="store-gap" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-    <div>
-      <h2 class="text-2xl font-bold tracking-tight">Store Gap — SKU Coverage Priority</h2>
-      <p class="text-sm text-ink-500 mt-1 max-w-4xl">3,338 in-SKU keywords / <strong>2.49M monthly SV</strong> with near-zero capture today. Store ranks 59 kws total; 75% branded; ~6 truly generic. The store never had ground in its own category SERPs — this isn't a "lost ground" story. <strong>82% of the universe lives at the PDP layer</strong> (bare commercial terms → category PDPs).</p>
+    <div class="flex flex-wrap items-end justify-between gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Store Gap — why, how, where</h2>
+        <p class="text-sm text-ink-500 mt-1 max-w-4xl">3,338 in-SKU keywords / <strong>2.49M monthly SV</strong> with near-zero capture today. Store ranks 59 kws total; 75% branded; ~6 truly generic. <strong>82% of the universe lives at the PDP layer</strong>. Full why/how/where breakdown in <a href="store-gap/" class="underline text-brand-500 hover:text-brand-700">store-gap/</a>.</p>
+      </div>
+      <a href="store-gap/" class="text-xs font-semibold px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Deep dive →</a>
+    </div>
+
+    <!-- Why / How / Where summary cards -->
+    <div class="mt-5 grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="bg-white rounded-xl shadow-sm border border-rose-200 border-t-4 border-t-rose-500 p-5">
+        <div class="text-xs font-bold uppercase tracking-wider text-rose-700 mb-2">WHY · 5 compounding causes</div>
+        <ul class="space-y-1.5 text-sm text-ink-700" id="store-gap-why"></ul>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-sky-200 border-t-4 border-t-sky-500 p-5">
+        <div class="text-xs font-bold uppercase tracking-wider text-sky-700 mb-2">HOW · 5-step detection pipeline</div>
+        <p class="text-sm text-ink-700 leading-relaxed" id="store-gap-how"></p>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-amber-200 border-t-4 border-t-amber-500 p-5">
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">WHERE · 5 PDPs + 5 Learn More cannibals</div>
+        <p class="text-sm text-ink-700 leading-relaxed" id="store-gap-where"></p>
+      </div>
     </div>
     <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="overflow-x-auto">
@@ -285,49 +310,124 @@
       <div class="space-y-3" id="reshuffle-bars"></div>
     </div>
 
-    <!-- S&T pattern card -->
+    <!-- S&T pattern — verified across 20 pairs -->
     <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-      <div class="flex items-start gap-3">
-        <span class="inline-block px-2 py-1 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">VERIFIED PATTERN</span>
-        <div class="flex-1">
-          <h3 class="text-lg font-bold" id="st-headline">Spot & Tango content pattern — verified on 2 articles</h3>
-          <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-            <div>
-              <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">Pattern elements</div>
-              <ul class="space-y-1.5" id="st-pattern-list"></ul>
-            </div>
-            <div>
-              <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">Articles audited</div>
-              <ul class="space-y-1.5 text-xs font-mono text-ink-700" id="st-articles-list"></ul>
-              <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2 mt-4">Bernie's adaptation</div>
-              <p class="text-sm text-ink-700" id="st-adaptation"></p>
-            </div>
+      <div class="flex items-start justify-between gap-3 flex-wrap">
+        <div class="flex items-start gap-3">
+          <span class="inline-block px-2 py-1 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">VERIFIED · 20 PAIRS</span>
+          <div>
+            <h3 class="text-lg font-bold" id="st-headline">S&amp;T content pattern — verified across 20 head-to-head article pairs</h3>
+            <p class="text-sm text-ink-500 mt-1" id="st-method-summary"></p>
           </div>
+        </div>
+        <a href="st-pattern/" class="text-xs font-semibold px-3 py-1.5 rounded bg-emerald-600 text-white hover:bg-emerald-700">Full evidence →</a>
+      </div>
+
+      <!-- Headline findings table -->
+      <div class="mt-5 overflow-x-auto">
+        <table class="min-w-full text-sm" id="st-findings-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-2 px-3">Metric</th>
+              <th class="text-right font-semibold py-2 px-3">S&amp;T</th>
+              <th class="text-right font-semibold py-2 px-3">Bernie's</th>
+              <th class="text-left font-semibold py-2 px-3 hidden md:table-cell">Note</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">The verified recipe</div>
+          <ul class="space-y-1.5 text-sm" id="st-pattern-list"></ul>
+        </div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">Bernie's E-E-A-T overlay (what to add that S&amp;T omits)</div>
+          <p class="text-sm text-ink-700" id="st-adaptation"></p>
+          <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2 mt-4">P0 rewrites (highest-leverage pairs)</div>
+          <ul class="space-y-1.5 text-xs" id="st-p0-list"></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============== TOP LOSER BLOGS ============== -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-    <h2 class="text-2xl font-bold tracking-tight">Top Loser BLOGs — 5 Highest-Loss URLs</h2>
-    <p class="text-sm text-ink-500 mt-1">By GSC YoY 90d. Each gets the S&T pattern refresh in Lever 1.</p>
-    <div class="mt-4 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+  <!-- ============== TOP 50 LOSERS — connected to Ideal Sitemap workflow ============== -->
+  <section id="top50" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-wrap items-end justify-between gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Top 50 BLOG losers — connected to the Ideal Sitemap workflow</h2>
+        <p class="text-sm text-ink-500 mt-1 max-w-4xl" id="top50-narrative"></p>
+      </div>
+      <a href="top-50-losers/" class="text-xs font-semibold px-3 py-1.5 rounded bg-rose-600 text-white hover:bg-rose-700">All 50 + sitemap actions →</a>
+    </div>
+
+    <div id="top50-stats" class="mt-5 grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+    <div class="mt-5 bg-white rounded-xl shadow-sm border border-slate-200 p-5">
+      <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3">Sitemap action distribution (15 mapped losers)</div>
+      <div id="top50-actions" class="flex flex-wrap gap-2"></div>
+      <p class="text-xs text-ink-500 italic mt-3" id="top50-sitemap-connection"></p>
+    </div>
+
+    <div class="mt-5 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="px-5 py-3 border-b border-slate-200 flex items-center justify-between">
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500">Top 5 (visible here · all 50 in deep dive)</div>
+        <a href="top-50-losers/" class="text-xs text-brand-500 underline hover:text-brand-700">See all 50 →</a>
+      </div>
       <div class="overflow-x-auto">
-        <table class="min-w-full text-sm" id="loser-blogs-table">
+        <table class="min-w-full text-sm" id="top50-preview-table">
           <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
             <tr>
-              <th class="text-left font-semibold py-3 px-4">URL</th>
-              <th class="text-right font-semibold py-3 px-4">YoY 90d clicks lost</th>
-              <th class="text-center font-semibold py-3 px-4">Current rank</th>
-              <th class="text-left font-semibold py-3 px-4">Target kw (SV)</th>
-              <th class="text-left font-semibold py-3 px-4 hidden lg:table-cell">Top competitors</th>
+              <th class="text-center font-semibold py-3 px-3">#</th>
+              <th class="text-left font-semibold py-3 px-3">URL</th>
+              <th class="text-right font-semibold py-3 px-3">YoY 90d loss</th>
+              <th class="text-center font-semibold py-3 px-3 hidden md:table-cell">Rank</th>
+              <th class="text-left font-semibold py-3 px-3 hidden lg:table-cell">Target kw (SV)</th>
+              <th class="text-left font-semibold py-3 px-3">Sitemap action</th>
+              <th class="text-left font-semibold py-3 px-3 hidden md:table-cell">Refresh plan</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-slate-200"></tbody>
         </table>
       </div>
     </div>
+  </section>
+
+  <!-- ============== PRODUCTION CADENCE ============== -->
+  <section id="cadence" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div>
+      <h2 class="text-2xl font-bold tracking-tight" id="cadence-headline">Production cadence — current vs proposed</h2>
+      <p class="text-sm text-ink-500 mt-1 max-w-4xl" id="cadence-implication"></p>
+    </div>
+    <div class="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-ink-500 p-5">
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-3">Current monthly cadence</div>
+        <div id="cadence-current" class="space-y-2 text-sm"></div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-emerald-200 border-t-4 border-t-emerald-500 p-5">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-3">Proposed shift (approved direction)</div>
+        <div id="cadence-proposed" class="space-y-2 text-sm"></div>
+        <p class="text-xs text-emerald-700 italic mt-3" id="cadence-rationale"></p>
+      </div>
+    </div>
+    <div class="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Capacity constraints</div>
+      <ul class="space-y-1 text-sm text-ink-700" id="cadence-constraints"></ul>
+    </div>
+  </section>
+
+  <!-- ============== SITE-LEVEL / TEMPLATE UPGRADES ============== -->
+  <section id="site-level" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-wrap items-end justify-between gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight" id="site-level-headline">Site-level / template upgrades — one change, sitewide lift</h2>
+        <p class="text-sm text-ink-500 mt-1 max-w-4xl" id="site-level-summary"></p>
+      </div>
+      <a href="site-level-upgrades/" class="text-xs font-semibold px-3 py-1.5 rounded bg-indigo-600 text-white hover:bg-indigo-700">Full spec →</a>
+    </div>
+    <div id="site-level-cards" class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4"></div>
   </section>
 
   <!-- ============== Q1 YOY PAGE WINNERS ============== -->

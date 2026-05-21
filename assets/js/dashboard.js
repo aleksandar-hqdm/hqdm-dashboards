@@ -68,13 +68,18 @@
   if (DATA.top_urls && document.querySelector('#top-urls-table')) renderTopUrlsTable(DATA.top_urls);
 
   // === Bernie's-specific sections ===
+  if (DATA.meta && DATA.meta.mini_reports && document.querySelector('#mini-reports-grid')) renderMiniReports(DATA.meta.mini_reports);
+  if (DATA.quarterly_yoy_infographic && document.querySelector('#yoy-panels')) renderYoyInfographic(DATA.quarterly_yoy_infographic);
   if (DATA.ahrefs_trajectory && document.querySelector('#ahrefs-chart')) renderAhrefsTrajectory(DATA.ahrefs_trajectory);
   if (DATA.aio_saturation && document.querySelector('#aio-may26')) renderAIOSaturation(DATA.aio_saturation);
   if (DATA.index_health && document.querySelector('#index-health-table')) renderIndexHealth(DATA.index_health);
+  if (DATA.store_gap_summary && document.querySelector('#store-gap-why')) renderStoreGapSummary(DATA.store_gap_summary);
   if (DATA.sku_coverage && document.querySelector('#sku-table')) renderSKUCoverage(DATA.sku_coverage);
   if (DATA.competitor_reshuffle && document.querySelector('#reshuffle-bars')) renderReshuffleBars(DATA.competitor_reshuffle);
   if (DATA.st_pattern_verified && document.querySelector('#st-pattern-list')) renderSTPattern(DATA.st_pattern_verified);
-  if (DATA.top_loser_blogs && document.querySelector('#loser-blogs-table')) renderLoserBlogs(DATA.top_loser_blogs);
+  if (DATA.top50_losers_summary && document.querySelector('#top50-stats')) renderTop50Preview(DATA.top50_losers_summary);
+  if (DATA.production_cadence && document.querySelector('#cadence-current')) renderCadence(DATA.production_cadence);
+  if (DATA.site_level_upgrades && document.querySelector('#site-level-cards')) renderSiteLevelUpgrades(DATA.site_level_upgrades);
   if (DATA.top_winners_q1yoy && document.querySelector('#winners-table')) renderWinnersTable(DATA.top_winners_q1yoy);
   if (DATA.q3_kpi_targets && document.querySelector('#q3-targets-table')) renderQ3Targets(DATA.q3_kpi_targets);
 
@@ -82,8 +87,23 @@
   if (DATA.positives && document.querySelector('#positives-list')) renderList('positives-list', DATA.positives, 'emerald');
   if (DATA.negatives && document.querySelector('#negatives-list')) renderList('negatives-list', DATA.negatives, 'rose');
 
+  // === Headline panel (traffic-down / conversions-up) ===
+  if (DATA.headline_panel && document.querySelector('#headline-h2')) {
+    renderHeadlinePanel(DATA.headline_panel, DATA.mini_report_base || './');
+  }
+
+  // === GA4 vs GSC discrepancy ===
+  if (DATA.ga4_gsc_discrepancy && document.querySelector('#discrepancy-table')) {
+    renderGA4GSCDiscrepancy(DATA.ga4_gsc_discrepancy, DATA.mini_report_base || './');
+  }
+
+  // === LLM Visibility (AI Overview saturation on 20 priority kws) ===
+  if (DATA.llm_visibility && document.querySelector('#llm-table')) {
+    renderLLMVisibility(DATA.llm_visibility, DATA.mini_report_base || './');
+  }
+
   // === Lever cards (shared) ===
-  if (DATA.levers && document.querySelector('#lever-cards')) renderLeverCards(DATA.levers);
+  if (DATA.levers && document.querySelector('#lever-cards')) renderLeverCards(DATA.levers, DATA.mini_report_base || './');
 
   // === Tasks table (shared) ===
   if (DATA.levers && document.querySelector('#tasks-table')) renderTasks(DATA.levers);
@@ -138,6 +158,42 @@ function renderStackedTrendCharts(trend) {
   const colors = trend.channel_colors || defaultColors;
   const labels = trend.channel_labels || defaultLabels;
 
+  // Inject May 2026 projection as an extra dashed-line dataset if metadata is present.
+  // Append a "May proj." x-axis label and a second series that contains only
+  // the partial-actual May value and the run-rate projection. Visualizes the
+  // "dotted line from current state to projected end-of-month" the user asked for.
+  let months = trend.months.slice();
+  const proj = trend.may_projection;
+  const projectionByChannel = {};
+  if (proj && months[months.length - 1].toLowerCase().includes('may')) {
+    months.push('May 2026 (proj)');
+    Object.keys(trend.sessions).forEach(channel => {
+      if (channel === 'organic') {
+        const sess = trend.sessions[channel].slice();
+        const tx = trend.form_submits[channel].slice();
+        const mayPartialSess = sess[sess.length - 1];
+        const mayPartialTx = tx[tx.length - 1];
+        sess.push(null);
+        tx.push(null);
+        trend.sessions[channel] = sess;
+        trend.form_submits[channel] = tx;
+        const sessProj = new Array(months.length).fill(null);
+        const txProj = new Array(months.length).fill(null);
+        sessProj[months.length - 2] = mayPartialSess;
+        sessProj[months.length - 1] = proj.sessions_organic_full_month_est;
+        txProj[months.length - 2] = mayPartialTx;
+        txProj[months.length - 1] = proj.transactions_organic_full_month_est;
+        projectionByChannel[channel] = { sessions: sessProj, tx: txProj };
+      } else {
+        trend.sessions[channel].push(null);
+        trend.form_submits[channel].push(null);
+      }
+    });
+    trend._labels_with_proj = months;
+  } else {
+    trend._labels_with_proj = months;
+  }
+
   // Initial visible state: respect checkbox `checked` if rendered; else default
   const channels = Object.keys(trend.sessions);
   const visible = {};
@@ -146,17 +202,38 @@ function renderStackedTrendCharts(trend) {
     visible[c] = cb ? cb.checked : true;
   });
 
-  const buildDatasets = (src) => Object.keys(src).map(key => ({
-    label: labels[key] || key,
-    data: src[key],
-    borderColor: colors[key] || '#6b7280',
-    backgroundColor: (colors[key] || '#6b7280') + '20',
-    tension: 0.25,
-    borderWidth: 2.5,
-    pointRadius: 2,
-    pointHoverRadius: 5,
-    hidden: !visible[key]
-  }));
+  const buildDatasets = (src, kind) => {
+    const base = Object.keys(src).map(key => ({
+      label: labels[key] || key,
+      data: src[key],
+      borderColor: colors[key] || '#6b7280',
+      backgroundColor: (colors[key] || '#6b7280') + '20',
+      tension: 0.25,
+      borderWidth: 2.5,
+      pointRadius: 2,
+      pointHoverRadius: 5,
+      hidden: !visible[key]
+    }));
+    Object.keys(projectionByChannel).forEach(channel => {
+      const data = kind === 'sessions' ? projectionByChannel[channel].sessions : projectionByChannel[channel].tx;
+      base.push({
+        label: (labels[channel] || channel) + ' (May proj.)',
+        data,
+        borderColor: colors[channel] || '#6b7280',
+        backgroundColor: 'transparent',
+        borderDash: [6, 4],
+        borderWidth: 2,
+        pointRadius: 4,
+        pointStyle: 'rectRot',
+        pointBackgroundColor: '#fff',
+        pointBorderColor: colors[channel] || '#6b7280',
+        pointBorderWidth: 2,
+        spanGaps: true,
+        hidden: !visible[channel]
+      });
+    });
+    return base;
+  };
 
   const baseOptions = {
     responsive: true,
@@ -186,22 +263,23 @@ function renderStackedTrendCharts(trend) {
   const convCtx = document.getElementById('trend-chart-conversions');
   if (!sessionsCtx || !convCtx) return null;
 
+  const labelsForChart = trend._labels_with_proj || trend.months;
   const sessionsChart = new Chart(sessionsCtx.getContext('2d'), {
     type: 'line',
-    data: { labels: trend.months, datasets: buildDatasets(trend.sessions) },
+    data: { labels: labelsForChart, datasets: buildDatasets(trend.sessions, 'sessions') },
     options: baseOptions
   });
 
   const convChart = new Chart(convCtx.getContext('2d'), {
     type: 'line',
-    data: { labels: trend.months, datasets: buildDatasets(trend.form_submits) },
+    data: { labels: labelsForChart, datasets: buildDatasets(trend.form_submits, 'tx') },
     options: baseOptions
   });
 
   const charts = { sessions: sessionsChart, conversions: convChart, visible };
   charts._rebuild = () => {
-    sessionsChart.data.datasets = buildDatasets(trend.sessions);
-    convChart.data.datasets = buildDatasets(trend.form_submits);
+    sessionsChart.data.datasets = buildDatasets(trend.sessions, 'sessions');
+    convChart.data.datasets = buildDatasets(trend.form_submits, 'tx');
     sessionsChart.update();
     convChart.update();
   };
@@ -585,8 +663,9 @@ function renderList(id, items, palette) {
 // ============================================================
 // Lever cards (collapsible)
 // ============================================================
-function renderLeverCards(levers) {
+function renderLeverCards(levers, miniBase) {
   const wrap = document.getElementById('lever-cards');
+  const base = miniBase || './';
   wrap.innerHTML = levers.map(L => `
     <div class="lever-card bg-white rounded-xl shadow-sm border border-slate-200 lever-${L.color} overflow-hidden" data-lever-id="${L.id}">
       <button class="w-full text-left p-5 flex items-start justify-between gap-4 hover:bg-slate-50 transition">
@@ -618,6 +697,14 @@ function renderLeverCards(levers) {
             <div class="text-xs uppercase tracking-wider font-bold text-ink-500 mb-1">Expected outcome</div>
             <p class="text-sm text-ink-700">${escapeHtml(L.outcome)}</p>
           </div>
+          ${L.mini_report_url ? `
+            <div class="mt-4 pt-3 border-t border-slate-200 flex justify-end">
+              <a href="${escapeHtml(base + L.mini_report_url)}" class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-ink-900 text-white hover:bg-ink-700 transition">
+                View detailed mini-report
+                <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+              </a>
+            </div>
+          ` : ''}
         </div>
       </div>
     </div>
@@ -1189,6 +1276,20 @@ function renderReshuffleBars(rows) {
 // ============================================================
 function renderSTPattern(st) {
   setText('st-headline', st.headline);
+  setText('st-method-summary', st.method_summary || '');
+
+  const findingsBody = document.querySelector('#st-findings-table tbody');
+  if (findingsBody && st.headline_findings) {
+    findingsBody.innerHTML = st.headline_findings.map(f => `
+      <tr>
+        <td class="py-2 px-3 font-medium text-ink-700">${escapeHtml(f.label)}</td>
+        <td class="py-2 px-3 text-right font-mono font-bold text-emerald-700">${escapeHtml(f.value)}</td>
+        <td class="py-2 px-3 text-right font-mono text-rose-700">${escapeHtml(f.bernies)}</td>
+        <td class="py-2 px-3 text-xs text-ink-500 hidden md:table-cell">${escapeHtml(f.note)}</td>
+      </tr>
+    `).join('');
+  }
+
   const list = document.getElementById('st-pattern-list');
   if (list) {
     list.innerHTML = st.pattern_elements.map(el => `
@@ -1198,29 +1299,247 @@ function renderSTPattern(st) {
       </li>
     `).join('');
   }
-  const articles = document.getElementById('st-articles-list');
-  if (articles) {
-    articles.innerHTML = st.articles_audited.map(a => `
-      <li>${escapeHtml(a.url)} <span class="text-ink-400">— ${escapeHtml(a.published)} · ${a.words}w</span></li>
+  setText('st-adaptation', st.bernies_overlay || st.bernies_adaptation || '');
+
+  const p0List = document.getElementById('st-p0-list');
+  if (p0List && st.p0_articles) {
+    p0List.innerHTML = st.p0_articles.map(p => `
+      <li class="flex items-start gap-2 text-ink-700">
+        <span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800 flex-shrink-0">P0 ${escapeHtml(p.gap)}</span>
+        <span><strong>${escapeHtml(p.pair)}</strong> · S&amp;T ${fmtNum(p.st_traffic)}/mo · ${escapeHtml(p.fix_note)}</span>
+      </li>
     `).join('');
   }
-  setText('st-adaptation', st.bernies_adaptation);
 }
 
 // ============================================================
-// Bernie's: Top loser blogs
+// Bernie's: Mini reports strip (top of page)
 // ============================================================
-function renderLoserBlogs(rows) {
-  const tbody = document.querySelector('#loser-blogs-table tbody');
-  if (!tbody) return;
-  tbody.innerHTML = rows.map(r => `
-    <tr>
-      <td class="py-3 px-4 font-mono text-xs">${escapeHtml(r.url)}</td>
-      <td class="py-3 px-4 text-right font-mono font-semibold text-rose-700">−${fmtNum(r.lost_clicks_yoy90d)}</td>
-      <td class="py-3 px-4 text-center font-mono">#${r.current_rank}</td>
-      <td class="py-3 px-4 text-xs"><code class="bg-slate-100 px-1.5 py-0.5 rounded">${escapeHtml(r.target_kw)}</code> <span class="text-ink-500">SV ${fmtNum(r.sv)}</span></td>
-      <td class="py-3 px-4 hidden lg:table-cell text-xs text-ink-600">${r.competitors.map(c => escapeHtml(c)).join(' · ')}</td>
-    </tr>
+function renderMiniReports(reports) {
+  const grid = document.getElementById('mini-reports-grid');
+  if (!grid) return;
+  const accents = ['border-t-emerald-500', 'border-t-rose-500', 'border-t-indigo-500', 'border-t-amber-500'];
+  grid.innerHTML = reports.map((r, i) => `
+    <a href="${escapeHtml(r.slug)}" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 ${accents[i % accents.length]} p-4 hover:shadow-md transition">
+      <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-1">Deep dive</div>
+      <div class="text-sm font-bold text-ink-900 leading-tight">${escapeHtml(r.name)}</div>
+      <div class="text-xs text-ink-500 mt-2 leading-relaxed">${escapeHtml(r.summary)}</div>
+      <div class="text-xs font-mono text-brand-500 mt-3">${escapeHtml(r.slug)} →</div>
+    </a>
+  `).join('');
+}
+
+// ============================================================
+// Bernie's: Quarterly YoY infographic (3 big-number panels)
+// ============================================================
+function renderYoyInfographic(yoy) {
+  if (!yoy) return;
+  setText('yoy-headline', yoy.headline);
+  setText('yoy-subtitle', yoy.subtitle);
+  const grid = document.getElementById('yoy-panels');
+  if (!grid) return;
+  grid.innerHTML = yoy.panels.map(p => {
+    const arrow = p.delta_pct > 0 ? '▲' : '▼';
+    const isUp = p.delta_pct > 0;
+    const chipBg = isUp ? 'bg-emerald-50 text-emerald-700 border-emerald-300' : 'bg-rose-50 text-rose-700 border-rose-300';
+    const fmt = (v) => p.format === 'pct' ? v.toFixed(2) + '%' : Number(v).toLocaleString();
+    return `
+      <div class="border ${chipBg.replace('text-', 'border-')} rounded-xl p-5 text-center">
+        <div class="inline-flex items-baseline gap-2 px-3 py-1 rounded-full ${chipBg} border-2 font-extrabold text-2xl">
+          <span>${arrow}</span>
+          <span>${isUp ? '+' : ''}${p.delta_pct}%</span>
+        </div>
+        <div class="text-xs text-ink-500 italic mt-1">YoY · Q1 2025 → Q1 2026</div>
+        <div class="text-lg font-bold text-ink-900 mt-3">${escapeHtml(p.delta_label)}</div>
+        <div class="mt-5 flex items-end justify-around">
+          <div>
+            <div class="text-xs text-ink-500">Q1 2025</div>
+            <div class="text-2xl font-extrabold text-ink-600">${fmt(p.old_value)}</div>
+          </div>
+          <div class="text-ink-300 text-2xl">→</div>
+          <div>
+            <div class="text-xs text-ink-500">Q1 2026</div>
+            <div class="text-2xl font-extrabold ${isUp ? 'text-emerald-700' : 'text-rose-700'}">${fmt(p.new_value)}</div>
+          </div>
+        </div>
+        <div class="text-[11px] uppercase tracking-wider text-ink-500 font-bold mt-5">${escapeHtml(p.metric)}</div>
+        <div class="text-xs text-ink-500 italic mt-2 leading-relaxed">${escapeHtml(p.context)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ============================================================
+// Bernie's: Store Gap deep card (why/how/where summary cards)
+// ============================================================
+function renderStoreGapSummary(gap) {
+  if (!gap) return;
+  const whyUl = document.getElementById('store-gap-why');
+  if (whyUl) {
+    whyUl.innerHTML = gap.why_short.map(w => `
+      <li class="flex items-start gap-2">
+        <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-rose-500"></span>
+        <span>${escapeHtml(w)}</span>
+      </li>
+    `).join('');
+  }
+  setText('store-gap-how', gap.how_short);
+  setText('store-gap-where', gap.where_short);
+}
+
+// ============================================================
+// Bernie's: Top 50 losers preview (stats + 5-row table + sitemap actions)
+// ============================================================
+function renderTop50Preview(t50) {
+  if (!t50) return;
+  setText('top50-narrative', t50.narrative);
+  setText('top50-sitemap-connection', t50.ideal_sitemap_connection);
+
+  const stats = document.getElementById('top50-stats');
+  if (stats) {
+    const tiles = [
+      { label: 'Combined YoY 90d loss (top 50)', value: fmtNum(t50.combined_yoy_90d_loss), accent: 'border-t-rose-500', sub: `Top 10 share: ${Math.round((t50.top_10_share_of_total||0)*100)}%` },
+      { label: 'In existing 10-URL refresh plan', value: `${t50.in_existing_plan}/50`, accent: 'border-t-amber-500', sub: 'BLOG-REF-01..10 (P0/M1)' },
+      { label: 'Mapped to Perfect Poop cluster', value: `${t50.mapped_to_sitemap_cluster}/50`, accent: 'border-t-emerald-500', sub: 'Each carries a sitemap action' },
+      { label: 'Top 50 = % of all blog loss', value: `${Math.round((t50.top_50_share_of_all_blog_loss||0)*100)}%`, accent: 'border-t-sky-500', sub: 'Concentrated fix surface' }
+    ];
+    stats.innerHTML = tiles.map(t => `
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 ${t.accent} p-4">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500 leading-tight">${escapeHtml(t.label)}</div>
+        <div class="text-2xl font-extrabold text-ink-900 mt-1">${t.value}</div>
+        <div class="text-xs text-ink-500 mt-1">${escapeHtml(t.sub)}</div>
+      </div>
+    `).join('');
+  }
+
+  const actionsWrap = document.getElementById('top50-actions');
+  if (actionsWrap && t50.action_distribution) {
+    const actionStyles = {
+      manage_redirects: 'bg-rose-100 text-rose-800',
+      solve_cannibalization: 'bg-purple-100 text-purple-800',
+      upgrade_main_article: 'bg-blue-100 text-blue-800',
+      consolidate_learn_more: 'bg-amber-100 text-amber-800',
+      review_manually: 'bg-slate-200 text-slate-700',
+      write_new_article: 'bg-emerald-100 text-emerald-800',
+      write_new_page: 'bg-emerald-100 text-emerald-800'
+    };
+    actionsWrap.innerHTML = Object.entries(t50.action_distribution).map(([k, v]) => `
+      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-bold ${actionStyles[k] || 'bg-slate-100 text-slate-700'}">
+        <span>${escapeHtml(k.replace(/_/g, ' '))}</span>
+        <span class="opacity-70">×${v}</span>
+      </span>
+    `).join('');
+  }
+
+  const tbody = document.querySelector('#top50-preview-table tbody');
+  if (tbody && t50.top_5_visible_in_dashboard) {
+    tbody.innerHTML = t50.top_5_visible_in_dashboard.map(r => `
+      <tr>
+        <td class="py-3 px-3 text-center font-bold text-rose-700">${r.rank}</td>
+        <td class="py-3 px-3 font-mono text-xs">${escapeHtml(r.url)}</td>
+        <td class="py-3 px-3 text-right font-mono font-semibold text-rose-700">−${fmtNum(r.loss)}</td>
+        <td class="py-3 px-3 text-center font-mono hidden md:table-cell">#${r.current_rank}</td>
+        <td class="py-3 px-3 text-xs hidden lg:table-cell"><code class="bg-slate-100 px-1.5 py-0.5 rounded">${escapeHtml(r.target_kw)}</code> <span class="text-ink-500">SV ${fmtNum(r.sv)}</span></td>
+        <td class="py-3 px-3 text-xs">${escapeHtml(r.sitemap_action)}</td>
+        <td class="py-3 px-3 text-xs font-mono text-ink-600 hidden md:table-cell">${escapeHtml(r.in_plan || '')}</td>
+      </tr>
+    `).join('');
+  }
+}
+
+// ============================================================
+// Bernie's: Production cadence (current vs proposed)
+// ============================================================
+function renderCadence(cadence) {
+  if (!cadence) return;
+  setText('cadence-headline', cadence.headline);
+  setText('cadence-implication', cadence.implication);
+  setText('cadence-rationale', cadence.proposed.rationale || '');
+
+  const cur = document.getElementById('cadence-current');
+  if (cur) {
+    cur.innerHTML = `
+      <div class="flex items-baseline justify-between border-b border-slate-200 pb-2">
+        <span class="text-ink-700">Article upgrades / month</span>
+        <span class="text-2xl font-extrabold text-ink-900">${cadence.current.upgrades_per_month}</span>
+      </div>
+      <div class="flex items-baseline justify-between border-b border-slate-200 pb-2">
+        <span class="text-ink-700">New blog posts / month</span>
+        <span class="text-2xl font-extrabold text-ink-900">${cadence.current.new_blogs_per_month}</span>
+      </div>
+      <div class="flex items-baseline justify-between border-b border-slate-200 pb-2">
+        <span class="text-ink-700">CTR optimizations / month</span>
+        <span class="text-2xl font-extrabold text-ink-900">${cadence.current.ctr_optimizations_per_month}</span>
+      </div>
+      <div class="flex items-baseline justify-between">
+        <span class="text-ink-700">PR + backlinks</span>
+        <span class="text-sm font-mono text-ink-500">${escapeHtml(cadence.current.pr_backlinks)}</span>
+      </div>
+    `;
+  }
+
+  const prop = document.getElementById('cadence-proposed');
+  if (prop) {
+    prop.innerHTML = `
+      <div class="flex items-baseline justify-between border-b border-emerald-100 pb-2">
+        <span class="text-ink-700">Article upgrades / month</span>
+        <span class="text-2xl font-extrabold text-emerald-700">${cadence.proposed.upgrades_per_month}</span>
+      </div>
+      <div class="flex items-baseline justify-between border-b border-emerald-100 pb-2">
+        <span class="text-ink-700">New blog posts / month</span>
+        <span class="text-2xl font-extrabold text-emerald-700">${cadence.proposed.new_blogs_per_month}</span>
+      </div>
+    `;
+  }
+
+  const ul = document.getElementById('cadence-constraints');
+  if (ul) {
+    ul.innerHTML = cadence.constraints.map(c => `
+      <li class="flex items-start gap-2">
+        <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-amber-500"></span>
+        <span>${escapeHtml(c)}</span>
+      </li>
+    `).join('');
+  }
+}
+
+// ============================================================
+// Bernie's: Site-level / template upgrades
+// ============================================================
+function renderSiteLevelUpgrades(sl) {
+  if (!sl) return;
+  setText('site-level-headline', sl.headline);
+  setText('site-level-summary', sl.summary);
+  const wrap = document.getElementById('site-level-cards');
+  if (!wrap) return;
+  const priorityBadge = (p) => {
+    if (!p) return '';
+    if (p === 'M1') return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">M1</span>';
+    if (p === 'M2') return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">M2</span>';
+    if (p.startsWith('M1')) return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">' + escapeHtml(p) + '</span>';
+    return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">' + escapeHtml(p) + '</span>';
+  };
+  wrap.innerHTML = sl.items.map(t => `
+    <details class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-500 p-4 group">
+      <summary class="cursor-pointer list-none flex items-start justify-between gap-3">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="font-mono text-[11px] bg-indigo-50 text-indigo-700 border border-indigo-200 rounded px-1.5 py-0.5">${escapeHtml(t.id)}</span>
+            ${priorityBadge(t.priority)}
+            <span class="text-[10px] font-mono text-ink-400">effort: ${escapeHtml(t.effort)}</span>
+          </div>
+          <h3 class="text-base font-bold mt-1.5 text-ink-900">${escapeHtml(t.name)}</h3>
+          <p class="text-xs text-ink-500 mt-1">${escapeHtml(t.scope)}</p>
+        </div>
+        <svg class="w-5 h-5 text-ink-400 flex-shrink-0 transition group-open:rotate-90" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+      </summary>
+      <div class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-sm">
+        <div><span class="text-xs font-bold uppercase tracking-wider text-ink-500">Current:</span> <span class="text-ink-700">${t.current}</span></div>
+        <div><span class="text-xs font-bold uppercase tracking-wider text-ink-500">Change:</span> <span class="text-ink-700">${t.change}</span></div>
+        <div><span class="text-xs font-bold uppercase tracking-wider text-ink-500">Why it matters:</span> <span class="text-ink-700">${escapeHtml(t.why_it_matters)}</span></div>
+        <div><span class="text-xs font-bold uppercase tracking-wider text-ink-500">Lift:</span> <span class="text-ink-700">${escapeHtml(t.lift)}</span></div>
+      </div>
+    </details>
   `).join('');
 }
 
@@ -1265,6 +1584,227 @@ function renderQ3Targets(rows) {
       <td class="py-3 px-4 text-right font-mono font-bold text-emerald-700">${escapeHtml(r.stretch)}</td>
     </tr>
   `).join('');
+}
+
+// ============================================================
+// Headline panel — traffic-down / conversions-up framing
+// ============================================================
+function renderHeadlinePanel(panel, miniBase) {
+  setText('headline-h2', panel.headline);
+  setText('headline-lede', panel.lede);
+  const link = document.getElementById('headline-mini-report');
+  if (link && panel.mini_report_url) link.setAttribute('href', miniBase + panel.mini_report_url);
+
+  const tiles = document.getElementById('headline-stat-tiles');
+  if (tiles) {
+    tiles.innerHTML = (panel.stat_tiles || []).map(t => {
+      const sentClass = t.sentiment === 'positive' ? 'sent-positive'
+                       : t.sentiment === 'negative' ? 'sent-negative'
+                       : 'sent-neutral';
+      return `
+        <div class="rounded-xl border-l-4 ${sentClass} border-r border-y border-r-slate-200 border-y-slate-200 bg-white p-4 shadow-sm">
+          <div class="flex items-start justify-between gap-2">
+            <div class="text-[11px] font-semibold uppercase tracking-wider text-ink-500">${escapeHtml(t.label)}</div>
+            <span class="sent-dot ${t.sentiment}"></span>
+          </div>
+          <div class="mt-2 text-3xl font-extrabold tracking-tight text-ink-900">${escapeHtml(t.value)}</div>
+          <div class="mt-1 text-xs text-ink-600 leading-snug">${escapeHtml(t.sub)}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  const callouts = document.getElementById('headline-callouts');
+  if (callouts) {
+    callouts.innerHTML = (panel.callout_strip || []).map(c => `
+      <div class="rounded-lg bg-white/70 border border-slate-200 p-4">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-brand-700">${escapeHtml(c.label)}</div>
+        <p class="text-xs text-ink-700 mt-1.5 leading-relaxed">${escapeHtml(c.detail)}</p>
+      </div>
+    `).join('');
+  }
+}
+
+// ============================================================
+// GA4 vs GSC discrepancy
+// ============================================================
+function renderGA4GSCDiscrepancy(d, miniBase) {
+  setText('discrepancy-headline', d.headline);
+  setText('discrepancy-lede', d.lede);
+  const link = document.getElementById('discrepancy-mini-report');
+  if (link && d.mini_report_url) link.setAttribute('href', miniBase + d.mini_report_url);
+
+  // Comparison table
+  const tbody = document.querySelector('#discrepancy-table tbody');
+  if (tbody) {
+    tbody.innerHTML = (d.comparison_rows || []).map(r => `
+      <tr class="hover:bg-slate-50">
+        <td class="py-3 px-4 align-top">
+          <div class="font-medium text-ink-800">${escapeHtml(r.metric)}</div>
+          <div class="text-xs text-ink-500 mt-1">${escapeHtml(r.reason)}</div>
+        </td>
+        <td class="py-3 px-4 text-right align-top whitespace-nowrap font-mono text-sm text-ink-700">${escapeHtml(r.gsc)}</td>
+        <td class="py-3 px-4 text-right align-top whitespace-nowrap font-mono text-sm text-ink-700">${escapeHtml(r.ga4)}</td>
+        <td class="py-3 px-4 text-center align-top whitespace-nowrap font-mono text-sm font-bold ${r.ratio.includes('×') ? 'text-rose-700' : 'text-ink-500'}">${escapeHtml(r.ratio)}</td>
+      </tr>
+    `).join('');
+  }
+
+  // Structural reasons
+  const reasons = document.getElementById('discrepancy-reasons');
+  if (reasons) {
+    reasons.innerHTML = (d.structural_reasons || []).map((r, i) => `
+      <li class="flex gap-3">
+        <span class="flex-shrink-0 inline-flex items-center justify-center w-6 h-6 rounded-full bg-brand-500 text-white text-xs font-bold">${i + 1}</span>
+        <div>
+          <div class="text-sm font-semibold text-ink-900">${escapeHtml(r.title)}</div>
+          <p class="text-xs text-ink-600 mt-0.5 leading-relaxed">${escapeHtml(r.detail)}</p>
+        </div>
+      </li>
+    `).join('');
+  }
+
+  // Trust matrix
+  const trust = document.getElementById('discrepancy-trust');
+  if (trust) {
+    trust.innerHTML = (d.trust_matrix || []).map(t => `
+      <div class="border-b border-amber-200 pb-2 last:border-0">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${t.trust.toLowerCase().includes('ga4') ? 'bg-emerald-100 text-emerald-800' : 'bg-blue-100 text-blue-800'}">${escapeHtml(t.trust)}</span>
+          <span class="text-sm text-ink-800">${escapeHtml(t.question)}</span>
+        </div>
+        <p class="text-xs text-ink-600 mt-1 leading-snug">${escapeHtml(t.why)}</p>
+      </div>
+    `).join('');
+  }
+
+  // Key takeaways
+  const tk = document.getElementById('discrepancy-takeaways');
+  if (tk) {
+    tk.innerHTML = (d.key_takeaways || []).map(t => `<li>${escapeHtml(t)}</li>`).join('');
+  }
+}
+
+// ============================================================
+// LLM Visibility — AI Overview saturation across 20 priority queries
+// ============================================================
+function renderLLMVisibility(llm, miniBase) {
+  setText('llm-headline', llm.headline);
+  setText('llm-lede', llm.lede);
+  const link = document.getElementById('llm-mini-report');
+  if (link && llm.mini_report_url) link.setAttribute('href', miniBase + llm.mini_report_url);
+
+  // Totals tiles
+  const totalsWrap = document.getElementById('llm-totals');
+  if (totalsWrap && llm.totals) {
+    const t = llm.totals;
+    const tiles = [
+      { label: 'Queries tested', value: t.queries_tested, sub: 'commercial geo / service / informational / mid-funnel', sentiment: 'neutral' },
+      { label: 'AI Overview triggered', value: `${t.with_ai_overview} / ${t.queries_tested}`, sub: `${Math.round((t.with_ai_overview / t.queries_tested) * 100)}% saturation`, sentiment: 'neutral' },
+      { label: 'Local Pack triggered', value: `${t.with_local_pack} / ${t.queries_tested}`, sub: 'mostly commercial — Lever A territory', sentiment: 'positive' },
+      { label: 'PM in top-10 organic', value: `${t.pm_in_top10_organic} / ${t.queries_tested}`, sub: 'walled lake (#2) + best moving company detroit (#9)', sentiment: 'negative' },
+      { label: 'PM cited in any AIO', value: `${t.pm_cited_in_aio} / ${t.queries_tested}`, sub: 'baseline zero — Q3 target ≥3 citations', sentiment: 'negative' }
+    ];
+    totalsWrap.innerHTML = tiles.map(tile => {
+      const sentClass = tile.sentiment === 'positive' ? 'sent-positive'
+                       : tile.sentiment === 'negative' ? 'sent-negative'
+                       : 'sent-neutral';
+      return `
+        <div class="rounded-xl border-l-4 ${sentClass} border-r border-y border-r-slate-200 border-y-slate-200 bg-white p-4 shadow-sm">
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-ink-500">${escapeHtml(tile.label)}</div>
+          <div class="mt-1.5 text-2xl font-extrabold tracking-tight text-ink-900">${escapeHtml(String(tile.value))}</div>
+          <div class="mt-1 text-[11px] text-ink-600 leading-snug">${escapeHtml(tile.sub)}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // 20-row keyword table — render + wire bucket filter
+  function renderRows(bucket) {
+    const tbody = document.querySelector('#llm-table tbody');
+    if (!tbody) return;
+    const rows = (llm.queries || []).filter(q => !bucket || q.bucket === bucket);
+    tbody.innerHTML = rows.map(q => {
+      const aioBadge = q.has_ai_overview
+        ? '<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-purple-100 text-purple-800">AIO</span>'
+        : '<span class="text-ink-300">—</span>';
+      const lpBadge = q.has_local_pack
+        ? '<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">LP</span>'
+        : '<span class="text-ink-300">—</span>';
+      const pmRank = q.pm_organic_rank == null
+        ? '<span class="text-ink-400">off page-1</span>'
+        : `<span class="font-mono font-bold ${q.pm_organic_rank <= 10 ? 'text-emerald-700' : q.pm_organic_rank <= 20 ? 'text-amber-700' : 'text-rose-700'}">#${q.pm_organic_rank}</span>`;
+      const cited = q.pm_cited_in_aio
+        ? '<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800">Yes</span>'
+        : (q.has_ai_overview ? '<span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-bold bg-rose-100 text-rose-800">No</span>' : '<span class="text-ink-300">n/a</span>');
+      const winners = (q.aio_cited_domains || []).length > 0
+        ? q.aio_cited_domains.map(d => `<code class="text-[11px] bg-slate-100 px-1.5 py-0.5 rounded text-ink-700">${escapeHtml(d)}</code>`).join(' ')
+        : (q.has_ai_overview ? '<span class="text-ink-400 text-xs italic">AIO present, no citations parsed</span>' : '<span class="text-ink-300">—</span>');
+      const bucketLabel = q.bucket && q.bucket.replace(/_/g, ' ');
+      return `
+        <tr class="hover:bg-slate-50">
+          <td class="py-3 px-4 align-top">
+            <div class="font-medium text-ink-900">${escapeHtml(q.keyword)}</div>
+            <div class="text-[11px] text-ink-500 mt-0.5 leading-snug">${escapeHtml(q.note || '')}</div>
+          </td>
+          <td class="py-3 px-4 align-top text-xs text-ink-500 hidden md:table-cell capitalize">${escapeHtml(bucketLabel || '')}</td>
+          <td class="py-3 px-4 align-top text-center">${aioBadge}</td>
+          <td class="py-3 px-4 align-top text-center hidden sm:table-cell">${lpBadge}</td>
+          <td class="py-3 px-4 align-top text-center">${pmRank}</td>
+          <td class="py-3 px-4 align-top text-center">${cited}</td>
+          <td class="py-3 px-4 align-top hidden lg:table-cell">
+            <div class="flex flex-wrap gap-1.5">${winners}</div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+  }
+  renderRows('');
+
+  // Bucket filter buttons
+  document.querySelectorAll('.llm-bucket-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.llm-bucket-btn').forEach(b => {
+        b.classList.remove('bg-brand-500', 'text-white');
+        b.classList.add('bg-white', 'border', 'border-slate-300', 'text-ink-700', 'hover:bg-slate-50');
+      });
+      btn.classList.add('bg-brand-500', 'text-white');
+      btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-ink-700', 'hover:bg-slate-50');
+      renderRows(btn.dataset.bucket);
+    });
+  });
+
+  // Top cited domains
+  const cTbody = document.querySelector('#llm-cited-table tbody');
+  if (cTbody) {
+    cTbody.innerHTML = (llm.top_cited_domains_in_aio || []).map(c => `
+      <tr class="hover:bg-slate-50">
+        <td class="py-2.5 px-4"><code class="text-xs bg-slate-100 px-2 py-1 rounded text-ink-800">${escapeHtml(c.domain)}</code></td>
+        <td class="py-2.5 px-4 text-right font-mono font-bold text-ink-900">${c.citations}</td>
+        <td class="py-2.5 px-4 text-right font-mono text-ink-600">${c.unique_queries}</td>
+        <td class="py-2.5 px-4 text-xs text-ink-600 hidden md:table-cell">${escapeHtml(c.note)}</td>
+      </tr>
+    `).join('');
+  }
+
+  // Implications
+  const impls = document.getElementById('llm-implications');
+  if (impls) {
+    impls.innerHTML = (llm.implications || []).map(t => `
+      <li class="flex gap-2 items-start">
+        <span class="flex-shrink-0 inline-block w-1.5 h-1.5 rounded-full bg-indigo-600 mt-2"></span>
+        <span>${renderInlineMarkdown(t)}</span>
+      </li>
+    `).join('');
+  }
+}
+
+// Minimal markdown helper for **bold** inside strings
+function renderInlineMarkdown(s) {
+  if (s == null) return '';
+  let out = escapeHtml(s);
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  return out;
 }
 
 // ============================================================

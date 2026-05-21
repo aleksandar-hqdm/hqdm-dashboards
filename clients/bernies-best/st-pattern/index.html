@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>S&amp;T pattern · verified across 20 article pairs · Bernie's Best · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] }, colors: { ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' }, brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6' } } } } }
+  </script>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3 min-w-0">
+      <a href="../" class="text-xs text-ink-500 hover:text-ink-800">← Bernie's Best dashboard</a>
+      <span class="text-ink-300">/</span>
+      <span class="font-semibold text-sm truncate">Mini-report: S&amp;T pattern (20-pair audit)</span>
+    </div>
+    <a href="../../../index.html" class="text-[11px] text-ink-500 hover:text-ink-800 hidden sm:inline">HQDM Dashboards</a>
+  </div>
+</header>
+
+<section class="bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <div class="text-[11px] font-bold uppercase tracking-widest text-brand-300 mb-2">PATTERN VERIFICATION · 20 HEAD-TO-HEAD ARTICLE PAIRS</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Spot &amp; Tango content pattern, verified across 20 matched article pairs</h1>
+    <p class="text-base sm:text-lg mt-4 text-brand-300 max-w-3xl">In the May 2025 → May 2026 reshuffle, Spot &amp; Tango gained <strong class="text-white">+2,078% top-10 keywords</strong>. We fetched 40 articles (20 S&amp;T winners + 20 Bernie's matched losers), parsed structured sections, and measured heading hierarchy, semantic patterns, and content-gap inventory. This document is the full evidence trail for the structural-pattern claim.</p>
+  </div>
+</section>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+
+  <!-- Hero stats -->
+  <section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-sky-500 p-4">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Pairs verified</div>
+      <div class="text-3xl font-extrabold text-ink-900 mt-1">20</div>
+      <div class="text-xs text-ink-500 mt-1">40 articles · Googlebot UA fetch</div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-rose-500 p-4">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">S&amp;T avg body length</div>
+      <div class="text-3xl font-extrabold text-ink-900 mt-1">3,632w</div>
+      <div class="text-xs text-ink-500 mt-1">Bernie's: 1,641w · <strong>2.44× gap</strong></div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500 p-4">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Numbered H3 enumeration</div>
+      <div class="text-3xl font-extrabold text-ink-900 mt-1">219</div>
+      <div class="text-xs text-ink-500 mt-1">Bernie's: <strong>4 total</strong> · 55× delta</div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-amber-500 p-4">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">S&amp;T avg H3 / article</div>
+      <div class="text-3xl font-extrabold text-ink-900 mt-1">22.6</div>
+      <div class="text-xs text-ink-500 mt-1">Bernie's: 8.2 (36% of S&amp;T)</div>
+    </div>
+  </section>
+
+  <!-- Methodology -->
+  <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+    <h2 class="text-xl font-bold">Methodology</h2>
+    <ul class="mt-4 space-y-2 text-sm text-ink-700 leading-relaxed">
+      <li><strong>Pair selection.</strong> 20 queries where Spot &amp; Tango ranks in top-15 and Bernie's ranks below 15. Pairs span Bernie's Perfect Poop SKU cluster (digestive, stool quality, bowel) plus adjacent dog-health topics.</li>
+      <li><strong>Fetch.</strong> All 40 URLs fetched with <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">Mozilla/5.0 (compatible; Googlebot/2.1)</code> User-Agent. Redirects followed and noted.</li>
+      <li><strong>Parse.</strong> BeautifulSoup with chrome-stripping (<code class="text-xs">script</code>, <code class="text-xs">style</code>, <code class="text-xs">nav</code>, <code class="text-xs">header</code>, <code class="text-xs">footer</code>, <code class="text-xs">aside</code>, <code class="text-xs">form</code>, any <code class="text-xs">display:none</code> / <code class="text-xs">aria-hidden=true</code> removed). Widget classes (related posts, sidebars, share buttons, breadcrumbs, author bios, product carousels) stripped.</li>
+      <li><strong>Structure extraction.</strong> Each article parsed into ordered sections defined by H1/H2/H3/H4 boundaries. Record: heading text, level, paragraph count, bullet count, paragraph words, list words, total words.</li>
+      <li><strong>Semantic classification.</strong> Every heading classified — <em>declarative</em>, <em>numbered_list_item</em>, <em>question</em>, <em>how_to</em>, <em>FAQ_or_conclusion</em>.</li>
+      <li><strong>Content-gap detection.</strong> Five gap types — STUB (heading &lt;50w body), EMPTY_SECTION (heading no body), BARE_LIST (bullets only), LIST_HEAVY (lists dominate), THIN_H2 (single-paragraph H2 no sub-structure).</li>
+    </ul>
+  </section>
+
+  <!-- The 20 pairs -->
+  <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+    <div class="p-6 border-b border-slate-200">
+      <h2 class="text-xl font-bold">The 20 matched pairs at a glance</h2>
+      <p class="text-xs text-ink-500 mt-1">Ratio = S&amp;T words ÷ Bernie's words. Bold rows = ≥4× gap (highest-leverage rewrites). In every pair S&amp;T is longer than Bernie's.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-sm">
+        <thead class="bg-slate-50 text-ink-500 text-xs uppercase tracking-wider">
+          <tr>
+            <th class="text-left font-semibold py-3 px-3">#</th>
+            <th class="text-left font-semibold py-3 px-3">Query</th>
+            <th class="text-right font-semibold py-3 px-3">S&amp;T rank · /mo</th>
+            <th class="text-center font-semibold py-3 px-3">Bern rank</th>
+            <th class="text-right font-semibold py-3 px-3">S&amp;T w</th>
+            <th class="text-right font-semibold py-3 px-3">Bern w</th>
+            <th class="text-center font-semibold py-3 px-3">Ratio</th>
+            <th class="text-center font-semibold py-3 px-3">Priority</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-200">
+          <tr><td class="py-2 px-3">1</td><td class="py-2 px-3">black dog poop</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 9,678</td><td class="text-center py-2 px-3 font-mono text-xs">#22</td><td class="text-right py-2 px-3 font-mono">3,974</td><td class="text-right py-2 px-3 font-mono">1,706</td><td class="text-center py-2 px-3 font-mono">2.33×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800">P2</span></td></tr>
+          <tr><td class="py-2 px-3">2</td><td class="py-2 px-3">when do dogs stop teething</td><td class="text-right py-2 px-3 font-mono text-xs">#5 · 1,382</td><td class="text-center py-2 px-3 font-mono text-xs">#56</td><td class="text-right py-2 px-3 font-mono">4,408</td><td class="text-right py-2 px-3 font-mono">1,683</td><td class="text-center py-2 px-3 font-mono">2.62×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P5</span></td></tr>
+          <tr><td class="py-2 px-3">3</td><td class="py-2 px-3">white specks in dog poop</td><td class="text-right py-2 px-3 font-mono text-xs">#8 · 775</td><td class="text-center py-2 px-3 font-mono text-xs">#55</td><td class="text-right py-2 px-3 font-mono">2,812</td><td class="text-right py-2 px-3 font-mono">1,222</td><td class="text-center py-2 px-3 font-mono">2.30×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800">P2</span></td></tr>
+          <tr><td class="py-2 px-3">4</td><td class="py-2 px-3">dog heimlich</td><td class="text-right py-2 px-3 font-mono text-xs">#7 · 140</td><td class="text-center py-2 px-3 font-mono text-xs">#29</td><td class="text-right py-2 px-3 font-mono">3,522</td><td class="text-right py-2 px-3 font-mono">1,218</td><td class="text-center py-2 px-3 font-mono">2.89×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">P1</span></td></tr>
+          <tr><td class="py-2 px-3">5</td><td class="py-2 px-3">best dog food for less poop</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 230</td><td class="text-center py-2 px-3 font-mono text-xs">#50</td><td class="text-right py-2 px-3 font-mono">3,128</td><td class="text-right py-2 px-3 font-mono">1,279</td><td class="text-center py-2 px-3 font-mono">2.45×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P4</span></td></tr>
+          <tr class="bg-amber-50"><td class="py-2 px-3 font-bold">6</td><td class="py-2 px-3 font-bold">yellow dog poop</td><td class="text-right py-2 px-3 font-mono text-xs">#6 · 1,686</td><td class="text-center py-2 px-3 font-mono text-xs">#29</td><td class="text-right py-2 px-3 font-mono">4,209</td><td class="text-right py-2 px-3 font-mono">883</td><td class="text-center py-2 px-3 font-mono font-bold">4.77×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">P0</span></td></tr>
+          <tr><td class="py-2 px-3">7</td><td class="py-2 px-3">jelly mucus dog poop</td><td class="text-right py-2 px-3 font-mono text-xs">#6 · 3,074</td><td class="text-center py-2 px-3 font-mono text-xs">#42</td><td class="text-right py-2 px-3 font-mono">3,183</td><td class="text-right py-2 px-3 font-mono">1,824</td><td class="text-center py-2 px-3 font-mono">1.75×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P3</span></td></tr>
+          <tr><td class="py-2 px-3">8</td><td class="py-2 px-3">dog soft stool</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 3,685</td><td class="text-center py-2 px-3 font-mono text-xs">#34</td><td class="text-right py-2 px-3 font-mono">3,411</td><td class="text-right py-2 px-3 font-mono">1,880</td><td class="text-center py-2 px-3 font-mono">1.81×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P3</span></td></tr>
+          <tr><td class="py-2 px-3">9</td><td class="py-2 px-3">dog throwing up mucus</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 1,939</td><td class="text-center py-2 px-3 font-mono text-xs">#19</td><td class="text-right py-2 px-3 font-mono">4,139</td><td class="text-right py-2 px-3 font-mono">1,473</td><td class="text-center py-2 px-3 font-mono">2.81×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">P1</span></td></tr>
+          <tr><td class="py-2 px-3">10</td><td class="py-2 px-3">why does my dog keep throwing up</td><td class="text-right py-2 px-3 font-mono text-xs">#6 · 5,016</td><td class="text-center py-2 px-3 font-mono text-xs">#22</td><td class="text-right py-2 px-3 font-mono">2,553</td><td class="text-right py-2 px-3 font-mono">1,430</td><td class="text-center py-2 px-3 font-mono">1.79×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P4</span></td></tr>
+          <tr class="bg-amber-50"><td class="py-2 px-3 font-bold">11</td><td class="py-2 px-3 font-bold">bloody diarrhea in dogs</td><td class="text-right py-2 px-3 font-mono text-xs">#12 · 1,562</td><td class="text-center py-2 px-3 font-mono text-xs">#47</td><td class="text-right py-2 px-3 font-mono">6,009</td><td class="text-right py-2 px-3 font-mono">1,290</td><td class="text-center py-2 px-3 font-mono font-bold">4.66×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">P0</span></td></tr>
+          <tr><td class="py-2 px-3">12</td><td class="py-2 px-3">what can i give my dog for upset stomach</td><td class="text-right py-2 px-3 font-mono text-xs">#11 · 932</td><td class="text-center py-2 px-3 font-mono text-xs">#37</td><td class="text-right py-2 px-3 font-mono">5,006</td><td class="text-right py-2 px-3 font-mono">1,293</td><td class="text-center py-2 px-3 font-mono">3.87×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">P0</span></td></tr>
+          <tr><td class="py-2 px-3">13</td><td class="py-2 px-3">natural probiotics for dogs</td><td class="text-right py-2 px-3 font-mono text-xs">#13 · 154</td><td class="text-center py-2 px-3 font-mono text-xs">#19</td><td class="text-right py-2 px-3 font-mono">2,851</td><td class="text-right py-2 px-3 font-mono">2,171</td><td class="text-center py-2 px-3 font-mono">1.31×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P3</span></td></tr>
+          <tr><td class="py-2 px-3">14</td><td class="py-2 px-3">dog food for acid reflux</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 468</td><td class="text-center py-2 px-3 font-mono text-xs">#18 (university)</td><td class="text-right py-2 px-3 font-mono">3,602</td><td class="text-right py-2 px-3 font-mono">2,545</td><td class="text-center py-2 px-3 font-mono">1.42×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P3</span></td></tr>
+          <tr><td class="py-2 px-3">15</td><td class="py-2 px-3">my old dog has diarrhea but acting fine</td><td class="text-right py-2 px-3 font-mono text-xs">#4 · 160</td><td class="text-center py-2 px-3 font-mono text-xs">#41 (redirect)</td><td class="text-right py-2 px-3 font-mono">3,667</td><td class="text-right py-2 px-3 font-mono">1,407</td><td class="text-center py-2 px-3 font-mono">2.61×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-100 text-indigo-800">P2</span></td></tr>
+          <tr><td class="py-2 px-3">16</td><td class="py-2 px-3">best dog food for ear infections</td><td class="text-right py-2 px-3 font-mono text-xs">#2 · 105</td><td class="text-center py-2 px-3 font-mono text-xs">#92 (redirect)</td><td class="text-right py-2 px-3 font-mono">2,759</td><td class="text-right py-2 px-3 font-mono">2,382</td><td class="text-center py-2 px-3 font-mono">1.16×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P4</span></td></tr>
+          <tr><td class="py-2 px-3">17</td><td class="py-2 px-3">dog pooping in house</td><td class="text-right py-2 px-3 font-mono text-xs">#6 · 1,136</td><td class="text-center py-2 px-3 font-mono text-xs">#22</td><td class="text-right py-2 px-3 font-mono">3,307</td><td class="text-right py-2 px-3 font-mono">1,582</td><td class="text-center py-2 px-3 font-mono">2.09×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">P1</span></td></tr>
+          <tr class="bg-emerald-50"><td class="py-2 px-3 font-bold">18</td><td class="py-2 px-3 font-bold">gut health dog food (Bernie's template)</td><td class="text-right py-2 px-3 font-mono text-xs">#11 · 19</td><td class="text-center py-2 px-3 font-mono text-xs">#23</td><td class="text-right py-2 px-3 font-mono">3,459</td><td class="text-right py-2 px-3 font-mono">2,995</td><td class="text-center py-2 px-3 font-mono">1.15×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Template</span></td></tr>
+          <tr><td class="py-2 px-3">19</td><td class="py-2 px-3">best dog food for coat</td><td class="text-right py-2 px-3 font-mono text-xs">#11 · 7</td><td class="text-center py-2 px-3 font-mono text-xs">#67</td><td class="text-right py-2 px-3 font-mono">1,843</td><td class="text-right py-2 px-3 font-mono">1,062</td><td class="text-center py-2 px-3 font-mono">1.74×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">P5</span></td></tr>
+          <tr><td class="py-2 px-3">20</td><td class="py-2 px-3">dog throwing up yellow bile</td><td class="text-right py-2 px-3 font-mono text-xs">#5 · 870</td><td class="text-center py-2 px-3 font-mono text-xs">#25</td><td class="text-right py-2 px-3 font-mono">4,803</td><td class="text-right py-2 px-3 font-mono">1,506</td><td class="text-center py-2 px-3 font-mono">3.19×</td><td class="text-center py-2 px-3"><span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">P0</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Aggregate findings -->
+  <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold">Heading hierarchy + semantic patterns</h3>
+      <table class="min-w-full text-sm mt-3">
+        <thead><tr><th class="text-left py-1 text-ink-500 text-xs uppercase">Metric</th><th class="text-right py-1 text-ink-500 text-xs uppercase">S&amp;T</th><th class="text-right py-1 text-ink-500 text-xs uppercase">Bernie's</th></tr></thead>
+        <tbody class="divide-y divide-slate-100 font-mono">
+          <tr><td class="py-1.5">Avg H2 / article</td><td class="text-right py-1.5">8.8</td><td class="text-right py-1.5">7.5</td></tr>
+          <tr><td class="py-1.5">Avg H3 / article</td><td class="text-right py-1.5 font-bold">22.6</td><td class="text-right py-1.5">8.2</td></tr>
+          <tr><td class="py-1.5">Articles with ≥20 H3</td><td class="text-right py-1.5">11 / 20</td><td class="text-right py-1.5">2 / 20</td></tr>
+          <tr><td class="py-1.5">Numbered H3 enumeration</td><td class="text-right py-1.5 font-bold text-emerald-700">219</td><td class="text-right py-1.5 font-bold text-rose-700">4</td></tr>
+          <tr><td class="py-1.5">Declarative headings</td><td class="text-right py-1.5">277</td><td class="text-right py-1.5">239</td></tr>
+          <tr><td class="py-1.5">Question headings</td><td class="text-right py-1.5">153</td><td class="text-right py-1.5">137</td></tr>
+          <tr><td class="py-1.5">How-to headings</td><td class="text-right py-1.5">17</td><td class="text-right py-1.5">8</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold">Content-gap inventory + body length</h3>
+      <table class="min-w-full text-sm mt-3">
+        <thead><tr><th class="text-left py-1 text-ink-500 text-xs uppercase">Gap type</th><th class="text-right py-1 text-ink-500 text-xs uppercase">S&amp;T</th><th class="text-right py-1 text-ink-500 text-xs uppercase">Bernie's</th></tr></thead>
+        <tbody class="divide-y divide-slate-100 font-mono">
+          <tr><td class="py-1.5">STUB (intentional short H3)</td><td class="text-right py-1.5">335</td><td class="text-right py-1.5">46</td></tr>
+          <tr><td class="py-1.5 font-bold">EMPTY_SECTION</td><td class="text-right py-1.5">31</td><td class="text-right py-1.5 font-bold text-rose-700">81</td></tr>
+          <tr><td class="py-1.5">BARE_LIST</td><td class="text-right py-1.5">37</td><td class="text-right py-1.5">4</td></tr>
+          <tr><td class="py-1.5">LIST_HEAVY</td><td class="text-right py-1.5">37</td><td class="text-right py-1.5">11</td></tr>
+          <tr><td class="py-1.5 font-bold">THIN_H2</td><td class="text-right py-1.5">4</td><td class="text-right py-1.5 font-bold text-rose-700">22</td></tr>
+          <tr><td colspan="3" class="py-2 border-t border-slate-200"></td></tr>
+          <tr><td class="py-1.5">Mean body length</td><td class="text-right py-1.5">3,632w</td><td class="text-right py-1.5">1,641w</td></tr>
+          <tr><td class="py-1.5">Median body length</td><td class="text-right py-1.5">3,485w</td><td class="text-right py-1.5">1,491w</td></tr>
+          <tr><td class="py-1.5">Pairs S&amp;T ≥ 2× Bernie's</td><td colspan="2" class="text-right py-1.5">12 / 20</td></tr>
+          <tr><td class="py-1.5">Pairs S&amp;T ≥ 3× Bernie's</td><td colspan="2" class="text-right py-1.5">6 / 20</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- The dominant signal callout -->
+  <section class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+    <div class="text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">The dominant signal — numbered H3 enumeration</div>
+    <p class="text-sm text-ink-800 leading-relaxed">
+      S&amp;T uses <strong>219 numbered H3 headings across the 20-article cohort</strong> (avg 11 per article). Bernie's uses <strong>4 total</strong> — a 55× delta. This is the single largest measured signal and the most plausible explanation for the AI Overview citation gap. Numbered H3 sub-sections (25–150w each) are deliberately compact to function as snippet / AIO answer units. Bernie's articles list the same parallel items as bold-label paragraphs or paragraph-internal bullets, which don't register as discrete anchor units.
+    </p>
+  </section>
+
+  <!-- The verified recipe -->
+  <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+    <h2 class="text-xl font-bold">The verified recipe — apply to every M1/M2 refresh</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">Structural skeleton (mandatory)</div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Word count:</strong> 2,100–3,500. Most Bernie's articles at ~1,500-1,700 — additive depth, not trimming. 6 pairs need ≥3× expansion.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Heading depth:</strong> 6–10 H2 anchor sections + 15–25 H3 sub-sections. Bernie's avg 8.2 H3 today; target 18.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Numbered enumeration:</strong> every parallel list (causes, symptoms, treatments, prevention) becomes numbered H3s, not bold-inline labels.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Introductions before lists:</strong> 30-60w paragraph framing why the list exists.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Brand byline + visible publish + 'Updated' date</strong> (TPL-01 surfaces dateModified).</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>"Final Thoughts" conclusion</strong> — most consistent gainer element (10 of 12 in prior audit).</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>FAQ section</strong> (3-5 Q&amp;A) as 2nd-to-last H2 — recommended, not mandatory.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-emerald-500 flex-shrink-0"></span><span><strong>Product mentions:</strong> 5-8 inline + sidebar Related Products. Bernie's current ~36 to consolidate.</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="text-xs font-bold uppercase tracking-wider text-ink-500 mb-2">Bernie's E-E-A-T overlay (add what S&amp;T omits)</div>
+        <ul class="space-y-2 text-sm">
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-brand-500 flex-shrink-0"></span><span><strong>"Reviewed by Dr. X, DVM"</strong> header note (AnimalBiome pattern). S&amp;T top-gainers deliberately omit DVM citation.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-brand-500 flex-shrink-0"></span><span><strong>Body-cited vet</strong> when making clinical claims. Bernie's already has named-vet content — surface it.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-brand-500 flex-shrink-0"></span><span><strong>Cite Cornell, NIH/PubMed, Merck Vet Manual, AAFCO</strong> on YMYL claims (AnimalBiome + Native Pet pattern).</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 bg-brand-500 flex-shrink-0"></span><span><strong>Tone: informational + named-vet attribution.</strong> Avoid S&amp;T/Wopet's fear-urgency framing — Bernie's brand can't carry it without credibility cost.</span></li>
+        </ul>
+        <p class="mt-4 text-xs text-ink-600 italic">Net pattern: S&amp;T structural skeleton + AnimalBiome/Native Pet E-E-A-T overlay. Differentiate by adding what S&amp;T's winning articles deliberately omit, while preserving the structural elements the top SERPs reward.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Per-pair detail -->
+  <section>
+    <h2 class="text-xl font-bold mb-4">Per-pair detail — the 4 P0 gaps</h2>
+    <div class="space-y-3">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-rose-500 p-5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">PAIR 06 · P0 · 4.77×</span>
+          <h3 class="text-base font-bold">yellow-dog-poop</h3>
+          <span class="text-xs text-ink-500">Bernie's 883w vs S&amp;T 4,209w</span>
+        </div>
+        <p class="text-sm text-ink-700 mt-2"><strong>S&amp;T:</strong> 10 H2, 31 H3 (mostly numbered). Sections: Normal Dog Poop / 7 Common Causes (numbered H3s) / When Emergency / Vet Diagnosis (5 numbered H3s) / Treatment Options (5 condition-specific H3s) / Diet Impact / Prevention (5 numbered H3s).</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Bernie's:</strong> 4 content H2, 5 H3 (all footer template). "What Are the Causes of Yellow Dog Poop?" is one 270w paragraph listing 7 causes inline. No Vet Diagnosis, no Treatment Options, no Prevention enumeration.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Fix:</strong> Promote 7 inline causes to numbered H3s. Add Vet Diagnosis + Treatment Options + Prevention H2s. Expected lift ~2,500 words + ~20 new H3 anchor units. <a class="underline text-brand-500" href="https://www.spotandtango.com/blog/yellow-dog-poop">S&amp;T</a> · <a class="underline text-brand-500" href="https://www.bernies.com/blogs/bernies-blog/why-does-my-dog-have-yellow-poop/">Bernie's</a></p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-rose-500 p-5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">PAIR 11 · P0 · 4.66× · YMYL</span>
+          <h3 class="text-base font-bold">bloody-diarrhea</h3>
+          <span class="text-xs text-ink-500">Bernie's 1,290w vs S&amp;T 6,009w</span>
+        </div>
+        <p class="text-sm text-ink-700 mt-2"><strong>S&amp;T:</strong> 11 H2, <strong>41 H3</strong> — one of S&amp;T's deepest articles. Numbered enumeration of causes, types, treatments. Section-level diagnosis + treatment + prevention coverage.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Bernie's:</strong> 5 H2, 5 H3 (3 footer template). The article (<code class="text-xs">bloody-stool-in-dogs-this-cant-be-good</code>) is a short, condensed treatment of a YMYL-critical topic where users panic-search.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Fix:</strong> HIGH-PRIORITY YMYL article. Expand to 3,000w+. Add numbered H3 cause categories + dedicated Treatment section. <a class="underline text-brand-500" href="https://www.spotandtango.com/blog/bloody-diarrhea-in-dogs">S&amp;T</a> · <a class="underline text-brand-500" href="https://www.bernies.com/blogs/bernies-blog/bloody-stool-in-dogs-this-cant-be-good/">Bernie's</a></p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-rose-500 p-5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">PAIR 12 · P0 · 3.87×</span>
+          <h3 class="text-base font-bold">upset-stomach</h3>
+          <span class="text-xs text-ink-500">Bernie's 1,293w vs S&amp;T 5,006w</span>
+        </div>
+        <p class="text-sm text-ink-700 mt-2"><strong>S&amp;T:</strong> 6 H2, 10 H3 — but 5,006w. H2s carry deep paragraph content here rather than relying on H3 enumeration. Different sub-pattern than digestive-cluster articles.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Bernie's:</strong> 8 H2, 5 H3 — 1,293w. Despite MORE H2s than S&amp;T (8 vs 6), Bernie's article is 26% the length. H2s are paragraph-shallow.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Fix:</strong> H2 structure is already right; just needs body depth under each H2. Fastest restructure of the P0 set. <a class="underline text-brand-500" href="https://www.spotandtango.com/blog/upset-stomach-in-dogs">S&amp;T</a> · <a class="underline text-brand-500" href="https://www.bernies.com/blogs/bernies-blog/what-to-give-a-dog-upset-stomach/">Bernie's</a></p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-rose-500 p-5">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">PAIR 20 · P0 · 3.19×</span>
+          <h3 class="text-base font-bold">yellow-bile-vomit</h3>
+          <span class="text-xs text-ink-500">Bernie's 1,506w vs S&amp;T 4,803w</span>
+        </div>
+        <p class="text-sm text-ink-700 mt-2"><strong>S&amp;T:</strong> 9 H2, 22 H3, 4,803w. Bernie's <code class="text-xs">bilious-vomiting-syndrome</code> runs 5 H2, 14 H3, 1,506w. Bernie's uses MORE H3 than its average (14 vs 8.2) — partial structural credit — but at less than 1/3 the body length.</p>
+        <p class="text-sm text-ink-700 mt-2"><strong>Fix:</strong> Body expansion is the dominant lever here, not restructure. Add 3,000w covering causes / vet diagnosis / treatment / prevention. <a class="underline text-brand-500" href="https://www.spotandtango.com/blog/throwing-up-yellow-bile">S&amp;T</a> · <a class="underline text-brand-500" href="https://www.bernies.com/blogs/bernies-blog/bilious-vomiting-syndrome-why-your-dog-vomits-on-an-empty-stomach/">Bernie's</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where Bernie's wins -->
+  <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+    <h2 class="text-xl font-bold">Where Bernie's already runs the right pattern (in-house templates)</h2>
+    <p class="text-sm text-ink-500 mt-2">Three pairs within 20% of S&amp;T on body length AND comparable H3 count. Use these as refresh templates.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+      <div class="border border-emerald-200 bg-emerald-50 rounded p-4">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700">Pair 18 · 1.15×</div>
+        <h4 class="font-bold mt-1">gut-health-food</h4>
+        <p class="text-xs text-ink-700 mt-2">Bernie's <code>good-dog-gut-health-should-i-give-dog-probiotics-every-day</code>: 11 H2, 14 H3, 2,995w (86% of S&amp;T's body length). <strong>Use as the refresh template.</strong></p>
+      </div>
+      <div class="border border-emerald-200 bg-emerald-50 rounded p-4">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700">Pair 13 · 1.31×</div>
+        <h4 class="font-bold mt-1">probiotics-for-dogs</h4>
+        <p class="text-xs text-ink-700 mt-2">Bernie's runs MORE H2 than S&amp;T (11 vs 8) but fewer H3 (5 vs 24). Body length fine; under each "What is X? / Why does X matter?" H2, add 3-5 numbered H3 sub-questions.</p>
+      </div>
+      <div class="border border-emerald-200 bg-emerald-50 rounded p-4">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700">Pair 16 · 1.16×</div>
+        <h4 class="font-bold mt-1">ear-infections</h4>
+        <p class="text-xs text-ink-700 mt-2">Redirect-destination URL. Body at 86% of S&amp;T's. Heading structure flips: Bernie has more H2 (10 vs 5), S&amp;T more H3 (15 vs 5). Restructure converts H2 depth to S&amp;T-style H3 enumeration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Net takeaway -->
+  <section class="bg-brand-900 text-white rounded-xl p-6">
+    <h2 class="text-xl font-bold">Net takeaway</h2>
+    <p class="text-sm mt-3 leading-relaxed text-brand-300">
+      <strong class="text-white">The pattern is not opinion — it's measured across 20 head-to-head matches.</strong> Bernie's averages 36% of S&amp;T's H3 count, uses 4 numbered-enumeration headings vs S&amp;T's 219, and ships ~5 footer-template H3 pollution units per article. Bernie's covers the same topical material at ~40% of S&amp;T's body length on average.
+    </p>
+    <p class="text-sm mt-3 leading-relaxed text-brand-300">
+      <strong class="text-white">The fix is template-level + per-article restructuring, not full rewrites.</strong> Bernie's content is qualitatively fine. Bernie's structure is leaving most of the SEO value on the table — particularly the AI Overview / Featured Snippet extraction opportunity that S&amp;T's numbered H3 enumeration captures. The M1 sprint should target 2 template changes (<a class="underline" href="../site-level-upgrades/">site-level-upgrades</a>) + 4 P0 article restructures (above), not 20 rewrites.
+    </p>
+  </section>
+
+  <!-- Related deep dives -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <a href="../site-level-upgrades/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-indigo-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">Site-level / template upgrades</div>
+      <div class="text-xs text-ink-500 mt-1">10 template fixes that lift every blog post sitewide</div>
+    </a>
+    <a href="../top-50-losers/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-rose-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">Top 50 BLOG losers + sitemap actions</div>
+      <div class="text-xs text-ink-500 mt-1">Per-URL bleed inventory connected to the Ideal Sitemap workflow</div>
+    </a>
+    <a href="../store-gap/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-amber-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">Store Gap (why, how, where)</div>
+      <div class="text-xs text-ink-500 mt-1">2.49M-SV opportunity with five compounding causes</div>
+    </a>
+  </section>
+</main>
+
+<footer class="border-t border-slate-200 bg-white mt-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-xs text-ink-500">
+    Bernie's Best · HQDM Search Intelligence · S&amp;T 20-pair pattern audit · prepared 2026-05-21 by Aleksandar Spasevski.
+  </div>
+</footer>
+
+</body>
+</html>

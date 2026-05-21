@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Site-level + template upgrades · Bernie's Best · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] }, colors: { ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' }, brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6' } } } } }
+  </script>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-3 min-w-0">
+      <a href="../" class="text-xs text-ink-500 hover:text-ink-800">← Bernie's Best dashboard</a>
+      <span class="text-ink-300">/</span>
+      <span class="font-semibold text-sm truncate">Mini-report: Site-level + template upgrades</span>
+    </div>
+    <a href="../../../index.html" class="text-[11px] text-ink-500 hover:text-ink-800 hidden sm:inline">HQDM Dashboards</a>
+  </div>
+</header>
+
+<section class="bg-gradient-to-br from-indigo-900 via-indigo-700 to-indigo-500 text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <div class="text-[11px] font-bold uppercase tracking-widest text-indigo-200 mb-2">TEMPLATE UPGRADES · ONE CHANGE, SITEWIDE LIFT</div>
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Site-level + template upgrades — 10 fixes, every blog post lifted</h1>
+    <p class="text-base sm:text-lg mt-4 text-indigo-200 max-w-4xl">Per-URL refreshes carry a 20–22 day cycle each (at current 12-upgrades/month cadence). Template-level changes are one-shot edits to the Divi Theme Builder that propagate to every existing and future blog post. <strong class="text-white">Identified from the 20-pair S&amp;T structural audit.</strong> Each item below = single template edit, sitewide lift.</p>
+  </div>
+</section>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-8">
+
+  <!-- The thesis -->
+  <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+    <h2 class="text-xl font-bold">The thesis</h2>
+    <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+      Bernie's averages 36% of S&amp;T's H3 count and uses 4 numbered-enumeration headings vs S&amp;T's 219 across the 20-pair cohort. Most of Bernie's <strong>81 EMPTY_SECTION + 22 THIN_H2 instances</strong> in the audit are <strong>footer-template H3 pollution</strong>: <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">About the Author</code>, <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">Featured Blogs</code>, <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">Bernie's Perfect Poop</code>, <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">$13.99 - $46.99</code> (the price as an H3 on 19 of 20 articles), <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">Keep Learning at Bernie's University</code>. <strong>A single Divi template change removes ~1,250 pollution H3s across the 250+ blog post catalog.</strong>
+    </p>
+    <p class="text-sm text-ink-700 mt-3 leading-relaxed">
+      Other template-level wins compound: visible 'Updated' date surfaces freshness Bernie's already has in BlogPosting schema (but currently hides), topical-cluster-aware Featured Blogs widget concentrates PageRank within clusters, and bidirectional blog ↔ PDP linking closes the subdomain split that's leaving the 2.49M-SV store gap on the table. Approach: 5 template changes in M1, 3 in M2, 2 gated for M3.
+    </p>
+  </section>
+
+  <!-- The 10 items -->
+  <section>
+    <h2 class="text-xl font-bold mb-4">The 10 template upgrades</h2>
+    <div class="space-y-3" id="upgrades-list"></div>
+  </section>
+
+  <!-- Capacity context -->
+  <section class="bg-amber-50 border border-amber-200 rounded-xl p-5">
+    <div class="text-xs font-bold uppercase tracking-wider text-amber-800 mb-2">Capacity context</div>
+    <p class="text-sm text-ink-800 leading-relaxed">
+      <strong>At current 12-upgrades-per-month cadence</strong>, the top 50 BLOG losers ship by end of M3 (4 months) — Q3 plan completes within capacity. <strong>At proposed 20-upgrades-per-month</strong> (approved direction per Milica sync 2026-05-20: shift weight from new-blog production to refresh + cornerstone upgrades), top 50 ships in M2, leaving M1 capacity for 5 template changes + 4 PDP refreshes + Index Hygiene Lever 3. Either way, capacity is sufficient. <strong>The binding constraint is approval throughput on PDP edits</strong>, not production. Template changes go through dev, not the PDP approval bottleneck.
+    </p>
+  </section>
+
+  <!-- Related deep dives -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <a href="../st-pattern/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-emerald-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">S&amp;T content pattern (20 pairs)</div>
+      <div class="text-xs text-ink-500 mt-1">The recipe per-URL refreshes apply</div>
+    </a>
+    <a href="../top-50-losers/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-rose-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">Top 50 BLOG losers + sitemap actions</div>
+      <div class="text-xs text-ink-500 mt-1">Per-URL bleed inventory connected to the Ideal Sitemap workflow</div>
+    </a>
+    <a href="../store-gap/" class="block bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-amber-500 p-4 hover:shadow-md">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Related deep dive</div>
+      <div class="font-bold text-sm mt-1">Store Gap (why, how, where)</div>
+      <div class="text-xs text-ink-500 mt-1">2.49M-SV opportunity unpacked</div>
+    </a>
+  </section>
+
+</main>
+
+<footer class="border-t border-slate-200 bg-white mt-10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-8 text-xs text-ink-500">
+    Bernie's Best · HQDM Search Intelligence · Site-level + template upgrades · prepared 2026-05-21 by Aleksandar Spasevski.
+  </div>
+</footer>
+
+<script>
+fetch('../data/data.json').then(r => r.json()).then(data => {
+  const items = data.site_level_upgrades.items;
+  const wrap = document.getElementById('upgrades-list');
+  const priorityBadge = (p) => {
+    if (!p) return '';
+    if (p === 'M1') return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">M1</span>';
+    if (p === 'M2') return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">M2</span>';
+    if (p.startsWith('M1')) return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">' + p + '</span>';
+    return '<span class="inline-block px-2 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">' + p + '</span>';
+  };
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  wrap.innerHTML = items.map(t => `
+    <details class="bg-white rounded-xl shadow-sm border border-slate-200 border-l-4 border-l-indigo-500 p-5 group" open>
+      <summary class="cursor-pointer list-none flex items-start justify-between gap-3">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="font-mono text-[11px] bg-indigo-50 text-indigo-700 border border-indigo-200 rounded px-1.5 py-0.5">${esc(t.id)}</span>
+            ${priorityBadge(t.priority)}
+            <span class="text-[10px] font-mono text-ink-400">effort: ${esc(t.effort)}</span>
+          </div>
+          <h3 class="text-lg font-bold mt-2 text-ink-900">${esc(t.name)}</h3>
+          <p class="text-xs text-ink-500 mt-1">${esc(t.scope)}</p>
+        </div>
+        <svg class="w-5 h-5 text-ink-400 flex-shrink-0 transition group-open:rotate-90" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+      </summary>
+      <div class="mt-4 pt-3 border-t border-slate-200 space-y-3 text-sm">
+        <div><span class="text-[11px] font-bold uppercase tracking-wider text-ink-500 block mb-0.5">Current state</span><span class="text-ink-700">${t.current}</span></div>
+        <div><span class="text-[11px] font-bold uppercase tracking-wider text-ink-500 block mb-0.5">Change</span><span class="text-ink-700">${t.change}</span></div>
+        <div><span class="text-[11px] font-bold uppercase tracking-wider text-ink-500 block mb-0.5">Why it matters</span><span class="text-ink-700">${esc(t.why_it_matters)}</span></div>
+        <div><span class="text-[11px] font-bold uppercase tracking-wider text-ink-500 block mb-0.5">Sitewide lift</span><span class="text-ink-700">${esc(t.lift)}</span></div>
+      </div>
+    </details>
+  `).join('');
+}).catch(e => {
+  document.getElementById('upgrades-list').innerHTML = '<div class="bg-rose-50 border border-rose-200 rounded p-4 text-sm text-rose-800">Failed to load data.json — serve this page over HTTP (not file://). Run <code>python -m http.server</code> in repo root.</div>';
+  console.error(e);
+});
+</script>
+
+</body>
+</html>
