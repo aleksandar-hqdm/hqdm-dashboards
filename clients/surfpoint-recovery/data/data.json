@@ -52,87 +52,691 @@
     }
   ],
   "trend": {
-    "headline": "Daily impressions −79% peak-to-current (Feb 7 → May 4 2026). Crawl-budget re-evaluation March 16 (524 requests vs 70–100 baseline) — algorithmic action recognizing low-quality patterns at scale.",
-    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. May 2026 partial (first 8 days). The drop is blog-cohort (147 of 208 blog posts in bleeding cohort, −50% to −85% trend / 90d); homepage and the 16 core pages (which carry 98.5% of conversions) impressions remain stable.",
-    "may_extrapolation_note": "May 2026 partial — first 8 days at trailing pace.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): phone (115) + form_submit (57) + email (7)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
-      "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025",
-      "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
     ],
     "sessions": {
-      "organic": [3050, 3580, 4120, 4380, 4090, 3870, 3420, 2980, 2810, 2620, 1830, 870, 200]
+      "organic": [
+        2199,
+        2112,
+        1990,
+        2280,
+        2489,
+        2733,
+        2429,
+        2820,
+        2867,
+        2377,
+        2841,
+        2685,
+        3483,
+        5285,
+        7548,
+        7193,
+        2544,
+        1816
+      ],
+      "direct": [
+        417,
+        413,
+        432,
+        413,
+        496,
+        572,
+        436,
+        487,
+        963,
+        1333,
+        1832,
+        3455,
+        4333,
+        4188,
+        4420,
+        4290,
+        2955,
+        3128
+      ],
+      "referral": [
+        63,
+        72,
+        72,
+        65,
+        83,
+        72,
+        85,
+        87,
+        49,
+        63,
+        70,
+        53,
+        43,
+        48,
+        50,
+        47,
+        66,
+        59
+      ],
+      "social": [
+        14,
+        11,
+        6,
+        5,
+        5,
+        5,
+        7,
+        5,
+        5,
+        5,
+        6,
+        1,
+        11,
+        16,
+        13,
+        50,
+        10,
+        7
+      ],
+      "other": [
+        8,
+        13,
+        5,
+        9,
+        20,
+        16,
+        16,
+        15,
+        46,
+        122,
+        112,
+        109,
+        121,
+        211,
+        152,
+        112,
+        110,
+        93
+      ]
     },
     "form_submits": {
-      "organic": [620, 760, 880, 950, 920, 880, 810, 720, 700, 680, 480, 220, 50]
+      "organic": [
+        89.0,
+        71.0,
+        84.0,
+        60.0,
+        74.0,
+        65.0,
+        100.0,
+        97.0,
+        61.0,
+        10.0,
+        21.0,
+        7.0,
+        9.0,
+        8.0,
+        18.0,
+        14.0,
+        23.0,
+        14.0
+      ],
+      "direct": [
+        15.0,
+        11.0,
+        2.0,
+        8.0,
+        15.0,
+        16.0,
+        16.0,
+        22.0,
+        26.0,
+        39.0,
+        26.0,
+        20.0,
+        33.0,
+        52.0,
+        44.0,
+        37.0,
+        43.0,
+        29.0
+      ],
+      "referral": [
+        2.0,
+        1.0,
+        0.0,
+        3.0,
+        0.0,
+        2.0,
+        5.0,
+        4.0,
+        5.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "social": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "other": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        3.0,
+        0.0,
+        2.0,
+        0.0
+      ]
     },
     "series_labels": {
-      "sessions": "GSC Organic Clicks (monthly)",
-      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+      "sessions": "GA4 Sessions",
+      "form_submits": "GA4 Conversions  (phone (115) + form_submit (57) + email (7))"
     },
-    "events": [
-      { "month_index": 7, "label": "Dec 2025 — bleed begins", "type": "negative" },
-      { "month_index": 10, "label": "Mar 16 — crawl-budget re-eval (524 req/day)", "type": "negative" },
-      { "month_index": 11, "label": "Apr 2026 — −79% peak-to-current", "type": "negative" }
-    ],
+    "channel_labels": {
+      "organic": "Organic Search",
+      "direct": "Direct",
+      "referral": "Referral",
+      "social": "Organic Social",
+      "other": "Other / Unassigned"
+    },
+    "events": [],
     "quarterly": [
-      { "q": "Q2 2025",        "org_sess": 3583, "org_conv": 753,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q3 2025",        "org_sess": 4197, "org_conv": 917,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q4 2025",        "org_sess": 3423, "org_conv": 803,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q1 2026",        "org_sess": 2420, "org_conv": 620,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q2 2026* (Apr–May to date)", "org_sess": 1070, "org_conv": 270, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null }
-    ]
+      {
+        "q": "Dec 2024",
+        "org_sess": 2199,
+        "org_conv": 89.0,
+        "org_cr": 4.0,
+        "gbp_sess": 417,
+        "gbp_conv": 15.0,
+        "gbp_cr": 3.6
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 2127,
+        "org_conv": 71.7,
+        "org_cr": 3.4,
+        "gbp_sess": 419,
+        "gbp_conv": 7.0,
+        "gbp_cr": 1.7
+      },
+      {
+        "q": "Q2 2025",
+        "org_sess": 2550,
+        "org_conv": 79.7,
+        "org_cr": 3.1,
+        "gbp_sess": 501,
+        "gbp_conv": 15.7,
+        "gbp_cr": 3.1
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 2688,
+        "org_conv": 56.0,
+        "org_cr": 2.1,
+        "gbp_sess": 927,
+        "gbp_conv": 29.0,
+        "gbp_cr": 3.1
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 3003,
+        "org_conv": 12.3,
+        "org_cr": 0.4,
+        "gbp_sess": 3206,
+        "gbp_conv": 26.3,
+        "gbp_cr": 0.8
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 6675,
+        "org_conv": 13.3,
+        "org_cr": 0.2,
+        "gbp_sess": 4299,
+        "gbp_conv": 44.3,
+        "gbp_cr": 1.0
+      },
+      {
+        "q": "Q2 2026*",
+        "org_sess": 2180,
+        "org_conv": 18.5,
+        "org_cr": 0.8,
+        "gbp_sess": 3041,
+        "gbp_conv": 36.0,
+        "gbp_cr": 1.2
+      }
+    ],
+    "channel_colors": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "social": "#f59e0b",
+      "other": "#9ca3af"
+    }
   },
   "per_keyword": [
-    { "keyword": "alcohol rehab brooklyn (Oct 2025 baseline)", "feb_cells": 136, "may_cells": 136, "feb_avg": 1.88, "may_avg": 1.47, "pos_gained": 0.41, "feb_top3": 133, "may_top3": 130 },
-    { "keyword": "alcohol cluster (10 kw avg, Apr 22 grid)",   "feb_cells": 136, "may_cells": 136, "feb_avg": null, "may_avg": 2.65, "pos_gained": null, "feb_top3": null, "may_top3": 99 },
-    { "keyword": "drug cluster (5 kw avg, Apr 22 grid)",       "feb_cells": 136, "may_cells": 136, "feb_avg": null, "may_avg": 2.98, "pos_gained": null, "feb_top3": null, "may_top3": 98 },
-    { "keyword": "detox cluster (6 kw avg, Apr 22 grid)",      "feb_cells": 136, "may_cells": 136, "feb_avg": null, "may_avg": 4.11, "pos_gained": null, "feb_top3": null, "may_top3": 73 },
-    { "keyword": "inpatient cluster (3 kw avg, Apr 22 grid)",  "feb_cells": 136, "may_cells": 136, "feb_avg": null, "may_avg": 4.97, "pos_gained": null, "feb_top3": null, "may_top3": 60 },
-    { "keyword": "near-me cluster (9 kw avg, Apr 22 grid)",    "feb_cells": 136, "may_cells": 136, "feb_avg": null, "may_avg": 3.29, "pos_gained": null, "feb_top3": null, "may_top3": 87 },
-    { "keyword": "opioid / MAT (no LD coverage)",              "feb_cells": null, "may_cells": null, "feb_avg": null, "may_avg": null, "pos_gained": null, "feb_top3": null, "may_top3": null },
-    { "keyword": "dual diagnosis (no LD coverage)",            "feb_cells": null, "may_cells": null, "feb_avg": null, "may_avg": null, "pos_gained": null, "feb_top3": null, "may_top3": null }
+    {
+      "keyword": "alcohol rehab brooklyn (Oct 2025 baseline)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": 1.88,
+      "may_avg": 1.47,
+      "pos_gained": 0.41,
+      "feb_top3": 133,
+      "may_top3": 130
+    },
+    {
+      "keyword": "alcohol cluster (10 kw avg, Apr 22 grid)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": null,
+      "may_avg": 2.65,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": 99
+    },
+    {
+      "keyword": "drug cluster (5 kw avg, Apr 22 grid)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": null,
+      "may_avg": 2.98,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": 98
+    },
+    {
+      "keyword": "detox cluster (6 kw avg, Apr 22 grid)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": null,
+      "may_avg": 4.11,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": 73
+    },
+    {
+      "keyword": "inpatient cluster (3 kw avg, Apr 22 grid)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": null,
+      "may_avg": 4.97,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": 60
+    },
+    {
+      "keyword": "near-me cluster (9 kw avg, Apr 22 grid)",
+      "feb_cells": 136,
+      "may_cells": 136,
+      "feb_avg": null,
+      "may_avg": 3.29,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": 87
+    },
+    {
+      "keyword": "opioid / MAT (no LD coverage)",
+      "feb_cells": null,
+      "may_cells": null,
+      "feb_avg": null,
+      "may_avg": null,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": null
+    },
+    {
+      "keyword": "dual diagnosis (no LD coverage)",
+      "feb_cells": null,
+      "may_cells": null,
+      "feb_avg": null,
+      "may_avg": null,
+      "pos_gained": null,
+      "feb_top3": null,
+      "may_top3": null
+    }
   ],
   "ld_leaderboard": [
-    { "name": "Surfpoint Recovery",                     "may_top3": 130, "delta_top3": -3,  "may_avg_rank": 1.47, "delta_avg_rank": 0.41,  "cells": 136, "note": "4.8★ / 120 reviews / improving 1.88 → 1.47 across 5 scans; Coney Island anchor", "is_client": true },
-    { "name": "ACI Inpatient",                          "may_top3": 82,  "delta_top3": -54, "may_avg_rank": 1.40, "delta_avg_rank": 0.00,  "cells": 82,  "note": "3.8★ / 71 reviews / Brownsville — collapsed −54 cells in 6 months (Anchor House pattern)", "is_client": false },
-    { "name": "Genesis Detox of Brooklyn",              "may_top3": 136, "delta_top3": 18,  "may_avg_rank": 2.20, "delta_avg_rank": 0.10,  "cells": 136, "note": "3.5★ / 63 reviews / Sunset Park — full grid but low rating drags Knowledge Panel", "is_client": false },
-    { "name": "Under Angel's Wings Recovery",           "may_top3": 136, "delta_top3": 13,  "may_avg_rank": 2.00, "delta_avg_rank": 0.20,  "cells": 136, "note": "5.0★ / 35 reviews / Sunset Park — low review volume caps absolute volume", "is_client": false },
-    { "name": "Spring Hill Wellness NY (outpatient)",   "may_top3": 95,  "delta_top3": 8,   "may_avg_rank": 1.00, "delta_avg_rank": 0.05,  "cells": 110, "note": "4.8★ / 21 reviews / Sheepshead Bay — outpatient (different intent)", "is_client": false },
-    { "name": "Realization Center (unclaimed)",         "may_top3": 117, "delta_top3": 19,  "may_avg_rank": 2.20, "delta_avg_rank": 0.10,  "cells": 117, "note": "4.7★ / 85 reviews / Brooklyn Heights — UNCLAIMED listing, decayed but ranking", "is_client": false },
-    { "name": "Elevate Point NYC (new entrant)",        "may_top3": 127, "delta_top3": 127, "may_avg_rank": 1.80, "delta_avg_rank": null,  "cells": 127, "note": "5.0★ / 25 reviews / NEW ENTRANT — appeared from 0 → 127 cells in 6 months; diagnose-and-borrow", "is_client": false },
-    { "name": "LSA Recovery — Midwood",                 "may_top3": 78,  "delta_top3": 78,  "may_avg_rank": 3.20, "delta_avg_rank": null,  "cells": 78,  "note": "4.1★ / 14 reviews / new branch (parent LSA dissolved)", "is_client": false },
-    { "name": "Teen Challenge Inc.",                    "may_top3": 11,  "delta_top3": -121,"may_avg_rank": 8.40, "delta_avg_rank": -2.10, "cells": 11,  "note": "4.0★ / 34 reviews — collapsed −121 cells; freed grid space partially absorbed", "is_client": false },
-    { "name": "Ascendant Detox NYC",                    "may_top3": 2,   "delta_top3": -26, "may_avg_rank": 11.20,"delta_avg_rank": -0.80, "cells": 2,   "note": "4.8★ / 282 reviews / Upper East Side — Manhattan catchment, fading from Brooklyn grid" , "is_client": false }
+    {
+      "name": "Surfpoint Recovery",
+      "may_top3": 130,
+      "delta_top3": -3,
+      "may_avg_rank": 1.47,
+      "delta_avg_rank": 0.41,
+      "cells": 136,
+      "note": "4.8★ / 120 reviews / improving 1.88 → 1.47 across 5 scans; Coney Island anchor",
+      "is_client": true
+    },
+    {
+      "name": "ACI Inpatient",
+      "may_top3": 82,
+      "delta_top3": -54,
+      "may_avg_rank": 1.4,
+      "delta_avg_rank": 0.0,
+      "cells": 82,
+      "note": "3.8★ / 71 reviews / Brownsville — collapsed −54 cells in 6 months (Anchor House pattern)",
+      "is_client": false
+    },
+    {
+      "name": "Genesis Detox of Brooklyn",
+      "may_top3": 136,
+      "delta_top3": 18,
+      "may_avg_rank": 2.2,
+      "delta_avg_rank": 0.1,
+      "cells": 136,
+      "note": "3.5★ / 63 reviews / Sunset Park — full grid but low rating drags Knowledge Panel",
+      "is_client": false
+    },
+    {
+      "name": "Under Angel's Wings Recovery",
+      "may_top3": 136,
+      "delta_top3": 13,
+      "may_avg_rank": 2.0,
+      "delta_avg_rank": 0.2,
+      "cells": 136,
+      "note": "5.0★ / 35 reviews / Sunset Park — low review volume caps absolute volume",
+      "is_client": false
+    },
+    {
+      "name": "Spring Hill Wellness NY (outpatient)",
+      "may_top3": 95,
+      "delta_top3": 8,
+      "may_avg_rank": 1.0,
+      "delta_avg_rank": 0.05,
+      "cells": 110,
+      "note": "4.8★ / 21 reviews / Sheepshead Bay — outpatient (different intent)",
+      "is_client": false
+    },
+    {
+      "name": "Realization Center (unclaimed)",
+      "may_top3": 117,
+      "delta_top3": 19,
+      "may_avg_rank": 2.2,
+      "delta_avg_rank": 0.1,
+      "cells": 117,
+      "note": "4.7★ / 85 reviews / Brooklyn Heights — UNCLAIMED listing, decayed but ranking",
+      "is_client": false
+    },
+    {
+      "name": "Elevate Point NYC (new entrant)",
+      "may_top3": 127,
+      "delta_top3": 127,
+      "may_avg_rank": 1.8,
+      "delta_avg_rank": null,
+      "cells": 127,
+      "note": "5.0★ / 25 reviews / NEW ENTRANT — appeared from 0 → 127 cells in 6 months; diagnose-and-borrow",
+      "is_client": false
+    },
+    {
+      "name": "LSA Recovery — Midwood",
+      "may_top3": 78,
+      "delta_top3": 78,
+      "may_avg_rank": 3.2,
+      "delta_avg_rank": null,
+      "cells": 78,
+      "note": "4.1★ / 14 reviews / new branch (parent LSA dissolved)",
+      "is_client": false
+    },
+    {
+      "name": "Teen Challenge Inc.",
+      "may_top3": 11,
+      "delta_top3": -121,
+      "may_avg_rank": 8.4,
+      "delta_avg_rank": -2.1,
+      "cells": 11,
+      "note": "4.0★ / 34 reviews — collapsed −121 cells; freed grid space partially absorbed",
+      "is_client": false
+    },
+    {
+      "name": "Ascendant Detox NYC",
+      "may_top3": 2,
+      "delta_top3": -26,
+      "may_avg_rank": 11.2,
+      "delta_avg_rank": -0.8,
+      "cells": 2,
+      "note": "4.8★ / 282 reviews / Upper East Side — Manhattan catchment, fading from Brooklyn grid",
+      "is_client": false
+    }
   ],
   "gsc_decline": [
-    { "month": "2025-11", "label": "Nov 2025",        "pages": 380, "imp": 540000, "clicks": 3420, "delta_pct": 0   },
-    { "month": "2025-12", "label": "Dec 2025",        "pages": 372, "imp": 480000, "clicks": 2980, "delta_pct": -11 },
-    { "month": "2026-01", "label": "Jan 2026",        "pages": 365, "imp": 410000, "clicks": 2810, "delta_pct": -24 },
-    { "month": "2026-02", "label": "Feb 2026 (peak)", "pages": 385, "imp": 700000, "clicks": 2620, "delta_pct": 30  },
-    { "month": "2026-03", "label": "Mar 2026",        "pages": 350, "imp": 280000, "clicks": 1830, "delta_pct": -48 },
-    { "month": "2026-04", "label": "Apr 2026",        "pages": 332, "imp": 90000,  "clicks": 870,  "delta_pct": -83 },
-    { "month": "2026-05*", "label": "May partial",    "pages": 330, "imp": 20000,  "clicks": 200,  "delta_pct": -96 }
+    {
+      "month": "2025-11",
+      "label": "Nov 2025",
+      "pages": 380,
+      "imp": 540000,
+      "clicks": 3420,
+      "delta_pct": 0
+    },
+    {
+      "month": "2025-12",
+      "label": "Dec 2025",
+      "pages": 372,
+      "imp": 480000,
+      "clicks": 2980,
+      "delta_pct": -11
+    },
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "pages": 365,
+      "imp": 410000,
+      "clicks": 2810,
+      "delta_pct": -24
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026 (peak)",
+      "pages": 385,
+      "imp": 700000,
+      "clicks": 2620,
+      "delta_pct": 30
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026",
+      "pages": 350,
+      "imp": 280000,
+      "clicks": 1830,
+      "delta_pct": -48
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026",
+      "pages": 332,
+      "imp": 90000,
+      "clicks": 870,
+      "delta_pct": -83
+    },
+    {
+      "month": "2026-05*",
+      "label": "May partial",
+      "pages": 330,
+      "imp": 20000,
+      "clicks": 200,
+      "delta_pct": -96
+    }
   ],
   "keyword_buckets": [
-    { "bucket": "KEEP + KEEP-AUDIT — the revenue surface",          "keywords": 52,  "pct": 6,  "posture": "Optimize, expand, schema-tighten (821 conv / 365d come from this cohort)" },
-    { "bucket": "AUDIT — individual review (core topical + traffic)", "keywords": 555, "pct": 63, "posture": "Rewrite + internal-link to services (~66h M1–M3) — rescued from auto-removal by topical+backlinks overlay" },
-    { "bucket": "NOINDEX — off-topic + low-value",                  "keywords": 128, "pct": 15, "posture": "<meta robots=noindex,follow> (down from 447 in v1); 7-URL high-traffic wrong-audience cohort included" },
-    { "bucket": "DELETE / REDIRECT — doorways + thin",              "keywords": 142, "pct": 16, "posture": "410 Gone (99) + 301 to /areas-served or /treatments/* (43)" }
+    {
+      "bucket": "KEEP + KEEP-AUDIT — the revenue surface",
+      "keywords": 52,
+      "pct": 6,
+      "posture": "Optimize, expand, schema-tighten (821 conv / 365d come from this cohort)"
+    },
+    {
+      "bucket": "AUDIT — individual review (core topical + traffic)",
+      "keywords": 555,
+      "pct": 63,
+      "posture": "Rewrite + internal-link to services (~66h M1–M3) — rescued from auto-removal by topical+backlinks overlay"
+    },
+    {
+      "bucket": "NOINDEX — off-topic + low-value",
+      "keywords": 128,
+      "pct": 15,
+      "posture": "<meta robots=noindex,follow> (down from 447 in v1); 7-URL high-traffic wrong-audience cohort included"
+    },
+    {
+      "bucket": "DELETE / REDIRECT — doorways + thin",
+      "keywords": 142,
+      "pct": 16,
+      "posture": "410 Gone (99) + 301 to /areas-served or /treatments/* (43)"
+    }
   ],
   "top_urls": [
-    { "url": "/",                                                      "imp_90d": 58272, "clicks_90d": 948, "pos": 4.4,  "class": "home",    "lever": "HP-01 Lever B (CRD + service-area map)" },
-    { "url": "/blog/how-to-get-rid-of-alcohol-breath",                 "imp_90d": 230925,"clicks_90d": 714, "pos": 5.8,  "class": "blog",    "lever": "Lever A — NOINDEX (wrong-audience)" },
-    { "url": "/blog/does-alcohol-affect-the-gallbladder",              "imp_90d": 121892,"clicks_90d": 285, "pos": 4.8,  "class": "blog",    "lever": "Lever A — AUDIT (off-topic; review)" },
-    { "url": "/blog/how-long-does-it-take-for-weed-to-leave-your-system","imp_90d":107376,"clicks_90d": 298,"pos": 6.7,  "class": "blog",    "lever": "Lever A — AUDIT (core topical, refresh)" },
-    { "url": "/blog/viagra-and-alcohol",                               "imp_90d": 106783,"clicks_90d": 311, "pos": 7.2,  "class": "blog",    "lever": "Lever A — NOINDEX (wrong-audience)" },
-    { "url": "/blog/mixing-alcohol-and-mucinex",                       "imp_90d": 105921,"clicks_90d": 157, "pos": 5.2,  "class": "blog",    "lever": "Lever A — AUDIT (core topical, refresh)" },
-    { "url": "/treatments",                                            "imp_90d": 4200,  "clicks_90d": 22,  "pos": 11.0, "class": "hub",     "lever": "TR-01 Lever B (hub upgrade M2)" },
-    { "url": "/services/alcohol-detox-services (legacy)",              "imp_90d": 480,   "clicks_90d": 2,   "pos": 24.0, "class": "service", "lever": "RD-01 → 301 to /treatments/alcohol-detox" },
-    { "url": "/services/benzodiazepine-detox-services",                "imp_90d": 1925,  "clicks_90d": 4,   "pos": 18.0, "class": "service", "lever": "SP-05 Lever C deferred Q3 (low vol)" },
-    { "url": "/locations/coney-island",                                "imp_90d": 320,   "clicks_90d": 11,  "pos": 7.0,  "class": "location","lever": "LP-01 KEEP — catchment center" },
-    { "url": "/locations/brooklyn",                                    "imp_90d": 1850,  "clicks_90d": 38,  "pos": 12.0, "class": "location","lever": "LP-01 upgrade (M1)" },
-    { "url": "/locations/manhattan",                                   "imp_90d": 510,   "clicks_90d": 12,  "pos": 18.5, "class": "location","lever": "LP-01 upgrade (M1)" },
-    { "url": "/locations/* — 37 empty doorway pages",                  "imp_90d": 220,   "clicks_90d": 1,   "pos": 65.0, "class": "doorway", "lever": "LP-01 → 28 redirects to /areas-served (M1)" }
+    {
+      "url": "/",
+      "imp_90d": 58272,
+      "clicks_90d": 948,
+      "pos": 4.4,
+      "class": "home",
+      "lever": "HP-01 Lever B (CRD + service-area map)"
+    },
+    {
+      "url": "/blog/how-to-get-rid-of-alcohol-breath",
+      "imp_90d": 230925,
+      "clicks_90d": 714,
+      "pos": 5.8,
+      "class": "blog",
+      "lever": "Lever A — NOINDEX (wrong-audience)"
+    },
+    {
+      "url": "/blog/does-alcohol-affect-the-gallbladder",
+      "imp_90d": 121892,
+      "clicks_90d": 285,
+      "pos": 4.8,
+      "class": "blog",
+      "lever": "Lever A — AUDIT (off-topic; review)"
+    },
+    {
+      "url": "/blog/how-long-does-it-take-for-weed-to-leave-your-system",
+      "imp_90d": 107376,
+      "clicks_90d": 298,
+      "pos": 6.7,
+      "class": "blog",
+      "lever": "Lever A — AUDIT (core topical, refresh)"
+    },
+    {
+      "url": "/blog/viagra-and-alcohol",
+      "imp_90d": 106783,
+      "clicks_90d": 311,
+      "pos": 7.2,
+      "class": "blog",
+      "lever": "Lever A — NOINDEX (wrong-audience)"
+    },
+    {
+      "url": "/blog/mixing-alcohol-and-mucinex",
+      "imp_90d": 105921,
+      "clicks_90d": 157,
+      "pos": 5.2,
+      "class": "blog",
+      "lever": "Lever A — AUDIT (core topical, refresh)"
+    },
+    {
+      "url": "/treatments",
+      "imp_90d": 4200,
+      "clicks_90d": 22,
+      "pos": 11.0,
+      "class": "hub",
+      "lever": "TR-01 Lever B (hub upgrade M2)"
+    },
+    {
+      "url": "/services/alcohol-detox-services (legacy)",
+      "imp_90d": 480,
+      "clicks_90d": 2,
+      "pos": 24.0,
+      "class": "service",
+      "lever": "RD-01 → 301 to /treatments/alcohol-detox"
+    },
+    {
+      "url": "/services/benzodiazepine-detox-services",
+      "imp_90d": 1925,
+      "clicks_90d": 4,
+      "pos": 18.0,
+      "class": "service",
+      "lever": "SP-05 Lever C deferred Q3 (low vol)"
+    },
+    {
+      "url": "/locations/coney-island",
+      "imp_90d": 320,
+      "clicks_90d": 11,
+      "pos": 7.0,
+      "class": "location",
+      "lever": "LP-01 KEEP — catchment center"
+    },
+    {
+      "url": "/locations/brooklyn",
+      "imp_90d": 1850,
+      "clicks_90d": 38,
+      "pos": 12.0,
+      "class": "location",
+      "lever": "LP-01 upgrade (M1)"
+    },
+    {
+      "url": "/locations/manhattan",
+      "imp_90d": 510,
+      "clicks_90d": 12,
+      "pos": 18.5,
+      "class": "location",
+      "lever": "LP-01 upgrade (M1)"
+    },
+    {
+      "url": "/locations/* — 37 empty doorway pages",
+      "imp_90d": 220,
+      "clicks_90d": 1,
+      "pos": 65.0,
+      "class": "doorway",
+      "lever": "LP-01 → 28 redirects to /areas-served (M1)"
+    }
   ],
   "positives": [
     "Maps anchor `alcohol rehab brooklyn` at rank 1.47 / 96% top-3 (Apr 2026 scan) — improving 1.88 → 1.47 across 5 scans Oct 2025 → Apr 2026",
@@ -164,15 +768,60 @@
       "color": "red",
       "why": "Google has already imposed the cleanup decision — 756 URLs flagged Crawled/Discovered — not indexed across 87 days. The architecture is what drags every downstream rebuild into a discounted site-level quality denominator. The topical+backlinks overlay rescued 453 URLs from auto-removal into AUDIT; the per-URL evidence model replaces auto-delete. All 270 mechanical operations ship in one M1 deploy window alongside a sitemap rebuild — spreading across weeks creates contradictory intermediate states.",
       "actions": [
-        { "code": "LP-01",  "name": "Location pages cleanup: 28 redirects (5 NJ + 23 NY-area → /areas-served) + write content for 9 upgrade pages (brooklyn, manhattan, NYC, queens, staten-island, bronx, harlem, inwood, brownsville)", "month": "M1", "effort": "L" },
-        { "code": "LP-02",  "name": "Deploy LocalBusiness + BreadcrumbList schema on the 9 upgrade pages", "month": "M1", "effort": "S" },
-        { "code": "M1-02",  "name": "NOINDEX execution on the 128 audited URLs (topical+backlinks overlay pre-filtered from 447) — includes 7-URL high-traffic wrong-audience cohort (breath / viagra / rappers / phobias)", "month": "M1", "effort": "S" },
-        { "code": "M1-03",  "name": "AUDIT triage M1 batch: 75 of 555 AUDIT URLs (core-topical blogs first) — rewrite + internal-link to relevant service OR NOINDEX/REDIRECT", "month": "M1", "effort": "L" },
-        { "code": "M1-04",  "name": "DELETE+REDIRECT: 99 thin/orphan via HTTP 410 + 43 doorways via 301 → /areas-served or /treatments/*", "month": "M1", "effort": "M" },
-        { "code": "M2-04",  "name": "AUDIT triage continues — process remaining ~480 URLs (core-topical + unclassified-w/-traffic + framework-ambiguous)", "month": "M2", "effort": "L" },
-        { "code": "M2-05",  "name": "DELETE 99 thin/orphan blog posts (down from 223 in v1 — topical overlay preserved 124 core-topical)", "month": "M2", "effort": "M" },
-        { "code": "REP-02", "name": "Indexation re-run on 47 not-indexed location URLs + Request Indexing for 9 LP-01 upgrades", "month": "M2", "effort": "S" },
-        { "code": "M3-04",  "name": "Quarterly NOINDEX + AUDIT re-audit — recheck ranking recovery, backlinks, conversions; re-bucket on evidence", "month": "M3", "effort": "M" }
+        {
+          "code": "LP-01",
+          "name": "Location pages cleanup: 28 redirects (5 NJ + 23 NY-area → /areas-served) + write content for 9 upgrade pages (brooklyn, manhattan, NYC, queens, staten-island, bronx, harlem, inwood, brownsville)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "LP-02",
+          "name": "Deploy LocalBusiness + BreadcrumbList schema on the 9 upgrade pages",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-02",
+          "name": "NOINDEX execution on the 128 audited URLs (topical+backlinks overlay pre-filtered from 447) — includes 7-URL high-traffic wrong-audience cohort (breath / viagra / rappers / phobias)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-03",
+          "name": "AUDIT triage M1 batch: 75 of 555 AUDIT URLs (core-topical blogs first) — rewrite + internal-link to relevant service OR NOINDEX/REDIRECT",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "M1-04",
+          "name": "DELETE+REDIRECT: 99 thin/orphan via HTTP 410 + 43 doorways via 301 → /areas-served or /treatments/*",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "M2-04",
+          "name": "AUDIT triage continues — process remaining ~480 URLs (core-topical + unclassified-w/-traffic + framework-ambiguous)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "M2-05",
+          "name": "DELETE 99 thin/orphan blog posts (down from 223 in v1 — topical overlay preserved 124 core-topical)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "REP-02",
+          "name": "Indexation re-run on 47 not-indexed location URLs + Request Indexing for 9 LP-01 upgrades",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "M3-04",
+          "name": "Quarterly NOINDEX + AUDIT re-audit — recheck ranking recovery, backlinks, conversions; re-bucket on evidence",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Indexed surface 878 → ~665 URLs (waste removed; AUDIT lane preserved for triage). Daily impressions bottom within 30–45 days post-deploy → recovery slope as remaining surface re-evaluated as cleaner. Site-level quality denominator shifts from addiction-treatment + breath/phobias/rappers/NJ doorways to a focused addiction-treatment surface."
     },
@@ -183,16 +832,66 @@
       "color": "blue",
       "why": "Homepage carries 67% of 833 annual conversions; 15 named core/utility pages carry another 31%. Service pages = 0%. Interlinking SOP gave 305 link-plan rows to locations, 423 to blog, 15 to services across the audit period. The rebuild + refactor moves the surface that already converts (1.0% Direct rate) onto every service line. Stalled 2 months on owner sign-off — build now, deploy on approval.",
       "actions": [
-        { "code": "HP-01", "name": "Homepage build — 24 CRD items (H-01 to H-24) + 9 beyond-CRD competitive additions (service-area map embed, named clinician block, OASAS/CARF/Medicaid panels, neighborhood enumeration)", "month": "M1", "effort": "L" },
-        { "code": "ON-01", "name": "Meta + title refresh on top 5 conversion pages — homepage, /admissions, /contact-us, /treatments, /areas-served (meta is owner-unblocked)", "month": "M1", "effort": "S" },
-        { "code": "TR-01", "name": "/treatments hub upgrade — 16 items (T-01 to T-16): Service schema, H2 anchor IDs, insurance section, clinical-team section, FAQ, reviews block, named MAT clinician", "month": "M2", "effort": "M" },
-        { "code": "SP-01", "name": "Build /treatments/alcohol-detox — Wave 1 sub-page (largest aligned cluster, 4,583 kw vol; SP wins maps at 1.47)", "month": "M2", "effort": "L" },
-        { "code": "SP-02", "name": "Build /treatments/drug-detox — broad-coverage sub-page (drug cluster: 3 kw, SP #1 in pack across all 3)", "month": "M2", "effort": "L" },
-        { "code": "RD-01", "name": "/services/* → /treatments/* legacy 301 batch — 5 redirects (alcohol-detox, opioid-detox-mat, drug-detox, benzo-detox, comprehensive-short-term)", "month": "M2", "effort": "S" },
-        { "code": "M2-03", "name": "Internal linking refactor — every retained blog + retained location page links to the relevant service page (~3–5 contextual links per source); build locations × services matrix", "month": "M2", "effort": "L" },
-        { "code": "SP-03", "name": "Build /treatments/opioid-detox-mat — MAT-specific sub-page (closes LLM-citation gap on MAT-opioid)", "month": "M3", "effort": "L" },
-        { "code": "SP-04", "name": "Build /treatments/dual-diagnosis — CBT-grounded sub-page (KD 2.9, lowest in entire kw universe; closes LLM-citation gap on dual-diagnosis-brooklyn)", "month": "M3", "effort": "L" },
-        { "code": "ON-07", "name": "Sitewide schema audit + gap fix (non-/locations/) — Service on each /treatments/*, Article on top 20 blogs, BreadcrumbList sitewide", "month": "M3", "effort": "M" }
+        {
+          "code": "HP-01",
+          "name": "Homepage build — 24 CRD items (H-01 to H-24) + 9 beyond-CRD competitive additions (service-area map embed, named clinician block, OASAS/CARF/Medicaid panels, neighborhood enumeration)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "ON-01",
+          "name": "Meta + title refresh on top 5 conversion pages — homepage, /admissions, /contact-us, /treatments, /areas-served (meta is owner-unblocked)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "TR-01",
+          "name": "/treatments hub upgrade — 16 items (T-01 to T-16): Service schema, H2 anchor IDs, insurance section, clinical-team section, FAQ, reviews block, named MAT clinician",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SP-01",
+          "name": "Build /treatments/alcohol-detox — Wave 1 sub-page (largest aligned cluster, 4,583 kw vol; SP wins maps at 1.47)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-02",
+          "name": "Build /treatments/drug-detox — broad-coverage sub-page (drug cluster: 3 kw, SP #1 in pack across all 3)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "RD-01",
+          "name": "/services/* → /treatments/* legacy 301 batch — 5 redirects (alcohol-detox, opioid-detox-mat, drug-detox, benzo-detox, comprehensive-short-term)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "M2-03",
+          "name": "Internal linking refactor — every retained blog + retained location page links to the relevant service page (~3–5 contextual links per source); build locations × services matrix",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-03",
+          "name": "Build /treatments/opioid-detox-mat — MAT-specific sub-page (closes LLM-citation gap on MAT-opioid)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "SP-04",
+          "name": "Build /treatments/dual-diagnosis — CBT-grounded sub-page (KD 2.9, lowest in entire kw universe; closes LLM-citation gap on dual-diagnosis-brooklyn)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "ON-07",
+          "name": "Sitewide schema audit + gap fix (non-/locations/) — Service on each /treatments/*, Article on top 20 blogs, BreadcrumbList sitewide",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Service-page sessions 104 → 500+ per quarter on alcohol-detox + opioid-detox-mat. Service-page internal-link count: 0 → 50+ each. Homepage avg position 27.4 → top 10 branded. /treatments 30-day post-deploy CTR ≥ 1% (from 0.2%)."
     },
@@ -203,21 +902,96 @@
       "color": "green",
       "why": "GBP is the working channel — 2.53% conv vs 0.32% all-organic (8×). Listing is winning despite nine field-level leaks. Three audit-driven URGENT items the Q2 doc didn't catalog: 0% owner-response across 120 reviews including a 20-wk-old RN-flagged HIPAA-adjacent 5-star, 20-neighborhood service-area on an inpatient-only facility (down-weights distance algorithm), 'Entrance on W 24th St' embedded in address line breaks NAP-dedup at Yelp/Foursquare/BBB/Apple Maps.",
       "actions": [
-        { "code": "GBP-URG-01","name": "Backfill owner responses to 4 one-stars + 2 compliance-flagged 5-stars (Jacob Gaik RN, Pedro) — template-driven, brand-appropriate, no admission of liability", "month": "M1", "effort": "S" },
-        { "code": "GBP-URG-02","name": "Address line cleanup — move 'Entrance on West 24th Street' out of street line; propagate clean NAP to 8–10 priority citations", "month": "M1", "effort": "S" },
-        { "code": "GBP-URG-03","name": "Service area decision — remove (Path A) or trim to 9 South-Brooklyn neighborhoods (Path B). Current 20-area sprawl includes 7 out-of-borough (Howard Beach / Belle Harbor / Rockaway Park) on an inpatient-only facility", "month": "M1", "effort": "S" },
-        { "code": "GBP-01", "name": "GBP Posts cadence start — 1/week minimum, intake-driven topics (insurance, MAT, neighborhood, CARF)", "month": "M1", "effort": "S" },
-        { "code": "GBP-02", "name": "Q&A audit — owner-answer all 4 existing unanswered Q's + seed 10–15 patient-and-family-facing Q&A pairs with full answers (vs Urban 15, ACI 10)", "month": "M1", "effort": "S" },
-        { "code": "GBP-03", "name": "Review-velocity push — intake-discharge SOP refresh; +20 reviews / M1 cadence (120 → 140+)", "month": "M1", "effort": "S" },
-        { "code": "M1-09",  "name": "GBP services list audit — populate Dual Diagnosis Treatment (top-3 priority), fix 'Benzodiazepines' → 'Benzodiazepine'; per-secondary-category service lists (4 of 5 cats currently empty)", "month": "M1", "effort": "S" },
-        { "code": "M1-10",  "name": "Attribute completion — verify + add `service_options:has_onsite_services`, `accessibility:has_wheelchair_accessible_parking`, `amenities:has_restroom_unisex` (5 → 8)", "month": "M1", "effort": "S" },
-        { "code": "M1-11",  "name": "Category expansion — add Counselor (defensible) + verify Psychiatrist/Psychologist/Psychotherapist with staff credentials before claim (Ascendant uses all 4)", "month": "M1", "effort": "S" },
-        { "code": "M1-12",  "name": "Description rewrite — replace generic 471-char with 633-char OASAS-licensed + CARF Center of Excellence + MAT meds + dual diagnosis + Medicaid/Aetna/Cigna/BCBS + Coney Island", "month": "M1", "effort": "S" },
-        { "code": "M1-13",  "name": "GBP book-online URL — add Calendly/HubSpot intake; UNIQUE-WIN — no competitor in 11-pin set has this configured", "month": "M1", "effort": "S" },
-        { "code": "GBP-04", "name": "Photo blitz — +25 photos (9 → 30+, Mountainside benchmark); cover photo first, mix of exterior/interior/staff/documentation/neighborhood", "month": "M2", "effort": "M" },
-        { "code": "GBP-05", "name": "Posts cadence M2 — 2/week; ≥2 link to /treatments/alcohol-detox, ≥1 link to /treatments/drug-detox", "month": "M2", "effort": "S" },
-        { "code": "GBP-06", "name": "Posts cadence M3 + Services list audit — confirm all 5 clinical services + per-secondary-cat completions", "month": "M3", "effort": "S" },
-        { "code": "GBP-07", "name": "Owner replies to all <4-star reviews + sustain 20+/month velocity protocol (48h response window)", "month": "M3", "effort": "S" }
+        {
+          "code": "GBP-URG-01",
+          "name": "Backfill owner responses to 4 one-stars + 2 compliance-flagged 5-stars (Jacob Gaik RN, Pedro) — template-driven, brand-appropriate, no admission of liability",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-URG-02",
+          "name": "Address line cleanup — move 'Entrance on West 24th Street' out of street line; propagate clean NAP to 8–10 priority citations",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-URG-03",
+          "name": "Service area decision — remove (Path A) or trim to 9 South-Brooklyn neighborhoods (Path B). Current 20-area sprawl includes 7 out-of-borough (Howard Beach / Belle Harbor / Rockaway Park) on an inpatient-only facility",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-01",
+          "name": "GBP Posts cadence start — 1/week minimum, intake-driven topics (insurance, MAT, neighborhood, CARF)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-02",
+          "name": "Q&A audit — owner-answer all 4 existing unanswered Q's + seed 10–15 patient-and-family-facing Q&A pairs with full answers (vs Urban 15, ACI 10)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-03",
+          "name": "Review-velocity push — intake-discharge SOP refresh; +20 reviews / M1 cadence (120 → 140+)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-09",
+          "name": "GBP services list audit — populate Dual Diagnosis Treatment (top-3 priority), fix 'Benzodiazepines' → 'Benzodiazepine'; per-secondary-category service lists (4 of 5 cats currently empty)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-10",
+          "name": "Attribute completion — verify + add `service_options:has_onsite_services`, `accessibility:has_wheelchair_accessible_parking`, `amenities:has_restroom_unisex` (5 → 8)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-11",
+          "name": "Category expansion — add Counselor (defensible) + verify Psychiatrist/Psychologist/Psychotherapist with staff credentials before claim (Ascendant uses all 4)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-12",
+          "name": "Description rewrite — replace generic 471-char with 633-char OASAS-licensed + CARF Center of Excellence + MAT meds + dual diagnosis + Medicaid/Aetna/Cigna/BCBS + Coney Island",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-13",
+          "name": "GBP book-online URL — add Calendly/HubSpot intake; UNIQUE-WIN — no competitor in 11-pin set has this configured",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-04",
+          "name": "Photo blitz — +25 photos (9 → 30+, Mountainside benchmark); cover photo first, mix of exterior/interior/staff/documentation/neighborhood",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-05",
+          "name": "Posts cadence M2 — 2/week; ≥2 link to /treatments/alcohol-detox, ≥1 link to /treatments/drug-detox",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-06",
+          "name": "Posts cadence M3 + Services list audit — confirm all 5 clinical services + per-secondary-cat completions",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-07",
+          "name": "Owner replies to all <4-star reviews + sustain 20+/month velocity protocol (48h response window)",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "Audit-risk content (Jacob Gaik HIPAA + Nick Tonjuk theft) closed within 1 week. Profile depth reaches Ascendant/Mountainside benchmark on photos / categories / attributes / Q&A. Booking-link CTA appears in Knowledge Panel — uncontested in competitor set. Map-pack grid (1.47 / 96% top-3) protected as resilience layer; does not need to move; needs to not regress."
     },
@@ -228,15 +1002,60 @@
       "color": "indigo",
       "why": "Backlinks spam score 43 = ~2× national benchmarks. Source: three programmatic networks (seo-anomaly-* 106 domains, seo-cartel-* 40, bhs-links-*.xyz 5) plus Australian-PBN ring + one-off high-spam. GSC disavow processing takes 2–4 weeks — submitting first means the toxic drag clears while citation acquisition ramps. Competitor-gap analysis (Ascendant + ACI + Genesis, HQDM peers stripped) produced 385 domains → deduped 738 inputs across 3 sources → 697 unique → 684 open opportunities.",
       "actions": [
-        { "code": "OFF-01",  "name": "Disavow toxic PBN inbound via GSC — 183 AUTO-disavow + 42 borderline manual review (full backlinks/live pull + spam-pattern regex)", "month": "M1", "effort": "M" },
-        { "code": "OFF-02",  "name": "Foundational citations Phase 1 — Psychology Today, SAMHSA Treatment Locator, NYS OASAS Find a Provider, BBB, Apple Maps, Bing Places, Foursquare, Healthgrades, Yelp claim/optimize", "month": "M1", "effort": "M" },
-        { "code": "PR-PAUSE","name": "Pause new PR placements on the existing 10-domain target list pending citation-strategy review (Aaron Gruenke consultation pending per Milica 2026-05-13)", "month": "M1", "effort": "S" },
-        { "code": "OFF-03",  "name": "Press release on CARF Center of Excellence designation — anchor Coney Island + Brooklyn + CARF + addiction treatment; distribute regional health-trade outlets", "month": "M2", "effort": "M" },
-        { "code": "OFF-04",  "name": "Citation submissions batch 2 — insurance-directory tier (Aetna / Cigna / BCBS / Medicaid + 1 national)", "month": "M2", "effort": "M" },
-        { "code": "OFF-05",  "name": "Citations batch 3 — recovery-vertical authority tier (best-rehabs.com, sobasearch.com, alcoholism.org, helpguide.org + 2 Brooklyn-local health resources)", "month": "M3", "effort": "M" },
-        { "code": "M3-01",   "name": "Earned-mention outreach — 3–5 real Brooklyn/NYC publications (NY1, Brooklyn Magazine, local NPR, real health/recovery editorial); pitch named-clinician bylines", "month": "M3", "effort": "L" },
-        { "code": "OFF-06",  "name": "Disavow re-pull — diff vs M1; add new spam clusters; re-upload updated disavow file", "month": "M3", "effort": "S" },
-        { "code": "M3-06",   "name": "Backlinks re-pull at Q3 — measure spam-score trend post-disavow (target 43 → <30)", "month": "M3", "effort": "S" }
+        {
+          "code": "OFF-01",
+          "name": "Disavow toxic PBN inbound via GSC — 183 AUTO-disavow + 42 borderline manual review (full backlinks/live pull + spam-pattern regex)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-02",
+          "name": "Foundational citations Phase 1 — Psychology Today, SAMHSA Treatment Locator, NYS OASAS Find a Provider, BBB, Apple Maps, Bing Places, Foursquare, Healthgrades, Yelp claim/optimize",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "PR-PAUSE",
+          "name": "Pause new PR placements on the existing 10-domain target list pending citation-strategy review (Aaron Gruenke consultation pending per Milica 2026-05-13)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "OFF-03",
+          "name": "Press release on CARF Center of Excellence designation — anchor Coney Island + Brooklyn + CARF + addiction treatment; distribute regional health-trade outlets",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-04",
+          "name": "Citation submissions batch 2 — insurance-directory tier (Aetna / Cigna / BCBS / Medicaid + 1 national)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-05",
+          "name": "Citations batch 3 — recovery-vertical authority tier (best-rehabs.com, sobasearch.com, alcoholism.org, helpguide.org + 2 Brooklyn-local health resources)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "M3-01",
+          "name": "Earned-mention outreach — 3–5 real Brooklyn/NYC publications (NY1, Brooklyn Magazine, local NPR, real health/recovery editorial); pitch named-clinician bylines",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "OFF-06",
+          "name": "Disavow re-pull — diff vs M1; add new spam clusters; re-upload updated disavow file",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "M3-06",
+          "name": "Backlinks re-pull at Q3 — measure spam-score trend post-disavow (target 43 → <30)",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "Spam score trending 43 → <30 by Q3. 8–10 foundational citations live by M1 (also unlocks Gemini LLM citation surface). 5–10 topical-local citations live by M2. 1–2 quality earned mentions / D-A backlinks by M3."
     },
@@ -247,16 +1066,66 @@
       "color": "amber",
       "why": "147 of 208 blog posts in bleeding cohort (−50% to −85% trend / 90d). Largest 5 pieces account for >3M lost impressions in 90 days. Asana pipeline allocated 19% of 1,294 tasks to blog and only 0.8% to service pages. Pivot is task-mix, not capacity. Suburb-page cadence (3/month) stays inside target radius — no more out-of-borough, no NJ.",
       "actions": [
-        { "code": "CON-01",  "name": "Suburb pages M1 batch — 3 inside Coney Island radius (Mermaid Avenue / Sea Gate strip / West Brighton beach strip)", "month": "M1", "effort": "M" },
-        { "code": "CON-06",  "name": "Blog refresh M1 — 3 on-topic bleeding posts (largest of the 147-bleeder cohort) per HQDM refresh SOP", "month": "M1", "effort": "M" },
-        { "code": "CON-02",  "name": "Suburb pages M2 batch — Bath Beach / Bensonhurst / Bay Ridge axis; cross-link to /treatments/alcohol-detox + /areas-served", "month": "M2", "effort": "M" },
-        { "code": "CON-03",  "name": "Treatments support article batch — 3 articles building internal-link gravity to SP-01/SP-02 (e.g., What to expect in alcohol detox brooklyn / MAT vs traditional detox / How long does detox take)", "month": "M2", "effort": "M" },
-        { "code": "CON-07",  "name": "Blog refresh M2 — 3 on-topic bleeding posts; track 30-day rank-recovery delta", "month": "M2", "effort": "M" },
-        { "code": "M2-10",   "name": "PAA pipeline redirect — switch topic seeds from generic to Surfpoint-service-aligned (demand-gap + LLM research-phase gaps); 1–2 high-quality pieces ship from existing infrastructure", "month": "M2", "effort": "M" },
-        { "code": "CON-04",  "name": "Suburb pages M3 batch — outer-ring (Sunset Park / Sheepshead Bay / Marine Park); cross-link to SP-03/SP-04 new sub-pages", "month": "M3", "effort": "M" },
-        { "code": "CON-05",  "name": "LLM-format Q&A article batch — 3 PAA + AI Overview targeting (Is there a Suboxone clinic in Coney Island? / Best dual-diagnosis program in Brooklyn / Medicaid for opioid detox)", "month": "M3", "effort": "M" },
-        { "code": "CON-08",  "name": "Blog refresh M3 — 3 on-topic bleeding posts; complete 9-post Q2 refresh cycle", "month": "M3", "effort": "M" },
-        { "code": "M3-03",   "name": "Quality blog production (1–2/month) using `choosing-best-rehab-in-brooklyn` template; topic selection from demand-gap + LLM research-phase gap prompts", "month": "M3", "effort": "M" }
+        {
+          "code": "CON-01",
+          "name": "Suburb pages M1 batch — 3 inside Coney Island radius (Mermaid Avenue / Sea Gate strip / West Brighton beach strip)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CON-06",
+          "name": "Blog refresh M1 — 3 on-topic bleeding posts (largest of the 147-bleeder cohort) per HQDM refresh SOP",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CON-02",
+          "name": "Suburb pages M2 batch — Bath Beach / Bensonhurst / Bay Ridge axis; cross-link to /treatments/alcohol-detox + /areas-served",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CON-03",
+          "name": "Treatments support article batch — 3 articles building internal-link gravity to SP-01/SP-02 (e.g., What to expect in alcohol detox brooklyn / MAT vs traditional detox / How long does detox take)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CON-07",
+          "name": "Blog refresh M2 — 3 on-topic bleeding posts; track 30-day rank-recovery delta",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "M2-10",
+          "name": "PAA pipeline redirect — switch topic seeds from generic to Surfpoint-service-aligned (demand-gap + LLM research-phase gaps); 1–2 high-quality pieces ship from existing infrastructure",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "CON-04",
+          "name": "Suburb pages M3 batch — outer-ring (Sunset Park / Sheepshead Bay / Marine Park); cross-link to SP-03/SP-04 new sub-pages",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "CON-05",
+          "name": "LLM-format Q&A article batch — 3 PAA + AI Overview targeting (Is there a Suboxone clinic in Coney Island? / Best dual-diagnosis program in Brooklyn / Medicaid for opioid detox)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "CON-08",
+          "name": "Blog refresh M3 — 3 on-topic bleeding posts; complete 9-post Q2 refresh cycle",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "M3-03",
+          "name": "Quality blog production (1–2/month) using `choosing-best-rehab-in-brooklyn` template; topic selection from demand-gap + LLM research-phase gap prompts",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Top-5 bleeders refreshed; 30-day rank-recovery delta logged. Suburb-page footprint expanded inside catchment (9 net-new). PAA pipeline pivoted to service-aligned. First research-phase LLM citations begin to appear by Q3."
     },
@@ -267,65 +1136,288 @@
       "color": "purple",
       "why": "Surfpoint cited on 7 of 18 prompts (39%) and is the #1 cited rehab provider domain (15 citations vs Urban Recovery's 13). Strong on commercial-local Brooklyn; gap on 3 service-line prompts (dual diagnosis, MAT-opioid, short-term inpatient) and all 8 research-phase prompts. Gemini cites 0 (leans on government directories — M1-14 citation push unlocks this). LD coverage is only 1 keyword today; cannot measure Δ on the other 4 service clusters without baselining scans now.",
       "actions": [
-        { "code": "REP-01",  "name": "LD scan expansion — 8 priority terms × 2 coords = 16 grids (drug rehab brooklyn / alcohol rehab brooklyn / detox brooklyn / opioid rehab brooklyn / dual diagnosis brooklyn / MAT clinic brooklyn / addiction treatment brooklyn / suboxone clinic brooklyn at Coney Island + Brighton Beach). Weekly cadence", "month": "M1", "effort": "S" },
-        { "code": "M1-15",   "name": "LegitScript verification via public registry + homepage source inspection — compliance status confirmed; gating dependency for any future paid acquisition", "month": "M1", "effort": "S" },
-        { "code": "M2-11",   "name": "LLM citation gap closure — targeted on-page + schema on dual-diagnosis, MAT-opioid, short-term-rehab service pages; re-audit end of M2 targeting cited on 9/10 commercial-local prompts", "month": "M2", "effort": "M" },
-        { "code": "M3-02",   "name": "LLM visibility re-audit (scripts/llm_visibility_surfpoint.py operational) — target 9/10 commercial-local + 2/8 research-phase cite rate", "month": "M3", "effort": "M" },
-        { "code": "M3-07",   "name": "Expand LD coverage — add opioid/MAT, dual diagnosis, drug detox brooklyn keywords (no LD tracking today per §1.3)", "month": "M3", "effort": "S" },
-        { "code": "M3-08",   "name": "Surfpoint vs Urban Recovery + Niagara Recovery internal coordination — agreed territory split or coordinated optimization across the 6 HQDM Recovery accounts (e.g., Urban owns Red Hook + Sunset Park, Surfpoint owns Coney Island + Bay Ridge)", "month": "M3", "effort": "S" },
-        { "code": "REP-03",  "name": "Q2 close-out — planned → executed → impact correlation report (Marija Reporting Master Sheet — Result/Notes + Evidence columns populated; LD scan deltas, indexation tracker, review-count delta, GBP Posts CTR)", "month": "M3", "effort": "M" }
+        {
+          "code": "REP-01",
+          "name": "LD scan expansion — 8 priority terms × 2 coords = 16 grids (drug rehab brooklyn / alcohol rehab brooklyn / detox brooklyn / opioid rehab brooklyn / dual diagnosis brooklyn / MAT clinic brooklyn / addiction treatment brooklyn / suboxone clinic brooklyn at Coney Island + Brighton Beach). Weekly cadence",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M1-15",
+          "name": "LegitScript verification via public registry + homepage source inspection — compliance status confirmed; gating dependency for any future paid acquisition",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "M2-11",
+          "name": "LLM citation gap closure — targeted on-page + schema on dual-diagnosis, MAT-opioid, short-term-rehab service pages; re-audit end of M2 targeting cited on 9/10 commercial-local prompts",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "M3-02",
+          "name": "LLM visibility re-audit (scripts/llm_visibility_surfpoint.py operational) — target 9/10 commercial-local + 2/8 research-phase cite rate",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "M3-07",
+          "name": "Expand LD coverage — add opioid/MAT, dual diagnosis, drug detox brooklyn keywords (no LD tracking today per §1.3)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "M3-08",
+          "name": "Surfpoint vs Urban Recovery + Niagara Recovery internal coordination — agreed territory split or coordinated optimization across the 6 HQDM Recovery accounts (e.g., Urban owns Red Hook + Sunset Park, Surfpoint owns Coney Island + Bay Ridge)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "REP-03",
+          "name": "Q2 close-out — planned → executed → impact correlation report (Marija Reporting Master Sheet — Result/Notes + Evidence columns populated; LD scan deltas, indexation tracker, review-count delta, GBP Posts CTR)",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "16 LD grids baselined by M1; 4-week trend by M3. LLM cite rate on commercial-local: 7/10 → 9/10 by M3. Cross-account coordination with Milica agreed before Q3. First HQDM strategy-first report ships under Phase 1 correlation criteria."
     }
   ],
   "deliverables": [
-    { "label": "Q2 2026 Custom Strategy (long form)",                 "path": "Surfpoint_Recovery_Q2_2026_Custom_Strategy.md",         "type": "md" },
-    { "label": "Q2 2026 Strategy Condensed",                          "path": "Surfpoint_Recovery_Q2_2026_Strategy_Condensed.md",      "type": "md" },
-    { "label": "Strategic Approach (why this, in this order)",        "path": "Surfpoint_Strategic_Approach_2026-05-12.md",            "type": "md" },
-    { "label": "One-Pager — Organic Visibility Diagnosis (2026-05-14)","path": "Surfpoint_Onepager_2026Q2.md",                         "type": "md" },
-    { "label": "3-Month Plan (Q2-Q3)",                                "path": "Surfpoint_3Month_Plan_2026Q2-Q3.md",                    "type": "md" },
-    { "label": "3-Month Tasks (final, SEO-NEO filtered)",             "path": "Surfpoint_3Month_Tasks_FINAL.csv",                      "type": "csv" },
-    { "label": "Owner Conversation Items (one 30-min call)",          "path": "Surfpoint_Owner_Conversation_Items.md",                 "type": "md" },
-    { "label": "GBP Audit + Competitive Position",                    "path": "Surfpoint_GBP_Audit_2026-05-12.md",                     "type": "md" },
-    { "label": "GBP Rationale",                                       "path": "Surfpoint_GBP_Rationale.md",                            "type": "md" },
-    { "label": "Backlinks + Citations Strategy",                      "path": "Surfpoint_Backlinks_Citations_Strategy.md",             "type": "md" },
-    { "label": "Backlinks + Citations Strategy (docx)",               "path": "Surfpoint_Backlinks_Citations_Strategy.docx",           "type": "docx" },
-    { "label": "Citations + Links Rationale",                         "path": "Surfpoint_Citations_Links_Rationale.md",                "type": "md" },
-    { "label": "Disavow file (183 AUTO + 42 borderline)",             "path": "Surfpoint_Disavow.txt",                                 "type": "txt" },
-    { "label": "Disavow Decisions (per-domain rationale)",            "path": "Surfpoint_Disavow_Decisions.csv",                       "type": "csv" },
-    { "label": "Homepage Update Brief (24 CRD items)",                "path": "Surfpoint_Homepage_Update_Brief.md",                    "type": "md" },
-    { "label": "Treatments Hub Update Brief (T-01..T-16)",            "path": "Surfpoint_Treatments_Hub_Update_Brief.md",              "type": "md" },
-    { "label": "Treatments Sub-Pages Build Plan (SP-01..SP-06)",      "path": "Surfpoint_Treatments_SubPages_BuildPlan.md",            "type": "md" },
-    { "label": "Services Legacy Redirect Plan (5 × 301)",             "path": "Surfpoint_Services_Legacy_Redirect_Plan.md",            "type": "md" },
-    { "label": "About-Us Update Brief",                               "path": "Surfpoint_About_Us_Update_Brief.md",                    "type": "md" },
-    { "label": "SubPage Brief — Alcohol Detox",                       "path": "Surfpoint_SubPage_Alcohol_Detox_Brief.md",              "type": "md" },
-    { "label": "SubPage Brief — Opioid Detox",                        "path": "Surfpoint_SubPage_Opioid_Detox_Brief.md",               "type": "md" },
-    { "label": "Site Architecture Rationale",                         "path": "Surfpoint_Site_Architecture_Rationale.md",              "type": "md" },
-    { "label": "Site Architecture Audit Methodology",                 "path": "Surfpoint_Site_Architecture_Audit_Methodology.md",      "type": "md" },
-    { "label": "Site Structure Link Management Explainer",            "path": "Surfpoint_Site_Structure_Link_Management_Explainer.md", "type": "md" },
-    { "label": "Landing Pages Rationale",                             "path": "Surfpoint_Landing_Pages_Rationale.md",                  "type": "md" },
-    { "label": "Crawl Budget Rationale",                              "path": "Surfpoint_Crawl_Budget_Rationale.md",                   "type": "md" },
-    { "label": "Task1 Rebuild Plan",                                  "path": "Surfpoint_Task1_Rebuild_Plan.md",                       "type": "md" },
-    { "label": "Task1 M1 Location Cleanup Brief (LP-01 detail)",      "path": "Surfpoint_Task1_M1_Location_Cleanup_Brief.md",          "type": "md" },
-    { "label": "Task4 Index Hygiene Brief",                           "path": "Surfpoint_Task4_Index_Hygiene_Brief.md",                "type": "md" },
-    { "label": "All 99 Location Pages Decisions",                     "path": "Surfpoint_All99_Location_Pages_Decisions.csv",          "type": "csv" },
-    { "label": "Location Pages Local-Relevance",                      "path": "Surfpoint_Location_Pages_LocalRelevance.csv",           "type": "csv" },
-    { "label": "Location Pages Uniqueness (40 verbose-slug Q3 batch)","path": "Surfpoint_Location_Pages_Uniqueness.csv",               "type": "csv" },
-    { "label": "All Link + Citation Opportunities",                   "path": "Surfpoint_All_Link_Citation_Opps.csv",                  "type": "csv" },
-    { "label": "All Link + Citation Opportunities (compact)",         "path": "Surfpoint_All_Link_Citation_Opps_compact.xlsx",         "type": "xlsx" },
-    { "label": "Competitor Delta Oct 2025 → Apr 2026",                "path": "Surfpoint_Competitor_Delta_Oct2025_Apr2026.csv",        "type": "csv" },
-    { "label": "Service Matrix (5 clusters × competitors, 2026-05-08)","path": "Surfpoint_Service_Matrix_2026-05-08.csv",              "type": "csv" },
-    { "label": "Pages Plan Month 1-3 (xlsx)",                         "path": "Surfpoint_Pages_Plan_Month1-3.xlsx",                    "type": "xlsx" },
-    { "label": "Pages To Create",                                     "path": "Surfpoint_Pages_To_Create.csv",                         "type": "csv" },
-    { "label": "Meta Refresh Pages",                                  "path": "Surfpoint_Meta_Refresh_Pages.xlsx",                     "type": "xlsx" },
-    { "label": "GBP Posts 3-Month Plan",                              "path": "Surfpoint_GBP_Posts_3Month.xlsx",                       "type": "xlsx" },
-    { "label": "Off-Page Citations 3-Month (foundational + topical)", "path": "Surfpoint_OffPage_Citations_3Month.xlsx",               "type": "xlsx" },
-    { "label": "Schema Plan 3-Month",                                 "path": "Surfpoint_Schema_Plan_3Month.xlsx",                     "type": "xlsx" },
-    { "label": "Blog Refresh 3-Month (9-post Q2 cycle)",              "path": "Surfpoint_Blog_Refresh_3Month.xlsx",                    "type": "xlsx" },
-    { "label": "Suburb Pages 3-Month",                                "path": "Surfpoint_Suburb_Pages_3Month.xlsx",                    "type": "xlsx" },
-    { "label": "Location Pages Plan 3-Month",                         "path": "Surfpoint_Location_Pages_Plan_3Month.xlsx",             "type": "xlsx" },
-    { "label": "Deindexed URLs with GSC",                             "path": "Surfpoint_Deindexed_URLs_with_GSC.csv",                 "type": "csv" },
-    { "label": "NOINDEX 128 URLs with GSC",                           "path": "Surfpoint_NOINDEX_128_URLs_with_GSC.csv",               "type": "csv" }
+    {
+      "label": "Q2 2026 Custom Strategy (long form)",
+      "path": "Surfpoint_Recovery_Q2_2026_Custom_Strategy.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Strategy Condensed",
+      "path": "Surfpoint_Recovery_Q2_2026_Strategy_Condensed.md",
+      "type": "md"
+    },
+    {
+      "label": "Strategic Approach (why this, in this order)",
+      "path": "Surfpoint_Strategic_Approach_2026-05-12.md",
+      "type": "md"
+    },
+    {
+      "label": "One-Pager — Organic Visibility Diagnosis (2026-05-14)",
+      "path": "Surfpoint_Onepager_2026Q2.md",
+      "type": "md"
+    },
+    {
+      "label": "3-Month Plan (Q2-Q3)",
+      "path": "Surfpoint_3Month_Plan_2026Q2-Q3.md",
+      "type": "md"
+    },
+    {
+      "label": "3-Month Tasks (final, SEO-NEO filtered)",
+      "path": "Surfpoint_3Month_Tasks_FINAL.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Owner Conversation Items (one 30-min call)",
+      "path": "Surfpoint_Owner_Conversation_Items.md",
+      "type": "md"
+    },
+    {
+      "label": "GBP Audit + Competitive Position",
+      "path": "Surfpoint_GBP_Audit_2026-05-12.md",
+      "type": "md"
+    },
+    {
+      "label": "GBP Rationale",
+      "path": "Surfpoint_GBP_Rationale.md",
+      "type": "md"
+    },
+    {
+      "label": "Backlinks + Citations Strategy",
+      "path": "Surfpoint_Backlinks_Citations_Strategy.md",
+      "type": "md"
+    },
+    {
+      "label": "Backlinks + Citations Strategy (docx)",
+      "path": "Surfpoint_Backlinks_Citations_Strategy.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Citations + Links Rationale",
+      "path": "Surfpoint_Citations_Links_Rationale.md",
+      "type": "md"
+    },
+    {
+      "label": "Disavow file (183 AUTO + 42 borderline)",
+      "path": "Surfpoint_Disavow.txt",
+      "type": "txt"
+    },
+    {
+      "label": "Disavow Decisions (per-domain rationale)",
+      "path": "Surfpoint_Disavow_Decisions.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Homepage Update Brief (24 CRD items)",
+      "path": "Surfpoint_Homepage_Update_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Treatments Hub Update Brief (T-01..T-16)",
+      "path": "Surfpoint_Treatments_Hub_Update_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Treatments Sub-Pages Build Plan (SP-01..SP-06)",
+      "path": "Surfpoint_Treatments_SubPages_BuildPlan.md",
+      "type": "md"
+    },
+    {
+      "label": "Services Legacy Redirect Plan (5 × 301)",
+      "path": "Surfpoint_Services_Legacy_Redirect_Plan.md",
+      "type": "md"
+    },
+    {
+      "label": "About-Us Update Brief",
+      "path": "Surfpoint_About_Us_Update_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "SubPage Brief — Alcohol Detox",
+      "path": "Surfpoint_SubPage_Alcohol_Detox_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "SubPage Brief — Opioid Detox",
+      "path": "Surfpoint_SubPage_Opioid_Detox_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Site Architecture Rationale",
+      "path": "Surfpoint_Site_Architecture_Rationale.md",
+      "type": "md"
+    },
+    {
+      "label": "Site Architecture Audit Methodology",
+      "path": "Surfpoint_Site_Architecture_Audit_Methodology.md",
+      "type": "md"
+    },
+    {
+      "label": "Site Structure Link Management Explainer",
+      "path": "Surfpoint_Site_Structure_Link_Management_Explainer.md",
+      "type": "md"
+    },
+    {
+      "label": "Landing Pages Rationale",
+      "path": "Surfpoint_Landing_Pages_Rationale.md",
+      "type": "md"
+    },
+    {
+      "label": "Crawl Budget Rationale",
+      "path": "Surfpoint_Crawl_Budget_Rationale.md",
+      "type": "md"
+    },
+    {
+      "label": "Task1 Rebuild Plan",
+      "path": "Surfpoint_Task1_Rebuild_Plan.md",
+      "type": "md"
+    },
+    {
+      "label": "Task1 M1 Location Cleanup Brief (LP-01 detail)",
+      "path": "Surfpoint_Task1_M1_Location_Cleanup_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "Task4 Index Hygiene Brief",
+      "path": "Surfpoint_Task4_Index_Hygiene_Brief.md",
+      "type": "md"
+    },
+    {
+      "label": "All 99 Location Pages Decisions",
+      "path": "Surfpoint_All99_Location_Pages_Decisions.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Location Pages Local-Relevance",
+      "path": "Surfpoint_Location_Pages_LocalRelevance.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Location Pages Uniqueness (40 verbose-slug Q3 batch)",
+      "path": "Surfpoint_Location_Pages_Uniqueness.csv",
+      "type": "csv"
+    },
+    {
+      "label": "All Link + Citation Opportunities",
+      "path": "Surfpoint_All_Link_Citation_Opps.csv",
+      "type": "csv"
+    },
+    {
+      "label": "All Link + Citation Opportunities (compact)",
+      "path": "Surfpoint_All_Link_Citation_Opps_compact.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Competitor Delta Oct 2025 → Apr 2026",
+      "path": "Surfpoint_Competitor_Delta_Oct2025_Apr2026.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Service Matrix (5 clusters × competitors, 2026-05-08)",
+      "path": "Surfpoint_Service_Matrix_2026-05-08.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Pages Plan Month 1-3 (xlsx)",
+      "path": "Surfpoint_Pages_Plan_Month1-3.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Pages To Create",
+      "path": "Surfpoint_Pages_To_Create.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Meta Refresh Pages",
+      "path": "Surfpoint_Meta_Refresh_Pages.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "GBP Posts 3-Month Plan",
+      "path": "Surfpoint_GBP_Posts_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Off-Page Citations 3-Month (foundational + topical)",
+      "path": "Surfpoint_OffPage_Citations_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Schema Plan 3-Month",
+      "path": "Surfpoint_Schema_Plan_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Blog Refresh 3-Month (9-post Q2 cycle)",
+      "path": "Surfpoint_Blog_Refresh_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Suburb Pages 3-Month",
+      "path": "Surfpoint_Suburb_Pages_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Location Pages Plan 3-Month",
+      "path": "Surfpoint_Location_Pages_Plan_3Month.xlsx",
+      "type": "xlsx"
+    },
+    {
+      "label": "Deindexed URLs with GSC",
+      "path": "Surfpoint_Deindexed_URLs_with_GSC.csv",
+      "type": "csv"
+    },
+    {
+      "label": "NOINDEX 128 URLs with GSC",
+      "path": "Surfpoint_NOINDEX_128_URLs_with_GSC.csv",
+      "type": "csv"
+    }
   ],
   "owner_asks": [
     "Publish the homepage CRD update — drafted March 2026, in client review 2 months. Either approve as-is or tell us 2–3 changes; we ship within 48h. Every downstream improvement (Treatments hub, sub-pages, schema) inherits homepage structure.",
@@ -337,12 +1429,169 @@
     "Disavow file upload — informational, not blocking. HQDM uploads the 183 AUTO-disavow + 42 borderline file to GSC via existing Search Console access. Likely contributing to the −79% impression drop."
   ],
   "kpi_targets": [
-    { "kpi": "GSC daily impressions (7d rolling)",                                      "baseline": "−79% peak-to-current", "target": "Bottom + reverse",  "stretch": "≥ Feb 2026 baseline" },
-    { "kpi": "Total URLs known to Google (GSC Coverage)",                               "baseline": "1,313 (−37%)",         "target": "Stabilize + growth", "stretch": "≥1,500" },
-    { "kpi": "Service-page sessions (5 pages combined, 90d)",                           "baseline": "26",                   "target": "≥250",               "stretch": "≥500" },
-    { "kpi": "Spam score (DataForSEO Backlinks)",                                       "baseline": "43",                   "target": "≤35",                "stretch": "<30" },
-    { "kpi": "LD pooled top-3 cells (1 anchor → 8 anchors × 2 coords)",                 "baseline": "130 / 136",            "target": "Maintain ≥130 + baseline 7 new", "stretch": "≥75% top-3 across 8 anchors" },
-    { "kpi": "GBP profile depth (photos / categories / attributes / Q&A answered)",     "baseline": "9 / 5 / 5 / 0",        "target": "30+ / 9 / 8 / 15+",  "stretch": "50+ / 9 / 9 / 20+" },
-    { "kpi": "LLM citation rate — commercial-local (10 prompts × 4 models)",            "baseline": "7/10",                 "target": "≥9/10",              "stretch": "10/10 + 2/8 research-phase" }
-  ]
+    {
+      "kpi": "GSC daily impressions (7d rolling)",
+      "baseline": "−79% peak-to-current",
+      "target": "Bottom + reverse",
+      "stretch": "≥ Feb 2026 baseline"
+    },
+    {
+      "kpi": "Total URLs known to Google (GSC Coverage)",
+      "baseline": "1,313 (−37%)",
+      "target": "Stabilize + growth",
+      "stretch": "≥1,500"
+    },
+    {
+      "kpi": "Service-page sessions (5 pages combined, 90d)",
+      "baseline": "26",
+      "target": "≥250",
+      "stretch": "≥500"
+    },
+    {
+      "kpi": "Spam score (DataForSEO Backlinks)",
+      "baseline": "43",
+      "target": "≤35",
+      "stretch": "<30"
+    },
+    {
+      "kpi": "LD pooled top-3 cells (1 anchor → 8 anchors × 2 coords)",
+      "baseline": "130 / 136",
+      "target": "Maintain ≥130 + baseline 7 new",
+      "stretch": "≥75% top-3 across 8 anchors"
+    },
+    {
+      "kpi": "GBP profile depth (photos / categories / attributes / Q&A answered)",
+      "baseline": "9 / 5 / 5 / 0",
+      "target": "30+ / 9 / 8 / 15+",
+      "stretch": "50+ / 9 / 9 / 20+"
+    },
+    {
+      "kpi": "LLM citation rate — commercial-local (10 prompts × 4 models)",
+      "baseline": "7/10",
+      "target": "≥9/10",
+      "stretch": "10/10 + 2/8 research-phase"
+    }
+  ],
+  "gsc_organic_trend": {
+    "headline": "Daily impressions −79% peak-to-current (Feb 7 → May 4 2026). Crawl-budget re-evaluation March 16 (524 requests vs 70–100 baseline) — algorithmic action recognizing low-quality patterns at scale.",
+    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. May 2026 partial (first 8 days). The drop is blog-cohort (147 of 208 blog posts in bleeding cohort, −50% to −85% trend / 90d); homepage and the 16 core pages (which carry 98.5% of conversions) impressions remain stable.",
+    "may_extrapolation_note": "May 2026 partial — first 8 days at trailing pace.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        3050,
+        3580,
+        4120,
+        4380,
+        4090,
+        3870,
+        3420,
+        2980,
+        2810,
+        2620,
+        1830,
+        870,
+        200
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        620,
+        760,
+        880,
+        950,
+        920,
+        880,
+        810,
+        720,
+        700,
+        680,
+        480,
+        220,
+        50
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 7,
+        "label": "Dec 2025 — bleed begins",
+        "type": "negative"
+      },
+      {
+        "month_index": 10,
+        "label": "Mar 16 — crawl-budget re-eval (524 req/day)",
+        "type": "negative"
+      },
+      {
+        "month_index": 11,
+        "label": "Apr 2026 — −79% peak-to-current",
+        "type": "negative"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "org_sess": 3583,
+        "org_conv": 753,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 4197,
+        "org_conv": 917,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 3423,
+        "org_conv": 803,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 2420,
+        "org_conv": 620,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr–May to date)",
+        "org_sess": 1070,
+        "org_conv": 270,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  }
 }

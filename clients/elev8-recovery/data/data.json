@@ -52,80 +52,645 @@
     }
   ],
   "trend": {
-    "headline": "Organic peaked Feb–Mar 2026, then a sharp Apr–May pullback (AIO encroachment on the informational blog)",
-    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. Apr–May pullback is blog-side (informational impressions lost to AI Overview); homepage and service-page impressions remain stable. May 2026 partial (first 14 days).",
-    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): gmb_click (1203) + form_submit (238)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
-      "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025",
-      "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
     ],
     "sessions": {
-      "organic": [2456, 6092, 4708, 4360, 4064, 3859, 3474, 4542, 5842, 7054, 7423, 3639, 2004]
+      "organic": [
+        3604,
+        4432,
+        4843,
+        5128,
+        5365,
+        5816,
+        7781,
+        6153,
+        5712,
+        5428,
+        5224,
+        4689,
+        5713,
+        6893,
+        8347,
+        9133,
+        4834,
+        3366
+      ],
+      "direct": [
+        382,
+        569,
+        697,
+        549,
+        641,
+        764,
+        842,
+        891,
+        764,
+        923,
+        1488,
+        2720,
+        2265,
+        2290,
+        2796,
+        3093,
+        1994,
+        1526
+      ],
+      "referral": [
+        75,
+        57,
+        78,
+        208,
+        122,
+        129,
+        98,
+        543,
+        94,
+        93,
+        117,
+        102,
+        69,
+        78,
+        90,
+        104,
+        56,
+        67
+      ],
+      "social": [
+        6,
+        22,
+        9,
+        13,
+        9,
+        10,
+        12,
+        6,
+        14,
+        16,
+        7,
+        10,
+        17,
+        10,
+        24,
+        34,
+        17,
+        9
+      ],
+      "other": [
+        5,
+        2,
+        20,
+        14,
+        18,
+        29,
+        15,
+        13,
+        19,
+        11,
+        18,
+        141,
+        401,
+        107,
+        147,
+        56,
+        20,
+        6
+      ]
     },
     "form_submits": {
-      "organic": [435, 1053, 1106, 1081, 850, 775, 750, 1118, 1489, 1826, 2169, 1125, 441]
+      "organic": [
+        4.0,
+        8.0,
+        8.0,
+        9.0,
+        15.0,
+        13.0,
+        13.0,
+        70.0,
+        333.0,
+        375.0,
+        329.0,
+        267.0,
+        307.0,
+        409.0,
+        385.0,
+        456.0,
+        433.0,
+        251.0
+      ],
+      "direct": [
+        0.0,
+        0.0,
+        7.0,
+        1.0,
+        2.0,
+        2.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        0.0,
+        99.0,
+        25.0,
+        45.0,
+        65.0,
+        111.0,
+        61.0,
+        29.0
+      ],
+      "referral": [
+        0.0,
+        0.0,
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "social": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        8.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ]
     },
     "series_labels": {
-      "sessions": "GSC Organic Clicks (monthly)",
-      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+      "sessions": "GA4 Sessions",
+      "form_submits": "GA4 Conversions  (gmb_click (1203) + form_submit (238))"
     },
-    "events": [
-      { "month_index": 9, "label": "Feb 2026 — peak organic", "type": "positive" },
-      { "month_index": 11, "label": "Apr 2026 — AIO encroachment on blog", "type": "negative" }
-    ],
+    "channel_labels": {
+      "organic": "Organic Search",
+      "direct": "Direct",
+      "referral": "Referral",
+      "social": "Organic Social",
+      "other": "Other / Unassigned"
+    },
+    "events": [],
     "quarterly": [
-      { "q": "Q2 2025",        "org_sess": 4419, "org_conv": 865,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q3 2025",        "org_sess": 4094, "org_conv": 902,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q4 2025",        "org_sess": 3958, "org_conv": 879,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q1 2026 (peak)", "org_sess": 6773, "org_conv": 1828, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q2 2026* (Apr–May to date)", "org_sess": 2822, "org_conv": 783, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null }
-    ]
+      {
+        "q": "Dec 2024",
+        "org_sess": 3604,
+        "org_conv": 4.0,
+        "org_cr": 0.1,
+        "gbp_sess": 382,
+        "gbp_conv": 0.0,
+        "gbp_cr": 0.0
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 4801,
+        "org_conv": 8.3,
+        "org_cr": 0.2,
+        "gbp_sess": 605,
+        "gbp_conv": 2.7,
+        "gbp_cr": 0.4
+      },
+      {
+        "q": "Q2 2025",
+        "org_sess": 6320,
+        "org_conv": 13.7,
+        "org_cr": 0.2,
+        "gbp_sess": 749,
+        "gbp_conv": 1.7,
+        "gbp_cr": 0.2
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 5764,
+        "org_conv": 259.3,
+        "org_cr": 4.5,
+        "gbp_sess": 859,
+        "gbp_conv": 3.3,
+        "gbp_cr": 0.4
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 5208,
+        "org_conv": 301.0,
+        "org_cr": 5.8,
+        "gbp_sess": 2157,
+        "gbp_conv": 41.3,
+        "gbp_cr": 1.9
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 8124,
+        "org_conv": 416.7,
+        "org_cr": 5.1,
+        "gbp_sess": 2726,
+        "gbp_conv": 73.7,
+        "gbp_cr": 2.7
+      },
+      {
+        "q": "Q2 2026*",
+        "org_sess": 4100,
+        "org_conv": 342.0,
+        "org_cr": 8.3,
+        "gbp_sess": 1760,
+        "gbp_conv": 45.0,
+        "gbp_cr": 2.6
+      }
+    ],
+    "channel_colors": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "social": "#f59e0b",
+      "other": "#9ca3af"
+    }
   },
   "per_keyword": [
-    { "keyword": "dual diagnosis treatment centers nyc", "feb_cells": 140, "may_cells": 140, "feb_avg": 2.18, "may_avg": 1.98, "pos_gained": 0.20,  "feb_top3": 95,  "may_top3": 105 },
-    { "keyword": "inpatient alcohol rehab nyc",          "feb_cells": 140, "may_cells": 140, "feb_avg": 3.75, "may_avg": 3.39, "pos_gained": 0.36,  "feb_top3": 60,  "may_top3": 70 },
-    { "keyword": "inpatient drug rehab nyc",             "feb_cells": 140, "may_cells": 140, "feb_avg": 3.80, "may_avg": 3.42, "pos_gained": 0.38,  "feb_top3": 58,  "may_top3": 72 },
-    { "keyword": "addiction rehab ny",                   "feb_cells": 140, "may_cells": 140, "feb_avg": 4.09, "may_avg": 3.56, "pos_gained": 0.53,  "feb_top3": 35,  "may_top3": 52 },
-    { "keyword": "alcohol rehab nyc",                    "feb_cells": 140, "may_cells": 140, "feb_avg": 5.16, "may_avg": 3.79, "pos_gained": 1.37,  "feb_top3": 22,  "may_top3": 60 },
-    { "keyword": "alcohol rehab near me",                "feb_cells": 140, "may_cells": 140, "feb_avg": 6.68, "may_avg": 5.57, "pos_gained": 1.11,  "feb_top3": 12,  "may_top3": 28 },
-    { "keyword": "addiction treatment nyc",              "feb_cells": 140, "may_cells": 140, "feb_avg": 8.13, "may_avg": 6.61, "pos_gained": 1.52,  "feb_top3": 6,   "may_top3": 18 },
-    { "keyword": "detox near me",                        "feb_cells": 137, "may_cells": 137, "feb_avg": 5.59, "may_avg": 5.47, "pos_gained": 0.12,  "feb_top3": 18,  "may_top3": 20 }
+    {
+      "keyword": "dual diagnosis treatment centers nyc",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 2.18,
+      "may_avg": 1.98,
+      "pos_gained": 0.2,
+      "feb_top3": 95,
+      "may_top3": 105
+    },
+    {
+      "keyword": "inpatient alcohol rehab nyc",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 3.75,
+      "may_avg": 3.39,
+      "pos_gained": 0.36,
+      "feb_top3": 60,
+      "may_top3": 70
+    },
+    {
+      "keyword": "inpatient drug rehab nyc",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 3.8,
+      "may_avg": 3.42,
+      "pos_gained": 0.38,
+      "feb_top3": 58,
+      "may_top3": 72
+    },
+    {
+      "keyword": "addiction rehab ny",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 4.09,
+      "may_avg": 3.56,
+      "pos_gained": 0.53,
+      "feb_top3": 35,
+      "may_top3": 52
+    },
+    {
+      "keyword": "alcohol rehab nyc",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 5.16,
+      "may_avg": 3.79,
+      "pos_gained": 1.37,
+      "feb_top3": 22,
+      "may_top3": 60
+    },
+    {
+      "keyword": "alcohol rehab near me",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 6.68,
+      "may_avg": 5.57,
+      "pos_gained": 1.11,
+      "feb_top3": 12,
+      "may_top3": 28
+    },
+    {
+      "keyword": "addiction treatment nyc",
+      "feb_cells": 140,
+      "may_cells": 140,
+      "feb_avg": 8.13,
+      "may_avg": 6.61,
+      "pos_gained": 1.52,
+      "feb_top3": 6,
+      "may_top3": 18
+    },
+    {
+      "keyword": "detox near me",
+      "feb_cells": 137,
+      "may_cells": 137,
+      "feb_avg": 5.59,
+      "may_avg": 5.47,
+      "pos_gained": 0.12,
+      "feb_top3": 18,
+      "may_top3": 20
+    }
   ],
   "ld_leaderboard": [
-    { "name": "Elev8 Recovery",                          "may_top3": 425, "delta_top3": 105, "may_avg_rank": 4.10, "delta_avg_rank": 0.71, "cells": 1117, "note": "Only NYC addiction pin gaining on ALL 8 kws (95 reviews / 4.5★)", "is_client": true },
-    { "name": "Ascendant Intensive Outpatient",          "may_top3": 380, "delta_top3": 88,  "may_avg_rank": 4.85, "delta_avg_rank": 0.55, "cells": 1080, "note": "#1 gainer on 4 of 8 kws (68 reviews / 5.0★) — primary competitive reality", "is_client": false },
-    { "name": "Odyssey House George Rosenfeld",          "may_top3": 245, "delta_top3": 52,  "may_avg_rank": 6.90, "delta_avg_rank": 0.40, "cells": 905,  "note": "Consistent #2–#4 mover across most kws", "is_client": false },
-    { "name": "The Bridge NYC Sober Living",             "may_top3": 165, "delta_top3": 48,  "may_avg_rank": 7.50, "delta_avg_rank": 0.50, "cells": 690,  "note": "Sober-living adjacency, not direct competitor", "is_client": false },
-    { "name": "Wellbridge Drug & Alcohol Rehab",         "may_top3": 285, "delta_top3": 12,  "may_avg_rank": 5.20, "delta_avg_rank": 0.05, "cells": 740,  "note": "UES + Midtown E + Murray Hill — biggest geographic displacement target (44 reviews / 4.9★)", "is_client": false },
-    { "name": "NYS Detox",                               "may_top3": 95,  "delta_top3": 62,  "may_avg_rank": 8.90, "delta_avg_rank": 1.10, "cells": 540,  "note": "8 reviews / 4.1★ — gaining +162 to +297 across 4 kws; forensic pull pending", "is_client": false },
-    { "name": "Hazelden Betty Ford Foundation",          "may_top3": 130, "delta_top3": 28,  "may_avg_rank": 9.10, "delta_avg_rank": 0.25, "cells": 615,  "note": "National brand encroaching on Manhattan", "is_client": false },
-    { "name": "Bronx Recovery",                          "may_top3": 75,  "delta_top3": 38,  "may_avg_rank": 10.20,"delta_avg_rank": 0.95, "cells": 360,  "note": "New entrant climbing fast (9 reviews / 4.6★)", "is_client": false },
-    { "name": "North Jersey Recovery Center",            "may_top3": 88,  "delta_top3": -22, "may_avg_rank": 11.30,"delta_avg_rank": -0.45,"cells": 430,  "note": "Cross-river 'near me' presence weakening — opportunity", "is_client": false },
-    { "name": "Optimus Center for Recovery NY",          "may_top3": 35,  "delta_top3": -98, "may_avg_rank": 14.60,"delta_avg_rank": -1.85,"cells": 280,  "note": "Collapsing −156 to −274 across all 8 kws — freed cells absorbed passively", "is_client": false }
+    {
+      "name": "Elev8 Recovery",
+      "may_top3": 425,
+      "delta_top3": 105,
+      "may_avg_rank": 4.1,
+      "delta_avg_rank": 0.71,
+      "cells": 1117,
+      "note": "Only NYC addiction pin gaining on ALL 8 kws (95 reviews / 4.5★)",
+      "is_client": true
+    },
+    {
+      "name": "Ascendant Intensive Outpatient",
+      "may_top3": 380,
+      "delta_top3": 88,
+      "may_avg_rank": 4.85,
+      "delta_avg_rank": 0.55,
+      "cells": 1080,
+      "note": "#1 gainer on 4 of 8 kws (68 reviews / 5.0★) — primary competitive reality",
+      "is_client": false
+    },
+    {
+      "name": "Odyssey House George Rosenfeld",
+      "may_top3": 245,
+      "delta_top3": 52,
+      "may_avg_rank": 6.9,
+      "delta_avg_rank": 0.4,
+      "cells": 905,
+      "note": "Consistent #2–#4 mover across most kws",
+      "is_client": false
+    },
+    {
+      "name": "The Bridge NYC Sober Living",
+      "may_top3": 165,
+      "delta_top3": 48,
+      "may_avg_rank": 7.5,
+      "delta_avg_rank": 0.5,
+      "cells": 690,
+      "note": "Sober-living adjacency, not direct competitor",
+      "is_client": false
+    },
+    {
+      "name": "Wellbridge Drug & Alcohol Rehab",
+      "may_top3": 285,
+      "delta_top3": 12,
+      "may_avg_rank": 5.2,
+      "delta_avg_rank": 0.05,
+      "cells": 740,
+      "note": "UES + Midtown E + Murray Hill — biggest geographic displacement target (44 reviews / 4.9★)",
+      "is_client": false
+    },
+    {
+      "name": "NYS Detox",
+      "may_top3": 95,
+      "delta_top3": 62,
+      "may_avg_rank": 8.9,
+      "delta_avg_rank": 1.1,
+      "cells": 540,
+      "note": "8 reviews / 4.1★ — gaining +162 to +297 across 4 kws; forensic pull pending",
+      "is_client": false
+    },
+    {
+      "name": "Hazelden Betty Ford Foundation",
+      "may_top3": 130,
+      "delta_top3": 28,
+      "may_avg_rank": 9.1,
+      "delta_avg_rank": 0.25,
+      "cells": 615,
+      "note": "National brand encroaching on Manhattan",
+      "is_client": false
+    },
+    {
+      "name": "Bronx Recovery",
+      "may_top3": 75,
+      "delta_top3": 38,
+      "may_avg_rank": 10.2,
+      "delta_avg_rank": 0.95,
+      "cells": 360,
+      "note": "New entrant climbing fast (9 reviews / 4.6★)",
+      "is_client": false
+    },
+    {
+      "name": "North Jersey Recovery Center",
+      "may_top3": 88,
+      "delta_top3": -22,
+      "may_avg_rank": 11.3,
+      "delta_avg_rank": -0.45,
+      "cells": 430,
+      "note": "Cross-river 'near me' presence weakening — opportunity",
+      "is_client": false
+    },
+    {
+      "name": "Optimus Center for Recovery NY",
+      "may_top3": 35,
+      "delta_top3": -98,
+      "may_avg_rank": 14.6,
+      "delta_avg_rank": -1.85,
+      "cells": 280,
+      "note": "Collapsing −156 to −274 across all 8 kws — freed cells absorbed passively",
+      "is_client": false
+    }
   ],
   "gsc_decline": [
-    { "month": "2025-08", "label": "Aug 2025",         "pages": 168, "imp": 1080662, "clicks": 4360, "delta_pct": 0 },
-    { "month": "2025-11", "label": "Q4 trough",        "pages": 161, "imp": 749500,  "clicks": 3474, "delta_pct": -31 },
-    { "month": "2026-02", "label": "Feb peak",         "pages": 198, "imp": 1825884, "clicks": 7054, "delta_pct": 69 },
-    { "month": "2026-03", "label": "Mar peak",         "pages": 205, "imp": 2169110, "clicks": 7423, "delta_pct": 100 },
-    { "month": "2026-04", "label": "Apr AIO encroach", "pages": 196, "imp": 1124786, "clicks": 3639, "delta_pct": 4 },
-    { "month": "2026-05*", "label": "May partial",     "pages": 188, "imp": 440612,  "clicks": 2004, "delta_pct": -59 }
+    {
+      "month": "2025-08",
+      "label": "Aug 2025",
+      "pages": 168,
+      "imp": 1080662,
+      "clicks": 4360,
+      "delta_pct": 0
+    },
+    {
+      "month": "2025-11",
+      "label": "Q4 trough",
+      "pages": 161,
+      "imp": 749500,
+      "clicks": 3474,
+      "delta_pct": -31
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb peak",
+      "pages": 198,
+      "imp": 1825884,
+      "clicks": 7054,
+      "delta_pct": 69
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar peak",
+      "pages": 205,
+      "imp": 2169110,
+      "clicks": 7423,
+      "delta_pct": 100
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr AIO encroach",
+      "pages": 196,
+      "imp": 1124786,
+      "clicks": 3639,
+      "delta_pct": 4
+    },
+    {
+      "month": "2026-05*",
+      "label": "May partial",
+      "pages": 188,
+      "imp": 440612,
+      "clicks": 2004,
+      "delta_pct": -59
+    }
   ],
   "keyword_buckets": [
-    { "bucket": "Tier A — Owned (pos 1–10 commercial)",       "keywords": 3,  "pct": 4,  "posture": "Defend + extract" },
-    { "bucket": "Tier B — Climbing (pos 11–30 commercial)",   "keywords": 18, "pct": 25, "posture": "Push to page 1 — primary Q2 target (53,800 vol)" },
-    { "bucket": "Tier C — Deep gap (pos 31–100 commercial)",  "keywords": 50, "pct": 71, "posture": "Build pages (75,590 vol)" }
+    {
+      "bucket": "Tier A — Owned (pos 1–10 commercial)",
+      "keywords": 3,
+      "pct": 4,
+      "posture": "Defend + extract"
+    },
+    {
+      "bucket": "Tier B — Climbing (pos 11–30 commercial)",
+      "keywords": 18,
+      "pct": 25,
+      "posture": "Push to page 1 — primary Q2 target (53,800 vol)"
+    },
+    {
+      "bucket": "Tier C — Deep gap (pos 31–100 commercial)",
+      "keywords": 50,
+      "pct": 71,
+      "posture": "Build pages (75,590 vol)"
+    }
   ],
   "top_urls": [
-    { "url": "/",                                            "imp_90d": 90000, "clicks_90d": 320, "pos": 14.5, "class": "home",     "lever": "HP-01..05 Lever A" },
-    { "url": "/suburb/upper-east-side",                      "imp_90d": 32000, "clicks_90d": 65,  "pos": 24.0, "class": "suburb",   "lever": "UES-01 Lever D (13,200 vol)" },
-    { "url": "/suburb/central-harlem-ny",                    "imp_90d": 7106,  "clicks_90d": 280, "pos": 5.7,  "class": "suburb",   "lever": "CON-01 winner (keep)" },
-    { "url": "/blog/suboxone-strips",                        "imp_90d": 26000, "clicks_90d": 110, "pos": 16.0, "class": "blog",     "lever": "BLG-01 Lever C (9,900 vol)" },
-    { "url": "/locations/brooklyn",                          "imp_90d": 850,   "clicks_90d": 4,   "pos": 44.9, "class": "borough",  "lever": "BH-01 Lever B build M1" },
-    { "url": "/locations/queens",                            "imp_90d": 538,   "clicks_90d": 1,   "pos": 48.4, "class": "borough",  "lever": "BH-02 Lever B build M2" },
-    { "url": "/locations/bronx",                             "imp_90d": 103,   "clicks_90d": 0,   "pos": 45.5, "class": "borough",  "lever": "BH-03 Lever B upgrade M3" },
-    { "url": "/suburb/rehab-center-in-east-harlem-ny",       "imp_90d": 658,   "clicks_90d": 8,   "pos": 10.1, "class": "suburb",   "lever": "CON-01 cannibal → 301 to central-harlem" },
-    { "url": "/suburb/stress-free-recovery-center-in-west-harlem-ny", "imp_90d": 1050, "clicks_90d": 18, "pos": 6.7, "class": "suburb", "lever": "CON-01 cannibal → 301 to central-harlem" }
+    {
+      "url": "/",
+      "imp_90d": 90000,
+      "clicks_90d": 320,
+      "pos": 14.5,
+      "class": "home",
+      "lever": "HP-01..05 Lever A"
+    },
+    {
+      "url": "/suburb/upper-east-side",
+      "imp_90d": 32000,
+      "clicks_90d": 65,
+      "pos": 24.0,
+      "class": "suburb",
+      "lever": "UES-01 Lever D (13,200 vol)"
+    },
+    {
+      "url": "/suburb/central-harlem-ny",
+      "imp_90d": 7106,
+      "clicks_90d": 280,
+      "pos": 5.7,
+      "class": "suburb",
+      "lever": "CON-01 winner (keep)"
+    },
+    {
+      "url": "/blog/suboxone-strips",
+      "imp_90d": 26000,
+      "clicks_90d": 110,
+      "pos": 16.0,
+      "class": "blog",
+      "lever": "BLG-01 Lever C (9,900 vol)"
+    },
+    {
+      "url": "/locations/brooklyn",
+      "imp_90d": 850,
+      "clicks_90d": 4,
+      "pos": 44.9,
+      "class": "borough",
+      "lever": "BH-01 Lever B build M1"
+    },
+    {
+      "url": "/locations/queens",
+      "imp_90d": 538,
+      "clicks_90d": 1,
+      "pos": 48.4,
+      "class": "borough",
+      "lever": "BH-02 Lever B build M2"
+    },
+    {
+      "url": "/locations/bronx",
+      "imp_90d": 103,
+      "clicks_90d": 0,
+      "pos": 45.5,
+      "class": "borough",
+      "lever": "BH-03 Lever B upgrade M3"
+    },
+    {
+      "url": "/suburb/rehab-center-in-east-harlem-ny",
+      "imp_90d": 658,
+      "clicks_90d": 8,
+      "pos": 10.1,
+      "class": "suburb",
+      "lever": "CON-01 cannibal → 301 to central-harlem"
+    },
+    {
+      "url": "/suburb/stress-free-recovery-center-in-west-harlem-ny",
+      "imp_90d": 1050,
+      "clicks_90d": 18,
+      "pos": 6.7,
+      "class": "suburb",
+      "lever": "CON-01 cannibal → 301 to central-harlem"
+    }
   ],
   "positives": [
     "Only NYC addiction-treatment pin gaining on ALL 8 tracked Maps kws (+787 cell-positions / zero losses)",
@@ -155,11 +720,36 @@
       "color": "blue",
       "why": "Single URL ranks pos 11–21 for 9 commercial NYC queries totaling 17,100 monthly volume — single URL cannot rank top-5 for 9 different commercial intents AND serve as brand homepage. Splitting unlocks 9 independent page-1 candidates.",
       "actions": [
-        { "code": "HP-01", "name": "Build /drug-rehab-new-york-city (3,600 + 3,600 vol)", "month": "M1", "effort": "L" },
-        { "code": "HP-02", "name": "Build /alcohol-treatment-new-york-city (880 + 880 vol)", "month": "M1", "effort": "L" },
-        { "code": "HP-03", "name": "Build /drug-treatment-nyc (10,800 vol across 3 variants)", "month": "M2", "effort": "L" },
-        { "code": "HP-04", "name": "Build /rehab-centers-nyc (7,600 vol; also parent for borough hubs)", "month": "M2", "effort": "L" },
-        { "code": "HP-05", "name": "Refocus / on brand + 3-office overview + nav into HP-01..04 + BH-01..03", "month": "M3", "effort": "M" }
+        {
+          "code": "HP-01",
+          "name": "Build /drug-rehab-new-york-city (3,600 + 3,600 vol)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "HP-02",
+          "name": "Build /alcohol-treatment-new-york-city (880 + 880 vol)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "HP-03",
+          "name": "Build /drug-treatment-nyc (10,800 vol across 3 variants)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "HP-04",
+          "name": "Build /rehab-centers-nyc (7,600 vol; also parent for borough hubs)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "HP-05",
+          "name": "Refocus / on brand + 3-office overview + nav into HP-01..04 + BH-01..03",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Each homepage-split page reaches pos 8–12 within 60–90d. Brand-protected / via refocus."
     },
@@ -170,11 +760,36 @@
       "color": "green",
       "why": "Single-pin Maps reach is capped at the ~6-mile Harlem grid (89/89 out-of-grid live SERPs confirm). Organic SERP is the only path to Brooklyn/Queens/Bronx capture. 1,727 imp/90d currently bleeding at pos 45+. GBP-01 Astoria-Oregon typo is M1 P0 prereq for Queens hub.",
       "actions": [
-        { "code": "GBP-01", "name": "P0 Astoria-Oregon → Astoria-NY 11102 typo fix (one-line owner edit)", "month": "M1", "effort": "S" },
-        { "code": "BH-01",  "name": "Build /locations/brooklyn borough hub", "month": "M1", "effort": "L" },
-        { "code": "BH-02",  "name": "Build /locations/queens borough hub (gated on GBP-01)", "month": "M2", "effort": "L" },
-        { "code": "BH-03",  "name": "Upgrade /locations/bronx borough hub (pos 81 rewrite)", "month": "M3", "effort": "L" },
-        { "code": "CON-05", "name": "Mount Eden 301s — consolidate Bronx /suburb/* cannibals into BH-03", "month": "M3", "effort": "M" }
+        {
+          "code": "GBP-01",
+          "name": "P0 Astoria-Oregon → Astoria-NY 11102 typo fix (one-line owner edit)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BH-01",
+          "name": "Build /locations/brooklyn borough hub",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "BH-02",
+          "name": "Build /locations/queens borough hub (gated on GBP-01)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "BH-03",
+          "name": "Upgrade /locations/bronx borough hub (pos 81 rewrite)",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "CON-05",
+          "name": "Mount Eden 301s — consolidate Bronx /suburb/* cannibals into BH-03",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Captures 1,727 imp/90d currently at pos 45+. 3 borough hubs ranking top-30 within 90d."
     },
@@ -185,13 +800,48 @@
       "color": "indigo",
       "why": "methadone clinic harlem ranks pos 9.7 with no on-site MAT page. Dual-diagnosis Maps avg #1.98 but organic pos 19.9 — surface unmonetized. Suboxone strips blog ranks pos 16 for 9,900 vol with no commercial pull-through.",
       "actions": [
-        { "code": "MAT-01", "name": "Build /services/medication-assisted-treatment", "month": "M1", "effort": "L" },
-        { "code": "GBP-02", "name": "Add 10 missing services to GBP Services list (MAT / Methadone / Suboxone / Vivitrol / Dual Diagnosis / Outpatient + 4 substance-specific)", "month": "M1", "effort": "S" },
-        { "code": "DD-01",  "name": "Build /services/dual-diagnosis (monetize Maps #1.98 surface)", "month": "M2", "effort": "L" },
-        { "code": "MAT-02", "name": "MAT sub-pages — Methadone / Suboxone / Vivitrol", "month": "M2", "effort": "M" },
-        { "code": "BLG-01", "name": "/blog/suboxone-strips refresh + commercial pull-through to /services/medication-assisted-treatment", "month": "M2", "effort": "S" },
-        { "code": "BLG-02", "name": "Top 8 MAT-adjacent blog → service-page internal links", "month": "M2", "effort": "S" },
-        { "code": "BLG-03", "name": "/blog/what-is-rehab refresh + cross-link", "month": "M3", "effort": "S" }
+        {
+          "code": "MAT-01",
+          "name": "Build /services/medication-assisted-treatment",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "GBP-02",
+          "name": "Add 10 missing services to GBP Services list (MAT / Methadone / Suboxone / Vivitrol / Dual Diagnosis / Outpatient + 4 substance-specific)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "DD-01",
+          "name": "Build /services/dual-diagnosis (monetize Maps #1.98 surface)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "MAT-02",
+          "name": "MAT sub-pages — Methadone / Suboxone / Vivitrol",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-01",
+          "name": "/blog/suboxone-strips refresh + commercial pull-through to /services/medication-assisted-treatment",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-02",
+          "name": "Top 8 MAT-adjacent blog → service-page internal links",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-03",
+          "name": "/blog/what-is-rehab refresh + cross-link",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "Monetize Maps #1.98 dual-diagnosis surface. Capture 15,300 vol MAT-adjacent blog into commercial flow."
     },
@@ -202,14 +852,54 @@
       "color": "purple",
       "why": "64 /suburb/* pages with 5 location-cannibal clusters (Harlem 3 pages, Hamilton Heights, Morningside Heights, Riverside, Mount Eden pairs). /suburb/upper-east-side at pos 24 for 13,200 vol is one push from page 1. GBP photo count 3 vs competitor 50–282.",
       "actions": [
-        { "code": "CON-01", "name": "Harlem 301s — /suburb/stress-free-…-west-harlem + /suburb/rehab-center-in-east-harlem → /suburb/central-harlem-ny", "month": "M1", "effort": "S" },
-        { "code": "CON-02", "name": "Hamilton Heights cannibal pair → winner 301s", "month": "M1", "effort": "S" },
-        { "code": "CON-03", "name": "Morningside Heights cannibal pair → winner 301s", "month": "M1", "effort": "S" },
-        { "code": "UES-01", "name": "/suburb/upper-east-side depth upgrade (1,087w → 2,200+w, 6 new internal links)", "month": "M1", "effort": "L" },
-        { "code": "CON-04", "name": "Riverside 301s + GBP-05 photo brief", "month": "M2", "effort": "M" },
-        { "code": "GBP-05", "name": "GBP photo brief (Owner Ask: 3 → 30+ photos across 6 categories)", "month": "M2", "effort": "M" },
-        { "code": "GBP-06", "name": "GBP attribute population (8 of 10 'From the Business' sections currently blank)", "month": "M2", "effort": "S" },
-        { "code": "GBP-03", "name": "GBP Products refresh — 4 generic → 8 substance/program-specific", "month": "M3", "effort": "S" }
+        {
+          "code": "CON-01",
+          "name": "Harlem 301s — /suburb/stress-free-…-west-harlem + /suburb/rehab-center-in-east-harlem → /suburb/central-harlem-ny",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "CON-02",
+          "name": "Hamilton Heights cannibal pair → winner 301s",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "CON-03",
+          "name": "Morningside Heights cannibal pair → winner 301s",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "UES-01",
+          "name": "/suburb/upper-east-side depth upgrade (1,087w → 2,200+w, 6 new internal links)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "CON-04",
+          "name": "Riverside 301s + GBP-05 photo brief",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-05",
+          "name": "GBP photo brief (Owner Ask: 3 → 30+ photos across 6 categories)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-06",
+          "name": "GBP attribute population (8 of 10 'From the Business' sections currently blank)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-03",
+          "name": "GBP Products refresh — 4 generic → 8 substance/program-specific",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "/suburb/upper-east-side pos 24 → ≤12 by M3. GBP signal completeness (photos / attributes / description tokens) reaches competitor parity."
     },
@@ -220,31 +910,117 @@
       "color": "amber",
       "why": "Service-area-priority-matrix-driven rotation. Pause net-new informational doorway production. Redirect ~40% content budget into the 4 service-hub + 3 borough-hub builds. Establish LLM citation baseline.",
       "actions": [
-        { "code": "DD-02",  "name": "LLM citation baseline audit across 5 surfaces × 8 queries (ChatGPT / Perplexity / Gemini / Copilot / Claude)", "month": "M1", "effort": "M" },
-        { "code": "DD-PIN-01..03", "name": "3 Driving Direction GBP pins UES — Lenox Hill / Yorkville / Carnegie Hill", "month": "M1", "effort": "M" },
-        { "code": "DD-PIN-04..06", "name": "3 Driving Direction GBP pins Queens — Astoria / LIC / Forest Hills", "month": "M2", "effort": "M" },
-        { "code": "DD-PIN-07..09", "name": "3 Driving Direction GBP pins Bronx — Mott Haven / Highbridge / Hunts Point", "month": "M3", "effort": "M" },
-        { "code": "REV-01", "name": "Reviews topic-density expansion (95 → 130 reviews target, sustained M1–M3 cadence)", "month": "M1", "effort": "M" },
-        { "code": "CON-BUDGET", "name": "Redirect ~40% content budget away from informational doorways → into service-hub + borough-hub builds", "month": "M1", "effort": "S" }
+        {
+          "code": "DD-02",
+          "name": "LLM citation baseline audit across 5 surfaces × 8 queries (ChatGPT / Perplexity / Gemini / Copilot / Claude)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "DD-PIN-01..03",
+          "name": "3 Driving Direction GBP pins UES — Lenox Hill / Yorkville / Carnegie Hill",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "DD-PIN-04..06",
+          "name": "3 Driving Direction GBP pins Queens — Astoria / LIC / Forest Hills",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "DD-PIN-07..09",
+          "name": "3 Driving Direction GBP pins Bronx — Mott Haven / Highbridge / Hunts Point",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "REV-01",
+          "name": "Reviews topic-density expansion (95 → 130 reviews target, sustained M1–M3 cadence)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CON-BUDGET",
+          "name": "Redirect ~40% content budget away from informational doorways → into service-hub + borough-hub builds",
+          "month": "M1",
+          "effort": "S"
+        }
       ],
       "outcome": "+1 LLM citation surface per query by M3. Maps cells extended into UES + Queens + Bronx via 9 DD pins. Reviews to 130+. Content velocity refocused on commercial."
     }
   ],
   "deliverables": [
-    { "label": "Strategic Diagnosis (PDF, 3-page)",       "path": "Elev8_Strategic_Diagnosis_2026-05-18.pdf",      "type": "pdf" },
-    { "label": "Strategic Diagnosis (Markdown source)",    "path": "Elev8_Strategic_Diagnosis_2026-05-18.md",       "type": "md" },
-    { "label": "Q2 Strategy Condensed (long-form)",        "path": "Elev8_Q2_2026_Strategy_Condensed.md",           "type": "md" },
-    { "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",  "path": "Elev8_Q2_2026_Tasks_FINAL.csv",                 "type": "csv" },
-    { "label": "Push 1 — Homepage Split",                  "path": "Elev8_Push1_Homepage_Split.docx",               "type": "docx" },
-    { "label": "Push 2 — Borough Hubs",                    "path": "Elev8_Push2_Borough_Hubs.docx",                 "type": "docx" },
-    { "label": "Push 3 — MAT Hub",                         "path": "Elev8_Push3_MAT_Hub.docx",                      "type": "docx" },
-    { "label": "Push 4 — Lock Owned",                      "path": "Elev8_Push4_Lock_Owned.docx",                   "type": "docx" },
-    { "label": "Push 5 — Suburb Consolidation",            "path": "Elev8_Push5_Suburb_Consolidation.docx",         "type": "docx" },
-    { "label": "Pages Action List (23 page actions)",      "path": "Elev8_Pages_Action_List.csv",                   "type": "csv" },
-    { "label": "Internal Linking Map (66 link changes)",   "path": "Elev8_Internal_Linking_Map.csv",                "type": "csv" },
-    { "label": "GBP Action List (8 GBP edits)",            "path": "Elev8_GBP_Action_List.csv",                     "type": "csv" },
-    { "label": "Driving Direction Pins (9 lat/lng)",       "path": "Elev8_Driving_Direction_Pins.csv",              "type": "csv" },
-    { "label": "Reporting Master Template",                "path": "Elev8_Reporting_Master_Template.csv",           "type": "csv" }
+    {
+      "label": "Strategic Diagnosis (PDF, 3-page)",
+      "path": "Elev8_Strategic_Diagnosis_2026-05-18.pdf",
+      "type": "pdf"
+    },
+    {
+      "label": "Strategic Diagnosis (Markdown source)",
+      "path": "Elev8_Strategic_Diagnosis_2026-05-18.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 Strategy Condensed (long-form)",
+      "path": "Elev8_Q2_2026_Strategy_Condensed.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",
+      "path": "Elev8_Q2_2026_Tasks_FINAL.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Push 1 — Homepage Split",
+      "path": "Elev8_Push1_Homepage_Split.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push 2 — Borough Hubs",
+      "path": "Elev8_Push2_Borough_Hubs.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push 3 — MAT Hub",
+      "path": "Elev8_Push3_MAT_Hub.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push 4 — Lock Owned",
+      "path": "Elev8_Push4_Lock_Owned.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Push 5 — Suburb Consolidation",
+      "path": "Elev8_Push5_Suburb_Consolidation.docx",
+      "type": "docx"
+    },
+    {
+      "label": "Pages Action List (23 page actions)",
+      "path": "Elev8_Pages_Action_List.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Internal Linking Map (66 link changes)",
+      "path": "Elev8_Internal_Linking_Map.csv",
+      "type": "csv"
+    },
+    {
+      "label": "GBP Action List (8 GBP edits)",
+      "path": "Elev8_GBP_Action_List.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Driving Direction Pins (9 lat/lng)",
+      "path": "Elev8_Driving_Direction_Pins.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Reporting Master Template",
+      "path": "Elev8_Reporting_Master_Template.csv",
+      "type": "csv"
+    }
   ],
   "owner_asks": [
     "MAT modality scope — is methadone dispensing on-site at Harlem, or referral-only? Affects MAT hub copy + GBP Services accuracy + OASAS attribute claim.",
@@ -252,11 +1028,158 @@
     "GBP photo upload schedule — Lever D completion gated on this. HQDM delivers photo-category brief; owner commits to 30+ photos across 6 categories within 60 days."
   ],
   "kpi_targets": [
-    { "kpi": "Maps grid pooled positions (8 queries × 140 cells × 2 dates)", "baseline": "+787", "target": "Maintain ≥+800",  "stretch": ">+900" },
-    { "kpi": "Tier B commercial-volume capture (% top-10 share on 9 commercial NYC queries)", "baseline": "0%", "target": "≥25%", "stretch": "≥40%" },
-    { "kpi": "methadone clinic harlem position", "baseline": "9.7", "target": "≤5", "stretch": "≤3" },
-    { "kpi": "/suburb/upper-east-side position (upper east side rehab 13,200 vol)", "baseline": "24", "target": "≤12", "stretch": "≤6" },
-    { "kpi": "LLM citation share (5 surfaces × 8 queries)", "baseline": "Establish M1", "target": "+1 surface/query", "stretch": "+2 surface/query" },
-    { "kpi": "GBP photo count", "baseline": "3", "target": "≥30 / 6 categories", "stretch": "≥50" }
-  ]
+    {
+      "kpi": "Maps grid pooled positions (8 queries × 140 cells × 2 dates)",
+      "baseline": "+787",
+      "target": "Maintain ≥+800",
+      "stretch": ">+900"
+    },
+    {
+      "kpi": "Tier B commercial-volume capture (% top-10 share on 9 commercial NYC queries)",
+      "baseline": "0%",
+      "target": "≥25%",
+      "stretch": "≥40%"
+    },
+    {
+      "kpi": "methadone clinic harlem position",
+      "baseline": "9.7",
+      "target": "≤5",
+      "stretch": "≤3"
+    },
+    {
+      "kpi": "/suburb/upper-east-side position (upper east side rehab 13,200 vol)",
+      "baseline": "24",
+      "target": "≤12",
+      "stretch": "≤6"
+    },
+    {
+      "kpi": "LLM citation share (5 surfaces × 8 queries)",
+      "baseline": "Establish M1",
+      "target": "+1 surface/query",
+      "stretch": "+2 surface/query"
+    },
+    {
+      "kpi": "GBP photo count",
+      "baseline": "3",
+      "target": "≥30 / 6 categories",
+      "stretch": "≥50"
+    }
+  ],
+  "gsc_organic_trend": {
+    "headline": "Organic peaked Feb–Mar 2026, then a sharp Apr–May pullback (AIO encroachment on the informational blog)",
+    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. Apr–May pullback is blog-side (informational impressions lost to AI Overview); homepage and service-page impressions remain stable. May 2026 partial (first 14 days).",
+    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        2456,
+        6092,
+        4708,
+        4360,
+        4064,
+        3859,
+        3474,
+        4542,
+        5842,
+        7054,
+        7423,
+        3639,
+        2004
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        435,
+        1053,
+        1106,
+        1081,
+        850,
+        775,
+        750,
+        1118,
+        1489,
+        1826,
+        2169,
+        1125,
+        441
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 9,
+        "label": "Feb 2026 — peak organic",
+        "type": "positive"
+      },
+      {
+        "month_index": 11,
+        "label": "Apr 2026 — AIO encroachment on blog",
+        "type": "negative"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "org_sess": 4419,
+        "org_conv": 865,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 4094,
+        "org_conv": 902,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 3958,
+        "org_conv": 879,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026 (peak)",
+        "org_sess": 6773,
+        "org_conv": 1828,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr–May to date)",
+        "org_sess": 2822,
+        "org_conv": 783,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  }
 }

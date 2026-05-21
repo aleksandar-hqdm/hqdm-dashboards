@@ -51,88 +51,747 @@
     }
   ],
   "trend": {
-    "headline": "Branded engine stable (17.1% CTR / 15,237 imp/365d) — non-branded discovery collapsed 87% in last 30d window",
-    "annotation_text": "Source: GSC live API — 365d daily window aggregated to monthly buckets via 30/90/180/365-day period deltas. May 2026 partial (first 18 days through 2026-05-18). The Apr-May 2026 drop is non-branded; branded search holds steady at 17.1% CTR. The 670-post blog continues publishing through the collapse.",
-    "may_extrapolation_note": "May 2026 partial — first 18 days at trailing pace.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): form_submit (61)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
-      "May 2025", "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025",
-      "Nov 2025", "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
     ],
     "sessions": {
-      "organic": [820, 870, 840, 815, 800, 790, 250, 240, 235, 290, 285, 275, 243]
+      "organic": [
+        4713,
+        5,
+        988,
+        5497,
+        5561,
+        5940,
+        4817,
+        4197,
+        3554,
+        2657,
+        1995,
+        1647,
+        1396,
+        1263,
+        976,
+        1166,
+        985,
+        721
+      ],
+      "direct": [
+        571,
+        0,
+        232,
+        869,
+        599,
+        702,
+        578,
+        669,
+        706,
+        657,
+        991,
+        1928,
+        1528,
+        1022,
+        1256,
+        1013,
+        1096,
+        943
+      ],
+      "referral": [
+        123,
+        0,
+        18,
+        177,
+        211,
+        214,
+        176,
+        166,
+        165,
+        149,
+        122,
+        590,
+        152,
+        144,
+        136,
+        113,
+        173,
+        121
+      ],
+      "paid": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "social": [
+        2,
+        0,
+        3,
+        14,
+        40,
+        3,
+        13,
+        6,
+        12,
+        9,
+        16,
+        23,
+        6,
+        6,
+        10,
+        31,
+        34,
+        5
+      ],
+      "other": [
+        15,
+        0,
+        1,
+        21,
+        43,
+        62,
+        30,
+        21,
+        28,
+        13,
+        9,
+        196,
+        623,
+        58,
+        24,
+        8,
+        8,
+        4
+      ]
     },
     "form_submits": {
-      "organic": [350, 365, 360, 345, 340, 335, 47, 45, 43, 32, 30, 29, 28]
+      "organic": [
+        111.0,
+        0.0,
+        0.0,
+        9.0,
+        7.0,
+        10.0,
+        12.0,
+        26.0,
+        12.0,
+        4.0,
+        4.0,
+        2.0,
+        0.0,
+        2.0,
+        4.0,
+        4.0,
+        1.0,
+        4.0
+      ],
+      "direct": [
+        10.0,
+        0,
+        0.0,
+        17.0,
+        2.0,
+        1.0,
+        5.0,
+        3.0,
+        2.0,
+        1.0,
+        2.0,
+        10.0,
+        13.0,
+        5.0,
+        15.0,
+        20.0,
+        14.0,
+        8.0
+      ],
+      "referral": [
+        1.0,
+        0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        0.0,
+        3.0,
+        0.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0
+      ],
+      "paid": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "social": [
+        0.0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        3.0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
     },
     "series_labels": {
-      "sessions": "GSC Organic Clicks (monthly)",
-      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+      "sessions": "GA4 Sessions",
+      "form_submits": "GA4 Conversions  (form_submit (61))"
     },
-    "events": [
-      { "month_index": 5, "label": "Oct 2025 — pre-collapse baseline", "type": "positive" },
-      { "month_index": 6, "label": "Nov 2025 — non-branded discovery starts collapsing", "type": "negative" },
-      { "month_index": 11, "label": "Apr 2026 — production firehose continues despite collapse", "type": "negative" }
-    ],
+    "channel_labels": {
+      "organic": "Organic Search",
+      "direct": "Direct",
+      "referral": "Referral",
+      "paid": "Paid",
+      "social": "Organic Social",
+      "other": "Other / Unassigned"
+    },
+    "events": [],
     "quarterly": [
-      { "q": "Q2 2025",        "org_sess": 2530, "org_conv": 1075, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q3 2025",        "org_sess": 2455, "org_conv": 1045, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q4 2025",        "org_sess": 725,  "org_conv": 132,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q1 2026",        "org_sess": 810,  "org_conv": 105,  "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null },
-      { "q": "Q2 2026* (Apr–May to date)", "org_sess": 518, "org_conv": 57, "org_cr": null, "gbp_sess": null, "gbp_conv": null, "gbp_cr": null }
-    ]
+      {
+        "q": "Dec 2024",
+        "org_sess": 4713,
+        "org_conv": 111.0,
+        "org_cr": 2.4,
+        "gbp_sess": 571,
+        "gbp_conv": 10.0,
+        "gbp_cr": 1.8
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 2163,
+        "org_conv": 3.0,
+        "org_cr": 0.1,
+        "gbp_sess": 367,
+        "gbp_conv": 5.7,
+        "gbp_cr": 1.6
+      },
+      {
+        "q": "Q2 2025",
+        "org_sess": 5439,
+        "org_conv": 9.7,
+        "org_cr": 0.2,
+        "gbp_sess": 626,
+        "gbp_conv": 2.7,
+        "gbp_cr": 0.4
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 3469,
+        "org_conv": 14.0,
+        "org_cr": 0.4,
+        "gbp_sess": 677,
+        "gbp_conv": 2.0,
+        "gbp_cr": 0.3
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 1679,
+        "org_conv": 2.0,
+        "org_cr": 0.1,
+        "gbp_sess": 1482,
+        "gbp_conv": 8.3,
+        "gbp_cr": 0.6
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 1135,
+        "org_conv": 3.3,
+        "org_cr": 0.3,
+        "gbp_sess": 1097,
+        "gbp_conv": 13.3,
+        "gbp_cr": 1.2
+      },
+      {
+        "q": "Q2 2026*",
+        "org_sess": 853,
+        "org_conv": 2.5,
+        "org_cr": 0.3,
+        "gbp_sess": 1019,
+        "gbp_conv": 11.0,
+        "gbp_cr": 1.1
+      }
+    ],
+    "channel_colors": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "paid": "#10b981",
+      "social": "#f59e0b",
+      "other": "#9ca3af"
+    }
   },
   "per_keyword": [
-    { "keyword": "alcohol rehab",            "feb_cells": 139, "may_cells": 138, "feb_avg": 1.40, "may_avg": 1.45, "pos_gained": -0.05, "feb_top3": 112, "may_top3": 111 },
-    { "keyword": "alcohol detox near me",    "feb_cells": 151, "may_cells": 144, "feb_avg": 1.45, "may_avg": 1.55, "pos_gained": -0.10, "feb_top3": 115, "may_top3": 112 },
-    { "keyword": "addiction rehab",          "feb_cells": 138, "may_cells": 135, "feb_avg": 2.15, "may_avg": 2.30, "pos_gained": -0.15, "feb_top3": 104, "may_top3": 96 },
-    { "keyword": "addiction rehab near me",  "feb_cells": 142, "may_cells": 137, "feb_avg": 1.85, "may_avg": 2.00, "pos_gained": -0.15, "feb_top3": 104, "may_top3": 96 },
-    { "keyword": "addiction treatment center","feb_cells": 134, "may_cells": 125, "feb_avg": 2.90, "may_avg": 3.30, "pos_gained": -0.40, "feb_top3": 99,  "may_top3": 86 },
-    { "keyword": "inpatient rehab near me",  "feb_cells": 138, "may_cells": 132, "feb_avg": 2.40, "may_avg": 2.55, "pos_gained": -0.15, "feb_top3": 99,  "may_top3": 97 },
-    { "keyword": "inpatient rehab",          "feb_cells": 126, "may_cells": 121, "feb_avg": 3.10, "may_avg": 3.40, "pos_gained": -0.30, "feb_top3": 81,  "may_top3": 81 },
-    { "keyword": "rehab near me",            "feb_cells": 117, "may_cells": 109, "feb_avg": 3.40, "may_avg": 3.65, "pos_gained": -0.25, "feb_top3": 70,  "may_top3": 65 },
-    { "keyword": "niagara rehab (medical/elder — STOP)", "feb_cells": 27, "may_cells": 14, "feb_avg": 1.97, "may_avg": 1.92, "pos_gained": 0.05, "feb_top3": 27, "may_top3": 14 }
+    {
+      "keyword": "alcohol rehab",
+      "feb_cells": 139,
+      "may_cells": 138,
+      "feb_avg": 1.4,
+      "may_avg": 1.45,
+      "pos_gained": -0.05,
+      "feb_top3": 112,
+      "may_top3": 111
+    },
+    {
+      "keyword": "alcohol detox near me",
+      "feb_cells": 151,
+      "may_cells": 144,
+      "feb_avg": 1.45,
+      "may_avg": 1.55,
+      "pos_gained": -0.1,
+      "feb_top3": 115,
+      "may_top3": 112
+    },
+    {
+      "keyword": "addiction rehab",
+      "feb_cells": 138,
+      "may_cells": 135,
+      "feb_avg": 2.15,
+      "may_avg": 2.3,
+      "pos_gained": -0.15,
+      "feb_top3": 104,
+      "may_top3": 96
+    },
+    {
+      "keyword": "addiction rehab near me",
+      "feb_cells": 142,
+      "may_cells": 137,
+      "feb_avg": 1.85,
+      "may_avg": 2.0,
+      "pos_gained": -0.15,
+      "feb_top3": 104,
+      "may_top3": 96
+    },
+    {
+      "keyword": "addiction treatment center",
+      "feb_cells": 134,
+      "may_cells": 125,
+      "feb_avg": 2.9,
+      "may_avg": 3.3,
+      "pos_gained": -0.4,
+      "feb_top3": 99,
+      "may_top3": 86
+    },
+    {
+      "keyword": "inpatient rehab near me",
+      "feb_cells": 138,
+      "may_cells": 132,
+      "feb_avg": 2.4,
+      "may_avg": 2.55,
+      "pos_gained": -0.15,
+      "feb_top3": 99,
+      "may_top3": 97
+    },
+    {
+      "keyword": "inpatient rehab",
+      "feb_cells": 126,
+      "may_cells": 121,
+      "feb_avg": 3.1,
+      "may_avg": 3.4,
+      "pos_gained": -0.3,
+      "feb_top3": 81,
+      "may_top3": 81
+    },
+    {
+      "keyword": "rehab near me",
+      "feb_cells": 117,
+      "may_cells": 109,
+      "feb_avg": 3.4,
+      "may_avg": 3.65,
+      "pos_gained": -0.25,
+      "feb_top3": 70,
+      "may_top3": 65
+    },
+    {
+      "keyword": "niagara rehab (medical/elder — STOP)",
+      "feb_cells": 27,
+      "may_cells": 14,
+      "feb_avg": 1.97,
+      "may_avg": 1.92,
+      "pos_gained": 0.05,
+      "feb_top3": 27,
+      "may_top3": 14
+    }
   ],
   "ld_leaderboard": [
-    { "name": "Niagara Recovery",                                "may_top3": 759, "delta_top3": -55, "may_avg_rank": 1.95, "delta_avg_rank": -0.15, "cells": 1156, "note": "Newfane core 100% cells rank #1-2 — durable. addiction-treatment-center −8.3pt slip is Renaissance/Casa Di Vita pressure (4.3★/47 GBP)", "is_client": true },
-    { "name": "Casa Di Vita (Cazenovia Recovery)",              "may_top3": 220, "delta_top3": 12,  "may_avg_rank": 4.85, "delta_avg_rank": -0.20, "cells": 540,  "note": "+78 cells on addiction kws (5.0★/3 — tiny review base is the weakness)", "is_client": false },
-    { "name": "Pathways (CHS Buffalo)",                          "may_top3": 195, "delta_top3": 18,  "may_avg_rank": 7.30, "delta_avg_rank": -0.30, "cells": 520,  "note": "+77 cells on addiction-treatment-center (3.3★/69 — beatable on rating)", "is_client": false },
-    { "name": "Renaissance Addiction Services at BestSelf",     "may_top3": 198, "delta_top3": 22,  "may_avg_rank": 5.70, "delta_avg_rank": -0.35, "cells": 530,  "note": "+76 cells — most-frequent ahead of Niagara on addiction-rehab + addiction-treatment-center southern grid (2.7★/22 — most beatable on rating)", "is_client": false },
-    { "name": "Amity Club",                                      "may_top3": 175, "delta_top3": 8,   "may_avg_rank": 8.17, "delta_avg_rank": -0.10, "cells": 480,  "note": "+75 cells on addiction kws (4.4★/61)", "is_client": false },
-    { "name": "Beacon Center",                                   "may_top3": 162, "delta_top3": 14,  "may_avg_rank": 9.48, "delta_avg_rank": -0.20, "cells": 470,  "note": "+75 cells on addiction-treatment-center (3.6★/16 — beatable on rating + topical density)", "is_client": false },
-    { "name": "Caz Recovery (parent of Casa Di Vita)",           "may_top3": 138, "delta_top3": 10,  "may_avg_rank": 7.35, "delta_avg_rank": -0.15, "cells": 415,  "note": "+65 cells (3.7★/3 — small review base)", "is_client": false },
-    { "name": "Horizon Village Terrace House",                   "may_top3": 110, "delta_top3": 6,   "may_avg_rank": 8.20, "delta_avg_rank": -0.10, "cells": 360,  "note": "+55 cells on addiction kws (Horizon network — institutional competitor)", "is_client": false },
-    { "name": "Niagara Rehabilitation-Nursing",                  "may_top3": 230, "delta_top3": 5,   "may_avg_rank": 1.02, "delta_avg_rank": 0.00,  "cells": 314,  "note": "+314 ⚠ MEDICAL/ELDER intent (3.0★/92) — owns 'niagara rehab' family. STOP CHASING this kw cluster.", "is_client": false },
-    { "name": "Buffalo Rehab Group (PT)",                        "may_top3": 165, "delta_top3": 3,   "may_avg_rank": 10.21, "delta_avg_rank": 0.05,  "cells": 306,  "note": "+306 ⚠ PHYSICAL THERAPY intent (4.9★/114) — out-of-vertical, disambiguate not engineer", "is_client": false },
-    { "name": "Niagara Health & Rehab Centre",                   "may_top3": 195, "delta_top3": 4,   "may_avg_rank": 1.98, "delta_avg_rank": 0.05,  "cells": 275,  "note": "+275 ⚠ MEDICAL intent (4.9★/1053) — owns 'niagara rehab' brand-adjacent. Disambiguate.", "is_client": false }
+    {
+      "name": "Niagara Recovery",
+      "may_top3": 759,
+      "delta_top3": -55,
+      "may_avg_rank": 1.95,
+      "delta_avg_rank": -0.15,
+      "cells": 1156,
+      "note": "Newfane core 100% cells rank #1-2 — durable. addiction-treatment-center −8.3pt slip is Renaissance/Casa Di Vita pressure (4.3★/47 GBP)",
+      "is_client": true
+    },
+    {
+      "name": "Casa Di Vita (Cazenovia Recovery)",
+      "may_top3": 220,
+      "delta_top3": 12,
+      "may_avg_rank": 4.85,
+      "delta_avg_rank": -0.2,
+      "cells": 540,
+      "note": "+78 cells on addiction kws (5.0★/3 — tiny review base is the weakness)",
+      "is_client": false
+    },
+    {
+      "name": "Pathways (CHS Buffalo)",
+      "may_top3": 195,
+      "delta_top3": 18,
+      "may_avg_rank": 7.3,
+      "delta_avg_rank": -0.3,
+      "cells": 520,
+      "note": "+77 cells on addiction-treatment-center (3.3★/69 — beatable on rating)",
+      "is_client": false
+    },
+    {
+      "name": "Renaissance Addiction Services at BestSelf",
+      "may_top3": 198,
+      "delta_top3": 22,
+      "may_avg_rank": 5.7,
+      "delta_avg_rank": -0.35,
+      "cells": 530,
+      "note": "+76 cells — most-frequent ahead of Niagara on addiction-rehab + addiction-treatment-center southern grid (2.7★/22 — most beatable on rating)",
+      "is_client": false
+    },
+    {
+      "name": "Amity Club",
+      "may_top3": 175,
+      "delta_top3": 8,
+      "may_avg_rank": 8.17,
+      "delta_avg_rank": -0.1,
+      "cells": 480,
+      "note": "+75 cells on addiction kws (4.4★/61)",
+      "is_client": false
+    },
+    {
+      "name": "Beacon Center",
+      "may_top3": 162,
+      "delta_top3": 14,
+      "may_avg_rank": 9.48,
+      "delta_avg_rank": -0.2,
+      "cells": 470,
+      "note": "+75 cells on addiction-treatment-center (3.6★/16 — beatable on rating + topical density)",
+      "is_client": false
+    },
+    {
+      "name": "Caz Recovery (parent of Casa Di Vita)",
+      "may_top3": 138,
+      "delta_top3": 10,
+      "may_avg_rank": 7.35,
+      "delta_avg_rank": -0.15,
+      "cells": 415,
+      "note": "+65 cells (3.7★/3 — small review base)",
+      "is_client": false
+    },
+    {
+      "name": "Horizon Village Terrace House",
+      "may_top3": 110,
+      "delta_top3": 6,
+      "may_avg_rank": 8.2,
+      "delta_avg_rank": -0.1,
+      "cells": 360,
+      "note": "+55 cells on addiction kws (Horizon network — institutional competitor)",
+      "is_client": false
+    },
+    {
+      "name": "Niagara Rehabilitation-Nursing",
+      "may_top3": 230,
+      "delta_top3": 5,
+      "may_avg_rank": 1.02,
+      "delta_avg_rank": 0.0,
+      "cells": 314,
+      "note": "+314 ⚠ MEDICAL/ELDER intent (3.0★/92) — owns 'niagara rehab' family. STOP CHASING this kw cluster.",
+      "is_client": false
+    },
+    {
+      "name": "Buffalo Rehab Group (PT)",
+      "may_top3": 165,
+      "delta_top3": 3,
+      "may_avg_rank": 10.21,
+      "delta_avg_rank": 0.05,
+      "cells": 306,
+      "note": "+306 ⚠ PHYSICAL THERAPY intent (4.9★/114) — out-of-vertical, disambiguate not engineer",
+      "is_client": false
+    },
+    {
+      "name": "Niagara Health & Rehab Centre",
+      "may_top3": 195,
+      "delta_top3": 4,
+      "may_avg_rank": 1.98,
+      "delta_avg_rank": 0.05,
+      "cells": 275,
+      "note": "+275 ⚠ MEDICAL intent (4.9★/1053) — owns 'niagara rehab' brand-adjacent. Disambiguate.",
+      "is_client": false
+    }
   ],
   "gsc_decline": [
-    { "month": "365d",          "label": "Last 365d",       "pages": 794,  "imp": 2355328, "clicks": 6572, "delta_pct": 0 },
-    { "month": "180d",          "label": "Last 180d",       "pages": 622,  "imp": 225150,  "clicks": 1532, "delta_pct": -7 },
-    { "month": "90d",           "label": "Last 90d",        "pages": 470,  "imp": 89979,   "clicks": 805,  "delta_pct": -28 },
-    { "month": "30d",           "label": "Last 30d",        "pages": 280,  "imp": 27862,   "clicks": 243,  "delta_pct": -56 },
-    { "month": "non-brand-30d", "label": "Non-brand 30d",   "pages": null, "imp": 26563,   "clicks": 47,   "delta_pct": -87 },
-    { "month": "brand-30d",     "label": "Branded 30d",     "pages": null, "imp": 1299,    "clicks": 196,  "delta_pct": 0 }
+    {
+      "month": "365d",
+      "label": "Last 365d",
+      "pages": 794,
+      "imp": 2355328,
+      "clicks": 6572,
+      "delta_pct": 0
+    },
+    {
+      "month": "180d",
+      "label": "Last 180d",
+      "pages": 622,
+      "imp": 225150,
+      "clicks": 1532,
+      "delta_pct": -7
+    },
+    {
+      "month": "90d",
+      "label": "Last 90d",
+      "pages": 470,
+      "imp": 89979,
+      "clicks": 805,
+      "delta_pct": -28
+    },
+    {
+      "month": "30d",
+      "label": "Last 30d",
+      "pages": 280,
+      "imp": 27862,
+      "clicks": 243,
+      "delta_pct": -56
+    },
+    {
+      "month": "non-brand-30d",
+      "label": "Non-brand 30d",
+      "pages": null,
+      "imp": 26563,
+      "clicks": 47,
+      "delta_pct": -87
+    },
+    {
+      "month": "brand-30d",
+      "label": "Branded 30d",
+      "pages": null,
+      "imp": 1299,
+      "clicks": 196,
+      "delta_pct": 0
+    }
   ],
   "keyword_buckets": [
-    { "bucket": "Blog posts (670 URLs — 96% of impressions)",         "keywords": 670, "pct": 88, "posture": "NOINDEX/410 ~300 off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) + refresh 5 high-CTR with intake CTAs" },
-    { "bucket": "Location pages (94 URLs — 16 clicks/365d total)",    "keywords": 94,  "pct": 12, "posture": "BUILD Tonawanda + N. Tonawanda + Lewiston + Youngstown · UPGRADE Williamsville + Cheektowaga + Lockport + NF + Amherst · REDIRECT ~60 doorways" },
-    { "bucket": "Service pages (10 URLs — 3 clicks/365d combined)",   "keywords": 10,  "pct": 1,  "posture": "301 the 5 -in-newfane-ny dupes → 5 base · MedicalBusiness schema floor · SP rewrites (alcohol-detox / drug-detox / suboxone-MAT)" }
+    {
+      "bucket": "Blog posts (670 URLs — 96% of impressions)",
+      "keywords": 670,
+      "pct": 88,
+      "posture": "NOINDEX/410 ~300 off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) + refresh 5 high-CTR with intake CTAs"
+    },
+    {
+      "bucket": "Location pages (94 URLs — 16 clicks/365d total)",
+      "keywords": 94,
+      "pct": 12,
+      "posture": "BUILD Tonawanda + N. Tonawanda + Lewiston + Youngstown · UPGRADE Williamsville + Cheektowaga + Lockport + NF + Amherst · REDIRECT ~60 doorways"
+    },
+    {
+      "bucket": "Service pages (10 URLs — 3 clicks/365d combined)",
+      "keywords": 10,
+      "pct": 1,
+      "posture": "301 the 5 -in-newfane-ny dupes → 5 base · MedicalBusiness schema floor · SP rewrites (alcohol-detox / drug-detox / suboxone-MAT)"
+    }
   ],
   "top_urls": [
-    { "url": "/blog/how-long-does-it-take-to-break-a-porn-addiction", "imp_90d": 223455, "clicks_90d": 1185, "pos": 33.3, "class": "blog",     "lever": "Push 5 CC-01 NOINDEX/410 candidate (off-vertical)" },
-    { "url": "/blog/alcohol-and-gout",                                 "imp_90d": 98241,  "clicks_90d": 1652, "pos": 32.9, "class": "blog",     "lever": "Push 5 CC-02 refresh + intake CTA (alcohol-purine-chart searcher)" },
-    { "url": "/blog/get-rid-of-alcohol-breath",                        "imp_90d": 72694,  "clicks_90d": 122,  "pos": 30.0, "class": "blog",     "lever": "Push 5 CC-04 internal-link to /services/alcohol-detoxification" },
-    { "url": "/blog/whiskey-and-acid-reflux",                          "imp_90d": 61909,  "clicks_90d": 229,  "pos": 23.8, "class": "blog",     "lever": "Push 5 CC-04 keep + cross-link" },
-    { "url": "/?utm_source=gmb",                                       "imp_90d": 49515,  "clicks_90d": 3429, "pos": 6.0,  "class": "home",     "lever": "Push 1 BC-01 brand canonical (largest channel)" },
-    { "url": "/blog/vaping-statistics",                                "imp_90d": 41260,  "clicks_90d": 1665, "pos": 21.7, "class": "blog",     "lever": "Push 5 CC-01 NOINDEX/410 candidate (off-vertical)" },
-    { "url": "/blog/friend-passed-out-drunk-how-to-wake-up",           "imp_90d": 40639,  "clicks_90d": 498,  "pos": 20.3, "class": "blog",     "lever": "Push 5 CC-02 refresh + family-crisis intake CTA" },
-    { "url": "/",                                                       "imp_90d": 38525,  "clicks_90d": 845,  "pos": 17.4, "class": "home",     "lever": "Push 1 BC-01/02 brand canonical + JSON-LD" },
-    { "url": "/blog/what-drugs-cause-bags-under-eyes",                 "imp_90d": 43947,  "clicks_90d": 435,  "pos": 14.7, "class": "blog",     "lever": "Push 5 CC-04 internal-link" },
-    { "url": "/services/alcohol-detoxification-services",              "imp_90d": 167,    "clicks_90d": 3,    "pos": 28.0, "class": "service",  "lever": "Push 1 BC-03 [phone number] fix + Push 3 SP-01 rewrite + schema" },
-    { "url": "/locations/buffalo",                                     "imp_90d": 180,    "clicks_90d": 2,    "pos": 35.0, "class": "location", "lever": "Push 1 BC-04 fabrication fix (NY 14215 → Newfane facility)" },
-    { "url": "/locations/williamsville",                               "imp_90d": 220,    "clicks_90d": 4,    "pos": 18.5, "class": "location", "lever": "Push 4 LP-01 UPGRADE schema + ratings + NAP" },
-    { "url": "/locations/cheektowaga",                                 "imp_90d": 160,    "clicks_90d": 2,    "pos": 24.0, "class": "location", "lever": "Push 4 LP-02 UPGRADE schema" },
-    { "url": "/locations/lockport",                                    "imp_90d": 140,    "clicks_90d": 3,    "pos": 22.5, "class": "location", "lever": "Push 4 LP-07 thin (276w) → 1000w UPGRADE" }
+    {
+      "url": "/blog/how-long-does-it-take-to-break-a-porn-addiction",
+      "imp_90d": 223455,
+      "clicks_90d": 1185,
+      "pos": 33.3,
+      "class": "blog",
+      "lever": "Push 5 CC-01 NOINDEX/410 candidate (off-vertical)"
+    },
+    {
+      "url": "/blog/alcohol-and-gout",
+      "imp_90d": 98241,
+      "clicks_90d": 1652,
+      "pos": 32.9,
+      "class": "blog",
+      "lever": "Push 5 CC-02 refresh + intake CTA (alcohol-purine-chart searcher)"
+    },
+    {
+      "url": "/blog/get-rid-of-alcohol-breath",
+      "imp_90d": 72694,
+      "clicks_90d": 122,
+      "pos": 30.0,
+      "class": "blog",
+      "lever": "Push 5 CC-04 internal-link to /services/alcohol-detoxification"
+    },
+    {
+      "url": "/blog/whiskey-and-acid-reflux",
+      "imp_90d": 61909,
+      "clicks_90d": 229,
+      "pos": 23.8,
+      "class": "blog",
+      "lever": "Push 5 CC-04 keep + cross-link"
+    },
+    {
+      "url": "/?utm_source=gmb",
+      "imp_90d": 49515,
+      "clicks_90d": 3429,
+      "pos": 6.0,
+      "class": "home",
+      "lever": "Push 1 BC-01 brand canonical (largest channel)"
+    },
+    {
+      "url": "/blog/vaping-statistics",
+      "imp_90d": 41260,
+      "clicks_90d": 1665,
+      "pos": 21.7,
+      "class": "blog",
+      "lever": "Push 5 CC-01 NOINDEX/410 candidate (off-vertical)"
+    },
+    {
+      "url": "/blog/friend-passed-out-drunk-how-to-wake-up",
+      "imp_90d": 40639,
+      "clicks_90d": 498,
+      "pos": 20.3,
+      "class": "blog",
+      "lever": "Push 5 CC-02 refresh + family-crisis intake CTA"
+    },
+    {
+      "url": "/",
+      "imp_90d": 38525,
+      "clicks_90d": 845,
+      "pos": 17.4,
+      "class": "home",
+      "lever": "Push 1 BC-01/02 brand canonical + JSON-LD"
+    },
+    {
+      "url": "/blog/what-drugs-cause-bags-under-eyes",
+      "imp_90d": 43947,
+      "clicks_90d": 435,
+      "pos": 14.7,
+      "class": "blog",
+      "lever": "Push 5 CC-04 internal-link"
+    },
+    {
+      "url": "/services/alcohol-detoxification-services",
+      "imp_90d": 167,
+      "clicks_90d": 3,
+      "pos": 28.0,
+      "class": "service",
+      "lever": "Push 1 BC-03 [phone number] fix + Push 3 SP-01 rewrite + schema"
+    },
+    {
+      "url": "/locations/buffalo",
+      "imp_90d": 180,
+      "clicks_90d": 2,
+      "pos": 35.0,
+      "class": "location",
+      "lever": "Push 1 BC-04 fabrication fix (NY 14215 → Newfane facility)"
+    },
+    {
+      "url": "/locations/williamsville",
+      "imp_90d": 220,
+      "clicks_90d": 4,
+      "pos": 18.5,
+      "class": "location",
+      "lever": "Push 4 LP-01 UPGRADE schema + ratings + NAP"
+    },
+    {
+      "url": "/locations/cheektowaga",
+      "imp_90d": 160,
+      "clicks_90d": 2,
+      "pos": 24.0,
+      "class": "location",
+      "lever": "Push 4 LP-02 UPGRADE schema"
+    },
+    {
+      "url": "/locations/lockport",
+      "imp_90d": 140,
+      "clicks_90d": 3,
+      "pos": 22.5,
+      "class": "location",
+      "lever": "Push 4 LP-07 thin (276w) → 1000w UPGRADE"
+    }
   ],
   "positives": [
     "Newfane core dominance is structural — 100% LD cell coverage 0-15mi at avg rank #1-2 across alcohol-rehab + alcohol-detox-near-me + addiction-rehab + addiction-treatment-center (158-cell grid, durable)",
@@ -162,10 +821,30 @@
       "color": "blue",
       "why": "Title + footer + GBP all say \"Niagara Recovery\" but 5 of 8 core page titles (about / admissions / contact / treatments / areas-served) say \"Recovery Center of Niagara\" — LocalBusiness JSON-LD ambiguous + references niagararecovery.com/wp-content/* image (WordPress debris on Webflow). Search log confirms user confusion: \"recovery center of niagara\" pulled 363 GBP searches Dec-May vs new-brand variants at 528. This is the largest single discoverable lever in the quarter — directly recovers the 41% bleed.",
       "actions": [
-        { "code": "BC-01", "name": "Sitewide title + H1 rewrite to \"Niagara Recovery\" canonical on 5 core pages (about / admissions / contact / treatments / areas-served)", "month": "M1", "effort": "M" },
-        { "code": "BC-02", "name": "LocalBusiness JSON-LD entity-name fix + WP-content image swap to live Webflow asset (homepage + about + admissions)", "month": "M1", "effort": "S" },
-        { "code": "BC-03", "name": "Kill \"[phone number]\" placeholder live on /services/alcohol-detoxification-services + Newfane dupe", "month": "M1", "effort": "S" },
-        { "code": "BC-04", "name": "Fix Buffalo location page fabrication (\"our facility in Buffalo, NY 14215\" → truthful \"serving Buffalo metro from Newfane\")", "month": "M1", "effort": "S" }
+        {
+          "code": "BC-01",
+          "name": "Sitewide title + H1 rewrite to \"Niagara Recovery\" canonical on 5 core pages (about / admissions / contact / treatments / areas-served)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "BC-02",
+          "name": "LocalBusiness JSON-LD entity-name fix + WP-content image swap to live Webflow asset (homepage + about + admissions)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BC-03",
+          "name": "Kill \"[phone number]\" placeholder live on /services/alcohol-detoxification-services + Newfane dupe",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BC-04",
+          "name": "Fix Buffalo location page fabrication (\"our facility in Buffalo, NY 14215\" → truthful \"serving Buffalo metro from Newfane\")",
+          "month": "M1",
+          "effort": "S"
+        }
       ],
       "outcome": "5/8 core pages re-title to canonical entity; all 3 sampled JSON-LD blocks pass validator.schema.org; 0 \"[phone number]\" literals on service pages; Buffalo page reads truthful NAP. Recovers 41% branded demand bleed within 30-60d of Google reprocessing."
     },
@@ -176,12 +855,42 @@
       "color": "green",
       "why": "GBP service area is at 20/20 cap with 13 entries on just 3 ZIPs (7 on 14094 Lockport, 3 on 14008 Appleton, 3 on 14172 Wilson) — 11 redundant micros consolidate to 2 keeps. That frees 9 slots for 9 WNY anchor towns where LD shows 100% coverage + top-3 rank but no entity declaration: Lockport (13c/r1.4), Clarence (40c/r3.4 — biggest break-out lever), Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, N. Tonawanda. GBP photo count of 6 is lowest of 12 WNY competitors scanned.",
       "actions": [
-        { "code": "GBP-04", "name": "Service-area swap: drop 11 redundant micros (7×14094 Lockport hoods + 2×14008 Appleton + 2×14172 Wilson), add 9 anchor towns (Lockport + Clarence + Cambria + Pendleton + Sanborn + Wheatfield + Youngstown + Lewiston + N. Tonawanda)", "month": "M1", "effort": "S" },
-        { "code": "GBP-05", "name": "Photo blitz 6 → 25 with category mix (5 facility / 5 staff / 5 treatment / 5 outdoor / 5 Newfane)", "month": "M1", "effort": "M" },
-        { "code": "GBP-06", "name": "GBP Services tab audit + refinement of 10 service descriptions + add explicit Suboxone / MAT entries", "month": "M1", "effort": "S" },
-        { "code": "GBP-POST_M1", "name": "GBP Posts M1 — 4 posts (brand-canonical / alcohol-detox / suboxone-MAT / Newfane facility tour)", "month": "M1", "effort": "S" },
-        { "code": "GBP-POST_M2", "name": "GBP Posts M2 — 4 posts (drug-detox / benzo-detox / payor topics / insurance)", "month": "M2", "effort": "S" },
-        { "code": "GBP-POST_M3", "name": "GBP Posts M3 — 4 posts (short-term residential / DBT / WNY break-out / brand-canonical reinforce)", "month": "M3", "effort": "S" }
+        {
+          "code": "GBP-04",
+          "name": "Service-area swap: drop 11 redundant micros (7×14094 Lockport hoods + 2×14008 Appleton + 2×14172 Wilson), add 9 anchor towns (Lockport + Clarence + Cambria + Pendleton + Sanborn + Wheatfield + Youngstown + Lewiston + N. Tonawanda)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-05",
+          "name": "Photo blitz 6 → 25 with category mix (5 facility / 5 staff / 5 treatment / 5 outdoor / 5 Newfane)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-06",
+          "name": "GBP Services tab audit + refinement of 10 service descriptions + add explicit Suboxone / MAT entries",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-POST_M1",
+          "name": "GBP Posts M1 — 4 posts (brand-canonical / alcohol-detox / suboxone-MAT / Newfane facility tour)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-POST_M2",
+          "name": "GBP Posts M2 — 4 posts (drug-detox / benzo-detox / payor topics / insurance)",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "GBP-POST_M3",
+          "name": "GBP Posts M3 — 4 posts (short-term residential / DBT / WNY break-out / brand-canonical reinforce)",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "GBP shows 18 entries (9 KEEPs + 9 ADDs + 2 Q3 reserves); photo count 25+ with category mix; 12 cumulative Posts published over Q2. Maps cell coverage extends from Newfane-core into 9 WNY anchor towns by M3 reprocessing."
     },
@@ -192,11 +901,36 @@
       "color": "indigo",
       "why": "10 /services/* URLs (5 base + 5 -in-newfane-ny near-dupes) combined for 3 clicks / 365d — the conversion floor is broken. 0 schema on any service page. Two service URLs ship the literal \"[phone number]\" placeholder. SP-01 alcohol-detox = 790/mo Bing volume (highest single-modality demand); SP-02 drug-detox = 6,600/mo Google Ads volume (largest captured); SP-03 suboxone-MAT = 62 GBP searches Dec-May (top non-brand demand) + 1,900/mo \"suboxone doctor\".",
       "actions": [
-        { "code": "CN-01",    "name": "301 the 5 -in-newfane-ny service-page dupes to the 5 base /services URLs (content-merge winning body copy)", "month": "M1", "effort": "M" },
-        { "code": "SCHEMA-02","name": "Deploy MedicalBusiness + Service schema on all 5 base /services pages + treatments hub + short-term residential", "month": "M1", "effort": "M" },
-        { "code": "SP-01",    "name": "Alcohol-detox page rewrite (790/mo Bing vol) — 932w → 1500w + schema + meta_description + intake CTA + FAQ", "month": "M1", "effort": "L" },
-        { "code": "SP-02",    "name": "Drug-detox page rewrite (6,600/mo Google Ads vol) — 733w → 1500w + per-modality split (opioids / amphetamines / cocaine / poly-drug) + FAQ", "month": "M2", "effort": "L" },
-        { "code": "SP-03",    "name": "Suboxone-MAT NEW page build (/services/suboxone-mat-program) — 1500w + MedicalBusiness/Service schema + payor info + intake CTA (gates on Owner Ask 3 clinical confirm)", "month": "M2", "effort": "L" }
+        {
+          "code": "CN-01",
+          "name": "301 the 5 -in-newfane-ny service-page dupes to the 5 base /services URLs (content-merge winning body copy)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "SCHEMA-02",
+          "name": "Deploy MedicalBusiness + Service schema on all 5 base /services pages + treatments hub + short-term residential",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "SP-01",
+          "name": "Alcohol-detox page rewrite (790/mo Bing vol) — 932w → 1500w + schema + meta_description + intake CTA + FAQ",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "SP-02",
+          "name": "Drug-detox page rewrite (6,600/mo Google Ads vol) — 733w → 1500w + per-modality split (opioids / amphetamines / cocaine / poly-drug) + FAQ",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-03",
+          "name": "Suboxone-MAT NEW page build (/services/suboxone-mat-program) — 1500w + MedicalBusiness/Service schema + payor info + intake CTA (gates on Owner Ask 3 clinical confirm)",
+          "month": "M2",
+          "effort": "L"
+        }
       ],
       "outcome": "10 service URLs consolidate to 5 canonical + new suboxone-MAT page = 6 service URLs total; all carry valid schema; SP-01 captures 790/mo Bing detox volume; SP-03 captures 62 GBP searches + 1,900/mo \"suboxone doctor\". Service-page combined clicks 3/365d → 50/M3 target."
     },
@@ -207,16 +941,66 @@
       "color": "purple",
       "why": "94 /locations/* pages generate 16 clicks / 365d combined. Williamsville (986w) + Cheektowaga (679w) have substantive content but zero schema, no ratings, no NAP — failing to rank at 60-80% LD coverage. Tonawanda + N. Tonawanda return 404 (matches Buffalo-metro 0/7 cell black hole). Lockport / NF / Amherst = 276-278w thin doorways. ~60 best-/most-trusted-/dependable-/premium- doorway URLs identical to Surfpoint + Arms Acres patterns.",
       "actions": [
-        { "code": "LP-01", "name": "Williamsville UPGRADE — add MedicalBusiness schema + ratings + NAP + service-link tightening (already 986w content)", "month": "M1", "effort": "M" },
-        { "code": "LP-02", "name": "Cheektowaga UPGRADE — same pattern as LP-01 (already 679w)", "month": "M1", "effort": "M" },
-        { "code": "LP-03", "name": "Tonawanda BUILD — currently 404; ~1000w + MedicalBusiness schema + drive directions + service links", "month": "M2", "effort": "L" },
-        { "code": "LP-04", "name": "N. Tonawanda BUILD — currently 404; ~1000w + schema (50-100% LD cov, rank 5-7)", "month": "M2", "effort": "L" },
-        { "code": "LP-05", "name": "Lewiston BUILD — ~800w + schema (100% LD cov rank 4-5, low-effort entity claim)", "month": "M2", "effort": "M" },
-        { "code": "LP-06", "name": "Youngstown BUILD — ~800w + schema (100% LD cov rank 1.3, dominant but no on-site landing)", "month": "M3", "effort": "M" },
-        { "code": "LP-07", "name": "Lockport UPGRADE thin (276w → 1000w) — entity is dominant in LD (13c/100%/r1.4), on-site landing is the mismatch", "month": "M2", "effort": "M" },
-        { "code": "LP-08", "name": "Niagara Falls UPGRADE thin (278w → 1000w)", "month": "M3", "effort": "M" },
-        { "code": "LP-09", "name": "Amherst UPGRADE thin (276w → 1000w)", "month": "M3", "effort": "M" },
-        { "code": "LP-10", "name": "REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorway URLs to anchor city pages (small-level 301s per fill-not-kill policy)", "month": "M2", "effort": "L" }
+        {
+          "code": "LP-01",
+          "name": "Williamsville UPGRADE — add MedicalBusiness schema + ratings + NAP + service-link tightening (already 986w content)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "LP-02",
+          "name": "Cheektowaga UPGRADE — same pattern as LP-01 (already 679w)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "LP-03",
+          "name": "Tonawanda BUILD — currently 404; ~1000w + MedicalBusiness schema + drive directions + service links",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "LP-04",
+          "name": "N. Tonawanda BUILD — currently 404; ~1000w + schema (50-100% LD cov, rank 5-7)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "LP-05",
+          "name": "Lewiston BUILD — ~800w + schema (100% LD cov rank 4-5, low-effort entity claim)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LP-06",
+          "name": "Youngstown BUILD — ~800w + schema (100% LD cov rank 1.3, dominant but no on-site landing)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "LP-07",
+          "name": "Lockport UPGRADE thin (276w → 1000w) — entity is dominant in LD (13c/100%/r1.4), on-site landing is the mismatch",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LP-08",
+          "name": "Niagara Falls UPGRADE thin (278w → 1000w)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "LP-09",
+          "name": "Amherst UPGRADE thin (276w → 1000w)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "LP-10",
+          "name": "REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorway URLs to anchor city pages (small-level 301s per fill-not-kill policy)",
+          "month": "M2",
+          "effort": "L"
+        }
       ],
       "outcome": "9 substantive location pages live with schema + NAP + service links by M3; ~60 doorway URLs return 301 to anchor city pages; /locations/* combined clicks 16/365d → 80/M3 target. Buffalo-metro Maps black hole closed via Tonawanda + N. Tonawanda + Cheektowaga + Williamsville builds."
     },
@@ -227,40 +1011,165 @@
       "color": "amber",
       "why": "670-post blog at 96% of impressions diluting topical authority toward off-vertical content (porn-addiction 350K imp / vape-by-country / social-media addiction) and Newfane-only modifiers, not WNY break-out terrain. Non-branded discovery collapsed 87% even as 22 new PAA blogs + 9 new suburb-doorway pages shipped 2026-04-15 → 2026-05-18. Without CC-03 owner-ask pause, LP-10 doorway redirects become a perpetual cleanup cycle. Off-page rotation switched from SEO Neo / AI Articles stack to disavow + Tier-1 citations + earned-link work per 2026-05-13 program halt.",
       "actions": [
-        { "code": "CC-01",     "name": "NOINDEX/410 the ~300 off-vertical high-impression posts (porn-addiction 350K imp / vape-by-country / social-media addiction etc.)", "month": "M2", "effort": "L" },
-        { "code": "CC-02",     "name": "Refresh 5 already-converting blog assets (~2,400 clicks/365d combined) with intake CTAs + Article schema (alcohol-and-gout / wake-up-drunk / hydroxyzine-withdrawal / legal-drugs-feel-good / break-porn-addiction)", "month": "M1", "effort": "M" },
-        { "code": "CC-03",     "name": "OWNER ASK — pause the suburb-doorway production firehose (Attica / E. Oakville / Renowned / Famous / Leading template stream) for Q2 duration", "month": "M1", "effort": "S" },
-        { "code": "CC-04",     "name": "Sitewide internal-linking pass on KEEP cohort (~370 surviving posts) — add 1-2 internal links to /services/* + /locations/* per anchor-text spec", "month": "M3", "effort": "L" },
-        { "code": "OFF-DIS",   "name": "Disavow.txt build — spam-score 43 (vs competitors 3-24) PBN-pattern cluster (SEO Anomaly / SEO Cartel / site20 signature pending Aaron Gruenke recognition pass)", "month": "M1", "effort": "M" },
-        { "code": "OFF-CIT",   "name": "Tier-1 institutional citations — claim/submit SAMHSA findtreatment.gov + OASAS provider directory + NIAAA + 211 WNY + Niagara County mental-health resource (10 batch)", "month": "M1", "effort": "M" },
-        { "code": "OFF-PR",    "name": "WNY earned-link / local PR pitch — Buffalo News health vertical / WGRZ / WNY Refresh (1-2 editorial mentions over Q2)", "month": "M2", "effort": "M" },
-        { "code": "REP-01",    "name": "LD recurring scan setup — 6 anchor coords × 8 priority kws weekly (Newfane / Lockport / Williamsville / N. Tonawanda / Buffalo / Niagara Falls)", "month": "M1", "effort": "S" },
-        { "code": "REP-02",    "name": "M3 strategy close-out scorecard — cross-source rank + Maps + GSC + cannibal + GA4 conversion in one document", "month": "M3", "effort": "M" }
+        {
+          "code": "CC-01",
+          "name": "NOINDEX/410 the ~300 off-vertical high-impression posts (porn-addiction 350K imp / vape-by-country / social-media addiction etc.)",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "CC-02",
+          "name": "Refresh 5 already-converting blog assets (~2,400 clicks/365d combined) with intake CTAs + Article schema (alcohol-and-gout / wake-up-drunk / hydroxyzine-withdrawal / legal-drugs-feel-good / break-porn-addiction)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CC-03",
+          "name": "OWNER ASK — pause the suburb-doorway production firehose (Attica / E. Oakville / Renowned / Famous / Leading template stream) for Q2 duration",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "CC-04",
+          "name": "Sitewide internal-linking pass on KEEP cohort (~370 surviving posts) — add 1-2 internal links to /services/* + /locations/* per anchor-text spec",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "OFF-DIS",
+          "name": "Disavow.txt build — spam-score 43 (vs competitors 3-24) PBN-pattern cluster (SEO Anomaly / SEO Cartel / site20 signature pending Aaron Gruenke recognition pass)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-CIT",
+          "name": "Tier-1 institutional citations — claim/submit SAMHSA findtreatment.gov + OASAS provider directory + NIAAA + 211 WNY + Niagara County mental-health resource (10 batch)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OFF-PR",
+          "name": "WNY earned-link / local PR pitch — Buffalo News health vertical / WGRZ / WNY Refresh (1-2 editorial mentions over Q2)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "REP-01",
+          "name": "LD recurring scan setup — 6 anchor coords × 8 priority kws weekly (Newfane / Lockport / Williamsville / N. Tonawanda / Buffalo / Niagara Falls)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "REP-02",
+          "name": "M3 strategy close-out scorecard — cross-source rank + Maps + GSC + cannibal + GA4 conversion in one document",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "~300 off-vertical blog posts NOINDEX/410'd; 5 high-CTR assets have intake CTAs at 3 placements + Article schema; doorway pipeline paused (no new template URLs ship in Q2); disavow.txt deployed against spam-43 tail; 10 Tier-1 citations live; LD weekly scan running. Non-branded clicks 47/30d → 200/30d M3 target."
     }
   ],
   "deliverables": [
-    { "label": "Strategic Diagnosis (PDF, 3-page)",                  "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.pdf",       "type": "pdf" },
-    { "label": "Strategic Diagnosis (HTML source)",                  "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.html",      "type": "html" },
-    { "label": "Q2 2026 Strategy Condensed (long-form)",             "path": "Niagara_Recovery_Q2_2026_Strategy_Condensed.md",            "type": "md" },
-    { "label": "Q2 2026 Custom Strategy (v1 reference)",             "path": "Niagara_Recovery_Q2_2026_Custom_Strategy.md",               "type": "md" },
-    { "label": "Q2 2026 Tasks (FINAL — SEO Neo + AI Articles filtered)", "path": "Niagara_Recovery_Q2_2026_Tasks_FINAL.csv", "type": "csv" },
-    { "label": "Push 1 — Brand Canonical",                           "path": "Niagara_Recovery_Push1_Brand_Canonical.md",                 "type": "md" },
-    { "label": "Push 2 — GBP Service Area Swap",                     "path": "Niagara_Recovery_Push2_GBP_Service_Area_Swap.md",           "type": "md" },
-    { "label": "Push 3 — Service Pages",                             "path": "Niagara_Recovery_Push3_Service_Pages.md",                   "type": "md" },
-    { "label": "Push 4 — Location Page Architecture",                "path": "Niagara_Recovery_Push4_Location_Page_Architecture.md",      "type": "md" },
-    { "label": "Push 5 — Content Cleanup",                           "path": "Niagara_Recovery_Push5_Content_Cleanup.md",                 "type": "md" },
-    { "label": "Pages Action List",                                   "path": "Niagara_Recovery_Pages_Action_List.csv",                    "type": "csv" },
-    { "label": "Internal Linking Map",                                "path": "Niagara_Recovery_Internal_Linking_Map.csv",                 "type": "csv" },
-    { "label": "GBP Action List",                                     "path": "Niagara_Recovery_GBP_Action_List.csv",                      "type": "csv" },
-    { "label": "GBP Service-Area Swap (per-entry scoring)",          "path": "Niagara_Recovery_GBP_Service_Area_Swap.csv",                "type": "csv" },
-    { "label": "Service Pages Plan",                                  "path": "Niagara_Recovery_Service_Pages_Plan.csv",                   "type": "csv" },
-    { "label": "Schema Plan",                                         "path": "Niagara_Recovery_Schema_Plan.csv",                          "type": "csv" },
-    { "label": "Cannibal Cleanup Plan",                               "path": "Niagara_Recovery_Cannibal_Cleanup_Plan.csv",                "type": "csv" },
-    { "label": "Page Refresh Pages",                                  "path": "Niagara_Recovery_Page_Refresh_Pages.csv",                   "type": "csv" },
-    { "label": "Reporting Master Template",                           "path": "Niagara_Recovery_Reporting_Master_Template.csv",            "type": "csv" },
-    { "label": "Owner Conversation Items (5-item bundle)",            "path": "Niagara_Recovery_Owner_Conversation_Items.md",              "type": "md" }
+    {
+      "label": "Strategic Diagnosis (PDF, 3-page)",
+      "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.pdf",
+      "type": "pdf"
+    },
+    {
+      "label": "Strategic Diagnosis (HTML source)",
+      "path": "Niagara_Recovery_Strategic_Diagnosis_2026-05-19.html",
+      "type": "html"
+    },
+    {
+      "label": "Q2 2026 Strategy Condensed (long-form)",
+      "path": "Niagara_Recovery_Q2_2026_Strategy_Condensed.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Custom Strategy (v1 reference)",
+      "path": "Niagara_Recovery_Q2_2026_Custom_Strategy.md",
+      "type": "md"
+    },
+    {
+      "label": "Q2 2026 Tasks (FINAL — SEO Neo + AI Articles filtered)",
+      "path": "Niagara_Recovery_Q2_2026_Tasks_FINAL.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Push 1 — Brand Canonical",
+      "path": "Niagara_Recovery_Push1_Brand_Canonical.md",
+      "type": "md"
+    },
+    {
+      "label": "Push 2 — GBP Service Area Swap",
+      "path": "Niagara_Recovery_Push2_GBP_Service_Area_Swap.md",
+      "type": "md"
+    },
+    {
+      "label": "Push 3 — Service Pages",
+      "path": "Niagara_Recovery_Push3_Service_Pages.md",
+      "type": "md"
+    },
+    {
+      "label": "Push 4 — Location Page Architecture",
+      "path": "Niagara_Recovery_Push4_Location_Page_Architecture.md",
+      "type": "md"
+    },
+    {
+      "label": "Push 5 — Content Cleanup",
+      "path": "Niagara_Recovery_Push5_Content_Cleanup.md",
+      "type": "md"
+    },
+    {
+      "label": "Pages Action List",
+      "path": "Niagara_Recovery_Pages_Action_List.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Internal Linking Map",
+      "path": "Niagara_Recovery_Internal_Linking_Map.csv",
+      "type": "csv"
+    },
+    {
+      "label": "GBP Action List",
+      "path": "Niagara_Recovery_GBP_Action_List.csv",
+      "type": "csv"
+    },
+    {
+      "label": "GBP Service-Area Swap (per-entry scoring)",
+      "path": "Niagara_Recovery_GBP_Service_Area_Swap.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Service Pages Plan",
+      "path": "Niagara_Recovery_Service_Pages_Plan.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Schema Plan",
+      "path": "Niagara_Recovery_Schema_Plan.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Cannibal Cleanup Plan",
+      "path": "Niagara_Recovery_Cannibal_Cleanup_Plan.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Page Refresh Pages",
+      "path": "Niagara_Recovery_Page_Refresh_Pages.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Reporting Master Template",
+      "path": "Niagara_Recovery_Reporting_Master_Template.csv",
+      "type": "csv"
+    },
+    {
+      "label": "Owner Conversation Items (5-item bundle)",
+      "path": "Niagara_Recovery_Owner_Conversation_Items.md",
+      "type": "md"
+    }
   ],
   "owner_asks": [
     "Approve \"Niagara Recovery\" as the canonical brand entity for the website's title, header, footer, JSON-LD schema, and all marketing assets going forward (gates Push 1 BC-01 through BC-04 — recovers 41% branded demand bleed).",
@@ -270,17 +1179,199 @@
     "Press Release task stuck in Asana since 2025-10-11 (7 months) — ship or close out. Either path is fine; the unresolved state isn't."
   ],
   "kpi_targets": [
-    { "kpi": "LD top-3% — alcohol rehab", "baseline": "70.3%", "target": "≥75%", "stretch": "≥80%" },
-    { "kpi": "LD top-3% — alcohol detox near me", "baseline": "70.9%", "target": "≥75%", "stretch": "≥80%" },
-    { "kpi": "LD top-3% — addiction rehab + near me", "baseline": "60.8%", "target": "≥65%", "stretch": "≥70%" },
-    { "kpi": "LD top-3% — addiction treatment center (recover −8.3pt slip)", "baseline": "54.4%", "target": "≥60%", "stretch": "≥65%" },
-    { "kpi": "GSC non-branded clicks (30d window)", "baseline": "47", "target": "≥200 (4×)", "stretch": "≥330" },
-    { "kpi": "Branded CTR (15,237 imp/365d baseline)", "baseline": "17.1%", "target": "≥15% hold", "stretch": "≥18%" },
-    { "kpi": "GBP photo count (with category mix)", "baseline": "6", "target": "≥25 / 5 categories", "stretch": "≥40" },
-    { "kpi": "GBP reviews", "baseline": "47", "target": "≥60 (+13 net)", "stretch": "≥75" },
-    { "kpi": "GBP service area entries", "baseline": "20 (13 on 3 ZIPs)", "target": "18 (9 KEEPs + 9 ADDs + 2 reserve)", "stretch": "20 (all anchors)" },
-    { "kpi": "Service-page combined clicks (10 URLs → 5 base)", "baseline": "3 / 365d", "target": "≥50 / M3", "stretch": "≥100" },
-    { "kpi": "/locations/* combined clicks", "baseline": "16 / 365d", "target": "≥80 / M3", "stretch": "≥150" },
-    { "kpi": "Brand demand routed to canonical entity", "baseline": "59% (528 / 891)", "target": "≥80%", "stretch": "≥90%" }
-  ]
+    {
+      "kpi": "LD top-3% — alcohol rehab",
+      "baseline": "70.3%",
+      "target": "≥75%",
+      "stretch": "≥80%"
+    },
+    {
+      "kpi": "LD top-3% — alcohol detox near me",
+      "baseline": "70.9%",
+      "target": "≥75%",
+      "stretch": "≥80%"
+    },
+    {
+      "kpi": "LD top-3% — addiction rehab + near me",
+      "baseline": "60.8%",
+      "target": "≥65%",
+      "stretch": "≥70%"
+    },
+    {
+      "kpi": "LD top-3% — addiction treatment center (recover −8.3pt slip)",
+      "baseline": "54.4%",
+      "target": "≥60%",
+      "stretch": "≥65%"
+    },
+    {
+      "kpi": "GSC non-branded clicks (30d window)",
+      "baseline": "47",
+      "target": "≥200 (4×)",
+      "stretch": "≥330"
+    },
+    {
+      "kpi": "Branded CTR (15,237 imp/365d baseline)",
+      "baseline": "17.1%",
+      "target": "≥15% hold",
+      "stretch": "≥18%"
+    },
+    {
+      "kpi": "GBP photo count (with category mix)",
+      "baseline": "6",
+      "target": "≥25 / 5 categories",
+      "stretch": "≥40"
+    },
+    {
+      "kpi": "GBP reviews",
+      "baseline": "47",
+      "target": "≥60 (+13 net)",
+      "stretch": "≥75"
+    },
+    {
+      "kpi": "GBP service area entries",
+      "baseline": "20 (13 on 3 ZIPs)",
+      "target": "18 (9 KEEPs + 9 ADDs + 2 reserve)",
+      "stretch": "20 (all anchors)"
+    },
+    {
+      "kpi": "Service-page combined clicks (10 URLs → 5 base)",
+      "baseline": "3 / 365d",
+      "target": "≥50 / M3",
+      "stretch": "≥100"
+    },
+    {
+      "kpi": "/locations/* combined clicks",
+      "baseline": "16 / 365d",
+      "target": "≥80 / M3",
+      "stretch": "≥150"
+    },
+    {
+      "kpi": "Brand demand routed to canonical entity",
+      "baseline": "59% (528 / 891)",
+      "target": "≥80%",
+      "stretch": "≥90%"
+    }
+  ],
+  "gsc_organic_trend": {
+    "headline": "Branded engine stable (17.1% CTR / 15,237 imp/365d) — non-branded discovery collapsed 87% in last 30d window",
+    "annotation_text": "Source: GSC live API — 365d daily window aggregated to monthly buckets via 30/90/180/365-day period deltas. May 2026 partial (first 18 days through 2026-05-18). The Apr-May 2026 drop is non-branded; branded search holds steady at 17.1% CTR. The 670-post blog continues publishing through the collapse.",
+    "may_extrapolation_note": "May 2026 partial — first 18 days at trailing pace.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        820,
+        870,
+        840,
+        815,
+        800,
+        790,
+        250,
+        240,
+        235,
+        290,
+        285,
+        275,
+        243
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        350,
+        365,
+        360,
+        345,
+        340,
+        335,
+        47,
+        45,
+        43,
+        32,
+        30,
+        29,
+        28
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 5,
+        "label": "Oct 2025 — pre-collapse baseline",
+        "type": "positive"
+      },
+      {
+        "month_index": 6,
+        "label": "Nov 2025 — non-branded discovery starts collapsing",
+        "type": "negative"
+      },
+      {
+        "month_index": 11,
+        "label": "Apr 2026 — production firehose continues despite collapse",
+        "type": "negative"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "org_sess": 2530,
+        "org_conv": 1075,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 2455,
+        "org_conv": 1045,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 725,
+        "org_conv": 132,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 810,
+        "org_conv": 105,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr–May to date)",
+        "org_sess": 518,
+        "org_conv": 57,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  }
 }

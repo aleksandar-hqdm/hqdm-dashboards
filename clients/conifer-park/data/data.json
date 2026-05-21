@@ -52,10 +52,16 @@
     }
   ],
   "trend": {
-    "headline": "Branded share of clicks growing in short windows (85% 30d vs 50% 365d) — non-brand clicks decaying faster than brand. Blog informational mass losing rankings.",
-    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. Brand engine (~17.5% CTR, 81K branded imp) stable; non-brand blog impressions (4.95M, 0.29% CTR) decaying. May 2026 partial (first 13 days).",
-    "may_extrapolation_note": "May 2026 partial — first 13 days at trailing pace.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): form_submit (240)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
       "Jun 2025",
       "Jul 2025",
       "Aug 2025",
@@ -71,90 +77,334 @@
     ],
     "sessions": {
       "organic": [
-        7200,
-        7150,
-        7050,
-        6800,
-        6650,
-        6400,
-        6200,
-        6450,
-        6650,
-        6900,
-        6300,
-        2600
+        13096,
+        16,
+        5,
+        0,
+        0,
+        0,
+        0,
+        1628,
+        10619,
+        9312,
+        9471,
+        7346,
+        5657,
+        5956,
+        4596,
+        5594,
+        4468,
+        2764
+      ],
+      "direct": [
+        1333,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        323,
+        2023,
+        2019,
+        2168,
+        3011,
+        3529,
+        3023,
+        2092,
+        2679,
+        2080,
+        1508
+      ],
+      "referral": [
+        103,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26,
+        154,
+        195,
+        165,
+        154,
+        116,
+        114,
+        135,
+        178,
+        215,
+        163
+      ],
+      "social": [
+        82,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        13,
+        70,
+        19,
+        31,
+        16,
+        49,
+        31,
+        33,
+        30,
+        28,
+        43
+      ],
+      "email": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        4,
+        2,
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "other": [
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        21,
+        39,
+        30,
+        136,
+        554,
+        71,
+        51,
+        49,
+        29,
+        9
       ]
     },
     "form_submits": {
       "organic": [
-        1140,
-        1110,
-        1090,
-        1060,
-        1030,
-        1000,
-        970,
-        990,
-        1010,
-        1040,
-        980,
-        410
+        499.0,
+        0.0,
+        0.0,
+        0,
+        0,
+        0,
+        0,
+        2.0,
+        40.0,
+        41.0,
+        54.0,
+        62.0,
+        45.0,
+        51.0,
+        40.0,
+        61.0,
+        44.0,
+        40.0
+      ],
+      "direct": [
+        51.0,
+        0.0,
+        0,
+        0.0,
+        0,
+        0,
+        0.0,
+        2.0,
+        14.0,
+        13.0,
+        18.0,
+        22.0,
+        21.0,
+        22.0,
+        10.0,
+        30.0,
+        34.0,
+        9.0
+      ],
+      "referral": [
+        8.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "social": [
+        1.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "email": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0,
+        0,
+        0.0,
+        0.0,
+        0,
+        0
+      ],
+      "other": [
+        4.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0
       ]
     },
     "series_labels": {
-      "sessions": "GSC Organic Clicks (monthly)",
-      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+      "sessions": "GA4 Sessions",
+      "form_submits": "GA4 Conversions  (form_submit (240))"
     },
-    "events": [
-      {
-        "month_index": 9,
-        "label": "Mar 2026 — last full month peak",
-        "type": "positive"
-      },
-      {
-        "month_index": 10,
-        "label": "Apr 2026 — non-brand blog decay accelerating",
-        "type": "negative"
-      }
-    ],
+    "channel_labels": {
+      "organic": "Organic Search",
+      "direct": "Direct",
+      "referral": "Referral",
+      "social": "Organic Social",
+      "email": "Email",
+      "other": "Other / Unassigned"
+    },
+    "events": [],
     "quarterly": [
       {
-        "q": "Q3 2025",
-        "org_sess": 21400,
-        "org_conv": 3340,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
+        "q": "Dec 2024",
+        "org_sess": 13096,
+        "org_conv": 499.0,
+        "org_cr": 3.8,
+        "gbp_sess": 1333,
+        "gbp_conv": 51.0,
+        "gbp_cr": 3.8
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 7,
+        "org_conv": 0.0,
+        "org_cr": 0.0,
+        "gbp_sess": 0,
+        "gbp_conv": 0.0,
         "gbp_cr": null
+      },
+      {
+        "q": "Q2 2025",
+        "org_sess": 0,
+        "org_conv": 0.0,
+        "org_cr": null,
+        "gbp_sess": 0,
+        "gbp_conv": 0.0,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 7186,
+        "org_conv": 27.7,
+        "org_cr": 0.4,
+        "gbp_sess": 1455,
+        "gbp_conv": 9.7,
+        "gbp_cr": 0.7
       },
       {
         "q": "Q4 2025",
-        "org_sess": 19250,
-        "org_conv": 3000,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 7491,
+        "org_conv": 53.7,
+        "org_cr": 0.7,
+        "gbp_sess": 2902,
+        "gbp_conv": 20.3,
+        "gbp_cr": 0.7
       },
       {
         "q": "Q1 2026",
-        "org_sess": 20000,
-        "org_conv": 3040,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 5382,
+        "org_conv": 50.7,
+        "org_cr": 0.9,
+        "gbp_sess": 2598,
+        "gbp_conv": 20.7,
+        "gbp_cr": 0.8
       },
       {
-        "q": "Q2 2026* (Apr–May to date)",
-        "org_sess": 8900,
-        "org_conv": 1390,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "q": "Q2 2026*",
+        "org_sess": 3616,
+        "org_conv": 42.0,
+        "org_cr": 1.2,
+        "gbp_sess": 1794,
+        "gbp_conv": 21.5,
+        "gbp_cr": 1.2
       }
-    ]
+    ],
+    "channel_colors": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "social": "#f59e0b",
+      "email": "#0ea5a4",
+      "other": "#9ca3af"
+    }
   },
   "per_keyword": [
     {
@@ -1075,5 +1325,110 @@
       "target": "≥2/4 (or status documented)",
       "stretch": "4/4 visible"
     }
-  ]
+  ],
+  "gsc_organic_trend": {
+    "headline": "Branded share of clicks growing in short windows (85% 30d vs 50% 365d) — non-brand clicks decaying faster than brand. Blog informational mass losing rankings.",
+    "annotation_text": "Source: GSC Search Analytics — daily 365d export aggregated to month. Brand engine (~17.5% CTR, 81K branded imp) stable; non-brand blog impressions (4.95M, 0.29% CTR) decaying. May 2026 partial (first 13 days).",
+    "may_extrapolation_note": "May 2026 partial — first 13 days at trailing pace.",
+    "months": [
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        7200,
+        7150,
+        7050,
+        6800,
+        6650,
+        6400,
+        6200,
+        6450,
+        6650,
+        6900,
+        6300,
+        2600
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        1140,
+        1110,
+        1090,
+        1060,
+        1030,
+        1000,
+        970,
+        990,
+        1010,
+        1040,
+        980,
+        410
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 9,
+        "label": "Mar 2026 — last full month peak",
+        "type": "positive"
+      },
+      {
+        "month_index": 10,
+        "label": "Apr 2026 — non-brand blog decay accelerating",
+        "type": "negative"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q3 2025",
+        "org_sess": 21400,
+        "org_conv": 3340,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 19250,
+        "org_conv": 3000,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 20000,
+        "org_conv": 3040,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr–May to date)",
+        "org_sess": 8900,
+        "org_conv": 1390,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  }
 }

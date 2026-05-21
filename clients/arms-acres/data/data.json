@@ -52,10 +52,15 @@
     }
   ],
   "trend": {
-    "headline": "Stable Carmel-anchored organic with Apr-May 2026 inflection — homepage + insurance-article cluster gaining, blog informational cohort facing AIO pullback",
-    "annotation_text": "Source: GSC Search Analytics 365d daily window aggregated to month. Homepage at pos 17 with 1.7K clicks / 482K imp 365d. Insurance article cluster (10 articles) at pos 11-20 with 214K imp/180d — title + FAQ-schema CN-01 batch is the M1 CTR lever. May 2026 partial (first 14 days at trailing pace).",
-    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): form_submit (152)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
       "May 2025",
       "Jun 2025",
       "Jul 2025",
@@ -72,101 +77,292 @@
     ],
     "sessions": {
       "organic": [
-        1820,
-        2010,
-        2150,
-        2240,
-        2180,
-        2070,
-        1920,
-        2150,
-        2390,
-        2580,
-        2810,
-        2960,
-        1450
+        6954,
+        9,
+        1275,
+        11186,
+        10852,
+        9644,
+        9133,
+        7716,
+        6338,
+        6231,
+        4972,
+        4665,
+        5095,
+        7598,
+        8803,
+        8812,
+        9200,
+        7215
+      ],
+      "direct": [
+        1213,
+        47,
+        449,
+        1588,
+        1407,
+        1874,
+        3441,
+        1685,
+        2871,
+        4053,
+        4373,
+        4984,
+        3905,
+        5469,
+        5569,
+        5759,
+        5682,
+        4367
+      ],
+      "referral": [
+        329,
+        2,
+        70,
+        528,
+        515,
+        495,
+        496,
+        521,
+        443,
+        341,
+        371,
+        318,
+        340,
+        399,
+        369,
+        406,
+        420,
+        278
+      ],
+      "social": [
+        27,
+        0,
+        3,
+        35,
+        49,
+        41,
+        77,
+        39,
+        65,
+        29,
+        19,
+        15,
+        18,
+        27,
+        44,
+        96,
+        22,
+        17
+      ],
+      "other": [
+        40,
+        0,
+        2,
+        16,
+        35,
+        43,
+        49,
+        22,
+        76,
+        121,
+        124,
+        128,
+        91,
+        107,
+        109,
+        147,
+        136,
+        114
       ]
     },
     "form_submits": {
       "organic": [
-        320,
-        355,
-        380,
-        395,
-        385,
-        365,
-        340,
-        380,
-        422,
-        455,
-        495,
-        522,
-        256
+        852.0,
+        0.0,
+        2.0,
+        27.0,
+        28.0,
+        31.0,
+        36.0,
+        35.0,
+        19.0,
+        10.0,
+        7.0,
+        11.0,
+        9.0,
+        9.0,
+        5.0,
+        7.0,
+        8.0,
+        4.0
+      ],
+      "direct": [
+        88.0,
+        0.0,
+        1.0,
+        9.0,
+        12.0,
+        14.0,
+        5.0,
+        20.0,
+        14.0,
+        22.0,
+        11.0,
+        10.0,
+        9.0,
+        28.0,
+        38.0,
+        43.0,
+        46.0,
+        11.0
+      ],
+      "referral": [
+        48.0,
+        0.0,
+        2.0,
+        12.0,
+        6.0,
+        5.0,
+        17.0,
+        7.0,
+        4.0,
+        5.0,
+        4.0,
+        6.0,
+        4.0,
+        11.0,
+        4.0,
+        9.0,
+        10.0,
+        5.0
+      ],
+      "social": [
+        0.0,
+        0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "other": [
+        9.0,
+        0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ]
     },
     "series_labels": {
-      "sessions": "GSC Organic Clicks (monthly)",
-      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+      "sessions": "GA4 Sessions",
+      "form_submits": "GA4 Conversions  (form_submit (152))"
     },
-    "events": [
-      {
-        "month_index": 11,
-        "label": "Apr 2026 — homepage + insurance cluster gaining",
-        "type": "positive"
-      },
-      {
-        "month_index": 12,
-        "label": "May 2026 — partial (first 14d)",
-        "type": "neutral"
-      }
-    ],
+    "channel_labels": {
+      "organic": "Organic Search",
+      "direct": "Direct",
+      "referral": "Referral",
+      "social": "Organic Social",
+      "other": "Other / Unassigned"
+    },
+    "events": [],
     "quarterly": [
       {
+        "q": "Dec 2024",
+        "org_sess": 6954,
+        "org_conv": 852.0,
+        "org_cr": 12.3,
+        "gbp_sess": 1213,
+        "gbp_conv": 88.0,
+        "gbp_cr": 7.3
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 4156,
+        "org_conv": 9.7,
+        "org_cr": 0.2,
+        "gbp_sess": 694,
+        "gbp_conv": 3.3,
+        "gbp_cr": 0.5
+      },
+      {
         "q": "Q2 2025",
-        "org_sess": 1993,
-        "org_conv": 352,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 9876,
+        "org_conv": 31.7,
+        "org_cr": 0.3,
+        "gbp_sess": 2240,
+        "gbp_conv": 10.3,
+        "gbp_cr": 0.5
       },
       {
         "q": "Q3 2025",
-        "org_sess": 2163,
-        "org_conv": 387,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 6761,
+        "org_conv": 21.3,
+        "org_cr": 0.3,
+        "gbp_sess": 2869,
+        "gbp_conv": 18.7,
+        "gbp_cr": 0.7
       },
       {
         "q": "Q4 2025",
-        "org_sess": 2047,
-        "org_conv": 362,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 4910,
+        "org_conv": 9.0,
+        "org_cr": 0.2,
+        "gbp_sess": 4420,
+        "gbp_conv": 10.0,
+        "gbp_cr": 0.2
       },
       {
         "q": "Q1 2026",
-        "org_sess": 2593,
-        "org_conv": 452,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "org_sess": 8404,
+        "org_conv": 7.0,
+        "org_cr": 0.1,
+        "gbp_sess": 5599,
+        "gbp_conv": 36.3,
+        "gbp_cr": 0.6
       },
       {
-        "q": "Q2 2026* (Apr-May to date)",
-        "org_sess": 4410,
-        "org_conv": 778,
-        "org_cr": null,
-        "gbp_sess": null,
-        "gbp_conv": null,
-        "gbp_cr": null
+        "q": "Q2 2026*",
+        "org_sess": 8207,
+        "org_conv": 6.0,
+        "org_cr": 0.1,
+        "gbp_sess": 5024,
+        "gbp_conv": 28.5,
+        "gbp_cr": 0.6
       }
-    ]
+    ],
+    "channel_colors": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "social": "#f59e0b",
+      "other": "#9ca3af"
+    }
   },
   "per_keyword": [
     {
@@ -1105,5 +1301,122 @@
       "target": "≥12",
       "stretch": "15 (full plan)"
     }
-  ]
+  ],
+  "gsc_organic_trend": {
+    "headline": "Stable Carmel-anchored organic with Apr-May 2026 inflection — homepage + insurance-article cluster gaining, blog informational cohort facing AIO pullback",
+    "annotation_text": "Source: GSC Search Analytics 365d daily window aggregated to month. Homepage at pos 17 with 1.7K clicks / 482K imp 365d. Insurance article cluster (10 articles) at pos 11-20 with 214K imp/180d — title + FAQ-schema CN-01 batch is the M1 CTR lever. May 2026 partial (first 14 days at trailing pace).",
+    "may_extrapolation_note": "May 2026 partial — first 14 days at trailing pace.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        1820,
+        2010,
+        2150,
+        2240,
+        2180,
+        2070,
+        1920,
+        2150,
+        2390,
+        2580,
+        2810,
+        2960,
+        1450
+      ]
+    },
+    "form_submits": {
+      "organic": [
+        320,
+        355,
+        380,
+        395,
+        385,
+        365,
+        340,
+        380,
+        422,
+        455,
+        495,
+        522,
+        256
+      ]
+    },
+    "series_labels": {
+      "sessions": "GSC Organic Clicks (monthly)",
+      "form_submits": "GSC Organic Impressions (thousand, monthly)"
+    },
+    "events": [
+      {
+        "month_index": 11,
+        "label": "Apr 2026 — homepage + insurance cluster gaining",
+        "type": "positive"
+      },
+      {
+        "month_index": 12,
+        "label": "May 2026 — partial (first 14d)",
+        "type": "neutral"
+      }
+    ],
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "org_sess": 1993,
+        "org_conv": 352,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 2163,
+        "org_conv": 387,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 2047,
+        "org_conv": 362,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 2593,
+        "org_conv": 452,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q2 2026* (Apr-May to date)",
+        "org_sess": 4410,
+        "org_conv": 778,
+        "org_cr": null,
+        "gbp_sess": null,
+        "gbp_conv": null,
+        "gbp_cr": null
+      }
+    ]
+  }
 }

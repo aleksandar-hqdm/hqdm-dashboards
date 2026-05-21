@@ -100,28 +100,48 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">GSC Organic Trend — 13 Months</h2>
-          <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
+          <h2 class="text-2xl font-bold tracking-tight">GA4 Channel Performance — 18 Months</h2>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Sessions + conversions by GA4 default channel grouping, 18-month window (Dec 2024 → May 2026)</p>
         </div>
         <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
           <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
-            <input type="checkbox" data-series="organic" checked class="rounded accent-brand-500">
+            <input type="checkbox" data-series="organic" checked class="rounded">
             <span class="inline-block w-3 h-3 rounded-full" style="background:#1d5b8a"></span>
-            <span>GSC Organic</span>
+            <span>Organic Search</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="direct" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#ef4444"></span>
+            <span>Direct</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="referral" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#8b5cf6"></span>
+            <span>Referral</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="social" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#f59e0b"></span>
+            <span>Organic Social</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="other" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#9ca3af"></span>
+            <span>Other / Unassigned</span>
           </label>
         </div>
       </div>
       <div class="p-6 space-y-8">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Clicks</h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">GA4 Sessions <span class="text-ink-400 font-medium normal-case">(by channel)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Impressions <span class="text-ink-400 font-medium normal-case">(thousand)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">GA4 Conversions <span class="text-ink-400 font-medium normal-case">(form_submit + gmb_click)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
@@ -132,7 +152,7 @@
 
     <!-- GSC decline chart (auto-rendered if data.gsc_decline) -->
     <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-      <h3 class="text-lg font-bold">GSC Month-Over-Month Impressions</h3>
+      <h3 class="text-lg font-bold">GSC Organic Impressions — Month-Over-Month</h3>
       <p class="text-xs text-ink-500 mt-1">Apr–May 2026 pullback driven by AIO encroachment on informational blog cohort. Homepage + service-page impressions stable.</p>
       <div class="h-64 mt-4"><canvas id="gsc-chart"></canvas></div>
     </div>
