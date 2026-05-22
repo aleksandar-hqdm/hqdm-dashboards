@@ -170,21 +170,28 @@ timeline = [
     },
 ]
 
-# Trend window — last 8 months INCLUDING May 2026* partial. The May leads number
-# is shown as a dashed/partial point and the "How we count leads" section explains
-# why the raw May figure runs ~50% high (duplicate events newly attributed).
+# Trend window — last 8 months ENDING at April 2026 (latest fully reconciled
+# month). May 2026 is excluded entirely: raw GA4 reports 81 organic leads in 16
+# days, but ~2x of that is duplicate-event inflation (booking_confirmed +
+# click_phone_number + contact_form_submit started attributing as separate
+# conversions on May 1). Real May organic ~41 in 16 days = ~2.5/day vs April
+# 1.97/day. The dedup estimate isn't precise enough to plot, and the raw value
+# tells a positive story that isn't there. Owner Ask #5 surfaces the cleanup.
 months_all = data['trend']['months']
 sess_org_all = data['trend']['sessions']['organic']
 leads_monthly = [round(v or 0) for v in data['trend']['conversions']['organic']]
 
+# Trim May (the partial month with the asterisk) off the end
+may_idx = next((i for i, m in enumerate(months_all) if '*' in m), None)
+end_idx = may_idx if may_idx is not None else len(months_all)
 WINDOW = 8
-start = max(0, len(months_all) - WINDOW)
+start = max(0, end_idx - WINDOW)
 
 trend_chart = {
-    "months": months_all[start:],
-    "sessions": sess_org_all[start:],
-    "leads": leads_monthly[start:],
-    "partial_note": "May 2026 is partial through 2026-05-16 (16 of 31 days) - shown as a dashed line. The May leads value (81) is the raw GA4 figure; it runs ~50% high because three duplicate conversion events started attributing as separate conversions on May 1 (see 'How we count leads' below). Real May organic leads tracking ~46 over the 16-day window, roughly in line with April's daily rate.",
+    "months": months_all[start:end_idx],
+    "sessions": sess_org_all[start:end_idx],
+    "leads": leads_monthly[start:end_idx],
+    "partial_note": "Chart ends at April 2026 (latest fully reconciled month). May 2026 is excluded because three duplicate conversion events started attributing as separate conversions on May 1, inflating the raw May organic leads number ~2x. Owner Ask #5 surfaces the GA4 cleanup; we'll bring May back into the chart once the duplicates are removed.",
 }
 
 # Heatmap keywords — biggest-movement story first
