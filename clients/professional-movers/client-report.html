@@ -618,12 +618,12 @@
                 })()}
               </div>
               <div class="grid grid-cols-3 gap-2 text-center mt-4 pt-3 border-t border-slate-200 text-[10px] uppercase tracking-wider font-bold text-slate-500">
-                <div>Avg rank</div><div>Top-3 cells</div><div>Total cells</div>
+                <div>Avg rank</div><div>Top-3 cells</div><div>Top-10 cells</div>
               </div>
               <div class="grid grid-cols-3 gap-2 text-center mt-1" data-stats="${entity}">
                 <div class="text-xl font-extrabold text-slate-800 cr-avg">—</div>
                 <div class="text-xl font-extrabold text-slate-800 cr-top3">—</div>
-                <div class="text-xl font-extrabold text-slate-800 cr-cells">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top10">—</div>
               </div>
             </div>
           `;
@@ -658,10 +658,10 @@
           if (statBox && stats) {
             const avg = stats[`${date}_avg`];
             const t3 = stats[`${date}_top3`];
-            const c = stats[`${date}_cells`];
+            const t10 = stats[`${date}_top10`];
             statBox.querySelector('.cr-avg').textContent = avg != null ? Number(avg).toFixed(1) : '—';
             statBox.querySelector('.cr-top3').textContent = t3 != null ? t3 : '—';
-            statBox.querySelector('.cr-cells').textContent = c != null ? c : '—';
+            statBox.querySelector('.cr-top10').textContent = t10 != null ? t10 : '—';
           }
         });
       }

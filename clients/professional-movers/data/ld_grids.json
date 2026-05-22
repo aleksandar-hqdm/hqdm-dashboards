@@ -771,33 +771,41 @@
           "feb2_cells": 121,
           "feb2_avg": 12.47,
           "feb2_top3": 2,
+          "feb2_top10": 9,
           "may1_cells": 121,
           "may1_avg": 10.54,
-          "may1_top3": 2
+          "may1_top3": 2,
+          "may1_top10": 67
         },
         "Detroit Moving Company LLC": {
           "feb2_cells": 121,
           "feb2_avg": 1.02,
           "feb2_top3": 121,
-          "may1_cells": 0,
-          "may1_avg": null,
-          "may1_top3": 0
+          "feb2_top10": 121,
+          "may1_cells": 121,
+          "may1_avg": 1.02,
+          "may1_top3": 121,
+          "may1_top10": 121
         },
         "Two Men and a Truck Moving": {
           "feb2_cells": 121,
           "feb2_avg": 2.12,
           "feb2_top3": 119,
+          "feb2_top10": 121,
           "may1_cells": 121,
           "may1_avg": 2.1,
-          "may1_top3": 119
+          "may1_top3": 119,
+          "may1_top10": 121
         },
         "Balance Detroit Moving Company": {
           "feb2_cells": 121,
           "feb2_avg": 3.05,
           "feb2_top3": 119,
+          "feb2_top10": 121,
           "may1_cells": 121,
           "may1_avg": 3.04,
-          "may1_top3": 119
+          "may1_top3": 119,
+          "may1_top10": 121
         }
       },
       "feb2": {
@@ -3838,7 +3846,613 @@
             "rank": 10
           }
         ],
-        "Detroit Moving Company LLC": [],
+        "Detroit Moving Company LLC": [
+          {
+            "x": 0,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "rank": 3
+          },
+          {
+            "x": -1,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 4,
+            "rank": 2
+          },
+          {
+            "x": 2,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 6,
+            "rank": 1
+          }
+        ],
         "Two Men and a Truck Moving": [
           {
             "x": 0,
@@ -5807,57 +6421,73 @@
           "feb2_cells": 121,
           "feb2_avg": 14.26,
           "feb2_top3": 1,
+          "feb2_top10": 8,
           "feb27_cells": 99,
           "feb27_avg": 16.04,
           "feb27_top3": 0,
+          "feb27_top10": 0,
           "mar31_cells": 120,
           "mar31_avg": 16.61,
           "mar31_top3": 0,
+          "mar31_top10": 3,
           "may1_cells": 121,
           "may1_avg": 13.54,
-          "may1_top3": 0
+          "may1_top3": 0,
+          "may1_top10": 16
         },
         "Detroit Moving Company LLC": {
           "feb2_cells": 121,
           "feb2_avg": 1.0,
           "feb2_top3": 121,
+          "feb2_top10": 121,
           "feb27_cells": 121,
           "feb27_avg": 1.48,
           "feb27_top3": 121,
+          "feb27_top10": 121,
           "mar31_cells": 121,
           "mar31_avg": 1.0,
           "mar31_top3": 121,
-          "may1_cells": 0,
-          "may1_avg": null,
-          "may1_top3": 0
+          "mar31_top10": 121,
+          "may1_cells": 121,
+          "may1_avg": 1.0,
+          "may1_top3": 121,
+          "may1_top10": 121
         },
         "Two Men and a Truck Moving": {
           "feb2_cells": 121,
           "feb2_avg": 2.02,
           "feb2_top3": 120,
+          "feb2_top10": 121,
           "feb27_cells": 121,
           "feb27_avg": 1.52,
           "feb27_top3": 121,
+          "feb27_top10": 121,
           "mar31_cells": 121,
           "mar31_avg": 2.0,
           "mar31_top3": 121,
+          "mar31_top10": 121,
           "may1_cells": 121,
           "may1_avg": 2.02,
-          "may1_top3": 121
+          "may1_top3": 121,
+          "may1_top10": 121
         },
         "Balance Detroit Moving Company": {
           "feb2_cells": 121,
           "feb2_avg": 4.14,
           "feb2_top3": 44,
+          "feb2_top10": 121,
           "feb27_cells": 121,
           "feb27_avg": 3.97,
           "feb27_top3": 57,
+          "feb27_top10": 121,
           "mar31_cells": 121,
           "mar31_avg": 3.48,
           "mar31_top3": 77,
+          "mar31_top10": 121,
           "may1_cells": 121,
           "may1_avg": 3.45,
-          "may1_top3": 64
+          "may1_top3": 64,
+          "may1_top10": 121
         }
       },
       "feb2": {
@@ -13643,7 +14273,613 @@
             "rank": 16
           }
         ],
-        "Detroit Moving Company LLC": [],
+        "Detroit Moving Company LLC": [
+          {
+            "x": 0,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": 6,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": 5,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": 4,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 3,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": 2,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": 1,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": 0,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": -6,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -5,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": -4,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": -3,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": -2,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": -1,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 0,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 1,
+            "rank": 1
+          },
+          {
+            "x": -6,
+            "y": 2,
+            "rank": 1
+          },
+          {
+            "x": -5,
+            "y": 3,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 4,
+            "rank": 1
+          },
+          {
+            "x": -4,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -3,
+            "y": 5,
+            "rank": 1
+          },
+          {
+            "x": -2,
+            "y": 6,
+            "rank": 1
+          },
+          {
+            "x": -1,
+            "y": 6,
+            "rank": 1
+          }
+        ],
         "Two Men and a Truck Moving": [
           {
             "x": 0,
@@ -15610,33 +16846,41 @@
           "feb2_cells": 119,
           "feb2_avg": 4.77,
           "feb2_top3": 65,
+          "feb2_top10": 105,
           "may1_cells": 118,
           "may1_avg": 4.83,
-          "may1_top3": 64
+          "may1_top3": 64,
+          "may1_top10": 104
         },
         "Bos Moving & Service": {
           "feb2_cells": 94,
           "feb2_avg": 5.83,
           "feb2_top3": 50,
+          "feb2_top10": 74,
           "may1_cells": 96,
           "may1_avg": 5.88,
-          "may1_top3": 50
+          "may1_top3": 50,
+          "may1_top10": 75
         },
         "Moving Made Easy": {
           "feb2_cells": 114,
           "feb2_avg": 7.54,
           "feb2_top3": 30,
+          "feb2_top10": 80,
           "may1_cells": 110,
           "may1_avg": 7.48,
-          "may1_top3": 24
+          "may1_top3": 24,
+          "may1_top10": 76
         },
         "Alpha Moving Company": {
           "feb2_cells": 102,
           "feb2_avg": 7.97,
           "feb2_top3": 29,
+          "feb2_top10": 67,
           "may1_cells": 101,
           "may1_avg": 8.38,
-          "may1_top3": 30
+          "may1_top3": 30,
+          "may1_top10": 66
         }
       },
       "feb2": {
@@ -20682,57 +21926,73 @@
           "feb2_cells": 121,
           "feb2_avg": 3.3,
           "feb2_top3": 82,
+          "feb2_top10": 112,
           "feb27_cells": 121,
           "feb27_avg": 3.79,
           "feb27_top3": 75,
+          "feb27_top10": 111,
           "mar31_cells": 121,
           "mar31_avg": 3.39,
           "mar31_top3": 84,
+          "mar31_top10": 112,
           "may1_cells": 121,
           "may1_avg": 3.4,
-          "may1_top3": 84
+          "may1_top3": 84,
+          "may1_top10": 113
         },
         "Moving Made Easy": {
           "feb2_cells": 119,
           "feb2_avg": 7.08,
           "feb2_top3": 32,
+          "feb2_top10": 91,
           "feb27_cells": 121,
           "feb27_avg": 6.01,
           "feb27_top3": 37,
+          "feb27_top10": 98,
           "mar31_cells": 118,
           "mar31_avg": 7.24,
           "mar31_top3": 33,
+          "mar31_top10": 89,
           "may1_cells": 119,
           "may1_avg": 8.0,
-          "may1_top3": 29
+          "may1_top3": 29,
+          "may1_top10": 82
         },
         "Bos Moving & Service": {
           "feb2_cells": 80,
           "feb2_avg": 6.28,
           "feb2_top3": 35,
+          "feb2_top10": 62,
           "feb27_cells": 77,
           "feb27_avg": 6.88,
           "feb27_top3": 32,
+          "feb27_top10": 56,
           "mar31_cells": 82,
           "mar31_avg": 6.09,
           "mar31_top3": 36,
+          "mar31_top10": 65,
           "may1_cells": 79,
           "may1_avg": 6.48,
-          "may1_top3": 33
+          "may1_top3": 33,
+          "may1_top10": 61
         },
         "Quick and Careful Moving": {
           "feb2_cells": 121,
           "feb2_avg": 6.22,
           "feb2_top3": 31,
+          "feb2_top10": 111,
           "feb27_cells": 121,
           "feb27_avg": 7.83,
           "feb27_top3": 24,
+          "feb27_top10": 83,
           "mar31_cells": 121,
           "mar31_avg": 6.65,
           "mar31_top3": 30,
+          "mar31_top10": 107,
           "may1_cells": 121,
           "may1_avg": 7.37,
-          "may1_top3": 21
+          "may1_top3": 21,
+          "may1_top10": 99
         }
       },
       "feb2": {
@@ -30341,33 +31601,41 @@
           "feb2_cells": 121,
           "feb2_avg": 3.61,
           "feb2_top3": 83,
+          "feb2_top10": 111,
           "may1_cells": 121,
           "may1_avg": 3.89,
-          "may1_top3": 79
+          "may1_top3": 79,
+          "may1_top10": 109
         },
         "Bos Moving & Service": {
           "feb2_cells": 84,
           "feb2_avg": 6.38,
           "feb2_top3": 38,
+          "feb2_top10": 63,
           "may1_cells": 83,
           "may1_avg": 6.69,
-          "may1_top3": 37
+          "may1_top3": 37,
+          "may1_top10": 59
         },
         "Alpha Moving Company": {
           "feb2_cells": 103,
           "feb2_avg": 8.49,
           "feb2_top3": 31,
+          "feb2_top10": 69,
           "may1_cells": 101,
           "may1_avg": 7.91,
-          "may1_top3": 34
+          "may1_top3": 34,
+          "may1_top10": 68
         },
         "Moving Made Easy": {
           "feb2_cells": 116,
           "feb2_avg": 7.14,
           "feb2_top3": 28,
+          "feb2_top10": 90,
           "may1_cells": 113,
           "may1_avg": 7.88,
-          "may1_top3": 20
+          "may1_top3": 20,
+          "may1_top10": 82
         }
       },
       "feb2": {
@@ -35353,57 +36621,73 @@
           "feb2_cells": 120,
           "feb2_avg": 3.96,
           "feb2_top3": 81,
+          "feb2_top10": 108,
           "feb27_cells": 120,
           "feb27_avg": 4.33,
           "feb27_top3": 75,
+          "feb27_top10": 107,
           "mar31_cells": 120,
           "mar31_avg": 3.99,
           "mar31_top3": 84,
+          "mar31_top10": 107,
           "may1_cells": 121,
           "may1_avg": 4.26,
-          "may1_top3": 79
+          "may1_top3": 79,
+          "may1_top10": 106
         },
         "Moving Made Easy": {
           "feb2_cells": 121,
           "feb2_avg": 5.78,
           "feb2_top3": 48,
+          "feb2_top10": 101,
           "feb27_cells": 121,
           "feb27_avg": 5.47,
           "feb27_top3": 45,
+          "feb27_top10": 104,
           "mar31_cells": 121,
           "mar31_avg": 5.84,
           "mar31_top3": 48,
+          "mar31_top10": 101,
           "may1_cells": 121,
           "may1_avg": 6.33,
-          "may1_top3": 46
+          "may1_top3": 46,
+          "may1_top10": 94
         },
         "Bos Moving & Service": {
           "feb2_cells": 95,
           "feb2_avg": 6.14,
           "feb2_top3": 45,
+          "feb2_top10": 73,
           "feb27_cells": 94,
           "feb27_avg": 6.31,
           "feb27_top3": 42,
+          "feb27_top10": 72,
           "mar31_cells": 94,
           "mar31_avg": 5.79,
           "mar31_top3": 47,
+          "mar31_top10": 74,
           "may1_cells": 90,
           "may1_avg": 5.68,
-          "may1_top3": 48
+          "may1_top3": 48,
+          "may1_top10": 74
         },
         "Reasonable Movers": {
           "feb2_cells": 100,
           "feb2_avg": 7.8,
           "feb2_top3": 34,
+          "feb2_top10": 66,
           "feb27_cells": 97,
           "feb27_avg": 8.29,
           "feb27_top3": 31,
+          "feb27_top10": 64,
           "mar31_cells": 97,
           "mar31_avg": 7.82,
           "mar31_top3": 32,
+          "mar31_top10": 64,
           "may1_cells": 98,
           "may1_avg": 8.03,
-          "may1_top3": 27
+          "may1_top3": 27,
+          "may1_top10": 66
         }
       },
       "feb2": {

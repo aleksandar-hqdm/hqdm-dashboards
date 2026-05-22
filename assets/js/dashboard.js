@@ -1123,12 +1123,12 @@ function buildPanels() {
           </div>
         </div>
         <div class="mt-3 grid grid-cols-3 gap-1 text-center text-[10px] uppercase tracking-wider font-semibold text-ink-500">
-          <div>Avg rank</div><div>Top-3</div><div>Cells</div>
+          <div>Avg rank</div><div>Top-3</div><div>Top-10</div>
         </div>
         <div class="grid grid-cols-3 gap-1 text-center mt-0.5" data-entity-stats="${escapeHtml(entity)}">
           <div class="text-base font-bold text-ink-800 stat-avg">—</div>
           <div class="text-base font-bold text-ink-800 stat-top3">—</div>
-          <div class="text-base font-bold text-ink-800 stat-cells">—</div>
+          <div class="text-base font-bold text-ink-800 stat-top10">—</div>
         </div>
       </div>
     `;
@@ -1180,18 +1180,15 @@ function applyState() {
       cell.title = `${entity} @ cell (${cell.dataset.x},${cell.dataset.y}) — ${rank != null ? 'rank ' + rank : 'not in top-N'} (${dateLabel})`;
     });
 
-    // Update summary stats. AQMS uses fields like mar8_avg / mar8_top3 / mar8_cells
-    // (where the date key is 'mar8'). PM uses feb_avg / may_avg etc. So:
-    //  → look up `${date}_avg`, `${date}_top3`, `${date}_cells` directly.
     const stats = grid.summary[entity];
     const statBox = document.querySelector(`[data-entity-stats="${cssEscape(entity)}"]`);
     if (statBox && stats) {
       const avg  = stats[`${date}_avg`];
       const top3 = stats[`${date}_top3`];
-      const cells = stats[`${date}_cells`];
+      const top10 = stats[`${date}_top10`];
       statBox.querySelector('.stat-avg').textContent   = avg  != null ? Number(avg).toFixed(1) : '—';
       statBox.querySelector('.stat-top3').textContent  = top3 != null ? top3 : '—';
-      statBox.querySelector('.stat-cells').textContent = cells != null ? cells : '—';
+      statBox.querySelector('.stat-top10').textContent = top10 != null ? top10 : '—';
     }
   });
 
