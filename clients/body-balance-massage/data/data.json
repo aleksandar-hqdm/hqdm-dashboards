@@ -9,12 +9,14 @@
     "owner_name": "Paul (Body Balance)",
     "hqdm_am": "Matt Olderman",
     "hqdm_owner": "Aleksandar Spasevski",
-    "prepared_date": "2026-05-18",
+    "prepared_date": "2026-05-22",
+    "version": "v3",
     "quarter": "Q2 2026",
     "address": "366 S 500 E Suite B, American Fork UT 84003",
     "pin": "40.378, -111.789",
-    "campaign_posture": "Hold budget · Redirect targeting · Same production scale",
-    "doc_subtitle": "Q2 2026 strategic diagnosis. The pin is gaining rank where it holds cells, not plateauing. Marginal lift sits on 7 structural fixes + redirected production at full scale."
+    "campaign_posture": "Hold budget · Redirect targeting · Same production scale · Authority rebuilt post-halt",
+    "doc_subtitle": "Q2 2026 strategic diagnosis (v3, refreshed 2026-05-22). The pin is gaining rank where it holds cells. Marginal lift sits on 7 structural fixes + redirected production at full scale. Authority workstream rebuilt around the 2026-05-13 off-page program halt.",
+    "v3_changes": "Off-page workstream rebuilt around the 2026-05-13 HQDM-internal program halt — SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) removed from BB rotation; replaced with manual citations + 1 monthly PR pitch + 1 monthly partner-outreach touch + on-site link equity. Cleanup approach reaffirmed: small-level 301-to-MAIN canonicals only, 0 NOINDEX, 0 410. Dashboard density tuned per 2026-05-21 Matt+Milica feedback."
   },
   "kpis": [
     {
@@ -83,11 +85,12 @@
     {"name": "Paul and Tasha Massage (sibling pin)", "delta": -188, "note": "Owner's other pin — out of scope"}
   ],
   "root_causes": [
-    {"severity": "P0", "title": "Trigger-point page scope mismatch + duplicate canonical", "body": "/trigger-point-therapy/ references medical injections + dry needling (owner-flagged). SP-01 rewrites body content (same H1, same URL); CN-01 301s the duplicate to /modalities-techniques/trigger-point-therapy/ canonical (745 inbound links)."},
+    {"severity": "P0", "title": "Trigger-point page scope mismatch + duplicate canonical", "body": "/trigger-point-therapy/ references medical injections + dry needling (owner-flagged). SP-01 rewrites body content (same H1, same URL); CN-01 small-level 301s the duplicate to /modalities-techniques/trigger-point-therapy/ canonical (745 inbound links)."},
     {"severity": "P0", "title": "Sitewide NAP + schema thinness + cupping 404", "body": "372/372 pages use chat phone (855); only 1 has GBP primary (734). Every page carries generic DaySpa schema only — no Service / FAQPage / LocalBusiness anywhere. /cupping-massage/ returns 404 while 10+ cupping blog posts link to it. HP-01 + TPL-01 (M1) + SP-02/03 schema rollout (M2-M3) close the structural gap."},
+    {"severity": "P0", "title": "Off-page playbook rebuild (post-2026-05-13 program halt) — NEW IN v3", "body": "BB's DA 20 → 28 lift over engagement was partly driven by the SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) — halted across HQDM's book of business 2026-05-13. Forward authority work: manual Tier-1/2/3 citation submissions (AMTA, ABMP, Utah MTA, chambers), 1 monthly digital-PR pitch (postpartum / athlete-recovery angles), 1 monthly partner-outreach touch, on-site link equity earned by refreshed canonicals + new builds. REP-01 M1 W2 runs a DataForSEO Backlinks scan to decide if a disavow file is warranted. Spend posture unchanged; mix changes."},
     {"severity": "Secondary", "title": "Doorway + geo cohort needs fill + small-redirect (never bulk NOINDEX)", "body": "326 GSC queries have 2+ BB URLs ranking. 130 URLs decisioned: 3 LEAVE · 9 REFRESH · 19 REPURPOSE · 84 small-301-to-MAIN · 14 REVIEW. Production at scale CONTINUES — 6 new location pages/month redirected to real catchment × service matrix gaps."},
     {"severity": "Opportunity", "title": "Pleasant Grove cells open + 27 untracked service ranks at AF pin", "body": "3 PG winners collapsed (Paradise -143, MassageLuXe -138, owner's sibling -188); 5 new entrants filled. DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked queries (couples massage AF, deep tissue AF, cupping near me, myofascial release...) and #2-#3 for 12 more — lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface, gated on Owner #7."},
-    {"severity": "Positive", "title": "Float moat held + near-me tightening + 4.9★ × 402 + DA 20→28 documented", "body": "Float queries held at 106/106 saturation. On near-me queries BB is #2 and #3 of substantial competitive sets. Off-page lift (DA 20→28) is documented progress. Marginal lift is now post cadence + matrix-fill builds + Q-format LLM articles + service-page schema, not new doorways."}
+    {"severity": "Positive", "title": "Float moat held + near-me tightening + 4.9★ × 402", "body": "Float queries held at 106/106 saturation. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on 'massage therapist near me' 27 → 37. Marginal lift is now post cadence + matrix-fill builds + Q-format LLM articles + service-page schema — and authority shifts to manual + earned channels per the post-halt playbook."}
   ],
   "levers": [
     {"id": "A", "name": "Single-shift fixes (M1)", "color": "red", "impact": "P0 · M1", "items": ["HP-01 sitewide NAP find-replace", "SP-01 trigger point rewrite (owner-flagged)", "CN-01 duplicate-canonical 301", "TPL-01 cupping 404 → 301 to canonical"]},
@@ -97,8 +100,8 @@
     {"id": "G", "name": "Missing-page builds", "color": "indigo", "impact": "Opp · 60d", "items": ["MR-01 M2 build /myofascial-release/ (BB #1 at AF pin, no page)", "LD-01 M3 build /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7)"]},
     {"id": "H", "name": "Meta + title refresh sweep", "color": "purple", "impact": "High · 60d", "items": ["ON-01_M1 top 12 bleeding-CTR URLs (/about/, /pricing/, /upgrades/...)", "ON-01_M2 next 10 URLs"]},
     {"id": "I", "name": "GBP velocity + photo blitz", "color": "amber", "impact": "High · 90d", "items": ["Posts 3/mo → 4/mo sustained", "8 photos/mo geotagged 40.378,-111.789", "M3 Services-tab audit"]},
-    {"id": "J", "name": "Authority + PR layered on existing rotation", "color": "blue", "impact": "Medium · 90d", "items": ["2 manual citations/mo (AMTA + ABMP + Utah MTA + chambers; mom blogs; recovery vertical)", "1 PR pitch/mo (postpartum M2; athlete M3)", "OFF-Rotation continues at current cadence"]},
-    {"id": "K", "name": "Reporting", "color": "indigo", "impact": "P0 · M3", "items": ["M1 add 14 untracked-service kws to LD cadence", "M2 indexation + CTR delta tracker", "M3 Q2 close-out vs 16-KPI scorecard"]}
+    {"id": "J", "name": "Authority rebuild — manual + earned (post-halt)", "color": "red", "impact": "P0 · Q2", "items": ["2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers; mom blogs; recovery vertical)", "1 digital-PR pitch/mo (postpartum M2; athlete-recovery M3)", "1 partner-outreach touch/mo (yoga / chiro / doula / run-club cross-link partnerships)", "On-site link equity earned by refreshed canonicals + new builds", "Halted-stack (DAS / Blast / RD100 / NAP-overlay / Link Revolver / BatchGeo / ATB / AI Articles / Driving Directions / Cloud Page / GMB Pin) archived per 2026-05-13 program halt"]},
+    {"id": "K", "name": "Reporting", "color": "indigo", "impact": "P0 · M3", "items": ["M1 add 14 untracked-service kws to LD cadence + DataForSEO Business Data scrape + DataForSEO Backlinks-disavow scan (post-halt cleanup decision)", "M2 indexation + CTR delta tracker + backlink-profile re-check if disavow filed", "M3 Q2 close-out vs 16-KPI scorecard + Q3 recommendation"]}
   ],
   "owner_asks": [
     {"id": "#1", "label": "Trigger-point page rewrite", "status": "Approved in email 2026-05-15 · Send diff before push"},
@@ -134,13 +137,13 @@
     "Live HTML probe of all 372 sitemap URLs"
   ],
   "deliverables": [
-    {"name": "Strategic Diagnosis (PDF)", "path": "Body_Balance_Strategic_Diagnosis_2026-05-18.pdf"},
-    {"name": "Q2 Strategy Condensed v2", "path": "Body_Balance_Q2_2026_Strategy_Condensed_v2.md"},
+    {"name": "Strategic Diagnosis v3 (HTML/PDF)", "path": "Body_Balance_Strategic_Diagnosis_2026-05-22.html"},
+    {"name": "Q2 Strategy Condensed v3", "path": "Body_Balance_Q2_2026_Strategy_Condensed_v3.md"},
     {"name": "Q2 Custom Strategy (long-form)", "path": "Body_Balance_Q2_2026_Custom_Strategy.md"},
-    {"name": "3-Month Plan", "path": "bodybalance_3month_plan.md"},
-    {"name": "Tasks v2 CSV (33 rows)", "path": "Body_Balance_3Month_Tasks_v2.csv"},
-    {"name": "Owner Conversation Items", "path": "Body_Balance_Owner_Conversation_Items.md"},
-    {"name": "AM Reply Note for Paul", "path": "Body_Balance_AM_Reply_Note_For_Paul.md"},
+    {"name": "3-Month Plan v2", "path": "bodybalance_3month_plan_v2.md"},
+    {"name": "Tasks v3 CSV (33 rows)", "path": "Body_Balance_3Month_Tasks_v3.csv"},
+    {"name": "Owner Conversation Items v2", "path": "Body_Balance_Owner_Conversation_Items_v2.md"},
+    {"name": "AM Reply Note for Paul v2", "path": "Body_Balance_AM_Reply_Note_For_Paul_v2.md"},
     {"name": "SP-01 Trigger Point Rewrite Brief", "path": "SP-01_Trigger_Point_Therapy_Page_Rewrite.docx"},
     {"name": "CN-01 URL Consolidation Brief", "path": "CN-01_Trigger_Point_URL_Consolidation_Brief.docx"},
     {"name": "CSM-01 First Matrix Build Brief", "path": "CSM-01_First_Matrix_Build_Brief.docx"},

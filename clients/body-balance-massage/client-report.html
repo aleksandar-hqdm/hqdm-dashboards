@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Body Balance Massage &amp; Float — Q2 2026 Strategic Diagnosis (v2)</title>
+<title>Body Balance Massage &amp; Float — Q2 2026 Strategic Diagnosis (v3)</title>
 <style>
   @page { size: A4; margin: 11mm 11mm 11mm 11mm; }
   * { box-sizing: border-box; }
@@ -61,7 +61,6 @@
   p { margin: 3px 0 4px; }
   strong { color: #0b1726; }
 
-  /* KPI tiles — 3 cols, 2 rows */
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 6px; margin: 3px 0 5px; }
   .tile { border: 1px solid #ddd; border-top: 3px solid #1f7a3a; padding: 4px 6px; }
   .tile.warn { border-top-color: #d97706; }
@@ -71,7 +70,6 @@
   .tile .val { font-size: 13pt; font-weight: 700; color: #0b1726; line-height: 1.05; margin: 1px 0 2px; }
   .tile .cap { font-size: 7pt; color: #5b6671; line-height: 1.22; }
 
-  /* Tables */
   table { width: 100%; border-collapse: collapse; margin: 3px 0 5px; font-size: 7.5pt; }
   th { background: #0b1726; color: white; text-align: left; padding: 3px 5px; font-weight: 700; font-size: 7.5pt; }
   td { padding: 2px 5px; border-bottom: 1px solid #e8eaee; vertical-align: top; line-height: 1.25; }
@@ -82,7 +80,6 @@
   .pill.warn { background: #fff4c2; color: #92400e; }
   .pill.info { background: #cffafe; color: #0e7490; }
 
-  /* Root-cause cards */
   .rc { border-left: 3px solid #b91c1c; background: #fff5f5; padding: 3px 6px; margin: 3px 0; }
   .rc.rc-p0 { border-left-color: #7f1d1d; background: #fee2e2; }
   .rc.sec { border-left-color: #d97706; background: #fffbeb; }
@@ -96,7 +93,6 @@
   .rc strong.title { font-size: 8pt; }
   .rc p { margin: 1px 0; font-size: 7.5pt; line-height: 1.25; }
 
-  /* Diverging bar */
   .div-row { display: grid; grid-template-columns: 180px 1fr 55px; gap: 3px; align-items: center; padding: 0.5px 0; font-size: 7pt; }
   .div-row .label { text-align: right; padding-right: 3px; color: #0b1726; line-height: 1.15; }
   .div-row.bb { background: #fffbe6; }
@@ -116,6 +112,16 @@
   .pgbreak { page-break-before: always; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .lead p { margin: 2px 0 4px; font-size: 8pt; line-height: 1.3; }
+
+  .halt-callout {
+    background: #fef3c7;
+    border-left: 4px solid #d97706;
+    padding: 5px 8px;
+    margin: 5px 0 6px;
+    font-size: 7.5pt;
+    line-height: 1.32;
+  }
+  .halt-callout strong.title { display: block; font-size: 8pt; color: #7c2d12; margin-bottom: 2px; }
 
   /* HQDM hub navigation strip (hidden on print) */
   .hqdm-navstrip {
@@ -144,9 +150,9 @@
     letter-spacing: 0.3px;
   }
   .hqdm-navstrip .btn:hover { background: #2b7ab8; text-decoration: none; }
-  body { padding-top: 0; }
-  @media screen { body { background: #f1f5f9; padding: 0 !important; }
-    .banner, h1, .subtitle, h2, .lead, .tiles, table, .div-row, .rc, .grid-2, ul.tight, p.caption, p { max-width: 940px; margin-left: auto; margin-right: auto; }
+  @media screen {
+    body { background: #f1f5f9; }
+    .banner, h1, .subtitle, h2, .lead, .tiles, table, .div-row, .rc, .halt-callout, .grid-2, ul.tight, p.caption, p { max-width: 940px; margin-left: auto; margin-right: auto; }
     .banner { margin-top: 14px; }
   }
   @media print { .hqdm-navstrip { display: none !important; } }
@@ -161,7 +167,7 @@
     <span class="sep">/</span>
     <span class="meta">Body Balance Massage &amp; Float</span>
     <span class="sep">·</span>
-    <span class="meta">Client Report</span>
+    <span class="meta">Client Report (v3)</span>
   </div>
   <div style="display:flex;gap:8px;align-items:center;">
     <a href="index.html" class="btn">Full strategic dashboard →</a>
@@ -171,18 +177,23 @@
 
 <!-- ====== PAGE 1 ====== -->
 <div class="banner">
-  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
-  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3 · v3</span>
+  <span class="meta">Refreshed 2026-05-22 · Aleksandar Spasevski · HQDM Search Intelligence</span>
 </div>
 
-<h1>Body Balance Massage &amp; Float: Q2 2026 Strategic Diagnosis (v2)</h1>
-<p class="subtitle">Single-pin massage and float studio in American Fork UT. The pin is gaining rank where it holds cells, not plateauing. Where the marginal dollar lifts in the next 90 days — at the same production scale as today.</p>
+<h1>Body Balance Massage &amp; Float: Q2 2026 Strategic Diagnosis (v3)</h1>
+<p class="subtitle">Single-pin massage and float studio in American Fork UT. The pin is gaining rank where it holds cells, not plateauing. Authority workstream rebuilt around the 2026-05-13 off-page program halt — same budget, different mix.</p>
 
 <h2><span class="num">01</span>Executive Summary</h2>
 <div class="lead">
 <p>Body Balance is <strong>gaining rank on the cells it holds.</strong> Apples-to-apples LD (avg rank on cells visible both dates) tightened <strong>+1.21 to +1.46 ranks/cell</strong> across the four massage queries Jan 19 → Apr 18. Float is owned at #1 of substantial competitors (106/106 cells, rank 1.34 / 1.68). On near-me queries BB is <strong>#2 of 10</strong> and <strong>#3 of 14.</strong> Lehi-tagged is proximity-locked (#15 of 17 — Lehi-resident pins own the head). Outside the ~10-mi grid BB is invisible (0 of 1,391 DataForSEO Maps SERP rows at 10 outside cities). The owner's perceived plateau is real for organic-side CTR (sitewide 0.80%; conversion pages 0.04–0.10%), not the underlying Maps engine.</p>
 
-<p>Marginal lift sits on seven structural fixes <em>plus</em> redirected content targeting — at the same production scale. <strong>(1)</strong> /trigger-point-therapy/ still references medical injections + dry needling (verified live 2026-05-18); owner-flagged P0 rewrite + 301 the duplicate canonical. <strong>(2)</strong> Sitewide NAP: 372/372 pages carry chat phone (855-5834); only 1 has GBP primary (734-9798). One-line fix. <strong>(3)</strong> /cupping-massage/ returns 404 → small-level 301 to /modalities-techniques/cupping/ canonical. <strong>(4)</strong> 326 GSC cannibal queries — 84 redundant pages get <strong>small-level 301 to MAIN canonicals</strong> (not bulk NOINDEX — location pages are a primary deliverable; production never paused). <strong>(5)</strong> Service + LocalBusiness + FAQPage schema on 8 priority canonicals (every page today only has generic DaySpa). <strong>(6)</strong> Continued production at full scale: 6 location pages + 10 blogs + 3 on-topic geo pages per month — retargeted at real catchment × service matrix gaps (Cedar Hills × deep tissue, Pleasant Grove × cupping, Lehi × swedish). <strong>(7)</strong> Authority layer: 2 manual citations/mo + 1 PR pitch/mo on top of existing off-page rotation.</p>
+<p>Marginal lift sits on seven structural fixes <em>plus</em> redirected content targeting — at the same production scale. <strong>(1)</strong> /trigger-point-therapy/ still references medical injections + dry needling (verified live 2026-05-18); owner-flagged P0 rewrite + 301 the duplicate canonical. <strong>(2)</strong> Sitewide NAP: 372/372 pages carry chat phone (855-5834); only 1 has GBP primary (734-9798). One-line fix. <strong>(3)</strong> /cupping-massage/ returns 404 → small-level 301 to /modalities-techniques/cupping/ canonical. <strong>(4)</strong> 326 GSC cannibal queries — 84 redundant pages get <strong>small-level 301 to MAIN canonicals</strong> (not bulk NOINDEX — location pages are a primary deliverable; production never paused). <strong>(5)</strong> Service + LocalBusiness + FAQPage schema on 8 priority canonicals (every page today only has generic DaySpa). <strong>(6)</strong> Continued production at full scale: 6 location pages + 10 blogs + 3 on-topic geo pages per month — retargeted at real catchment × service matrix gaps. <strong>(7)</strong> Authority layer rebuilt per the 2026-05-13 off-page program halt — manual citations + local digital PR + earned partner outreach + GBP signal cadence.</p>
+
+<div class="halt-callout">
+  <strong class="title">What changed in v3 (2026-05-22) — off-page workstream rebuild</strong>
+  The 2026-05-13 HQDM-internal off-page program halt removes the SEO Neo stack (DAS / GBP Blast / GBP Sniper / RD100 / NAP-image-overlay / AI Article Creator / Driving Directions SOP / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin Creation) from BB's playbook. BB's DA 20 → 28 lift over engagement was partly driven by that stack; forward expansion comes from manual citations (AMTA / ABMP / Utah MTA / chambers) + 1 monthly PR pitch + 1 partner-outreach touch/mo + on-site link equity earned by refreshed canonicals + new builds. M1 also runs a DataForSEO Backlinks scan to decide whether a disavow file is warranted post-halt. <strong>Spend posture unchanged: hold the dollar amount; redirect inside the off-page workstream from tooling to manual + earned.</strong>
+</div>
 
 <p>Three competitive realities to defend against: <strong>The Spa Lounge Pleasant Grove</strong> (4.8★ × 803 — surged 11.27 → 2.96 avg rank with +35 cells), <strong>Hand &amp; Stone Traverse Mountain</strong> (chain, 602 reviews), <strong>Calming Touch Massage Lehi</strong> (4.9★ × 521 — collapsed 8+ ranks; the open-cells gain). One opportunity: three mid-2025 Pleasant Grove winners collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening grid cells in a catchment BB already serves. <strong>Q2 spend posture: hold budget; redirect targeting only; ship at the same volume as today.</strong></p>
 </div>
@@ -242,8 +253,8 @@
 <!-- ====== PAGE 2 ====== -->
 <div class="pgbreak"></div>
 <div class="banner">
-  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
-  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3 · v3</span>
+  <span class="meta">Refreshed 2026-05-22 · Aleksandar Spasevski · HQDM Search Intelligence</span>
 </div>
 
 <h2><span class="num">04</span>Service-Area Priority Matrix &amp; Critical Issues</h2>
@@ -269,8 +280,9 @@
       <tr><td>/trigger-point-therapy/ medical-injection refs</td><td><span class="pill neg">P0</span></td></tr>
       <tr><td>/cupping-massage/ 404 + duplicate canonical</td><td><span class="pill neg">P0</span></td></tr>
       <tr><td>Service-page schema generic DaySpa only</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>Off-page playbook rebuild (post-halt)</td><td><span class="pill neg">P0</span></td></tr>
       <tr><td>326 cannibal queries (small-301 cleanup)</td><td><span class="pill warn">P1</span></td></tr>
-      <tr><td>83 pages bleeding CTR at pos 4-20 (/about/ 0.04%, /pricing/ 0.10%)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>83 pages bleeding CTR at pos 4-20</td><td><span class="pill warn">P1</span></td></tr>
       <tr><td>Service × city matrix: 3-5 of 150 cells covered</td><td><span class="pill warn">P1</span></td></tr>
       <tr><td>BB ranks #1–#3 at AF pin for 27 untracked queries</td><td><span class="pill info">Opp</span></td></tr>
       <tr><td>Outside-grid invisibility (geographic, not fixable)</td><td><span class="pill info">N/A</span></td></tr>
@@ -307,8 +319,8 @@
 <!-- ====== PAGE 3 ====== -->
 <div class="pgbreak"></div>
 <div class="banner">
-  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
-  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3 · v3</span>
+  <span class="meta">Refreshed 2026-05-22 · Aleksandar Spasevski · HQDM Search Intelligence</span>
 </div>
 
 <h2><span class="num">06</span>Root Cause, Ranked</h2>
@@ -322,25 +334,31 @@
 <div class="rc">
   <span class="tag">PRIMARY</span>
   <strong class="title">Sitewide NAP mismatch + schema thinness + cupping 404</strong>
-  <p>372/372 sitemap pages use chat phone (855-5834); only 1 has GBP primary (734-9798). Every page carries a single generic DaySpa schema block — no Service / LocalBusiness / FAQPage anywhere. <strong>HP-01</strong> NAP fix is a one-hour edit. Schema rollout: <strong>SP-02</strong> M2 on 4 canonicals (Swedish + Deep Tissue + Sports + Prenatal); <strong>SP-03</strong> M3 on 4 more (Float + Cranial Sacral + Reflexology + Gua Sha); <strong>ON-07</strong> M3 sitewide BlogPosting + BreadcrumbList. <strong>TPL-01</strong> small-level 301 from /cupping-massage/ to /modalities-techniques/cupping/ canonical resolves the orphaned-cupping-cluster blog posts.</p>
+  <p>372/372 sitemap pages use chat phone (855-5834); only 1 has GBP primary (734-9798). Every page carries a single generic DaySpa schema block — no Service / LocalBusiness / FAQPage anywhere. <strong>HP-01</strong> NAP fix is a one-hour edit. Schema rollout: <strong>SP-02</strong> M2 on 4 canonicals; <strong>SP-03</strong> M3 on 4 more; <strong>ON-07</strong> M3 sitewide BlogPosting + BreadcrumbList. <strong>TPL-01</strong> small-level 301 from /cupping-massage/ to /modalities-techniques/cupping/ canonical resolves the orphaned-cupping-cluster blog posts.</p>
+</div>
+
+<div class="rc rc-p0">
+  <span class="tag">PRIMARY · P0 · NEW IN v3</span>
+  <strong class="title">Off-page playbook rebuild (post-2026-05-13 program halt)</strong>
+  <p>BB's DA 20 → 28 lift over engagement was driven in part by the SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) — halted across HQDM's book of business 2026-05-13. <strong>Forward authority work for BB:</strong> manual Tier-1/2/3 citation submissions (AMTA, ABMP, Utah MTA, Utah County + Pleasant Grove Chambers), 1 monthly digital-PR pitch (postpartum / athlete-recovery angles), 1 monthly partner-outreach touch (yoga studios, chiropractors, doulas, run clubs), and on-site link-equity earned by refreshed canonicals + new builds. <strong>REP-01 M1 W2 runs a DataForSEO Backlinks scan</strong> to decide whether a disavow file is warranted from the halted-stack era. Spend posture unchanged; mix changes.</p>
 </div>
 
 <div class="rc sec">
   <span class="tag">SECONDARY</span>
-  <strong class="title">Doorway + geo cohort needs targeted fill + small-redirect (location pages are a primary deliverable — never bulk NOINDEX)</strong>
+  <strong class="title">Doorway + geo cohort needs targeted fill + small-redirect (never bulk NOINDEX)</strong>
   <p>The sitemap holds 90 templated suburb URLs + 40 off-topic geo pages. 326 GSC queries have 2+ BB URLs ranking. Per-URL decisions in Cannibal_Cleanup_Plan.xlsx: <strong>3 LEAVE / 9 REFRESH / 1 REFRESH-TO-REAL / 19 REPURPOSE / 84 small-level 301-to-MAIN / 14 REVIEW.</strong> Production at scale CONTINUES — 6 new location pages/month redirected at real catchment × service matrix gaps (Cedar Hills × deep tissue, Pleasant Grove × cupping, Lehi × swedish, etc.). One typo flagged: /skilled-massage-herapist-in-harvest-park-ut/ (missing "t").</p>
 </div>
 
 <div class="rc opp">
   <span class="tag">OPPORTUNITY</span>
   <strong class="title">Pleasant Grove cells open + BB ranks #1–#3 at AF pin for 27 untracked service queries</strong>
-  <p>3 PG winners collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling −188). 5 new PG entrants filled the space. 8 of BB's 19 declared service-area towns sit in the PG / Lindon radius. Concurrently, DataForSEO Maps SERP at AF pin shows BB <strong>#1 for 15 untracked service queries</strong> (couples massage AF, deep tissue AF, cupping therapy near me, myofascial release, sensory deprivation tank, etc.) and #2-#3 for 12 more — <strong>lymphatic drainage massage</strong> (3,600 UT vol) is the biggest unlocked surface, gated on Owner #7. <strong>MR-01</strong> M2 builds /myofascial-release/ to capture existing #1 rank; <strong>LD-01</strong> M3 builds /lymphatic-drainage-massage/ if owner confirms the service.</p>
+  <p>3 PG winners collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling −188). 5 new PG entrants filled the space. 8 of BB's 19 declared service-area towns sit in the PG / Lindon radius. Concurrently, DataForSEO Maps SERP at AF pin shows BB <strong>#1 for 15 untracked service queries</strong> and #2-#3 for 12 more — <strong>lymphatic drainage massage</strong> (3,600 UT vol) is the biggest unlocked surface, gated on Owner #7. <strong>MR-01</strong> M2 builds /myofascial-release/ to capture existing #1 rank; <strong>LD-01</strong> M3 builds /lymphatic-drainage-massage/ if owner confirms.</p>
 </div>
 
 <div class="rc pos">
   <span class="tag">POSITIVE</span>
-  <strong class="title">Float moat held + near-me growth tightening + 4.9★ × 402 + DA 20 → 28 documented</strong>
-  <p>Float queries held at 106/106 saturation at rank 1.21-1.68. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on "massage therapist near me" 27 → 37. 4.9★ × 402 reviews is a real asset. GBP Posts ~3/mo (close to 4/mo SOP). Off-page lift (DA 20 → 28 per Matt's email) is documented progress. Marginal lift is now post cadence + matrix-fill pages + Q-format LLM articles + service-page schema, not new doorways.</p>
+  <strong class="title">Float moat held + near-me growth tightening + 4.9★ × 402</strong>
+  <p>Float queries held at 106/106 saturation at rank 1.21-1.68. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on "massage therapist near me" 27 → 37. 4.9★ × 402 reviews is a real asset. GBP Posts ~3/mo (close to 4/mo SOP). Marginal lift is now post cadence + matrix-fill pages + Q-format LLM articles + service-page schema, not new doorways — and authority shifts to manual + earned channels per the post-halt playbook.</p>
 </div>
 
 <h2><span class="num">07</span>Strategic Priorities — Q2 Levers (11 pillars · 33 task rows · each → specific sheet)</h2>
@@ -349,13 +367,13 @@
   <tbody>
     <tr><td>A</td><td><strong>Single-shift fixes (M1).</strong> HP-01 sitewide NAP · SP-01 trigger point rewrite (owner-flagged) · CN-01 duplicate-canonical 301 · TPL-01 cupping 404 → 301 to canonical.</td><td>HQDM On-Page</td><td>Schema_Plan + Service_Pages_Plan + SP-01 + CN-01 briefs</td><td><span class="pill neg">P0 · M1</span></td></tr>
     <tr><td>B</td><td><strong>Cannibal cleanup — fill + small-redirect (never bulk-kill).</strong> 130 URLs decisioned. M1 refresh real-catchment-bleeding batch. M2: 84 small-level 301-to-MAIN + 19 repurpose. M3: 14 review + typo + final refresh.</td><td>HQDM On-Page</td><td>Cannibal_Cleanup_Plan</td><td><span class="pill warn">High · 90d</span></td></tr>
-    <tr><td>C+D+E</td><td><strong>PRODUCTION AT SCALE — 57 builds Q2.</strong> LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × swedish…) · BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort incl. BB's #1 click-driver) · GEO-NEW 3/mo on-topic wellness + athletic-recovery + buyer's-guide (replaces burger/dermatologist cadence).</td><td>Aleksa + Alex Liam + Content</td><td><strong>Production_Pipeline</strong> (3 tabs)</td><td><span class="pill pos">High · 90d</span></td></tr>
+    <tr><td>C+D+E</td><td><strong>PRODUCTION AT SCALE — 57 builds Q2.</strong> LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × swedish…) · BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort) · GEO-NEW 3/mo on-topic wellness + athletic-recovery + buyer's-guide.</td><td>Aleksa + Alex Liam + Content</td><td><strong>Production_Pipeline</strong> (3 tabs)</td><td><span class="pill pos">High · 90d</span></td></tr>
     <tr><td>F</td><td><strong>Service schema rollout sitewide.</strong> SP-02 M2 (Swedish + DT + Sports + Prenatal) · SP-03 M3 (Float + Cranial Sacral + Reflexology + Gua Sha) · ON-07 M3 sitewide BlogPosting + BreadcrumbList.</td><td>HQDM On-Page</td><td>Service_Pages_Plan + Schema_Plan</td><td><span class="pill warn">High · 90d</span></td></tr>
     <tr><td>G</td><td><strong>Missing-page builds.</strong> MR-01 M2 /myofascial-release/ (BB #1 at AF pin, no page). LD-01 M3 /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7).</td><td>HQDM On-Page</td><td>Missing_Pages_Plan</td><td><span class="pill pos">Opp · 60d</span></td></tr>
     <tr><td>H</td><td><strong>Meta + title refresh sweep.</strong> ON-01_M1 top 12 bleeding-CTR URLs (/about/, /pricing-and-membership/, /upgrades/…). ON-01_M2 next 10.</td><td>HQDM On-Page</td><td>Page_Refresh_Pages</td><td><span class="pill warn">High · 60d</span></td></tr>
     <tr><td>I</td><td><strong>GBP velocity + photo blitz.</strong> Posts 3/mo → 4/mo sustained. 8 photos/mo geotagged 40.378,-111.789. M3 Services-tab audit.</td><td>HQDM Local</td><td>GBP_Posts_3Month</td><td><span class="pill warn">High · 90d</span></td></tr>
-    <tr><td>J</td><td><strong>Authority + PR layered on existing rotation.</strong> 2 manual citations/mo (AMTA + ABMP + Utah MTA + chambers; mom blogs; recovery vertical). 1 PR pitch/mo (postpartum M2; athlete M3). OFF-Rotation continues at current cadence.</td><td>HQDM Off-Page</td><td>Citations_3Month + OffPage_Stack</td><td>Medium · 90d</td></tr>
-    <tr><td>K</td><td><strong>Reporting.</strong> Add 14 untracked-service kws to LD cadence M1. Indexation + CTR delta tracker M2. Q2 close-out vs 16-KPI scorecard M3.</td><td>Marija + Aleksandar</td><td>OffPage_Stack (Reporting_Plan tab)</td><td><span class="pill neg">P0 · M3</span></td></tr>
+    <tr><td>J</td><td><strong>Authority rebuild (post-halt).</strong> Manual citations (AMTA / ABMP / Utah MTA / chambers) 2/mo · Digital-PR 1/mo (postpartum + athlete) · Partner outreach 1/mo (yoga, chiro, doulas, run clubs) · On-site link equity via refreshed/new pages. <strong>Halted stack archived (DAS / Blast / RD100 / NAP-overlay / Link Revolver / BatchGeo / ATB / AI Articles / Driving Directions / Cloud Page / GMB Pin) per 2026-05-13.</strong></td><td>Julce + Aleksa</td><td>Citations + Earned_Authority tab</td><td><span class="pill neg">P0 · Q2</span></td></tr>
+    <tr><td>K</td><td><strong>Reporting.</strong> Add 14 untracked-service kws to LD cadence M1. DataForSEO Business Data scrape + Backlinks-disavow scan M1 W2. Indexation + CTR delta tracker M2. Q2 close-out vs 16-KPI scorecard M3.</td><td>Marija + Aleksandar</td><td>OffPage_Stack (Reporting_Plan tab)</td><td><span class="pill neg">P0 · M3</span></td></tr>
   </tbody>
 </table>
 
@@ -366,7 +384,7 @@
   <li><strong>Owner asks (one 20-min call):</strong> #2 confirm sitewide phone canonical · #3 confirm cupping is still on menu · #7 NEW — does BB perform manual lymphatic drainage (gates LD-01, 3,600 UT searches/mo) · #8 NEW — sign off on the 16-KPI M3 scorecard. #1 trigger-point rewrite already approved 2026-05-15.</li>
 </ul>
 
-<p class="caption" style="margin-top: 5px;"><strong>Companion docs (Drive):</strong> Custom Strategy long-form · 3-Month Plan · Tasks v2 CSV (33 rows) · <strong>Production_Pipeline.xlsx</strong> (57 builds across Suburb / Blog / Geo) · <strong>Cannibal_Cleanup_Plan.xlsx</strong> (130 URLs decisioned, 301-to-MAIN logic) · Service_City_Matrix · Missing_Pages_Plan · LocalDominator_Analysis · Opportunity_Analysis · Schema_Plan + Service_Pages_Plan + Page_Refresh + GBP_Posts + Citations + OffPage_Stack · SP-01 + CN-01 + CSM-01 briefs · Owner Conversation Items · AM Reply Note.</p>
+<p class="caption" style="margin-top: 5px;"><strong>Companion docs (Drive):</strong> Custom Strategy long-form · 3-Month Plan v2 · Tasks v3 CSV (33 rows) · <strong>Production_Pipeline.xlsx</strong> (57 builds across Suburb / Blog / Geo) · <strong>Cannibal_Cleanup_Plan.xlsx</strong> (130 URLs decisioned, 301-to-MAIN logic) · Service_City_Matrix · Missing_Pages_Plan · LocalDominator_Analysis · Opportunity_Analysis · Schema_Plan + Service_Pages_Plan + Page_Refresh + GBP_Posts + Citations + Earned_Authority · SP-01 + CN-01 + CSM-01 briefs · Owner Conversation Items v2 · AM Reply Note v2.</p>
 
 </body>
 </html>
