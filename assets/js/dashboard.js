@@ -30,6 +30,12 @@
   setText('hero-tier', DATA.meta.tier);
   document.title = `${DATA.meta.client} · ${DATA.meta.quarter} Strategic Dashboard · HQDM`;
 
+  // === TL;DR (innerHTML — limited inline tags from data.tldr) ===
+  if (DATA.tldr) {
+    const tldrEl = document.getElementById('tldr-text');
+    if (tldrEl) tldrEl.innerHTML = DATA.tldr;
+  }
+
   // === KPI tiles ===
   renderKPIs(DATA.kpis);
 
@@ -89,6 +95,7 @@
   // === Positives vs negatives (shared) ===
   if (DATA.positives && document.querySelector('#positives-list')) renderList('positives-list', DATA.positives, 'emerald');
   if (DATA.negatives && document.querySelector('#negatives-list')) renderList('negatives-list', DATA.negatives, 'rose');
+  if (DATA.owner_asks && document.querySelector('#owner-asks-list')) renderList('owner-asks-list', DATA.owner_asks, 'emerald');
 
   // === Headline panel (traffic-down / conversions-up) ===
   if (DATA.headline_panel && document.querySelector('#headline-h2')) {
@@ -935,13 +942,15 @@ function renderTasks(levers) {
 const HM_STATE = {
   ldData: null,
   currentKw: null,
-  currentDate: 'feb',   // 'feb' | 'may'
+  currentDate: 'feb',   // 'feb' | 'may' (PM legacy) or any date key from ld.date_keys
+  dateKeys: null,       // resolved at render time — null until renderHeatmapLoop runs
+  dateLabels: null,     // parallel array of human labels
   playing: true,
   cycleKw: false,
   timer: null,
   kwTimer: null,
-  PHASE_MS: 5000,        // ms per Feb or May state before toggle → 10s full cycle
-  KW_CYCLE_MS: 30000     // ms before advancing to next keyword (= 3 full Feb↔May cycles per kw)
+  PHASE_MS: 4000,        // ms per phase — cycle through all dates over N×PHASE_MS
+  KW_CYCLE_MS: 30000     // ms before advancing to next keyword
 };
 
 function rankColor(rank) {
@@ -964,6 +973,12 @@ function renderHeatmapLoop(ld) {
   HM_STATE.ldData = ld;
   HM_STATE.currentKw = ld.keywords[0];
 
+  // Resolve date keys + labels — backwards-compatible: PM has no date_keys field,
+  // so fall back to the legacy ['feb','may'] pair with ['Feb 2','May 1'] labels.
+  HM_STATE.dateKeys   = ld.date_keys || ['feb', 'may'];
+  HM_STATE.dateLabels = ld.dates     || ['Feb 2, 2026', 'May 1, 2026'];
+  HM_STATE.currentDate = HM_STATE.dateKeys[0];
+
   // Build keyword tabs
   const tabs = document.getElementById('hm-keyword-tabs');
   tabs.innerHTML = ld.keywords.map((kw, i) => `
@@ -985,7 +1000,17 @@ function renderHeatmapLoop(ld) {
     });
   });
 
-  // Wire date buttons
+  // Build/wire date buttons. If the HTML has a `#hm-date-tabs` placeholder,
+  // populate it dynamically with one button per ld.date_keys entry. Otherwise
+  // wire the existing static buttons (PM-legacy `.hm-date-btn` with data-date).
+  const dateTabsContainer = document.getElementById('hm-date-tabs');
+  if (dateTabsContainer) {
+    dateTabsContainer.innerHTML = HM_STATE.dateKeys.map((k, i) => {
+      const label = HM_STATE.dateLabels[i] || k;
+      const active = i === 0;
+      return `<button data-date="${escapeHtml(k)}" class="hm-date-btn px-3 py-1.5 text-xs font-semibold ${active ? 'bg-brand-500 text-white' : 'bg-white text-ink-700'}">${escapeHtml(label)}</button>`;
+    }).join('');
+  }
   document.querySelectorAll('.hm-date-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       pauseLoop();
@@ -1029,11 +1054,13 @@ function buildPanels() {
   const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
 
   // Pre-index ranks: { entity: { 'x,y': rank } } per date
-  const idx = { feb: {}, may: {} };
-  ['feb', 'may'].forEach(d => {
+  const dateKeys = HM_STATE.dateKeys || ['feb', 'may'];
+  const idx = {};
+  dateKeys.forEach(d => { idx[d] = {}; });
+  dateKeys.forEach(d => {
     entities.forEach(e => {
       idx[d][e] = {};
-      (grid[d][e] || []).forEach(r => { idx[d][e][`${r.x},${r.y}`] = r.rank; });
+      (grid[d] && grid[d][e] || []).forEach(r => { idx[d][e][`${r.x},${r.y}`] = r.rank; });
     });
   });
   HM_STATE._idx = idx;
@@ -1104,6 +1131,12 @@ function applyState() {
   const grid = ld.grids[kw];
   const entities = HM_STATE._kwGrid.entities;
 
+  // Resolve human-readable date label for current date key (for tooltips)
+  const dateKeys = HM_STATE.dateKeys || ['feb', 'may'];
+  const dateLabels = HM_STATE.dateLabels || ['Feb 2, 2026', 'May 1, 2026'];
+  const dateIdx = dateKeys.indexOf(date);
+  const dateLabel = dateIdx >= 0 ? (dateLabels[dateIdx] || date) : date;
+
   entities.forEach(entity => {
     const panel = document.querySelector(`[data-entity="${cssEscape(entity)}"]`);
     if (!panel) return;
@@ -1114,17 +1147,19 @@ function applyState() {
       cell.style.background = rankColor(rank);
       cell.style.color = rankTextColor(rank);
       cell.textContent = (rank != null && rank <= 20) ? rank : '';
-      cell.title = `${entity} @ cell (${cell.dataset.x},${cell.dataset.y}) — ${rank != null ? 'rank ' + rank : 'not in top-N'} (${date === 'feb' ? 'Feb 2' : 'May 1'} 2026)`;
+      cell.title = `${entity} @ cell (${cell.dataset.x},${cell.dataset.y}) — ${rank != null ? 'rank ' + rank : 'not in top-N'} (${dateLabel})`;
     });
 
-    // Update summary stats
+    // Update summary stats. AQMS uses fields like mar8_avg / mar8_top3 / mar8_cells
+    // (where the date key is 'mar8'). PM uses feb_avg / may_avg etc. So:
+    //  → look up `${date}_avg`, `${date}_top3`, `${date}_cells` directly.
     const stats = grid.summary[entity];
     const statBox = document.querySelector(`[data-entity-stats="${cssEscape(entity)}"]`);
     if (statBox && stats) {
-      const avg  = date === 'feb' ? stats.feb_avg  : stats.may_avg;
-      const top3 = date === 'feb' ? stats.feb_top3 : stats.may_top3;
-      const cells = date === 'feb' ? stats.feb_cells : stats.may_cells;
-      statBox.querySelector('.stat-avg').textContent   = avg  != null ? avg.toFixed(1) : '—';
+      const avg  = stats[`${date}_avg`];
+      const top3 = stats[`${date}_top3`];
+      const cells = stats[`${date}_cells`];
+      statBox.querySelector('.stat-avg').textContent   = avg  != null ? Number(avg).toFixed(1) : '—';
       statBox.querySelector('.stat-top3').textContent  = top3 != null ? top3 : '—';
       statBox.querySelector('.stat-cells').textContent = cells != null ? cells : '—';
     }
@@ -1149,7 +1184,10 @@ function startLoop() {
   if (HM_STATE.timer) clearInterval(HM_STATE.timer);
   HM_STATE.playing = true;
   HM_STATE.timer = setInterval(() => {
-    HM_STATE.currentDate = HM_STATE.currentDate === 'feb' ? 'may' : 'feb';
+    const keys = HM_STATE.dateKeys || ['feb', 'may'];
+    const i = keys.indexOf(HM_STATE.currentDate);
+    HM_STATE.currentDate = keys[(i + 1) % keys.length];
+    updateDateBtnStyles();
     applyState();
   }, HM_STATE.PHASE_MS);
   if (HM_STATE.cycleKw) scheduleKwAdvance();

@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Affordable Quality Moving &amp; Storage · May 2026 Update</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/client-report.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .report-shell { max-width: 880px; }
+    .stat-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .stat-tile.good { border-left-color: #10b981; }
+    .stat-tile.watch { border-left-color: #f59e0b; }
+    .stat-tile.bad { border-left-color: #ef4444; }
+    .stat-tile .v { font-size: 1.875rem; font-weight: 800; line-height: 1.1; color: #0b1220; }
+    .stat-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
+    .stat-tile .s { font-size: 0.75rem; color: #6b7280; margin-top: 0.4rem; line-height: 1.35; }
+    .panel { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .panel-title { font-weight: 700; color: #0b1220; margin-bottom: 0.5rem; }
+    .pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 0.375rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .pill.good { background: #d1fae5; color: #065f46; }
+    .pill.watch { background: #fef3c7; color: #92400e; }
+    .pill.bad { background: #fee2e2; color: #991b1b; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+      .panel, .stat-tile { box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+
+  <!-- Slim navigation strip (hidden when printed) -->
+  <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="report-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <a href="../../index.html" class="text-slate-500 hover:text-slate-900">← All clients</a>
+        <span class="text-slate-300">/</span>
+        <span class="font-semibold truncate">Affordable Quality Moving &amp; Storage</span>
+        <span class="text-slate-400 hidden sm:inline">May 2026 Update</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
+        <button onclick="window.print()" class="px-2.5 py-1 rounded border border-slate-300 text-slate-600 hover:bg-slate-50">Print / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
+
+    <!-- ============ HERO ============ -->
+    <section class="border-b border-slate-200 pb-5 mb-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Affordable Quality Moving &amp; Storage</h1>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold">Where you stand on Google &amp; what we're working on next</p>
+      <p class="text-sm text-slate-500 mt-1">May 2026 Update · Months 2–3 of our work together</p>
+    </section>
+
+    <!-- ============ EXECUTIVE SUMMARY ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Big Picture</h2>
+      <div class="panel">
+        <p class="text-[15px] leading-relaxed text-slate-800">
+          You're the <strong>#1-ranked moving and storage company on Google Maps in Santa Clarita</strong> by every measure we track. Out of <strong>350 spots on the map</strong> where we checked who shows up for the three most important searches (<em>local movers</em>, <em>moving company near me</em>, and <em>packing &amp; storage</em>), AQMS appears in <strong>the top 3 results in 224 of them</strong> — more than any other Santa Clarita mover, and more than the next two competitors combined. Your <strong>4.9-star rating and 452 reviews</strong> (up from 441 when we started in March) keep your reputation lead solid too.
+        </p>
+        <p class="text-[15px] leading-relaxed text-slate-800 mt-3">
+          The honest read on the last 2.5 months: <strong>you're holding the lead, not extending it</strong>. Average rank is essentially flat (3.67 → 3.60 — a slight improvement), but you've lost 15 of those "top 3" map spots, mostly on the <em>local movers</em> search. Meanwhile, a competitor — <strong>Camelot Moving &amp; Storage</strong> — has aggressively added 47 new top-3 spots in the same window. The plan for the next 90 days is built around that reality: <strong>defend the #1 position</strong>, double down on the search where you're actually gaining (<em>packing &amp; storage</em>), and reach into the surrounding cities your current pin doesn't cover.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KEY NUMBERS ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Numbers at a Glance</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div class="stat-tile good">
+          <div class="l">Map Rank · Today</div>
+          <div class="v">#3.6</div>
+          <div class="s">avg position across 350 map spots (#1 in market)</div>
+        </div>
+        <div class="stat-tile good">
+          <div class="l">Top-3 Map Spots</div>
+          <div class="v">224</div>
+          <div class="s">more than next 2 competitors combined</div>
+        </div>
+        <div class="stat-tile good">
+          <div class="l">Reviews · Rating</div>
+          <div class="v">452 · 4.9★</div>
+          <div class="s">+11 reviews since March 8</div>
+        </div>
+        <div class="stat-tile watch">
+          <div class="l">Change Since Mar 8</div>
+          <div class="v">−15</div>
+          <div class="s">top-3 map spots lost (Camelot +47)</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MAPS MOVEMENT CHART ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · March 8 → May 18</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Here's how your three priority searches moved over the four scans we took (start of engagement, then monthly). The taller the bar, the more spots on the map you held <strong>in the top 3</strong>. The <em>packing &amp; storage</em> search is clearly trending up; <em>local movers</em> had a strong run through early May and then dipped sharply on the May 18 scan — that's what the next 90 days will address.
+        </p>
+        <div style="height: 320px;"><canvas id="movement-chart"></canvas></div>
+        <p class="text-xs text-slate-500 mt-3 italic">Each scan = how many of the 13×13 = ~120 spots on the Santa Clarita map showed you in the top 3 of Google's results for that search.</p>
+      </div>
+    </section>
+
+    <!-- ============ PER-KEYWORD SUMMARY ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Search-by-Search Breakdown</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+
+        <div class="panel">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="font-bold text-slate-800">"local movers"</div>
+            <span class="pill watch">Watch</span>
+          </div>
+          <p class="text-sm text-slate-700">Still #1 in the market (avg position 3.95), but lost 13 top-3 spots since March. The trend was up through early May before dipping in the latest scan. <strong>Action: defend.</strong></p>
+        </div>
+
+        <div class="panel">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="font-bold text-slate-800">"moving company near me"</div>
+            <span class="pill good">Holding</span>
+          </div>
+          <p class="text-sm text-slate-700">Your strongest search — averaging position 3.05 across 119 map spots, 94 of them top-3. Held flat since March. This is the highest-value query in the set.</p>
+        </div>
+
+        <div class="panel">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="font-bold text-slate-800">"packing &amp; storage"</div>
+            <span class="pill good">Gaining</span>
+          </div>
+          <p class="text-sm text-slate-700">Your bright spot. Moved up almost a full position (4.73 → 3.82). +5 top-3 spots. Storage is recurring revenue — different economics than one-time moves. <strong>Action: double down.</strong></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ COMPETITORS WATCH ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Who's Pushing on You</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Three competitors made real moves in the last 2.5 months. Worth knowing about — none of them are at your level yet, but two of them weren't on the radar in March.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Competitor</th>
+                <th class="py-2 pr-3 text-right">Top-3 Map Spots</th>
+                <th class="py-2 text-right">Change</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-slate-100 bg-brand-50/40">
+                <td class="py-2 pr-3 font-bold text-brand-700">AQMS (you)</td>
+                <td class="py-2 pr-3 text-right font-mono font-bold">224</td>
+                <td class="py-2 text-right text-rose-700 font-bold">−15</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-2 pr-3">Camelot Moving &amp; Storage</td>
+                <td class="py-2 pr-3 text-right font-mono">109</td>
+                <td class="py-2 text-right text-rose-700 font-bold">+47</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-2 pr-3">Expert Santa Clarita Movers</td>
+                <td class="py-2 pr-3 text-right font-mono">72</td>
+                <td class="py-2 text-right text-slate-500">+3</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-2 pr-3">J&amp;G Full Service Moving</td>
+                <td class="py-2 pr-3 text-right font-mono">65</td>
+                <td class="py-2 text-right text-emerald-700">−24</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-2 pr-3">Precision Moving &amp; Storage <span class="text-xs text-slate-500">(new entrant)</span></td>
+                <td class="py-2 pr-3 text-right font-mono">39</td>
+                <td class="py-2 text-right text-rose-700 font-bold">+31</td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-3">Victory Moving</td>
+                <td class="py-2 pr-3 text-right font-mono">36</td>
+                <td class="py-2 text-right text-rose-700">+20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3 italic">"Change" = top-3 map spots gained or lost since March 8 2026. A green negative number for J&amp;G means they lost spots, which is good for you.</p>
+      </div>
+    </section>
+
+    <!-- ============ STRATEGY ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What We're Working On — Next 90 Days</h2>
+
+      <div class="space-y-3">
+        <div class="panel" style="border-left: 4px solid #10b981;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 1</span>
+            <h3 class="font-bold text-slate-900 text-base">Defend your #1 Santa Clarita Maps position</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            You're already #1, so this is about <strong>keeping what you have</strong> while a couple of competitors push. We're focused on four things: <strong>(1)</strong> refreshing and optimizing your Google Business profile (photos, attributes, products, the description), <strong>(2)</strong> doubling your post cadence to 2x/month (one informational, one offer), <strong>(3)</strong> a review-acquisition campaign so the ~4 new reviews/month you're already getting becomes 6–8 (we'll send post-job SMS requests and add a Google review link to your invoices), and <strong>(4)</strong> strengthening the <code>/local-movers/</code> and <code>/moving-company-near-me/</code> pages on your website — these are the search results you lost ground on.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #3b82f6;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 2</span>
+            <h3 class="font-bold text-slate-900 text-base">Capitalize on the packing &amp; storage momentum</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            The <em>packing &amp; storage</em> search is the one you're <strong>actively gaining on</strong> — up almost a full position in 2.5 months. Storage is also recurring revenue, which is structurally more valuable than one-time moving jobs. We're going to build two dedicated landing pages on your website (one for storage units with full pricing + unit-size matrix, one for packing services with the full tier breakdown), publish two blog posts in May–June that link back to them ("How much storage do you need?" + "Is full-packing worth it?"), and add monthly Google posts specifically about storage and packing (separate from your moving posts).
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #6366f1;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill watch">Priority 3</span>
+            <h3 class="font-bold text-slate-900 text-base">Reach into the cities your current pin doesn't cover</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Your Google Business pin is in Santa Clarita, and it reaches confidently for about 5 miles around it. But you serve 20 cities — including <strong>Castaic, Simi Valley, San Fernando, Moorpark, and Agua Dulce</strong> — that are further out than the pin's reach. When someone in Simi Valley searches "movers near me," your competitors there show up, not you. We're going to build dedicated service-area pages for the five most strategic outer cities (with local references, testimonials, and proper schema markup) so the website ranks for those city-specific searches, and we'll set up Driving Direction pins on your Google profile to send signals about those areas.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500 mt-3 italic">If you'd like the full month-by-month task list and code-named action items, your account manager can share the strategic dashboard linked in the header.</p>
+    </section>
+
+    <!-- ============ OWNER ASKS ============ -->
+    <section class="mb-7">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
+      <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
+        <ul class="space-y-2.5 text-sm text-slate-800">
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition workflow.</strong> We'd like to set up a post-job SMS / email signature with a Google review link. We need your sign-off on the customer-facing language.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Service-area priority.</strong> You serve 20 cities — which 4 are most strategically important to win this quarter? Our default plan goes Castaic → Simi Valley → San Fernando → Moorpark. We can re-prioritize if that's wrong.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>GBP access.</strong> Confirming we still have manager access to your Google Business profile for posts, Q&amp;A seeding, photo uploads, and Driving Direction pins.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Seasonal services.</strong> Any locations or services we should hold off on (e.g., not pursue this quarter) so we don't waste content effort?</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
+        · May 2026 client update
+        · Prepared by Aleksandar Spasevski
+        · 2026-05-22
+      </div>
+      <div class="text-slate-400">Confidential — for AQMS only.</div>
+    </footer>
+
+  </main>
+
+  <script>
+  // Custom client-report renderer for AQMS — reads ./data/data.json and
+  // renders the maps-movement chart from the per_keyword data.
+  (async function () {
+    const data = await fetch('./data/data.json').then(r => r.json()).catch(() => null);
+    if (!data) return;
+    renderMovementChart(data);
+
+    function renderMovementChart(d) {
+      const ctx = document.getElementById('movement-chart');
+      if (!ctx) return;
+      // Build top-3 cell counts at each scan for the 3 timeseries kws
+      const tsKws = d.per_keyword.filter(k => k.may_top3 != null);
+      const labels = ['Mar 8', 'Apr 3', 'May 3', 'May 18'];
+      const palette = { 'local movers': '#1d5b8a', 'moving company near me': '#10b981', 'packing and storage': '#f59e0b' };
+      const datasets = tsKws.map(k => ({
+        label: '"' + k.keyword + '"',
+        data: [k.feb_top3, k.apr3_top3, k.may3_top3, k.may_top3],
+        borderColor: palette[k.keyword] || '#6b7280',
+        backgroundColor: (palette[k.keyword] || '#6b7280') + '20',
+        borderWidth: 3,
+        tension: 0.25,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        fill: false,
+      }));
+      new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14, padding: 12 } },
+            tooltip: {
+              backgroundColor: '#0b1220', padding: 10,
+              callbacks: { label: c => c.dataset.label + ': ' + c.parsed.y + ' top-3 spots' }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 12 } } },
+            y: {
+              beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' },
+              title: { display: true, text: 'Top-3 map spots', font: { size: 11, weight: '600' } },
+              ticks: { font: { size: 11 } }
+            }
+          }
+        }
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

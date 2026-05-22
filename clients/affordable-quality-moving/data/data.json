@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "client": "Affordable Quality Moving & Storage",
+    "short_name": "AQMS",
+    "domain": "aqmsnationalmoving.com",
+    "tagline": "Santa Clarita's #1-ranked moving + storage company on Google Maps",
+    "tier": "Custom · Tier 1",
+    "founded": 1996,
+    "years_in_business": 30,
+    "engagement_start": "2026-03",
+    "prepared_date": "2026-05-22",
+    "author": "Aleksandar Spasevski",
+    "org": "HQDM Search Intelligence",
+    "quarter": "Q3 2026",
+    "doc_subtitle": "Defend #1 Santa Clarita Maps position · capitalize on packing/storage momentum · expand into outer service-area cities."
+  },
+  "tldr": "AQMS is the <strong>#1-ranked Santa Clarita mover on Google Maps</strong> by every measure we track — averaging position <strong>3.6 across 350 grid cells</strong> in the May 18 scan, with <strong>4.9 stars and 452 reviews</strong> (up from 441 at engagement start). Since March 8 the position has been <strong>held, not gained</strong> — net −15 top-3 placements across the three tracked queries, concentrated in <em>local movers</em>. The bright spot is <em>packing &amp; storage</em>, which moved up <strong>+5 top-3 placements and gained nearly a full position</strong> (avg rank 4.73 → 3.82). Three competitors are pushing hard: <strong>Camelot +47 top-3</strong>, <strong>Precision +31</strong>, and <strong>Victory +20</strong>. The Q3 plan is three levers — defend the local-movers position, capitalize on packing/storage momentum, and break into the outer service-area cities that the current single-pin reach doesn't touch.",
+  "kpis": [
+    {
+      "label": "AQMS overall avg rank",
+      "value": "3.60",
+      "sentiment": "positive",
+      "detail": "Across 350 cells / 3 tracked queries (May 18). #1 in market — next-best competitor (J&G) at 6.32; biggest threat (Camelot) at 6.62."
+    },
+    {
+      "label": "Top-3 placements (Mar 8 → May 18)",
+      "value": "239 → 224",
+      "sentiment": "neutral",
+      "detail": "Net −15 across the 3 time-series queries. Holding the dominant share, but Camelot (+47), Precision (+31), and Victory (+20) are closing on share they didn't have in March."
+    },
+    {
+      "label": "Reviews · rating",
+      "value": "452 · 4.9★",
+      "sentiment": "positive",
+      "detail": "+11 reviews since Mar 8 (441 → 452) at sustained 4.9-star average. Healthy review velocity ~4.4/mo — ahead of all tracked competitors."
+    },
+    {
+      "label": "Packing & storage momentum",
+      "value": "+5 top-3",
+      "sentiment": "positive",
+      "detail": "Best-moving query in the set. Avg rank 4.73 → 3.82 (gained 0.91 positions). May 3 scan peaked at 70 top-3 cells."
+    },
+    {
+      "label": "Local movers regression",
+      "value": "−13 top-3",
+      "sentiment": "negative",
+      "detail": "78 → 65 top-3 cells. Avg rank 3.26 → 3.95 (−0.69). Still #1 in market but the position is softening; the trend across all 4 scans is choppy (78 → 78 → 88 → 65)."
+    },
+    {
+      "label": "Managed locations",
+      "value": "1",
+      "sentiment": "neutral",
+      "detail": "Santa Clarita HQ (25701 Springbrook Ave). Service area covers 20 cities but the single pin's effective Maps reach decays sharply past ~5 mi. Outer cities (Moorpark, Simi Valley, Castaic) need a different play."
+    }
+  ],
+  "maps_presence": [
+    {
+      "coord": "Santa Clarita HQ pin",
+      "ll": "34.409, -118.539",
+      "distance": "0 mi · 25701 Springbrook Ave",
+      "managed": true,
+      "avg_rank": 3.6,
+      "top3": 5,
+      "top20": 6,
+      "winners": "AQMS, J&G Full Service Moving, Camelot Moving & Storage",
+      "action": "Defend — review velocity, post cadence, photo refresh, attributes"
+    },
+    {
+      "coord": "Castaic / Castaic Junction",
+      "ll": "~34.49, -118.62",
+      "distance": "~7 mi NW (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Castaic-local movers; AQMS pin out of scan radius",
+      "action": "Driving Directions pin / service-area page"
+    },
+    {
+      "coord": "Simi Valley",
+      "ll": "~34.27, -118.78",
+      "distance": "~20 mi SW (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Local Simi movers; AQMS pin out of scan radius",
+      "action": "Driving Directions pin / service-area page"
+    },
+    {
+      "coord": "San Fernando",
+      "ll": "~34.28, -118.44",
+      "distance": "~14 mi SE (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Valley movers; AQMS pin out of scan radius",
+      "action": "Driving Directions pin / service-area page"
+    },
+    {
+      "coord": "Moorpark",
+      "ll": "~34.29, -118.88",
+      "distance": "~25 mi W (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Local Moorpark + Ventura movers",
+      "action": "Driving Directions pin / service-area page"
+    },
+    {
+      "coord": "Agua Dulce / Sleepy Valley",
+      "ll": "~34.49, -118.32",
+      "distance": "~12 mi E (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Antelope Valley movers; AQMS pin out of scan radius",
+      "action": "Driving Directions pin / service-area page"
+    }
+  ],
+  "ld_leaderboard": [
+    {"name": "Affordable Quality Moving & Storage", "may_top3": 224, "delta_top3": -15, "may_avg_rank": 3.60, "delta_avg_rank": -0.07, "cells": 350, "note": "#1 in market — dominant but softening", "is_client": true},
+    {"name": "Camelot Moving & Storage, Inc.",       "may_top3": 109, "delta_top3": 47,  "may_avg_rank": 6.62, "delta_avg_rank": -1.68, "cells": 273, "note": "Biggest gainer (+47) — active SEO/GBP work likely. Watch closely.", "is_client": false},
+    {"name": "Expert Santa Clarita Movers",          "may_top3": 72,  "delta_top3": 3,   "may_avg_rank": 7.54, "delta_avg_rank": -0.39, "cells": 196, "note": "Stable challenger — holding share", "is_client": false},
+    {"name": "J&G Full Service Moving",              "may_top3": 65,  "delta_top3": -24, "may_avg_rank": 6.32, "delta_avg_rank": 0.16,  "cells": 277, "note": "Biggest loser (−24) — dropped in May 18 scan; ranks now sliding", "is_client": false},
+    {"name": "Lift It Moving",                       "may_top3": 55,  "delta_top3": -14, "may_avg_rank": 6.39, "delta_avg_rank": 0.71,  "cells": 198, "note": "Losing share, slight rank slip", "is_client": false},
+    {"name": "Movers Valencia",                      "may_top3": 50,  "delta_top3": 4,   "may_avg_rank": 8.88, "delta_avg_rank": -0.10, "cells": 212, "note": "Modest gainer; mid-tier", "is_client": false},
+    {"name": "Neatly Moving & Storage",              "may_top3": 39,  "delta_top3": 12,  "may_avg_rank": 9.83, "delta_avg_rank": -0.86, "cells": 148, "note": "Quiet riser — +12 top-3, rank improving", "is_client": false},
+    {"name": "Precision Moving & Storage Corp.",     "may_top3": 39,  "delta_top3": 31,  "may_avg_rank": 9.16, "delta_avg_rank": -1.73, "cells": 134, "note": "New entrant pushing hard (+31) — +46 cells of coverage", "is_client": false},
+    {"name": "RC Moving Company",                    "may_top3": 39,  "delta_top3": 2,   "may_avg_rank": 9.09, "delta_avg_rank": 0.06,  "cells": 362, "note": "Wide coverage, low top-3 conversion; flat", "is_client": false},
+    {"name": "Victory Moving",                       "may_top3": 36,  "delta_top3": 20,  "may_avg_rank": 9.40, "delta_avg_rank": -0.80, "cells": 136, "note": "Riser (+20) — active expansion", "is_client": false},
+    {"name": "Valencia Movers",                      "may_top3": 36,  "delta_top3": 3,   "may_avg_rank": 9.76, "delta_avg_rank": 0.27,  "cells": 147, "note": "Stable", "is_client": false},
+    {"name": "Good Job Movers",                      "may_top3": 32,  "delta_top3": 5,   "may_avg_rank": 7.65, "delta_avg_rank": -0.17, "cells": 258, "note": "Stable", "is_client": false},
+    {"name": "Loft Moving Inc.",                     "may_top3": 31,  "delta_top3": -5,  "may_avg_rank": 11.93,"delta_avg_rank": 1.11,  "cells": 189, "note": "Slipping", "is_client": false},
+    {"name": "661 Movers",                           "may_top3": 23,  "delta_top3": 1,   "may_avg_rank": 10.17,"delta_avg_rank": 0.43,  "cells": 218, "note": "Stable", "is_client": false},
+    {"name": "Pride Moving and Storage",             "may_top3": 18,  "delta_top3": 2,   "may_avg_rank": 10.53,"delta_avg_rank": -0.12, "cells": 79,  "note": "Stable / low coverage", "is_client": false}
+  ],
+  "per_keyword": [
+    {"keyword": "local movers",           "feb_cells": 114, "may_cells": 116, "feb_avg": 3.26, "may_avg": 3.95, "pos_gained": -0.69, "feb_top3": 78,  "may_top3": 65, "apr3_top3": 78,  "may3_top3": 88,  "apr3_avg": 3.60, "may3_avg": 3.09},
+    {"keyword": "moving company near me", "feb_cells": 121, "may_cells": 119, "feb_avg": 3.06, "may_avg": 3.05, "pos_gained": 0.01,  "feb_top3": 101, "may_top3": 94, "apr3_top3": 101, "may3_top3": 105, "apr3_avg": 2.94, "may3_avg": 2.94},
+    {"keyword": "packing and storage",    "feb_cells": 115, "may_cells": 115, "feb_avg": 4.73, "may_avg": 3.82, "pos_gained": 0.91,  "feb_top3": 60,  "may_top3": 65, "apr3_top3": 50,  "may3_top3": 70,  "apr3_avg": 5.27, "may3_avg": 3.97}
+  ],
+  "movers_baseline_note": {
+    "keyword": "movers",
+    "scanned": "Mar 8, 2026 only",
+    "cells": 109,
+    "avg_rank": 4.10,
+    "top3": 41,
+    "note": "Single-baseline scan. Not in 4-date time series; included as a reference point for breadth coverage at engagement start."
+  },
+  "positives": [
+    "#1 in market by every Maps metric — avg rank 3.6, 224 top-3 placements across 350 cells / 3 queries",
+    "4.9-star rating with 452 reviews (+11 since engagement start) — healthiest review velocity in the local set",
+    "Packing & storage avg rank improved 4.73 → 3.82 (−0.91 positions, +5 top-3 cells)",
+    "Moving company near me held steady at avg rank 3.05 — the highest-intent commercial query still owned",
+    "5 GBP posts published 2026 YTD (Jan, Feb, Mar, Apr, May 20) — consistent monthly cadence with locally-relevant content (Santa Clarita, hidden costs, packing services)",
+    "30-year track record (founded 1996) + Mayflower affiliation + commercial / international / office capabilities give real depth competitors don't match",
+    "Active social presence (YouTube + Facebook + Instagram) tied back into GBP — trust signals reinforced"
+  ],
+  "negatives": [
+    "Top-3 share down 15 cells net (239 → 224) since engagement start — mostly on local movers (−13) and moving company near me (−7)",
+    "Local movers avg rank slipped 3.26 → 3.95 (−0.69) — still #1 in market, but pattern across 4 scans is choppy (3.26 → 3.60 → 3.09 → 3.95)",
+    "Camelot Moving & Storage gained +47 top-3 cells in 2.5 months — active SEO/GBP work; their avg rank improved 8.30 → 6.62",
+    "Two new entrants (Precision Moving +31, Victory Moving +20) are building share in the grid — territory that was uncontested in March",
+    "Single managed GBP at Santa Clarita HQ — 5 outer-service-area cities (Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce) are outside effective Maps reach radius",
+    "Service area pages on aqmsnationalmoving.com not yet built for each declared service-area city — missed organic capture in the cities the Santa Clarita pin can't reach"
+  ],
+  "levers": [
+    {
+      "id": "A",
+      "name": "Defend the #1 Santa Clarita Maps position",
+      "priority": "Highest priority",
+      "color": "green",
+      "why": "AQMS is #1 in market but has lost 15 top-3 cells in 2.5 months while Camelot has gained 47. The defense playbook is straightforward GBP hygiene + content velocity + review-acquisition discipline, layered on the strongest brand in the local set.",
+      "actions": [
+        {"code": "GBP-01", "name": "Audit + optimize Santa Clarita HQ GBP profile (description refresh, attributes, products, services match-back, photo refresh — fresh photos every 30d)", "month": "M1", "effort": "M"},
+        {"code": "GBP-02", "name": "Lock in 2x/month GBP post cadence (one informational, one offer/seasonal) — current cadence is 1/month", "month": "M1-M3", "effort": "S"},
+        {"code": "GBP-03", "name": "Review-acquisition campaign: post-job SMS request + Google review link on invoice/email signature. Target +20 reviews by end of M3.", "month": "M1-M3", "effort": "M"},
+        {"code": "GBP-04", "name": "Q&A seeding on the GBP profile (10 common Santa Clarita-moving questions seeded with answers)", "month": "M1", "effort": "S"},
+        {"code": "PG-01", "name": "Build/strengthen /local-movers/ + /moving-company-near-me/ pages on aqmsnationalmoving.com — these are the queries losing top-3 share", "month": "M1-M2", "effort": "L"},
+        {"code": "RV-01", "name": "Weekly Maps grid monitoring (DataForSEO LD pull) — set alert if avg rank moves > 0.5 positions in either direction", "month": "M1-M3", "effort": "S"}
+      ],
+      "outcome": "Top-3 placement count recovers to 240+ by end of M3. Local movers avg rank pulls back to 3.3-3.5. Camelot's +47 gain stalls."
+    },
+    {
+      "id": "B",
+      "name": "Capitalize on packing & storage momentum",
+      "priority": "High priority",
+      "color": "blue",
+      "why": "Packing & storage is the one query AQMS is gaining on (+5 top-3, avg rank 4.73 → 3.82). The Storage Facility + Self Storage Facility GBP categories already exist. Doubling down here creates a second revenue stream alongside moving — and storage is recurring-revenue, unlike the one-time moving job.",
+      "actions": [
+        {"code": "PG-02", "name": "Build dedicated /storage-units-santa-clarita/ page with full pricing + unit-size matrix + climate/security features + virtual tour", "month": "M1", "effort": "L"},
+        {"code": "PG-03", "name": "Build dedicated /packing-services-santa-clarita/ page with packing-tier matrix (full / partial / fragile-only), supplies list, sample inventory checklist", "month": "M1", "effort": "L"},
+        {"code": "BLG-01", "name": "Blog: 'How much storage do you need? Santa Clarita unit-size calculator' (utility content, internal-links to /storage-units-santa-clarita/)", "month": "M2", "effort": "M"},
+        {"code": "BLG-02", "name": "Blog: 'Full vs partial packing service in Santa Clarita: what's worth paying for?' (commercial-intent, links to /packing-services-santa-clarita/)", "month": "M2", "effort": "M"},
+        {"code": "SCH-01", "name": "Schema markup deploy on both pages (LocalBusiness + Service + Product/Offer where applicable) + FAQ schema", "month": "M2", "effort": "S"},
+        {"code": "GBP-05", "name": "Add Storage + Packing GBP posts monthly (separate cadence from moving posts)", "month": "M1-M3", "effort": "S"}
+      ],
+      "outcome": "Packing & storage avg rank moves to 3.2 or better. Storage page ranks top-10 on 'storage units santa clarita' by M3. Recurring storage revenue contribution measurable in client reporting."
+    },
+    {
+      "id": "C",
+      "name": "Break into outer service-area cities",
+      "priority": "Medium priority",
+      "color": "indigo",
+      "why": "AQMS declares 20 service-area cities but the single Santa Clarita pin's effective Maps reach is ~5 mi. Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce, and the Antelope Valley edge all show as zero-reach in the LD grid (pin out of radius). The fix is dedicated service-area pages + Driving Direction pins to seed those city searches.",
+      "actions": [
+        {"code": "PG-04", "name": "Build /movers-castaic-ca/ service-area page (real content, Castaic-specific testimonials, local landmarks/HOA references, schema)", "month": "M1", "effort": "M"},
+        {"code": "PG-05", "name": "Build /movers-simi-valley-ca/ service-area page", "month": "M2", "effort": "M"},
+        {"code": "PG-06", "name": "Build /movers-san-fernando-ca/ service-area page", "month": "M2", "effort": "M"},
+        {"code": "PG-07", "name": "Build /movers-moorpark-ca/ service-area page", "month": "M3", "effort": "M"},
+        {"code": "PG-08", "name": "Build /movers-agua-dulce-ca/ + /movers-castaic-junction-ca/ + /movers-val-verde-ca/ supporting cluster pages", "month": "M3", "effort": "M"},
+        {"code": "DD-01", "name": "Seed 4 Driving Directions pins on the GBP (Castaic / Simi Valley / San Fernando / Moorpark) — directs traffic and proximity signal to outer cells", "month": "M2", "effort": "S"},
+        {"code": "CIT-01", "name": "Local citation deploy for the new SA pages on Yelp / BBB / YellowPages / Foursquare / local chamber sites (one per city)", "month": "M2-M3", "effort": "M"}
+      ],
+      "outcome": "AQMS visible on Maps for 'movers castaic' / 'movers simi valley' etc. by M3 (target top-10 in each). Organic traffic to /movers-{city}-ca/ pages contributes incremental lead volume not currently captured."
+    }
+  ],
+  "q3_kpi_targets": [
+    {"kpi": "Top-3 placements (3 tracked kws)",           "baseline": "224", "target": "240+",  "stretch": "260+"},
+    {"kpi": "Avg rank (3 tracked kws)",                   "baseline": "3.60","target": "3.30",  "stretch": "3.00"},
+    {"kpi": "Local movers avg rank",                      "baseline": "3.95","target": "3.30",  "stretch": "3.00"},
+    {"kpi": "Packing & storage avg rank",                 "baseline": "3.82","target": "3.20",  "stretch": "2.80"},
+    {"kpi": "Reviews count",                              "baseline": "452", "target": "475+",  "stretch": "490+"},
+    {"kpi": "Outer-city service-area pages live",         "baseline": "0",   "target": "5",     "stretch": "8"},
+    {"kpi": "Top-3 gap vs Camelot (AQMS − Camelot)",      "baseline": "+115","target": "+130+", "stretch": "+150"}
+  ],
+  "owner_asks": [
+    "Authorization to deploy a review-acquisition workflow (post-job SMS / email signature link) — needs sign-off on customer communication",
+    "Confirmation of full 20-city service-area priority (which 4 are most strategically important for outer-pin builds in M1-M2)",
+    "Access confirmation: GBP managed by HQDM or shared management? (need write access for post cadence + Q&A seeding + DD pin seeding)",
+    "Are there any locations or services that are seasonal / off-roadmap so we don't waste content effort?"
+  ]
+}
