@@ -1,0 +1,1024 @@
+{
+  "months": [
+    "Dec 2024",
+    "Jan 2025",
+    "Feb 2025",
+    "Mar 2025",
+    "Apr 2025",
+    "May 2025",
+    "Jun 2025",
+    "Jul 2025",
+    "Aug 2025",
+    "Sep 2025",
+    "Oct 2025",
+    "Nov 2025",
+    "Dec 2025",
+    "Jan 2026",
+    "Feb 2026",
+    "Mar 2026",
+    "Apr 2026",
+    "May 2026*"
+  ],
+  "year_months": [
+    "202412",
+    "202501",
+    "202502",
+    "202503",
+    "202504",
+    "202505",
+    "202506",
+    "202507",
+    "202508",
+    "202509",
+    "202510",
+    "202511",
+    "202512",
+    "202601",
+    "202602",
+    "202603",
+    "202604",
+    "202605"
+  ],
+  "event_categorization": {
+    "session_booked": "booking",
+    "booking_confirmed": "booking",
+    "contact_form_submission": "lead",
+    "contact_form_submit": "lead",
+    "click_to_dial": "intent_call",
+    "click_phone_number": "intent_call",
+    "click_to_email": "intent_email",
+    "gmb_click": "engagement_gbp",
+    "banner_booking_clicks": "engagement_banner",
+    "giftcard_click": "engagement_giftcard"
+  },
+  "channels": {
+    "organic": {
+      "true_conversions": [
+        29.0,
+        18.0,
+        18.0,
+        26.0,
+        35.0,
+        36.0,
+        42.0,
+        31.0,
+        33.0,
+        30.0,
+        36.0,
+        30.0,
+        38.0,
+        35.0,
+        35.0,
+        40.0,
+        38.0,
+        43.0
+      ],
+      "qualified_intents": [
+        16.0,
+        40.0,
+        17.0,
+        20.0,
+        26.0,
+        27.0,
+        18.0,
+        23.0,
+        25.0,
+        27.0,
+        26.0,
+        20.0,
+        21.0,
+        29.0,
+        12.0,
+        13.0,
+        21.0,
+        38.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        334.0,
+        464.0,
+        417.0,
+        404.0,
+        562.0,
+        542.0,
+        520.0,
+        549.0,
+        448.0,
+        747.0
+      ],
+      "true_plus_intent": [
+        45.0,
+        58.0,
+        35.0,
+        46.0,
+        61.0,
+        63.0,
+        60.0,
+        54.0,
+        58.0,
+        57.0,
+        62.0,
+        50.0,
+        59.0,
+        64.0,
+        47.0,
+        53.0,
+        59.0,
+        81.0
+      ],
+      "all_conversions": [
+        45.0,
+        58.0,
+        35.0,
+        46.0,
+        61.0,
+        63.0,
+        60.0,
+        57.0,
+        392.0,
+        521.0,
+        479.0,
+        454.0,
+        621.0,
+        606.0,
+        567.0,
+        602.0,
+        507.0,
+        828.0
+      ],
+      "per_event_totals": {
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 4651.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 287.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 394.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 491.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 18.0
+        },
+        "booking_confirmed": {
+          "category": "booking",
+          "total_18mo": 17.0
+        },
+        "giftcard_click": {
+          "category": "engagement_giftcard",
+          "total_18mo": 52.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 85.0
+        },
+        "click_to_email": {
+          "category": "intent_email",
+          "total_18mo": 7.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "direct": {
+      "true_conversions": [
+        11.0,
+        25.0,
+        15.0,
+        28.0,
+        32.0,
+        11.0,
+        18.0,
+        18.0,
+        29.0,
+        24.0,
+        19.0,
+        13.0,
+        18.0,
+        22.0,
+        18.0,
+        22.0,
+        13.0,
+        45.0
+      ],
+      "qualified_intents": [
+        16.0,
+        8.0,
+        13.0,
+        5.0,
+        7.0,
+        7.0,
+        3.0,
+        10.0,
+        7.0,
+        5.0,
+        7.0,
+        6.0,
+        6.0,
+        8.0,
+        14.0,
+        7.0,
+        12.0,
+        1.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        4.0,
+        0.0,
+        7.0,
+        9.0,
+        8.0,
+        7.0,
+        5.0,
+        12.0,
+        126.0
+      ],
+      "true_plus_intent": [
+        27.0,
+        33.0,
+        28.0,
+        33.0,
+        39.0,
+        18.0,
+        21.0,
+        28.0,
+        36.0,
+        29.0,
+        26.0,
+        19.0,
+        24.0,
+        30.0,
+        32.0,
+        29.0,
+        25.0,
+        46.0
+      ],
+      "all_conversions": [
+        27.0,
+        33.0,
+        28.0,
+        33.0,
+        39.0,
+        18.0,
+        21.0,
+        28.0,
+        38.0,
+        33.0,
+        26.0,
+        26.0,
+        33.0,
+        38.0,
+        39.0,
+        34.0,
+        37.0,
+        172.0
+      ],
+      "per_event_totals": {
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 117.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 290.0
+        },
+        "booking_confirmed": {
+          "category": "booking",
+          "total_18mo": 18.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 138.0
+        },
+        "giftcard_click": {
+          "category": "engagement_giftcard",
+          "total_18mo": 38.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 70.0
+        },
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 25.0
+        },
+        "click_to_email": {
+          "category": "intent_email",
+          "total_18mo": 4.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 3.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "paid": {
+      "true_conversions": [
+        17.0,
+        6.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "qualified_intents": [
+        14.0,
+        3.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        3.0,
+        16.0,
+        15.0,
+        14.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        132.0,
+        32.0,
+        29.0,
+        34.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        26.0
+      ],
+      "true_plus_intent": [
+        31.0,
+        9.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        4.0,
+        0.0,
+        3.0,
+        17.0,
+        15.0,
+        16.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "all_conversions": [
+        31.0,
+        9.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        4.0,
+        0.0,
+        135.0,
+        49.0,
+        44.0,
+        50.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        28.0
+      ],
+      "per_event_totals": {
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 228.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 71.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 25.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 19.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 8.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 1.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "other": {
+      "true_conversions": [
+        7.0,
+        9.0,
+        4.0,
+        0.0,
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0
+      ],
+      "qualified_intents": [
+        7.0,
+        6.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        5.0,
+        1.0,
+        2.0,
+        3.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        42.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        1.0,
+        20.0,
+        0.0,
+        3.0
+      ],
+      "true_plus_intent": [
+        14.0,
+        15.0,
+        7.0,
+        0.0,
+        1.0,
+        0.0,
+        7.0,
+        1.0,
+        3.0,
+        3.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0,
+        2.0
+      ],
+      "all_conversions": [
+        14.0,
+        15.0,
+        7.0,
+        0.0,
+        1.0,
+        0.0,
+        7.0,
+        1.0,
+        45.0,
+        5.0,
+        2.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0,
+        23.0,
+        1.0,
+        5.0
+      ],
+      "per_event_totals": {
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 68.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 31.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 23.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 3.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 5.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 1.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 0.0
+        },
+        "booking_confirmed": {
+          "category": "booking",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "referral": {
+      "true_conversions": [
+        1.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        9.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        3.0,
+        1.0,
+        12.0,
+        4.0
+      ],
+      "qualified_intents": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        7.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0,
+        3.0,
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        0.0,
+        1.0
+      ],
+      "true_plus_intent": [
+        1.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        16.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        3.0,
+        1.0,
+        12.0,
+        4.0
+      ],
+      "all_conversions": [
+        1.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        18.0,
+        3.0,
+        2.0,
+        0.0,
+        1.0,
+        2.0,
+        6.0,
+        4.0,
+        12.0,
+        5.0
+      ],
+      "per_event_totals": {
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 28.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 6.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 8.0
+        },
+        "giftcard_click": {
+          "category": "engagement_giftcard",
+          "total_18mo": 9.0
+        },
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 5.0
+        },
+        "click_to_email": {
+          "category": "intent_email",
+          "total_18mo": 2.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 1.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 1.0
+        },
+        "booking_confirmed": {
+          "category": "booking",
+          "total_18mo": 0.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "social": {
+      "true_conversions": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "qualified_intents": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        4.0
+      ],
+      "true_plus_intent": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "all_conversions": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        3.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        6.0
+      ],
+      "per_event_totals": {
+        "giftcard_click": {
+          "category": "engagement_giftcard",
+          "total_18mo": 5.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 3.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 4.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 3.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 0.0
+        },
+        "contact_form_submit": {
+          "category": "lead",
+          "total_18mo": 0.0
+        }
+      }
+    },
+    "gbp": {
+      "true_conversions": [
+        18.0,
+        12.0,
+        9.0,
+        18.0,
+        20.0,
+        17.0,
+        25.0,
+        18.0,
+        18.0,
+        23.0,
+        25.0,
+        20.0,
+        20.0,
+        18.0,
+        20.0,
+        24.0,
+        30.0,
+        25.0
+      ],
+      "qualified_intents": [
+        13.0,
+        20.0,
+        9.0,
+        15.0,
+        21.0,
+        15.0,
+        10.0,
+        11.0,
+        19.0,
+        18.0,
+        15.0,
+        4.0,
+        8.0,
+        13.0,
+        7.0,
+        8.0,
+        17.0,
+        23.0
+      ],
+      "engagement_signals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        328.0,
+        455.0,
+        409.0,
+        397.0,
+        549.0,
+        534.0,
+        513.0,
+        531.0,
+        444.0,
+        652.0
+      ],
+      "true_plus_intent": [
+        31.0,
+        32.0,
+        18.0,
+        33.0,
+        41.0,
+        32.0,
+        35.0,
+        29.0,
+        37.0,
+        41.0,
+        40.0,
+        24.0,
+        28.0,
+        31.0,
+        27.0,
+        32.0,
+        47.0,
+        48.0
+      ],
+      "all_conversions": [
+        31.0,
+        32.0,
+        18.0,
+        33.0,
+        41.0,
+        32.0,
+        35.0,
+        32.0,
+        365.0,
+        496.0,
+        449.0,
+        421.0,
+        577.0,
+        565.0,
+        540.0,
+        563.0,
+        491.0,
+        700.0
+      ],
+      "per_event_totals": {
+        "gmb_click": {
+          "category": "engagement_gbp",
+          "total_18mo": 4577.0
+        },
+        "banner_booking_clicks": {
+          "category": "engagement_banner",
+          "total_18mo": 199.0
+        },
+        "session_booked": {
+          "category": "booking",
+          "total_18mo": 315.0
+        },
+        "click_to_dial": {
+          "category": "intent_call",
+          "total_18mo": 230.0
+        },
+        "giftcard_click": {
+          "category": "engagement_giftcard",
+          "total_18mo": 39.0
+        },
+        "click_phone_number": {
+          "category": "intent_call",
+          "total_18mo": 11.0
+        },
+        "booking_confirmed": {
+          "category": "booking",
+          "total_18mo": 8.0
+        },
+        "contact_form_submission": {
+          "category": "lead",
+          "total_18mo": 37.0
+        },
+        "click_to_email": {
+          "category": "intent_email",
+          "total_18mo": 5.0
+        }
+      }
+    }
+  }
+}

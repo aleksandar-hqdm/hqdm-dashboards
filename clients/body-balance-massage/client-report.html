@@ -54,7 +54,7 @@
         <span class="font-semibold truncate" id="hdr-client">Body Balance Massage &amp; Float</span>
         <span class="text-slate-400 hidden sm:inline">Q2 2026</span>
         <span class="text-slate-300 hidden sm:inline">·</span>
-        <span class="text-slate-500 hidden sm:inline">Client Report (v7)</span>
+        <span class="text-slate-500 hidden sm:inline">Client Report (v8)</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
@@ -72,7 +72,7 @@
       <p class="text-sm text-slate-600 mt-1" id="hero-tagline">Single-pin massage &amp; float studio · American Fork, UT · 4.9★ × 402 reviews</p>
       <div class="flex flex-wrap gap-4 mt-3 text-[11px] text-slate-500">
         <span><span class="font-semibold text-slate-700">Q2 2026 Client Report</span></span>
-        <span id="hero-prepared">Refreshed 2026-05-22 · v7</span>
+        <span id="hero-prepared">Refreshed 2026-05-22 · v8</span>
         <span id="hero-domain" class="font-mono">bbmassageandfloat.com</span>
         <span>Pin <span class="font-mono">40.378, −111.789</span></span>
         <span>AM <span class="text-slate-700">Matt Olderman</span></span>
@@ -87,18 +87,18 @@
       </div>
     </section>
 
-    <!-- ============ V7 CALLOUT ============ -->
+    <!-- ============ V8 CALLOUT ============ -->
     <section class="mb-5">
       <div class="rounded-lg p-4 sm:p-5" style="background: #ecfdf5; border-left: 4px solid #10b981;">
-        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v7 (2026-05-22)</div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v8 (2026-05-22) · deep QA pass</div>
         <p class="text-sm leading-relaxed text-slate-800">
-          <strong>Conversion-event categorization QA.</strong> GA4 reports 10 "conversion events" for BB, but 3 of them — <code class="bg-amber-100 px-1 rounded">gmb_click</code>, <code class="bg-amber-100 px-1 rounded">banner_booking_clicks</code>, <code class="bg-amber-100 px-1 rounded">giftcard_click</code> — are top-of-funnel engagement signals, not real business outcomes. They were added as conversion events in Aug 2025 and inflate the raw conversion count by ~6×. The YoY tile and trend chart above now use TRUE conversions (booking + lead only) as the headline metric. Raw GA4 conversions are still shown for transparency (the +1,177% inflated YoY); the +18% TRUE YoY is the apples-to-apples signal that matches the +18% sessions YoY.
+          <strong>Channel-level conversions rebuilt from event × channel × month.</strong> The v7 release exposed a residual issue: the GBP conversion rate column was showing impossible values (Q2 2026 partial = 121.65%, Q1 2026 = 99.58%) because the channel-level "conversions" was still using raw GA4 (which counts <code class="bg-amber-100 px-1 rounded">gmb_click</code> events that fire when a user taps the GBP listing — <em>before</em> a session is even created on the website, so there can be more gmb_click events than gmb sessions). Same artifact inflated Org CR to 16-28%.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>GA4 18-month integration:</strong> property 332738090 pulled Dec 2024 → May 2026 partial. 8 channels (Organic / GBP / Direct / LLM / Referral / Paid / Social / Other). Quarterly aggregates, monthly trend, and Q1 2025 → Q1 2026 YoY all driven by this data.
+          <strong>Fix:</strong> pulled GA4 with the third dimension (eventName × sessionDefaultChannelGroup × yearMonth) and rebuilt the per-channel conversion series to include only TRUE + QUALIFIED-INTENT events (session_booked, booking_confirmed, contact_form_submission, click_to_dial, click_to_email, etc). Engagement events (gmb_click, banner_booking_clicks, giftcard_click) are excluded from the conversion series but tracked separately as a context-only overlay.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Off-page program halt 2026-05-13:</strong> SEO Neo stack (DAS / Blast / Sniper / RD100 / NAP-overlay / AI Article Creator / Driving Directions / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin Creation) removed from BB's playbook. Forward authority: manual citations (AMTA / ABMP / Utah MTA / chambers), 1 monthly PR pitch, 1 partner-outreach touch/mo, on-site link equity. Spend posture unchanged.
+          <strong>Result:</strong> Org CR is now 1.47%–2.98% per quarter (realistic for a service business); GBP CR is 4.27%–9.70%. The TRUE+INTENT YoY tracks sessions: +18% on both. The TRUE-only (booking+lead) YoY is +77% — real business growth. The +1,177% raw figure is shown only in the transparency disclosure below so the AM can explain the GA4-dashboard discrepancy honestly.
         </p>
       </div>
     </section>
@@ -145,7 +145,7 @@
         <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Year-over-Year Movement</h2>
         <span class="text-[10px] text-slate-400" id="yoy-note">Q1 2025 → Q1 2026 · Organic Search channel · GA4</span>
       </div>
-      <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+      <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
     </section>
 
     <!-- ============ QUARTERLY KPI TABLE ============ -->
@@ -301,7 +301,7 @@
     <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
       <div>
         <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
-        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v7)
+        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v8)
       </div>
       <div class="text-slate-400">Confidential — authorized client viewing only. noindex.</div>
     </footer>
@@ -346,14 +346,17 @@
         const fmtPct = v => v.toFixed(2) + '%';
         yoyEl.innerHTML =
           yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
-          (yoy.true_conv_pct !== null && yoy.true_conv_pct !== undefined
-            ? yoyTile('TRUE conversions YoY', yoy.true_conv_baseline, yoy.true_conv_current, yoy.true_conv_pct, fmtInt, 'Booking + lead only · excludes gmb_click etc')
+          (yoy.org_funnel_pct !== null && yoy.org_funnel_pct !== undefined
+            ? yoyTile('Real funnel YoY (booking + lead + intent)', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Excludes gmb_click + banner_booking_clicks + giftcard_click')
             : '') +
-          (yoy.true_cr_pct !== null && yoy.true_cr_pct !== undefined
-            ? yoyTile('True conversion rate YoY', yoy.true_cr_baseline, yoy.true_cr_current, yoy.true_cr_pct, fmtPct, 'True conv ÷ organic sessions')
+          (yoy.org_true_pct !== null && yoy.org_true_pct !== undefined
+            ? yoyTile('Bookings + leads only YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission only')
+            : '') +
+          (yoy.org_clean_cr_pct !== null && yoy.org_clean_cr_pct !== undefined
+            ? yoyTile('Real conversion rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Real funnel ÷ organic sessions')
             : '');
         document.getElementById('yoy-note').textContent =
-          'Q1 2025 → Q1 2026 · Organic Search · GA4. TRUE conversions = session_booked + booking_confirmed + contact_form_submission only. Raw GA4 conv (incl. gmb_click + banner_booking_clicks added Aug 2025) shown for transparency in the disclosure box below.';
+          'Q1 2025 → Q1 2026 · Organic Search · GA4. All conversion metrics use the real funnel (booking + lead + call/email intent), excluding engagement events (gmb_click etc). See event-categorization disclosure below.';
       } else {
         yoyEl.innerHTML = '<div class="text-sm text-slate-500 italic col-span-3">YoY comparison not yet available.</div>';
       }

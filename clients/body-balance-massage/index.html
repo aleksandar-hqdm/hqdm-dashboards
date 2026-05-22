@@ -106,7 +106,7 @@
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v7 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v8 · 2026-05-22</div>
     </div>
   </header>
 
@@ -654,23 +654,31 @@
         const fmtPct = v => v.toFixed(2) + '%';
         yoyTilesEl.innerHTML =
           yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
-          (yoy.true_conv_pct !== null && yoy.true_conv_pct !== undefined
-            ? yoyTile('TRUE conversions YoY', yoy.true_conv_baseline, yoy.true_conv_current, yoy.true_conv_pct, fmtInt, 'Booking + lead events only (gmb_click excluded)')
+          (yoy.org_funnel_pct !== null && yoy.org_funnel_pct !== undefined
+            ? yoyTile('Real funnel YoY', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Booking + lead + call/email intent · excludes engagement events')
             : '') +
-          (yoy.true_cr_pct !== null && yoy.true_cr_pct !== undefined
-            ? yoyTile('True conversion rate YoY', yoy.true_cr_baseline, yoy.true_cr_current, yoy.true_cr_pct, fmtPct, 'True conv ÷ organic sessions')
+          (yoy.org_true_pct !== null && yoy.org_true_pct !== undefined
+            ? yoyTile('Bookings + leads only YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission only')
+            : '') +
+          (yoy.org_clean_cr_pct !== null && yoy.org_clean_cr_pct !== undefined
+            ? yoyTile('Real conversion rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Real funnel ÷ organic sessions')
             : '');
-        // Add a 4th tile with the raw-conversions disclosure
+        yoyTilesEl.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3';
+
+        // Add a 5th transparency tile for raw GA4 conversions (DO NOT report to client)
         if (yoy.org_conv_raw_pct !== null && yoy.org_conv_raw_pct !== undefined) {
-          yoyTilesEl.insertAdjacentHTML('beforeend', `
-            <div class="stat-tile" style="border-color:#fcd34d; background: linear-gradient(135deg,#fffbeb,#fffbeb);">
-              <div class="text-[10px] font-bold uppercase tracking-widest text-amber-800 leading-tight">RAW GA4 conversions (inflated)</div>
-              <div class="text-2xl font-extrabold text-amber-900 mt-1.5 leading-none">+${yoy.org_conv_raw_pct.toFixed(0)}%</div>
-              <div class="text-xs text-amber-700 mt-1.5 leading-snug">${yoy.org_conv_raw_baseline} → ${yoy.org_conv_raw_current.toLocaleString()}</div>
-              <div class="text-[10px] text-amber-600 mt-1 italic">Includes engagement events added Aug 2025 — DO NOT report this to client</div>
-            </div>`);
-          // Switch the grid to 4-col
-          yoyTilesEl.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3';
+          const transparencyEl = document.createElement('div');
+          transparencyEl.className = 'mt-4 col-span-full';
+          transparencyEl.innerHTML = `
+            <div class="rounded-lg p-3 border-2" style="border-color:#fcd34d; background: linear-gradient(135deg,#fffbeb,#fffbeb);">
+              <div class="flex items-center justify-between gap-3 flex-wrap">
+                <div>
+                  <div class="text-[10px] font-bold uppercase tracking-widest text-amber-800">Transparency: raw GA4 conversions (DO NOT report this to client)</div>
+                  <div class="text-xs text-amber-700 mt-1">If you read GA4 directly without filtering, organic conversions show <strong>${yoy.org_conv_raw_baseline} → ${yoy.org_conv_raw_current.toLocaleString()}</strong> = <strong>+${yoy.org_conv_raw_pct.toFixed(0)}%</strong>. This is entirely artifact: gmb_click + banner_booking_clicks + giftcard_click are GA4 "conversion events" but represent top-funnel taps, not real business outcomes. Use the real funnel numbers above for client communication.</div>
+                </div>
+              </div>
+            </div>`;
+          yoyTilesEl.parentElement.appendChild(transparencyEl);
         }
       } else {
         yoyTilesEl.innerHTML = '<div class="text-sm text-ink-500 italic col-span-3">YoY comparison not yet available.</div>';
