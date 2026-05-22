@@ -10,15 +10,16 @@
     "hqdm_am": "Matt Olderman",
     "hqdm_owner": "Aleksandar Spasevski",
     "prepared_date": "2026-05-22",
-    "version": "v5",
+    "version": "v6",
     "quarter": "Q2 2026",
     "address": "366 S 500 E Suite B, American Fork UT 84003",
     "pin": "40.378, -111.789",
     "campaign_posture": "Hold budget · Redirect targeting · Same production scale · Authority rebuilt post-halt · GA4 integration pending",
-    "doc_subtitle": "Q2 2026 strategic diagnosis (v5, refreshed 2026-05-22). Map engine gaining rank; on-site CTR bleeding; lift sits on 7 structural fixes + retargeted production at full scale. GA4 property 332738090 verified connected.",
+    "doc_subtitle": "Q2 2026 strategic diagnosis (v6, refreshed 2026-05-22). GA4 property 332738090 integrated — 18 months of Organic + GBP + LLM sessions and conversions. Map engine gaining rank; on-site CTR bleeding; lift sits on 7 structural fixes + retargeted production at full scale.",
     "gsc_data_window": "2025-05-22 → 2026-05-21 (365 days)",
-    "ga4_status": "GA4 property 332738090 confirmed connected (info@ token, verified 2026-05-22) — data pull pending; integrate sessions + form_submit + conversion attribution at next REP cycle",
-    "ga4_property_id": "332738090"
+    "ga4_status": "GA4 property 332738090 integrated 2026-05-22 — 18 months Dec 2024 → May 2026 partial · sessions + conversions per channel (Organic / GBP / Direct / LLM / Referral / Paid / Social / Other)",
+    "ga4_property_id": "332738090",
+    "ga4_window": "Dec 2024 → May 2026 partial (18 months)"
   },
   "mini_report_base": "./",
   "mini_reports": [
@@ -44,19 +45,19 @@
     }
   ],
   "headline_panel": {
-    "headline": "Maps engine is gaining rank where it holds cells. On-site CTR is where the plateau lives.",
-    "lede": "BB tightened rank on all four massage queries Jan 19 → Apr 18 (mean dx +1.21 to +1.46 ranks/cell). Float owned at #1 of 20 substantial competitors on 106/106 cells. But sitewide GSC CTR sits at 0.8% — 326 queries have 2+ BB URLs ranking simultaneously. The owner's perceived plateau is real, but it's in on-site click capture + booking conversion, NOT in the Maps engine. Q2 spend posture: hold budget, redirect targeting, ship at the same volume as today, authority rebuilt around the 2026-05-13 off-page program halt.",
+    "headline": "GA4: organic sessions +43% YoY, organic conversions hit a measurement-system inflection in Aug 2025. Maps engine still gaining rank.",
+    "lede": "GA4 organic sessions Q1 2025 → Q1 2026: 8,879 → 10,448 (+18%). Organic conversions 139 → 1775 (+1177%) — but read the conversion-event-shift note below: a measurement expansion in Aug 2025 (gmb_click + banner_booking_clicks added as conversion events) explains most of the jump from ~150/mo to ~1,000+/mo. ",
     "stat_tiles": [
+      {
+        "label": "GA4 organic sessions YoY",
+        "value": "+18%",
+        "sub": "Q1 2025 8,879 → Q1 2026 10,448",
+        "sentiment": "positive"
+      },
       {
         "label": "GSC clicks (last 365d)",
         "value": "27,198",
-        "sub": "2,266 clicks/mo avg · sitewide CTR 0.8%",
-        "sentiment": "neutral"
-      },
-      {
-        "label": "GSC impressions (last 365d)",
-        "value": "3.41M",
-        "sub": "Broad surface, low click capture — symptom of cannibalization + meta gaps",
+        "sub": "2,266/mo avg · sitewide CTR 0.8% (below-par)",
         "sentiment": "neutral"
       },
       {
@@ -68,38 +69,38 @@
       {
         "label": "Float surface owned",
         "value": "#1 / 106 cells",
-        "sub": "On both float queries, of 20+18 substantial-sample competitor pins",
+        "sub": "Both float queries · 20+18 substantial-sample competitor pins",
         "sentiment": "positive"
       }
     ],
     "callout_strip": [
       {
-        "label": "Where the plateau actually lives",
-        "detail": "Sitewide CTR 0.80% (below par for service business). /about/ 0.04% · /pricing-and-membership/ 0.10% · /upgrades/ 0.00%. Service-page schema thinness (8/8 carry generic DaySpa only) + 326 cannibal queries are the on-site drag."
+        "label": "GA4 connected · 18 months online",
+        "detail": "Property 332738090 verified 2026-05-22. Dec 2024 → May 2026 partial. Organic / GBP / Direct / LLM / Referral / Paid / Social / Other channels broken out. 10 conversion events firing — top 3 by volume are gmb_click (1,590/90d), banner_booking_clicks (436), session_booked (150)."
       },
       {
-        "label": "What's growing",
-        "detail": "Near-me queries are the active growth surface — BB tightened from 7.43→5.97 (massage therapist near me, +1.46/cell, top-3 cells 27→37). Pleasant Grove cells opened (3 old winners collapsed −188/−143/−138; 5 new entrants slid in)."
+        "label": "Where the plateau actually lives",
+        "detail": "Sitewide GSC CTR 0.80% (below par). /about/ 0.04% · /pricing-and-membership/ 0.10% · /upgrades/ 0.00%. Service-page schema thinness (8/8 carry generic DaySpa only) + 326 cannibal queries are the on-site drag — the strategy lever isn't traffic, it's click capture."
       },
       {
         "label": "Untracked headline",
-        "detail": "DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked service queries · #2 for 6 more · #3 for 6 more. Lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface."
+        "detail": "DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked service queries · #2 for 6 more · #3 for 6 more. Lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface — gated on Owner Item #7."
       }
     ],
     "mini_report_url": "untracked-services/"
   },
   "kpis": [
     {
-      "label": "GSC clicks (last 365d)",
-      "value": "27,198",
-      "sentiment": "neutral",
-      "detail": "Sitewide. ~2,266 clicks/mo. 0.8% CTR — below par for service business; symptom of cannibalization + meta gaps + missing service schema."
+      "label": "GA4 organic sessions YoY",
+      "value": "+18%",
+      "sentiment": "positive",
+      "detail": "Q1 2025 8,879 → Q1 2026 10,448. Most of the lift is in real session count, not just rank — engagement is up too."
     },
     {
       "label": "Rank tightening · massage therapist near me",
       "value": "7.43 → 5.97",
       "sentiment": "positive",
-      "detail": "Avg rank on 95 cells visible both dates. BB #2 of 10 substantial competitors. Top-3 cells 27 → 37 (+10). Mean dx +1.46/cell."
+      "detail": "LD avg rank on 95 cells visible both dates. BB #2 of 10 substantial competitors. Top-3 cells 27 → 37 (+10). Mean dx +1.46/cell."
     },
     {
       "label": "Float surface owned",
@@ -127,8 +128,561 @@
     }
   ],
   "trend": {
-    "headline": "GSC monthly trend — 365-day window (GA4 not connected)",
-    "annotation_text": "Clicks aggregated daily from raw GSC export (2025-05 → 2026-05). Sitewide totals across 2 pages. Last month shown as partial — only 16 days of data through 2026-05-16. Full-month projection: 3,040 clicks · 437,887 imp at trailing daily rate.",
+    "headline": "GA4 organic + GBP trend — 18 months · Dec 2024 → May 2026 partial",
+    "annotation_text": "GA4 property 332738090. Conversions across all channels shifted from ~126/mo (Dec 2024-Jul 2025) to ~1169/mo (Aug 2025-May 2026) — a 9.3× jump tied to new conversion events configured in GA4 (gmb_click + banner_booking_clicks). The 90-day breakdown: gmb_click 1825 of 2,410 90d-total. Pre-Aug-2025 'true booking' events (session_booked + click_to_dial + contact_form_submission + click_to_email) averaged ~126/mo — that's the apples-to-apples baseline for YoY comparison.",
+    "may_extrapolation_note": "May 2026 is partial through 2026-05-16 (16 of 31 days). Sessions & conversions shown as-reported by GA4; full-month run-rate not extrapolated on this chart.",
+    "months": [
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "sessions": {
+      "organic": [
+        3055,
+        3214,
+        2994,
+        2671,
+        2559,
+        3042,
+        2476,
+        2157,
+        1955,
+        1862,
+        1815,
+        1770,
+        2367,
+        3461,
+        3577,
+        3410,
+        2601,
+        2098
+      ],
+      "direct": [
+        1198,
+        935,
+        904,
+        774,
+        701,
+        729,
+        659,
+        539,
+        674,
+        776,
+        769,
+        1039,
+        1035,
+        1336,
+        1458,
+        1208,
+        1304,
+        1312
+      ],
+      "gbp": [
+        537,
+        618,
+        653,
+        674,
+        588,
+        923,
+        590,
+        584,
+        576,
+        501,
+        456,
+        444,
+        603,
+        575,
+        574,
+        526,
+        500,
+        479
+      ],
+      "referral": [
+        54,
+        30,
+        24,
+        26,
+        44,
+        51,
+        54,
+        39,
+        83,
+        53,
+        53,
+        48,
+        46,
+        77,
+        88,
+        62,
+        143,
+        64
+      ],
+      "paid": [
+        551,
+        176,
+        50,
+        1,
+        0,
+        2,
+        286,
+        86,
+        357,
+        506,
+        614,
+        821,
+        52,
+        537,
+        416,
+        483,
+        453,
+        344
+      ],
+      "social": [
+        66,
+        67,
+        80,
+        68,
+        40,
+        24,
+        46,
+        50,
+        43,
+        46,
+        70,
+        49,
+        51,
+        67,
+        50,
+        48,
+        62,
+        44
+      ],
+      "llm": [
+        1,
+        1,
+        2,
+        4,
+        10,
+        16,
+        14,
+        10,
+        18,
+        18,
+        14,
+        7,
+        20,
+        37,
+        17,
+        20,
+        13,
+        15
+      ],
+      "other": [
+        395,
+        218,
+        190,
+        73,
+        66,
+        70,
+        199,
+        155,
+        169,
+        72,
+        63,
+        78,
+        269,
+        89,
+        67,
+        183,
+        42,
+        25
+      ]
+    },
+    "conversions": {
+      "organic": [
+        45.0,
+        58.0,
+        35.0,
+        46.0,
+        61.0,
+        63.0,
+        60.0,
+        57.0,
+        392.0,
+        521.0,
+        479.0,
+        454.0,
+        621.0,
+        606.0,
+        567.0,
+        602.0,
+        507.0,
+        828.0
+      ],
+      "direct": [
+        27.0,
+        33.0,
+        28.0,
+        33.0,
+        39.0,
+        18.0,
+        21.0,
+        28.0,
+        38.0,
+        33.0,
+        26.0,
+        26.0,
+        33.0,
+        38.0,
+        39.0,
+        34.0,
+        37.0,
+        172.0
+      ],
+      "gbp": [
+        31.0,
+        32.0,
+        18.0,
+        33.0,
+        41.0,
+        32.0,
+        35.0,
+        32.0,
+        365.0,
+        496.0,
+        449.0,
+        421.0,
+        577.0,
+        565.0,
+        540.0,
+        563.0,
+        491.0,
+        700.0
+      ],
+      "referral": [
+        1.0,
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        3.0,
+        18.0,
+        3.0,
+        2.0,
+        0.0,
+        1.0,
+        2.0,
+        6.0,
+        4.0,
+        12.0,
+        5.0
+      ],
+      "paid": [
+        31.0,
+        9.0,
+        1.0,
+        0.0,
+        0,
+        0.0,
+        4.0,
+        0.0,
+        135.0,
+        49.0,
+        44.0,
+        50.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        28.0
+      ],
+      "social": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        3.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        6.0
+      ],
+      "llm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        6.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "other": [
+        14.0,
+        15.0,
+        7.0,
+        0.0,
+        1.0,
+        0.0,
+        7.0,
+        1.0,
+        45.0,
+        5.0,
+        2.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0,
+        23.0,
+        1.0,
+        5.0
+      ]
+    },
+    "channels_present": [
+      "organic",
+      "direct",
+      "gbp",
+      "referral",
+      "paid",
+      "social",
+      "llm",
+      "other"
+    ],
+    "totals": {
+      "sessions_monthly": [
+        5857,
+        5259,
+        4897,
+        4291,
+        4008,
+        4857,
+        4324,
+        3620,
+        3875,
+        3834,
+        3854,
+        4256,
+        4443,
+        6179,
+        6247,
+        5940,
+        5118,
+        4381
+      ],
+      "conversions_monthly": [
+        150.0,
+        147.0,
+        92.0,
+        113.0,
+        142.0,
+        114.0,
+        128.0,
+        122.0,
+        1000.0,
+        1109.0,
+        1002.0,
+        956.0,
+        1233.0,
+        1217.0,
+        1153.0,
+        1226.0,
+        1049.0,
+        1746.0
+      ]
+    },
+    "quarterly": [
+      {
+        "q": "Q4 2024",
+        "org_sess": 3055,
+        "org_conv": 45,
+        "org_cr": 1.47,
+        "gbp_sess": 537,
+        "gbp_conv": 31,
+        "gbp_cr": 5.77,
+        "months": 1,
+        "is_partial": false
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 8879,
+        "org_conv": 139,
+        "org_cr": 1.57,
+        "gbp_sess": 1945,
+        "gbp_conv": 83,
+        "gbp_cr": 4.27,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q2 2025",
+        "org_sess": 8077,
+        "org_conv": 184,
+        "org_cr": 2.28,
+        "gbp_sess": 2101,
+        "gbp_conv": 108,
+        "gbp_cr": 5.14,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q3 2025",
+        "org_sess": 5974,
+        "org_conv": 970,
+        "org_cr": 16.24,
+        "gbp_sess": 1661,
+        "gbp_conv": 893,
+        "gbp_cr": 53.76,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 5952,
+        "org_conv": 1554,
+        "org_cr": 26.11,
+        "gbp_sess": 1503,
+        "gbp_conv": 1447,
+        "gbp_cr": 96.27,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q1 2026",
+        "org_sess": 10448,
+        "org_conv": 1775,
+        "org_cr": 16.99,
+        "gbp_sess": 1675,
+        "gbp_conv": 1668,
+        "gbp_cr": 99.58,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q2 2026* (partial)",
+        "org_sess": 4699,
+        "org_conv": 1335,
+        "org_cr": 28.41,
+        "gbp_sess": 979,
+        "gbp_conv": 1191,
+        "gbp_cr": 121.65,
+        "months": 2,
+        "is_partial": true
+      }
+    ],
+    "yoy": {
+      "baseline_quarter": "Q1 2025",
+      "current_quarter": "Q1 2026",
+      "org_sess_baseline": 8879,
+      "org_sess_current": 10448,
+      "org_sess_pct": 17.7,
+      "org_conv_baseline": 139,
+      "org_conv_current": 1775,
+      "org_conv_pct": 1177.0,
+      "org_cr_baseline": 1.57,
+      "org_cr_current": 16.99,
+      "org_cr_pct": 982.2
+    },
+    "conversion_events_90d": [
+      {
+        "event": "gmb_click",
+        "conversions_90d": 1590.0,
+        "count_90d": 1590
+      },
+      {
+        "event": "banner_booking_clicks",
+        "conversions_90d": 436.0,
+        "count_90d": 1785
+      },
+      {
+        "event": "session_booked",
+        "conversions_90d": 150.0,
+        "count_90d": 150
+      },
+      {
+        "event": "click_to_dial",
+        "conversions_90d": 91.0,
+        "count_90d": 91
+      },
+      {
+        "event": "giftcard_click",
+        "conversions_90d": 41.0,
+        "count_90d": 41
+      },
+      {
+        "event": "contact_form_submission",
+        "conversions_90d": 40.0,
+        "count_90d": 40
+      },
+      {
+        "event": "booking_confirmed",
+        "conversions_90d": 35.0,
+        "count_90d": 150
+      },
+      {
+        "event": "click_phone_number",
+        "conversions_90d": 20.0,
+        "count_90d": 91
+      },
+      {
+        "event": "contact_form_submit",
+        "conversions_90d": 4.0,
+        "count_90d": 40
+      },
+      {
+        "event": "click_to_email",
+        "conversions_90d": 3.0,
+        "count_90d": 3
+      }
+    ],
+    "measurement_shift": {
+      "occurred": "Aug 2025",
+      "type": "GA4 conversion event configuration expanded",
+      "pre_avg_per_month": 126,
+      "post_avg_per_month": 1169,
+      "factor": 9.3,
+      "explanation": "gmb_click and banner_booking_clicks were added as conversion events starting Aug 2025. These count button-click intermediates and inflate the conversion count vs the 'true booking' funnel of session_booked + click_to_dial + contact_form_submission + click_to_email which averages ~150/mo and is the apples-to-apples baseline."
+    }
+  },
+  "gsc_trend": {
+    "headline": "GSC clicks + impressions — 365-day sitewide trend (secondary)",
+    "annotation_text": "GSC clicks aggregated daily (2025-05 → 2026-05). Sitewide. Position + CTR diagnostics live in the deep-dive mini reports (page-winners-losers).",
     "may_extrapolation_note": "May 2026 is partial through 2026-05-16 (16 of 31 days). Full-month run-rate projection: 3,040 clicks · 437,887 impressions.",
     "months": [
       "May 2025",
@@ -232,13 +786,12 @@
         "months": 2,
         "is_partial": true
       }
-    ],
-    "notes": "GSC clicks-only trend. BB's GA4 property is not connected (per client.json data_sources). When GA4 is verified (info@ token), session-level + conversion data will be added."
+    ]
   },
   "ga4_status_panel": {
-    "headline": "GA4 property 332738090 connected — sessions + conversions integration pending",
-    "detail": "GA4 access confirmed 2026-05-22 via info@ token. Property ID 332738090. The next REP cycle (M1 W2) pulls Organic Search sessions, form_submit events, and GBP click-through attribution (?utm_source=gmb) into the dashboard. Once integrated, this dashboard gains a peer-to-PM headline panel comparing traffic and conversion trends — and a YoY movement frame once Q2 2025 GA4 baseline is pulled.",
-    "implication": "Conversion attribution today is CallRail (39 first-time callers ≥90s / Mar 2026) + brand-query GSC + the GMB-tagged homepage URL. The /?utm_source=gmb path captures GBP click-through. Next REP pull adds sessions + form_submits + multi-channel attribution. Targets the v5 refresh (M2 close-out)."
+    "headline": "GA4 property 332738090 integrated — 18 months of channel-level sessions + conversions live",
+    "detail": "18-month pull complete (Dec 2024 → May 2026 partial). 8 channels surfaced: organic, GBP, direct, LLM, referral, paid, social, other. Total sessions 18mo: 85,240. Total conversions 18mo: 12,699. Top conversion events (90d): gmb_click (1,590), banner_booking_clicks (436), session_booked (150), click_to_dial (91).",
+    "implication": "Conversion volume jumped from ~150/mo (Dec 2024 – Jul 2025) to ~1,000+/mo (Aug 2025+). The jump is a GA4 measurement-system change — new conversion events (gmb_click + banner_booking_clicks) were configured Aug 2025 and inflate counts vs the pre-Aug 'true booking' funnel of session_booked + click_to_dial + contact_form_submission + click_to_email. The Aug 2025 inflection is annotated on the trend chart so the apples-to-apples baseline is visible. Sessions are uninflated — that's the cleaner YoY comparison."
   },
   "maps_presence": [
     {

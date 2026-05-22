@@ -106,7 +106,7 @@
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v5 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v6 · 2026-05-22</div>
     </div>
   </header>
 
@@ -168,45 +168,56 @@
     <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </section>
 
-  <!-- ============== TREND ============== -->
+  <!-- ============== TREND — GA4 (PM-style) ============== -->
   <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
-        <h2 class="text-2xl font-bold tracking-tight">GSC Monthly Trend — 13-Month Window</h2>
+        <h2 class="text-2xl font-bold tracking-tight">GA4 18-Month Trend — Sessions + Conversions by Channel</h2>
         <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
-        <p class="text-xs text-ink-500 mt-2" id="trend-annotation"></p>
+        <div id="trend-channel-toggles" class="flex flex-wrap gap-3 mt-4 text-xs"></div>
       </div>
+
+      <!-- YoY tiles -->
+      <div class="border-b border-slate-200 p-6 bg-slate-50/60">
+        <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Year-over-Year Movement — Q1 2025 vs Q1 2026 (Organic Search)</div>
+        <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+      </div>
+
+      <!-- Measurement-shift callout -->
+      <div id="measurement-shift-callout" class="border-b border-slate-200 p-6 bg-amber-50/40"></div>
+
       <div class="p-6 space-y-8">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Clicks <span class="text-ink-400 font-medium normal-case">(GSC organic, sitewide)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Sessions <span class="text-ink-400 font-medium normal-case">(GA4 channel-attributed)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
-          <div class="h-72 sm:h-80"><canvas id="trend-clicks"></canvas></div>
+          <div class="h-72 sm:h-80"><canvas id="trend-sessions"></canvas></div>
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Impressions <span class="text-ink-400 font-medium normal-case">(GSC organic, sitewide)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Conversions <span class="text-ink-400 font-medium normal-case">(GA4 conversion events)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
-          <div class="h-72 sm:h-80"><canvas id="trend-impressions"></canvas></div>
+          <div class="h-72 sm:h-80"><canvas id="trend-conversions"></canvas></div>
         </div>
         <p class="text-xs text-ink-500 italic" id="trend-may-extrapolation"></p>
       </div>
 
       <!-- Quarterly aggregate -->
       <div class="border-t border-slate-200 p-6 bg-slate-50/60">
-        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate — GSC organic, sitewide</h3>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate — GA4 Organic Search + GBP</h3>
         <div class="overflow-x-auto">
           <table class="min-w-full text-sm" id="trend-quarterly-table">
             <thead class="text-ink-500 text-xs">
               <tr>
                 <th class="text-left font-semibold py-2 pr-4">Quarter</th>
-                <th class="text-right font-semibold py-2 pr-4">Clicks total</th>
-                <th class="text-right font-semibold py-2 pr-4">Clicks/mo (avg)</th>
-                <th class="text-right font-semibold py-2 pr-4">Impressions total</th>
-                <th class="text-right font-semibold py-2 pr-4">Imp/mo (avg)</th>
-                <th class="text-right font-semibold py-2">CTR</th>
+                <th class="text-right font-semibold py-2 pr-4">Org sess</th>
+                <th class="text-right font-semibold py-2 pr-4">Org conv</th>
+                <th class="text-right font-semibold py-2 pr-4">Org CR</th>
+                <th class="text-right font-semibold py-2 pr-4">GBP sess</th>
+                <th class="text-right font-semibold py-2 pr-4">GBP conv</th>
+                <th class="text-right font-semibold py-2">GBP CR</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200"></tbody>
@@ -215,9 +226,27 @@
         <p class="text-[11px] text-ink-500 italic mt-3" id="quarterly-footnote">—</p>
       </div>
 
-      <!-- GA4 not connected callout -->
-      <div class="border-t border-slate-200 p-6 bg-amber-50/40">
-        <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">GA4 not connected — GSC + LD + DataForSEO are the available signals</div>
+      <!-- Conversion events panel -->
+      <div class="border-t border-slate-200 p-6">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Conversion events firing (last 90 days)</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="conv-events-table">
+            <thead class="text-ink-500 text-xs bg-slate-50">
+              <tr>
+                <th class="text-left font-semibold py-2 px-3">Event name</th>
+                <th class="text-right font-semibold py-2 px-3">Conversions (90d)</th>
+                <th class="text-right font-semibold py-2 px-3">Event count (90d)</th>
+                <th class="text-left font-semibold py-2 px-3">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GA4 status panel -->
+      <div class="border-t border-slate-200 p-6 bg-emerald-50/40">
+        <div class="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-2">GA4 connected — property 332738090 (info@ token verified 2026-05-22)</div>
         <p class="text-sm text-ink-700 leading-relaxed" id="ga4-status-detail">—</p>
         <p class="text-sm text-ink-700 leading-relaxed mt-2" id="ga4-implication">—</p>
       </div>
@@ -591,74 +620,174 @@
 
       // Trend headline + annotation
       document.getElementById('trend-headline').textContent = data.trend.headline;
-      document.getElementById('trend-annotation').textContent = data.trend.annotation_text;
       if (data.trend.may_extrapolation_note) {
         document.getElementById('trend-may-extrapolation').textContent = data.trend.may_extrapolation_note;
       }
 
-      // Trend charts
+      // YoY tiles (Q1 2025 vs Q1 2026 organic)
+      const yoyTilesEl = document.getElementById('yoy-tiles');
+      const yoy = data.trend.yoy;
+      if (yoy) {
+        function yoyTile(label, baseline, current, pct, fmtFn) {
+          const dir = pct > 0 ? 'positive' : (pct < 0 ? 'negative' : 'neutral');
+          const arrow = pct > 0 ? '▲' : (pct < 0 ? '▼' : '–');
+          const sign = pct > 0 ? '+' : '';
+          return `<div class="stat-tile ${dir}">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 leading-tight">${label}</div>
+            <div class="text-2xl font-extrabold text-ink-900 mt-1.5 leading-none">${arrow} ${sign}${pct.toFixed(0)}%</div>
+            <div class="text-xs text-ink-600 mt-1.5 leading-snug">${fmtFn(baseline)} → ${fmtFn(current)}</div>
+          </div>`;
+        }
+        const fmtInt = v => v.toLocaleString();
+        const fmtPct = v => v.toFixed(2) + '%';
+        yoyTilesEl.innerHTML =
+          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt) +
+          yoyTile('Organic conversions YoY', yoy.org_conv_baseline, yoy.org_conv_current, yoy.org_conv_pct, fmtInt) +
+          yoyTile('Organic CVR YoY', yoy.org_cr_baseline, yoy.org_cr_current, yoy.org_cr_pct, fmtPct);
+      } else {
+        yoyTilesEl.innerHTML = '<div class="text-sm text-ink-500 italic col-span-3">YoY comparison not yet available.</div>';
+      }
+
+      // Measurement-shift callout
+      const shift = data.trend.measurement_shift;
+      if (shift) {
+        document.getElementById('measurement-shift-callout').innerHTML = `
+          <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">Aug 2025 conversion-event configuration shift — read the conversion chart with this in mind</div>
+          <p class="text-sm text-ink-700 leading-relaxed">
+            Conversions across all channels jumped from ~<strong>${shift.pre_avg_per_month}/mo</strong> (Dec 2024–Jul 2025) to ~<strong>${shift.post_avg_per_month}/mo</strong> (Aug 2025–May 2026) — a <strong>${shift.factor}× factor</strong> tied to <strong>${shift.type}</strong>. ${shift.explanation}
+          </p>`;
+      }
+
+      // GA4 channel-attributed monthly trend — sessions + conversions (PM-style line chart)
       const months = data.trend.months;
-      const isPartial = months.map(m => m.endsWith('*'));
-      function makeBarChart(canvasId, vals, label, color, projVal) {
-        const colors = vals.map((v, i) => isPartial[i] ? color + '66' : color);  // partial = translucent
-        const borderColors = vals.map((v, i) => isPartial[i] ? color : color);
-        const ctx = document.getElementById(canvasId).getContext('2d');
-        new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: months,
-            datasets: [{
-              label,
-              data: vals,
-              backgroundColor: colors,
-              borderColor: borderColors,
-              borderWidth: 1,
-            }]
-          },
-          options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                callbacks: {
-                  label: ctx => {
-                    const v = ctx.parsed.y;
-                    let txt = label + ': ' + v.toLocaleString();
-                    if (isPartial[ctx.dataIndex] && projVal !== undefined) {
-                      txt += ' (partial — full-month est: ' + projVal.toLocaleString() + ')';
-                    }
-                    return txt;
-                  }
-                }
-              }
+      const sessionsByCh = data.trend.sessions;
+      const convByCh = data.trend.conversions;
+      const partialIdx = months.findIndex(m => /\*/.test(m));
+
+      const CHANNEL_COLORS = {
+        organic: '#1d5b8a',
+        gbp: '#f59e0b',
+        direct: '#ef4444',
+        llm: '#8b5cf6',
+        referral: '#0ea5a4',
+        paid: '#10b981',
+        social: '#ec4899',
+        email: '#6366f1',
+        other: '#94a3b8',
+      };
+      const CHANNEL_LABELS = {
+        organic: 'Organic Search',
+        gbp: 'GBP (gmb click)',
+        direct: 'Direct',
+        llm: 'LLM referrers',
+        referral: 'Referral',
+        paid: 'Paid',
+        social: 'Social',
+        email: 'Email',
+        other: 'Other',
+      };
+
+      // Default visible channels: organic, gbp, llm
+      const defaultVisible = new Set(['organic', 'gbp', 'llm']);
+      const channels = Object.keys(sessionsByCh);
+
+      function buildDatasets(seriesByCh, visibleSet) {
+        const dsArr = [];
+        channels.forEach(ch => {
+          if (!visibleSet.has(ch)) return;
+          const color = CHANNEL_COLORS[ch] || '#64748b';
+          const vals = seriesByCh[ch];
+          const solid = vals.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
+          const dash = vals.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
+          dsArr.push({
+            label: CHANNEL_LABELS[ch] || ch, data: solid, borderColor: color, backgroundColor: color + '15',
+            borderWidth: 2.5, tension: 0.3, pointRadius: 2.5, pointHoverRadius: 5, spanGaps: false,
+          });
+          dsArr.push({
+            label: (CHANNEL_LABELS[ch] || ch) + ' (partial)', data: dash, borderColor: color,
+            borderDash: [5, 4], borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false,
+          });
+        });
+        return dsArr;
+      }
+
+      let sessChart, convChart;
+      function renderTrendCharts() {
+        if (sessChart) sessChart.destroy();
+        if (convChart) convChart.destroy();
+        const commonOpts = {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { filter: it => !/partial/.test(it.text), font: { size: 11 }, boxWidth: 10, boxHeight: 10 },
             },
-            scales: {
-              y: { beginAtZero: true, ticks: { callback: v => v.toLocaleString() } },
-              x: { ticks: { autoSkip: false, font: { size: 10 } } }
-            }
-          }
+            tooltip: { callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial)', '')}: ${(ctx.parsed.y || 0).toLocaleString()}` } },
+          },
+          scales: {
+            x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 18 }, grid: { display: false } },
+            y: { beginAtZero: true, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
+          },
+        };
+        sessChart = new Chart(document.getElementById('trend-sessions').getContext('2d'), {
+          type: 'line', data: { labels: months, datasets: buildDatasets(sessionsByCh, defaultVisible) }, options: commonOpts,
+        });
+        convChart = new Chart(document.getElementById('trend-conversions').getContext('2d'), {
+          type: 'line', data: { labels: months, datasets: buildDatasets(convByCh, defaultVisible) }, options: commonOpts,
         });
       }
-      const projClicks = data.trend.may_projection ? data.trend.may_projection.clicks_full_month_est : undefined;
-      const projImp = data.trend.may_projection ? data.trend.may_projection.imp_full_month_est : undefined;
-      makeBarChart('trend-clicks', data.trend.clicks, 'Clicks', '#1d5b8a', projClicks);
-      makeBarChart('trend-impressions', data.trend.impressions, 'Impressions', '#0ea5a4', projImp);
 
-      // Quarterly table
+      // Channel toggles
+      const toggleEl = document.getElementById('trend-channel-toggles');
+      channels.forEach(ch => {
+        const visible = defaultVisible.has(ch);
+        const label = document.createElement('label');
+        label.className = 'inline-flex items-center gap-2 cursor-pointer';
+        label.innerHTML = `
+          <input type="checkbox" data-ch="${ch}" ${visible ? 'checked' : ''} class="rounded">
+          <span class="inline-block w-3 h-3 rounded-full" style="background:${CHANNEL_COLORS[ch] || '#64748b'}"></span>
+          <span class="text-ink-600">${CHANNEL_LABELS[ch] || ch}</span>`;
+        toggleEl.appendChild(label);
+        label.querySelector('input').addEventListener('change', e => {
+          if (e.target.checked) defaultVisible.add(ch);
+          else defaultVisible.delete(ch);
+          renderTrendCharts();
+        });
+      });
+      renderTrendCharts();
+
+      // Quarterly aggregate table
       const qBody = document.querySelector('#trend-quarterly-table tbody');
       data.trend.quarterly.forEach(q => {
         const tr = document.createElement('tr');
         if (q.is_partial) tr.className = 'bg-amber-50/40';
         tr.innerHTML = `
           <td class="py-2.5 pr-4 font-semibold text-ink-800">${q.q}</td>
-          <td class="py-2.5 pr-4 text-right font-mono">${q.clicks_total.toLocaleString()}</td>
-          <td class="py-2.5 pr-4 text-right font-mono">${q.clicks_per_mo.toLocaleString()}</td>
-          <td class="py-2.5 pr-4 text-right font-mono">${q.imp_total.toLocaleString()}</td>
-          <td class="py-2.5 pr-4 text-right font-mono">${q.imp_per_mo.toLocaleString()}</td>
-          <td class="py-2.5 text-right font-mono">${q.ctr_pct}%</td>`;
+          <td class="py-2.5 pr-4 text-right font-mono">${q.org_sess.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.org_conv.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.org_cr}%</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.gbp_sess.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.gbp_conv.toLocaleString()}</td>
+          <td class="py-2.5 text-right font-mono">${q.gbp_cr}%</td>`;
         qBody.appendChild(tr);
       });
-      document.getElementById('quarterly-footnote').textContent = data.trend.notes;
+      document.getElementById('quarterly-footnote').textContent =
+        'Quarterly totals from GA4 (channel-attributed). Latest quarter highlighted; Q2 2026 is partial through ' + (data.trend.may_extrapolation_note || '').match(/through (\S+ \d+)/)?.[1] || '';
+
+      // Conversion events panel
+      const ceBody = document.querySelector('#conv-events-table tbody');
+      const shiftEvents = ['gmb_click', 'banner_booking_clicks'];
+      (data.trend.conversion_events_90d || []).forEach(e => {
+        const isShift = shiftEvents.includes(e.event);
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-mono text-sm">${e.event}</td>
+          <td class="py-2 px-3 text-right font-mono">${e.conversions_90d.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono">${e.count_90d.toLocaleString()}</td>
+          <td class="py-2 px-3 text-xs">${isShift ? '<span class="pill warn">Added Aug 2025</span>' : '<span class="pill muted">Pre-existing</span>'}</td>`;
+        ceBody.appendChild(tr);
+      });
 
       // GA4 status
       document.getElementById('ga4-status-detail').textContent = data.ga4_status_panel.detail;
