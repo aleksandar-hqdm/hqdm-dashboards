@@ -54,7 +54,7 @@
         <span class="font-semibold truncate" id="hdr-client">Body Balance Massage &amp; Float</span>
         <span class="text-slate-400 hidden sm:inline">Q2 2026</span>
         <span class="text-slate-300 hidden sm:inline">·</span>
-        <span class="text-slate-500 hidden sm:inline">Client Report (v8)</span>
+        <span class="text-slate-500 hidden sm:inline">Client Report (v9)</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
@@ -72,7 +72,7 @@
       <p class="text-sm text-slate-600 mt-1" id="hero-tagline">Single-pin massage &amp; float studio · American Fork, UT · 4.9★ × 402 reviews</p>
       <div class="flex flex-wrap gap-4 mt-3 text-[11px] text-slate-500">
         <span><span class="font-semibold text-slate-700">Q2 2026 Client Report</span></span>
-        <span id="hero-prepared">Refreshed 2026-05-22 · v8</span>
+        <span id="hero-prepared">Refreshed 2026-05-22 · v9</span>
         <span id="hero-domain" class="font-mono">bbmassageandfloat.com</span>
         <span>Pin <span class="font-mono">40.378, −111.789</span></span>
         <span>AM <span class="text-slate-700">Matt Olderman</span></span>
@@ -87,18 +87,18 @@
       </div>
     </section>
 
-    <!-- ============ V8 CALLOUT ============ -->
+    <!-- ============ V9 CALLOUT ============ -->
     <section class="mb-5">
       <div class="rounded-lg p-4 sm:p-5" style="background: #ecfdf5; border-left: 4px solid #10b981;">
-        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v8 (2026-05-22) · deep QA pass</div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v9 (2026-05-22) · terminology + chart honesty pass</div>
         <p class="text-sm leading-relaxed text-slate-800">
-          <strong>Channel-level conversions rebuilt from event × channel × month.</strong> The v7 release exposed a residual issue: the GBP conversion rate column was showing impossible values (Q2 2026 partial = 121.65%, Q1 2026 = 99.58%) because the channel-level "conversions" was still using raw GA4 (which counts <code class="bg-amber-100 px-1 rounded">gmb_click</code> events that fire when a user taps the GBP listing — <em>before</em> a session is even created on the website, so there can be more gmb_click events than gmb sessions). Same artifact inflated Org CR to 16-28%.
+          <strong>Renamed "Conversions" → "Leads" throughout.</strong> The events we count (session_booked, booking_confirmed, contact_form_submission, click_to_dial, click_phone_number, click_to_email) are all <strong>lead events</strong> — a user started a booking flow, submitted a form, or clicked a phone/email link. They do <em>not</em> represent confirmed paid sessions. Measuring actual customer conversion requires downstream attribution (CallRail call duration + quality, booking-system confirmation feed, payment record) — which is not yet integrated. The dashboard now uses "Leads," "Lead Capture Rate (LCR)," and explicit caveats so the framing is accurate.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Fix:</strong> pulled GA4 with the third dimension (eventName × sessionDefaultChannelGroup × yearMonth) and rebuilt the per-channel conversion series to include only TRUE + QUALIFIED-INTENT events (session_booked, booking_confirmed, contact_form_submission, click_to_dial, click_to_email, etc). Engagement events (gmb_click, banner_booking_clicks, giftcard_click) are excluded from the conversion series but tracked separately as a context-only overlay.
+          <strong>Engagement signals removed from the lead chart.</strong> In v8 the chart included an amber-dotted "engagement signals" overlay that visually dominated the chart (500+ events vs ~50 leads), even though it was labeled "NOT conversions." That was misleading. Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) are now <strong>excluded from the chart entirely</strong> and tracked in a separate diagnostic panel on the dashboard for context. None of the YoY, quarterly, or chart numbers include them.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Result:</strong> Org CR is now 1.47%–2.98% per quarter (realistic for a service business); GBP CR is 4.27%–9.70%. The TRUE+INTENT YoY tracks sessions: +18% on both. The TRUE-only (booking+lead) YoY is +77% — real business growth. The +1,177% raw figure is shown only in the transparency disclosure below so the AM can explain the GA4-dashboard discrepancy honestly.
+          <strong>Result (Q1 2025 → Q1 2026 Organic Search):</strong> Sessions 8,879 → 10,448 (+18%) · Leads 139 → 164 (+18%) · Booking + form leads only 62 → 110 (+77%) · Lead Capture Rate 1.57% → 1.57% (stable). All numbers exclude the engagement-event artifact. The +18% leads YoY matches the +18% sessions YoY — consistent organic growth tied to LD rank tightening.
         </p>
       </div>
     </section>
@@ -150,24 +150,26 @@
 
     <!-- ============ QUARTERLY KPI TABLE ============ -->
     <section class="mb-6 qtable-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Movement — GA4 Organic Search + GBP</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Movement — GA4 Organic Search + GBP · Sessions + Leads + Lead capture rate</h2>
       <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
         <table class="qtable w-full text-sm">
           <thead class="bg-slate-50">
             <tr>
               <th class="text-left py-2 px-3">Quarter</th>
               <th class="text-right py-2 px-3">Org sess</th>
-              <th class="text-right py-2 px-3">Org conv</th>
-              <th class="text-right py-2 px-3">Org CR</th>
+              <th class="text-right py-2 px-3">Org leads</th>
+              <th class="text-right py-2 px-3">Org LCR</th>
               <th class="text-right py-2 px-3">GBP sess</th>
-              <th class="text-right py-2 px-3">GBP conv</th>
-              <th class="text-right py-2 px-3">GBP CR</th>
+              <th class="text-right py-2 px-3">GBP leads</th>
+              <th class="text-right py-2 px-3">GBP LCR</th>
             </tr>
           </thead>
           <tbody id="qtable-body"></tbody>
         </table>
       </div>
-      <p class="text-[10px] text-slate-400 mt-1.5">Quarterly totals from GA4 (channel-attributed). Latest quarter highlighted; partial quarter (Q2 2026) carries asterisk. Conversion counts include the Aug-2025 event-config expansion — sessions are the cleaner apples-to-apples signal.</p>
+      <p class="text-[10px] text-slate-400 mt-1.5">
+        <strong>Leads</strong> = booking events + form submissions + call/email click intent. <strong>LCR</strong> (Lead Capture Rate) = leads ÷ sessions. Neither metric represents completed paid sessions — that requires downstream attribution (CallRail call quality + booking system confirmation) not yet integrated. Engagement events (gmb_click etc) are excluded.
+      </p>
     </section>
 
     <!-- ============ PAGE BREAK ============ -->
@@ -175,7 +177,7 @@
 
     <!-- ============ MONTHLY TREND CHART ============ -->
     <section class="mb-6 trend-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — GA4 Sessions + Conversions (18 Months · Organic + GBP)</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — GA4 Organic Sessions + Organic Leads (18 Months)</h2>
       <div class="bg-white rounded-lg border border-slate-200 p-4">
         <div style="height: 280px;"><canvas id="trend-chart"></canvas></div>
         <p class="text-[10px] text-slate-500 mt-2 italic" id="trend-partial-note">—</p>
@@ -301,7 +303,7 @@
     <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
       <div>
         <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
-        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v8)
+        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v9)
       </div>
       <div class="text-slate-400">Confidential — authorized client viewing only. noindex.</div>
     </footer>
@@ -347,16 +349,16 @@
         yoyEl.innerHTML =
           yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
           (yoy.org_funnel_pct !== null && yoy.org_funnel_pct !== undefined
-            ? yoyTile('Real funnel YoY (booking + lead + intent)', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Excludes gmb_click + banner_booking_clicks + giftcard_click')
+            ? yoyTile('Leads YoY (full funnel)', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Booking + form + call/email intent · excludes engagement events')
             : '') +
           (yoy.org_true_pct !== null && yoy.org_true_pct !== undefined
-            ? yoyTile('Bookings + leads only YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission only')
+            ? yoyTile('Booking + form leads YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission · highest-intent')
             : '') +
           (yoy.org_clean_cr_pct !== null && yoy.org_clean_cr_pct !== undefined
-            ? yoyTile('Real conversion rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Real funnel ÷ organic sessions')
+            ? yoyTile('Lead capture rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Leads ÷ organic sessions · NOT customer-conversion rate')
             : '');
         document.getElementById('yoy-note').textContent =
-          'Q1 2025 → Q1 2026 · Organic Search · GA4. All conversion metrics use the real funnel (booking + lead + call/email intent), excluding engagement events (gmb_click etc). See event-categorization disclosure below.';
+          'Q1 2025 → Q1 2026 · Organic Search · GA4. Leads = booking + form + call/email intent events. Engagement events (gmb_click etc) excluded from all numbers. Customer-conversion rate would require downstream attribution (CallRail + booking system) not yet integrated.';
       } else {
         yoyEl.innerHTML = '<div class="text-sm text-slate-500 italic col-span-3">YoY comparison not yet available.</div>';
       }
@@ -379,19 +381,19 @@
         qBody.appendChild(tr);
       });
 
-      // Monthly trend chart — Organic Sessions + TRUE Conversions (booking + lead) + Engagement signals overlay
+      // Monthly trend chart — Organic Sessions + Organic LEADS (full funnel: booking + lead + intent).
+      // Engagement signals are excluded (shown in event-categorization disclosure below; they're top-funnel taps, not leads).
       const months = data.trend.months;
       const partialIdx = months.findIndex(m => /\*/.test(m));
       const sessOrg = (data.trend.sessions && data.trend.sessions.organic) || [];
-      const trueConv = data.trend.true_conversions_monthly || [];
-      const engagement = data.trend.engagement_signals_monthly || [];
+      // Use the channel-level corrected series (TRUE+INTENT only)
+      const leadsOrg = (data.trend.conversions && data.trend.conversions.organic) || [];
       const split = (arr) => ({
         solid: arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v),
         dash:  arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null),
       });
       const sess = split(sessOrg);
-      const truec = split(trueConv);
-      const engs = split(engagement);
+      const leads = split(leadsOrg);
 
       new Chart(document.getElementById('trend-chart'), {
         type: 'line',
@@ -401,11 +403,9 @@
             // Sessions (primary, left axis)
             { label: 'Organic Sessions', data: sess.solid, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,0.10)', yAxisID: 'y', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: false },
             { label: 'Organic Sessions (partial)', data: sess.dash, borderColor: '#1d5b8a', borderDash: [5,4], yAxisID: 'y', borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
-            // True conversions (primary, right axis, GREEN — the cleanest signal)
-            { label: 'TRUE Conversions (booking + lead)', data: truec.solid, borderColor: '#059669', backgroundColor: 'rgba(5,150,105,0.10)', yAxisID: 'y1', borderWidth: 3, tension: 0.3, pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false },
-            { label: 'TRUE Conversions (partial)', data: truec.dash, borderColor: '#059669', borderDash: [5,4], yAxisID: 'y1', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointStyle: 'rectRot', spanGaps: false },
-            // Engagement signals (right axis, AMBER — for context, NOT a real conversion)
-            { label: 'Engagement signals (NOT conversions)', data: engs.solid, borderColor: '#d97706', backgroundColor: 'rgba(217,119,6,0.05)', yAxisID: 'y1', borderWidth: 2, borderDash: [2,2], tension: 0.3, pointRadius: 2, pointHoverRadius: 4, spanGaps: false },
+            // Leads (right axis, GREEN — booking + lead + intent events, NOT engagement)
+            { label: 'Organic Leads (booking + form + call/email intent)', data: leads.solid, borderColor: '#059669', backgroundColor: 'rgba(5,150,105,0.10)', yAxisID: 'y1', borderWidth: 3, tension: 0.3, pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false },
+            { label: 'Organic Leads (partial)', data: leads.dash, borderColor: '#059669', borderDash: [5,4], yAxisID: 'y1', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointStyle: 'rectRot', spanGaps: false },
           ],
         },
         options: {
@@ -421,16 +421,16 @@
           scales: {
             x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 18 }, grid: { display: false } },
             y: { position: 'left', title: { display: true, text: 'Sessions', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
-            y1: { position: 'right', title: { display: true, text: 'Conversions / signals', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { display: false } },
+            y1: { position: 'right', title: { display: true, text: 'Leads', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { display: false } },
           },
         },
       });
 
-      // Partial-month + measurement-shift note
+      // Partial-month note + lead-vs-conversion clarification
       const partialBase = data.trend.may_extrapolation_note || '';
       const shift = data.trend.measurement_shift;
-      const shiftNote = shift ? ` · TRUE conv (booking+lead): ~${shift.true_conv_pre_avg}/mo pre-Aug-2025 → ~${shift.true_conv_post_avg}/mo post (${shift.true_conv_factor}× — essentially stable). Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) jumped 0 → ~${shift.post_avg_per_month - shift.true_conv_post_avg}/mo from Aug 2025 onward — they were added as conversion events in GA4 but are NOT real business outcomes.` : '';
-      document.getElementById('trend-partial-note').textContent = partialBase + shiftNote;
+      const clarification = ' · "Leads" = GA4 lead events (booking-flow starts, form submissions, phone/email click intents). NOT the same as completed paid sessions — downstream attribution (CallRail call quality + booking-system confirmation) is not yet integrated. Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) are excluded from this chart and from all YoY / quarterly numbers — see event-categorization disclosure below.';
+      document.getElementById('trend-partial-note').textContent = partialBase + clarification;
 
       // Maps Presence
       const mapsBody = document.getElementById('maps-presence-body');

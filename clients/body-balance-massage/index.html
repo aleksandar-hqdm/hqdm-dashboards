@@ -106,7 +106,7 @@
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v8 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v9 · 2026-05-22</div>
     </div>
   </header>
 
@@ -172,14 +172,17 @@
   <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
-        <h2 class="text-2xl font-bold tracking-tight">GA4 18-Month Trend — Sessions + Conversions by Channel</h2>
+        <h2 class="text-2xl font-bold tracking-tight">GA4 18-Month Trend — Sessions + Leads by Channel</h2>
         <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
+        <p class="text-xs text-ink-500 mt-2 leading-relaxed">
+          <strong>Note on terminology:</strong> "Leads" = booking-flow events + form submissions + phone/email click intents. We don't yet measure actual session-to-customer conversion (requires CallRail + booking system integration). Engagement signals (gmb_click, banner CTA, giftcard) are tracked separately in the diagnostic panel.
+        </p>
         <div id="trend-channel-toggles" class="flex flex-wrap gap-3 mt-4 text-xs"></div>
       </div>
 
       <!-- YoY tiles -->
       <div class="border-b border-slate-200 p-6 bg-slate-50/60">
-        <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Year-over-Year Movement — Q1 2025 vs Q1 2026 (Organic Search)</div>
+        <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Year-over-Year Movement — Q1 2025 vs Q1 2026 (Organic Search · Leads only)</div>
         <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
       </div>
 
@@ -196,34 +199,49 @@
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Conversions <span class="text-ink-400 font-medium normal-case">(GA4 conversion events)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Leads <span class="text-ink-400 font-medium normal-case">(booking events + form submissions + call/email intent)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-conversions"></canvas></div>
+          <p class="text-[11px] text-ink-500 italic mt-2 leading-relaxed">
+            <strong>What this counts:</strong> session_booked, booking_confirmed, contact_form_submission, contact_form_submit, click_to_dial, click_phone_number, click_to_email. These are <strong>lead events</strong> — a user started a booking flow, submitted a form, or clicked a phone/email link. <strong>This does NOT count completed paid sessions.</strong> Actual booking-to-customer conversion requires downstream attribution (CallRail call quality + duration, booking system confirmation, payment record) which is not yet integrated. Engagement signals (gmb_click etc) are excluded — see diagnostic panel below.
+          </p>
         </div>
         <p class="text-xs text-ink-500 italic" id="trend-may-extrapolation"></p>
       </div>
 
+      <!-- Engagement signals — separate diagnostic panel, not on the lead chart -->
+      <div class="border-t border-slate-200 p-6 bg-amber-50/30">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-amber-700">Engagement signals <span class="text-amber-600 font-medium normal-case">— diagnostic only · NOT leads or conversions</span></h3>
+          <span class="text-xs text-amber-600 font-mono">monthly</span>
+        </div>
+        <div class="h-48"><canvas id="trend-engagement"></canvas></div>
+        <p class="text-[11px] text-amber-700 italic mt-2 leading-relaxed">
+          gmb_click (a tap on the GBP listing's "Visit website" button) + banner_booking_clicks (a click on the booking banner CTA) + giftcard_click (a giftcard page click). These were configured as "conversion events" in GA4 in Aug 2025 but they're top-funnel taps that fire before a session is even created — that's why raw GA4 conv rate hits 100%+. <strong>Excluded from the lead chart above and from the quarterly + YoY tables.</strong> Shown here for diagnostic context only.
+        </p>
+      </div>
+
       <!-- Quarterly aggregate -->
       <div class="border-t border-slate-200 p-6 bg-slate-50/60">
-        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate — GA4 Organic Search + GBP</h3>
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate — GA4 Organic Search + GBP · Sessions + Leads + Lead capture rate</h3>
         <div class="overflow-x-auto">
           <table class="min-w-full text-sm" id="trend-quarterly-table">
             <thead class="text-ink-500 text-xs">
               <tr>
                 <th class="text-left font-semibold py-2 pr-4">Quarter</th>
                 <th class="text-right font-semibold py-2 pr-4">Org sess</th>
-                <th class="text-right font-semibold py-2 pr-4">Org conv</th>
-                <th class="text-right font-semibold py-2 pr-4">Org CR</th>
+                <th class="text-right font-semibold py-2 pr-4">Org leads</th>
+                <th class="text-right font-semibold py-2 pr-4">Org LCR</th>
                 <th class="text-right font-semibold py-2 pr-4">GBP sess</th>
-                <th class="text-right font-semibold py-2 pr-4">GBP conv</th>
-                <th class="text-right font-semibold py-2">GBP CR</th>
+                <th class="text-right font-semibold py-2 pr-4">GBP leads</th>
+                <th class="text-right font-semibold py-2">GBP LCR</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200"></tbody>
           </table>
         </div>
-        <p class="text-[11px] text-ink-500 italic mt-3" id="quarterly-footnote">—</p>
+        <p class="text-[11px] text-ink-500 italic mt-3" id="quarterly-footnote">Leads = booking events + form submits + call/email intent. LCR = leads ÷ sessions. Neither represents completed paid sessions — that requires downstream CallRail + booking-system attribution not yet integrated.</p>
       </div>
 
       <!-- Conversion events panel — categorized 3 ways -->
@@ -655,31 +673,33 @@
         yoyTilesEl.innerHTML =
           yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
           (yoy.org_funnel_pct !== null && yoy.org_funnel_pct !== undefined
-            ? yoyTile('Real funnel YoY', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Booking + lead + call/email intent · excludes engagement events')
+            ? yoyTile('Leads YoY (full funnel)', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Booking events + form submits + call/email intent · excludes engagement signals')
             : '') +
           (yoy.org_true_pct !== null && yoy.org_true_pct !== undefined
-            ? yoyTile('Bookings + leads only YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission only')
+            ? yoyTile('Booking + form leads YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission · highest-intent leads')
             : '') +
           (yoy.org_clean_cr_pct !== null && yoy.org_clean_cr_pct !== undefined
-            ? yoyTile('Real conversion rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Real funnel ÷ organic sessions')
+            ? yoyTile('Lead capture rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Leads ÷ organic sessions · NOT customer-conversion rate')
             : '');
         yoyTilesEl.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3';
 
-        // Add a 5th transparency tile for raw GA4 conversions (DO NOT report to client)
-        if (yoy.org_conv_raw_pct !== null && yoy.org_conv_raw_pct !== undefined) {
-          const transparencyEl = document.createElement('div');
-          transparencyEl.className = 'mt-4 col-span-full';
-          transparencyEl.innerHTML = `
-            <div class="rounded-lg p-3 border-2" style="border-color:#fcd34d; background: linear-gradient(135deg,#fffbeb,#fffbeb);">
-              <div class="flex items-center justify-between gap-3 flex-wrap">
-                <div>
-                  <div class="text-[10px] font-bold uppercase tracking-widest text-amber-800">Transparency: raw GA4 conversions (DO NOT report this to client)</div>
-                  <div class="text-xs text-amber-700 mt-1">If you read GA4 directly without filtering, organic conversions show <strong>${yoy.org_conv_raw_baseline} → ${yoy.org_conv_raw_current.toLocaleString()}</strong> = <strong>+${yoy.org_conv_raw_pct.toFixed(0)}%</strong>. This is entirely artifact: gmb_click + banner_booking_clicks + giftcard_click are GA4 "conversion events" but represent top-funnel taps, not real business outcomes. Use the real funnel numbers above for client communication.</div>
-                </div>
-              </div>
-            </div>`;
-          yoyTilesEl.parentElement.appendChild(transparencyEl);
-        }
+        // Caveat strip + raw transparency
+        const caveatEl = document.createElement('div');
+        caveatEl.className = 'mt-4 col-span-full space-y-3';
+        caveatEl.innerHTML = `
+          <div class="rounded-lg p-3 border-l-4 border-blue-400 bg-blue-50">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-blue-800 mb-1">What "leads" actually means here · what it doesn't</div>
+            <div class="text-xs text-blue-900 leading-relaxed">
+              <strong>Counts:</strong> booking-flow starts (session_booked, booking_confirmed), form submissions (contact_form_submission), phone-click intents (click_to_dial, click_phone_number), email-click intents (click_to_email).<br>
+              <strong>Does NOT count:</strong> completed paid sessions, no-show vs show-up rate, conversion-to-customer ratio. To get those we'd need <strong>CallRail call quality + duration data</strong> + <strong>booking-system confirmation feed</strong> integrated. Today's number is the top-of-meaningful-funnel lead count — the right metric for evaluating marketing performance, but not the same as "bookings that became customers."
+            </div>
+          </div>
+          ${yoy.org_conv_raw_pct !== null && yoy.org_conv_raw_pct !== undefined ? `
+          <div class="rounded-lg p-3 border-2" style="border-color:#fcd34d; background: linear-gradient(135deg,#fffbeb,#fffbeb);">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-amber-800">Transparency: raw GA4 conversions (DO NOT report this to client)</div>
+            <div class="text-xs text-amber-700 mt-1">If you read GA4 directly without filtering, "organic conversions" show <strong>${yoy.org_conv_raw_baseline} → ${yoy.org_conv_raw_current.toLocaleString()}</strong> = <strong>+${yoy.org_conv_raw_pct.toFixed(0)}%</strong>. This includes gmb_click + banner_booking_clicks + giftcard_click — top-funnel engagement signals that GA4 was configured to count as conversions in Aug 2025 but don't represent leads or sales. We exclude them from all client-facing numbers.</div>
+          </div>` : ''}`;
+        yoyTilesEl.parentElement.appendChild(caveatEl);
       } else {
         yoyTilesEl.innerHTML = '<div class="text-sm text-ink-500 italic col-span-3">YoY comparison not yet available.</div>';
       }
@@ -780,35 +800,40 @@
           type: 'line', data: { labels: months, datasets: buildDatasets(sessionsByCh, defaultVisible) }, options: commonOpts,
         });
 
-        // Conversions chart now includes a TRUE-CONVERSIONS overlay + ENGAGEMENT-SIGNAL overlay
+        // Conversions chart — channel-attributed LEADS only (booking events + form submits + call/email intent).
+        // Engagement signals (gmb_click etc) are excluded — they're shown in a separate diagnostic panel below.
+        // The per-channel series in `convByCh` is already TRUE+INTENT (channel-level filtering applied upstream).
         const convDatasets = buildDatasets(convByCh, defaultVisible);
-        const trueConv = data.trend.true_conversions_monthly;
-        const engagement = data.trend.engagement_signals_monthly;
-        if (trueConv) {
-          const solid = trueConv.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
-          const dash = trueConv.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
-          convDatasets.push({
-            label: 'TRUE conversions (booking + lead)', data: solid,
-            borderColor: '#059669', backgroundColor: '#05966915', borderWidth: 3, tension: 0.3,
-            pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false,
-          });
-          convDatasets.push({
-            label: 'TRUE conversions (partial)', data: dash,
-            borderColor: '#059669', borderDash: [5,4], borderWidth: 2.5, tension: 0.3,
-            pointRadius: 3, pointStyle: 'rectRot', spanGaps: false,
-          });
-        }
-        if (engagement) {
-          const solid = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
-          const dash = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
-          convDatasets.push({
-            label: 'Engagement signals (NOT conversions)', data: solid,
-            borderColor: '#d97706', backgroundColor: '#fef3c7', borderWidth: 2, tension: 0.3,
-            pointRadius: 2, pointHoverRadius: 4, borderDash: [2,2], spanGaps: false,
-          });
-        }
         convChart = new Chart(document.getElementById('trend-conversions').getContext('2d'), {
           type: 'line', data: { labels: months, datasets: convDatasets }, options: commonOpts,
+        });
+      }
+
+      // Engagement-signals diagnostic chart (separate panel, amber styling)
+      const engagement = data.trend.engagement_signals_monthly;
+      if (engagement && document.getElementById('trend-engagement')) {
+        const solid = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
+        const dash = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
+        new Chart(document.getElementById('trend-engagement').getContext('2d'), {
+          type: 'line',
+          data: {
+            labels: months,
+            datasets: [
+              { label: 'Engagement signals (gmb_click + banner + giftcard)', data: solid, borderColor: '#d97706', backgroundColor: 'rgba(217,119,6,0.10)', borderWidth: 2, tension: 0.3, pointRadius: 2.5, pointHoverRadius: 4, spanGaps: false },
+              { label: 'Engagement (partial)', data: dash, borderColor: '#d97706', borderDash: [5,4], borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
+            ],
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'bottom', labels: { filter: it => !/partial/.test(it.text), font: { size: 11 }, boxWidth: 10, boxHeight: 10 } },
+              tooltip: { callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial)','')}: ${(ctx.parsed.y||0).toLocaleString()}` } },
+            },
+            scales: {
+              x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 18 }, grid: { display: false } },
+              y: { beginAtZero: true, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
+            },
+          },
         });
       }
 
