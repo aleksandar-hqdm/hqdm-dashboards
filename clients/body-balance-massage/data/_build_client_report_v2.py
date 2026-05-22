@@ -323,27 +323,27 @@ priorities = [
     {
         "n": 1, "color": "#10b981",
         "title": "Defend the #1 American Fork pin + the float moat",
-        "body": "BB is #1 in the immediate AF pin across float AND on 'massage american fork' at saturation (100% of cells, avg rank 1.85). The review moat (4.9-star x 406, +4 since Feb) holds the local pack. <strong>What we'll do:</strong> 4 GBP Posts/mo (up from 3), 8 geotagged photos/mo, lock in the review-acquisition workflow, Q&A seeding for the top massage + float questions. <strong>Goal: hold #1 + cross 450 reviews by M3.</strong>"
+        "body": "BB is #1 in the immediate AF pin across float AND on 'massage american fork' at saturation (100% of cells, avg rank 1.85). The review moat (4.9-star x 406, +4 since Feb) holds the local pack. <strong>What we'll do:</strong> step up the GBP Posts cadence, keep fresh geotagged photos flowing, lock in the post-job review-acquisition workflow, seed Q&A on the top massage + float questions. <strong>Goal: hold #1 + cross 450 reviews by M3.</strong>"
     },
     {
         "n": 2, "color": "#1d5b8a",
         "title": "Capitalize on the subscription + massage-therapy breakthroughs",
-        "body": "<strong>Two queries gained +8 top-3 cells</strong> across our scans: 'massage subscription' (Feb -> May, top-3 6 -> 14) and 'massage therapy' (Jan -> Apr, top-3 14 -> 22). Subscription is recurring revenue; massage therapy is high-volume commercial. <strong>What we'll do:</strong> dedicated /massage-subscription-american-fork/ page (membership-tier comparison, FAQ, schema), refresh the /massage-therapy/ page with Service + FAQPage schema, surface both via 2 GBP Posts/mo, add a blog cluster on 'is a massage membership worth it'. Direct subscription competitors: MassageLuXe PG + Hand & Stone - BB's local + 4.9-star is the edge."
+        "body": "<strong>Massage therapy gained +8 top-3 cells</strong> Jan -> Apr (14 -> 22) and <strong>massage subscription gained +5 top-3 cells</strong> Feb -> Apr (6 -> 11). Subscription is recurring revenue; massage therapy is high-volume commercial. <strong>What we'll do:</strong> build a dedicated <code>/massage-subscription-american-fork/</code> page (membership-tier comparison, FAQ, schema), refresh the <code>/massage-therapy/</code> page with Service + FAQPage schema, surface both via GBP Posts, add a blog cluster on 'is a massage membership worth it'. Direct subscription competitors: MassageLuXe PG + Hand & Stone - BB's local + 4.9-star is the edge."
     },
     {
         "n": 3, "color": "#6366f1",
         "title": "Fix the on-site click capture - the actual plateau lever",
-        "body": "Sitewide GSC CTR is 0.80% (vs ~1.5% par for local services). Three pages illustrate the problem: /about/ 0.04% CTR, /pricing-and-membership/ 0.10%, /upgrades/ 0.00%. <strong>What we'll do:</strong> meta + title refresh on the top 22 bleeding-CTR URLs (Lever H), Service + FAQ schema on all 8 priority service pages (Lever F - currently 0/8 have it), sitewide NAP find-replace (372/372 pages use the chat phone), 84-URL cannibal cleanup batch (Lever B)."
+        "body": "Sitewide GSC CTR is 0.80% (vs ~1.5% par for local services). Three pages illustrate the problem: <code>/about/</code> 0.04% CTR, <code>/pricing-and-membership/</code> 0.10%, <code>/upgrades/</code> 0.00%. <strong>What we'll do:</strong> meta + title refresh on the bleeding-CTR URLs, Service + FAQ schema on the priority service pages (currently none have it), sitewide NAP find-replace (every page is using the chat phone instead of the GBP local number), cannibal cleanup batch on the duplicate-ranking queries."
     },
     {
         "n": 4, "color": "#8b5cf6",
-        "title": "Unlock the 27 untracked services where BB ranks #1-#3",
-        "body": "DataForSEO Maps SERPs show BB already ranking <strong>#1-#3 at the AF pin for 27 service queries we don't currently track</strong> - without dedicated landing pages for most. The headline: <strong>lymphatic drainage massage (3,600 UT search volume)</strong> where BB ranks #1 with zero on-site page. <strong>What we'll do:</strong> 6 new location-pages/mo at matrix gaps (Cedar Hills x deep tissue, PG x cupping, Lehi x Swedish - Lever C+D+E), /myofascial-release/ + /lymphatic-drainage-massage/ page builds (Lever G - lymphatic gated on Owner Ask #4). <strong>Goal: 12+ service x city matrix cells covered by M3 (baseline 3-5).</strong>"
+        "title": "Unlock untracked services where BB ranks #1-#3 at the AF pin",
+        "body": "DataForSEO Maps SERPs show BB already ranking <strong>#1-#3 at the AF pin for a long tail of service queries we don't currently track</strong> - without dedicated landing pages for most. The headline: <strong>lymphatic drainage massage (3,600 UT search volume)</strong> where BB ranks #1 with zero on-site page. <strong>What we'll do:</strong> new location-pages at matrix gaps (Cedar Hills x deep tissue, PG x cupping, Lehi x Swedish), <code>/myofascial-release/</code> + <code>/lymphatic-drainage-massage/</code> page builds (lymphatic gated on the lymphatic-drainage ask). <strong>Goal: cover the matrix gaps that drive the most search demand by M3.</strong>"
     },
     {
         "n": 5, "color": "#f59e0b",
         "title": "Rebuild off-page authority - manual + earned, post-halt",
-        "body": "On 2026-05-13 the automated off-page stack (SEO Neo / Aaron Gruenke) was halted across the HQDM book of business - it was working, but with rising algorithmic risk. <strong>What we'll do:</strong> 2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers, mom blogs, regional wellness directories), 1 digital-PR pitch/mo (postpartum massage angle M2 -> athlete recovery angle M3), 1 partner-outreach touch/mo (yoga + chiro + doula + run-club cross-link partnerships). Backlink audit + disavow if needed."
+        "body": "On 2026-05-13 the automated off-page stack (SEO Neo / Aaron Gruenke) was halted across the HQDM book of business - it was working, but with rising algorithmic risk. <strong>What we'll do:</strong> manual citation push (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers, mom blogs, regional wellness directories), digital-PR pitches on relevant angles (postpartum massage, athlete recovery), partner-outreach (yoga + chiro + doula + run-club cross-link partnerships). Backlink audit + disavow if needed."
     },
 ]
 
@@ -352,7 +352,7 @@ owner_asks_client = [
     {"n": 1, "label": "Trigger-point page rewrite sign-off",
      "body": "Paul flagged the /trigger-point-therapy/ page as referencing medical injections + dry needling - neither of which BB performs. We've drafted a rewrite focused on the soft-tissue trigger-point modality BB actually does. Need 15 min on a call to walk through the draft and confirm language before publish."},
     {"n": 2, "label": "Sitewide phone number canonical",
-     "body": "Every page on bbmassageandfloat.com (372/372) currently shows the live-chat phone (855-XXX-5834). The GBP primary is the local 734-XXX-9798. This breaks NAP consistency and likely sends a soft 'multiple businesses' signal. Confirming: switch sitewide to the local 734 number, or keep the chat-routing 855 + add a 'call directly' secondary? (Recommendation: switch to local.)"},
+     "body": "Every page on bbmassageandfloat.com currently shows the live-chat phone (855-XXX-5834). The GBP primary is the local 734-XXX-9798. This breaks NAP consistency and likely sends a soft 'multiple businesses' signal. Confirming: switch sitewide to the local 734 number, or keep the chat-routing 855 + add a 'call directly' secondary? (Recommendation: switch to local.)"},
     {"n": 3, "label": "Is cupping still on the menu?",
      "body": "There's a /cupping-massage/ URL returning 404 alongside a live /modalities-techniques/cupping/ canonical. Either small-301 the dead URL or rebuild it if cupping is back. Quick yes/no - does BB still offer cupping?"},
     {"n": 4, "label": "Manual lymphatic drainage - yes or no?",
