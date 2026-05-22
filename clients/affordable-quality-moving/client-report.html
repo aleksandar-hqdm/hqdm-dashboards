@@ -161,24 +161,71 @@
       </div>
     </section>
 
-    <!-- ============ TREND CHART — ORGANIC ONLY ============ -->
+    <!-- ============ QUARTERLY SNAPSHOT ============ -->
     <section class="mb-8">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Organic Search — 18-Month Trend</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Snapshot · Q4 2025 → Now</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Visitors arriving from Google search to your website. Top chart = monthly sessions, bottom chart = monthly leads (form submits + phone calls + Google Business clicks). The cliff in January–February is clear; so is the recovery in April–May.
+          The three quarters that frame the recovery story. <strong>Q4 2025</strong> = the baseline period before the cliff. <strong>Q1 2026</strong> = the cliff itself (and HQDM's first three months — January, February, March). <strong>Q2 2026</strong> = the recovery (April + May so far).
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Quarter</th>
+                <th class="py-2 pr-3 text-right">Visitors (Organic)</th>
+                <th class="py-2 pr-3 text-right">Leads</th>
+                <th class="py-2 pr-3 text-right">Conv. Rate</th>
+                <th class="py-2 text-left">Context</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-slate-100">
+                <td class="py-2.5 pr-3 font-semibold text-slate-700">Q4 2025</td>
+                <td class="py-2.5 pr-3 text-right font-mono">1,460</td>
+                <td class="py-2.5 pr-3 text-right font-mono">118</td>
+                <td class="py-2.5 pr-3 text-right font-mono">8.08%</td>
+                <td class="py-2.5 text-slate-600 text-xs">Pre-cliff baseline; Oct-Dec also had the suspicious Direct-traffic spike (third-party tool)</td>
+              </tr>
+              <tr class="border-b border-slate-100 bg-rose-50/30">
+                <td class="py-2.5 pr-3 font-semibold text-rose-700">Q1 2026</td>
+                <td class="py-2.5 pr-3 text-right font-mono text-rose-700">281</td>
+                <td class="py-2.5 pr-3 text-right font-mono text-rose-700">28</td>
+                <td class="py-2.5 pr-3 text-right font-mono">9.96%</td>
+                <td class="py-2.5 text-slate-600 text-xs">The cliff. HQDM engaged Jan 1; January–March = stabilization period</td>
+              </tr>
+              <tr class="bg-emerald-50/40">
+                <td class="py-2.5 pr-3 font-bold text-emerald-700">Q2 2026 (Apr + May so far)</td>
+                <td class="py-2.5 pr-3 text-right font-mono font-bold text-emerald-700">657</td>
+                <td class="py-2.5 pr-3 text-right font-mono font-bold text-emerald-700">74</td>
+                <td class="py-2.5 pr-3 text-right font-mono font-bold text-emerald-700">11.26%</td>
+                <td class="py-2.5 text-slate-600 text-xs">Recovery breaks ground. <strong>+134% sessions / +164% leads / +13% CVR vs Q1.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3 italic">"Leads" = form submits + phone-number clicks + Google Business clicks + contact-form submits. CVR (conversion rate) = leads ÷ visitors. Q2 2026 is a partial quarter (April + first 22 days of May).</p>
+      </div>
+    </section>
+
+    <!-- ============ TREND CHART — ORGANIC ONLY, Q4 2025 → NOW ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Eight months of organic search performance — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026, HQDM's first two months), the stabilization (Mar), and the recovery (Apr–May). Top chart = monthly visitors; bottom = monthly leads (form submits + phone calls + Google Business clicks).
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors</div>
-            <div style="height: 300px;"><canvas id="trend-sessions"></canvas></div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
+            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
           </div>
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Conversions</div>
-            <div style="height: 300px;"><canvas id="trend-conversions"></canvas></div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
+            <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
           </div>
         </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days). The full dashboard shows projections for the rest of May; here we show only confirmed numbers.</p>
+        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — shown as a dashed line. The 18-month view is available in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -404,12 +451,16 @@
     renderTrendCharts(DATA);
     if (LD) renderHeatmap(LD);
 
-    // ====== Trend Charts (ORGANIC ONLY) ======
+    // ====== Trend Charts (ORGANIC ONLY · last 8 months · Q4 2025 → now) ======
     function renderTrendCharts(d) {
       const t = d.trend; if (!t) return;
-      const months = t.months || [];
-      const organicSessions = t.sessions?.organic || [];
-      const organicConversions = t.form_submits?.organic || [];
+      // Slice to last 8 months — Q4 2025 (Oct/Nov/Dec) + Q1 2026 (Jan/Feb/Mar) + Q2 2026 partial (Apr/May)
+      const WINDOW = 8;
+      const allMonths = t.months || [];
+      const startIdx = Math.max(0, allMonths.length - WINDOW);
+      const months = allMonths.slice(startIdx);
+      const organicSessions = (t.sessions?.organic || []).slice(startIdx);
+      const organicConversions = (t.form_submits?.organic || []).slice(startIdx);
 
       // Detect partial month — split solid + dashed
       const partialIdx = months.findIndex(m => /\*/.test(m));
