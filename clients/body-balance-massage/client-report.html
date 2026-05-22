@@ -103,7 +103,7 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Last 8 Months</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads. "Leads" is the conservative count — <strong>booking events + form submissions + phone/email click intents</strong>, excluding engagement signals and de-duplicating the May 2026 GA4 attribution change. See "How we count leads" below for the full methodology.
+          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads — booking events + form submissions + phone/email click intents (engagement events and duplicate-attribution events excluded).
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
@@ -119,16 +119,6 @@
       </div>
     </section>
 
-    <!-- ============ CONVERSIONS SETUP ============ -->
-    <section class="mb-8">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How We Count Leads · Conversions Setup</h2>
-      <div class="panel">
-        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Two GA4 configuration changes since launch have inflated the raw "conversions" line. We strip both out of every number in this report. Here's what we count, what we exclude, and why.
-        </p>
-        <div id="conversions-setup-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
-      </div>
-    </section>
 
     <!-- ============ STORYLINE TIMELINE + MOVEMENT TILES ============ -->
     <section class="mb-8">
@@ -173,7 +163,7 @@
 
     <!-- ============ MAPS HEATMAP ============ -->
     <section class="mb-8">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · Feb 23 → May 18, 2026</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · Jan 19 → Apr 18, 2026</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
           A bird's-eye view of where Body Balance (and its top 3 challengers) appear on Google Maps across a 13×13 grid centered on the American Fork pin. Each square is one geographic spot; <strong>dark green = top 3 results</strong>, lighter green = 4–6, yellow/orange = 11+. Click any date button to flip between the four monthly scans and watch how each business's footprint changes. Two notes: <strong>(1)</strong> the float-only competitors (Purify Wellness, True REST) only show colored cells on float queries — that's the data telling you they don't compete in the massage searches; <strong>(2)</strong> the closer-radius cells (around the AF pin) is where Body Balance is strongest — at the grid edges, the contest gets tighter as Pleasant Grove + Lehi pins come into play.
@@ -447,34 +437,6 @@
         </li>`);
     });
 
-    // ===== Conversions setup =====
-    const cs = V.conversions_setup;
-    if (cs) {
-      const csEl = document.getElementById('conversions-setup-grid');
-      const sections = [
-        { key: 'old_setup',       border: '#10b981', pill: 'good',  pillText: 'BASELINE' },
-        { key: 'what_we_report',  border: '#10b981', pill: 'good',  pillText: 'WHAT WE REPORT' },
-        { key: 'aug_2025_change', border: '#f59e0b', pill: 'watch', pillText: 'EXCLUDED - ENGAGEMENT' },
-        { key: 'may_2026_change', border: '#ef4444', pill: 'bad',   pillText: 'EXCLUDED - DUPLICATES' },
-      ];
-      sections.forEach(sec => {
-        const s = cs[sec.key];
-        if (!s) return;
-        const eventChips = (s.events || []).map(e =>
-          `<code class="text-[10px] bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">${e}</code>`
-        ).join(' ');
-        csEl.insertAdjacentHTML('beforeend', `
-          <div class="panel" style="border-left: 4px solid ${sec.border}">
-            <div class="flex items-center justify-between mb-2 gap-2">
-              <h3 class="font-bold text-slate-900 text-sm">${s.title}</h3>
-              <span class="pill ${sec.pill}">${sec.pillText}</span>
-            </div>
-            <div class="mb-2">${eventChips}</div>
-            <p class="text-[13px] text-slate-700 leading-relaxed">${s.description}</p>
-          </div>`);
-      });
-    }
-
     // ===== Heatmap =====
     if (LD) renderHeatmap(LD, V.heatmap_keywords, V.heatmap_competitors, V.heatmap_date_keys, V.heatmap_dates);
 
@@ -527,24 +489,39 @@
           btn.classList.add('bg-brand-500', 'text-white');
           btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
           state.currentKw = btn.dataset.kw;
-          // Reset to the earliest date available for the new keyword + restart auto-cycle
+          // Reset to earliest date available for the new keyword that's also in the
+          // report window. Rebuild the date tabs so dates without data are hidden.
           const g = ld.grids[state.currentKw];
-          const present = g.dates_present || state.dateKeys;
-          state.currentDate = present[0];
-          buildPanels(); updateDateBtns(); applyState();
+          const present = (g.dates_present || state.dateKeys).filter(d => state.dateKeys.includes(d));
+          state.currentDate = present[0] || state.dateKeys[0];
+          rebuildDateTabs();
+          buildPanels(); applyState();
           play();
         });
       });
 
       const dateTabs = document.getElementById('cr-date-tabs');
-      dateTabs.innerHTML = state.dateKeys.map((k, i) => {
-        const label = state.dateLabels[i] || k;
-        const active = i === 0;
-        return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
-      }).join('');
-      dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
-        btn.addEventListener('click', () => { pause(); state.currentDate = btn.dataset.date; updateDateBtns(); applyState(); });
-      });
+
+      // Date tabs are rebuilt every time the current keyword changes — only show
+      // dates where the current keyword actually has scan data. Dates without a
+      // scan for the current keyword would render empty maps; better to hide them.
+      function rebuildDateTabs() {
+        const g = ld.grids[state.currentKw];
+        const presentForKw = (g && g.dates_present) || state.dateKeys;
+        const dates = state.dateKeys.filter(d => presentForKw.includes(d));
+        if (!dates.length) dates.push(state.dateKeys[0]);
+        dateTabs.innerHTML = dates.map((k) => {
+          const label = state.dateLabels[state.dateKeys.indexOf(k)] || k;
+          const active = k === state.currentDate;
+          return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
+        }).join('');
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
+          btn.addEventListener('click', () => { pause(); state.currentDate = btn.dataset.date; updateDateBtns(); applyState(); });
+        });
+        // Expose the kw-filtered date list to play() so auto-cycle skips empty dates
+        state.activeDateKeys = dates;
+      }
+      rebuildDateTabs();
 
       const playBtn = document.getElementById('cr-play');
       playBtn.addEventListener('click', () => { if (state.playing) pause(); else play(); });
@@ -567,13 +544,14 @@
         playBtn.classList.add('bg-emerald-100', 'text-emerald-800');
         playBtn.classList.remove('bg-slate-200', 'text-slate-700');
         state.timer = setInterval(() => {
-          const i = state.dateKeys.indexOf(state.currentDate);
-          // Advance forward; STOP on the last date instead of looping.
-          if (i + 1 >= state.dateKeys.length) {
+          // Cycle through ONLY the dates available for the current keyword
+          const dates = state.activeDateKeys || state.dateKeys;
+          const i = dates.indexOf(state.currentDate);
+          if (i + 1 >= dates.length) {
             pause();
             return;
           }
-          state.currentDate = state.dateKeys[i + 1];
+          state.currentDate = dates[i + 1];
           updateDateBtns(); applyState();
         }, state.PHASE_MS);
       }
