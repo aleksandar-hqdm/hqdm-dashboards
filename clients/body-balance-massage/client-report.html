@@ -4,23 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
-  <title>Client Report · Body Balance Massage &amp; Float · HQDM</title>
+  <title>Body Balance Massage &amp; Float · May 2026 Update · HQDM</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/dashboard.css">
   <link rel="stylesheet" href="../../assets/css/client-report.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
-          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
           colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
             brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
           }
         }
@@ -28,33 +26,52 @@
     }
   </script>
   <style>
-    .stat-tile { background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem; }
-    .stat-tile.positive { border-color: #a7f3d0; background: linear-gradient(135deg, #ffffff 0%, #ecfdf5 100%); }
-    .stat-tile.negative { border-color: #fecaca; background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%); }
-    .stat-tile.neutral { border-color: #bfdbfe; background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%); }
-    .pill { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 700; border-radius: 4px; }
-    .pill.pos { background: #d1fae5; color: #065f46; }
-    .pill.neg { background: #fee2e2; color: #991b1b; }
-    .pill.warn { background: #fef3c7; color: #92400e; }
-    .pill.info { background: #dbeafe; color: #1e40af; }
-    .maps-row.managed { background: linear-gradient(90deg, rgb(236 253 245 / 0.7), rgb(236 253 245 / 0.15)); }
-    .maps-row.managed td:first-child { border-left: 3px solid #10b981; }
-    .maps-row.outside { background: linear-gradient(90deg, rgb(254 242 242 / 0.7), rgb(254 242 242 / 0.15)); }
-    .maps-row.outside td:first-child { border-left: 3px solid #ef4444; }
+    .report-shell { max-width: 1200px; }
+    .stat-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .stat-tile.good { border-left-color: #10b981; }
+    .stat-tile.watch { border-left-color: #f59e0b; }
+    .stat-tile.bad { border-left-color: #ef4444; }
+    .stat-tile .v { font-size: 1.875rem; font-weight: 800; line-height: 1.1; color: #0b1220; }
+    .stat-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
+    .stat-tile .s { font-size: 0.75rem; color: #6b7280; margin-top: 0.4rem; line-height: 1.35; }
+    .panel { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 0.375rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .pill.good { background: #d1fae5; color: #065f46; }
+    .pill.watch { background: #fef3c7; color: #92400e; }
+    .pill.bad { background: #fee2e2; color: #991b1b; }
+    /* Movement tiles — recovery / growth */
+    .recovery-tile { background: white; border-radius: 0.5rem; padding: 1.25rem; border-left: 4px solid #10b981; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .recovery-tile .pct { font-size: 2.25rem; font-weight: 800; line-height: 1.05; color: #047857; }
+    .recovery-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.45rem; }
+    .recovery-tile .b { font-size: 0.85rem; font-weight: 600; color: #1f2937; margin-top: 0.4rem; }
+    .recovery-tile .s { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
+    /* LD heatmap cells */
+    .hm-cell { aspect-ratio: 1 / 1; border-radius: 2px; font-size: 11px; line-height: 1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; transition: background-color 800ms ease; min-width: 0; }
+    .hm-cell.off-grid { background: transparent !important; color: transparent; }
+    .cr-grid { display: grid; gap: 2px; }
+    /* Storyline timeline */
+    .timeline-event { position: relative; padding-left: 1.5rem; padding-bottom: 1rem; border-left: 2px solid #cbd5e1; }
+    .timeline-event:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-event::before { content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #1d5b8a; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1; }
+    .timeline-event.bad::before { background: #ef4444; }
+    .timeline-event.good::before { background: #10b981; }
+    .timeline-event.neutral::before { background: #94a3b8; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+      .panel, .stat-tile, .recovery-tile { box-shadow: none !important; }
+    }
   </style>
 </head>
 <body class="bg-slate-100 font-sans text-slate-800 antialiased">
 
-  <!-- Slim navigation strip (hidden when printed) -->
   <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
     <div class="report-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
       <div class="flex items-center gap-2 min-w-0">
         <a href="../../index.html" class="text-slate-500 hover:text-slate-900">← All clients</a>
         <span class="text-slate-300">/</span>
-        <span class="font-semibold truncate" id="hdr-client">Body Balance Massage &amp; Float</span>
-        <span class="text-slate-400 hidden sm:inline">Q2 2026</span>
-        <span class="text-slate-300 hidden sm:inline">·</span>
-        <span class="text-slate-500 hidden sm:inline">Client Report (v9)</span>
+        <span class="font-semibold truncate">Body Balance Massage &amp; Float</span>
+        <span class="text-slate-400 hidden sm:inline">May 2026 Update</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
@@ -66,504 +83,527 @@
   <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
 
     <!-- ============ HERO ============ -->
-    <section class="border-b border-slate-200 pb-4 mb-5">
-      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM Search Intelligence · Tier 3 · Local Services</div>
+    <section class="border-b border-slate-200 pb-5 mb-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski · AM Matt Olderman</div>
       <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight" id="hero-client">Body Balance Massage &amp; Float</h1>
-      <p class="text-sm text-slate-600 mt-1" id="hero-tagline">Single-pin massage &amp; float studio · American Fork, UT · 4.9★ × 402 reviews</p>
-      <div class="flex flex-wrap gap-4 mt-3 text-[11px] text-slate-500">
-        <span><span class="font-semibold text-slate-700">Q2 2026 Client Report</span></span>
-        <span id="hero-prepared">Refreshed 2026-05-22 · v9</span>
-        <span id="hero-domain" class="font-mono">bbmassageandfloat.com</span>
-        <span>Pin <span class="font-mono">40.378, −111.789</span></span>
-        <span>AM <span class="text-slate-700">Matt Olderman</span></span>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold" id="hero-tagline-main">—</p>
+      <p class="text-sm text-slate-500 mt-1" id="hero-tagline-sub">—</p>
+    </section>
+
+    <!-- ============ HEADLINE ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
+      <div class="panel" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+        <p id="headline-lede" class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800 font-medium">—</p>
       </div>
     </section>
 
-    <!-- ============ EXECUTIVE SUMMARY ============ -->
-    <section class="mb-5">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Executive Summary</h2>
-      <div class="summary-card rounded-lg p-4 sm:p-5 border-l-4 border-brand-500">
-        <p id="exec-summary" class="text-sm sm:text-[15px] leading-relaxed text-slate-800">—</p>
-      </div>
-    </section>
-
-    <!-- ============ V9 CALLOUT ============ -->
-    <section class="mb-5">
-      <div class="rounded-lg p-4 sm:p-5" style="background: #ecfdf5; border-left: 4px solid #10b981;">
-        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v9 (2026-05-22) · terminology + chart honesty pass</div>
-        <p class="text-sm leading-relaxed text-slate-800">
-          <strong>Renamed "Conversions" → "Leads" throughout.</strong> The events we count (session_booked, booking_confirmed, contact_form_submission, click_to_dial, click_phone_number, click_to_email) are all <strong>lead events</strong> — a user started a booking flow, submitted a form, or clicked a phone/email link. They do <em>not</em> represent confirmed paid sessions. Measuring actual customer conversion requires downstream attribution (CallRail call duration + quality, booking-system confirmation feed, payment record) — which is not yet integrated. The dashboard now uses "Leads," "Lead Capture Rate (LCR)," and explicit caveats so the framing is accurate.
+    <!-- ============ TREND CHART ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Last 8 Months</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads. "Leads" is the apples-to-apples lead count — <strong>booking events + form submissions + phone/email click intents</strong>. We deliberately <em>exclude</em> the three "engagement events" (GBP listing taps, banner CTA clicks, gift-card page clicks) that were added to GA4 in Aug 2025 — those are top-funnel taps, not bookings, and including them would inflate the numbers ~6×. The numbers below are the conservative, defensible version of the story.
         </p>
-        <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Engagement signals removed from the lead chart.</strong> In v8 the chart included an amber-dotted "engagement signals" overlay that visually dominated the chart (500+ events vs ~50 leads), even though it was labeled "NOT conversions." That was misleading. Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) are now <strong>excluded from the chart entirely</strong> and tracked in a separate diagnostic panel on the dashboard for context. None of the YoY, quarterly, or chart numbers include them.
-        </p>
-        <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Result (Q1 2025 → Q1 2026 Organic Search):</strong> Sessions 8,879 → 10,448 (+18%) · Leads 139 → 164 (+18%) · Booking + form leads only 62 → 110 (+77%) · Lead Capture Rate 1.57% → 1.57% (stable). All numbers exclude the engagement-event artifact. The +18% leads YoY matches the +18% sessions YoY — consistent organic growth tied to LD rank tightening.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============ EVENT CATEGORIZATION DISCLOSURE ============ -->
-    <section class="mb-5">
-      <div class="rounded-lg p-4 sm:p-5 bg-white border border-slate-200">
-        <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
-          <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">How we categorize GA4 "conversion events" — 3 buckets</h2>
-          <div class="flex flex-wrap gap-2 text-[10px] font-bold">
-            <span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800">TRUE = report this</span>
-            <span class="px-2 py-1 rounded bg-blue-100 text-blue-800">INTENT = track separately</span>
-            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800">ENGAGEMENT = diagnostic only</span>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
+            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
+            <div style="height: 320px;"><canvas id="trend-leads"></canvas></div>
           </div>
         </div>
-        <div class="overflow-x-auto">
-          <table class="w-full text-sm">
-            <thead class="text-slate-500 text-[11px] bg-slate-50">
-              <tr>
-                <th class="text-left py-2 px-3 font-semibold">Event</th>
-                <th class="text-left py-2 px-3 font-semibold">Bucket</th>
-                <th class="text-right py-2 px-3 font-semibold">90d conversions</th>
-                <th class="text-left py-2 px-3 font-semibold">Status</th>
-              </tr>
-            </thead>
-            <tbody id="event-cat-body" class="divide-y divide-slate-100"></tbody>
-          </table>
+        <p class="text-[11px] text-slate-700 mt-3 font-semibold" id="trend-partial-note">—</p>
+      </div>
+    </section>
+
+    <!-- ============ STORYLINE TIMELINE + MOVEMENT TILES ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What Happened — A Timeline</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="panel">
+          <div id="timeline-container"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 -mb-1">Movement at a glance</div>
+          <div id="movement-tiles"></div>
         </div>
       </div>
     </section>
 
-    <!-- ============ HEADLINE STAT TILES ============ -->
-    <section class="mb-6">
-      <div class="flex items-end justify-between mb-2">
-        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Headline · current state</h2>
-        <span class="text-[10px] text-slate-400">GA4 + GSC + LD + DataForSEO</span>
+    <!-- ============ QUARTERLY SNAPSHOT ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Snapshot · Year-over-Year + Q2 in flight</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Three rows that frame where we are. <strong>Q1 2025</strong> = the baseline. <strong>Q1 2026</strong> = exactly one year later — the cleanest year-over-year comparison we can run. <strong>Q2 2026 (Apr + May so far)</strong> = the most recent 6+ weeks, partial. The Q2 row is partial-quarter — treat it as "where we are right now," not a full-quarter result.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Quarter</th>
+                <th class="py-2 pr-3 text-right">Organic Visitors</th>
+                <th class="py-2 pr-3 text-right">Organic Leads</th>
+                <th class="py-2 pr-3 text-right">Lead Capture Rate</th>
+                <th class="py-2 text-left">Context</th>
+              </tr>
+            </thead>
+            <tbody id="quarterly-body"></tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3 italic">
+          "Leads" = booking events + form submissions + call/email click intent. <strong>Engagement events (GBP listing taps, banner CTA clicks, gift-card clicks) are excluded</strong> — those were added to GA4 as "conversions" in Aug 2025 but they're top-funnel taps, not bookings. Lead capture rate (LCR) = leads ÷ visitors. Neither metric represents completed paid sessions — that requires downstream attribution (CallRail call duration/quality + booking-system confirmation feed) which isn't integrated yet.
+        </p>
       </div>
-      <div id="stat-tiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
     </section>
 
-    <!-- ============ YoY TILES (Q1 2025 vs Q1 2026 organic) ============ -->
-    <section class="mb-5">
-      <div class="flex items-end justify-between mb-2">
-        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Year-over-Year Movement</h2>
-        <span class="text-[10px] text-slate-400" id="yoy-note">Q1 2025 → Q1 2026 · Organic Search channel · GA4</span>
+    <!-- ============ MAPS HEATMAP ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · Feb 23 → May 18, 2026</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          A bird's-eye view of where Body Balance (and its top 3 challengers) appear on Google Maps across a 13×13 grid centered on the American Fork pin. Each square is one geographic spot; <strong>dark green = top 3 results</strong>, lighter green = 4–6, yellow/orange = 11+. Click any date button to flip between the four monthly scans and watch how each business's footprint changes. Two notes: <strong>(1)</strong> the float-only competitors (Purify Wellness, True REST) only show colored cells on float queries — that's the data telling you they don't compete in the massage searches; <strong>(2)</strong> the closer-radius cells (around the AF pin) is where Body Balance is strongest — at the grid edges, the contest gets tighter as Pleasant Grove + Lehi pins come into play.
+        </p>
+
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50/60 border-b border-slate-200">
+            <div class="flex gap-2 flex-wrap" id="cr-kw-tabs"></div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Date:</span>
+              <div id="cr-date-tabs" class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
+              <button id="cr-play" class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded">Pause</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div id="cr-panels" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+          </div>
+
+          <div class="border-t border-slate-200 p-3 bg-slate-50/40 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+            <span>Rank:</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#047857"></span>1–3</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#10b981"></span>4–6</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#84cc16"></span>7–10</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+            <span class="inline-flex items-center gap-1 normal-case"><span class="inline-block w-3 h-3 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top 20</span>
+          </div>
+        </div>
       </div>
-      <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
     </section>
 
-    <!-- ============ QUARTERLY KPI TABLE ============ -->
-    <section class="mb-6 qtable-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Movement — GA4 Organic Search + GBP · Sessions + Leads + Lead capture rate</h2>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="qtable w-full text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="text-left py-2 px-3">Quarter</th>
-              <th class="text-right py-2 px-3">Org sess</th>
-              <th class="text-right py-2 px-3">Org leads</th>
-              <th class="text-right py-2 px-3">Org LCR</th>
-              <th class="text-right py-2 px-3">GBP sess</th>
-              <th class="text-right py-2 px-3">GBP leads</th>
-              <th class="text-right py-2 px-3">GBP LCR</th>
-            </tr>
-          </thead>
-          <tbody id="qtable-body"></tbody>
-        </table>
+    <!-- ============ SEARCH-BY-SEARCH ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Search-by-Search Breakdown</h2>
+      <div id="search-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- ============ COMPETITORS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Who's Pushing on You</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Top-3 map placements aggregated across all 9 tracked queries × 4 dates. Body Balance is at the top of the table — <strong>more top-3 spots than the next two competitors combined</strong>, with positive movement since the February baseline. The two competitor sets to know: <strong>(1) the float pair</strong> (Purify Wellness + True REST) — only competes on float terms, BB's review moat holds #1; <strong>(2) the AF/PG/Lehi massage cluster</strong> — Relaxing Remedy is the closest geographic challenger, MassageLuXe is the direct subscription competitor.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Competitor</th>
+                <th class="py-2 pr-3 text-right">Top-3 Map Spots (May)</th>
+                <th class="py-2 pr-3 text-right">Change Since Feb</th>
+                <th class="py-2 pr-3 text-right">Kws Present</th>
+                <th class="py-2 text-left">Note</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3 italic">
+          Sum of top-3 cells across 9 tracked queries × the May 18 scan. "Change since Feb" = top-3 cells gained or lost between the Feb 23 and May 18 scans. "Kws present" = how many of the 9 queries the competitor appears in at all (i.e. whether they compete in massage, float, or both).
+        </p>
       </div>
-      <p class="text-[10px] text-slate-400 mt-1.5">
-        <strong>Leads</strong> = booking events + form submissions + call/email click intent. <strong>LCR</strong> (Lead Capture Rate) = leads ÷ sessions. Neither metric represents completed paid sessions — that requires downstream attribution (CallRail call quality + booking system confirmation) not yet integrated. Engagement events (gmb_click etc) are excluded.
+    </section>
+
+    <!-- ============ STRATEGY ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Next — The Next 90 Days</h2>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        Five priorities for Q2 → Q3 2026. The first two compound the wins we already see (#1 dominance + subscription breakthrough); the next two open new growth (on-site CTR + untracked services); the fifth is the post-halt authority rebuild.
       </p>
-    </section>
-
-    <!-- ============ PAGE BREAK ============ -->
-    <div class="page-break"></div>
-
-    <!-- ============ MONTHLY TREND CHART ============ -->
-    <section class="mb-6 trend-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — GA4 Organic Sessions + Organic Leads (18 Months)</h2>
-      <div class="bg-white rounded-lg border border-slate-200 p-4">
-        <div style="height: 280px;"><canvas id="trend-chart"></canvas></div>
-        <p class="text-[10px] text-slate-500 mt-2 italic" id="trend-partial-note">—</p>
-      </div>
-    </section>
-
-    <!-- ============ MAPS PRESENCE AUDIT ============ -->
-    <section class="mb-6">
-      <div class="flex items-end justify-between mb-2">
-        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps Presence Audit — Per-Town Reach Across 6 Priority Keywords</h2>
-        <span class="text-[10px] text-slate-400">LD scan 2026-04-18 + DataForSEO outside-grid 2026-05-18</span>
-      </div>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Coord / Town</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600 hidden md:table-cell">Distance · context</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">BB avg rank</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Top-3 cells</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Top-20 / total</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Action</th>
-            </tr>
-          </thead>
-          <tbody id="maps-presence-body" class="divide-y divide-slate-100"></tbody>
-        </table>
-      </div>
-      <p class="text-[10px] text-slate-500 mt-2 italic">
-        BB's American Fork pin is the only managed GBP — 4.9★ × 402 reviews carries the conversion path. Pleasant Grove is the most contested catchment (3 winners collapsed −188/−143/−138; 5 new entrants slid in). Outside the ~10-mi grid BB is invisible across 1,391 SERP rows — geographic constraint, not a marketing problem to solve in Q2.
-      </p>
-    </section>
-
-    <!-- ============ LD APPLES-TO-APPLES ============ -->
-    <section class="mb-6">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">LD Apples-to-Apples — Rank Movement on Cells BB Holds (Jan 19 → Apr 18 2026)</h2>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Keyword</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Cells Jan / Apr</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Avg rank Jan → Apr</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Mean dx</th>
-              <th class="text-right py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Top-3 cells Jan → Apr</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600 hidden md:table-cell">BB rank-in-main-set</th>
-            </tr>
-          </thead>
-          <tbody id="ld-apples-body" class="divide-y divide-slate-100"></tbody>
-        </table>
-      </div>
-      <p class="text-[10px] text-slate-500 mt-2 italic">
-        Avg rank computed only on cells where BB was in LD top-20 on <em>both</em> dates (106-cell grid at Lehi center). Smaller = better. BB tightened rank on every massage query (mean dx +1.21 to +1.46/cell) and gained cell visibility on every non-saturated keyword. Float queries lost sub-1-rank slippage at the very top (no headroom up from 1.21–1.52).
-      </p>
-    </section>
-
-    <!-- ============ CRITICAL ISSUES ============ -->
-    <section class="mb-6">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Critical Issues &amp; Fix Schedule</h2>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Issue</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600 w-24">Severity</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Fix</th>
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-slate-100">
-            <tr><td class="py-2 px-3 text-sm">Sitewide NAP (372/372 use chat phone 855-5834; GBP primary is 734-9798)</td><td class="py-2 px-3"><span class="pill neg">P0</span></td><td class="py-2 px-3 text-[12px]">HP-01 M1 W1 — sitewide find-replace</td></tr>
-            <tr><td class="py-2 px-3 text-sm">/trigger-point-therapy/ references medical injections + dry needling (owner-flagged)</td><td class="py-2 px-3"><span class="pill neg">P0</span></td><td class="py-2 px-3 text-[12px]">SP-01 M1 W1-2 — content rewrite + Service/FAQ schema</td></tr>
-            <tr><td class="py-2 px-3 text-sm">/cupping-massage/ returns 404 + duplicate canonical at /modalities-techniques/cupping/</td><td class="py-2 px-3"><span class="pill neg">P0</span></td><td class="py-2 px-3 text-[12px]">TPL-01 + CN-01 M1 W1-2 — small-level 301 to canonical</td></tr>
-            <tr><td class="py-2 px-3 text-sm">Service-page schema generic DaySpa only (0/8 priority pages have Service + FAQPage)</td><td class="py-2 px-3"><span class="pill neg">P0</span></td><td class="py-2 px-3 text-[12px]">SP-02 (M2) + SP-03 (M3) + ON-07 sitewide</td></tr>
-            <tr><td class="py-2 px-3 text-sm">Off-page playbook rebuild post-2026-05-13 program halt</td><td class="py-2 px-3"><span class="pill neg">P0</span></td><td class="py-2 px-3 text-[12px]">Lever J — manual + earned (citations / PR / partners)</td></tr>
-            <tr><td class="py-2 px-3 text-sm">326 GSC cannibal queries (2+ BB URLs ranking)</td><td class="py-2 px-3"><span class="pill warn">P1</span></td><td class="py-2 px-3 text-[12px]">LP-02 M2 — small-level 301-to-MAIN on 84 redundant URLs</td></tr>
-            <tr><td class="py-2 px-3 text-sm">83 pages bleeding CTR at pos 4-20 (/about/ 0.04%, /pricing/ 0.10%, /upgrades/ 0.00%)</td><td class="py-2 px-3"><span class="pill warn">P1</span></td><td class="py-2 px-3 text-[12px]">ON-01 M1+M2 — meta + title refresh on top 22 URLs</td></tr>
-            <tr><td class="py-2 px-3 text-sm">Service × city matrix only 3-5 of 150 cells covered</td><td class="py-2 px-3"><span class="pill warn">P1</span></td><td class="py-2 px-3 text-[12px]">LP-NEW 6 location pages/mo × 3 mo = 18 builds Q2</td></tr>
-            <tr><td class="py-2 px-3 text-sm">BB ranks #1-#3 at AF pin for 27 untracked service queries (lymphatic drainage 3,600 UT vol)</td><td class="py-2 px-3"><span class="pill info">Opp</span></td><td class="py-2 px-3 text-[12px]">REP-01 add 14 to LD · MR-01 M2 · LD-01 M3 (gated)</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ============ PAGE BREAK ============ -->
-    <div class="page-break"></div>
-
-    <!-- ============ STRATEGIC FOCUS — LEVERS ============ -->
-    <section class="mb-6">
-      <div class="flex items-end justify-between mb-2">
-        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Strategic Focus — Q2 2026 Levers</h2>
-        <span class="text-[10px] text-slate-400">9 lever pillars · 33 task rows · 57 builds Q2 · full plan in the strategic dashboard</span>
-      </div>
-      <div id="levers-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+      <div id="priorities-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-3"></div>
+      <p class="text-xs text-slate-500 mt-3 italic">If you'd like the full task-by-task plan (9 levers × 33 task rows × 57 builds across Q2), your AM Matt can walk you through the strategic dashboard linked in the header.</p>
     </section>
 
     <!-- ============ OWNER ASKS ============ -->
-    <section class="mb-6">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Owner Asks — 1 × 20-min Call (Matt → Paul)</h2>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="w-full text-sm">
-          <tbody id="owner-asks-body" class="divide-y divide-slate-100"></tbody>
-        </table>
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
+      <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
+        <ul id="owner-asks-list" class="space-y-2.5 text-sm text-slate-800"></ul>
       </div>
     </section>
 
-    <!-- ============ M3 KPI SCORECARD ============ -->
-    <section class="mb-6">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">M3 Close-Out Scorecard — 16 KPIs (Paul sign-off via Ask #8)</h2>
-      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
-        <table class="w-full text-sm">
-          <thead class="bg-slate-50">
-            <tr>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">KPI</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">Baseline (May 22, 2026)</th>
-              <th class="text-left py-2 px-3 text-[11px] font-bold uppercase tracking-wider text-slate-600">M3 Target</th>
-            </tr>
-          </thead>
-          <tbody id="kpi-scorecard-body" class="divide-y divide-slate-100"></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
     <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
       <div>
         <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
-        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v9)
+        · <span id="footer-as-of">May 2026 update</span>
+        · Prepared by Aleksandar Spasevski
+        · <span id="footer-prepared">2026-05-22</span>
+        · Account Manager: Matt Olderman
+        · <span id="footer-version">v10</span>
       </div>
-      <div class="text-slate-400">Confidential — authorized client viewing only. noindex.</div>
+      <div class="text-slate-400">Confidential — for Body Balance only. noindex.</div>
     </footer>
 
   </main>
 
   <script>
-    // ============== Bootstrap from data.json ==============
-    fetch('data/data.json').then(r => r.json()).then(data => {
+  (async function () {
+    const [DATA, LD] = await Promise.all([
+      fetch('./data/data.json').then(r => r.json()),
+      fetch('./data/ld_grids.json').then(r => r.json()).catch(() => null),
+    ]);
+    if (!DATA || !DATA.client_report_v2) {
+      document.getElementById('headline-lede').innerHTML = '<span style="color:#b91c1c">data.json missing client_report_v2 block — please run _build_client_report_v2.py</span>';
+      return;
+    }
+    const V = DATA.client_report_v2;
 
-      // Executive Summary
-      document.getElementById('exec-summary').innerHTML = data.headline_panel.lede;
+    // ===== Hero =====
+    document.getElementById('hero-tagline-main').textContent = V.hero.tagline_main;
+    document.getElementById('hero-tagline-sub').textContent = V.hero.tagline_sub;
+    document.getElementById('headline-lede').innerHTML = V.headline.lede;
+    document.getElementById('footer-as-of').textContent = V.as_of;
+    document.getElementById('footer-prepared').textContent = V.prepared_date;
+    document.getElementById('footer-version').textContent = V.version;
 
-      // Stat tiles (use headline_panel.stat_tiles + 1 extra synthetic tile)
-      const tilesEl = document.getElementById('stat-tiles');
-      data.headline_panel.stat_tiles.forEach(t => {
-        const div = document.createElement('div');
-        div.className = `stat-tile ${t.sentiment}`;
-        div.innerHTML = `
-          <div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 leading-tight">${t.label}</div>
-          <div class="text-2xl font-extrabold text-slate-900 mt-1.5 leading-none">${t.value}</div>
-          <div class="text-[11px] text-slate-600 mt-1.5 leading-snug">${t.sub}</div>`;
-        tilesEl.appendChild(div);
-      });
-
-      // YoY tiles (Q1 2025 vs Q1 2026 organic) — TRUE conversions, not raw
-      const yoyEl = document.getElementById('yoy-tiles');
-      const yoy = data.trend.yoy;
-      if (yoy) {
-        function yoyTile(label, baseline, current, pct, fmtFn, subtext) {
-          const dir = pct > 0 ? 'pos' : (pct < 0 ? 'neg' : 'neu');
-          const arrow = pct > 0 ? '▲' : (pct < 0 ? '▼' : '–');
-          const sign = pct > 0 ? '+' : '';
-          return `<div class="yoy-tile ${dir}">
-            <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">${label}</div>
-            <div class="text-3xl font-extrabold delta-${dir === 'pos' ? 'pos' : dir === 'neg' ? 'neg' : 'neu'}">${arrow} ${sign}${Math.abs(pct).toFixed(0)}%</div>
-            <div class="text-[11px] text-slate-500 mt-1">${fmtFn(baseline)} → ${fmtFn(current)}</div>
-            ${subtext ? `<div class="text-[10px] text-slate-400 mt-1 italic">${subtext}</div>` : ''}
-          </div>`;
-        }
-        const fmtInt = v => v.toLocaleString();
-        const fmtPct = v => v.toFixed(2) + '%';
-        yoyEl.innerHTML =
-          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
-          (yoy.org_funnel_pct !== null && yoy.org_funnel_pct !== undefined
-            ? yoyTile('Leads YoY (full funnel)', yoy.org_funnel_baseline, yoy.org_funnel_current, yoy.org_funnel_pct, fmtInt, 'Booking + form + call/email intent · excludes engagement events')
-            : '') +
-          (yoy.org_true_pct !== null && yoy.org_true_pct !== undefined
-            ? yoyTile('Booking + form leads YoY', yoy.org_true_baseline, yoy.org_true_current, yoy.org_true_pct, fmtInt, 'session_booked + booking_confirmed + contact_form_submission · highest-intent')
-            : '') +
-          (yoy.org_clean_cr_pct !== null && yoy.org_clean_cr_pct !== undefined
-            ? yoyTile('Lead capture rate YoY', yoy.org_clean_cr_baseline, yoy.org_clean_cr_current, yoy.org_clean_cr_pct, fmtPct, 'Leads ÷ organic sessions · NOT customer-conversion rate')
-            : '');
-        document.getElementById('yoy-note').textContent =
-          'Q1 2025 → Q1 2026 · Organic Search · GA4. Leads = booking + form + call/email intent events. Engagement events (gmb_click etc) excluded from all numbers. Customer-conversion rate would require downstream attribution (CallRail + booking system) not yet integrated.';
-      } else {
-        yoyEl.innerHTML = '<div class="text-sm text-slate-500 italic col-span-3">YoY comparison not yet available.</div>';
-      }
-
-      // Quarterly KPI table
-      const qBody = document.getElementById('qtable-body');
-      const quarters = data.trend.quarterly;
-      quarters.forEach(q => {
-        const tr = document.createElement('tr');
-        const isLatest = q === quarters[quarters.length - 1];
-        tr.className = (isLatest ? 'latest ' : '') + 'border-t border-slate-100';
-        tr.innerHTML = `
-          <td class="py-2 px-3 text-slate-800">${q.q}</td>
-          <td class="py-2 px-3 text-right font-mono">${q.org_sess.toLocaleString()}</td>
-          <td class="py-2 px-3 text-right font-mono">${q.org_conv.toLocaleString()}</td>
-          <td class="py-2 px-3 text-right font-mono">${q.org_cr}%</td>
-          <td class="py-2 px-3 text-right font-mono">${q.gbp_sess.toLocaleString()}</td>
-          <td class="py-2 px-3 text-right font-mono">${q.gbp_conv.toLocaleString()}</td>
-          <td class="py-2 px-3 text-right font-mono">${q.gbp_cr}%</td>`;
-        qBody.appendChild(tr);
-      });
-
-      // Monthly trend chart — Organic Sessions + Organic LEADS (full funnel: booking + lead + intent).
-      // Engagement signals are excluded (shown in event-categorization disclosure below; they're top-funnel taps, not leads).
-      const months = data.trend.months;
-      const partialIdx = months.findIndex(m => /\*/.test(m));
-      const sessOrg = (data.trend.sessions && data.trend.sessions.organic) || [];
-      // Use the channel-level corrected series (TRUE+INTENT only)
-      const leadsOrg = (data.trend.conversions && data.trend.conversions.organic) || [];
-      const split = (arr) => ({
-        solid: arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v),
-        dash:  arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null),
-      });
-      const sess = split(sessOrg);
-      const leads = split(leadsOrg);
-
-      new Chart(document.getElementById('trend-chart'), {
-        type: 'line',
-        data: {
-          labels: months,
-          datasets: [
-            // Sessions (primary, left axis)
-            { label: 'Organic Sessions', data: sess.solid, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,0.10)', yAxisID: 'y', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: false },
-            { label: 'Organic Sessions (partial)', data: sess.dash, borderColor: '#1d5b8a', borderDash: [5,4], yAxisID: 'y', borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
-            // Leads (right axis, GREEN — booking + lead + intent events, NOT engagement)
-            { label: 'Organic Leads (booking + form + call/email intent)', data: leads.solid, borderColor: '#059669', backgroundColor: 'rgba(5,150,105,0.10)', yAxisID: 'y1', borderWidth: 3, tension: 0.3, pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false },
-            { label: 'Organic Leads (partial)', data: leads.dash, borderColor: '#059669', borderDash: [5,4], yAxisID: 'y1', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointStyle: 'rectRot', spanGaps: false },
-          ],
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          plugins: {
-            legend: {
-              position: 'bottom',
-              labels: { filter: (item) => !/partial/.test(item.text), font: { size: 11 }, boxWidth: 10, boxHeight: 10 },
-            },
-            tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label.replace(' (partial)', '')}: ${(ctx.parsed.y || 0).toLocaleString()}` } },
-          },
-          scales: {
-            x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 18 }, grid: { display: false } },
-            y: { position: 'left', title: { display: true, text: 'Sessions', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
-            y1: { position: 'right', title: { display: true, text: 'Leads', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { display: false } },
-          },
-        },
-      });
-
-      // Partial-month note + lead-vs-conversion clarification
-      const partialBase = data.trend.may_extrapolation_note || '';
-      const shift = data.trend.measurement_shift;
-      const clarification = ' · "Leads" = GA4 lead events (booking-flow starts, form submissions, phone/email click intents). NOT the same as completed paid sessions — downstream attribution (CallRail call quality + booking-system confirmation) is not yet integrated. Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) are excluded from this chart and from all YoY / quarterly numbers — see event-categorization disclosure below.';
-      document.getElementById('trend-partial-note').textContent = partialBase + clarification;
-
-      // Maps Presence
-      const mapsBody = document.getElementById('maps-presence-body');
-      data.maps_presence.forEach(m => {
-        const tr = document.createElement('tr');
-        let cls = 'maps-row';
-        if (m.managed) cls += ' managed';
-        else if (m.coord.startsWith('Outside')) cls += ' outside';
-        tr.className = cls;
-        const rank = m.avg_rank !== null ? m.avg_rank.toFixed(1) : '—';
-        const top20 = `${m.top20_cells} / ${m.total_cells}`;
-        const tag = m.managed ? '<span class="pill pos" style="margin-right:6px;">Managed pin</span>' : '';
-        tr.innerHTML = `
-          <td class="py-2 px-3 text-sm font-semibold text-slate-800">${tag}${m.coord}</td>
-          <td class="py-2 px-3 text-[11px] text-slate-600 hidden md:table-cell">${m.distance}</td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${rank}</td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${m.top3_cells}</td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${top20}</td>
-          <td class="py-2 px-3 text-[11px] text-slate-700">${m.action}</td>`;
-        mapsBody.appendChild(tr);
-      });
-
-      // LD Apples-to-Apples
-      const ldBody = document.getElementById('ld-apples-body');
-      const rankLabels = {
-        'massage therapist near me': '#2 of 10',
-        'massages near me': '#3 of 14',
-        'massage therapy': '#7 of 14',
-        'massage therapist lehi': '#15 of 17 (proximity-locked)',
-        'float therapy': '#1 of 20',
-        'float tank': '#1 of 18',
-      };
-      data.ld_apples.forEach(r => {
-        const cellsDelta = r.cells_apr - r.cells_jan;
-        const cellsDeltaStr = cellsDelta > 0 ? `(+${cellsDelta})` : (cellsDelta < 0 ? `(${cellsDelta})` : '');
-        const dxPill = r.mean_dx > 0 ? `<span class="pill pos">+${r.mean_dx.toFixed(2)}</span>` : `<span class="pill warn">${r.mean_dx.toFixed(2)}</span>`;
-        const top3Bold = r.top3_apr > r.top3_jan ? `<strong>${r.top3_apr}</strong>` : `${r.top3_apr}`;
-        const rankBold = r.rank_apr < r.rank_jan ? `<strong>${r.rank_apr.toFixed(2)}</strong>` : `${r.rank_apr.toFixed(2)}`;
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td class="py-2 px-3 text-sm font-medium">${r.kw}</td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${r.cells_jan} / ${r.cells_apr} <span class="text-slate-400">${cellsDeltaStr}</span></td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${r.rank_jan.toFixed(2)} → ${rankBold}</td>
-          <td class="py-2 px-3 text-right">${dxPill}</td>
-          <td class="py-2 px-3 text-right font-mono text-sm">${r.top3_jan} → ${top3Bold}</td>
-          <td class="py-2 px-3 text-[11px] text-slate-700 hidden md:table-cell">${rankLabels[r.kw] || ''}</td>`;
-        ldBody.appendChild(tr);
-      });
-
-      // Strategic Focus levers
-      const leversEl = document.getElementById('levers-grid');
-      const colorMap = { 'red': 'red', 'amber': 'amber', 'green': 'green', 'blue': 'blue', 'indigo': 'indigo', 'purple': 'purple', 'slate': 'slate' };
-      data.levers.forEach(l => {
-        const color = colorMap[l.color] || 'slate';
-        const top2Items = l.items.slice(0, 2).join(' · ');
-        const moreCount = l.items.length - 2;
-        const moreText = moreCount > 0 ? ` <span class="text-slate-400">+${moreCount} more</span>` : '';
-        const card = document.createElement('div');
-        card.className = `lever-mini lever-${color}`;
-        card.innerHTML = `
-          <div class="flex items-start justify-between gap-2 mb-1.5">
-            <h4>Lever ${l.id} · ${l.name}</h4>
-            <span class="badge-${color} text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded whitespace-nowrap">${l.impact}</span>
-          </div>
-          <p class="lever-why">${top2Items}${moreText}</p>`;
-        leversEl.appendChild(card);
-      });
-
-      // Owner Asks
-      const ownerBody = document.getElementById('owner-asks-body');
-      data.owner_asks.forEach(o => {
-        const tr = document.createElement('tr');
-        const statusPill = o.status.toLowerCase().startsWith('approved') ? '<span class="pill pos">Approved</span>' : '<span class="pill warn">Pending</span>';
-        tr.innerHTML = `
-          <td class="py-2 px-3 w-20 align-top"><span class="text-[10px] font-mono font-bold text-slate-500">${o.id}</span></td>
-          <td class="py-2 px-3 w-32 align-top">${statusPill}</td>
-          <td class="py-2 px-3 align-top">
-            <div class="text-sm font-semibold text-slate-900">${o.label}</div>
-            <div class="text-[11px] text-slate-600 mt-0.5">${o.status}</div>
-          </td>`;
-        ownerBody.appendChild(tr);
-      });
-
-      // M3 KPI Scorecard
-      const kpiBody = document.getElementById('kpi-scorecard-body');
-      data.m3_kpis.forEach(k => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-          <td class="py-1.5 px-3 text-sm font-medium text-slate-800">${k.kpi}</td>
-          <td class="py-1.5 px-3 text-[12px] font-mono text-slate-600">${k.baseline}</td>
-          <td class="py-1.5 px-3 text-[12px] font-mono font-semibold text-slate-900">${k.target}</td>`;
-        kpiBody.appendChild(tr);
-      });
-
-      // Event categorization disclosure table
-      const eventCatBody = document.getElementById('event-cat-body');
-      if (eventCatBody) {
-        const evCats = data.trend.event_categorization || {};
-        const CAT_DISPLAY = {
-          booking: { label: 'TRUE · Booking', cls: 'bg-emerald-100 text-emerald-800', order: 1 },
-          lead: { label: 'TRUE · Lead', cls: 'bg-emerald-100 text-emerald-800', order: 1 },
-          intent_call: { label: 'INTENT · Call', cls: 'bg-blue-100 text-blue-800', order: 2 },
-          intent_email: { label: 'INTENT · Email', cls: 'bg-blue-100 text-blue-800', order: 2 },
-          engagement_gbp: { label: 'ENGAGEMENT · GBP tap', cls: 'bg-amber-100 text-amber-800', order: 3 },
-          engagement_banner: { label: 'ENGAGEMENT · Banner CTA', cls: 'bg-amber-100 text-amber-800', order: 3 },
-          engagement_giftcard: { label: 'ENGAGEMENT · Giftcard', cls: 'bg-amber-100 text-amber-800', order: 3 },
-        };
-        const shiftEv = ['gmb_click', 'banner_booking_clicks', 'giftcard_click'];
-        const ev = [...(data.trend.conversion_events_90d || [])].sort((a, b) => {
-          const oa = CAT_DISPLAY[evCats[a.event]]?.order || 99;
-          const ob = CAT_DISPLAY[evCats[b.event]]?.order || 99;
-          if (oa !== ob) return oa - ob;
-          return b.conversions_90d - a.conversions_90d;
-        });
-        ev.forEach(e => {
-          const cat = evCats[e.event];
-          const disp = CAT_DISPLAY[cat] || { label: 'UNCATEGORIZED', cls: 'bg-slate-100 text-slate-700' };
-          const tr = document.createElement('tr');
-          if (cat && cat.startsWith('engagement_')) tr.style.background = '#fffbeb';
-          else if (cat === 'booking' || cat === 'lead') tr.style.background = '#f0fdf4';
-          tr.innerHTML = `
-            <td class="py-1.5 px-3 font-mono text-[12px]">${e.event}</td>
-            <td class="py-1.5 px-3"><span class="px-2 py-1 rounded text-[10px] font-bold ${disp.cls}">${disp.label}</span></td>
-            <td class="py-1.5 px-3 text-right font-mono text-sm">${e.conversions_90d.toLocaleString()}</td>
-            <td class="py-1.5 px-3 text-[11px]">${shiftEv.includes(e.event) ? '<span class="pill warn">Added Aug 2025</span>' : '<span class="pill muted">Pre-existing</span>'}</td>`;
-          eventCatBody.appendChild(tr);
-        });
-      }
-
-    }).catch(err => {
-      console.error('Failed to load data.json', err);
-      document.getElementById('exec-summary').innerHTML = '<span class="text-red-700">Failed to load data.json — see console.</span>';
+    // ===== Movement tiles =====
+    const tilesEl = document.getElementById('movement-tiles');
+    V.movement_tiles.forEach((t, i) => {
+      const isMaps = /maps/i.test(t.label);
+      const borderColor = isMaps ? '#1d5b8a' : '#10b981';
+      const pctColor = isMaps ? '#1d5b8a' : '#047857';
+      const html = `
+        <div class="recovery-tile" style="border-left-color:${borderColor}">
+          <div class="l">${t.label}</div>
+          <div class="pct" style="color:${pctColor}">${isMaps ? t.pct : '▲ ' + t.pct}</div>
+          <div class="b">${t.baseline} → ${t.current}</div>
+          <div class="s">${t.sub}</div>
+        </div>`;
+      tilesEl.insertAdjacentHTML('beforeend', html);
     });
+
+    // ===== Timeline =====
+    const tlEl = document.getElementById('timeline-container');
+    V.timeline.forEach(e => {
+      const kindCls = e.kind === 'good' ? 'good' : e.kind === 'bad' ? 'bad' : 'neutral';
+      const labelCls = e.kind === 'good' ? 'text-emerald-700' : e.kind === 'bad' ? 'text-rose-600' : 'text-slate-500';
+      tlEl.insertAdjacentHTML('beforeend', `
+        <div class="timeline-event ${kindCls}">
+          <div class="text-[10px] font-bold uppercase tracking-wider ${labelCls}">${e.phase}</div>
+          <div class="font-bold text-slate-900 mt-1">${e.title}</div>
+          <p class="text-sm text-slate-700 mt-1">${e.body}</p>
+        </div>`);
+    });
+
+    // ===== Quarterly snapshot =====
+    const qBody = document.getElementById('quarterly-body');
+    V.quarterly_snapshot.forEach(q => {
+      const isCurrent = q.kind === 'current';
+      const cls = isCurrent ? 'bg-emerald-50/40' : '';
+      const tcolor = isCurrent ? 'font-bold text-emerald-700' : 'font-semibold text-slate-700';
+      const mcolor = isCurrent ? 'font-bold text-emerald-700' : '';
+      qBody.insertAdjacentHTML('beforeend', `
+        <tr class="border-b border-slate-100 ${cls}">
+          <td class="py-2.5 pr-3 ${tcolor}">${q.q}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.sessions.toLocaleString()}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.leads}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.lcr}%</td>
+          <td class="py-2.5 text-slate-600 text-xs">${q.context}</td>
+        </tr>`);
+    });
+
+    // ===== Trend charts =====
+    renderTrendCharts(V.trend_chart);
+
+    function renderTrendCharts(t) {
+      if (!t) return;
+      const months = t.months;
+      const sess = t.sessions;
+      const leads = t.leads;
+      const partialIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
+
+      const splitSeries = (data) => {
+        if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
+        const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
+        const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
+        return { solid, dashed };
+      };
+      const ses = splitSeries(sess);
+      const lds = splitSeries(leads);
+
+      const buildDatasets = (split, color, label) => [
+        { label: label, data: split.solid, borderColor: color, backgroundColor: color + '20', borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: true, spanGaps: false },
+        { label: label + ' (partial month)', data: split.dashed, borderColor: color, backgroundColor: 'transparent', borderDash: [6, 4], borderWidth: 2.5, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false },
+      ];
+
+      const opts = (yLabel) => ({
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 14, filter: (item) => !/partial month/.test(item.text) } },
+          tooltip: { backgroundColor: '#0b1220', padding: 10, callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial month)', '')}: ${(ctx.raw != null ? ctx.raw.toLocaleString() : '—')}` } },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: yLabel, font: { size: 11, weight: '600' } } },
+        },
+      });
+
+      const sesEl = document.getElementById('trend-sessions');
+      if (sesEl && sess.length) new Chart(sesEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(ses, '#1d5b8a', 'Organic Search Visitors') },
+        options: opts('monthly visitors'),
+      });
+      const ldEl = document.getElementById('trend-leads');
+      if (ldEl && leads.length) new Chart(ldEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(lds, '#10b981', 'Organic Search Leads') },
+        options: opts('monthly leads'),
+      });
+
+      const note = document.getElementById('trend-partial-note');
+      if (note) note.textContent = t.partial_note;
+    }
+
+    // ===== Search-by-search cards =====
+    const cardsEl = document.getElementById('search-cards-grid');
+    V.search_cards.forEach(c => {
+      const pillCls = c.sentiment === 'good' ? 'good' : c.sentiment === 'watch' ? 'watch' : 'good';
+      cardsEl.insertAdjacentHTML('beforeend', `
+        <div class="panel">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="font-bold text-slate-800">"${c.keyword}"</div>
+            <span class="pill ${pillCls}">${c.verdict}</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">${c.commentary}</p>
+        </div>`);
+    });
+
+    // ===== Competitor leaderboard =====
+    const lbBody = document.getElementById('leaderboard-body');
+    V.leaderboard.forEach(r => {
+      const dxColor = r.delta_top3 > 0 ? (r.is_client ? 'text-emerald-700 font-bold' : 'text-rose-700 font-bold') : (r.delta_top3 < 0 ? 'text-emerald-700' : 'text-slate-500');
+      const dxStr = r.delta_top3 > 0 ? `+${r.delta_top3}` : (r.delta_top3 < 0 ? `${r.delta_top3}` : '0');
+      const rowCls = r.is_client ? 'bg-brand-50/40' : '';
+      const nameCls = r.is_client ? 'font-bold text-brand-700' : '';
+      const valCls = r.is_client ? 'font-mono font-bold text-brand-700' : 'font-mono';
+      lbBody.insertAdjacentHTML('beforeend', `
+        <tr class="border-b border-slate-100 ${rowCls}">
+          <td class="py-2 pr-3 ${nameCls}">${r.name}</td>
+          <td class="py-2 pr-3 text-right ${valCls}">${r.may_top3}</td>
+          <td class="py-2 pr-3 text-right ${dxColor}">${dxStr}</td>
+          <td class="py-2 pr-3 text-right font-mono text-slate-600">${r.kws_present} / 9</td>
+          <td class="py-2 text-slate-600 text-xs">${r.note || ''}</td>
+        </tr>`);
+    });
+
+    // ===== Priorities =====
+    const prEl = document.getElementById('priorities-grid');
+    V.priorities_90d.forEach((p, idx) => {
+      const last = idx === V.priorities_90d.length - 1 && V.priorities_90d.length % 2 === 1;
+      const lastCls = last ? 'lg:col-span-2' : '';
+      prEl.insertAdjacentHTML('beforeend', `
+        <div class="panel ${lastCls}" style="border-left: 4px solid ${p.color}">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority ${p.n}</span>
+            <h3 class="font-bold text-slate-900 text-base">${p.title}</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">${p.body}</p>
+        </div>`);
+    });
+
+    // ===== Owner asks =====
+    const oaEl = document.getElementById('owner-asks-list');
+    V.owner_asks_client.forEach(o => {
+      oaEl.insertAdjacentHTML('beforeend', `
+        <li class="flex items-start gap-2">
+          <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span>
+          <span><strong>${o.label}.</strong> ${o.body}</span>
+        </li>`);
+    });
+
+    // ===== Heatmap =====
+    if (LD) renderHeatmap(LD, V.heatmap_keywords);
+
+    function renderHeatmap(ld, heatmapKws) {
+      // Filter the available keywords down to the heatmap selection (in given order)
+      const allowed = (heatmapKws || ld.keywords).filter(k => ld.grids[k]);
+      const state = {
+        currentKw: allowed[0],
+        currentDate: (ld.date_keys || [])[0],
+        dateKeys: ld.date_keys || [],
+        dateLabels: ld.dates || [],
+        playing: true,
+        timer: null,
+        PHASE_MS: 900,
+      };
+      const entities = [ld.client, ...(ld.competitors || [])];
+
+      // Friendly display names
+      const friendlyName = (e) => {
+        if (e === ld.client) return 'Body Balance';
+        return e
+          .replace(', American Fork', '')
+          .replace('Massage And Float', '')
+          .replace('Pleasant Grove', 'PG')
+          .replace('Wellness Center', 'Wellness')
+          .trim();
+      };
+
+      const kwTabs = document.getElementById('cr-kw-tabs');
+      kwTabs.innerHTML = allowed.map((kw, i) => `
+        <button data-kw="${kw}" class="cr-kw-tab text-xs font-semibold px-2.5 py-1 rounded ${i===0?'bg-brand-500 text-white':'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'}">${kw}</button>
+      `).join('');
+      kwTabs.querySelectorAll('.cr-kw-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          kwTabs.querySelectorAll('.cr-kw-tab').forEach(b => {
+            b.classList.remove('bg-brand-500', 'text-white');
+            b.classList.add('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          });
+          btn.classList.add('bg-brand-500', 'text-white');
+          btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          state.currentKw = btn.dataset.kw;
+          buildPanels(); applyState();
+        });
+      });
+
+      const dateTabs = document.getElementById('cr-date-tabs');
+      dateTabs.innerHTML = state.dateKeys.map((k, i) => {
+        const label = state.dateLabels[i] || k;
+        const active = i === 0;
+        return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
+      }).join('');
+      dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
+        btn.addEventListener('click', () => { pause(); state.currentDate = btn.dataset.date; updateDateBtns(); applyState(); });
+      });
+
+      const playBtn = document.getElementById('cr-play');
+      playBtn.addEventListener('click', () => { if (state.playing) pause(); else play(); });
+
+      function updateDateBtns() {
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(b => {
+          if (b.dataset.date === state.currentDate) {
+            b.classList.add('bg-brand-500', 'text-white'); b.classList.remove('bg-white', 'text-slate-700');
+          } else {
+            b.classList.remove('bg-brand-500', 'text-white'); b.classList.add('bg-white', 'text-slate-700');
+          }
+        });
+      }
+
+      function pause() { if (state.timer) { clearInterval(state.timer); state.timer = null; } state.playing = false; playBtn.textContent = 'Play'; playBtn.classList.remove('bg-emerald-100', 'text-emerald-800'); playBtn.classList.add('bg-slate-200', 'text-slate-700'); }
+      function play()  { if (state.timer) clearInterval(state.timer); state.playing = true; playBtn.textContent = 'Pause'; playBtn.classList.add('bg-emerald-100', 'text-emerald-800'); playBtn.classList.remove('bg-slate-200', 'text-slate-700'); state.timer = setInterval(() => { const i = state.dateKeys.indexOf(state.currentDate); state.currentDate = state.dateKeys[(i + 1) % state.dateKeys.length]; updateDateBtns(); applyState(); }, state.PHASE_MS); }
+
+      let _idx = null, _kwGrid = null;
+      function buildPanels() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid) return;
+        const minX = grid.bounds.min_x, maxX = grid.bounds.max_x;
+        const minY = grid.bounds.min_y, maxY = grid.bounds.max_y;
+        const cols = maxX - minX + 1;
+        const rows = maxY - minY + 1;
+        const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
+
+        const idx = {};
+        state.dateKeys.forEach(d => {
+          idx[d] = {};
+          entities.forEach(e => {
+            idx[d][e] = {};
+            (grid[d] && grid[d][e] || []).forEach(r => { idx[d][e][`${r.x},${r.y}`] = r.rank; });
+          });
+        });
+        _idx = idx; _kwGrid = { cols, rows, minX, minY, presentCells };
+
+        const wrap = document.getElementById('cr-panels');
+        wrap.innerHTML = entities.map(entity => {
+          const isClient = entity === ld.client;
+          return `
+            <div class="rounded-lg border-2 ${isClient ? 'border-brand-500 bg-brand-50/30' : 'border-slate-200 bg-white'} p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-sm truncate ${isClient ? 'text-brand-700' : 'text-slate-800'}" title="${entity}">
+                  ${friendlyName(entity)}${isClient ? ' <span class="text-[10px] uppercase font-bold text-brand-500">(you)</span>' : ''}
+                </div>
+              </div>
+              <div class="cr-grid" data-entity="${entity}" style="grid-template-columns: repeat(${cols}, 1fr); aspect-ratio: ${cols}/${rows}; max-width: 360px; margin: 0 auto;">
+                ${(() => {
+                  const out = [];
+                  for (let yi = 0; yi < rows; yi++) {
+                    for (let xi = 0; xi < cols; xi++) {
+                      const x = minX + xi, y = minY + yi;
+                      const key = `${x},${y}`;
+                      const present = presentCells.has(key);
+                      out.push(`<div class="hm-cell ${present?'':'off-grid'}" data-key="${key}"></div>`);
+                    }
+                  }
+                  return out.join('');
+                })()}
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-4 pt-3 border-t border-slate-200 text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                <div>Avg rank</div><div>Top-3 cells</div><div>Total cells</div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-1" data-stats="${entity}">
+                <div class="text-xl font-extrabold text-slate-800 cr-avg">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top3">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-cells">—</div>
+              </div>
+            </div>`;
+        }).join('');
+      }
+
+      function rankColor(r) {
+        if (r == null) return '#f8fafc';
+        if (r <= 3) return '#047857'; if (r <= 6) return '#10b981'; if (r <= 10) return '#84cc16';
+        if (r <= 20) return '#f59e0b'; if (r <= 50) return '#f97316'; return '#e5e7eb';
+      }
+
+      function applyState() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid || !_idx) return;
+        const date = state.currentDate;
+        entities.forEach(entity => {
+          const gridEl = document.querySelector(`.cr-grid[data-entity="${CSS.escape(entity)}"]`);
+          if (!gridEl) return;
+          gridEl.querySelectorAll('.hm-cell').forEach(cell => {
+            if (cell.classList.contains('off-grid')) { cell.style.background = 'transparent'; return; }
+            const key = cell.dataset.key;
+            const rank = _idx[date][entity]?.[key];
+            cell.style.background = rankColor(rank);
+            cell.textContent = (rank != null && rank <= 20) ? rank : '';
+            cell.title = `${friendlyName(entity)} — ${rank != null ? 'rank ' + rank : 'not in top 20'} (${state.dateLabels[state.dateKeys.indexOf(date)]})`;
+          });
+          const stats = grid.summary[entity] || {};
+          const statBox = document.querySelector(`[data-stats="${CSS.escape(entity)}"]`);
+          if (statBox) {
+            const avg = stats[`${date}_avg`];
+            const t3 = stats[`${date}_top3`];
+            const c = stats[`${date}_cells`];
+            statBox.querySelector('.cr-avg').textContent = (avg != null) ? Number(avg).toFixed(1) : '—';
+            statBox.querySelector('.cr-top3').textContent = (t3 != null) ? t3 : '—';
+            statBox.querySelector('.cr-cells').textContent = (c != null) ? c : '—';
+          }
+        });
+      }
+
+      buildPanels();
+      applyState();
+      play();
+    }
+  })();
   </script>
 </body>
 </html>
