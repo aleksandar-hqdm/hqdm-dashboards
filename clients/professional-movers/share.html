@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Professional Movers.com · Q3 2026 Update</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .report-shell { max-width: 1200px; }
+    .stat-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .stat-tile.good { border-left-color: #10b981; }
+    .stat-tile.watch { border-left-color: #f59e0b; }
+    .stat-tile.bad { border-left-color: #ef4444; }
+    .stat-tile .v { font-size: 1.875rem; font-weight: 800; line-height: 1.1; color: #0b1220; }
+    .stat-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
+    .stat-tile .s { font-size: 0.75rem; color: #6b7280; margin-top: 0.4rem; line-height: 1.35; }
+    .panel { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 0.375rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .pill.good { background: #d1fae5; color: #065f46; }
+    .pill.watch { background: #fef3c7; color: #92400e; }
+    .pill.bad { background: #fee2e2; color: #991b1b; }
+    .recovery-tile { background: white; border-radius: 0.5rem; padding: 1.25rem; border-left: 4px solid #10b981; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .recovery-tile .pct { font-size: 2.25rem; font-weight: 800; line-height: 1.05; color: #047857; }
+    .recovery-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.45rem; }
+    .recovery-tile .b { font-size: 0.85rem; font-weight: 600; color: #1f2937; margin-top: 0.4rem; }
+    .recovery-tile .s { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
+    .hm-cell { aspect-ratio: 1 / 1; border-radius: 2px; font-size: 11px; line-height: 1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; transition: background-color 800ms ease; min-width: 0; }
+    .hm-cell.off-grid { background: transparent !important; color: transparent; }
+    .cr-grid { display: grid; gap: 2px; }
+    .timeline-event { position: relative; padding-left: 1.5rem; padding-bottom: 1rem; border-left: 2px solid #cbd5e1; }
+    .timeline-event:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-event::before { content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #1d5b8a; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1; }
+    .timeline-event.bad::before { background: #ef4444; }
+    .timeline-event.good::before { background: #10b981; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+      .panel, .stat-tile, .recovery-tile { box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+  <!-- share.html — no internal nav; safe to share with anyone -->
+
+  <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
+
+    <!-- ============ HERO ============ -->
+    <section class="border-b border-slate-200 pb-5 mb-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Professional Movers.com</h1>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold">16 months of HQDM work — where we stand as of May 2026 and the 90-day plan</p>
+      <p class="text-sm text-slate-500 mt-1">Q3 2026 Update · Engagement started January 2025 · 4.9★ · 526 reviews · 45 years in business</p>
+    </section>
+
+    <!-- ============ HEADLINE — positives-first ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
+      <div class="panel" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+        <p class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800 font-medium">
+          Your Maps position is the channel that has carried the business through a tough algorithm year. Across the 13×13 metro grid you hold an average position of <strong>#3-#4 on "movers" and "movers near me"</strong> with 79-84 of the 121 grid cells in top-3 throughout Feb-May 2026 — no observable algorithm damage on the Maps side. On the Detroit-side queries — the ones a Walled Lake pin has to stretch to reach — you've <strong>extended top-10 reach from 9 cells to 67 cells on "movers detroit"</strong> (avg rank 12.5 → 10.5, +1.93 positions gained) and <strong>doubled top-10 reach on "detroit moving company"</strong> (8 → 16 cells, avg 14.3 → 13.5). The challenge is on organic search — impressions on Google's web results dropped after the September 2025 algorithm update — and the next 90 days are about extending the Maps momentum into Detroit and Rochester via two unmanaged office pins, cleaning up the underperforming suburb pages, and rebuilding the earned-link channel.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ WINS GRID — concrete positives ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Working — Concrete Wins</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="recovery-tile">
+          <div class="l">"movers detroit" · Top-10 Reach</div>
+          <div class="pct">9 → 67</div>
+          <div class="b">+58 cells in 3 months</div>
+          <div class="s">avg rank 12.5 → 10.5 (+1.93 positions)</div>
+        </div>
+        <div class="recovery-tile">
+          <div class="l">"detroit moving company" · Top-10 Reach</div>
+          <div class="pct">8 → 16</div>
+          <div class="b">doubled in 3 months</div>
+          <div class="s">avg rank 14.3 → 13.5</div>
+        </div>
+        <div class="recovery-tile" style="border-left-color: #1d5b8a;">
+          <div class="l" style="color: #1d5b8a;">"movers near me" · Top-3 Reach</div>
+          <div class="pct" style="color: #1d5b8a;">82 → 84</div>
+          <div class="b">held through the algorithm year</div>
+          <div class="s">avg rank 3.3 held · top-10 in 113/121 cells</div>
+        </div>
+        <div class="recovery-tile" style="border-left-color: #f59e0b;">
+          <div class="l" style="color: #f59e0b;">Reviews · Rating</div>
+          <div class="pct" style="color: #f59e0b;">526 · 4.9★</div>
+          <div class="b">Strongest local set in the Detroit metro</div>
+          <div class="s">Walled Lake HQ Google Business Profile</div>
+        </div>
+        <div class="recovery-tile" style="border-left-color: #10b981;">
+          <div class="l">LD Grid Average Rank</div>
+          <div class="pct">#3 in market</div>
+          <div class="b">avg 7.9 across 906 cells (May 1)</div>
+          <div class="s">Behind Bos 6.5 · ahead of Two Men 9.6</div>
+        </div>
+        <div class="recovery-tile" style="border-left-color: #6366f1;">
+          <div class="l">Ship-Ready Keyword Band</div>
+          <div class="pct">256 kws</div>
+          <div class="b">currently ranking positions 11-50</div>
+          <div class="s">The recovery target for Q3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TREND CHART ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · 18-Month View</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Organic Google Search visits to your website + quote-form submissions over the last 18 months. The September 2025 Google algorithm update is the visible inflection point on impressions; form submissions held more steadily through the same window.
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Search · Monthly Visitors</div>
+            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Search · Monthly Form Submissions</div>
+            <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-700 mt-3 font-semibold">Heads up — the "May 26*" data point is <span class="underline">partial</span>: 20 days actual plus a conservative extrapolation for the rest of the month. The dashed line marks the partial period.</p>
+        <p class="text-[11px] text-slate-500 mt-1 italic">Direct + LLM channels and the full multi-channel breakdown are in the strategic dashboard linked in the header.</p>
+      </div>
+    </section>
+
+    <!-- ============ MAPS HEATMAP — the new section ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How Your Google Maps Position Has Moved · Feb → May 2026</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          A bird's-eye view of where you (and your three biggest competitors in the local set) appear on Google Maps. Each square is one geographic spot in a 13×13 grid centered on Walled Lake. <strong>Dark green = top-3 results</strong>, lighter green = 4-6, yellow/orange = 11+. Switch between the three search terms or watch the 4-date time-lapse cycle automatically.
+        </p>
+
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50/60 border-b border-slate-200">
+            <div class="flex gap-2 flex-wrap" id="cr-kw-tabs"></div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Scan date:</span>
+              <div id="cr-date-tabs" class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
+              <button id="cr-play" class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded">Pause</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div id="cr-panels" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+          </div>
+
+          <div class="border-t border-slate-200 p-3 bg-slate-50/40 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+            <span>Rank:</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#047857"></span>1–3</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#10b981"></span>4–6</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#84cc16"></span>7–10</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f97316"></span>21–50</span>
+            <span class="inline-flex items-center gap-1 normal-case"><span class="inline-block w-3 h-3 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top 50</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH-BY-SEARCH ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What the Maps Are Telling Us — Search by Search</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+        <div class="panel" style="border-top: 4px solid #0ea5e9;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"movers detroit"</div>
+            <span class="pill good">Big Gain</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            <strong>The biggest single Maps move this quarter.</strong> Average position improved <strong>12.47 → 10.54 (+1.93 positions gained)</strong>, and your top-10 footprint exploded from <strong>9 cells to 67 cells</strong> across the 13×13 Detroit-area grid — more than 7× the reach. The Walled Lake pin is extending into Detroit-side cells at a rate that puts a managed Detroit Woodward GBP in play to convert this into top-3 placements.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #10b981;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"detroit moving company"</div>
+            <span class="pill good">Gaining</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Your top-10 footprint <strong>doubled from 8 cells to 16 cells</strong> between February and May, and average position improved <strong>14.26 → 13.54</strong>. A finding worth noting: Google has already indexed a <em>second</em> "Professional Movers.com" listing at the 1001 Woodward Ave address (ranking around #19). Claiming and managing that listing is the single biggest Maps move available next quarter.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #8b5cf6;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"movers near me"</div>
+            <span class="pill good">Strongest Defense</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Your strongest "near me" search. Average position <strong>3.30 → 3.40</strong> across all 121 grid cells (essentially flat), top-3 footprint <strong>grew from 82 to 84 cells</strong>, top-10 reach <strong>112 → 113</strong>. Highest-intent commercial query and you own it.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #f59e0b;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"moving companies"</div>
+            <span class="pill good">Holding</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Stable through the cliff. Average position <strong>4.77 → 4.83</strong> (essentially flat), top-3 reach <strong>65 → 64 cells</strong>, top-10 reach <strong>105 → 104</strong>. Bos Moving and Moving Made Easy are the closest competitors in the western metro grid.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #ec4899;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"moving company near me"</div>
+            <span class="pill watch">Slight Dip</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Slight position dip we're watching. Average <strong>3.61 → 3.89</strong>, top-3 reach <strong>83 → 79 cells</strong>. Still a top-4 position across 121 cells — well within the strong-defense band — but worth flagging for the GBP optimization work in Priority 1.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #6366f1;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"movers"</div>
+            <span class="pill watch">Slight Dip</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            The most competitive commercial query in the moving vertical. Average position <strong>3.96 → 4.26</strong>, top-3 reach <strong>81 → 79 cells</strong> — both essentially flat with a small dip we expect to recover via the GBP review-velocity work + photo refresh in Q3.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ THE CHALLENGES ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Challenges We're Tackling</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+
+        <div class="panel" style="border-left: 4px solid #ef4444;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-rose-700 mb-1">Organic search — the part that took a hit</div>
+          <h3 class="font-bold text-slate-900 text-base">−74% impressions on Google Search (Aug 2025 → May 2026)</h3>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            Google rolled out a core algorithm update in September 2025 that rebalanced rankings on long-tail content. A chunk of your published location pages — primarily templated suburb landing pages — lost their rankings and are no longer attracting search traffic. Monthly impressions went from 319,000 (Aug 2025) to 82,000 (May 2026). Your service pages stayed roughly stable; the damage was concentrated in the suburb-page cohort.
+          </p>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            The recovery path: clean up the underperforming suburb pages, deepen the seven service pages that already attract impressions but rank on page 2, and route internal link equity into them. Maps and the GBP channel — the ones that drove your form submissions — were not affected.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #f59e0b;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1">Maps reach is limited by geometry</div>
+          <h3 class="font-bold text-slate-900 text-base">PM operates 3 physical offices but only 1 GBP is under our management</h3>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            The Walled Lake pin is performing as well as a single pin can — but your declared service area covers cities a single Walled Lake pin physically cannot reach on Maps (Rochester, Royal Oak, Birmingham, Farmington Hills, Plymouth). The Detroit Woodward (1001 Woodward Ave) and Rochester (419 Golf View Ln) offices are listed on your website but their Google Business Profiles are not currently under HQDM management.
+          </p>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            <strong>Bringing those two pins under management is the single highest-leverage move we can make next quarter.</strong> The "detroit moving company" momentum we're already seeing (doubling top-10 reach) gives us a base to build on once a managed Woodward Ave pin comes online.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #6366f1;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-700 mb-1">Measurement gap</div>
+          <h3 class="font-bold text-slate-900 text-base">Quote-form submissions weren't being counted in Google Analytics</h3>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            Form submissions on your site fire correctly in Google Analytics (~190 events per month across all traffic sources), but the conversion-event flag in property settings was never enabled — so GA4's native reports showed "0 conversions." We have a 5-minute fix on our side that unlocks accurate conversion reporting going forward.
+          </p>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            Beyond that, we'll add two more tracking events to mirror the pattern we use on our other moving accounts: <code>click_phone_number</code> (fires when someone taps a phone-number link on the website) and <code>gmb_click</code> (fires on Google Business Profile-tagged link clicks). Once both are live, monthly reports will show a complete leads picture by channel.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ STRATEGY — NEXT 90 DAYS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Next — The Next 90 Days</h2>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        Five workstreams running in parallel plus one quick analytics fix. The first one — claiming the unmanaged offices for Maps — is the highest-leverage move; the rest compound it.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="panel" style="border-left: 4px solid #10b981;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 1</span>
+            <h3 class="font-bold text-slate-900 text-base">Claim two more Google Business Profiles · Detroit Woodward + Rochester</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Your Detroit and Rochester offices are real, listed on the site, and have already been indexed by Google. <strong>The Detroit Woodward pin is the biggest opportunity</strong> — you already rank #2-3 average on the Detroit grid from "pin-bleed" without managing the listing. A managed pin closes that to #1 on Detroit-modified searches inside 60 days. The Rochester pin opens an entirely new geography (currently zero Maps reach there). We'll need your confirmation on the claim status of each (Owner Ask #1 below) and from there it's HQDM execution.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #1d5b8a;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 2</span>
+            <h3 class="font-bold text-slate-900 text-base">Page surgery — clean up the suburb pages, deepen the service pages</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            The roughly 70 suburb pages produced before the September 2025 Google update are no longer attracting search traffic — 60+ of them received zero impressions in the last 30 days. We'll <strong>redirect or delete about 50 of them</strong> (consolidating into the locations that work), upgrade the 7 service pages that have impressions but rank on page 2-3 (hot-tub moving, piano moving, artwork moving, senior moving, local moving, office furniture installation, internal small moving), and build 4 dedicated landing pages for Detroit + Michigan-statewide searches.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #6366f1;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 3</span>
+            <h3 class="font-bold text-slate-900 text-base">Internal linking + schema markup</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            About 50 specific internal-link changes routing equity from where it currently sits to the pages we want to rank, plus structured-data markup on all upgraded pages so Google can show enhanced results (sitelinks, FAQ snippets, breadcrumb trails). Quiet but compounding work — typically lifts rankings 3-8 positions across the ship-ready keyword band.
+          </p>
+        </div>
+
+        <div class="panel" style="border-left: 4px solid #8b5cf6;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority 4</span>
+            <h3 class="font-bold text-slate-900 text-base">Content refresh + new commercial-intent blog</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Your top blog posts get a lot of impressions but few clicks — we'll refresh them to convert that traffic into commercial inquiries. Then we'll publish three new Detroit-area commercial-intent pieces ("Moving cost Detroit MI 2026," "Best moving company Detroit reviews," "How much to tip movers"). The <code>/senior-moving/flat-screen-tv-moving/</code> page on your site is the model — it's running at 1.36% CTR on niche-service queries, which is excellent.
+          </p>
+        </div>
+
+        <div class="panel lg:col-span-2" style="border-left: 4px solid #f59e0b;">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill watch">Priority 5</span>
+            <h3 class="font-bold text-slate-900 text-base">Local PR + citation expansion + local partnerships</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            <strong>Re-engage Detroit Free Press and Oakland Press</strong> on the "Best Moving Company" relationship that's been dormant. Complete the top 20 industry-specific directory listings (BBB, Yelp, AMSA, ProMover, MoversAuthority). Pursue three local partner outreaches we have lined up: a realtor in the moving niche, the Oakland University relocation office (your Rochester office is close to OU), and a senior community partner (your Senior Moving service is a strong fit). The first earned-link from a vetted publication is a Q3 milestone.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-4 panel" style="background: #fffbeb; border-color: #fed7aa;">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1">P0 — quick analytics fix (week 1)</div>
+        <h3 class="font-bold text-slate-900 text-base">Mark form_submit as a conversion event in GA4 + deploy two more tracking events</h3>
+        <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+          5-minute property-settings fix on our side that unlocks accurate conversion reporting in Google Analytics from this point forward (form submissions are already firing — they just weren't flagged as conversions). Then a 2-day Google Tag Manager deployment adds the phone-link and GBP-link click events so monthly reports show a complete leads picture. HQDM-side; no client action needed.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ OWNER ASKS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
+      <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
+        <ul class="space-y-2.5 text-sm text-slate-800">
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Google Business Profile claim status — Detroit Woodward + Rochester.</strong> Your website lists three offices: Walled Lake HQ (which we manage), 1001 Woodward Ave in Detroit, and 419 Golf View Ln in Rochester. We see signs Google has already indexed a "Professional Movers.com" entity at Woodward. Are those two pins claimed by you, claimed by someone else, or unclaimed? If you have the logins, are you OK with HQDM bringing them into our management scope so we can extend Maps coverage into Detroit and Rochester?</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
+        · Q3 2026 client update
+        · Prepared by Aleksandar Spasevski
+        · 2026-05-22
+        · Engagement start: January 2025
+      </div>
+      <div class="text-slate-400">Confidential — for Professional Movers.com only.</div>
+    </footer>
+
+  </main>
+
+  <script>
+  (async function () {
+    const v = '?v=' + Date.now();
+    const [DATA, LD] = await Promise.all([
+      fetch('./data/data.json' + v).then(r => r.json()),
+      fetch('./data/ld_grids.json' + v).then(r => r.json()).catch(() => null),
+    ]);
+    if (!DATA) return;
+
+    renderTrendCharts(DATA);
+    if (LD) renderHeatmap(LD);
+
+    function renderTrendCharts(d) {
+      const t = d.trend; if (!t) return;
+      const WINDOW = 18;
+      const allMonths = t.months || [];
+      const startIdx = Math.max(0, allMonths.length - WINDOW);
+      const months = allMonths.slice(startIdx);
+      const organicSessions = (t.sessions?.organic || []).slice(startIdx);
+      const organicConv = (t.form_submits?.organic || []).slice(startIdx);
+
+      const partialIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
+      const splitSeries = (data) => {
+        if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
+        const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
+        const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
+        return { solid, dashed };
+      };
+
+      const buildSplit = (data, color, label) => {
+        const sp = splitSeries(data);
+        return [
+          { label: label, data: sp.solid, borderColor: color, backgroundColor: color + '22',
+            borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: true, spanGaps: false },
+          { label: label + ' (partial month)', data: sp.dashed, borderColor: color, backgroundColor: 'transparent',
+            borderDash: [6, 4], borderWidth: 2.5, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false },
+        ];
+      };
+
+      const opts = (yLabel) => ({
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 14, filter: (item) => !/partial month/.test(item.text) } },
+          tooltip: { backgroundColor: '#0b1220', padding: 10,
+            callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial month)', '')}: ${(ctx.raw != null ? ctx.raw.toLocaleString() : '—')}` } },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: yLabel, font: { size: 11, weight: '600' } } },
+        },
+      });
+
+      const sesEl = document.getElementById('trend-sessions');
+      if (sesEl) new Chart(sesEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildSplit(organicSessions, '#1d5b8a', 'Organic Search · visitors') },
+        options: opts('monthly visitors'),
+      });
+      const conEl = document.getElementById('trend-conversions');
+      if (conEl) new Chart(conEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildSplit(organicConv, '#10b981', 'Organic Search · form submissions') },
+        options: opts('monthly form submissions'),
+      });
+    }
+
+    function renderHeatmap(ld) {
+      const state = {
+        currentKw: ld.keywords[0],
+        currentDate: null,
+        dateKeysAll: ld.date_keys || ['feb', 'may'],
+        dateLabelsAll: ld.dates || ['Feb', 'May'],
+        // Per-keyword active date sequence — recomputed on tab switch
+        dateKeys: [],
+        dateLabels: [],
+        playing: true,
+        timer: null,
+        PHASE_MS: 1100,
+      };
+
+      // Per-keyword competitor sets (fallback to global ld.competitors if not set)
+      function entitiesForKw(kw) {
+        const grid = ld.grids[kw];
+        const comps = (grid && grid.competitors) || ld.competitors || [];
+        return [ld.client, ...comps];
+      }
+
+      // Per-keyword active dates (from grid.dates_present), fallback to all
+      function activeDatesForKw(kw) {
+        const grid = ld.grids[kw];
+        const present = (grid && grid.dates_present) || state.dateKeysAll;
+        const labels = present.map(k => {
+          const i = state.dateKeysAll.indexOf(k);
+          return i >= 0 ? state.dateLabelsAll[i] : k;
+        });
+        return { keys: present, labels };
+      }
+
+      const kwTabs = document.getElementById('cr-kw-tabs');
+      kwTabs.innerHTML = ld.keywords.map((kw, i) => `
+        <button data-kw="${kw}" class="cr-kw-tab text-xs font-semibold px-2.5 py-1 rounded ${i===0?'bg-brand-500 text-white':'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'}">${kw}</button>
+      `).join('');
+      kwTabs.querySelectorAll('.cr-kw-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          kwTabs.querySelectorAll('.cr-kw-tab').forEach(b => {
+            b.classList.remove('bg-brand-500', 'text-white');
+            b.classList.add('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          });
+          btn.classList.add('bg-brand-500', 'text-white');
+          btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          state.currentKw = btn.dataset.kw;
+          refreshDatesForKw();
+          buildPanels(); applyState();
+          if (state.playing) play();
+        });
+      });
+
+      const dateTabs = document.getElementById('cr-date-tabs');
+
+      function refreshDatesForKw() {
+        const { keys, labels } = activeDatesForKw(state.currentKw);
+        state.dateKeys = keys;
+        state.dateLabels = labels;
+        state.currentDate = keys[0];
+        dateTabs.innerHTML = state.dateKeys.map((k, i) => {
+          const label = state.dateLabels[i] || k;
+          const active = i === 0;
+          return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
+        }).join('');
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            pause();
+            state.currentDate = btn.dataset.date;
+            updateDateBtns(); applyState();
+          });
+        });
+      }
+      refreshDatesForKw();
+
+      const playBtn = document.getElementById('cr-play');
+      playBtn.addEventListener('click', () => { if (state.playing) pause(); else play(); });
+
+      function updateDateBtns() {
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(b => {
+          if (b.dataset.date === state.currentDate) {
+            b.classList.add('bg-brand-500', 'text-white'); b.classList.remove('bg-white', 'text-slate-700');
+          } else {
+            b.classList.remove('bg-brand-500', 'text-white'); b.classList.add('bg-white', 'text-slate-700');
+          }
+        });
+      }
+      function pause() {
+        if (state.timer) { clearInterval(state.timer); state.timer = null; }
+        state.playing = false;
+        playBtn.textContent = 'Play';
+        playBtn.classList.remove('bg-emerald-100', 'text-emerald-800');
+        playBtn.classList.add('bg-slate-200', 'text-slate-700');
+      }
+      function play() {
+        if (state.timer) clearInterval(state.timer);
+        state.playing = true;
+        playBtn.textContent = 'Pause';
+        playBtn.classList.add('bg-emerald-100', 'text-emerald-800');
+        playBtn.classList.remove('bg-slate-200', 'text-slate-700');
+        state.timer = setInterval(() => {
+          const i = state.dateKeys.indexOf(state.currentDate);
+          state.currentDate = state.dateKeys[(i + 1) % state.dateKeys.length];
+          updateDateBtns(); applyState();
+        }, state.PHASE_MS);
+      }
+
+      let _idx = null;
+      function buildPanels() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid) return;
+        const minX = grid.bounds.min_x, maxX = grid.bounds.max_x;
+        const minY = grid.bounds.min_y, maxY = grid.bounds.max_y;
+        const cols = maxX - minX + 1;
+        const rows = maxY - minY + 1;
+        const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
+        const entities = entitiesForKw(kw);
+
+        const idx = {};
+        state.dateKeys.forEach(d => {
+          idx[d] = {};
+          entities.forEach(e => {
+            idx[d][e] = {};
+            (grid[d] && grid[d][e] || []).forEach(r => { idx[d][e][`${r.x},${r.y}`] = r.rank; });
+          });
+        });
+        _idx = idx;
+
+        const wrap = document.getElementById('cr-panels');
+        wrap.innerHTML = entities.map(entity => {
+          const isClient = entity === ld.client;
+          return `
+            <div class="rounded-lg border-2 ${isClient ? 'border-brand-500 bg-brand-50/30' : 'border-slate-200 bg-white'} p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-sm truncate ${isClient ? 'text-brand-700' : 'text-slate-800'}" title="${entity}">
+                  ${entity}${isClient ? ' <span class="text-[10px] uppercase font-bold text-brand-500">(you)</span>' : ''}
+                </div>
+              </div>
+              <div class="cr-grid" data-entity="${entity}" style="grid-template-columns: repeat(${cols}, 1fr); aspect-ratio: ${cols}/${rows}; max-width: 360px; margin: 0 auto;">
+                ${(() => {
+                  const out = [];
+                  for (let yi = 0; yi < rows; yi++) {
+                    for (let xi = 0; xi < cols; xi++) {
+                      const x = minX + xi, y = minY + yi;
+                      const key = `${x},${y}`;
+                      const present = presentCells.has(key);
+                      out.push(`<div class="hm-cell ${present?'':'off-grid'}" data-key="${key}"></div>`);
+                    }
+                  }
+                  return out.join('');
+                })()}
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-4 pt-3 border-t border-slate-200 text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                <div>Avg rank</div><div>Top-3 cells</div><div>Top-10 cells</div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-1" data-stats="${entity}">
+                <div class="text-xl font-extrabold text-slate-800 cr-avg">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top3">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top10">—</div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      function rankColor(r) {
+        if (r == null) return '#f8fafc';
+        if (r <= 3) return '#047857'; if (r <= 6) return '#10b981'; if (r <= 10) return '#84cc16';
+        if (r <= 20) return '#f59e0b'; if (r <= 50) return '#f97316'; return '#e5e7eb';
+      }
+
+      function applyState() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid || !_idx) return;
+        const date = state.currentDate;
+        const entities = entitiesForKw(kw);
+        entities.forEach(entity => {
+          const gridEl = document.querySelector(`.cr-grid[data-entity="${CSS.escape(entity)}"]`);
+          if (!gridEl) return;
+          gridEl.querySelectorAll('.hm-cell').forEach(cell => {
+            if (cell.classList.contains('off-grid')) { cell.style.background = 'transparent'; return; }
+            const key = cell.dataset.key;
+            const rank = _idx[date][entity]?.[key];
+            cell.style.background = rankColor(rank);
+            cell.textContent = (rank != null && rank <= 20) ? rank : '';
+            cell.title = `${entity} — ${rank != null ? 'rank ' + rank : 'not in top 50'} (${state.dateLabels[state.dateKeys.indexOf(date)]})`;
+          });
+          const stats = grid.summary[entity];
+          const statBox = document.querySelector(`[data-stats="${CSS.escape(entity)}"]`);
+          if (statBox && stats) {
+            const avg = stats[`${date}_avg`];
+            const t3 = stats[`${date}_top3`];
+            const t10 = stats[`${date}_top10`];
+            statBox.querySelector('.cr-avg').textContent = avg != null ? Number(avg).toFixed(1) : '—';
+            statBox.querySelector('.cr-top3').textContent = t3 != null ? t3 : '—';
+            statBox.querySelector('.cr-top10').textContent = t10 != null ? t10 : '—';
+          }
+        });
+      }
+
+      buildPanels();
+      applyState();
+      play();
+    }
+  })();
+  </script>
+</body>
+</html>
