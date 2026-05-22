@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Body Balance Massage &amp; Float · May 2026 Update · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- share.html is self-contained — no relative CSS deps. -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .report-shell { max-width: 1200px; }
+    .stat-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .stat-tile.good { border-left-color: #10b981; }
+    .stat-tile.watch { border-left-color: #f59e0b; }
+    .stat-tile.bad { border-left-color: #ef4444; }
+    .stat-tile .v { font-size: 1.875rem; font-weight: 800; line-height: 1.1; color: #0b1220; }
+    .stat-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
+    .stat-tile .s { font-size: 0.75rem; color: #6b7280; margin-top: 0.4rem; line-height: 1.35; }
+    .panel { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 0.375rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .pill.good { background: #d1fae5; color: #065f46; }
+    .pill.watch { background: #fef3c7; color: #92400e; }
+    .pill.bad { background: #fee2e2; color: #991b1b; }
+    /* Movement tiles — recovery / growth */
+    .recovery-tile { background: white; border-radius: 0.5rem; padding: 1.25rem; border-left: 4px solid #10b981; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .recovery-tile .pct { font-size: 2.25rem; font-weight: 800; line-height: 1.05; color: #047857; }
+    .recovery-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.45rem; }
+    .recovery-tile .b { font-size: 0.85rem; font-weight: 600; color: #1f2937; margin-top: 0.4rem; }
+    .recovery-tile .s { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
+    /* LD heatmap cells */
+    .hm-cell { aspect-ratio: 1 / 1; border-radius: 2px; font-size: 11px; line-height: 1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; transition: background-color 800ms ease; min-width: 0; }
+    .hm-cell.off-grid { background: transparent !important; color: transparent; }
+    .cr-grid { display: grid; gap: 2px; }
+    /* Storyline timeline */
+    .timeline-event { position: relative; padding-left: 1.5rem; padding-bottom: 1rem; border-left: 2px solid #cbd5e1; }
+    .timeline-event:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-event::before { content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #1d5b8a; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1; }
+    .timeline-event.bad::before { background: #ef4444; }
+    .timeline-event.good::before { background: #10b981; }
+    .timeline-event.neutral::before { background: #94a3b8; }
+    @media print {
+      .no-print { display: none !important; }
+      body { background: white !important; }
+      .panel, .stat-tile, .recovery-tile { box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+
+  <!-- Sticky nav stripped for share.html — no links back to dashboard. -->
+
+  <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
+
+    <!-- ============ HERO ============ -->
+    <section class="border-b border-slate-200 pb-5 mb-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski · AM Matt Olderman</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight" id="hero-client">Body Balance Massage &amp; Float</h1>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold" id="hero-tagline-main">—</p>
+      <p class="text-sm text-slate-500 mt-1" id="hero-tagline-sub">—</p>
+    </section>
+
+    <!-- ============ HEADLINE ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
+      <div class="panel" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+        <p id="headline-lede" class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800 font-medium">—</p>
+      </div>
+    </section>
+
+    <!-- ============ TREND CHART ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Last 8 Months</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads — booking events + form submissions + phone/email click intents (engagement events and duplicate-attribution events excluded).
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
+            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
+            <div style="height: 320px;"><canvas id="trend-leads"></canvas></div>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-700 mt-3 font-semibold" id="trend-partial-note">—</p>
+      </div>
+    </section>
+
+
+    <!-- ============ STORYLINE TIMELINE + MOVEMENT TILES ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What Happened — A Timeline</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="panel">
+          <div id="timeline-container"></div>
+        </div>
+        <div class="space-y-3">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 -mb-1">Movement at a glance</div>
+          <div id="movement-tiles"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUARTERLY SNAPSHOT ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Snapshot · Year-over-Year + Q2 in flight</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Three rows that frame where we are. <strong>Q1 2025</strong> = the baseline. <strong>Q1 2026</strong> = exactly one year later — the cleanest year-over-year comparison we can run. <strong>Q2 2026 (Apr + May so far)</strong> = the most recent 6+ weeks, partial. The Q2 row is partial-quarter — treat it as "where we are right now," not a full-quarter result.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Quarter</th>
+                <th class="py-2 pr-3 text-right">Organic Visitors</th>
+                <th class="py-2 pr-3 text-right">Organic Leads</th>
+                <th class="py-2 pr-3 text-right">Lead Capture Rate</th>
+                <th class="py-2 text-left">Context</th>
+              </tr>
+            </thead>
+            <tbody id="quarterly-body"></tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3 italic">
+          "Leads" = booking events + form submissions + call/email click intent. <strong>Engagement events (GBP listing taps, banner CTA clicks, gift-card clicks) are excluded</strong> — those were added to GA4 as "conversions" in Aug 2025 but they're top-funnel taps, not bookings. Lead capture rate (LCR) = leads ÷ visitors. Neither metric represents completed paid sessions — that requires downstream attribution (CallRail call duration/quality + booking-system confirmation feed) which isn't integrated yet.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ MAPS HEATMAP ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · Jan 19 → Apr 18, 2026</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          A bird's-eye view of where Body Balance (and its top 3 challengers) appear on Google Maps across a 13×13 grid centered on the American Fork pin. Each square is one geographic spot; <strong>dark green = top 3 results</strong>, lighter green = 4–6, yellow/orange = 11+. Click any date button to flip between the four monthly scans and watch how each business's footprint changes. Two notes: <strong>(1)</strong> the float-only competitors (Purify Wellness, True REST) only show colored cells on float queries — that's the data telling you they don't compete in the massage searches; <strong>(2)</strong> the closer-radius cells (around the AF pin) is where Body Balance is strongest — at the grid edges, the contest gets tighter as Pleasant Grove + Lehi pins come into play.
+        </p>
+
+        <div class="border border-slate-200 rounded-lg overflow-hidden">
+          <div class="flex flex-wrap items-center justify-between gap-3 p-3 bg-slate-50/60 border-b border-slate-200">
+            <div class="flex gap-2 flex-wrap" id="cr-kw-tabs"></div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Date:</span>
+              <div id="cr-date-tabs" class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
+              <button id="cr-play" class="px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded">Pause</button>
+            </div>
+          </div>
+
+          <div class="p-4">
+            <div id="cr-panels" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+          </div>
+
+          <div class="border-t border-slate-200 p-3 bg-slate-50/40 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+            <span>Rank:</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#047857"></span>1–3</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#10b981"></span>4–6</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#84cc16"></span>7–10</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+            <span class="inline-flex items-center gap-1 normal-case"><span class="inline-block w-3 h-3 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top 20</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH-BY-SEARCH ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Search-by-Search Breakdown</h2>
+      <div id="search-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- ============ COMPETITORS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Who's Pushing on You</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Top-3 map placements aggregated across the tracked queries × all scan dates. Body Balance is at the top of the table — <strong>more top-3 spots than the next two competitors combined</strong>. The two competitor sets to know: <strong>the float pair</strong> (Purify Wellness + True REST) — only competes on float terms, BB's review moat holds #1; <strong>the AF/PG/Lehi massage cluster</strong> — Relaxing Remedy is the closest geographic challenger, MassageLuXe is the direct subscription competitor.
+        </p>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-2 pr-3">Competitor</th>
+                <th class="py-2 pr-3 text-right">Top-3 Map Spots (May)</th>
+                <th class="py-2 pr-3 text-right">Change Since Feb</th>
+                <th class="py-2 pr-3 text-right">Kws Present</th>
+                <th class="py-2 text-left">Note</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+        </div>
+        <p class="text-xs text-slate-500 mt-3 italic">
+          Sum of top-3 cells across the tracked queries on the latest scan (Apr 18). "Change since Jan/Feb" = top-3 cells gained or lost vs the baseline scan. "Kws present" = how many of the tracked queries the competitor appears in at all (i.e. whether they compete in massage, float, or both).
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ STRATEGY ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Next — The Next 90 Days</h2>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        Priorities for Q2 → Q3 2026. Compound the wins (#1 dominance + subscription breakthrough), open new growth (on-site CTR + untracked services), rebuild authority post-halt.
+      </p>
+      <div id="priorities-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-3"></div>
+      <p class="text-xs text-slate-500 mt-3 italic">If you'd like the full task-by-task plan, your AM Matt can walk you through the strategic dashboard separately.</p>
+    </section>
+
+    <!-- ============ OWNER ASKS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
+      <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
+        <ul id="owner-asks-list" class="space-y-2.5 text-sm text-slate-800"></ul>
+      </div>
+    </section>
+
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
+        · <span id="footer-as-of">May 2026 update</span>
+        · Prepared by Aleksandar Spasevski
+        · <span id="footer-prepared">2026-05-22</span>
+        · Account Manager: Matt Olderman
+        · <span id="footer-version">v10</span>
+      </div>
+      <div class="text-slate-400">Confidential — for Body Balance only. noindex.</div>
+    </footer>
+
+  </main>
+
+  <script>
+  (async function () {
+    const [DATA, LD] = await Promise.all([
+      fetch('https://aleksandar-hqdm.github.io/hqdm-dashboards/clients/body-balance-massage/data/data.json').then(r => r.json()),
+      fetch('https://aleksandar-hqdm.github.io/hqdm-dashboards/clients/body-balance-massage/data/ld_grids.json').then(r => r.json()).catch(() => null),
+    ]);
+    if (!DATA || !DATA.client_report_v2) {
+      document.getElementById('headline-lede').innerHTML = '<span style="color:#b91c1c">data.json missing client_report_v2 block — please run _build_client_report_v2.py</span>';
+      return;
+    }
+    const V = DATA.client_report_v2;
+
+    // ===== Hero =====
+    document.getElementById('hero-tagline-main').textContent = V.hero.tagline_main;
+    document.getElementById('hero-tagline-sub').textContent = V.hero.tagline_sub;
+    document.getElementById('headline-lede').innerHTML = V.headline.lede;
+    document.getElementById('footer-as-of').textContent = V.as_of;
+    document.getElementById('footer-prepared').textContent = V.prepared_date;
+    document.getElementById('footer-version').textContent = V.version;
+
+    // ===== Movement tiles =====
+    const tilesEl = document.getElementById('movement-tiles');
+    V.movement_tiles.forEach((t, i) => {
+      const isMaps = /maps/i.test(t.label);
+      const borderColor = isMaps ? '#1d5b8a' : '#10b981';
+      const pctColor = isMaps ? '#1d5b8a' : '#047857';
+      const html = `
+        <div class="recovery-tile" style="border-left-color:${borderColor}">
+          <div class="l">${t.label}</div>
+          <div class="pct" style="color:${pctColor}">${isMaps ? t.pct : '▲ ' + t.pct}</div>
+          <div class="b">${t.baseline} → ${t.current}</div>
+          <div class="s">${t.sub}</div>
+        </div>`;
+      tilesEl.insertAdjacentHTML('beforeend', html);
+    });
+
+    // ===== Timeline =====
+    const tlEl = document.getElementById('timeline-container');
+    V.timeline.forEach(e => {
+      const kindCls = e.kind === 'good' ? 'good' : e.kind === 'bad' ? 'bad' : 'neutral';
+      const labelCls = e.kind === 'good' ? 'text-emerald-700' : e.kind === 'bad' ? 'text-rose-600' : 'text-slate-500';
+      tlEl.insertAdjacentHTML('beforeend', `
+        <div class="timeline-event ${kindCls}">
+          <div class="text-[10px] font-bold uppercase tracking-wider ${labelCls}">${e.phase}</div>
+          <div class="font-bold text-slate-900 mt-1">${e.title}</div>
+          <p class="text-sm text-slate-700 mt-1">${e.body}</p>
+        </div>`);
+    });
+
+    // ===== Quarterly snapshot =====
+    const qBody = document.getElementById('quarterly-body');
+    V.quarterly_snapshot.forEach(q => {
+      const isCurrent = q.kind === 'current';
+      const cls = isCurrent ? 'bg-emerald-50/40' : '';
+      const tcolor = isCurrent ? 'font-bold text-emerald-700' : 'font-semibold text-slate-700';
+      const mcolor = isCurrent ? 'font-bold text-emerald-700' : '';
+      qBody.insertAdjacentHTML('beforeend', `
+        <tr class="border-b border-slate-100 ${cls}">
+          <td class="py-2.5 pr-3 ${tcolor}">${q.q}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.sessions.toLocaleString()}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.leads}</td>
+          <td class="py-2.5 pr-3 text-right font-mono ${mcolor}">${q.lcr}%</td>
+          <td class="py-2.5 text-slate-600 text-xs">${q.context}</td>
+        </tr>`);
+    });
+
+    // ===== Trend charts =====
+    renderTrendCharts(V.trend_chart);
+
+    function renderTrendCharts(t) {
+      if (!t) return;
+      const months = t.months;
+      const sess = t.sessions;
+      const leads = t.leads;
+      const partialIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
+
+      const splitSeries = (data) => {
+        if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
+        const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
+        const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
+        return { solid, dashed };
+      };
+      const ses = splitSeries(sess);
+      const lds = splitSeries(leads);
+
+      const buildDatasets = (split, color, label) => [
+        { label: label, data: split.solid, borderColor: color, backgroundColor: color + '20', borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: true, spanGaps: false },
+        { label: label + ' (partial month)', data: split.dashed, borderColor: color, backgroundColor: 'transparent', borderDash: [6, 4], borderWidth: 2.5, tension: 0.25, pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false },
+      ];
+
+      const opts = (yLabel) => ({
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 14, filter: (item) => !/partial month/.test(item.text) } },
+          tooltip: { backgroundColor: '#0b1220', padding: 10, callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial month)', '')}: ${(ctx.raw != null ? ctx.raw.toLocaleString() : '—')}` } },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
+          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: yLabel, font: { size: 11, weight: '600' } } },
+        },
+      });
+
+      const sesEl = document.getElementById('trend-sessions');
+      if (sesEl && sess.length) new Chart(sesEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(ses, '#1d5b8a', 'Organic Search Visitors') },
+        options: opts('monthly visitors'),
+      });
+      const ldEl = document.getElementById('trend-leads');
+      if (ldEl && leads.length) new Chart(ldEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(lds, '#10b981', 'Organic Search Leads') },
+        options: opts('monthly leads'),
+      });
+
+      const note = document.getElementById('trend-partial-note');
+      if (note) note.textContent = t.partial_note;
+    }
+
+    // ===== Search-by-search cards =====
+    const cardsEl = document.getElementById('search-cards-grid');
+    V.search_cards.forEach(c => {
+      const pillCls = c.sentiment === 'good' ? 'good' : c.sentiment === 'watch' ? 'watch' : 'good';
+      cardsEl.insertAdjacentHTML('beforeend', `
+        <div class="panel">
+          <div class="flex items-center justify-between gap-2 mb-1">
+            <div class="font-bold text-slate-800">"${c.keyword}"</div>
+            <span class="pill ${pillCls}">${c.verdict}</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">${c.commentary}</p>
+        </div>`);
+    });
+
+    // ===== Competitor leaderboard =====
+    const lbBody = document.getElementById('leaderboard-body');
+    V.leaderboard.forEach(r => {
+      const dxColor = r.delta_top3 > 0 ? (r.is_client ? 'text-emerald-700 font-bold' : 'text-rose-700 font-bold') : (r.delta_top3 < 0 ? 'text-emerald-700' : 'text-slate-500');
+      const dxStr = r.delta_top3 > 0 ? `+${r.delta_top3}` : (r.delta_top3 < 0 ? `${r.delta_top3}` : '0');
+      const rowCls = r.is_client ? 'bg-brand-50/40' : '';
+      const nameCls = r.is_client ? 'font-bold text-brand-700' : '';
+      const valCls = r.is_client ? 'font-mono font-bold text-brand-700' : 'font-mono';
+      lbBody.insertAdjacentHTML('beforeend', `
+        <tr class="border-b border-slate-100 ${rowCls}">
+          <td class="py-2 pr-3 ${nameCls}">${r.name}</td>
+          <td class="py-2 pr-3 text-right ${valCls}">${r.may_top3}</td>
+          <td class="py-2 pr-3 text-right ${dxColor}">${dxStr}</td>
+          <td class="py-2 pr-3 text-right font-mono text-slate-600">${r.kws_present} / 9</td>
+          <td class="py-2 text-slate-600 text-xs">${r.note || ''}</td>
+        </tr>`);
+    });
+
+    // ===== Priorities =====
+    const prEl = document.getElementById('priorities-grid');
+    V.priorities_90d.forEach((p, idx) => {
+      const last = idx === V.priorities_90d.length - 1 && V.priorities_90d.length % 2 === 1;
+      const lastCls = last ? 'lg:col-span-2' : '';
+      prEl.insertAdjacentHTML('beforeend', `
+        <div class="panel ${lastCls}" style="border-left: 4px solid ${p.color}">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="pill good">Priority ${p.n}</span>
+            <h3 class="font-bold text-slate-900 text-base">${p.title}</h3>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">${p.body}</p>
+        </div>`);
+    });
+
+    // ===== Owner asks =====
+    const oaEl = document.getElementById('owner-asks-list');
+    V.owner_asks_client.forEach(o => {
+      oaEl.insertAdjacentHTML('beforeend', `
+        <li class="flex items-start gap-2">
+          <span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span>
+          <span><strong>${o.label}.</strong> ${o.body}</span>
+        </li>`);
+    });
+
+    // ===== Heatmap =====
+    if (LD) renderHeatmap(LD, V.heatmap_keywords, V.heatmap_competitors, V.heatmap_date_keys, V.heatmap_dates);
+
+    function renderHeatmap(ld, heatmapKws, competitorOverride, dateKeysOverride, dateLabelsOverride) {
+      // Filter the available keywords down to the heatmap selection (in given order)
+      const allowed = (heatmapKws || ld.keywords).filter(k => ld.grids[k]);
+      // Date set: use v2 override if provided (lets the client report lock a tighter
+      // window than the full ld_grids.json date set, e.g. Jan->Apr only)
+      const dateKeys = dateKeysOverride || ld.date_keys || [];
+      const dateLabels = dateLabelsOverride || ld.dates || [];
+      // Initial date = earliest available date for the FIRST keyword INTERSECTED with
+      // the report date window (so we don't auto-park on a date that's been dropped)
+      const firstKwGrid = ld.grids[allowed[0]];
+      const firstKwPresent = ((firstKwGrid && firstKwGrid.dates_present) || ld.date_keys || [])
+        .filter(d => dateKeys.includes(d));
+      const state = {
+        currentKw: allowed[0],
+        currentDate: firstKwPresent[0] || dateKeys[0],
+        dateKeys: dateKeys,
+        dateLabels: dateLabels,
+        playing: true,
+        timer: null,
+        PHASE_MS: 1100,
+      };
+      // Competitor set: use v2 override if provided (controls panel order)
+      const competitors = competitorOverride || ld.competitors || [];
+      const entities = [ld.client, ...competitors];
+
+      // Friendly display names
+      const friendlyName = (e) => {
+        if (e === ld.client) return 'Body Balance';
+        return e
+          .replace(', American Fork', '')
+          .replace('Massage And Float', '')
+          .replace('Pleasant Grove', 'PG')
+          .replace('Wellness Center', 'Wellness')
+          .trim();
+      };
+
+      const kwTabs = document.getElementById('cr-kw-tabs');
+      kwTabs.innerHTML = allowed.map((kw, i) => `
+        <button data-kw="${kw}" class="cr-kw-tab text-xs font-semibold px-2.5 py-1 rounded ${i===0?'bg-brand-500 text-white':'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'}">${kw}</button>
+      `).join('');
+      kwTabs.querySelectorAll('.cr-kw-tab').forEach(btn => {
+        btn.addEventListener('click', () => {
+          kwTabs.querySelectorAll('.cr-kw-tab').forEach(b => {
+            b.classList.remove('bg-brand-500', 'text-white');
+            b.classList.add('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          });
+          btn.classList.add('bg-brand-500', 'text-white');
+          btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
+          state.currentKw = btn.dataset.kw;
+          // Reset to earliest date available for the new keyword that's also in the
+          // report window. Rebuild the date tabs so dates without data are hidden.
+          const g = ld.grids[state.currentKw];
+          const present = (g.dates_present || state.dateKeys).filter(d => state.dateKeys.includes(d));
+          state.currentDate = present[0] || state.dateKeys[0];
+          rebuildDateTabs();
+          buildPanels(); applyState();
+          play();
+        });
+      });
+
+      const dateTabs = document.getElementById('cr-date-tabs');
+
+      // Date tabs are rebuilt every time the current keyword changes — only show
+      // dates where the current keyword actually has scan data. Dates without a
+      // scan for the current keyword would render empty maps; better to hide them.
+      function rebuildDateTabs() {
+        const g = ld.grids[state.currentKw];
+        const presentForKw = (g && g.dates_present) || state.dateKeys;
+        const dates = state.dateKeys.filter(d => presentForKw.includes(d));
+        if (!dates.length) dates.push(state.dateKeys[0]);
+        dateTabs.innerHTML = dates.map((k) => {
+          const label = state.dateLabels[state.dateKeys.indexOf(k)] || k;
+          const active = k === state.currentDate;
+          return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
+        }).join('');
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
+          btn.addEventListener('click', () => { pause(); state.currentDate = btn.dataset.date; updateDateBtns(); applyState(); });
+        });
+        // Expose the kw-filtered date list to play() so auto-cycle skips empty dates
+        state.activeDateKeys = dates;
+      }
+      rebuildDateTabs();
+
+      const playBtn = document.getElementById('cr-play');
+      playBtn.addEventListener('click', () => { if (state.playing) pause(); else play(); });
+
+      function updateDateBtns() {
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(b => {
+          if (b.dataset.date === state.currentDate) {
+            b.classList.add('bg-brand-500', 'text-white'); b.classList.remove('bg-white', 'text-slate-700');
+          } else {
+            b.classList.remove('bg-brand-500', 'text-white'); b.classList.add('bg-white', 'text-slate-700');
+          }
+        });
+      }
+
+      function pause() { if (state.timer) { clearInterval(state.timer); state.timer = null; } state.playing = false; playBtn.textContent = 'Play'; playBtn.classList.remove('bg-emerald-100', 'text-emerald-800'); playBtn.classList.add('bg-slate-200', 'text-slate-700'); }
+      function play()  {
+        if (state.timer) clearInterval(state.timer);
+        state.playing = true;
+        playBtn.textContent = 'Pause';
+        playBtn.classList.add('bg-emerald-100', 'text-emerald-800');
+        playBtn.classList.remove('bg-slate-200', 'text-slate-700');
+        state.timer = setInterval(() => {
+          // Cycle through ONLY the dates available for the current keyword
+          const dates = state.activeDateKeys || state.dateKeys;
+          const i = dates.indexOf(state.currentDate);
+          if (i + 1 >= dates.length) {
+            pause();
+            return;
+          }
+          state.currentDate = dates[i + 1];
+          updateDateBtns(); applyState();
+        }, state.PHASE_MS);
+      }
+
+      let _idx = null, _kwGrid = null;
+
+      // Compute the src/dst dates for the current kw — earliest and latest dates
+      // where data is available, INTERSECTED with the report date window so the
+      // badge stays consistent with what's actually shown in the heatmap.
+      function kwDateRange(grid) {
+        const allPresent = grid.dates_present || state.dateKeys;
+        const inWindow = allPresent.filter(d => state.dateKeys.includes(d));
+        const present = inWindow.length ? inWindow : allPresent;
+        return { src: present[0], dst: present[present.length - 1] };
+      }
+
+      // Apples-to-apples top-3 delta for an entity on the current kw, src->dst window
+      function topDelta(grid, entity) {
+        const { src, dst } = kwDateRange(grid);
+        const srcMap = {};
+        (grid[src] && grid[src][entity] || []).forEach(r => { srcMap[`${r.x},${r.y}`] = r.rank; });
+        const dstMap = {};
+        (grid[dst] && grid[dst][entity] || []).forEach(r => { dstMap[`${r.x},${r.y}`] = r.rank; });
+        const overlap = Object.keys(srcMap).filter(k => k in dstMap);
+        if (!overlap.length) return null;
+        const srcTop3 = overlap.filter(k => srcMap[k] <= 3).length;
+        const dstTop3 = overlap.filter(k => dstMap[k] <= 3).length;
+        return { srcTop3, dstTop3, delta: dstTop3 - srcTop3, n: overlap.length, src, dst };
+      }
+
+      function buildPanels() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid) return;
+        const minX = grid.bounds.min_x, maxX = grid.bounds.max_x;
+        const minY = grid.bounds.min_y, maxY = grid.bounds.max_y;
+        const cols = maxX - minX + 1;
+        const rows = maxY - minY + 1;
+        const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
+
+        const idx = {};
+        state.dateKeys.forEach(d => {
+          idx[d] = {};
+          entities.forEach(e => {
+            idx[d][e] = {};
+            (grid[d] && grid[d][e] || []).forEach(r => { idx[d][e][`${r.x},${r.y}`] = r.rank; });
+          });
+        });
+        _idx = idx; _kwGrid = { cols, rows, minX, minY, presentCells };
+
+        const { src, dst } = kwDateRange(grid);
+        const srcLabel = ld.dates[ld.date_keys.indexOf(src)];
+        const dstLabel = ld.dates[ld.date_keys.indexOf(dst)];
+
+        const wrap = document.getElementById('cr-panels');
+        wrap.innerHTML = entities.map(entity => {
+          const isClient = entity === ld.client;
+          const td = topDelta(grid, entity);
+          let badge = '';
+          if (td) {
+            const cls = td.delta > 0
+              ? 'bg-emerald-100 text-emerald-800'
+              : (td.delta < 0 ? 'bg-rose-100 text-rose-800' : 'bg-slate-100 text-slate-600');
+            const sign = td.delta > 0 ? '+' : '';
+            badge = `<span class="${cls} text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded whitespace-nowrap" title="Apples-to-apples on ${td.n} cells visible in both scans">${srcLabel.split(',')[0]} -> ${dstLabel.split(',')[0]}: top-3 ${td.srcTop3} -> ${td.dstTop3} (${sign}${td.delta})</span>`;
+          } else {
+            badge = `<span class="bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded whitespace-nowrap">no data on this keyword</span>`;
+          }
+          return `
+            <div class="rounded-lg border-2 ${isClient ? 'border-brand-500 bg-brand-50/30' : 'border-slate-200 bg-white'} p-4">
+              <div class="flex items-start justify-between mb-3 gap-2 flex-wrap">
+                <div class="font-bold text-sm truncate ${isClient ? 'text-brand-700' : 'text-slate-800'}" title="${entity}">
+                  ${friendlyName(entity)}${isClient ? ' <span class="text-[10px] uppercase font-bold text-brand-500">(you)</span>' : ''}
+                </div>
+                ${badge}
+              </div>
+              <div class="cr-grid" data-entity="${entity}" style="grid-template-columns: repeat(${cols}, 1fr); aspect-ratio: ${cols}/${rows}; max-width: 360px; margin: 0 auto;">
+                ${(() => {
+                  const out = [];
+                  for (let yi = 0; yi < rows; yi++) {
+                    for (let xi = 0; xi < cols; xi++) {
+                      const x = minX + xi, y = minY + yi;
+                      const key = `${x},${y}`;
+                      const present = presentCells.has(key);
+                      out.push(`<div class="hm-cell ${present?'':'off-grid'}" data-key="${key}"></div>`);
+                    }
+                  }
+                  return out.join('');
+                })()}
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-4 pt-3 border-t border-slate-200 text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                <div>Avg rank</div><div>Top-3 cells</div><div>Total cells</div>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-1" data-stats="${entity}">
+                <div class="text-xl font-extrabold text-slate-800 cr-avg">-</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top3">-</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-cells">-</div>
+              </div>
+            </div>`;
+        }).join('');
+      }
+
+      function rankColor(r) {
+        if (r == null) return '#f8fafc';
+        if (r <= 3) return '#047857'; if (r <= 6) return '#10b981'; if (r <= 10) return '#84cc16';
+        if (r <= 20) return '#f59e0b'; if (r <= 50) return '#f97316'; return '#e5e7eb';
+      }
+
+      function applyState() {
+        const kw = state.currentKw;
+        const grid = ld.grids[kw];
+        if (!grid || !_idx) return;
+        const date = state.currentDate;
+        entities.forEach(entity => {
+          const gridEl = document.querySelector(`.cr-grid[data-entity="${CSS.escape(entity)}"]`);
+          if (!gridEl) return;
+          gridEl.querySelectorAll('.hm-cell').forEach(cell => {
+            if (cell.classList.contains('off-grid')) { cell.style.background = 'transparent'; return; }
+            const key = cell.dataset.key;
+            const rank = _idx[date][entity]?.[key];
+            cell.style.background = rankColor(rank);
+            cell.textContent = (rank != null && rank <= 20) ? rank : '';
+            cell.title = `${friendlyName(entity)} — ${rank != null ? 'rank ' + rank : 'not in top 20'} (${state.dateLabels[state.dateKeys.indexOf(date)]})`;
+          });
+          const stats = grid.summary[entity] || {};
+          const statBox = document.querySelector(`[data-stats="${CSS.escape(entity)}"]`);
+          if (statBox) {
+            const avg = stats[`${date}_avg`];
+            const t3 = stats[`${date}_top3`];
+            const c = stats[`${date}_cells`];
+            statBox.querySelector('.cr-avg').textContent = (avg != null) ? Number(avg).toFixed(1) : '—';
+            statBox.querySelector('.cr-top3').textContent = (t3 != null) ? t3 : '—';
+            statBox.querySelector('.cr-cells').textContent = (c != null) ? c : '—';
+          }
+        });
+      }
+
+      buildPanels();
+      applyState();
+      play();
+    }
+  })();
+  </script>
+</body>
+</html>
