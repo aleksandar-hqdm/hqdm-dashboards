@@ -100,6 +100,27 @@
       </div>
     </section>
 
+    <!-- ============ TREND CHART — ORGANIC ONLY, Q4 2025 → NOW (moved to top per user request) ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Eight months of organic search performance — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026, HQDM's first two months), the stabilization (Mar), and the recovery (Apr–May). Top chart = monthly visitors; bottom = monthly leads (form submits + phone calls + Google Business clicks).
+        </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
+            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
+            <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
+          </div>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — shown as a dashed line. The 18-month view is available in the full strategic dashboard.</p>
+      </div>
+    </section>
+
     <!-- ============ THE STORYLINE ============ -->
     <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What Happened — A Timeline</h2>
@@ -205,27 +226,6 @@
           </table>
         </div>
         <p class="text-[11px] text-slate-500 mt-3 italic">"Leads" = form submits + phone-number clicks + Google Business clicks + contact-form submits. CVR (conversion rate) = leads ÷ visitors. Q2 2026 is a partial quarter (April + first 22 days of May).</p>
-      </div>
-    </section>
-
-    <!-- ============ TREND CHART — ORGANIC ONLY, Q4 2025 → NOW ============ -->
-    <section class="mb-8">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
-      <div class="panel">
-        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of organic search performance — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026, HQDM's first two months), the stabilization (Mar), and the recovery (Apr–May). Top chart = monthly visitors; bottom = monthly leads (form submits + phone calls + Google Business clicks).
-        </p>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
-            <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
-          </div>
-          <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
-            <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
-          </div>
-        </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — shown as a dashed line. The 18-month view is available in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -416,9 +416,9 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
       <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
         <ul class="space-y-2.5 text-sm text-slate-800">
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition workflow.</strong> We'd like to set up a post-job SMS / email signature with a Google review link. We need your sign-off on the customer-facing language. Target: +20 reviews by end of M3.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Outer-city priorities.</strong> Our default order is Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce. If a different order matches your booking volume, let us know.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Google Business profile access.</strong> Confirming we have manager-level access for posts, Q&amp;A seeding, photo uploads, and Driving Direction pins.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition cadence.</strong> Our team is already calling your customers post-job to request reviews — we'll keep that running and target <strong>+20 reviews by end of M3</strong>. Anything specific you'd like us to mention (or avoid) in the outreach script?</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Service-area expansion priority.</strong> We're going to build dedicated city pages + Driving Direction pins for the 5 outer cities your single Santa Clarita pin doesn't reach. Default queue: Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce. If any other city in your 20-city service area drives more bookings, let us know so it can jump the queue.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Two other Google Business profiles we'd like to take on.</strong> Our DataForSEO sweep found AQMS-branded GBPs we didn't know about: <strong>Burbank</strong> (4500 Lakeside Dr Suite 101, 5★ but only 10 reviews) and <strong>Encinitas</strong> (5★ / 48 reviews). Both are under-optimized — we'd like to verify they're yours, get manager access, and bring them under the same defense + review-acquisition cadence as the Santa Clarita pin.</span></li>
           <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Paid ads restart?</strong> Your Google Ads went to zero around April 2025 (before our engagement). Want us to audit the account and restart, or is paid permanently off the roadmap?</span></li>
           <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Prior-vendor traffic-tool.</strong> The October–December 2025 Direct-traffic spike (1,103 → 1,901 → 1,288 sessions) is consistent with a third-party "traffic tool" or link-building automation that was running before we engaged. We'd like to confirm any such campaign is fully halted so it doesn't trigger another algorithmic flag.</span></li>
         </ul>
@@ -546,7 +546,7 @@
         dateLabels: ld.dates || ['Feb', 'May'],
         playing: true,
         timer: null,
-        PHASE_MS: 3500,
+        PHASE_MS: 800,  // 0.8s per date frame, infinite loop
       };
       const entities = [ld.client, ...(ld.competitors || [])];
 
