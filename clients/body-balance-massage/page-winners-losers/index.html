@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Page Winners + Bleeding CTR · Body Balance · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] }, colors: { ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' }, brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6' }, accent: { amber:'#f59e0b', red:'#ef4444', green:'#10b981' } } } } }
+  </script>
+  <style>
+    .pill { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
+    .pill.pos { background: #d1fae5; color: #065f46; }
+    .pill.warn { background: #fef3c7; color: #92400e; }
+    .pill.neg { background: #fee2e2; color: #991b1b; }
+    .pill.info { background: #dbeafe; color: #1e40af; }
+    .bucket-blog { background: #f0f9ff; color: #075985; }
+    .bucket-service { background: #f0fdf4; color: #166534; }
+    .bucket-core { background: #fef3c7; color: #92400e; }
+    .bucket-geo_padding { background: #fee2e2; color: #991b1b; }
+    .bucket-homepage { background: #ede9fe; color: #5b21b6; }
+    .bucket-other { background: #f1f5f9; color: #475569; }
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <a href="../../../index.html" class="text-ink-500 hover:text-ink-800">← Hub</a>
+        <span class="text-ink-300">/</span>
+        <a href="../index.html" class="text-ink-500 hover:text-ink-800">Body Balance dashboard</a>
+        <span class="text-ink-300">/</span>
+        <span class="font-semibold text-ink-900">Page Winners + Bleeding CTR</span>
+      </div>
+      <a href="../client-report.html" class="text-brand-500 font-semibold hover:underline">Client report →</a>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-300 mb-2">Body Balance · Mini Report 4/4</div>
+      <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight">Page Winners + Bleeding CTR — Where On-Site Repair Lives</h1>
+      <p class="text-sm sm:text-base mt-3 text-white/85 max-w-3xl">Top click drivers + 83 pages with sub-par CTR ranking at positions 4-20. The on-site repair surface — fix here and clicks/conversions follow. Service-page schema rollout (SP-02 / SP-03) + meta+title refresh (ON-01) are the levers.</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-6">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Top click drivers (last 180d) — by absolute clicks/day</h2>
+        <p class="text-xs text-ink-500 mt-1">Where BB's organic clicks currently live. /how-to-massage-fluid-out-of-knee/ alone produced 5,292 clicks in 180d — the single biggest organic surface.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">URL</th>
+              <th class="text-left font-semibold py-3 px-3">Bucket</th>
+              <th class="text-right font-semibold py-3 px-3">Imp 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Avg pos 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Avg pos 30d</th>
+              <th class="text-right font-semibold py-3 px-3">Pos delta</th>
+            </tr>
+          </thead>
+          <tbody id="top-drivers-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-6">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Bleeding CTR — top 25 pages with sub-par click capture at pos 4-20</h2>
+        <p class="text-xs text-ink-500 mt-1">Ranked by CTR gap vs expected. ON-01 (M1+M2) meta+title refresh sweep covers the top 22. /about/ and /pricing-and-membership/ are conversion-critical trust pages bleeding the most.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">URL</th>
+              <th class="text-left font-semibold py-3 px-3">Bucket</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Imp 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Avg pos</th>
+              <th class="text-right font-semibold py-3 px-3">CTR</th>
+              <th class="text-right font-semibold py-3 px-3">CTR gap</th>
+            </tr>
+          </thead>
+          <tbody id="bleeding-ctr-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Biggest winner queries — high impressions × low CTR (cannibal-driven)</h2>
+        <p class="text-xs text-ink-500 mt-1">Where the cannibalization repair work (LP-02 small-301-to-MAIN) compounds with meta+title refresh to capture marginal clicks. "best massage near me" is the headline opportunity at 196K imp / 2 clicks across 20 BB URLs.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">Query</th>
+              <th class="text-right font-semibold py-3 px-3">Imp 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks</th>
+              <th class="text-right font-semibold py-3 px-3">CTR</th>
+              <th class="text-right font-semibold py-3 px-3">Avg pos</th>
+              <th class="text-right font-semibold py-3 px-3">Est. marginal clicks if top-3</th>
+            </tr>
+          </thead>
+          <tbody id="biggest-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-t border-slate-200 pt-6 text-xs text-ink-500">
+      Body Balance · Page Winners + Bleeding CTR · sourced from GSC pages_last_180d + analysis/q1_q2_page_movement + analysis/q3_pages_needing_upgrade + analysis/q6_biggest_winner_queries.
+    </div>
+  </footer>
+
+  <script>
+    fetch('../data/data.json').then(r => r.json()).then(data => {
+      function bucketPill(b) {
+        return `<span class="pill bucket-${b}">${b}</span>`;
+      }
+      const topDriversEl = document.getElementById('top-drivers-rows');
+      data.top_drivers.forEach(t => {
+        const tr = document.createElement('tr');
+        const posDeltaClass = t.pos_delta > 0 ? 'text-accent-green' : (t.pos_delta < 0 ? 'text-accent-red' : 'text-ink-500');
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-mono text-xs">${t.url}</td>
+          <td class="py-2 px-3">${bucketPill(t.bucket)}</td>
+          <td class="py-2 px-3 text-right font-mono">${t.imp_180d.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono font-semibold">${t.clicks_180d.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono">${t.avg_pos_180d.toFixed(1)}</td>
+          <td class="py-2 px-3 text-right font-mono">${t.avg_pos_30d.toFixed(1)}</td>
+          <td class="py-2 px-3 text-right font-mono ${posDeltaClass}">${t.pos_delta > 0 ? '+' : ''}${t.pos_delta.toFixed(2)}</td>`;
+        topDriversEl.appendChild(tr);
+      });
+
+      const bleedEl = document.getElementById('bleeding-ctr-rows');
+      data.bleeding_ctr_pages.forEach(b => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-mono text-xs">${b.url}</td>
+          <td class="py-2 px-3">${bucketPill(b.bucket)}</td>
+          <td class="py-2 px-3 text-right font-mono">${b.clicks.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono">${b.imp.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono">${b.pos.toFixed(2)}</td>
+          <td class="py-2 px-3 text-right font-mono ${b.ctr < 0.5 ? 'text-accent-red font-semibold' : ''}">${b.ctr.toFixed(2)}%</td>
+          <td class="py-2 px-3 text-right font-mono text-accent-red">−${b.ctr_gap.toFixed(2)}</td>`;
+        bleedEl.appendChild(tr);
+      });
+
+      const biggestEl = document.getElementById('biggest-rows');
+      data.biggest_winner_queries.forEach(q => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-medium">${q.query}</td>
+          <td class="py-2 px-3 text-right font-mono">${q.imp.toLocaleString()}</td>
+          <td class="py-2 px-3 text-right font-mono">${q.clicks}</td>
+          <td class="py-2 px-3 text-right font-mono">${q.ctr.toFixed(2)}%</td>
+          <td class="py-2 px-3 text-right font-mono">${q.pos.toFixed(1)}</td>
+          <td class="py-2 px-3 text-right font-mono text-accent-green font-semibold">+${Math.round(q.est_marginal).toLocaleString()}</td>`;
+        biggestEl.appendChild(tr);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -10,44 +10,113 @@
     "hqdm_am": "Matt Olderman",
     "hqdm_owner": "Aleksandar Spasevski",
     "prepared_date": "2026-05-22",
-    "version": "v3",
+    "version": "v4",
     "quarter": "Q2 2026",
     "address": "366 S 500 E Suite B, American Fork UT 84003",
     "pin": "40.378, -111.789",
     "campaign_posture": "Hold budget · Redirect targeting · Same production scale · Authority rebuilt post-halt",
-    "doc_subtitle": "Q2 2026 strategic diagnosis (v3, refreshed 2026-05-22). The pin is gaining rank where it holds cells. Marginal lift sits on 7 structural fixes + redirected production at full scale. Authority workstream rebuilt around the 2026-05-13 off-page program halt.",
-    "v3_changes": "Off-page workstream rebuilt around the 2026-05-13 HQDM-internal program halt — SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) removed from BB rotation; replaced with manual citations + 1 monthly PR pitch + 1 monthly partner-outreach touch + on-site link equity. Cleanup approach reaffirmed: small-level 301-to-MAIN canonicals only, 0 NOINDEX, 0 410. Dashboard density tuned per 2026-05-21 Matt+Milica feedback."
+    "doc_subtitle": "Q2 2026 strategic diagnosis (v4, refreshed 2026-05-22). Map engine gaining rank; on-site CTR bleeding; lift sits on 7 structural fixes + retargeted production at full scale.",
+    "gsc_data_window": "2025-05-22 → 2026-05-21 (365 days)",
+    "ga4_status": "Not connected — info@ token does not own GA4 property; GSC + LD + DataForSEO are the available signals"
+  },
+  "mini_report_base": "./",
+  "mini_reports": [
+    {
+      "name": "LD Maps per-keyword deep dive",
+      "slug": "ld-maps-deep-dive/",
+      "summary": "6-keyword apples-to-apples scoreboard with per-competitor rank movement, cells gained/lost, town-band heatmap"
+    },
+    {
+      "name": "Untracked service opportunity",
+      "slug": "untracked-services/",
+      "summary": "27 service queries where BB ranks #1-#3 at AF pin but isn't tracked. Lymphatic drainage (3,600 UT vol) is the headline."
+    },
+    {
+      "name": "Cannibal cleanup cohort",
+      "slug": "cannibal-cleanup/",
+      "summary": "326 GSC queries have 2+ BB URLs ranking. Per-URL decisions: 3 LEAVE / 9 REFRESH / 19 REPURPOSE / 84 small-301 / 14 REVIEW. Never bulk NOINDEX."
+    },
+    {
+      "name": "Page winners + bleeding CTR",
+      "slug": "page-winners-losers/",
+      "summary": "Top click drivers + 83 pages with <0.5% CTR at pos 4-20. Where the on-site CTR repair lives."
+    }
+  ],
+  "headline_panel": {
+    "headline": "Maps engine is gaining rank where it holds cells. On-site CTR is where the plateau lives.",
+    "lede": "BB tightened rank on all four massage queries Jan 19 → Apr 18 (mean dx +1.21 to +1.46 ranks/cell). Float owned at #1 of 20 substantial competitors on 106/106 cells. But sitewide GSC CTR sits at 0.8% — 326 queries have 2+ BB URLs ranking simultaneously. The owner's perceived plateau is real, but it's in on-site click capture + booking conversion, NOT in the Maps engine. Q2 spend posture: hold budget, redirect targeting, ship at the same volume as today, authority rebuilt around the 2026-05-13 off-page program halt.",
+    "stat_tiles": [
+      {
+        "label": "GSC clicks (last 365d)",
+        "value": "27,198",
+        "sub": "2,266 clicks/mo avg · sitewide CTR 0.8%",
+        "sentiment": "neutral"
+      },
+      {
+        "label": "GSC impressions (last 365d)",
+        "value": "3.41M",
+        "sub": "Broad surface, low click capture — symptom of cannibalization + meta gaps",
+        "sentiment": "neutral"
+      },
+      {
+        "label": "LD rank tightening · 4 massage kws",
+        "value": "+1.21 to +1.46",
+        "sub": "Mean dx per cell, Jan 19 → Apr 18, on cells visible both dates",
+        "sentiment": "positive"
+      },
+      {
+        "label": "Float surface owned",
+        "value": "#1 / 106 cells",
+        "sub": "On both float queries, of 20+18 substantial-sample competitor pins",
+        "sentiment": "positive"
+      }
+    ],
+    "callout_strip": [
+      {
+        "label": "Where the plateau actually lives",
+        "detail": "Sitewide CTR 0.80% (below par for service business). /about/ 0.04% · /pricing-and-membership/ 0.10% · /upgrades/ 0.00%. Service-page schema thinness (8/8 carry generic DaySpa only) + 326 cannibal queries are the on-site drag."
+      },
+      {
+        "label": "What's growing",
+        "detail": "Near-me queries are the active growth surface — BB tightened from 7.43→5.97 (massage therapist near me, +1.46/cell, top-3 cells 27→37). Pleasant Grove cells opened (3 old winners collapsed −188/−143/−138; 5 new entrants slid in)."
+      },
+      {
+        "label": "Untracked headline",
+        "detail": "DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked service queries · #2 for 6 more · #3 for 6 more. Lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface."
+      }
+    ],
+    "mini_report_url": "untracked-services/"
   },
   "kpis": [
     {
-      "label": "Rank tightening — massage therapist near me",
+      "label": "GSC clicks (last 365d)",
+      "value": "27,198",
+      "sentiment": "neutral",
+      "detail": "Sitewide. ~2,266 clicks/mo. 0.8% CTR — below par for service business; symptom of cannibalization + meta gaps + missing service schema."
+    },
+    {
+      "label": "Rank tightening · massage therapist near me",
       "value": "7.43 → 5.97",
       "sentiment": "positive",
-      "detail": "Avg rank on 95 cells visible both dates. BB #2 of 10 main pins. Top-3 cells 27 → 37. Mean dx +1.46/cell."
+      "detail": "Avg rank on 95 cells visible both dates. BB #2 of 10 substantial competitors. Top-3 cells 27 → 37 (+10). Mean dx +1.46/cell."
     },
     {
       "label": "Float surface owned",
-      "value": "#1 of 20",
+      "value": "#1 / 106 cells",
       "sentiment": "positive",
-      "detail": "BB #1 on both float queries across 106/106 saturated cells at avg rank 1.34 / 1.68. The moat."
+      "detail": "BB #1 on both float queries across 106/106 saturated cells at avg rank 1.34 / 1.68. The moat. No marginal lift to chase on float; defend posture only."
     },
     {
       "label": "Sitewide NAP mismatch",
       "value": "372 / 372",
       "sentiment": "negative",
-      "detail": "Every page uses chat phone 855-5834; GBP primary is 734-9798. One-line WordPress fix. HP-01 in M1 W1."
-    },
-    {
-      "label": "Trigger-point page scope",
-      "value": "P0 Fix",
-      "sentiment": "negative",
-      "detail": "/trigger-point-therapy/ (2,773 words live 2026-05-18) references medical injections + dry needling. Owner-flagged."
+      "detail": "Every page uses chat phone 855-5834; GBP primary is 734-9798. One-line WordPress fix. HP-01 ships M1 W1 (1h)."
     },
     {
       "label": "GSC cannibalization",
       "value": "326 queries",
       "sentiment": "negative",
-      "detail": "2+ BB URLs ranking simultaneously. 'best massage near me' = 20 URLs, 196K imps, 2 clicks. Fix: 84 small-301 to MAIN."
+      "detail": "2+ BB URLs ranking simultaneously. 'best massage near me' = 20 URLs, 196K imps, 2 clicks. Per-URL fix via small-level 301-to-MAIN on 84 redundant pages."
     },
     {
       "label": "Untracked rank surface",
@@ -56,108 +125,2667 @@
       "detail": "DataForSEO Maps SERP at AF pin shows BB top-3 for 27 unranked service queries — lymphatic drainage (3,600 UT vol) is the biggest."
     }
   ],
-  "ld_apples_to_apples": [
-    {"kw": "massage therapist near me", "cells_jan": 97, "cells_apr": 100, "rank_jan": 7.43, "rank_apr": 5.97, "top3_jan": 27, "top3_apr": 37, "bb_rank_in_set": "#2 of 10"},
-    {"kw": "massages near me", "cells_jan": 93, "cells_apr": 95, "rank_jan": 8.29, "rank_apr": 7.08, "top3_jan": 18, "top3_apr": 15, "bb_rank_in_set": "#3 of 14"},
-    {"kw": "massage therapy", "cells_jan": 89, "cells_apr": 94, "rank_jan": 9.76, "rank_apr": 8.54, "top3_jan": 15, "top3_apr": 23, "bb_rank_in_set": "#7 of 14"},
-    {"kw": "massage therapist lehi", "cells_jan": 75, "cells_apr": 96, "rank_jan": 15.62, "rank_apr": 14.41, "top3_jan": 1, "top3_apr": 0, "bb_rank_in_set": "#15 of 17 (proximity-locked)"},
-    {"kw": "float therapy", "cells_jan": 106, "cells_apr": 106, "rank_jan": 1.52, "rank_apr": 1.68, "top3_jan": 98, "top3_apr": 94, "bb_rank_in_set": "#1 of 20"},
-    {"kw": "float tank", "cells_jan": 106, "cells_apr": 106, "rank_jan": 1.21, "rank_apr": 1.34, "top3_jan": 104, "top3_apr": 102, "bb_rank_in_set": "#1 of 18"}
+  "trend": {
+    "headline": "GSC monthly trend — 365-day window (GA4 not connected)",
+    "annotation_text": "Clicks aggregated daily from raw GSC export (2025-05 → 2026-05). Sitewide totals across 2 pages. Last month shown as partial — only 16 days of data through 2026-05-16. Full-month projection: 3,040 clicks · 437,887 imp at trailing daily rate.",
+    "may_extrapolation_note": "May 2026 is partial through 2026-05-16 (16 of 31 days). Full-month run-rate projection: 3,040 clicks · 437,887 impressions.",
+    "months": [
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
+    ],
+    "clicks": [
+      1035,
+      2017,
+      1780,
+      1602,
+      1416,
+      1352,
+      1389,
+      1994,
+      3525,
+      3614,
+      3331,
+      2574,
+      1569
+    ],
+    "impressions": [
+      87471,
+      193210,
+      203314,
+      207921,
+      169642,
+      157569,
+      186244,
+      257419,
+      486465,
+      453708,
+      430191,
+      354515,
+      226006
+    ],
+    "may_projection": {
+      "clicks_full_month_est": 3040,
+      "imp_full_month_est": 437887,
+      "days_actual": 16,
+      "days_in_month": 31
+    },
+    "quarterly": [
+      {
+        "q": "Q2 2025",
+        "clicks_total": 3052,
+        "imp_total": 280681,
+        "clicks_per_mo": 1526,
+        "imp_per_mo": 140340,
+        "ctr_pct": 1.09,
+        "months": 2,
+        "is_partial": false
+      },
+      {
+        "q": "Q3 2025",
+        "clicks_total": 4798,
+        "imp_total": 580877,
+        "clicks_per_mo": 1599,
+        "imp_per_mo": 193626,
+        "ctr_pct": 0.83,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q4 2025",
+        "clicks_total": 4735,
+        "imp_total": 601232,
+        "clicks_per_mo": 1578,
+        "imp_per_mo": 200411,
+        "ctr_pct": 0.79,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q1 2026",
+        "clicks_total": 10470,
+        "imp_total": 1370364,
+        "clicks_per_mo": 3490,
+        "imp_per_mo": 456788,
+        "ctr_pct": 0.76,
+        "months": 3,
+        "is_partial": false
+      },
+      {
+        "q": "Q2 2026* (partial)",
+        "clicks_total": 4143,
+        "imp_total": 580521,
+        "clicks_per_mo": 2072,
+        "imp_per_mo": 290260,
+        "ctr_pct": 0.71,
+        "months": 2,
+        "is_partial": true
+      }
+    ],
+    "notes": "GSC clicks-only trend. BB's GA4 property is not connected (per client.json data_sources). When GA4 is verified (info@ token), session-level + conversion data will be added."
+  },
+  "ga4_status_panel": {
+    "headline": "GA4 is not connected — GSC + LD + DataForSEO are the available signals",
+    "detail": "Per client.json data_sources: ga4_property is null. BB engagement so far has used CallRail (39 first-time callers ≥90s / Mar 2026) + GSC + LD for performance reporting. M1 W1 (REP-01) attempts GA4 access verification via the info@ token (273 properties owned); if confirmed, this dashboard will gain a Sessions + Form_submit + GBP-attribution layer. Until then, GSC clicks-only is the headline traffic metric.",
+    "implication": "Conversion attribution is currently CallRail (manual) + brand-query GSC + GMB-tagged homepage URL. The /?utm_source=gmb path captures GBP click-through — that flow becomes measurable once GA4 access is online."
+  },
+  "ld_apples": [
+    {
+      "kw": "massage therapist near me",
+      "cells_jan": 97,
+      "cells_apr": 100,
+      "net_cells": 3,
+      "rank_jan": 7.43,
+      "rank_apr": 5.97,
+      "mean_dx": 1.46,
+      "cells_entered": 5,
+      "cells_lost": 2,
+      "top3_jan": 27,
+      "top3_apr": 37,
+      "top3_delta": 10
+    },
+    {
+      "kw": "massages near me",
+      "cells_jan": 93,
+      "cells_apr": 95,
+      "net_cells": 2,
+      "rank_jan": 8.29,
+      "rank_apr": 7.08,
+      "mean_dx": 1.21,
+      "cells_entered": 4,
+      "cells_lost": 2,
+      "top3_jan": 18,
+      "top3_apr": 15,
+      "top3_delta": -3
+    },
+    {
+      "kw": "massage therapy",
+      "cells_jan": 89,
+      "cells_apr": 94,
+      "net_cells": 5,
+      "rank_jan": 9.76,
+      "rank_apr": 8.54,
+      "mean_dx": 1.22,
+      "cells_entered": 5,
+      "cells_lost": 0,
+      "top3_jan": 15,
+      "top3_apr": 23,
+      "top3_delta": 8
+    },
+    {
+      "kw": "massage therapist lehi",
+      "cells_jan": 75,
+      "cells_apr": 96,
+      "net_cells": 21,
+      "rank_jan": 15.62,
+      "rank_apr": 14.41,
+      "mean_dx": 1.22,
+      "cells_entered": 22,
+      "cells_lost": 1,
+      "top3_jan": 1,
+      "top3_apr": 0,
+      "top3_delta": -1
+    },
+    {
+      "kw": "float therapy",
+      "cells_jan": 106,
+      "cells_apr": 106,
+      "net_cells": 0,
+      "rank_jan": 1.52,
+      "rank_apr": 1.68,
+      "mean_dx": -0.16,
+      "cells_entered": 0,
+      "cells_lost": 0,
+      "top3_jan": 98,
+      "top3_apr": 94,
+      "top3_delta": -4
+    },
+    {
+      "kw": "float tank",
+      "cells_jan": 106,
+      "cells_apr": 106,
+      "net_cells": 0,
+      "rank_jan": 1.21,
+      "rank_apr": 1.34,
+      "mean_dx": -0.13,
+      "cells_entered": 0,
+      "cells_lost": 0,
+      "top3_jan": 104,
+      "top3_apr": 102,
+      "top3_delta": -2
+    }
+  ],
+  "ld_leaderboard_mtnm": [
+    {
+      "name": "Total Muscle Therapy: Massage Pleasant Grove",
+      "reviews": 173,
+      "cells_jan": 91,
+      "cells_apr": 97,
+      "rank_jan": 5.24,
+      "rank_apr": 3.87,
+      "mean_dx": 1.37,
+      "is_client": false
+    },
+    {
+      "name": "Body Balance Massage And Float",
+      "reviews": 402,
+      "cells_jan": 97,
+      "cells_apr": 100,
+      "rank_jan": 7.43,
+      "rank_apr": 5.97,
+      "mean_dx": 1.46,
+      "is_client": true
+    },
+    {
+      "name": "Natural Healing and Massage, American Fork",
+      "reviews": 75,
+      "cells_jan": 81,
+      "cells_apr": 83,
+      "rank_jan": 8.68,
+      "rank_apr": 6.6,
+      "mean_dx": 2.08,
+      "is_client": false
+    },
+    {
+      "name": "Soleil Spa",
+      "reviews": 153,
+      "cells_jan": 88,
+      "cells_apr": 97,
+      "rank_jan": 8.42,
+      "rank_apr": 6.76,
+      "mean_dx": 1.66,
+      "is_client": false
+    },
+    {
+      "name": "Relaxing Remedy",
+      "reviews": 61,
+      "cells_jan": 77,
+      "cells_apr": 91,
+      "rank_jan": 9.77,
+      "rank_apr": 6.97,
+      "mean_dx": 2.79,
+      "is_client": false
+    },
+    {
+      "name": "Total Muscle Therapy: Massage Lehi Utah",
+      "reviews": 81,
+      "cells_jan": 51,
+      "cells_apr": 62,
+      "rank_jan": 10.98,
+      "rank_apr": 7.41,
+      "mean_dx": 3.57,
+      "is_client": false
+    },
+    {
+      "name": "Therapeutic Massage & Bodywork",
+      "reviews": 155,
+      "cells_jan": 70,
+      "cells_apr": 85,
+      "rank_jan": 9.86,
+      "rank_apr": 8.49,
+      "mean_dx": 1.36,
+      "is_client": false
+    },
+    {
+      "name": "Art of Massage",
+      "reviews": 231,
+      "cells_jan": 32,
+      "cells_apr": 46,
+      "rank_jan": 12.12,
+      "rank_apr": 9.78,
+      "mean_dx": 2.34,
+      "is_client": false
+    },
+    {
+      "name": "Lone Peak Therapeutic Massage",
+      "reviews": 46,
+      "cells_jan": 34,
+      "cells_apr": 46,
+      "rank_jan": 13.1,
+      "rank_apr": 12.27,
+      "mean_dx": 0.83,
+      "is_client": false
+    },
+    {
+      "name": "Fashion Massage & Spa",
+      "reviews": 57,
+      "cells_jan": 60,
+      "cells_apr": 30,
+      "rank_jan": 4.07,
+      "rank_apr": 13.73,
+      "mean_dx": -9.67,
+      "is_client": false
+    }
   ],
   "competitor_churn": [
-    {"name": "The Spa Lounge (Pleasant Grove)", "delta": 210, "note": "Surged into dominance"},
-    {"name": "Seven Springs Spa (Pleasant Grove)", "delta": 172, "note": "New entrant"},
-    {"name": "LIV Massage (Pleasant Grove)", "delta": 132, "note": "New entrant"},
-    {"name": "Hurts So Good Bodywork (Lindon)", "delta": 124, "note": "New entrant"},
-    {"name": "The Spa Lounge (Lehi)", "delta": 77, "note": "Same-chain sibling"},
-    {"name": "Natural Healing & Massage (AF)", "delta": 54, "note": "Same-city"},
-    {"name": "Megan the Massager (Highland)", "delta": 53, "note": "Push catchment"},
-    {"name": "Hand & Stone (Traverse Mtn)", "delta": 39, "note": "National chain"},
-    {"name": "The Centered Stone (AF)", "delta": 38, "note": "Same-city"},
-    {"name": "Total Muscle Therapy: PG", "delta": 37, "note": "Push catchment"},
-    {"name": "Body Balance (us)", "delta": 23, "note": "Our gain", "is_client": true},
-    {"name": "The Massage Barre (Lehi)", "delta": -59, "note": "Collapsed"},
-    {"name": "Fashion Massage & Spa (Lehi)", "delta": -77, "note": "Collapsed"},
-    {"name": "Zen Zone Massage (Highland)", "delta": -82, "note": "Collapsed"},
-    {"name": "Calming Touch Massage (Lehi, 521 rev)", "delta": -97, "note": "Highest-review competitor collapsed"},
-    {"name": "MassageLuXe (Pleasant Grove)", "delta": -138, "note": "Collapsed — open cells"},
-    {"name": "Paradise Massage Studio (Pleasant Grove)", "delta": -143, "note": "Collapsed — open cells"},
-    {"name": "Paul and Tasha Massage (sibling pin)", "delta": -188, "note": "Owner's other pin — out of scope"}
+    {
+      "name": "The Spa Lounge",
+      "delta": 210,
+      "rating": 4.8,
+      "reviews": 803,
+      "is_client": false
+    },
+    {
+      "name": "Seven Springs Spa",
+      "delta": 172,
+      "rating": 4.7,
+      "reviews": 20,
+      "is_client": false
+    },
+    {
+      "name": "LIV Massage - Massage Therapist Orem, Utah",
+      "delta": 132,
+      "rating": 5.0,
+      "reviews": 29,
+      "is_client": false
+    },
+    {
+      "name": "Hurts So Good Bodywork and Massage",
+      "delta": 124,
+      "rating": 5.0,
+      "reviews": 75,
+      "is_client": false
+    },
+    {
+      "name": "The Spa Lounge",
+      "delta": 77,
+      "rating": 4.9,
+      "reviews": 262,
+      "is_client": false
+    },
+    {
+      "name": "Natural Healing and Massage, American Fork",
+      "delta": 54,
+      "rating": 5.0,
+      "reviews": 75,
+      "is_client": false
+    },
+    {
+      "name": "Megan the Massager",
+      "delta": 53,
+      "rating": 4.8,
+      "reviews": 23,
+      "is_client": false
+    },
+    {
+      "name": "Alpine Sports Massage",
+      "delta": 48,
+      "rating": 5.0,
+      "reviews": 9,
+      "is_client": false
+    },
+    {
+      "name": "Relaxing Remedy",
+      "delta": 45,
+      "rating": 4.3,
+      "reviews": 61,
+      "is_client": false
+    },
+    {
+      "name": "AnyBody Massage",
+      "delta": 41,
+      "rating": 5.0,
+      "reviews": 22,
+      "is_client": false
+    },
+    {
+      "name": "Summit Medical Spa",
+      "delta": 41,
+      "rating": 4.8,
+      "reviews": 349,
+      "is_client": false
+    },
+    {
+      "name": "Hand & Stone Massage and Facial Spa",
+      "delta": 39,
+      "rating": 4.7,
+      "reviews": 602,
+      "is_client": false
+    },
+    {
+      "name": "Body Balance Massage And Float",
+      "delta": 23,
+      "rating": 4.9,
+      "reviews": 402,
+      "is_client": true
+    },
+    {
+      "name": "Fika Reflexology Bar",
+      "delta": -1,
+      "rating": 4.8,
+      "reviews": 676,
+      "is_client": false
+    },
+    {
+      "name": "Berkana BodyWorks",
+      "delta": -1,
+      "rating": 4.9,
+      "reviews": 142,
+      "is_client": false
+    },
+    {
+      "name": "Timpanogos Massage Therapy",
+      "delta": -1,
+      "rating": 5.0,
+      "reviews": 7,
+      "is_client": false
+    },
+    {
+      "name": "Bodyworx Recovery",
+      "delta": -1,
+      "rating": 5.0,
+      "reviews": 15,
+      "is_client": false
+    },
+    {
+      "name": "Tatys Facial & Brow Studio",
+      "delta": -1,
+      "rating": 4.9,
+      "reviews": 46,
+      "is_client": false
+    },
+    {
+      "name": "Seasons Nail Spa",
+      "delta": -1,
+      "rating": 4.2,
+      "reviews": 5,
+      "is_client": false
+    },
+    {
+      "name": "All star healing",
+      "delta": -1,
+      "rating": 0.0,
+      "reviews": 0,
+      "is_client": false
+    },
+    {
+      "name": "Lucky Day Massage & Spa",
+      "delta": -1,
+      "rating": 4.7,
+      "reviews": 47,
+      "is_client": false
+    }
+  ],
+  "cells_by_town": {
+    "massage therapist near me": [
+      {
+        "town": "American Fork",
+        "top3": 20,
+        "close": 1,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 1,
+        "close": 6,
+        "mid": 7,
+        "back": 4,
+        "far": 2,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 4,
+        "close": 6,
+        "mid": 4,
+        "back": 3,
+        "far": 1,
+        "out": 0,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 6,
+        "close": 7,
+        "mid": 4,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 2,
+        "back": 2,
+        "far": 4,
+        "out": 4,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 5,
+        "close": 5,
+        "mid": 1,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 1,
+        "back": 2,
+        "far": 0,
+        "out": 2,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      }
+    ],
+    "massages near me": [
+      {
+        "town": "American Fork",
+        "top3": 13,
+        "close": 8,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 6,
+        "mid": 9,
+        "back": 4,
+        "far": 1,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 1,
+        "close": 4,
+        "mid": 3,
+        "back": 6,
+        "far": 3,
+        "out": 1,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 1,
+        "close": 15,
+        "mid": 1,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 3,
+        "far": 1,
+        "out": 8,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 6,
+        "mid": 2,
+        "back": 2,
+        "far": 1,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 1,
+        "far": 1,
+        "out": 2,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 0,
+        "close": 0,
+        "mid": 1,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      }
+    ],
+    "massage therapy": [
+      {
+        "town": "American Fork",
+        "top3": 19,
+        "close": 2,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 1,
+        "close": 1,
+        "mid": 8,
+        "back": 7,
+        "far": 3,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 2,
+        "close": 5,
+        "mid": 2,
+        "back": 5,
+        "far": 3,
+        "out": 1,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 1,
+        "close": 7,
+        "mid": 8,
+        "back": 1,
+        "far": 0,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 2,
+        "far": 4,
+        "out": 6,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 0,
+        "mid": 2,
+        "back": 6,
+        "far": 2,
+        "out": 1,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 4,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 1,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      }
+    ],
+    "massage therapist lehi": [
+      {
+        "town": "American Fork",
+        "top3": 0,
+        "close": 3,
+        "mid": 8,
+        "back": 10,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 14,
+        "far": 6,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 4,
+        "far": 5,
+        "out": 9,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 17,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 12,
+        "far": 0,
+        "out": 0,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 10,
+        "out": 1,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 5,
+        "far": 0,
+        "out": 0,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 0,
+        "total": 1
+      }
+    ],
+    "float therapy": [
+      {
+        "town": "American Fork",
+        "top3": 21,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 20,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 18,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 17,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 8,
+        "close": 4,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 8,
+        "close": 3,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 5,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      }
+    ],
+    "float tank": [
+      {
+        "town": "American Fork",
+        "top3": 21,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 21
+      },
+      {
+        "town": "Pleasant Grove",
+        "top3": 20,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 20
+      },
+      {
+        "town": "Lehi",
+        "top3": 18,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 18
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 17,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 17
+      },
+      {
+        "town": "Lindon",
+        "top3": 9,
+        "close": 3,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 11,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 4,
+        "close": 1,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 5
+      },
+      {
+        "town": "Alpine",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      },
+      {
+        "town": "Saratoga Springs",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 1
+      }
+    ]
+  },
+  "url_class": [
+    {
+      "class": "blog",
+      "pages": 192,
+      "imp_180d": 2012487,
+      "imp_pct": 88.0,
+      "clicks_180d": 13171,
+      "clicks_pct": 76.9
+    },
+    {
+      "class": "homepage",
+      "pages": 2,
+      "imp_180d": 82433,
+      "imp_pct": 3.6,
+      "clicks_180d": 3330,
+      "clicks_pct": 19.4
+    },
+    {
+      "class": "service",
+      "pages": 3,
+      "imp_180d": 61152,
+      "imp_pct": 2.7,
+      "clicks_180d": 168,
+      "clicks_pct": 1.0
+    },
+    {
+      "class": "other",
+      "pages": 81,
+      "imp_180d": 60174,
+      "imp_pct": 2.6,
+      "clicks_180d": 191,
+      "clicks_pct": 1.1
+    },
+    {
+      "class": "geo_padding",
+      "pages": 34,
+      "imp_180d": 47485,
+      "imp_pct": 2.1,
+      "clicks_180d": 186,
+      "clicks_pct": 1.1
+    },
+    {
+      "class": "core",
+      "pages": 6,
+      "imp_180d": 18063,
+      "imp_pct": 0.8,
+      "clicks_180d": 56,
+      "clicks_pct": 0.3
+    },
+    {
+      "class": "suburb",
+      "pages": 59,
+      "imp_180d": 3852,
+      "imp_pct": 0.2,
+      "clicks_180d": 31,
+      "clicks_pct": 0.2
+    },
+    {
+      "class": "ppc",
+      "pages": 2,
+      "imp_180d": 99,
+      "imp_pct": 0.0,
+      "clicks_180d": 0,
+      "clicks_pct": 0.0
+    }
+  ],
+  "top_drivers": [
+    {
+      "url": "/?utm_campaign=gmb&utm_medium=organic&utm_source=gmb",
+      "bucket": "homepage",
+      "imp_180d": 50169,
+      "clicks_180d": 2341,
+      "avg_pos_180d": 5.36,
+      "avg_pos_30d": 2.58,
+      "pos_delta": -2.7800000000000002,
+      "imp_per_day_change": 849.78,
+      "clicks_per_day_change": 1.713333333333333
+    },
+    {
+      "url": "/how-long-will-i-feel-sick-after-a-massage/",
+      "bucket": "blog",
+      "imp_180d": 200548,
+      "clicks_180d": 1511,
+      "avg_pos_180d": 5.07,
+      "avg_pos_30d": 6.45,
+      "pos_delta": 1.38,
+      "imp_per_day_change": 371.1733333333334,
+      "clicks_per_day_change": 1.3666666666666671
+    },
+    {
+      "url": "/what-should-women-wear-for-a-full-body-massage/",
+      "bucket": "blog",
+      "imp_180d": 4948,
+      "clicks_180d": 48,
+      "avg_pos_180d": 9.08,
+      "avg_pos_30d": 9.81,
+      "pos_delta": 0.7300000000000004,
+      "imp_per_day_change": 40.57333333333333,
+      "clicks_per_day_change": 0.72
+    },
+    {
+      "url": "/massage-and-tinnitus-specific-techniques-often-used/",
+      "bucket": "blog",
+      "imp_180d": 50181,
+      "clicks_180d": 420,
+      "avg_pos_180d": 4.95,
+      "avg_pos_30d": 6.92,
+      "pos_delta": 1.9699999999999998,
+      "imp_per_day_change": 67.69999999999999,
+      "clicks_per_day_change": 0.6400000000000001
+    },
+    {
+      "url": "/pain-and-numbness-down-arms-and-how-massage-will-help/",
+      "bucket": "blog",
+      "imp_180d": 14698,
+      "clicks_180d": 157,
+      "avg_pos_180d": 6.68,
+      "avg_pos_30d": 6.9,
+      "pos_delta": 0.22000000000000064,
+      "imp_per_day_change": 52.093333333333334,
+      "clicks_per_day_change": 0.3933333333333333
+    },
+    {
+      "url": "/mechanical-and-relaxation-responses-to-massage-therapy-part-1/",
+      "bucket": "blog",
+      "imp_180d": 2759,
+      "clicks_180d": 18,
+      "avg_pos_180d": 7.96,
+      "avg_pos_30d": 10.39,
+      "pos_delta": 2.4300000000000006,
+      "imp_per_day_change": 11.686666666666666,
+      "clicks_per_day_change": 0.24
+    },
+    {
+      "url": "/the-science-behind-massage-pleasure-understanding-your-bodys-response/",
+      "bucket": "blog",
+      "imp_180d": 5801,
+      "clicks_180d": 32,
+      "avg_pos_180d": 6.14,
+      "avg_pos_30d": 6.76,
+      "pos_delta": 0.6200000000000001,
+      "imp_per_day_change": 14.326666666666664,
+      "clicks_per_day_change": 0.22666666666666663
+    },
+    {
+      "url": "/how-to-massage-hamstrings/",
+      "bucket": "blog",
+      "imp_180d": 41016,
+      "clicks_180d": 236,
+      "avg_pos_180d": 5.57,
+      "avg_pos_30d": 7.75,
+      "pos_delta": 2.1799999999999997,
+      "imp_per_day_change": -17.560000000000002,
+      "clicks_per_day_change": 0.22666666666666657
+    },
+    {
+      "url": "/best-clothes-to-wear-for-your-prenatal-massage/",
+      "bucket": "geo_padding",
+      "imp_180d": 4587,
+      "clicks_180d": 61,
+      "avg_pos_180d": 2.92,
+      "avg_pos_30d": 4.17,
+      "pos_delta": 1.25,
+      "imp_per_day_change": 21.979999999999997,
+      "clicks_per_day_change": 0.19333333333333336
+    },
+    {
+      "url": "/self-massage-techniques-for-digestive-relief-stomach-massage/",
+      "bucket": "blog",
+      "imp_180d": 29319,
+      "clicks_180d": 49,
+      "avg_pos_180d": 9.0,
+      "avg_pos_30d": 17.14,
+      "pos_delta": 8.14,
+      "imp_per_day_change": -112.38000000000001,
+      "clicks_per_day_change": 0.15333333333333335
+    },
+    {
+      "url": "/best-farmers-markets-in-american-fork-ut/",
+      "bucket": "geo_padding",
+      "imp_180d": 2182,
+      "clicks_180d": 15,
+      "avg_pos_180d": 9.19,
+      "avg_pos_30d": 8.48,
+      "pos_delta": -0.7099999999999991,
+      "imp_per_day_change": 11.413333333333332,
+      "clicks_per_day_change": 0.14
+    },
+    {
+      "url": "/booking/",
+      "bucket": "core",
+      "imp_180d": 8640,
+      "clicks_180d": 45,
+      "avg_pos_180d": 4.8,
+      "avg_pos_30d": 4.34,
+      "pos_delta": -0.45999999999999996,
+      "imp_per_day_change": 7.839999999999996,
+      "clicks_per_day_change": 0.13999999999999999
+    },
+    {
+      "url": "/massage-therapy-near-lindon-utah/",
+      "bucket": "blog",
+      "imp_180d": 5596,
+      "clicks_180d": 28,
+      "avg_pos_180d": 16.22,
+      "avg_pos_30d": 13.73,
+      "pos_delta": -2.4899999999999984,
+      "imp_per_day_change": -18.026666666666667,
+      "clicks_per_day_change": 0.13333333333333333
+    },
+    {
+      "url": "/top-photography-spots-in-american-fork/",
+      "bucket": "geo_padding",
+      "imp_180d": 673,
+      "clicks_180d": 10,
+      "avg_pos_180d": 8.64,
+      "avg_pos_30d": 10.2,
+      "pos_delta": 1.5599999999999987,
+      "imp_per_day_change": 0.4733333333333336,
+      "clicks_per_day_change": 0.13333333333333333
+    },
+    {
+      "url": "/rare-situations-where-massage-isnt-recommended/",
+      "bucket": "blog",
+      "imp_180d": 5437,
+      "clicks_180d": 20,
+      "avg_pos_180d": 2.61,
+      "avg_pos_30d": 6.27,
+      "pos_delta": 3.6599999999999997,
+      "imp_per_day_change": -29.086666666666666,
+      "clicks_per_day_change": 0.10666666666666667
+    },
+    {
+      "url": "/massage-and-upgrades/",
+      "bucket": "service",
+      "imp_180d": 10412,
+      "clicks_180d": 39,
+      "avg_pos_180d": 7.74,
+      "avg_pos_30d": 8.22,
+      "pos_delta": 0.4800000000000004,
+      "imp_per_day_change": 5.06666666666667,
+      "clicks_per_day_change": 0.09999999999999998
+    },
+    {
+      "url": "/how-float-therapy-benefits-those-with-eating-disorders/",
+      "bucket": "blog",
+      "imp_180d": 176,
+      "clicks_180d": 4,
+      "avg_pos_180d": 10.01,
+      "avg_pos_30d": 8.25,
+      "pos_delta": -1.7599999999999998,
+      "imp_per_day_change": 0.2266666666666668,
+      "clicks_per_day_change": 0.09333333333333334
+    },
+    {
+      "url": "/essential-prenatal-massage-positions-and-techniques/",
+      "bucket": "blog",
+      "imp_180d": 2135,
+      "clicks_180d": 5,
+      "avg_pos_180d": 16.19,
+      "avg_pos_30d": 16.47,
+      "pos_delta": 0.2799999999999976,
+      "imp_per_day_change": 16.926666666666666,
+      "clicks_per_day_change": 0.08666666666666667
+    },
+    {
+      "url": "/value-of-massage-therapy-for-digestion/",
+      "bucket": "blog",
+      "imp_180d": 6727,
+      "clicks_180d": 15,
+      "avg_pos_180d": 8.63,
+      "avg_pos_30d": 12.97,
+      "pos_delta": 4.34,
+      "imp_per_day_change": -16.08666666666667,
+      "clicks_per_day_change": 0.06
+    },
+    {
+      "url": "/how-to-plan-the-perfect-spa-day-for-ultimate-relaxation/",
+      "bucket": "blog",
+      "imp_180d": 2797,
+      "clicks_180d": 15,
+      "avg_pos_180d": 7.95,
+      "avg_pos_30d": 8.61,
+      "pos_delta": 0.6599999999999993,
+      "imp_per_day_change": 29.35333333333333,
+      "clicks_per_day_change": 0.06
+    },
+    {
+      "url": "/saratoga-utah/",
+      "bucket": "blog",
+      "imp_180d": 9823,
+      "clicks_180d": 93,
+      "avg_pos_180d": 16.1,
+      "avg_pos_30d": 16.1,
+      "pos_delta": 0.0,
+      "imp_per_day_change": 2.7533333333333303,
+      "clicks_per_day_change": 0.05999999999999994
+    },
+    {
+      "url": "/balancing-sympathetic-and-parasympathetic-systems-with-float-therapy/",
+      "bucket": "blog",
+      "imp_180d": 560,
+      "clicks_180d": 4,
+      "avg_pos_180d": 10.35,
+      "avg_pos_30d": 10.17,
+      "pos_delta": -0.17999999999999972,
+      "imp_per_day_change": 0.8266666666666667,
+      "clicks_per_day_change": 0.05333333333333333
+    },
+    {
+      "url": "/modalities-techniques/magnesium-massage-utah/",
+      "bucket": "other",
+      "imp_180d": 3256,
+      "clicks_180d": 11,
+      "avg_pos_180d": 5.13,
+      "avg_pos_30d": 7.46,
+      "pos_delta": 2.33,
+      "imp_per_day_change": -4.106666666666667,
+      "clicks_per_day_change": 0.04666666666666667
+    },
+    {
+      "url": "/contact/",
+      "bucket": "core",
+      "imp_180d": 1593,
+      "clicks_180d": 5,
+      "avg_pos_180d": 8.01,
+      "avg_pos_30d": 10.01,
+      "pos_delta": 2.0,
+      "imp_per_day_change": 7.02,
+      "clicks_per_day_change": 0.04666666666666666
+    },
+    {
+      "url": "/how-to-massage-feet/",
+      "bucket": "blog",
+      "imp_180d": 9151,
+      "clicks_180d": 17,
+      "avg_pos_180d": 10.02,
+      "avg_pos_30d": 12.02,
+      "pos_delta": 2.0,
+      "imp_per_day_change": -14.60666666666667,
+      "clicks_per_day_change": 0.04666666666666666
+    },
+    {
+      "url": "/modalities-techniques/warm-bamboo/",
+      "bucket": "other",
+      "imp_180d": 1421,
+      "clicks_180d": 6,
+      "avg_pos_180d": 25.06,
+      "avg_pos_30d": 20.5,
+      "pos_delta": -4.559999999999999,
+      "imp_per_day_change": -1.4733333333333336,
+      "clicks_per_day_change": 0.039999999999999994
+    },
+    {
+      "url": "/history-of-float-therapy/",
+      "bucket": "blog",
+      "imp_180d": 2484,
+      "clicks_180d": 6,
+      "avg_pos_180d": 9.52,
+      "avg_pos_30d": 9.37,
+      "pos_delta": -0.15000000000000036,
+      "imp_per_day_change": 0.27999999999999936,
+      "clicks_per_day_change": 0.039999999999999994
+    },
+    {
+      "url": "/spa-treatments-that-are-safe-during-pregnancy/",
+      "bucket": "blog",
+      "imp_180d": 3287,
+      "clicks_180d": 6,
+      "avg_pos_180d": 18.58,
+      "avg_pos_30d": 17.01,
+      "pos_delta": -1.5699999999999967,
+      "imp_per_day_change": 2.206666666666667,
+      "clicks_per_day_change": 0.039999999999999994
+    },
+    {
+      "url": "/best-parks-for-kids-in-american-fork/",
+      "bucket": "geo_padding",
+      "imp_180d": 1658,
+      "clicks_180d": 13,
+      "avg_pos_180d": 8.89,
+      "avg_pos_30d": 7.34,
+      "pos_delta": -1.5500000000000007,
+      "imp_per_day_change": 13.426666666666666,
+      "clicks_per_day_change": 0.03333333333333334
+    },
+    {
+      "url": "/modalities-and-techniques/",
+      "bucket": "blog",
+      "imp_180d": 4397,
+      "clicks_180d": 1,
+      "avg_pos_180d": 3.98,
+      "avg_pos_30d": 2.89,
+      "pos_delta": -1.0899999999999999,
+      "imp_per_day_change": -1.5933333333333302,
+      "clicks_per_day_change": 0.03333333333333333
+    }
+  ],
+  "bleeding_ctr_pages": [
+    {
+      "url": "/upgrades/",
+      "bucket": "blog",
+      "clicks": 0,
+      "imp": 1462,
+      "pos": 5.62,
+      "ctr": 0.0,
+      "expected_ctr": 6.0,
+      "ctr_gap": 6.0
+    },
+    {
+      "url": "/why-its-critical-to-include-recovery-time-in-a-workout-program/",
+      "bucket": "blog",
+      "clicks": 0,
+      "imp": 1435,
+      "pos": 5.03,
+      "ctr": 0.0,
+      "expected_ctr": 6.0,
+      "ctr_gap": 6.0
+    },
+    {
+      "url": "/why-lehi-massage-and-alcohol-dont-mix/",
+      "bucket": "blog",
+      "clicks": 8,
+      "imp": 31721,
+      "pos": 5.59,
+      "ctr": 0.025,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.975
+    },
+    {
+      "url": "/about/",
+      "bucket": "core",
+      "clicks": 1,
+      "imp": 2840,
+      "pos": 4.78,
+      "ctr": 0.035,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.965
+    },
+    {
+      "url": "/float-therapy-services-in-pleasant-grove/",
+      "bucket": "blog",
+      "clicks": 9,
+      "imp": 24639,
+      "pos": 6.59,
+      "ctr": 0.037,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.963
+    },
+    {
+      "url": "/pricing-and-membership/",
+      "bucket": "core",
+      "clicks": 4,
+      "imp": 4088,
+      "pos": 4.91,
+      "ctr": 0.098,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.902
+    },
+    {
+      "url": "/wellness-clinic-vs-spa-what-sets-them-apart/",
+      "bucket": "blog",
+      "clicks": 41,
+      "imp": 38713,
+      "pos": 4.99,
+      "ctr": 0.106,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.894
+    },
+    {
+      "url": "/modalities-techniques/",
+      "bucket": "blog",
+      "clicks": 5,
+      "imp": 3772,
+      "pos": 6.89,
+      "ctr": 0.133,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.867
+    },
+    {
+      "url": "/how-often-should-you-do-float-therapy-for-the-best-results/",
+      "bucket": "blog",
+      "clicks": 7,
+      "imp": 2988,
+      "pos": 6.72,
+      "ctr": 0.234,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.766
+    },
+    {
+      "url": "/what-is-a-spa-membership-how-it-works-and-why-its-worth-it/",
+      "bucket": "blog",
+      "clicks": 79,
+      "imp": 30236,
+      "pos": 4.78,
+      "ctr": 0.261,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.739
+    },
+    {
+      "url": "/post-massage-considerations-ice-water-no-caffeine/",
+      "bucket": "blog",
+      "clicks": 111,
+      "imp": 36870,
+      "pos": 5.51,
+      "ctr": 0.301,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.699
+    },
+    {
+      "url": "/modalities-techniques/magnesium-massage-utah/",
+      "bucket": "other",
+      "clicks": 11,
+      "imp": 3256,
+      "pos": 5.13,
+      "ctr": 0.338,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.662
+    },
+    {
+      "url": "/how-much-magnesium-do-you-absorb-in-a-float-tank/",
+      "bucket": "blog",
+      "clicks": 25,
+      "imp": 6351,
+      "pos": 6.06,
+      "ctr": 0.394,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.606
+    },
+    {
+      "url": "/what-you-need-to-know-about-cupping-marks/",
+      "bucket": "blog",
+      "clicks": 629,
+      "imp": 158447,
+      "pos": 5.89,
+      "ctr": 0.397,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.603
+    },
+    {
+      "url": "/modalities-techniques/lomi-lomi-massage/",
+      "bucket": "other",
+      "clicks": 17,
+      "imp": 4196,
+      "pos": 5.52,
+      "ctr": 0.405,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.595
+    },
+    {
+      "url": "/how-to-massage-your-stomach-to-relieve-gas/",
+      "bucket": "blog",
+      "clicks": 1222,
+      "imp": 280713,
+      "pos": 4.73,
+      "ctr": 0.435,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.565
+    },
+    {
+      "url": "/hair-spa-during-pregnancy-a-relaxing-treat-for-expecting-mothers/",
+      "bucket": "blog",
+      "clicks": 89,
+      "imp": 19804,
+      "pos": 4.58,
+      "ctr": 0.449,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.551
+    },
+    {
+      "url": "/booking/",
+      "bucket": "core",
+      "clicks": 45,
+      "imp": 8640,
+      "pos": 4.8,
+      "ctr": 0.521,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.479
+    },
+    {
+      "url": "/positives-of-combining-massage-therapy-and-yoga/",
+      "bucket": "blog",
+      "clicks": 43,
+      "imp": 8073,
+      "pos": 6.76,
+      "ctr": 0.533,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.467
+    },
+    {
+      "url": "/the-science-behind-massage-pleasure-understanding-your-bodys-response/",
+      "bucket": "blog",
+      "clicks": 32,
+      "imp": 5801,
+      "pos": 6.14,
+      "ctr": 0.552,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.448
+    },
+    {
+      "url": "/post-massage-considerations-fuel-epsom-salt-rest/",
+      "bucket": "blog",
+      "clicks": 67,
+      "imp": 11956,
+      "pos": 4.02,
+      "ctr": 0.56,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.4399999999999995
+    },
+    {
+      "url": "/how-to-massage-hamstrings/",
+      "bucket": "blog",
+      "clicks": 236,
+      "imp": 41016,
+      "pos": 5.57,
+      "ctr": 0.575,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.425
+    },
+    {
+      "url": "/how-long-will-i-feel-sick-after-a-massage/",
+      "bucket": "blog",
+      "clicks": 1511,
+      "imp": 200548,
+      "pos": 5.07,
+      "ctr": 0.753,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.247
+    },
+    {
+      "url": "/massage-and-tinnitus-specific-techniques-often-used/",
+      "bucket": "blog",
+      "clicks": 420,
+      "imp": 50181,
+      "pos": 4.95,
+      "ctr": 0.837,
+      "expected_ctr": 6.0,
+      "ctr_gap": 5.163
+    },
+    {
+      "url": "/pain-and-numbness-down-arms-and-how-massage-will-help/",
+      "bucket": "blog",
+      "clicks": 157,
+      "imp": 14698,
+      "pos": 6.68,
+      "ctr": 1.068,
+      "expected_ctr": 6.0,
+      "ctr_gap": 4.932
+    }
+  ],
+  "biggest_winner_queries": [
+    {
+      "query": "best massage near me",
+      "clicks": 2,
+      "imp": 196682,
+      "pos": 12.95,
+      "ctr": 0.001,
+      "est_clicks_top3": 25568.66,
+      "est_marginal": 25566.66
+    },
+    {
+      "query": "float therapy lehi",
+      "clicks": 0,
+      "imp": 18221,
+      "pos": 4.1,
+      "ctr": 0.0,
+      "est_clicks_top3": 2368.73,
+      "est_marginal": 2368.73
+    },
+    {
+      "query": "float therapy pleasant grove",
+      "clicks": 0,
+      "imp": 18114,
+      "pos": 4.33,
+      "ctr": 0.0,
+      "est_clicks_top3": 2354.82,
+      "est_marginal": 2354.82
+    },
+    {
+      "query": "what toxins are released after massage",
+      "clicks": 9,
+      "imp": 10927,
+      "pos": 5.2,
+      "ctr": 0.082,
+      "est_clicks_top3": 1420.51,
+      "est_marginal": 1411.51
+    },
+    {
+      "query": "float pod pleasant grove",
+      "clicks": 0,
+      "imp": 5029,
+      "pos": 4.94,
+      "ctr": 0.0,
+      "est_clicks_top3": 653.77,
+      "est_marginal": 653.77
+    },
+    {
+      "query": "severe stagnation cupping meaning",
+      "clicks": 38,
+      "imp": 5267,
+      "pos": 4.55,
+      "ctr": 0.721,
+      "est_clicks_top3": 684.71,
+      "est_marginal": 646.71
+    },
+    {
+      "query": "bamboo massage",
+      "clicks": 6,
+      "imp": 4427,
+      "pos": 14.75,
+      "ctr": 0.136,
+      "est_clicks_top3": 575.51,
+      "est_marginal": 569.51
+    },
+    {
+      "query": "hamstring massage",
+      "clicks": 19,
+      "imp": 4431,
+      "pos": 6.1,
+      "ctr": 0.429,
+      "est_clicks_top3": 576.03,
+      "est_marginal": 557.03
+    },
+    {
+      "query": "how to plan a birthday spa day",
+      "clicks": 0,
+      "imp": 4212,
+      "pos": 10.97,
+      "ctr": 0.0,
+      "est_clicks_top3": 547.5600000000001,
+      "est_marginal": 547.5600000000001
+    },
+    {
+      "query": "stomach massage for gas",
+      "clicks": 31,
+      "imp": 3713,
+      "pos": 4.86,
+      "ctr": 0.835,
+      "est_clicks_top3": 482.69,
+      "est_marginal": 451.69
+    },
+    {
+      "query": "how to massage sciatica trigger points",
+      "clicks": 11,
+      "imp": 2786,
+      "pos": 6.1,
+      "ctr": 0.395,
+      "est_clicks_top3": 362.18,
+      "est_marginal": 351.18
+    },
+    {
+      "query": "massage",
+      "clicks": 32,
+      "imp": 2538,
+      "pos": 7.6,
+      "ctr": 1.261,
+      "est_clicks_top3": 329.94,
+      "est_marginal": 297.94
+    },
+    {
+      "query": "foot massage pregnancy",
+      "clicks": 16,
+      "imp": 2413,
+      "pos": 5.94,
+      "ctr": 0.663,
+      "est_clicks_top3": 313.69,
+      "est_marginal": 297.69
+    },
+    {
+      "query": "float spa",
+      "clicks": 30,
+      "imp": 2242,
+      "pos": 8.78,
+      "ctr": 1.338,
+      "est_clicks_top3": 291.46000000000004,
+      "est_marginal": 261.46000000000004
+    },
+    {
+      "query": "cupping marks",
+      "clicks": 2,
+      "imp": 1935,
+      "pos": 9.07,
+      "ctr": 0.103,
+      "est_clicks_top3": 251.55,
+      "est_marginal": 249.55
+    },
+    {
+      "query": "cupping color meaning",
+      "clicks": 2,
+      "imp": 1787,
+      "pos": 6.5,
+      "ctr": 0.112,
+      "est_clicks_top3": 232.31,
+      "est_marginal": 230.31
+    },
+    {
+      "query": "can a massage make you sick",
+      "clicks": 19,
+      "imp": 1746,
+      "pos": 4.2,
+      "ctr": 1.088,
+      "est_clicks_top3": 226.98000000000002,
+      "est_marginal": 207.98000000000002
+    },
+    {
+      "query": "foot massage while pregnant",
+      "clicks": 16,
+      "imp": 1697,
+      "pos": 5.35,
+      "ctr": 0.943,
+      "est_clicks_top3": 220.61,
+      "est_marginal": 204.61
+    },
+    {
+      "query": "mengeluarkan cairan dengan memijat",
+      "clicks": 0,
+      "imp": 1533,
+      "pos": 10.48,
+      "ctr": 0.0,
+      "est_clicks_top3": 199.29000000000002,
+      "est_marginal": 199.29000000000002
+    },
+    {
+      "query": "طريقة تدليك البطن للتخلص من الغازات",
+      "clicks": 1,
+      "imp": 1470,
+      "pos": 10.66,
+      "ctr": 0.068,
+      "est_clicks_top3": 191.1,
+      "est_marginal": 190.1
+    }
+  ],
+  "cannibal_top": [
+    {
+      "query": "best massage near me",
+      "n_pages": "20",
+      "total_imp": "196710",
+      "total_clicks": "2",
+      "top_pages": "https://bbmassageandfloat.com/booking/ (pos 1.0, imp 2, clk 0) | ttps://bbmassageandfloat.com/massage-and-upgrades/ (pos 1.0, imp 2, clk 0) | loat.com/modalities-techniques/relaxation-massage/ (pos 4.0, imp 1, clk 0) | https://bbmassageandfloat.com/alpine-utah/ (pos 4.7, imp 6, clk 0)"
+    },
+    {
+      "query": "float therapy lehi",
+      "n_pages": "29",
+      "total_imp": "60728",
+      "total_clicks": "0",
+      "top_pages": "utm_campaign=gmb&utm_medium=organic&utm_source=gmb (pos 1.0, imp 17892, clk 0) | /massage-therapys-value-for-injury-rehabilitation/ (pos 2.0, imp 2, clk 0) | ageandfloat.com/float-therapy-services-in-lehi-ut/ (pos 2.0, imp 18044, clk 0) | com/habits-to-supplement-massage-or-float-therapy/ (pos 2.5, imp 32, clk 0)"
+    },
+    {
+      "query": "float therapy pleasant grove",
+      "n_pages": "14",
+      "total_imp": "45219",
+      "total_clicks": "0",
+      "top_pages": "utm_campaign=gmb&utm_medium=organic&utm_source=gmb (pos 1.1, imp 10943, clk 0) | loat.com/float-therapy-services-in-pleasant-grove/ (pos 3.0, imp 17961, clk 0) | om/positive-mental-health-impact-of-float-therapy/ (pos 4.3, imp 21, clk 0) | .com/modalities-techniques/cranial-sacral-therapy/ (pos 5.5, imp 2, clk 0)"
+    },
+    {
+      "query": "body balance massage and float",
+      "n_pages": "50",
+      "total_imp": "23558",
+      "total_clicks": "1358",
+      "top_pages": "eandfloat.com/best-chiropractors-in-american-fork/ (pos 1.0, imp 2, clk 0) | t.com/modalities-techniques/trigger-point-therapy/ (pos 1.0, imp 6, clk 1) | cal-experts-in-massage-therapy-in-stone-hollow-ut/ (pos 1.0, imp 1, clk 0) | om/positive-mental-health-impact-of-float-therapy/ (pos 1.0, imp 1, clk 0)"
+    },
+    {
+      "query": "massage near me",
+      "n_pages": "34",
+      "total_imp": "17994",
+      "total_clicks": "141",
+      "top_pages": "https://bbmassageandfloat.com/float-therapy/ (pos 1.0, imp 1, clk 0) | ress-relieving-massage-services-in-springville-ut/ (pos 1.0, imp 1, clk 0) | /post-massage-considerations-fuel-epsom-salt-rest/ (pos 1.0, imp 1, clk 0) | ng-the-classic-swedish-massage-for-daily-wellness/ (pos 1.5, imp 2, clk 0)"
+    },
+    {
+      "query": "what toxins are released after massage",
+      "n_pages": "6",
+      "total_imp": "11113",
+      "total_clicks": "9",
+      "top_pages": "ndfloat.com/why-lehi-massage-and-alcohol-dont-mix/ (pos 1.0, imp 3, clk 0) | dfloat.com/what-toxins-are-released-after-massage/ (pos 2.3, imp 10743, clk 6) | post-massage-considerations-ice-water-no-caffeine/ (pos 2.5, imp 6, clk 0) | oat.com/how-long-will-i-feel-sick-after-a-massage/ (pos 2.8, imp 359, clk 3)"
+    },
+    {
+      "query": "float pod pleasant grove",
+      "n_pages": "9",
+      "total_imp": "8860",
+      "total_clicks": "0",
+      "top_pages": "loat.com/float-therapy-services-in-pleasant-grove/ (pos 2.7, imp 4925, clk 0) | utm_campaign=gmb&utm_medium=organic&utm_source=gmb (pos 3.3, imp 134, clk 0) | https://bbmassageandfloat.com/alpine-utah/ (pos 7.0, imp 1, clk 0) | https://bbmassageandfloat.com/float-therapy/ (pos 8.2, imp 3649, clk 0)"
+    },
+    {
+      "query": "massage therapy near me",
+      "n_pages": "15",
+      "total_imp": "4696",
+      "total_clicks": "11",
+      "top_pages": "https://bbmassageandfloat.com/booking/ (pos 1.0, imp 5, clk 0) | ttps://bbmassageandfloat.com/massage-and-upgrades/ (pos 1.0, imp 5, clk 0) | https://bbmassageandfloat.com/float-therapy/ (pos 4.0, imp 1, clk 0) | andfloat.com/modalities-techniques/sports-massage/ (pos 4.0, imp 1, clk 0)"
+    },
+    {
+      "query": "bamboo massage",
+      "n_pages": "13",
+      "total_imp": "4598",
+      "total_clicks": "6",
+      "top_pages": "utm_campaign=gmb&utm_medium=organic&utm_source=gmb (pos 1.0, imp 1, clk 1) | https://bbmassageandfloat.com/booking/ (pos 1.0, imp 1, clk 0) | ttps://bbmassageandfloat.com/massage-and-upgrades/ (pos 1.0, imp 1, clk 0) | om/top-10-relaxing-spa-treatments-you-need-to-try/ (pos 1.0, imp 2, clk 0)"
+    },
+    {
+      "query": "how to plan a birthday spa day",
+      "n_pages": "2",
+      "total_imp": "4212",
+      "total_clicks": "0",
+      "top_pages": "spa-day-birthday-ideas-for-a-relaxing-celebration/ (pos 10.2, imp 4210, clk 0) | -plan-the-perfect-spa-day-for-ultimate-relaxation/ (pos 48.5, imp 2, clk 0)"
+    },
+    {
+      "query": "massage therapist near me",
+      "n_pages": "20",
+      "total_imp": "4051",
+      "total_clicks": "9",
+      "top_pages": "tps://bbmassageandfloat.com/modalities-techniques/ (pos 1.0, imp 1, clk 0) | loat.com/modalities-techniques/relaxation-massage/ (pos 1.0, imp 1, clk 0) | remium-massage-therapy-in-fields-at-timpanogos-ut/ (pos 1.0, imp 1, clk 0) | ageandfloat.com/float-therapy-services-in-lehi-ut/ (pos 2.0, imp 1, clk 0)"
+    },
+    {
+      "query": "stomach massage for gas",
+      "n_pages": "4",
+      "total_imp": "3763",
+      "total_clicks": "31",
+      "top_pages": "//bbmassageandfloat.com/how-to-massage-hamstrings/ (pos 1.0, imp 4, clk 0) | e-techniques-for-digestive-relief-stomach-massage/ (pos 1.0, imp 84, clk 0) | at.com/how-to-massage-your-stomach-to-relieve-gas/ (pos 4.4, imp 3674, clk 31) | ge-techniques-for-digestive-relief-stomach-massage (pos 94.0, imp 1, clk 0)"
+    },
+    {
+      "query": "massage american fork",
+      "n_pages": "23",
+      "total_imp": "3637",
+      "total_clicks": "89",
+      "top_pages": "t.com/modalities-techniques/trigger-point-therapy/ (pos 1.0, imp 1, clk 0) | utm_campaign=gmb&utm_medium=organic&utm_source=gmb (pos 1.2, imp 683, clk 64) | ndfloat.com/modalities-techniques/swedish-massage/ (pos 3.0, imp 205, clk 0) | andfloat.com/modalities-techniques/sports-massage/ (pos 3.0, imp 205, clk 0)"
+    },
+    {
+      "query": "massage",
+      "n_pages": "55",
+      "total_imp": "3546",
+      "total_clicks": "32",
+      "top_pages": "om-a-massage-therapist-part-3-what-is-reflexology/ (pos 1.0, imp 2, clk 0) | t.com/chronic-vs-acute-pain-and-how-massage-helps/ (pos 1.0, imp 1, clk 0) | at.com/modalities-techniques/aromatherapy-massage/ (pos 1.0, imp 1, clk 0) | tps://bbmassageandfloat.com/modalities-techniques/ (pos 1.0, imp 2, clk 0)"
+    },
+    {
+      "query": "deep tissue massage near me",
+      "n_pages": "21",
+      "total_imp": "3404",
+      "total_clicks": "10",
+      "top_pages": "https://bbmassageandfloat.com/booking/ (pos 1.8, imp 9, clk 0) | ttps://bbmassageandfloat.com/massage-and-upgrades/ (pos 1.8, imp 9, clk 0) | dfloat.com/how-to-massage-sciatica-trigger-points/ (pos 3.0, imp 1, clk 0) | ng-the-classic-swedish-massage-for-daily-wellness/ (pos 3.0, imp 1, clk 0)"
+    }
+  ],
+  "untracked_top3": [
+    {
+      "query": "float spa",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 720,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "prenatal massage",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 720,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "sensory deprivation tank",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 720,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "myofascial release",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 590,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "cupping therapy near me",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 260,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "myofascial release near me",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 110,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "couples massage american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 40,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "deep tissue massage american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "float therapy american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "prenatal massage american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "sports massage american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "cupping therapy american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "float spa near me",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "swedish massage american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "trigger point therapy american fork",
+      "bb_rank": 1,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "lymphatic drainage massage",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 3600,
+      "top1": "Miso Skin Bar",
+      "top1_rating": 4.5
+    },
+    {
+      "query": "cupping therapy",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 720,
+      "top1": "Lotus Spring Acupuncture and Wellness Inc.",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "prenatal massage near me",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 390,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "isolation tank therapy",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Body Balance Massage And Float",
+      "top1_rating": 4.9
+    },
+    {
+      "query": "postnatal massage",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Doulas of Utah",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "warm bamboo massage",
+      "bb_rank": 2,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Relaxing Remedy",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "swedish massage",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 1300,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "sports massage near me",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 320,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "hot stone massage",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 260,
+      "top1": "Relaxing Remedy",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "cupping massage",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 90,
+      "top1": "Relaxing Remedy",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "trigger point therapy",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 70,
+      "top1": "Lone Peak Therapeutic Massage",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "trigger point therapy near me",
+      "bb_rank": 3,
+      "vol_us": 0,
+      "vol_ut": 10,
+      "top1": "Heart Centered Reiki - Holistic Arts - Massage - Energy Healing",
+      "top1_rating": 5.0
+    }
+  ],
+  "untracked_other": [
+    {
+      "query": "couples massage",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 1600,
+      "top1": "Relaxing Remedy",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "reflexology",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 1600,
+      "top1": "Fika Reflexology Bar",
+      "top1_rating": 4.8
+    },
+    {
+      "query": "deep tissue massage",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 1000,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "thai massage",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 1000,
+      "top1": "Lucky PURE SPA",
+      "top1_rating": 4.4
+    },
+    {
+      "query": "deep tissue massage near me",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 480,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "massage american fork",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 480,
+      "top1": "Lucky PURE SPA",
+      "top1_rating": 4.4
+    },
+    {
+      "query": "massage utah county",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 320,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "trigger point massage",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 110,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "day spa american fork",
+      "bb_rank": 4,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Lucky PURE SPA",
+      "top1_rating": 4.4
+    },
+    {
+      "query": "couples massage near me",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 1600,
+      "top1": "Lucky PURE SPA",
+      "top1_rating": 4.4
+    },
+    {
+      "query": "therapeutic massage",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 320,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "full body massage",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 210,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "sports massage",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 210,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "craniosacral therapy",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 50,
+      "top1": "Heart Centered Reiki - Holistic Arts - Massage - Energy Healing",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "spa american fork",
+      "bb_rank": 5,
+      "vol_us": 0,
+      "vol_ut": 40,
+      "top1": "Miso Skin Bar",
+      "top1_rating": 4.5
+    },
+    {
+      "query": "gua sha",
+      "bb_rank": 6,
+      "vol_us": 0,
+      "vol_ut": 1600,
+      "top1": "Miso Skin Bar",
+      "top1_rating": 4.5
+    },
+    {
+      "query": "aromatherapy massage",
+      "bb_rank": 6,
+      "vol_us": 0,
+      "vol_ut": 140,
+      "top1": "Millet Massage",
+      "top1_rating": 4.3
+    },
+    {
+      "query": "cranial sacral therapy",
+      "bb_rank": 6,
+      "vol_us": 0,
+      "vol_ut": 50,
+      "top1": "Heart Centered Reiki - Holistic Arts - Massage - Energy Healing",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "massage spa near me",
+      "bb_rank": 7,
+      "vol_us": 0,
+      "vol_ut": 1600,
+      "top1": "Lucky PURE SPA",
+      "top1_rating": 4.4
+    },
+    {
+      "query": "cranial sacral therapy near me",
+      "bb_rank": 8,
+      "vol_us": 0,
+      "vol_ut": 170,
+      "top1": "Heart Centered Reiki - Holistic Arts - Massage - Energy Healing",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "cranial sacral therapy american fork",
+      "bb_rank": 8,
+      "vol_us": 0,
+      "vol_ut": 0,
+      "top1": "Heart Centered Reiki - Holistic Arts - Massage - Energy Healing",
+      "top1_rating": 5.0
+    },
+    {
+      "query": "day spa near me",
+      "bb_rank": 12,
+      "vol_us": 0,
+      "vol_ut": 720,
+      "top1": "The Spa Lounge",
+      "top1_rating": 4.8
+    }
+  ],
+  "outside_grid": [
+    {
+      "city": "Salt Lake City",
+      "rows": 163,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "South Jordan",
+      "rows": 163,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Orem",
+      "rows": 161,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Ogden",
+      "rows": 160,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Sandy",
+      "rows": 148,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Provo",
+      "rows": 147,
+      "queries": 8,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Draper",
+      "rows": 147,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Spanish Fork",
+      "rows": 125,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Springville",
+      "rows": 125,
+      "queries": 9,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    },
+    {
+      "city": "Eagle Mountain",
+      "rows": 52,
+      "queries": 8,
+      "bb_in_top20": 0,
+      "winner": "Local pins only"
+    }
   ],
   "root_causes": [
-    {"severity": "P0", "title": "Trigger-point page scope mismatch + duplicate canonical", "body": "/trigger-point-therapy/ references medical injections + dry needling (owner-flagged). SP-01 rewrites body content (same H1, same URL); CN-01 small-level 301s the duplicate to /modalities-techniques/trigger-point-therapy/ canonical (745 inbound links)."},
-    {"severity": "P0", "title": "Sitewide NAP + schema thinness + cupping 404", "body": "372/372 pages use chat phone (855); only 1 has GBP primary (734). Every page carries generic DaySpa schema only — no Service / FAQPage / LocalBusiness anywhere. /cupping-massage/ returns 404 while 10+ cupping blog posts link to it. HP-01 + TPL-01 (M1) + SP-02/03 schema rollout (M2-M3) close the structural gap."},
-    {"severity": "P0", "title": "Off-page playbook rebuild (post-2026-05-13 program halt) — NEW IN v3", "body": "BB's DA 20 → 28 lift over engagement was partly driven by the SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) — halted across HQDM's book of business 2026-05-13. Forward authority work: manual Tier-1/2/3 citation submissions (AMTA, ABMP, Utah MTA, chambers), 1 monthly digital-PR pitch (postpartum / athlete-recovery angles), 1 monthly partner-outreach touch, on-site link equity earned by refreshed canonicals + new builds. REP-01 M1 W2 runs a DataForSEO Backlinks scan to decide if a disavow file is warranted. Spend posture unchanged; mix changes."},
-    {"severity": "Secondary", "title": "Doorway + geo cohort needs fill + small-redirect (never bulk NOINDEX)", "body": "326 GSC queries have 2+ BB URLs ranking. 130 URLs decisioned: 3 LEAVE · 9 REFRESH · 19 REPURPOSE · 84 small-301-to-MAIN · 14 REVIEW. Production at scale CONTINUES — 6 new location pages/month redirected to real catchment × service matrix gaps."},
-    {"severity": "Opportunity", "title": "Pleasant Grove cells open + 27 untracked service ranks at AF pin", "body": "3 PG winners collapsed (Paradise -143, MassageLuXe -138, owner's sibling -188); 5 new entrants filled. DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked queries (couples massage AF, deep tissue AF, cupping near me, myofascial release...) and #2-#3 for 12 more — lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface, gated on Owner #7."},
-    {"severity": "Positive", "title": "Float moat held + near-me tightening + 4.9★ × 402", "body": "Float queries held at 106/106 saturation. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on 'massage therapist near me' 27 → 37. Marginal lift is now post cadence + matrix-fill builds + Q-format LLM articles + service-page schema — and authority shifts to manual + earned channels per the post-halt playbook."}
+    {
+      "severity": "P0",
+      "title": "Trigger-point page scope mismatch + duplicate canonical",
+      "body": "/trigger-point-therapy/ references medical injections + dry needling (owner-flagged 2026-05-15). SP-01 rewrites body content (same H1, same URL); CN-01 small-level 301s the duplicate to /modalities-techniques/trigger-point-therapy/ canonical (745 inbound links)."
+    },
+    {
+      "severity": "P0",
+      "title": "Sitewide NAP + schema thinness + cupping 404",
+      "body": "372/372 pages use chat phone (855); only 1 has GBP primary (734). Every page carries generic DaySpa schema only — no Service / FAQPage / LocalBusiness anywhere. /cupping-massage/ returns 404 while 10+ cupping blog posts link to it. HP-01 + TPL-01 (M1) + SP-02/03 schema rollout (M2-M3) close the structural gap."
+    },
+    {
+      "severity": "P0",
+      "title": "Off-page playbook rebuild (post-2026-05-13 program halt) — NEW IN v3",
+      "body": "BB's DA 20 → 28 lift over engagement was partly driven by the SEO Neo stack (DAS / Blast / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Link Revolver / BatchGeo / ATB / GMB Pin Creation) — halted across HQDM's book of business 2026-05-13. Forward authority: manual citations (AMTA / ABMP / Utah MTA / Utah County + Pleasant Grove Chambers), 1 monthly digital-PR pitch, 1 monthly partner-outreach touch, on-site link equity. REP-01 M1 W2 runs a DataForSEO Backlinks scan to decide disavow."
+    },
+    {
+      "severity": "Secondary",
+      "title": "326 GSC cannibal queries · 130-URL cohort needs targeted fill + small-redirect (never bulk NOINDEX)",
+      "body": "The sitemap holds 90 templated suburb URLs + 40 off-topic geo pages. Per-URL decisions in Cannibal_Cleanup_Plan.xlsx: 3 LEAVE / 9 REFRESH / 1 REFRESH-TO-REAL / 19 REPURPOSE / 84 small-level 301-to-MAIN / 14 REVIEW. Production at scale CONTINUES at full volume (6 location + 10 blogs + 3 geo / mo)."
+    },
+    {
+      "severity": "Opportunity",
+      "title": "Pleasant Grove cells open + BB ranks #1-#3 for 27 untracked service queries at AF pin",
+      "body": "3 PG winners collapsed in the same window (Paradise -143, MassageLuXe -138, owner's sibling Paul and Tasha -188). 5 new PG entrants filled the space. DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked queries · #2 for 6 · #3 for 6 — lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface, gated on Owner Item #7."
+    },
+    {
+      "severity": "Positive",
+      "title": "Float moat held + near-me growth tightening + 4.9★ × 402",
+      "body": "Float queries held at 106/106 saturation. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on 'massage therapist near me' 27 → 37 (+10). Marginal lift is now post cadence + matrix-fill builds + Q-format LLM articles + service-page schema."
+    }
   ],
   "levers": [
-    {"id": "A", "name": "Single-shift fixes (M1)", "color": "red", "impact": "P0 · M1", "items": ["HP-01 sitewide NAP find-replace", "SP-01 trigger point rewrite (owner-flagged)", "CN-01 duplicate-canonical 301", "TPL-01 cupping 404 → 301 to canonical"]},
-    {"id": "B", "name": "Cannibal cleanup — fill + small-redirect", "color": "amber", "impact": "High · 90d", "items": ["M1 refresh real-catchment-bleeding batch (3-4 URLs)", "M2 84 small-301-to-MAIN + 19 repurpose", "M3 14 review + typo + final refresh batch"]},
-    {"id": "C+D+E", "name": "Production at scale — 57 builds Q2", "color": "green", "impact": "High · 90d", "items": ["LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × Swedish...)", "BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort)", "GEO-NEW 3/mo on-topic wellness + athletic-recovery (replaces burger/dermatologist cadence)"]},
-    {"id": "F", "name": "Service schema rollout sitewide", "color": "blue", "impact": "High · 90d", "items": ["SP-02 M2 Swedish + DT + Sports + Prenatal", "SP-03 M3 Float + Cranial Sacral + Reflexology + Gua Sha", "ON-07 M3 sitewide BlogPosting + BreadcrumbList"]},
-    {"id": "G", "name": "Missing-page builds", "color": "indigo", "impact": "Opp · 60d", "items": ["MR-01 M2 build /myofascial-release/ (BB #1 at AF pin, no page)", "LD-01 M3 build /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7)"]},
-    {"id": "H", "name": "Meta + title refresh sweep", "color": "purple", "impact": "High · 60d", "items": ["ON-01_M1 top 12 bleeding-CTR URLs (/about/, /pricing/, /upgrades/...)", "ON-01_M2 next 10 URLs"]},
-    {"id": "I", "name": "GBP velocity + photo blitz", "color": "amber", "impact": "High · 90d", "items": ["Posts 3/mo → 4/mo sustained", "8 photos/mo geotagged 40.378,-111.789", "M3 Services-tab audit"]},
-    {"id": "J", "name": "Authority rebuild — manual + earned (post-halt)", "color": "red", "impact": "P0 · Q2", "items": ["2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers; mom blogs; recovery vertical)", "1 digital-PR pitch/mo (postpartum M2; athlete-recovery M3)", "1 partner-outreach touch/mo (yoga / chiro / doula / run-club cross-link partnerships)", "On-site link equity earned by refreshed canonicals + new builds", "Halted-stack (DAS / Blast / RD100 / NAP-overlay / Link Revolver / BatchGeo / ATB / AI Articles / Driving Directions / Cloud Page / GMB Pin) archived per 2026-05-13 program halt"]},
-    {"id": "K", "name": "Reporting", "color": "indigo", "impact": "P0 · M3", "items": ["M1 add 14 untracked-service kws to LD cadence + DataForSEO Business Data scrape + DataForSEO Backlinks-disavow scan (post-halt cleanup decision)", "M2 indexation + CTR delta tracker + backlink-profile re-check if disavow filed", "M3 Q2 close-out vs 16-KPI scorecard + Q3 recommendation"]}
+    {
+      "id": "A",
+      "name": "Single-shift fixes (M1)",
+      "color": "red",
+      "impact": "P0 · M1",
+      "items": [
+        "HP-01 sitewide NAP find-replace (1h)",
+        "SP-01 trigger point rewrite — owner-flagged (8h)",
+        "CN-01 duplicate-canonical small-level 301 (2h)",
+        "TPL-01 cupping 404 → small-level 301 to canonical (2h)"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Cannibal cleanup — fill + small-redirect",
+      "color": "amber",
+      "impact": "High · 90d",
+      "items": [
+        "M1 REFRESH cohort priority batch (3-4 URLs)",
+        "M2 small-level 301-to-MAIN batch (84 URLs) + REPURPOSE 19 off-topic",
+        "M3 REVIEW 14 URLs + typo fix + final REFRESH"
+      ]
+    },
+    {
+      "id": "C+D+E",
+      "name": "Production at scale — 57 builds Q2",
+      "color": "green",
+      "impact": "High · 90d",
+      "items": [
+        "LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × Swedish...)",
+        "BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort)",
+        "GEO-NEW 3/mo on-topic wellness + athletic-recovery (replaces burger/dermatologist cadence)"
+      ]
+    },
+    {
+      "id": "F",
+      "name": "Service schema rollout sitewide",
+      "color": "blue",
+      "impact": "High · 90d",
+      "items": [
+        "SP-02 M2: Swedish + DT + Sports + Prenatal with Service + LocalBusiness + FAQ schema",
+        "SP-03 M3: Float + Cranial Sacral + Reflexology + Gua Sha",
+        "ON-07 M3 sitewide BlogPosting (top 10) + BreadcrumbList sitewide"
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Missing-page builds",
+      "color": "indigo",
+      "impact": "Opp · 60d",
+      "items": [
+        "MR-01 M2 /myofascial-release/ (BB #1 at AF pin without a page, 590 UT vol)",
+        "LD-01 M3 /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7)"
+      ]
+    },
+    {
+      "id": "H",
+      "name": "Meta + title refresh sweep",
+      "color": "purple",
+      "impact": "High · 60d",
+      "items": [
+        "ON-01_M1 top 12 bleeding-CTR URLs (/about/ 0.04%, /pricing-and-membership/ 0.10%, /upgrades/ 0.00%)",
+        "ON-01_M2 next 10 URLs from bleeding cohort"
+      ]
+    },
+    {
+      "id": "I",
+      "name": "GBP velocity + photo blitz",
+      "color": "amber",
+      "impact": "High · 90d",
+      "items": [
+        "Posts 3/mo → 4/mo sustained",
+        "8 photos/mo geotagged 40.378,-111.789",
+        "M3 Services-tab audit + attributes refresh"
+      ]
+    },
+    {
+      "id": "J",
+      "name": "Authority rebuild — manual + earned (post-halt)",
+      "color": "red",
+      "impact": "P0 · Q2",
+      "items": [
+        "2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers; mom blogs; recovery vertical)",
+        "1 digital-PR pitch/mo (postpartum M2; athlete-recovery M3)",
+        "1 partner-outreach touch/mo (yoga / chiro / doula / run-club cross-link partnerships)",
+        "On-site link equity earned by refreshed canonicals + new builds",
+        "Halted stack archived per 2026-05-13 program halt"
+      ]
+    },
+    {
+      "id": "K",
+      "name": "Reporting",
+      "color": "indigo",
+      "impact": "P0 · M3",
+      "items": [
+        "M1 add 14 untracked-service kws to LD cadence + DataForSEO Business Data scrape + Backlinks-disavow scan",
+        "M2 indexation + CTR delta tracker + backlink-profile re-check if disavow filed",
+        "M3 Q2 close-out vs 16-KPI scorecard + Q3 recommendation"
+      ]
+    }
   ],
   "owner_asks": [
-    {"id": "#1", "label": "Trigger-point page rewrite", "status": "Approved in email 2026-05-15 · Send diff before push"},
-    {"id": "#2", "label": "Sitewide phone canonical (734 vs 855)", "status": "Pending — 2 min confirmation"},
-    {"id": "#3", "label": "Is cupping still on the menu?", "status": "Pending — gates TPL-01 restore vs prune"},
-    {"id": "#7 NEW", "label": "Does BB perform manual lymphatic drainage?", "status": "Pending — gates LD-01 (3,600 UT searches/mo)"},
-    {"id": "#8 NEW", "label": "Confirm 16-KPI M3 close-out scorecard", "status": "Pending — locks success criteria"}
+    {
+      "id": "#1",
+      "label": "Trigger-point page rewrite",
+      "status": "Approved in email 2026-05-15 · Send diff before push"
+    },
+    {
+      "id": "#2",
+      "label": "Sitewide phone canonical (734 vs 855)",
+      "status": "Pending — 2 min confirmation"
+    },
+    {
+      "id": "#3",
+      "label": "Is cupping still on the menu?",
+      "status": "Pending — gates TPL-01 restore vs prune"
+    },
+    {
+      "id": "#7 NEW",
+      "label": "Does BB perform manual lymphatic drainage?",
+      "status": "Pending — gates LD-01 (3,600 UT searches/mo · DataForSEO shows BB #2 at AF pin)"
+    },
+    {
+      "id": "#8 NEW",
+      "label": "Confirm 16-KPI M3 close-out scorecard",
+      "status": "Pending — locks success criteria"
+    }
   ],
   "m3_kpis": [
-    {"kpi": "LD avg rank — massage therapist near me", "baseline": "5.97 (#2 of 10)", "target": "≤ 5.0"},
-    {"kpi": "LD avg rank — massages near me", "baseline": "7.08 (#3 of 14)", "target": "≤ 6.0"},
-    {"kpi": "LD avg rank — massage therapy", "baseline": "8.54 (#7 of 14)", "target": "≤ 7.5"},
-    {"kpi": "LD avg rank — massage therapist lehi", "baseline": "14.41 (#15 of 17)", "target": "≤ 13.0 (stretch)"},
-    {"kpi": "LD top-3 cells — massage therapist near me", "baseline": "37 cells", "target": "≥ 45"},
-    {"kpi": "Float queries — hold #1, avg rank ≤2.0", "baseline": "#1 / 1.34 / 1.68", "target": "Hold"},
-    {"kpi": "Sitewide CTR (GSC)", "baseline": "0.80%", "target": "≥ 1.2%"},
-    {"kpi": "GSC clicks (30d)", "baseline": "2,743", "target": "≥ 3,500"},
-    {"kpi": "Cannibal queries (2+ URLs)", "baseline": "326", "target": "≤ 250"},
-    {"kpi": "/about/ CTR", "baseline": "0.04%", "target": "≥ 3%"},
-    {"kpi": "/pricing-and-membership/ CTR", "baseline": "0.10%", "target": "≥ 4%"},
-    {"kpi": "First-time callers ≥ 90 sec (CallRail)", "baseline": "39 / Mar 2026", "target": "≥ 45 / M3"},
-    {"kpi": "GBP Posts cadence", "baseline": "~3 / mo", "target": "4 / mo sustained"},
-    {"kpi": "Service pages with FAQ schema", "baseline": "0 / 8", "target": "8 / 8"},
-    {"kpi": "Service × city matrix coverage", "baseline": "3-5 / 150", "target": "≥ 12 / 150"},
-    {"kpi": "LD tracked kws", "baseline": "18", "target": "≥ 32"}
+    {
+      "kpi": "LD avg rank — massage therapist near me",
+      "baseline": "5.97 (#2 of 10)",
+      "target": "≤ 5.0"
+    },
+    {
+      "kpi": "LD avg rank — massages near me",
+      "baseline": "7.08 (#3 of 14)",
+      "target": "≤ 6.0"
+    },
+    {
+      "kpi": "LD avg rank — massage therapy",
+      "baseline": "8.54 (#7 of 14)",
+      "target": "≤ 7.5"
+    },
+    {
+      "kpi": "LD avg rank — massage therapist lehi",
+      "baseline": "14.41 (#15 of 17)",
+      "target": "≤ 13.0 (stretch)"
+    },
+    {
+      "kpi": "LD top-3 cells — massage therapist near me",
+      "baseline": "37 cells",
+      "target": "≥ 45"
+    },
+    {
+      "kpi": "Float queries — hold #1, avg rank ≤2.0",
+      "baseline": "#1 / 1.34 / 1.68",
+      "target": "Hold"
+    },
+    {
+      "kpi": "Sitewide CTR (GSC)",
+      "baseline": "0.8%",
+      "target": "≥ 1.2%"
+    },
+    {
+      "kpi": "GSC clicks (30d)",
+      "baseline": "1,569*",
+      "target": "≥ 3,500"
+    },
+    {
+      "kpi": "Cannibal queries (2+ URLs)",
+      "baseline": "326",
+      "target": "≤ 250"
+    },
+    {
+      "kpi": "/about/ CTR",
+      "baseline": "0.04%",
+      "target": "≥ 3%"
+    },
+    {
+      "kpi": "/pricing-and-membership/ CTR",
+      "baseline": "0.10%",
+      "target": "≥ 4%"
+    },
+    {
+      "kpi": "First-time callers ≥ 90 sec (CallRail)",
+      "baseline": "39 / Mar 2026",
+      "target": "≥ 45 / M3"
+    },
+    {
+      "kpi": "GBP Posts cadence",
+      "baseline": "~3 / mo",
+      "target": "4 / mo sustained"
+    },
+    {
+      "kpi": "Service pages with FAQ schema",
+      "baseline": "0 / 8",
+      "target": "8 / 8"
+    },
+    {
+      "kpi": "Service × city matrix coverage",
+      "baseline": "3-5 / 150",
+      "target": "≥ 12 / 150"
+    },
+    {
+      "kpi": "LD tracked kws",
+      "baseline": "18",
+      "target": "≥ 32"
+    }
   ],
   "data_sources": [
-    "Local Dominator grid scans 2026-01-19 vs 2026-04-18 (106-cell grid, 6 priority kws)",
-    "Google Search Console pages + queries + query-page pairs last 365d (info@ token)",
+    "Local Dominator grid scans 2026-01-19 vs 2026-04-18 (106-cell grid at Lehi center coord, 6 priority kws)",
+    "Google Search Console pages + queries + query-page pairs (2025-05 → 2026-05, info@ token)",
     "DataForSEO Maps SERP live 2026-05-18 — 49 service queries at AF pin + 9 queries × 10 outside-grid cities = 1,820+ pin observations",
-    "DataForSEO Google Ads Search Volume US national + Utah state + Salt Lake City DMA (131 keywords)",
+    "DataForSEO Google Ads Search Volume — US national + Utah state + Salt Lake City DMA (131 keywords)",
     "Body Balance Asana project history (553 completed tasks, 6-month review window)",
-    "Live HTML probe of all 372 sitemap URLs"
-  ],
-  "deliverables": [
-    {"name": "Strategic Diagnosis v3 (HTML/PDF)", "path": "Body_Balance_Strategic_Diagnosis_2026-05-22.html"},
-    {"name": "Q2 Strategy Condensed v3", "path": "Body_Balance_Q2_2026_Strategy_Condensed_v3.md"},
-    {"name": "Q2 Custom Strategy (long-form)", "path": "Body_Balance_Q2_2026_Custom_Strategy.md"},
-    {"name": "3-Month Plan v2", "path": "bodybalance_3month_plan_v2.md"},
-    {"name": "Tasks v3 CSV (33 rows)", "path": "Body_Balance_3Month_Tasks_v3.csv"},
-    {"name": "Owner Conversation Items v2", "path": "Body_Balance_Owner_Conversation_Items_v2.md"},
-    {"name": "AM Reply Note for Paul v2", "path": "Body_Balance_AM_Reply_Note_For_Paul_v2.md"},
-    {"name": "SP-01 Trigger Point Rewrite Brief", "path": "SP-01_Trigger_Point_Therapy_Page_Rewrite.docx"},
-    {"name": "CN-01 URL Consolidation Brief", "path": "CN-01_Trigger_Point_URL_Consolidation_Brief.docx"},
-    {"name": "CSM-01 First Matrix Build Brief", "path": "CSM-01_First_Matrix_Build_Brief.docx"},
-    {"name": "LocalDominator Analysis", "path": "Body_Balance_LocalDominator_Analysis.xlsx"},
-    {"name": "Opportunity Analysis", "path": "Body_Balance_Opportunity_Analysis.xlsx"},
-    {"name": "Production Pipeline (57 builds)", "path": "Body_Balance_Production_Pipeline.xlsx"},
-    {"name": "Cannibal Cleanup Plan (130 URLs)", "path": "Body_Balance_Cannibal_Cleanup_Plan.xlsx"},
-    {"name": "Service × City Matrix", "path": "Body_Balance_Service_City_Matrix.xlsx"},
-    {"name": "Missing Pages Plan", "path": "Body_Balance_Missing_Pages_Plan.xlsx"},
-    {"name": "Service Pages Plan", "path": "Body_Balance_Service_Pages_Plan.xlsx"},
-    {"name": "Schema Plan", "path": "Body_Balance_Schema_Plan.xlsx"},
-    {"name": "Page Refresh Pages", "path": "Body_Balance_Page_Refresh_Pages.xlsx"},
-    {"name": "GBP Posts 3-Month", "path": "Body_Balance_GBP_Posts_3Month.xlsx"},
-    {"name": "Citations 3-Month", "path": "Body_Balance_Citations_3Month.xlsx"},
-    {"name": "OffPage Stack 3-Month", "path": "Body_Balance_OffPage_Stack_3Month.xlsx"}
+    "Live HTML probe of all 372 sitemap URLs (2026-05-18)"
   ]
 }

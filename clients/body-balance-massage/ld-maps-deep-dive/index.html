@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>LD Maps Deep Dive · Body Balance · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../assets/css/dashboard.css">
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] }, colors: { ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' }, brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6' }, accent: { amber:'#f59e0b', red:'#ef4444', green:'#10b981' } } } } }
+  </script>
+  <style>
+    .pill { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
+    .pill.pos { background: #d1fae5; color: #065f46; }
+    .pill.warn { background: #fef3c7; color: #92400e; }
+    .pill.info { background: #dbeafe; color: #1e40af; }
+    .heat-cell { display: inline-block; width: 30px; height: 24px; line-height: 24px; text-align: center; font-size: 11px; font-weight: 600; color: white; border-radius: 3px; margin: 1px; font-variant-numeric: tabular-nums; }
+    .heat-cell.h0 { background: #f3f4f6; color: #6b7280; }
+    .heat-cell.h1 { background: #d1fae5; color: #065f46; }
+    .heat-cell.h2 { background: #6ee7b7; color: #064e3b; }
+    .heat-cell.h3 { background: #10b981; }
+    .heat-cell.h4 { background: #047857; }
+    .heat-cell.h5 { background: #064e3b; }
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <a href="../../../index.html" class="text-ink-500 hover:text-ink-800">← Hub</a>
+        <span class="text-ink-300">/</span>
+        <a href="../index.html" class="text-ink-500 hover:text-ink-800">Body Balance dashboard</a>
+        <span class="text-ink-300">/</span>
+        <span class="font-semibold text-ink-900">LD Maps Deep Dive</span>
+      </div>
+      <a href="../client-report.html" class="text-brand-500 font-semibold hover:underline">Client report →</a>
+    </div>
+  </header>
+
+  <section class="bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-300 mb-2">Body Balance · Mini Report 1/4</div>
+      <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight">LD Maps Deep Dive — 6 Keywords × 106 Cells × Jan 19 vs Apr 18</h1>
+      <p class="text-sm sm:text-base mt-3 text-white/85 max-w-3xl">Local Dominator 13×13 grid (returns 106 cells per scan) at Lehi center coord. Apples-to-apples movement on cells visible both dates; cells entered/lost tracked separately. BB rank-in-main-set filtered to substantial competitors (cells_both ≥ 30).</p>
+    </div>
+  </section>
+
+  <!-- Apples-to-apples summary chart -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Rank movement Jan 19 → Apr 18 (cells visible both dates)</h2>
+        <p class="text-xs text-ink-500 mt-1">Smaller bars = better rank. Green delta = tightening (smaller rank). Float queries lost sub-1-rank slippage at the top — no headroom up from rank 1.21–1.52.</p>
+      </div>
+      <div class="p-6 h-96"><canvas id="ld-chart"></canvas></div>
+    </div>
+  </section>
+
+  <!-- Cells entered / lost / held -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Cell visibility expansion — entered vs lost vs net</h2>
+        <p class="text-xs text-ink-500 mt-1">"Massage therapist lehi" has the biggest expansion at +21 new cells of top-20 visibility (75 → 96), mostly in the rank-13 to rank-18 band — BB was not visible in those cells in January.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">Keyword</th>
+              <th class="text-right font-semibold py-3 px-3">Cells Jan</th>
+              <th class="text-right font-semibold py-3 px-3">Cells Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Cells entered</th>
+              <th class="text-right font-semibold py-3 px-3">Cells lost</th>
+              <th class="text-right font-semibold py-3 px-3">Net cells</th>
+              <th class="text-right font-semibold py-3 px-3">Top-3 Jan</th>
+              <th class="text-right font-semibold py-3 px-3">Top-3 Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Top-3 delta</th>
+            </tr>
+          </thead>
+          <tbody id="ld-extended" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heatmap per keyword -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Geographic distribution — where BB holds cells by town &amp; rank band (Apr 18)</h2>
+        <p class="text-xs text-ink-500 mt-1">Per-keyword × per-town breakdown of BB's cells held, by LD rank band. Use the dropdown to flip between the 6 tracked keywords.</p>
+      </div>
+      <div class="p-4">
+        <div class="mb-3 flex items-center gap-2 text-xs flex-wrap">
+          <span class="text-ink-500">Keyword:</span>
+          <select id="heatmap-kw-select" class="text-xs border border-slate-300 rounded px-2 py-1"></select>
+          <span class="text-ink-500 ml-4">Legend:</span>
+          <span class="heat-cell h0">·</span><span class="text-ink-500">out (21+)</span>
+          <span class="heat-cell h1">·</span><span class="text-ink-500">16-20</span>
+          <span class="heat-cell h2">·</span><span class="text-ink-500">11-15</span>
+          <span class="heat-cell h3">·</span><span class="text-ink-500">8-10</span>
+          <span class="heat-cell h4">·</span><span class="text-ink-500">4-7</span>
+          <span class="heat-cell h5">·</span><span class="text-ink-500">top-3</span>
+        </div>
+        <div id="heatmap-container" class="overflow-x-auto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitor leaderboard MTNM -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-5 border-b border-slate-200">
+        <h2 class="text-lg font-bold">Direct competitor leaderboard — "massage therapist near me"</h2>
+        <p class="text-xs text-ink-500 mt-1">Substantial-sample pins (cells_both ≥ 30), sorted by avg rank Apr ascending. BB highlighted.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">#</th>
+              <th class="text-left font-semibold py-3 px-3">Pin</th>
+              <th class="text-right font-semibold py-3 px-3">Reviews</th>
+              <th class="text-right font-semibold py-3 px-3">Cells Jan/Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Avg rank Jan → Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Mean dx/cell</th>
+            </tr>
+          </thead>
+          <tbody id="comp-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-t border-slate-200 pt-6 text-xs text-ink-500">
+      Body Balance · LD Maps Deep Dive · sourced from LocalDominator 12-CSV raw scans (6 kws × 2 dates × 106 cells) + derived apples-to-apples + cells-by-town-band + per-competitor positions.
+    </div>
+  </footer>
+
+  <script>
+    fetch('../data/data.json').then(r => r.json()).then(data => {
+      // Apples chart — paired bars per keyword
+      const labels = data.ld_apples.map(r => r.kw);
+      const janRank = data.ld_apples.map(r => r.rank_jan);
+      const aprRank = data.ld_apples.map(r => r.rank_apr);
+      new Chart(document.getElementById('ld-chart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            { label: 'Avg rank Jan 19', data: janRank, backgroundColor: '#94a3b8' },
+            { label: 'Avg rank Apr 18', data: aprRank, backgroundColor: '#1d5b8a' },
+          ]
+        },
+        options: {
+          indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+          scales: { x: { beginAtZero: true, title: { display: true, text: 'Avg rank on cells visible both dates (smaller = better)' } } },
+          plugins: { legend: { position: 'bottom' } }
+        }
+      });
+
+      // Extended LD table
+      const ldExt = document.getElementById('ld-extended');
+      data.ld_apples.forEach(r => {
+        const netClass = r.net_cells > 0 ? 'text-accent-green font-semibold' : (r.net_cells < 0 ? 'text-accent-red font-semibold' : '');
+        const top3Class = r.top3_delta > 0 ? 'text-accent-green font-semibold' : (r.top3_delta < 0 ? 'text-accent-red font-semibold' : '');
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-medium">${r.kw}</td>
+          <td class="py-2 px-3 text-right font-mono">${r.cells_jan}</td>
+          <td class="py-2 px-3 text-right font-mono">${r.cells_apr}</td>
+          <td class="py-2 px-3 text-right font-mono text-accent-green">+${r.cells_entered}</td>
+          <td class="py-2 px-3 text-right font-mono text-accent-red">−${r.cells_lost}</td>
+          <td class="py-2 px-3 text-right font-mono ${netClass}">${r.net_cells > 0 ? '+' : ''}${r.net_cells}</td>
+          <td class="py-2 px-3 text-right font-mono">${r.top3_jan}</td>
+          <td class="py-2 px-3 text-right font-mono">${r.top3_apr}</td>
+          <td class="py-2 px-3 text-right font-mono ${top3Class}">${r.top3_delta > 0 ? '+' : ''}${r.top3_delta}</td>`;
+        ldExt.appendChild(tr);
+      });
+
+      // Heatmap
+      const kwSelect = document.getElementById('heatmap-kw-select');
+      const kws = Object.keys(data.cells_by_town);
+      kws.forEach(kw => { const o = document.createElement('option'); o.value=kw; o.textContent=kw; kwSelect.appendChild(o); });
+      function renderHeatmap(kw) {
+        const rows = data.cells_by_town[kw];
+        const html = `
+          <table class="min-w-full text-xs">
+            <thead class="text-ink-500">
+              <tr>
+                <th class="text-left py-2 pr-4 font-semibold">Town</th>
+                <th class="text-center py-2 pr-2 font-semibold">top-3</th>
+                <th class="text-center py-2 pr-2 font-semibold">4-7</th>
+                <th class="text-center py-2 pr-2 font-semibold">8-10</th>
+                <th class="text-center py-2 pr-2 font-semibold">11-15</th>
+                <th class="text-center py-2 pr-2 font-semibold">16-20</th>
+                <th class="text-center py-2 pr-2 font-semibold">out</th>
+                <th class="text-right py-2 font-semibold">Total cells</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              ${rows.map(r => `<tr>
+                <td class="py-1.5 pr-4 font-medium">${r.town}</td>
+                <td class="text-center pr-2"><span class="heat-cell ${r.top3>0?'h5':'h0'}">${r.top3}</span></td>
+                <td class="text-center pr-2"><span class="heat-cell ${r.close>0?'h4':'h0'}">${r.close}</span></td>
+                <td class="text-center pr-2"><span class="heat-cell ${r.mid>0?'h3':'h0'}">${r.mid}</span></td>
+                <td class="text-center pr-2"><span class="heat-cell ${r.back>0?'h2':'h0'}">${r.back}</span></td>
+                <td class="text-center pr-2"><span class="heat-cell ${r.far>0?'h1':'h0'}">${r.far}</span></td>
+                <td class="text-center pr-2"><span class="heat-cell h0">${r.out}</span></td>
+                <td class="py-1.5 text-right font-mono font-semibold">${r.total}</td>
+              </tr>`).join('')}
+            </tbody>
+          </table>`;
+        document.getElementById('heatmap-container').innerHTML = html;
+      }
+      renderHeatmap(kws[0]);
+      kwSelect.addEventListener('change', e => renderHeatmap(e.target.value));
+
+      // Comp leaderboard
+      const compRows = document.getElementById('comp-rows');
+      data.ld_leaderboard_mtnm.forEach((c, i) => {
+        const tr = document.createElement('tr');
+        if (c.is_client) tr.className = 'is-client';
+        const dxPill = c.mean_dx > 0 ? `<span class="pill pos">+${c.mean_dx.toFixed(2)}</span>` : `<span class="pill warn">${c.mean_dx.toFixed(2)}</span>`;
+        tr.innerHTML = `
+          <td class="py-2 px-3 font-mono">${i+1}</td>
+          <td class="py-2 px-3 font-medium">${c.is_client ? '<strong>'+c.name+' (us)</strong>' : c.name}</td>
+          <td class="py-2 px-3 text-right font-mono">${c.reviews}</td>
+          <td class="py-2 px-3 text-right font-mono">${c.cells_jan} / ${c.cells_apr}</td>
+          <td class="py-2 px-3 text-right font-mono">${c.rank_jan.toFixed(2)} → ${c.rank_apr.toFixed(2)}</td>
+          <td class="py-2 px-3 text-right">${dxPill}</td>`;
+        compRows.appendChild(tr);
+      });
+    });
+  </script>
+</body>
+</html>

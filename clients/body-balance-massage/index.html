@@ -4,10 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
-  <title>Body Balance Massage &amp; Float · Q2 2026 Strategic Dashboard (v3) · HQDM</title>
-  <meta name="description" content="Q2 2026 strategic dashboard for Body Balance Massage &amp; Float — v3 refreshed 2026-05-22 — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
+  <title>Body Balance Massage &amp; Float · Q2 2026 Strategic Dashboard · HQDM</title>
+  <meta name="description" content="Q2 2026 strategic dashboard for Body Balance Massage &amp; Float — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -31,8 +32,7 @@
     }
   </script>
   <style>
-    /* Diverging bar for competitor churn */
-    .churn-row { display: grid; grid-template-columns: 220px 1fr 70px; gap: 6px; align-items: center; padding: 3px 0; font-size: 12px; }
+    .churn-row { display: grid; grid-template-columns: 240px 1fr 80px; gap: 6px; align-items: center; padding: 3px 0; font-size: 12px; }
     .churn-row .label { text-align: right; padding-right: 4px; color: #1f2937; }
     .churn-row.is-client { background: linear-gradient(90deg, rgb(254 252 232 / 0.7), rgb(254 252 232 / 0.2)); }
     .churn-row.is-client .label { font-weight: 700; }
@@ -42,7 +42,6 @@
     .churn-bar.pos { background: #10b981; }
     .churn-bar.neg { background: #ef4444; }
     .churn-bar.client { background: #0b1220; }
-    .churn-bar.muted { background: #9ca3af; }
     .churn-val { font-variant-numeric: tabular-nums; text-align: left; font-weight: 600; }
 
     .pill { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
@@ -52,7 +51,6 @@
     .pill.info { background: #dbeafe; color: #1e40af; }
     .pill.muted { background: #e2e8f0; color: #475569; }
 
-    /* Root-cause cards */
     .rc { border-left: 4px solid #ef4444; background: #fef2f2; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0; }
     .rc.sec { border-left-color: #f59e0b; background: #fffbeb; }
     .rc.opp { border-left-color: #06b6d4; background: #ecfeff; }
@@ -63,6 +61,26 @@
     .rc.pos .tag { background: #059669; }
     .rc strong.title { display: inline-block; margin-left: 6px; font-size: 14px; color: #0b1220; }
     .rc p { margin: 6px 0 0; font-size: 13px; line-height: 1.55; color: #1f2937; }
+
+    /* Heatmap cells */
+    .heat-cell { display: inline-block; width: 28px; height: 22px; line-height: 22px; text-align: center; font-size: 10px; font-weight: 600; color: white; border-radius: 2px; margin: 1px; font-variant-numeric: tabular-nums; }
+    .heat-cell.h0 { background: #f3f4f6; color: #6b7280; }
+    .heat-cell.h1 { background: #d1fae5; color: #065f46; }
+    .heat-cell.h2 { background: #6ee7b7; color: #064e3b; }
+    .heat-cell.h3 { background: #10b981; }
+    .heat-cell.h4 { background: #047857; }
+    .heat-cell.h5 { background: #064e3b; }
+
+    /* Sortable headers */
+    th[data-sort] { cursor: pointer; user-select: none; }
+    th[data-sort]:hover { background: #1f2937; }
+
+    /* Stat tile glow */
+    .stat-tile { transition: transform 120ms ease; }
+    .stat-tile:hover { transform: translateY(-1px); }
+    .stat-tile.positive { background: linear-gradient(135deg, #ecfdf5, #f0fdf4); border: 1px solid #a7f3d0; }
+    .stat-tile.negative { background: linear-gradient(135deg, #fef2f2, #fef7f7); border: 1px solid #fecaca; }
+    .stat-tile.neutral { background: linear-gradient(135deg, #f8fafc, #ffffff); border: 1px solid #e2e8f0; }
   </style>
 </head>
 <body class="bg-slate-50 text-ink-800 font-sans antialiased">
@@ -74,21 +92,21 @@
         <a href="../../index.html" class="text-xs text-ink-500 hover:text-ink-800 hidden sm:inline">← HQDM Dashboards</a>
         <span class="text-ink-300 hidden sm:inline">/</span>
         <div class="min-w-0">
-          <div class="font-semibold text-sm sm:text-base truncate">Body Balance Massage &amp; Float</div>
-          <div class="text-xs text-ink-500 truncate">Q2 2026 Strategic Dashboard</div>
+          <div class="font-semibold text-sm sm:text-base truncate" id="hdr-client">Body Balance Massage &amp; Float</div>
+          <div class="text-xs text-ink-500 truncate"><span id="hdr-quarter">Q2 2026</span> Strategic Dashboard</div>
         </div>
       </div>
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#headline" class="px-3 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
-        <a href="#ld" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
-        <a href="#churn" class="px-3 py-1.5 rounded hover:bg-slate-100">Churn</a>
-        <a href="#root" class="px-3 py-1.5 rounded hover:bg-slate-100">Root Causes</a>
-        <a href="#levers" class="px-3 py-1.5 rounded hover:bg-slate-100">Q2 Levers</a>
-        <a href="#owner" class="px-3 py-1.5 rounded hover:bg-slate-100">Owner Asks</a>
-        <a href="#kpis" class="px-3 py-1.5 rounded hover:bg-slate-100">M3 KPIs</a>
+        <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
+        <a href="#maps" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#competition" class="px-3 py-1.5 rounded hover:bg-slate-100">Competition</a>
+        <a href="#potential" class="px-3 py-1.5 rounded hover:bg-slate-100">Potential</a>
+        <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block">v3 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v4 · 2026-05-22</div>
     </div>
   </header>
 
@@ -102,10 +120,10 @@
         <span>HQDM Search Intelligence</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Body Balance Massage &amp; Float</h1>
-      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Single-pin massage &amp; float studio · American Fork UT · 4.9★ × 402 reviews</p>
-      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85">Q2 2026 strategic diagnosis (v3, refreshed 2026-05-22). The pin is gaining rank where it holds cells. Marginal lift sits on 7 structural fixes plus redirected production at full scale. Authority workstream rebuilt around the 2026-05-13 off-page program halt.</p>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">—</p>
+      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">—</p>
       <div class="mt-8 flex flex-wrap gap-3 text-xs">
-        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Refreshed</span> <span class="font-mono">2026-05-22 · v3</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Refreshed</span> <span class="font-mono" id="hero-prepared">2026-05-22 · v4</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">AM</span> Matt Olderman</span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">bbmassageandfloat.com</span></span>
@@ -114,45 +132,100 @@
     </div>
   </section>
 
-  <!-- ============== TL;DR ============== -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
-      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR — the headline</div>
-      <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        Body Balance is <strong>gaining rank on the cells it holds</strong>. Apples-to-apples LD (avg rank on cells visible both dates) tightened <strong>+1.21 to +1.46 ranks/cell</strong> across the four massage queries Jan 19 → Apr 18. Float is owned at #1 of substantial competitors (106/106 cells, rank 1.34 / 1.68). On near-me queries BB is <strong>#2 of 10</strong> and <strong>#3 of 14</strong>. Lehi-tagged is proximity-locked (Lehi-resident pins own the head). Outside the ~10-mi grid BB is invisible (0 of 1,391 DataForSEO Maps SERP rows). The owner's perceived plateau is real for organic-side CTR (sitewide 0.80%; conversion pages 0.04–0.10%), not the underlying Maps engine. <strong>Q2 posture: hold budget · redirect targeting only · ship at the same volume as today · authority rebuilt around the 2026-05-13 off-page program halt.</strong>
-      </p>
-      <div class="mt-4 flex flex-wrap gap-2 text-xs">
-        <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700">View full client report (3-page PDF/HTML) →</a>
-        <a href="#levers" class="px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-100">Jump to Q2 levers</a>
-        <a href="#owner" class="px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-100">Owner-side asks</a>
+  <!-- ============== DEEP-DIVE MINI REPORTS ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-8 pb-2">
+    <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Deep-dive mini reports</div>
+    <div id="mini-reports-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3"></div>
+  </section>
+
+  <!-- ============== HEADLINE PANEL ============== -->
+  <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-amber-50 shadow-sm overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div class="flex-1 min-w-0">
+            <div class="text-[11px] font-bold uppercase tracking-widest text-accent-amber">THE HEADLINE</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1.5 text-ink-900" id="headline-h2">—</h2>
+            <p class="text-sm sm:text-base text-ink-600 mt-3 leading-relaxed max-w-4xl" id="headline-lede">—</p>
+          </div>
+          <a id="headline-mini-report" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-lg bg-ink-900 text-white hover:bg-ink-700 transition flex-shrink-0" href="#" target="_self">
+            View mini-report
+            <svg class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M7.3 4.3a1 1 0 011.4 0l5 5a1 1 0 010 1.4l-5 5a1 1 0 11-1.4-1.4L11.6 10 7.3 5.7a1 1 0 010-1.4z"/></svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-stat-tiles"></div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4" id="headline-callouts"></div>
       </div>
     </div>
   </section>
 
-  <!-- ============== WHAT CHANGED IN v3 ============== -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-2 pb-6">
-    <div class="border-l-4 border-amber-500 bg-amber-50 rounded-r-lg p-5">
-      <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">What changed in v3 (2026-05-22)</div>
-      <p class="text-sm text-ink-700 leading-relaxed">
-        <strong>Off-page workstream rebuilt around the 2026-05-13 HQDM-internal program halt.</strong> The SEO Neo stack (DAS / GBP Blast / GBP Sniper / RD100 / NAP-image-overlay / AI Article Creator / Driving Directions SOP / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin Creation) is removed from BB's Q2 plan. BB's DA 20 → 28 lift was partly driven by that stack; forward authority comes from <strong>manual citations</strong> (AMTA / ABMP / Utah MTA / Utah County + Pleasant Grove Chambers) + <strong>1 monthly digital-PR pitch</strong> + <strong>1 monthly partner-outreach touch</strong> + on-site link equity earned by refreshed canonicals + new builds. M1 W2 runs a <strong>DataForSEO Backlinks scan</strong> to decide if a disavow file is warranted post-halt. Spend posture unchanged; mix changes.
-      </p>
-      <p class="text-sm text-ink-700 leading-relaxed mt-3">
-        <strong>Cleanup approach reaffirmed.</strong> 84 redundant URLs get <strong>small-level 301-to-MAIN canonical</strong> redirects (service hubs at <code class="text-xs bg-amber-100 px-1 rounded">/modalities-techniques/&lt;service&gt;/</code> or <code class="text-xs bg-amber-100 px-1 rounded">/areas-served/</code>). <strong>0 pages NOINDEX'd · 0 410'd.</strong> Location pages remain a primary HQDM deliverable. Production at scale continues: 6 location pages + 10 blogs + 3 geo pages per month — same volume, redirected targeting.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
+  <!-- ============== HEALTH SNAPSHOT ============== -->
   <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
     <div class="flex items-end justify-between mb-4">
       <h2 class="text-2xl font-bold tracking-tight">Health Snapshot</h2>
-      <span class="text-xs text-ink-500">6 KPIs · click to expand</span>
+      <span class="text-xs text-ink-500">6 KPIs · click for detail</span>
     </div>
     <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
   </section>
 
-  <!-- ============== LD APPLES-TO-APPLES ============== -->
-  <section id="ld" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <!-- ============== TREND ============== -->
+  <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">GSC Monthly Trend — 13-Month Window</h2>
+        <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
+        <p class="text-xs text-ink-500 mt-2" id="trend-annotation"></p>
+      </div>
+      <div class="p-6 space-y-8">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Clicks <span class="text-ink-400 font-medium normal-case">(GSC organic, sitewide)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-clicks"></canvas></div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Impressions <span class="text-ink-400 font-medium normal-case">(GSC organic, sitewide)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-impressions"></canvas></div>
+        </div>
+        <p class="text-xs text-ink-500 italic" id="trend-may-extrapolation"></p>
+      </div>
+
+      <!-- Quarterly aggregate -->
+      <div class="border-t border-slate-200 p-6 bg-slate-50/60">
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Quarterly aggregate — GSC organic, sitewide</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="trend-quarterly-table">
+            <thead class="text-ink-500 text-xs">
+              <tr>
+                <th class="text-left font-semibold py-2 pr-4">Quarter</th>
+                <th class="text-right font-semibold py-2 pr-4">Clicks total</th>
+                <th class="text-right font-semibold py-2 pr-4">Clicks/mo (avg)</th>
+                <th class="text-right font-semibold py-2 pr-4">Impressions total</th>
+                <th class="text-right font-semibold py-2 pr-4">Imp/mo (avg)</th>
+                <th class="text-right font-semibold py-2">CTR</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-ink-500 italic mt-3" id="quarterly-footnote">—</p>
+      </div>
+
+      <!-- GA4 not connected callout -->
+      <div class="border-t border-slate-200 p-6 bg-amber-50/40">
+        <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">GA4 not connected — GSC + LD + DataForSEO are the available signals</div>
+        <p class="text-sm text-ink-700 leading-relaxed" id="ga4-status-detail">—</p>
+        <p class="text-sm text-ink-700 leading-relaxed mt-2" id="ga4-implication">—</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MAPS — LD APPLES-TO-APPLES ============== -->
+  <section id="maps" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <h2 class="text-2xl font-bold tracking-tight">LD Apples-to-Apples — Rank Movement on Cells BB Holds (Jan 19 → Apr 18 2026)</h2>
@@ -166,56 +239,214 @@
               <th class="text-right font-semibold py-3 px-3">Cells Jan/Apr</th>
               <th class="text-right font-semibold py-3 px-3">Avg rank Jan → Apr</th>
               <th class="text-right font-semibold py-3 px-3">Mean dx</th>
-              <th class="text-right font-semibold py-3 px-3">Top-3 Jan → Apr</th>
-              <th class="text-left font-semibold py-3 px-3">BB rank in main set</th>
+              <th class="text-right font-semibold py-3 px-3">Top-3 cells Jan → Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Cells entered / lost</th>
             </tr>
           </thead>
           <tbody id="ld-rows" class="divide-y divide-slate-100"></tbody>
         </table>
       </div>
       <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
-        BB tightened rank on every massage query and gained cell visibility on every non-saturated keyword. Float queries lost sub-1-rank slippage at the very top (no headroom up from rank 1.21–1.52). "Massage therapist lehi" top-3 going 1 → 0 reflects Lehi-resident pins crowding the top, not BB losing ground — BB simultaneously gained <strong>+21 cells</strong> of new top-20 visibility on that keyword.
+        BB tightened rank on every massage query and gained cell visibility on every non-saturated keyword. Float queries lost sub-1-rank slippage at the very top (no headroom up from rank 1.21–1.52). "Massage therapist lehi" top-3 going 1 → 0 reflects Lehi-resident pins crowding the very top, not BB losing ground — BB simultaneously gained <strong>+21 cells</strong> of new top-20 visibility on that keyword.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MAPS — CELLS BY TOWN HEATMAP ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-bold tracking-tight">Geographic Distribution — Where BB Holds Cells by Town &amp; Rank Band (Apr 18 2026)</h2>
+        <p class="text-sm text-ink-500 mt-1">Per-keyword × per-town breakdown of BB's cells held by rank band. Darker = stronger rank.</p>
+      </div>
+      <div class="p-4">
+        <div class="mb-3 flex items-center gap-2 text-xs flex-wrap">
+          <span class="text-ink-500">Filter:</span>
+          <select id="heatmap-kw-select" class="text-xs border border-slate-300 rounded px-2 py-1"></select>
+          <span class="text-ink-500 ml-4">Legend:</span>
+          <span class="heat-cell h0">·</span><span class="text-ink-500">out</span>
+          <span class="heat-cell h1">·</span><span class="text-ink-500">16-20</span>
+          <span class="heat-cell h2">·</span><span class="text-ink-500">11-15</span>
+          <span class="heat-cell h3">·</span><span class="text-ink-500">8-10</span>
+          <span class="heat-cell h4">·</span><span class="text-ink-500">4-7</span>
+          <span class="heat-cell h5">·</span><span class="text-ink-500">top-3</span>
+        </div>
+        <div id="heatmap-container" class="overflow-x-auto"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COMPETITION ============== -->
+  <section id="competition" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">Competition — Direct Competitor Leaderboard ("massage therapist near me")</h2>
+        <p class="text-sm text-ink-500 mt-1">Substantial-sample competitors (cells_both ≥ 30), sorted by avg rank Apr ascending. BB highlighted.</p>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">#</th>
+              <th class="text-left font-semibold py-3 px-3">Pin</th>
+              <th class="text-right font-semibold py-3 px-3">Reviews</th>
+              <th class="text-right font-semibold py-3 px-3">Cells Jan/Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Avg rank Jan → Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Mean dx</th>
+            </tr>
+          </thead>
+          <tbody id="competition-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- ============== COMPETITOR CHURN ============== -->
-  <section id="churn" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <h2 class="text-2xl font-bold tracking-tight">Competitor Churn — Pleasant Grove is the Most Contested Catchment</h2>
-        <p class="text-sm text-ink-500 mt-1">Δ top-10 cells pooled across 6 priority queries × 169 cells × 2 dates. Per-GBP standalone (sibling pins independent). 18 highest-magnitude movers.</p>
+        <p class="text-sm text-ink-500 mt-1">Δ top-10 cells pooled across 6 priority queries × 169 cells × 2 dates. Per-GBP standalone (sibling pins independent). Largest movers shown.</p>
       </div>
       <div id="churn-rows" class="p-6"></div>
       <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
-        Body Balance gained against a churning field. Three Pleasant Grove "old winners" collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening cells that 5 new entrants filled — Spa Lounge PG +210 leads, plus Seven Springs +172, LIV +132, Hurts So Good Lindon +124. Spa Lounge PG, Hand &amp; Stone Traverse Mtn, and Calming Touch Lehi are the three competitive realities to defend against.
+        Body Balance gained against a churning field. Three PG "old winners" collapsed (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening cells that 5 new entrants filled — Spa Lounge PG +210 leads. Spa Lounge PG, Hand &amp; Stone Traverse Mtn, and Calming Touch Lehi are the three competitive realities to defend against.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== URL CLASS INVENTORY ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-bold tracking-tight">URL Inventory — Where Impressions and Clicks Live</h2>
+        <p class="text-sm text-ink-500 mt-1">GSC pages_last_180d aggregated by URL class. The cleanup cohort (geo_padding + doorway) is large by page count, small by click capture.</p>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">URL class</th>
+              <th class="text-right font-semibold py-3 px-3">Pages</th>
+              <th class="text-right font-semibold py-3 px-3">Impressions 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Imp %</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks %</th>
+            </tr>
+          </thead>
+          <tbody id="url-class-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POTENTIAL — UNTRACKED SERVICES ============== -->
+  <section id="potential" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <div class="flex items-end justify-between gap-3 flex-wrap">
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Potential — Untracked Service Queries (BB Already Ranks at AF Pin)</h2>
+            <p class="text-sm text-ink-500 mt-1">DataForSEO Maps SERP at BB's AF pin (40.378, −111.789) for 49 service-name queries. BB ranks #1-#3 for <span id="untracked-top3-count">—</span> queries that aren't currently in LD tracking.</p>
+          </div>
+          <a href="untracked-services/" class="inline-flex items-center gap-1 text-xs font-semibold px-3 py-2 rounded bg-ink-900 text-white hover:bg-ink-700">Full table (49 queries) →</a>
+        </div>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">Query</th>
+              <th class="text-right font-semibold py-3 px-3">BB rank @ AF</th>
+              <th class="text-right font-semibold py-3 px-3">Utah vol</th>
+              <th class="text-right font-semibold py-3 px-3">US vol</th>
+              <th class="text-left font-semibold py-3 px-3">Currently #1 (defend-against)</th>
+            </tr>
+          </thead>
+          <tbody id="untracked-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+      <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
+        <strong>Lymphatic drainage massage</strong> is the headline: 3,600 UT monthly searches at #2 rank, but BB doesn't have a dedicated page (gated on Owner Item #7 confirmation that BB performs the service).
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POTENTIAL — BIGGEST WINNER QUERIES ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-bold tracking-tight">Biggest Winner Queries — High Impressions, BB Rank 4-15, Low CTR</h2>
+        <p class="text-sm text-ink-500 mt-1">GSC queries where BB is ranking but bleeding click capture. Estimated marginal clicks if consolidated to top-3 via the cannibal cleanup workstream.</p>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">Query</th>
+              <th class="text-right font-semibold py-3 px-3">Imp 180d</th>
+              <th class="text-right font-semibold py-3 px-3">Clicks</th>
+              <th class="text-right font-semibold py-3 px-3">CTR</th>
+              <th class="text-right font-semibold py-3 px-3">Avg pos</th>
+              <th class="text-right font-semibold py-3 px-3">Est. marginal clicks if top-3</th>
+            </tr>
+          </thead>
+          <tbody id="biggest-winners-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== POTENTIAL — OUTSIDE GRID ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-xl font-bold tracking-tight">Outside-Grid Maps Invisibility — 0 of 1,391 SERP Rows</h2>
+        <p class="text-sm text-ink-500 mt-1">DataForSEO Maps SERP pulled at 10 city centers outside the ~10-mile core grid (Provo, Spanish Fork, Sandy, etc.) across 9 service queries. BB does not appear in any top-20.</p>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">City</th>
+              <th class="text-right font-semibold py-3 px-3">Queries probed</th>
+              <th class="text-right font-semibold py-3 px-3">Total SERP rows</th>
+              <th class="text-right font-semibold py-3 px-3">BB in top-20</th>
+              <th class="text-left font-semibold py-3 px-3">Read</th>
+            </tr>
+          </thead>
+          <tbody id="outside-grid-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+      <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
+        <strong>Strategic read:</strong> Maps expansion outside the immediate ~10-mile grid via standard tactics (Posts / citations) won't move the needle. The two real expansion paths are (a) net-new physical location or (b) organic-only via city-modifier landing pages with strong earned authority that pushes into non-Maps SERP. Q2 strategy stays focused inside the grid + cross-suburb diffusion within ~10 mi.
       </div>
     </div>
   </section>
 
   <!-- ============== ROOT CAUSES ============== -->
-  <section id="root" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <section id="strategy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="flex items-end justify-between mb-4">
       <h2 class="text-2xl font-bold tracking-tight">Root Cause, Ranked</h2>
-      <span class="text-xs text-ink-500">5 buckets · P0 / Secondary / Opportunity / Positive</span>
+      <span class="text-xs text-ink-500">6 buckets · P0 / Secondary / Opportunity / Positive</span>
     </div>
     <div id="root-cards"></div>
   </section>
 
   <!-- ============== Q2 LEVERS ============== -->
-  <section id="levers" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="flex items-end justify-between mb-4">
       <div>
         <h2 class="text-2xl font-bold tracking-tight">Strategic Priorities — Q2 Levers</h2>
         <p class="text-sm text-ink-500 mt-1">11 pillars · 33 task rows · every task → specific working sheet · production continues at full scale (57 builds Q2)</p>
       </div>
-      <span class="text-xs text-ink-500">Click a lever to expand</span>
+      <span class="text-xs text-ink-500">9 lever pillars · expand for detail</span>
     </div>
     <div id="levers-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-4"></div>
   </section>
 
   <!-- ============== OWNER ASKS ============== -->
-  <section id="owner" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <h2 class="text-2xl font-bold tracking-tight">Owner-Side Asks (1 × 20-min call with Paul)</h2>
@@ -226,18 +457,18 @@
   </section>
 
   <!-- ============== M3 KPI SCORECARD ============== -->
-  <section id="kpis" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <h2 class="text-2xl font-bold tracking-tight">M3 Close-Out Scorecard</h2>
-        <p class="text-sm text-ink-500 mt-1">16 KPIs Aleksa &amp; Marija will report against at the M3 (August 2026) close-out. Paul to sign off via Owner Ask #8.</p>
+        <p class="text-sm text-ink-500 mt-1">16 KPIs Aleksandar &amp; Marija will report against at the M3 (August 2026) close-out. Paul to sign off via Owner Ask #8.</p>
       </div>
       <div class="overflow-x-auto">
         <table class="min-w-full text-sm">
           <thead class="text-ink-500 text-xs bg-slate-50">
             <tr>
               <th class="text-left font-semibold py-3 px-4">KPI</th>
-              <th class="text-left font-semibold py-3 px-4">Baseline (May 18, 2026)</th>
+              <th class="text-left font-semibold py-3 px-4">Baseline (May 22, 2026)</th>
               <th class="text-left font-semibold py-3 px-4">M3 Target</th>
             </tr>
           </thead>
@@ -250,7 +481,7 @@
   <!-- ============== DATA SOURCES ============== -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-slate-100/60 rounded-xl p-6 border border-slate-200">
-      <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Data sources backing this strategy</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Data sources backing this dashboard</div>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-ink-600" id="sources-list"></ul>
     </div>
   </section>
@@ -258,16 +489,57 @@
   <!-- ============== FOOTER ============== -->
   <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="border-t border-slate-200 pt-6 text-xs text-ink-500 space-y-2">
-      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Body Balance Massage &amp; Float · Q2 2026 Custom Strategy</div>
-      <div>Companion documents (Drive): Strategic Diagnosis PDF · Q2 Strategy Condensed v2 · Custom Strategy long-form · 3-Month Plan · Tasks v2 CSV · Production Pipeline · Cannibal Cleanup Plan · Service × City Matrix · Schema Plan · Service Pages Plan · Page Refresh · GBP Posts · Citations · OffPage Stack · SP-01 / CN-01 / CSM-01 briefs · Owner Conversation Items · AM Reply Note.</div>
+      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Body Balance Massage &amp; Float · Q2 2026 Custom Strategy (v4, refreshed 2026-05-22)</div>
+      <div>v4 incorporates the 2026-05-13 off-page program halt: SEO Neo stack (DAS / Blast / Sniper / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin) removed from BB rotation. Authority workstream rebuilt around manual citations + 1 monthly PR pitch + 1 monthly partner-outreach touch + on-site link equity.</div>
       <div class="text-ink-400">Confidential — internal HQDM use + authorized client viewing only. <code class="bg-slate-100 px-1.5 py-0.5 rounded text-[10px]">noindex</code> set; not indexable by search engines.</div>
     </div>
   </footer>
 
   <script>
-    // ============== Bootstrap from data.json ==============
+    // ============== Render the dashboard from data.json ==============
     fetch('data/data.json').then(r => r.json()).then(data => {
-      // KPIs
+
+      // Meta
+      document.getElementById('hero-subtitle').textContent = data.meta.tagline;
+      document.getElementById('hero-scope').textContent = data.meta.doc_subtitle;
+
+      // Mini reports
+      const miniGrid = document.getElementById('mini-reports-grid');
+      data.mini_reports.forEach(m => {
+        const a = document.createElement('a');
+        a.href = m.slug;
+        a.className = 'block bg-white rounded-xl border border-slate-200 hover:border-brand-500 hover:shadow-md transition p-4';
+        a.innerHTML = `
+          <div class="font-semibold text-sm text-ink-900">${m.name} →</div>
+          <p class="text-xs text-ink-500 mt-1 leading-relaxed">${m.summary}</p>`;
+        miniGrid.appendChild(a);
+      });
+
+      // Headline panel
+      document.getElementById('headline-h2').textContent = data.headline_panel.headline;
+      document.getElementById('headline-lede').textContent = data.headline_panel.lede;
+      document.getElementById('headline-mini-report').href = data.headline_panel.mini_report_url;
+      const tilesEl = document.getElementById('headline-stat-tiles');
+      data.headline_panel.stat_tiles.forEach(t => {
+        const div = document.createElement('div');
+        div.className = `stat-tile ${t.sentiment} rounded-lg p-4`;
+        div.innerHTML = `
+          <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 leading-tight">${t.label}</div>
+          <div class="text-xl sm:text-2xl font-extrabold text-ink-900 mt-1.5">${t.value}</div>
+          <div class="text-xs text-ink-600 mt-1.5 leading-snug">${t.sub}</div>`;
+        tilesEl.appendChild(div);
+      });
+      const calloutsEl = document.getElementById('headline-callouts');
+      data.headline_panel.callout_strip.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'bg-white/60 rounded-lg p-3 border border-amber-100';
+        div.innerHTML = `
+          <div class="text-[10px] font-bold uppercase tracking-widest text-accent-amber mb-1">${c.label}</div>
+          <div class="text-xs text-ink-700 leading-relaxed">${c.detail}</div>`;
+        calloutsEl.appendChild(div);
+      });
+
+      // KPI grid
       const kpiGrid = document.getElementById('kpi-grid');
       data.kpis.forEach(k => {
         const sent = k.sentiment;
@@ -286,49 +558,239 @@
         kpiGrid.appendChild(div);
       });
 
+      // Trend headline + annotation
+      document.getElementById('trend-headline').textContent = data.trend.headline;
+      document.getElementById('trend-annotation').textContent = data.trend.annotation_text;
+      if (data.trend.may_extrapolation_note) {
+        document.getElementById('trend-may-extrapolation').textContent = data.trend.may_extrapolation_note;
+      }
+
+      // Trend charts
+      const months = data.trend.months;
+      const isPartial = months.map(m => m.endsWith('*'));
+      function makeBarChart(canvasId, vals, label, color, projVal) {
+        const colors = vals.map((v, i) => isPartial[i] ? color + '66' : color);  // partial = translucent
+        const borderColors = vals.map((v, i) => isPartial[i] ? color : color);
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: months,
+            datasets: [{
+              label,
+              data: vals,
+              backgroundColor: colors,
+              borderColor: borderColors,
+              borderWidth: 1,
+            }]
+          },
+          options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: ctx => {
+                    const v = ctx.parsed.y;
+                    let txt = label + ': ' + v.toLocaleString();
+                    if (isPartial[ctx.dataIndex] && projVal !== undefined) {
+                      txt += ' (partial — full-month est: ' + projVal.toLocaleString() + ')';
+                    }
+                    return txt;
+                  }
+                }
+              }
+            },
+            scales: {
+              y: { beginAtZero: true, ticks: { callback: v => v.toLocaleString() } },
+              x: { ticks: { autoSkip: false, font: { size: 10 } } }
+            }
+          }
+        });
+      }
+      const projClicks = data.trend.may_projection ? data.trend.may_projection.clicks_full_month_est : undefined;
+      const projImp = data.trend.may_projection ? data.trend.may_projection.imp_full_month_est : undefined;
+      makeBarChart('trend-clicks', data.trend.clicks, 'Clicks', '#1d5b8a', projClicks);
+      makeBarChart('trend-impressions', data.trend.impressions, 'Impressions', '#0ea5a4', projImp);
+
+      // Quarterly table
+      const qBody = document.querySelector('#trend-quarterly-table tbody');
+      data.trend.quarterly.forEach(q => {
+        const tr = document.createElement('tr');
+        if (q.is_partial) tr.className = 'bg-amber-50/40';
+        tr.innerHTML = `
+          <td class="py-2.5 pr-4 font-semibold text-ink-800">${q.q}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.clicks_total.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.clicks_per_mo.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.imp_total.toLocaleString()}</td>
+          <td class="py-2.5 pr-4 text-right font-mono">${q.imp_per_mo.toLocaleString()}</td>
+          <td class="py-2.5 text-right font-mono">${q.ctr_pct}%</td>`;
+        qBody.appendChild(tr);
+      });
+      document.getElementById('quarterly-footnote').textContent = data.trend.notes;
+
+      // GA4 status
+      document.getElementById('ga4-status-detail').textContent = data.ga4_status_panel.detail;
+      document.getElementById('ga4-implication').innerHTML = '<strong>Implication: </strong>' + data.ga4_status_panel.implication;
+
       // LD apples-to-apples
       const ldRows = document.getElementById('ld-rows');
-      data.ld_apples_to_apples.forEach(r => {
-        const dx = (r.rank_jan - r.rank_apr).toFixed(2);
-        const dxPill = parseFloat(dx) > 0 ? `<span class="pill pos">+${dx}</span>` : `<span class="pill warn">${dx}</span>`;
-        const isFloat = r.kw.startsWith('float');
-        const cellDelta = r.cells_apr - r.cells_jan;
-        const cellDeltaStr = cellDelta > 0 ? `(+${cellDelta})` : (cellDelta < 0 ? `(${cellDelta})` : '');
+      data.ld_apples.forEach(r => {
+        const cellsDelta = r.cells_apr - r.cells_jan;
+        const cellsDeltaStr = cellsDelta > 0 ? `(+${cellsDelta})` : (cellsDelta < 0 ? `(${cellsDelta})` : '');
+        const dxPill = r.mean_dx > 0 ? `<span class="pill pos">+${r.mean_dx.toFixed(2)}</span>` : `<span class="pill warn">${r.mean_dx.toFixed(2)}</span>`;
         const top3Bold = r.top3_apr > r.top3_jan ? `<strong>${r.top3_apr}</strong>` : `${r.top3_apr}`;
         const rankBold = r.rank_apr < r.rank_jan ? `<strong>${r.rank_apr.toFixed(2)}</strong>` : `${r.rank_apr.toFixed(2)}`;
-        const setBold = r.bb_rank_in_set.startsWith('#1') || r.bb_rank_in_set.startsWith('#2') || r.bb_rank_in_set.startsWith('#3') ? `<strong>${r.bb_rank_in_set}</strong>` : r.bb_rank_in_set;
         const tr = document.createElement('tr');
         tr.innerHTML = `
           <td class="py-2.5 px-3 font-medium text-ink-800">${r.kw}</td>
-          <td class="py-2.5 px-3 text-right font-mono text-ink-700">${r.cells_jan} / ${r.cells_apr} <span class="text-ink-400">${cellDeltaStr}</span></td>
+          <td class="py-2.5 px-3 text-right font-mono">${r.cells_jan} / ${r.cells_apr} <span class="text-ink-400">${cellsDeltaStr}</span></td>
           <td class="py-2.5 px-3 text-right font-mono">${r.rank_jan.toFixed(2)} → ${rankBold}</td>
           <td class="py-2.5 px-3 text-right">${dxPill}</td>
           <td class="py-2.5 px-3 text-right font-mono">${r.top3_jan} → ${top3Bold}</td>
-          <td class="py-2.5 px-3">${setBold}</td>`;
+          <td class="py-2.5 px-3 text-right text-xs font-mono"><span class="text-accent-green">+${r.cells_entered}</span> / <span class="text-accent-red">−${r.cells_lost}</span></td>`;
         ldRows.appendChild(tr);
       });
 
-      // Competitor churn diverging bars
+      // Heatmap
+      const kwSelect = document.getElementById('heatmap-kw-select');
+      const kws = Object.keys(data.cells_by_town);
+      kws.forEach(kw => {
+        const opt = document.createElement('option');
+        opt.value = kw;
+        opt.textContent = kw;
+        kwSelect.appendChild(opt);
+      });
+      function renderHeatmap(kw) {
+        const rows = data.cells_by_town[kw];
+        const container = document.getElementById('heatmap-container');
+        const html = `
+          <table class="min-w-full text-xs">
+            <thead class="text-ink-500">
+              <tr>
+                <th class="text-left py-2 pr-4 font-semibold">Town</th>
+                <th class="text-center py-2 pr-2 font-semibold">top-3</th>
+                <th class="text-center py-2 pr-2 font-semibold">4-7</th>
+                <th class="text-center py-2 pr-2 font-semibold">8-10</th>
+                <th class="text-center py-2 pr-2 font-semibold">11-15</th>
+                <th class="text-center py-2 pr-2 font-semibold">16-20</th>
+                <th class="text-center py-2 pr-2 font-semibold">out (21+)</th>
+                <th class="text-right py-2 font-semibold">Total cells</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              ${rows.map(r => `
+                <tr>
+                  <td class="py-1.5 pr-4 font-medium">${r.town}</td>
+                  <td class="text-center pr-2"><span class="heat-cell ${r.top3>0?'h5':'h0'}">${r.top3}</span></td>
+                  <td class="text-center pr-2"><span class="heat-cell ${r.close>0?'h4':'h0'}">${r.close}</span></td>
+                  <td class="text-center pr-2"><span class="heat-cell ${r.mid>0?'h3':'h0'}">${r.mid}</span></td>
+                  <td class="text-center pr-2"><span class="heat-cell ${r.back>0?'h2':'h0'}">${r.back}</span></td>
+                  <td class="text-center pr-2"><span class="heat-cell ${r.far>0?'h1':'h0'}">${r.far}</span></td>
+                  <td class="text-center pr-2"><span class="heat-cell h0">${r.out}</span></td>
+                  <td class="py-1.5 text-right font-mono font-semibold">${r.total}</td>
+                </tr>`).join('')}
+            </tbody>
+          </table>`;
+        container.innerHTML = html;
+      }
+      renderHeatmap(kws[0]);
+      kwSelect.addEventListener('change', e => renderHeatmap(e.target.value));
+
+      // Competition (LD leaderboard MTNM)
+      const compRows = document.getElementById('competition-rows');
+      data.ld_leaderboard_mtnm.forEach((c, i) => {
+        const tr = document.createElement('tr');
+        if (c.is_client) tr.className = 'is-client';
+        const dxPill = c.mean_dx > 0 ? `<span class="pill pos">+${c.mean_dx.toFixed(2)}</span>` : `<span class="pill warn">${c.mean_dx.toFixed(2)}</span>`;
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-mono">${i+1}</td>
+          <td class="py-2.5 px-3 font-medium">${c.is_client ? '<strong>'+c.name+' (us)</strong>' : c.name}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${c.reviews}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${c.cells_jan} / ${c.cells_apr}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${c.rank_jan.toFixed(2)} → ${c.rank_apr.toFixed(2)}</td>
+          <td class="py-2.5 px-3 text-right">${dxPill}</td>`;
+        compRows.appendChild(tr);
+      });
+
+      // Competitor churn
       const churnEl = document.getElementById('churn-rows');
       const maxAbs = Math.max(...data.competitor_churn.map(c => Math.abs(c.delta)));
       data.competitor_churn.forEach(c => {
         const widthPct = (Math.abs(c.delta) / maxAbs) * 45;
         const row = document.createElement('div');
         row.className = `churn-row ${c.is_client ? 'is-client' : ''}`;
-        const sibling = c.name.includes('sibling');
-        const barCls = c.is_client ? 'client' : (sibling ? 'muted' : (c.delta > 0 ? 'pos' : 'neg'));
+        const barCls = c.is_client ? 'client' : (c.delta > 0 ? 'pos' : 'neg');
         const side = c.delta > 0 ? 'left: 50%' : `right: 50%`;
-        const label = c.is_client ? 'Body Balance (us)' : c.name;
         const valStr = c.delta > 0 ? `+${c.delta}` : `${c.delta}`;
-        const valColor = c.is_client ? 'color:#0b1220' : (sibling ? 'color:#64748b;font-style:italic' : '');
+        const meta = `${c.rating ? c.rating.toFixed(1)+'★' : '—'} · ${c.reviews} rev`;
         row.innerHTML = `
-          <div class="label" style="${valColor}">${label}</div>
+          <div class="label">
+            <div>${c.name}</div>
+            <div class="text-[10px] text-ink-400">${meta}</div>
+          </div>
           <div class="churn-track"><div class="axis"></div><div class="churn-bar ${barCls}" style="${side}; width: ${widthPct}%;"></div></div>
-          <div class="churn-val" style="${valColor}">${valStr}</div>`;
+          <div class="churn-val">${valStr}</div>`;
         churnEl.appendChild(row);
       });
 
-      // Root cause cards
+      // URL class
+      const urlRows = document.getElementById('url-class-rows');
+      data.url_class.forEach(u => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-medium">${u.class}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.pages}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.imp_180d.toLocaleString()}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.imp_pct}%</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.clicks_180d.toLocaleString()}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.clicks_pct}%</td>`;
+        urlRows.appendChild(tr);
+      });
+
+      // Untracked services
+      document.getElementById('untracked-top3-count').textContent = data.untracked_top3.length;
+      const untrackedEl = document.getElementById('untracked-rows');
+      data.untracked_top3.forEach(u => {
+        const tr = document.createElement('tr');
+        const rankPill = u.bb_rank === 1 ? '<span class="pill pos">#1</span>' : u.bb_rank === 2 ? '<span class="pill info">#2</span>' : '<span class="pill warn">#3</span>';
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-medium">${u.query}</td>
+          <td class="py-2.5 px-3 text-right">${rankPill}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.vol_ut ? u.vol_ut.toLocaleString() : '—'}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${u.vol_us ? u.vol_us.toLocaleString() : '—'}</td>
+          <td class="py-2.5 px-3 text-xs text-ink-600">${u.bb_rank === 1 ? '<em class="text-ink-400">We own #1</em>' : u.top1}</td>`;
+        untrackedEl.appendChild(tr);
+      });
+
+      // Biggest winner queries
+      const biggestEl = document.getElementById('biggest-winners-rows');
+      data.biggest_winner_queries.forEach(q => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-medium">${q.query}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${q.imp.toLocaleString()}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${q.clicks}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${q.ctr.toFixed(2)}%</td>
+          <td class="py-2.5 px-3 text-right font-mono">${q.pos.toFixed(1)}</td>
+          <td class="py-2.5 px-3 text-right font-mono text-accent-green font-semibold">+${Math.round(q.est_marginal).toLocaleString()}</td>`;
+        biggestEl.appendChild(tr);
+      });
+
+      // Outside grid
+      const ogEl = document.getElementById('outside-grid-rows');
+      data.outside_grid.forEach(o => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-medium">${o.city}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${o.queries}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${o.rows}</td>
+          <td class="py-2.5 px-3 text-right font-mono ${o.bb_in_top20 === 0 ? 'text-accent-red font-semibold' : ''}">${o.bb_in_top20}</td>
+          <td class="py-2.5 px-3 text-xs text-ink-600">${o.winner}</td>`;
+        ogEl.appendChild(tr);
+      });
+
+      // Root causes
       const rcEl = document.getElementById('root-cards');
       const sevMap = { 'P0': '', 'Secondary': 'sec', 'Opportunity': 'opp', 'Positive': 'pos' };
       const sevTagMap = { 'P0': 'PRIMARY · P0', 'Secondary': 'SECONDARY', 'Opportunity': 'OPPORTUNITY', 'Positive': 'POSITIVE' };
@@ -380,7 +842,7 @@
         ownerEl.appendChild(div);
       });
 
-      // M3 KPIs
+      // KPI table
       const kpiTable = document.getElementById('kpi-table');
       data.m3_kpis.forEach(k => {
         const tr = document.createElement('tr');
@@ -399,9 +861,10 @@
         li.textContent = s;
         sourcesEl.appendChild(li);
       });
+
     }).catch(err => {
       console.error('Failed to load data.json', err);
-      document.getElementById('kpi-grid').innerHTML = '<div class="text-sm text-accent-red">Failed to load dashboard data. Check console.</div>';
+      document.getElementById('kpi-grid').innerHTML = '<div class="text-sm text-accent-red col-span-3">Failed to load dashboard data. Check console.</div>';
     });
   </script>
 </body>
