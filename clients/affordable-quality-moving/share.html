@@ -90,24 +90,24 @@
       </div>
     </section>
 
-    <!-- ============ TREND CHART — ORGANIC ONLY, Q4 2025 → NOW (moved to top per user request) ============ -->
+    <!-- ============ TREND CHART — Google Search + GBP, Q4 2025 → NOW ============ -->
     <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of organic search performance — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026, HQDM's first two months), the stabilization (Mar), and the recovery (Apr–May). Top chart = monthly visitors; bottom = monthly leads (form submits + phone calls + Google Business clicks).
+          Eight months of <strong>Google Search</strong> (people finding your website organically) plus <strong>Google Business Profile</strong> (people clicking from your Maps listing) — the two channels that together account for ~85% of your real customer lead flow. Top chart = monthly visitors per channel; bottom = monthly leads (form submits + phone calls + GBP clicks). The cliff in Jan–Feb (HQDM's first two months) and the recovery in Apr–May are visible on both lines.
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Visitors / Month — by channel</div>
             <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
           </div>
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Leads / Month — by channel</div>
             <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
           </div>
         </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — shown as a dashed line. The 18-month view is available in the full strategic dashboard.</p>
+        <p class="text-[11px] text-slate-500 mt-3 italic">"Google Business Profile" = sessions arriving via the GBP "Website" button (utm_source=gmb). May 2026 is a partial month (first 22 days) — dashed lines. The 18-month + all-channels view is in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -339,6 +339,92 @@
       </div>
     </section>
 
+    <!-- ============ DIRECT / REFERRAL ANALYSIS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Where Else Leads Come From — Direct &amp; Referral Channels</h2>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        Google Search + Google Business Profile drive most of your leads, but not all. Two things worth knowing: <strong>(1) what hurt you</strong> in late 2025 (a fake-traffic spike from a third-party tool), and <strong>(2) what's quietly working</strong> that we can scale — including a Craigslist listing that's been driving real leads at 28% conversion.
+      </p>
+
+      <!-- 3-column: What harmed / What works / Untapped -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+
+        <!-- WHAT HARMED -->
+        <div class="panel" style="border-left: 4px solid #ef4444;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-rose-700 mb-1">What hurt you (Q4 2025)</div>
+          <h3 class="font-bold text-slate-900 text-base">The "fake Direct" spike</h3>
+          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
+            "Direct" sessions (people typing your URL or arriving with no referrer) ballooned from ~450/month to <strong>1,901 in November</strong> — and then crashed to <strong>54 in January</strong>. The engagement rate on those sessions was abnormally low (~3% on the "(not set)" landing page = bot footprint). This was almost certainly a third-party "traffic tool" or link-building automation running before our engagement. <strong>It inflated your numbers but contributed no real leads</strong>, and when it stopped, the algorithm appears to have rebalanced rankings shortly after.
+          </p>
+          <p class="text-xs text-slate-600 mt-2"><em>Heads-up:</em> a chunk of "Direct" leads is actually <strong>job applicants</strong> hitting <code>/careers/</code> (330 sessions, 99 form_submits = 30% CVR). That's HR traffic, not customer leads. Real customer Direct sessions are about 600/month now and growing.</p>
+        </div>
+
+        <!-- WHAT WORKS -->
+        <div class="panel" style="border-left: 4px solid #10b981;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 mb-1">What's quietly working</div>
+          <h3 class="font-bold text-slate-900 text-base">Channels you're already winning</h3>
+          <table class="w-full text-xs mt-2">
+            <thead>
+              <tr class="text-left text-[10px] uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                <th class="py-1.5 pr-2">Source</th>
+                <th class="py-1.5 pr-2 text-right">Sess</th>
+                <th class="py-1.5 text-right">Leads · CVR</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-slate-100 bg-emerald-50/50">
+                <td class="py-1.5 pr-2 font-semibold">★ Craigslist (LA)</td>
+                <td class="py-1.5 pr-2 text-right font-mono">192</td>
+                <td class="py-1.5 text-right font-mono font-bold text-emerald-700">54 · 28%</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-1.5 pr-2">Email signatures (Gmail)</td>
+                <td class="py-1.5 pr-2 text-right font-mono">13</td>
+                <td class="py-1.5 text-right font-mono">5 · 38%</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-1.5 pr-2">ChatGPT citations</td>
+                <td class="py-1.5 pr-2 text-right font-mono">37</td>
+                <td class="py-1.5 text-right font-mono">5 · 14%</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-1.5 pr-2">Master's University alumni</td>
+                <td class="py-1.5 pr-2 text-right font-mono">35</td>
+                <td class="py-1.5 text-right font-mono">5 · 14%</td>
+              </tr>
+              <tr class="border-b border-slate-100">
+                <td class="py-1.5 pr-2">SD Chamber of Commerce</td>
+                <td class="py-1.5 pr-2 text-right font-mono">14</td>
+                <td class="py-1.5 text-right font-mono">1 · 7%</td>
+              </tr>
+              <tr>
+                <td class="py-1.5 pr-2">Google Docs (partnerships)</td>
+                <td class="py-1.5 pr-2 text-right font-mono">12</td>
+                <td class="py-1.5 text-right font-mono">3 · 25%</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-xs text-slate-600 mt-2"><em>The Craigslist finding is the headline:</em> 54 conversions over 18 months at 28% CVR — likely a single SCV listing. Free channel, no ad spend.</p>
+        </div>
+
+        <!-- UNTAPPED -->
+        <div class="panel" style="border-left: 4px solid #6366f1;">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-indigo-700 mb-1">Where we can grow next</div>
+          <h3 class="font-bold text-slate-900 text-base">Untapped lead channels</h3>
+          <ul class="mt-2 space-y-2 text-xs text-slate-700">
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">1.</span><span><strong>Scale Craigslist.</strong> 28% CVR on the existing listing. Add posts for Burbank + San Diego service areas + weekly bumps — could 3–5× the volume.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">2.</span><span><strong>Nextdoor.</strong> Free "Local Deals" + paid sponsorship in your neighborhoods. Hyper-local — perfect for a multi-location SoCal mover.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">3.</span><span><strong>Apartments.com / Zillow.</strong> Both have "Moving Center" partnerships for local movers. Property managers + realtors drive ~30% of moving-decision discovery.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">4.</span><span><strong>Local realtor partnerships.</strong> Direct referral fee or co-branded discount card. Your alumni.masters.edu signal proves local-trust referrals convert.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">5.</span><span><strong>Chambers of Commerce (Santa Clarita, Burbank, San Diego).</strong> SD chamber already converting — replicate in the other two metros where AQMS operates.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">6.</span><span><strong>U-Haul Movers Marketplace / Bellhop / HireAHelper.</strong> Pay-per-job marketplaces with screened buyer intent. Your 452-review reputation gives an edge.</span></li>
+            <li class="flex gap-2"><span class="text-indigo-500 font-bold mt-0.5">7.</span><span><strong>AI-search optimization.</strong> ChatGPT (37 sess) + Perplexity (10) already referring. Build LLM-citable content (cost calculators, FAQ guides) — covered in Lever 5.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
     <!-- ============ STRATEGY — NEXT 90 DAYS ============ -->
     <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Next — The Next 90 Days</h2>
@@ -443,55 +529,50 @@
     renderTrendCharts(DATA);
     if (LD) renderHeatmap(LD);
 
-    // ====== Trend Charts (ORGANIC ONLY · last 8 months · Q4 2025 → now) ======
+    // ====== Trend Charts (Google Search + GBP · last 8 months · Q4 2025 → now) ======
     function renderTrendCharts(d) {
       const t = d.trend; if (!t) return;
-      // Slice to last 8 months — Q4 2025 (Oct/Nov/Dec) + Q1 2026 (Jan/Feb/Mar) + Q2 2026 partial (Apr/May)
-      const WINDOW = 8;
-      const allMonths = t.months || [];
-      const startIdx = Math.max(0, allMonths.length - WINDOW);
-      const months = allMonths.slice(startIdx);
-      const organicSessions = (t.sessions?.organic || []).slice(startIdx);
-      const organicConversions = (t.form_submits?.organic || []).slice(startIdx);
+      const months = t.months || [];
+      const split = t.organic_split;
+      if (!split) return;
 
-      // Detect partial month — split solid + dashed
-      const partialIdx = months.findIndex(m => /\*/.test(m));
-      const splitSeries = (data) => {
+      // Slice the organic_split series to align with last 8 months on the main `months` x-axis.
+      const WINDOW = 8;
+      const startIdx = Math.max(0, months.length - WINDOW);
+      const monthsWindow = months.slice(startIdx);
+      // organic_split.months_iso may differ in length from t.months. Align by ISO position to be safe.
+      const splitMonthsIso = split.months_iso || [];
+      const splitStartIdx = Math.max(0, splitMonthsIso.length - WINDOW);
+      const googleSearchSess = (split.sessions.google_search || []).slice(splitStartIdx);
+      const gbpSess          = (split.sessions.gbp_utm       || []).slice(splitStartIdx);
+      const googleSearchConv = (split.form_submits.google_search || []).slice(splitStartIdx);
+      const gbpConv          = (split.form_submits.gbp_utm       || []).slice(splitStartIdx);
+
+      const partialIdx = monthsWindow.findIndex(m => /\*/.test(m));
+      const splitForPartial = (data) => {
         if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
         const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
         const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
         return { solid, dashed };
       };
-      const ses = splitSeries(organicSessions);
-      const con = splitSeries(organicConversions);
 
-      const buildDatasets = (split, color, label) => [
-        {
-          label: label,
-          data: split.solid,
-          borderColor: color,
-          backgroundColor: color + '20',
-          borderWidth: 3,
-          tension: 0.25,
-          pointRadius: 3,
-          pointHoverRadius: 6,
-          fill: true,
-          spanGaps: false,
-        },
-        {
-          label: label + ' (partial month)',
-          data: split.dashed,
-          borderColor: color,
-          backgroundColor: 'transparent',
-          borderDash: [6, 4],
-          borderWidth: 2.5,
-          tension: 0.25,
-          pointRadius: 3,
-          pointHoverRadius: 6,
-          fill: false,
-          spanGaps: false,
-        },
-      ];
+      const buildSeries = (data, color, label) => {
+        const s = splitForPartial(data);
+        return [
+          {
+            label: label, data: s.solid,
+            borderColor: color, backgroundColor: color + '18',
+            borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6,
+            fill: true, spanGaps: false,
+          },
+          {
+            label: label + ' (partial month)', data: s.dashed,
+            borderColor: color, backgroundColor: 'transparent',
+            borderDash: [6, 4], borderWidth: 2.5, tension: 0.25,
+            pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false,
+          },
+        ];
+      };
 
       const opts = (yLabel) => ({
         responsive: true, maintainAspectRatio: false,
@@ -516,15 +597,21 @@
       });
 
       const sesEl = document.getElementById('trend-sessions');
-      if (sesEl && organicSessions.length) new Chart(sesEl, {
+      if (sesEl) new Chart(sesEl, {
         type: 'line',
-        data: { labels: months, datasets: buildDatasets(ses, '#1d5b8a', 'Organic Search Visitors') },
+        data: { labels: monthsWindow, datasets: [
+          ...buildSeries(googleSearchSess, '#1d5b8a', 'Google Search'),
+          ...buildSeries(gbpSess,          '#f59e0b', 'Google Business Profile'),
+        ] },
         options: opts('monthly visitors'),
       });
       const conEl = document.getElementById('trend-conversions');
-      if (conEl && organicConversions.length) new Chart(conEl, {
+      if (conEl) new Chart(conEl, {
         type: 'line',
-        data: { labels: months, datasets: buildDatasets(con, '#10b981', 'Organic Search Leads') },
+        data: { labels: monthsWindow, datasets: [
+          ...buildSeries(googleSearchConv, '#10b981', 'Google Search Leads'),
+          ...buildSeries(gbpConv,          '#0ea5a4', 'GBP Leads'),
+        ] },
         options: opts('monthly leads'),
       });
     }

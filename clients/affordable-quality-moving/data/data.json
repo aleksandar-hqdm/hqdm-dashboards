@@ -87,6 +87,18 @@
     },
     "channel_labels": { "organic": "Organic Search", "direct": "Direct", "paid": "Paid Search", "referral": "Referral" },
     "channel_colors": { "organic": "#1d5b8a", "direct": "#ef4444", "paid": "#f59e0b", "referral": "#8b5cf6" },
+    "organic_split": {
+      "months_iso":      ["2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04","2026-05"],
+      "sessions": {
+        "google_search":   [422, 453, 605, 521, 518, 443, 460, 463, 438, 386, 374, 388, 342, 247,  92,  73, 103, 296, 316],
+        "gbp_utm":         [127, 146, 179, 237, 258, 226, 244, 242, 184, 179, 195, 187, 142, 152,   5,   2,   6,  24,  21]
+      },
+      "form_submits": {
+        "google_search":   [  0,   0,   0,   0,   6,  50,  27,  29,  38,  36,  35,  38,  23,  16,  13,   4,  10,  15,  20],
+        "gbp_utm":         [  0,   0,   0,   0,   4,  54,  31,  32,  22,  36,  30,  15,  11,  15,   0,   0,   1,  18,  21]
+      },
+      "note": "Splits the GA4 'Organic Search' channel into (a) true Google Search arrivals and (b) GBP-tagged sessions arriving via the GBP 'Click to website' button (utm_source=gmb). Site uses utm_medium=organic so GA4 buckets these into Organic Search — they're broken out here for clarity."
+    },
     "events": [
       { "month_index": 10, "label": "Pre-HQDM: Direct spike begins (Oct 2025) — ATB-bot signature", "type": "anomaly" },
       { "month_index": 13, "label": "HQDM engagement starts (Jan 2026); cliff onset same month", "type": "negative" },
@@ -351,6 +363,45 @@
     "Paid Search restart — Google Ads went to zero around Apr 2025 (pre-HQDM). Want us to audit the account + restart, or is paid permanently off-roadmap?",
     "Backstory on the Oct-Dec 2025 Direct spike — were any link-building / traffic-tool campaigns running with a prior vendor before HQDM started? If so we want them confirmed fully halted so the recovery isn't disrupted."
   ],
+  "direct_referral_analysis": {
+    "headline": "What harmed: a fake-Direct spike Oct–Dec 2025. What works: Craigslist (54 conv, free). What's untapped: Nextdoor, Apartments.com, mover marketplaces.",
+    "what_harmed": {
+      "title": "The Q4 2025 Direct-traffic spike was fake",
+      "detail": "Direct sessions jumped Oct 1,103 → Nov 1,901 → Dec 1,288 → crashed to 54 in Jan. Average engagement rate on those sessions was abnormally low. This is the classic signature of an automated 'traffic tool' or a 3rd-party referral spamming Direct attribution. The traffic was inflating session counts but not contributing real leads — when it stopped, the algorithm appears to have rebalanced rankings shortly after, layering the organic cliff on top.",
+      "evidence": [
+        "Direct sessions on /careers/ landing 330/18mo with 30% CVR — but those are job applicants (form_submit on careers), not customer leads. Real customer Direct CVR is closer to 3%.",
+        "Direct sessions on (not set) landing page: 195 / 2 conv / 2.6% engagement = unmistakable bot footprint.",
+        "Real Direct (homepage, /contact/, /santa-clarita/, location pages) is now ~600-680 sess/mo (Apr-May 2026) and converting normally — that's brand recall + bookmarks, not bots."
+      ]
+    },
+    "what_works": {
+      "title": "Channels already driving real leads (free or near-free)",
+      "rows": [
+        { "source": "losangeles.craigslist.org", "sessions": 192, "conversions": 54, "cvr": 28.1, "note": "★ Star finding — Craigslist Services 'Skilled Trades' or 'Labor/Move' listings convert at 28%. Likely a single listing or a few. Worth scaling." },
+        { "source": "chatgpt.com",                "sessions": 37,  "conversions": 5,  "cvr": 13.5, "note": "LLM referrals (people clicking ChatGPT citations). Emerging channel — see also Perplexity (10/0)." },
+        { "source": "alumni.masters.edu",         "sessions": 35,  "conversions": 5,  "cvr": 14.3, "note": "The Master's University alumni site. Local-institution channel — replicable for Santa Clarita schools/employers." },
+        { "source": "mail.google.com",            "sessions": 13,  "conversions": 5,  "cvr": 38.5, "note": "Email signatures + replies linking to AQMS. Highest CVR in the set — passive lead source." },
+        { "source": "docs.google.com",            "sessions": 12,  "conversions": 3,  "cvr": 25.0, "note": "Shared Google Docs — partnership / contract / quote-doc click-throughs." },
+        { "source": "chamber.sdbusinesschamber.com","sessions": 14,"conversions": 1,  "cvr": 7.1,  "note": "San Diego Chamber of Commerce. Confirms multi-location reach; replicate in Santa Clarita / Burbank chambers." },
+        { "source": "scvjobs.com",                "sessions": 86,  "conversions": 4,  "cvr": 4.7,  "note": "Local Santa Clarita Valley jobs board. Mostly HR traffic (likely /careers/ landings)." }
+      ],
+      "junk_sources": [
+        { "source": "leadsgo.io",          "sessions": 514, "conversions": 0,  "note": "Lead-gen aggregator. Zero conversions — likely scraper or low-quality referral. Worth blocking in GA4 + checking if a paid agreement is feeding this." },
+        { "source": "fahnd.com",           "sessions": 194, "conversions": 1,  "note": "Likely scraper/spam referral." },
+        { "source": "s.mobisearcher.com",  "sessions": 159, "conversions": 0,  "note": "Likely scraper/spam referral." }
+      ]
+    },
+    "untapped_ideas": [
+      { "channel": "Craigslist (scale the existing footprint)",   "why": "Already 28% CVR on 192 sess. Likely a single SCV listing. Adding listings for Burbank + San Diego service areas, plus weekly bumps, could 3-5× the volume." },
+      { "channel": "Nextdoor neighborhood sponsorships",          "why": "Free 'Local Deals' + paid 'Sponsorship' formats. Hyper-local — perfect fit for a multi-location SoCal mover. Highest-CVR demographic (homeowners moving)." },
+      { "channel": "Apartments.com / Zillow mover partnerships",  "why": "Apartments.com 'Moving Center' lets local movers list. Zillow mover-deals widget on listing pages. Property managers + realtors drive ~30% of moving-decision discovery." },
+      { "channel": "Local realtor + property-manager partnerships","why": "Direct referral fee or co-branded discount card. The Craigslist + alumni.masters.edu signals show local-trust referrals work — formalize the strongest 3-5." },
+      { "channel": "Chambers of Commerce (Santa Clarita, Burbank, San Diego)", "why": "San Diego chamber referral already converting. Replicate the listing in all 3 metros where AQMS has presence." },
+      { "channel": "U-Haul Movers Marketplace / Bellhop / HireAHelper", "why": "Pay-per-job marketplaces with screened buyer intent. Profile + rating system rewards AQMS's 452-review reputation. Test with 5–10 jobs first." },
+      { "channel": "AI-search optimization (ChatGPT, Perplexity, Gemini)", "why": "37 ChatGPT + 10 Perplexity sessions already. Build LLM-citable content (cost calculators, comparison guides) — see Lever E in the Q3 strategy." },
+      { "channel": "Reddit (r/santaclarita, r/SanDiegan, r/movingto*)", "why": "Search-driven Reddit traffic is sustained; community-engaged accounts get organic referrals. Low-risk soft-build channel." }
+    ]
+  },
   "_data_provenance": {
     "ga4": "properties/391356365 · 18-month channel x month pull 2026-05-22 · _aqms_18mo_channel_monthly.csv",
     "gsc": "https://www.aqmsnationalmoving.com/ (siteOwner) · 18-month monthly pull 2026-05-22",
