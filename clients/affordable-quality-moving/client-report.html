@@ -117,7 +117,8 @@
             <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
           </div>
         </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — dashed line. The 18-month + all-channels (Direct, Paid, Referral) view is in the full strategic dashboard.</p>
+        <p class="text-[11px] text-slate-700 mt-3 font-semibold">Heads up — the "May 26 so far" data point is <span class="underline">partial</span>: it reflects only the first ~22 days of May, not the full month. Treat it as "where we are right now," not as a finished month. The dashed line on the chart signals this.</p>
+        <p class="text-[11px] text-slate-500 mt-1 italic">The 18-month view + all channels (Direct, Paid, Referral) is in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -552,7 +553,7 @@
       const organicSessions = (t.sessions?.organic || []).slice(startIdx);
       const organicConversions = (t.form_submits?.organic || []).slice(startIdx);
 
-      const partialIdx = months.findIndex(m => /\*/.test(m));
+      const partialIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
       const splitSeries = (data) => {
         if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
         const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);

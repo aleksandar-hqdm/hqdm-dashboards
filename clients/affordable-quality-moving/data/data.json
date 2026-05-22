@@ -72,7 +72,7 @@
     "headline": "18-month organic + multi-channel — Q1 2026 cliff + Q2 2026 recovery curve",
     "annotation_text": "Organic Search trough Jan-Feb 2026 (75-97 sessions) recovering rapidly post-engagement (Mar → May = 109 → 320 → 337). Direct spike Oct-Dec 2025 (1,103-1,901/mo) was likely ATB-bot artifact from prior vendor stack — crashed to 54 in Jan 2026 alongside organic. Paid Search died around Apr 2025 (separate ads-account issue).",
     "may_extrapolation_note": "May 2026 = first 22 days actual GA4 (partial month). Full-month projection ~+30%.",
-    "months": ["Dec 24", "Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26*"],
+    "months": ["Dec 24", "Jan 25", "Feb 25", "Mar 25", "Apr 25", "May 25", "Jun 25", "Jul 25", "Aug 25", "Sep 25", "Oct 25", "Nov 25", "Dec 25", "Jan 26", "Feb 26", "Mar 26", "Apr 26", "May 26 so far"],
     "sessions": {
       "organic": [599, 785, 758, 776, 668, 705, 706, 620, 565, 569, 575, 485, 400, 97, 75, 109, 320, 337],
       "direct":  [465, 554, 408, 663, 524, 344, 451, 392, 331, 423, 1103, 1901, 1288, 54, 96, 136, 650, 680],
