@@ -46,13 +46,16 @@
         </div>
       </div>
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#headline" class="px-3 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
+        <a href="#trend" class="px-3 py-1.5 rounded hover:bg-slate-100">Trend</a>
         <a href="#maps" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
         <a href="#movement" class="px-3 py-1.5 rounded hover:bg-slate-100">Movement</a>
         <a href="#competition" class="px-3 py-1.5 rounded hover:bg-slate-100">Competition</a>
+        <a href="#llm" class="px-3 py-1.5 rounded hover:bg-slate-100">LLM</a>
+        <a href="#potential" class="px-3 py-1.5 rounded hover:bg-slate-100">Potential</a>
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
-        <a href="#targets" class="px-3 py-1.5 rounded hover:bg-slate-100">Targets</a>
       </nav>
       <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">2026-05-22</div>
     </div>
@@ -68,8 +71,8 @@
         <span>HQDM Search Intelligence</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight" id="hero-h1">Affordable Quality Moving &amp; Storage</h1>
-      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">Santa Clarita's #1-ranked moving + storage company on Google Maps · Founded 1996</p>
-      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">Defend #1 Santa Clarita Maps position · capitalize on packing/storage momentum · expand into outer service-area cities.</p>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">Multi-location SoCal mover · #1 on Maps in Santa Clarita · Founded 1996</p>
+      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">Defend #1 Santa Clarita Maps · accelerate Q2 2026 organic recovery · strengthen multi-location page network · capitalize on packing/storage momentum.</p>
       <div class="mt-8 flex flex-wrap gap-3 text-xs">
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono" id="hero-prepared">2026-05-22</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> <span id="hero-author">Aleksandar Spasevski</span></span>
@@ -87,6 +90,23 @@
     </div>
   </section>
 
+  <!-- ============== HEADLINE PANEL ============== -->
+  <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-amber-50 shadow-sm overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-start justify-between gap-4 flex-wrap">
+          <div class="flex-1 min-w-0">
+            <div class="text-[11px] font-bold uppercase tracking-widest text-accent-amber">THE HEADLINE</div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1" id="headline-h2">—</h2>
+            <p class="text-sm sm:text-base text-ink-700 leading-relaxed mt-3 max-w-4xl" id="headline-lede">—</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-stat-tiles"></div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4" id="headline-callouts"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
   <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
     <div class="flex items-end justify-between mb-4">
@@ -94,6 +114,96 @@
       <span class="text-xs text-ink-500">6 KPIs · click for detail</span>
     </div>
     <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- ============== TREND — 18-MONTH CHANNEL ============== -->
+  <section id="trend" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <div>
+          <h2 class="text-2xl font-bold tracking-tight">GA4 Channel Performance — 18 Months</h2>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">—</p>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="organic" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#1d5b8a"></span>
+            <span>Organic Search</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="direct" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#ef4444"></span>
+            <span>Direct</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="paid" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#f59e0b"></span>
+            <span>Paid Search</span>
+          </label>
+          <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
+            <input type="checkbox" data-series="referral" checked class="rounded">
+            <span class="inline-block w-3 h-3 rounded-full" style="background:#8b5cf6"></span>
+            <span>Referral</span>
+          </label>
+        </div>
+      </div>
+      <div class="p-6 space-y-8">
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">GA4 Sessions <span class="text-ink-400 font-medium normal-case">(by channel)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
+        </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">GA4 Conversions <span class="text-ink-400 font-medium normal-case">(form_submit + click_phone + gmb_click)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
+        </div>
+        <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
+      </div>
+    </div>
+
+    <!-- Quarterly table -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 pb-3 border-b border-slate-200">
+        <h3 class="text-lg font-bold text-ink-900">Quarterly Movement — Organic Search</h3>
+        <p class="text-xs text-ink-500 mt-1">Q2 2025 baseline / Q1 2026 trough / Q2 2026 partial. Conversion rate has held + improved through the cliff.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="quarterly-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Quarter</th>
+              <th class="text-right font-semibold py-3 px-4">Organic Sess</th>
+              <th class="text-right font-semibold py-3 px-4">Organic Conv</th>
+              <th class="text-right font-semibold py-3 px-4">Organic CVR</th>
+              <th class="text-right font-semibold py-3 px-4 hidden md:table-cell">GBP+Ref Sess</th>
+              <th class="text-right font-semibold py-3 px-4 hidden md:table-cell">GBP+Ref Conv</th>
+              <th class="text-right font-semibold py-3 px-4 hidden md:table-cell">GBP+Ref CVR</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- YoY badges + chart -->
+    <div class="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">YoY Snapshot</h3>
+        <p class="text-xs text-ink-500 mt-1" id="yoy-headline">—</p>
+        <div class="mt-4 space-y-2" id="yoy-badges"></div>
+        <p class="text-[11px] text-ink-500 mt-4 italic" id="yoy-reading">—</p>
+      </div>
+      <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">YoY % Change — Q2 2025 → Q2 2026*</h3>
+        <p class="text-xs text-ink-500 mt-1">Volume metrics down, but conversion-rate metrics (CVR) UP YoY. Lead quality intact + improving.</p>
+        <div class="h-64 mt-4"><canvas id="yoy-chart"></canvas></div>
+      </div>
+    </div>
   </section>
 
   <!-- ============== MAPS PRESENCE ============== -->
@@ -127,10 +237,9 @@
     </p>
   </section>
 
-  <!-- ============== MAPS MOVEMENT — Mar 8 → May 18 ============== -->
+  <!-- ============== MAPS MOVEMENT — LD HEATMAP + PER-KEYWORD ============== -->
   <section id="movement" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
 
-    <!-- LD heatmap time-lapse -->
     <div>
       <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
         <div>
@@ -140,7 +249,6 @@
       </div>
 
       <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-        <!-- Keyword tabs + controls -->
         <div class="border-b border-slate-200 p-4 flex flex-wrap items-center justify-between gap-3 bg-slate-50/60">
           <div class="flex gap-2 flex-wrap" id="hm-keyword-tabs"></div>
           <div class="flex items-center gap-3 flex-wrap">
@@ -157,13 +265,9 @@
             </label>
           </div>
         </div>
-
-        <!-- 4-column comparison -->
         <div class="p-4 sm:p-6">
           <div id="hm-panels" class="grid grid-cols-2 lg:grid-cols-4 gap-4"></div>
         </div>
-
-        <!-- Legend -->
         <div class="border-t border-slate-200 p-4 bg-slate-50/40 flex flex-wrap items-center gap-4 text-xs">
           <span class="font-bold uppercase tracking-wider text-ink-600">Rank legend:</span>
           <span class="inline-flex items-center gap-1.5"><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background:#047857"></span>1–3</span>
@@ -182,7 +286,7 @@
       <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
         <div>
           <h2 class="text-2xl font-bold tracking-tight">Per-Keyword Movement · Mar 8 → May 18 2026</h2>
-          <p class="text-sm text-ink-500 mt-1">AQMS gained position on <em>packing &amp; storage</em> (+0.91 positions, +5 top-3 cells) but lost share on <em>local movers</em> (−13 top-3 cells). <em>Moving company near me</em> held flat. The May 3 → May 18 dip is worth watching — it broke an Apr/May 3 upward streak on local movers.</p>
+          <p class="text-sm text-ink-500 mt-1">AQMS gained position on <em>packing &amp; storage</em> (+0.91 positions, +5 top-3 cells) but lost share on <em>local movers</em> (−13 top-3 cells). <em>Moving company near me</em> held flat. The May 3 → May 18 dip is worth watching — it broke an Apr/May 3 upward streak.</p>
         </div>
       </div>
       <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
@@ -204,22 +308,18 @@
           </table>
         </div>
       </div>
-      <p class="text-xs text-ink-500 mt-2 italic">Note: <code>movers</code> only has a single Mar 8 baseline scan (no movement data). It's included as a reference point — AQMS held avg rank 4.10 / 41 top-3 cells / 109 covered cells on the broad <code>movers</code> query at engagement start.</p>
     </div>
-
   </section>
 
   <!-- ============== COMPETITION (LD leaderboard) ============== -->
   <section id="competition" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
-
     <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
       <div>
         <h2 class="text-2xl font-bold tracking-tight">Local Competitor Leaderboard · Mar 8 → May 18 2026</h2>
-        <p class="text-sm text-ink-500 mt-1">All businesses appearing across the 3 priority queries × 4 dates × 13×13 grid (140 cells). Sorted by May 18 top-3 share. AQMS is highlighted.</p>
+        <p class="text-sm text-ink-500 mt-1">All businesses appearing across the 3 priority queries × 4 dates × 13×13 grid. Sorted by May 18 top-3 share. AQMS highlighted. Click headers to sort.</p>
       </div>
       <div class="text-xs text-ink-500 font-mono">May columns reflect the latest scan (May 18 2026)</div>
     </div>
-
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="overflow-x-auto">
         <table class="min-w-full text-sm" id="ld-table">
@@ -243,17 +343,114 @@
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
         <div class="text-[11px] font-bold uppercase tracking-widest text-amber-800">Threat #1</div>
         <div class="font-semibold mt-1">Camelot Moving &amp; Storage</div>
-        <p class="mt-1 text-ink-700">+47 top-3 placements in 2.5 months · avg rank improved 8.30 → 6.62 · biggest gainer in the market. Likely active SEO/GBP work. <strong>Watch monthly.</strong></p>
+        <p class="mt-1 text-ink-700">+47 top-3 in 2.5 months · avg rank 8.30 → 6.62 · biggest gainer. Likely active SEO/GBP work. <strong>Watch monthly.</strong></p>
       </div>
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
         <div class="text-[11px] font-bold uppercase tracking-widest text-amber-800">Threat #2</div>
-        <div class="font-semibold mt-1">Precision Moving &amp; Storage Corp.</div>
-        <p class="mt-1 text-ink-700">+31 top-3 · +46 cells of coverage (almost a doubling) · avg rank 10.89 → 9.16. Fresh expansion — territory was uncontested in March.</p>
+        <div class="font-semibold mt-1">Precision Moving &amp; Storage</div>
+        <p class="mt-1 text-ink-700">+31 top-3 · +46 cells coverage · avg rank 10.89 → 9.16. New entrant — territory was uncontested in March.</p>
       </div>
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
         <div class="text-[11px] font-bold uppercase tracking-widest text-amber-800">Threat #3</div>
         <div class="font-semibold mt-1">Victory Moving</div>
-        <p class="mt-1 text-ink-700">+20 top-3 · avg rank −0.80 positions · second-tier player making moves. Worth a backlink/citation profile check.</p>
+        <p class="mt-1 text-ink-700">+20 top-3 · avg rank −0.80 positions · second-tier player making moves. Worth backlink/citation profile check.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== LLM VISIBILITY ============== -->
+  <section id="llm" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">LLM Visibility — AI Overview Saturation</h2>
+        <p class="text-sm text-ink-500 mt-1" id="llm-headline">—</p>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <p class="text-sm text-ink-700 leading-relaxed max-w-5xl" id="llm-lede">—</p>
+    </div>
+
+    <div id="llm-totals" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mt-4"></div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mt-6">
+      <div class="px-6 pt-6 pb-3 border-b border-slate-200 flex items-end justify-between flex-wrap gap-2">
+        <div>
+          <h3 class="text-base font-bold text-ink-900">20 priority queries — AIO presence, AQMS rank, Local Pack presence</h3>
+          <p class="text-xs text-ink-500 mt-1">DFS SERP API live pull · 2026-05-22 · US default · $0.0985 total spend</p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-[11px] font-semibold" id="llm-bucket-filter">
+          <button data-bucket="" class="llm-bucket-btn bg-brand-500 text-white px-2.5 py-1 rounded">All</button>
+          <button data-bucket="commercial_geo" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Commercial geo</button>
+          <button data-bucket="commercial_service" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Commercial service</button>
+          <button data-bucket="informational" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Informational</button>
+          <button data-bucket="midfunnel_commercial" class="llm-bucket-btn bg-white border border-slate-300 text-ink-700 px-2.5 py-1 rounded hover:bg-slate-50">Mid-funnel commercial</button>
+        </div>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm" id="llm-table">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Keyword</th>
+              <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Bucket</th>
+              <th class="text-center font-semibold py-3 px-4">AIO</th>
+              <th class="text-center font-semibold py-3 px-4 hidden sm:table-cell">Local Pack</th>
+              <th class="text-center font-semibold py-3 px-4">AQMS rank</th>
+              <th class="text-left font-semibold py-3 px-4 hidden lg:table-cell">Note</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+      <h3 class="text-base font-bold text-indigo-900">What this means for AQMS's Q3 plan</h3>
+      <ul class="mt-3 space-y-2.5 text-sm text-indigo-900" id="llm-implications"></ul>
+    </div>
+  </section>
+
+  <!-- ============== POTENTIAL ============== -->
+  <section id="potential" class="max-w-7xl mx-auto px-4 sm:px-6 py-10 space-y-10">
+    <div>
+      <h2 class="text-2xl font-bold tracking-tight">Where the Organic Volume Sits</h2>
+      <p class="text-sm text-ink-500 mt-1">21,375 keywords ranked in GSC last 365d. 5,732 in top-10 (the asset base to defend); 2,160 ship-ready at pos 11-20 (Lever B target).</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">Keyword Bucket Distribution</h3>
+        <div class="h-64 mt-4"><canvas id="buckets-chart"></canvas></div>
+        <div class="mt-4 space-y-2 text-xs" id="buckets-legend"></div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+        <h3 class="text-lg font-bold">GSC Organic Impressions (monthly)</h3>
+        <p class="text-xs text-ink-500 mt-1">Jul 2025 peak (306K imp) → Apr 2026 trough (103K) → May 2026* partial. The May drop is partly partial-month data lag and partly real long-tail wipe — investigation pending.</p>
+        <div class="h-64 mt-4"><canvas id="gsc-chart"></canvas></div>
+      </div>
+    </div>
+
+    <!-- Top URLs -->
+    <div>
+      <h3 class="text-lg font-bold">Top URLs by Impression Volume (GSC last 90d)</h3>
+      <p class="text-xs text-ink-500 mt-1">Where the impression weight + click capture sits. "Lever" column = Q3 plan assignment.</p>
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mt-4">
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-sm" id="top-urls-table">
+            <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="text-left font-semibold py-3 px-4">URL</th>
+                <th class="text-right font-semibold py-3 px-4">Imp 90d</th>
+                <th class="text-right font-semibold py-3 px-4">Clicks 90d</th>
+                <th class="text-right font-semibold py-3 px-4">Pos</th>
+                <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Class</th>
+                <th class="text-left font-semibold py-3 px-4">Lever</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
       </div>
     </div>
   </section>
@@ -261,7 +458,7 @@
   <!-- ============== POSITIVES VS NEGATIVES ============== -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <h2 class="text-2xl font-bold tracking-tight mb-4">Positives vs Negatives</h2>
-    <p class="text-sm text-ink-500 max-w-4xl mb-6"><strong>Net:</strong> AQMS is operating from a position of strength — #1 in market by every quantitative measure with a 30-year brand and best-in-class review profile. The negatives are <em>movements</em>, not deficits — share losses + competitor moves that need active defense rather than recovery.</p>
+    <p class="text-sm text-ink-500 max-w-4xl mb-6"><strong>Net:</strong> AQMS is operating from a position of strength on the channel that survived (Maps) and is in recovery mode on the channel that broke (Organic). The Q3 plan is designed to compound the survivor + accelerate the recovery in parallel.</p>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
         <div class="flex items-center gap-2 mb-3 text-emerald-700 font-bold uppercase tracking-wider text-xs">
@@ -284,19 +481,19 @@
   <section id="strategy" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="flex items-end justify-between mb-6 flex-wrap gap-2">
       <div>
-        <h2 class="text-2xl font-bold tracking-tight">Q3 Strategy — 3 Levers</h2>
-        <p class="text-sm text-ink-500 mt-1">Defense + momentum + expansion. Click any lever card to expand its action list.</p>
+        <h2 class="text-2xl font-bold tracking-tight">Q3 Strategy — 5 Levers</h2>
+        <p class="text-sm text-ink-500 mt-1">Defense + recovery + multi-location strengthening + momentum capitalization + AIO content. Click any lever card to expand action list.</p>
       </div>
     </div>
     <div id="lever-cards" class="space-y-3"></div>
   </section>
 
-  <!-- ============== ALL TASKS — FILTERABLE ============== -->
+  <!-- ============== TASKS ============== -->
   <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
       <div>
         <h2 class="text-2xl font-bold tracking-tight">All Q3 Actions</h2>
-        <p class="text-sm text-ink-500 mt-1">Filterable list of every action across the 3 levers.</p>
+        <p class="text-sm text-ink-500 mt-1">Filterable list of every action across the 5 levers.</p>
       </div>
       <div class="flex gap-2 items-center">
         <input id="task-search" type="search" placeholder="Search…" class="px-3 py-1.5 text-sm border border-slate-300 rounded focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none" />
@@ -334,7 +531,7 @@
   <section id="targets" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="mb-4">
       <h2 class="text-2xl font-bold tracking-tight">Q3 KPI Targets</h2>
-      <p class="text-sm text-ink-500 mt-1">Baseline = May 18 2026. Target = end of M3 (3-month review). Stretch = aggressive case if defense works and momentum compounds.</p>
+      <p class="text-sm text-ink-500 mt-1">Baseline = May 18 2026 (Maps) / May 2026* partial (organic). Target = end of M3. Stretch = aggressive case.</p>
     </div>
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="overflow-x-auto">
@@ -342,7 +539,7 @@
           <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
             <tr>
               <th class="text-left font-semibold py-3 px-4">KPI</th>
-              <th class="text-right font-semibold py-3 px-4">Baseline (May 18)</th>
+              <th class="text-right font-semibold py-3 px-4">Baseline</th>
               <th class="text-right font-semibold py-3 px-4">M3 Target</th>
               <th class="text-right font-semibold py-3 px-4">Stretch</th>
             </tr>
@@ -366,11 +563,72 @@
   <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-12 text-xs text-ink-500">
     <div class="border-t border-slate-200 pt-6 space-y-2">
       <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Q3 2026 strategic dashboard for Affordable Quality Moving &amp; Storage</div>
-      <div>Confidential — internal use + authorized client viewing only. <code class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">noindex</code> set; not indexable by search engines.</div>
-      <div class="text-slate-400">Prepared by <span id="footer-author">Aleksandar Spasevski</span> · <span id="footer-prepared">2026-05-22</span> · Engagement start: Mar 2026</div>
+      <div>Confidential — internal use + authorized client viewing only. <code class="text-[10px] bg-slate-100 px-1.5 py-0.5 rounded">noindex</code> set; not indexable.</div>
+      <div class="text-slate-400">Prepared by Aleksandar Spasevski · 2026-05-22 · GA4 property 391356365 · GSC siteOwner · DFS SERP $0.0985 spend</div>
     </div>
   </footer>
 
   <script src="../../assets/js/dashboard.js"></script>
+
+  <!-- Quarterly table renderer (uses DATA.trend.quarterly) -->
+  <script>
+    (async function() {
+      const DATA = await fetch('./data/data.json').then(r => r.json()).catch(() => null);
+      if (!DATA) return;
+
+      // Quarterly table
+      const qbody = document.querySelector('#quarterly-table tbody');
+      if (qbody && DATA.trend && DATA.trend.quarterly) {
+        qbody.innerHTML = DATA.trend.quarterly.map(q => {
+          const isCurrent = q.kind === 'current';
+          return `
+            <tr class="${isCurrent ? 'bg-amber-50' : ''}">
+              <td class="py-3 px-4 ${isCurrent ? 'font-bold' : ''}">${q.q}</td>
+              <td class="py-3 px-4 text-right font-mono">${q.org_sess.toLocaleString()}</td>
+              <td class="py-3 px-4 text-right font-mono">${q.org_conv.toLocaleString()}</td>
+              <td class="py-3 px-4 text-right font-mono ${q.org_cr != null && q.org_cr >= 10 ? 'text-emerald-700 font-semibold' : ''}">${q.org_cr != null ? q.org_cr.toFixed(2) + '%' : '—'}</td>
+              <td class="py-3 px-4 text-right font-mono hidden md:table-cell">${q.gbp_sess != null ? q.gbp_sess.toLocaleString() : '—'}</td>
+              <td class="py-3 px-4 text-right font-mono hidden md:table-cell">${q.gbp_conv != null ? q.gbp_conv.toLocaleString() : '—'}</td>
+              <td class="py-3 px-4 text-right font-mono hidden md:table-cell ${q.gbp_cr != null && q.gbp_cr >= 10 ? 'text-emerald-700 font-semibold' : ''}">${q.gbp_cr != null ? q.gbp_cr.toFixed(2) + '%' : '—'}</td>
+            </tr>
+          `;
+        }).join('');
+      }
+
+      // YoY headline + reading + badges
+      if (DATA.trend && DATA.trend.yoy_growth) {
+        const yoy = DATA.trend.yoy_growth;
+        const h = document.getElementById('yoy-headline');
+        if (h) h.textContent = yoy.headline || '';
+        const r = document.getElementById('yoy-reading');
+        if (r) r.textContent = yoy.reading || '';
+        // Render badges grid
+        const badgesEl = document.getElementById('yoy-badges');
+        if (badgesEl && yoy.metrics) {
+          badgesEl.innerHTML = yoy.metrics.map(m => {
+            const isUp = (m.current_yoy_pct || 0) >= 0;
+            const borderCls = isUp ? 'border-emerald-500' : 'border-rose-500';
+            const txtCls    = isUp ? 'text-emerald-600'   : 'text-rose-600';
+            const arrow     = isUp ? '▲' : '▼';
+            const sign      = isUp ? '+' : '';
+            const isRatio = m.is_ratio;
+            const formatVal = (v) => isRatio ? (v != null ? v.toFixed(2) + '%' : '—') : (v != null ? Math.round(v).toLocaleString() : '—');
+            return `
+              <div class="flex items-center justify-between gap-3 ${borderCls} border-l-4 bg-white rounded px-3 py-2 shadow-sm">
+                <div class="min-w-0">
+                  <div class="text-[11px] font-bold uppercase tracking-wider text-ink-500">${m.label}</div>
+                  <div class="text-[11px] text-ink-500 mt-0.5">${formatVal(m.q2_2025)} → ${formatVal(m.current)}</div>
+                </div>
+                <div class="flex items-center gap-1.5 flex-shrink-0">
+                  <span class="${txtCls} text-base font-bold">${arrow}</span>
+                  <span class="${txtCls} text-2xl font-extrabold">${sign}${Math.round(m.current_yoy_pct || 0)}%</span>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+      }
+    })();
+  </script>
 </body>
 </html>
