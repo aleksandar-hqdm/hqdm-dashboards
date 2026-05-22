@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow, noarchive" />
-  <title>Headline — Traffic Down / Web-Form Submissions Up · Professional Movers · HQDM</title>
+  <title>Headline — Traffic Down / Leads Up · Professional Movers · HQDM</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
       <div class="flex items-center gap-3 min-w-0">
         <a href="../" class="text-xs text-ink-500 hover:text-ink-800">← PM Dashboard</a>
         <span class="text-ink-300">/</span>
-        <span class="font-semibold text-sm truncate">Mini-report: traffic down, web-form submissions up</span>
+        <span class="font-semibold text-sm truncate">Mini-report: traffic down, leads up</span>
       </div>
       <a href="../../../index.html" class="text-[11px] text-ink-500 hover:text-ink-800 hidden sm:inline">HQDM Dashboards</a>
     </div>
@@ -30,31 +30,20 @@
   <section class="bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
       <div class="text-[11px] font-bold uppercase tracking-widest text-brand-300 mb-2">MINI-REPORT · HEADLINE</div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Traffic is dropping. Web-form submissions held — and GBP click-throughs convert at ~2× organic.</h1>
-      <p class="text-base sm:text-lg mt-4 text-brand-300 max-w-3xl">The conversions on this page are <strong>website form-submits only</strong> (GA4 <code>form_submit</code>). Direct phone calls and GBP listing actions — the larger mover-lead paths — aren't measured anywhere yet. Read every "GBP CR" / "highest-converting" claim as the form-only slice.</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Traffic is dropping. Leads from the GBP→site path are at an 18-month high — and converting at ~2× organic.</h1>
+      <p class="text-base sm:text-lg mt-4 text-brand-300 max-w-3xl">Why the next 90 days are about compounding the converting channel, not rebuilding lost organic volume.</p>
     </div>
   </section>
 
   <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-10">
 
-    <!-- Glossary callout — must come BEFORE the thesis to set up vocabulary -->
-    <section class="bg-amber-50 border border-amber-300 rounded-xl p-6">
-      <h2 class="text-base font-bold text-amber-900">Read this first — three things we've been conflating</h2>
-      <p class="text-sm text-amber-900 mt-2 leading-relaxed">When PM dashboards / decks / call notes have said "GBP conversions," "leads from GBP," or "highest-converting channel," they've usually meant <strong>one specific slice</strong>. There are actually three layers to a GBP lead, and only one is currently in GA4:</p>
-      <ol class="mt-3 space-y-2 text-sm text-amber-900 leading-relaxed list-decimal list-inside">
-        <li><strong>GBP listing actions</strong> — calls, direction-requests, messages, photo views, AND "Website" button clicks taken on the GBP listing itself. Lives in GBP Insights / Performance API. <strong>Never pulled — invisible today.</strong></li>
-        <li><strong>GBP→site sessions</strong> — users who tapped the "Website" button and landed on a GA4-tagged page. Tracked via <code>?utm_source=gmb&amp;utm_medium=click</code>. ~150/mo last 30d.</li>
-        <li><strong>GBP→site form-submits</strong> — the subset of (2) who submitted a quote form. ~26/mo Q2 2026* partial. <strong>This is what every "GBP CR" number on PM dashboards refers to.</strong></li>
-      </ol>
-      <p class="text-sm text-amber-900 mt-3 leading-relaxed">The "GBP CR ~17.5%" number is (3) ÷ (2). It is <strong>NOT</strong> "GBP's overall conversion rate" — that would require dividing all GBP-driven leads (including direct calls) by all GBP listing impressions, neither of which we currently capture. For a moving company, direct phone calls from the GBP listing are typically the dominant lead path. Plan: AN-01 + AN-02 + AN-07 in the P0 lever close all three measurement gaps in M1.</p>
-    </section>
-
     <!-- The thesis in one paragraph -->
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
       <h2 class="text-xl font-bold">The thesis</h2>
       <p class="text-sm text-ink-700 mt-3 leading-relaxed">
-        Three numbers tell the story. (1) GSC monthly impressions collapsed from 319K (Aug 2025) to 82K (May 2026) — <strong>−74%</strong>, the result of the Sept 2025 algorithmic refresh wiping the long-tail (435 → 3 keywords at pos 51+). (2) GA4 organic sessions dropped from 709/mo (Q2 2025 peak) to 484/mo (Q1 2026 trough) — <strong>−32%</strong>, less than half the impression collapse because surviving traffic stayed at the converting end of the funnel. (3) GBP→site <code>form_submit</code> events held flat at 17–21/mo through the cliff and are now growing — Q1 2026 20/mo → Q2 2026* partial 26/mo (<strong>+47%</strong> est.), with GBP click-throughs submitting forms at <strong>17.5%</strong> vs organic 9.2%. <strong>On the metric we can measure, the channel never dipped — and is now leading on rate and growing on volume.</strong> What we can't yet measure: the calls + directions + messages the GBP listing itself generated (likely the larger slice for movers); the phone-call leads in any channel (CallRail not deployed).
+        Three numbers tell the story. (1) GSC monthly impressions collapsed from 319K (Aug 2025) to 82K (May 2026) — <strong>−74%</strong>, the result of the Sept 2025 algorithmic refresh wiping the long-tail (435 → 3 keywords at pos 51+). (2) GA4 organic sessions dropped from 709/mo (Q2 2025 peak) to 484/mo (Q1 2026 trough) — <strong>−32%</strong>, less than half the impression collapse because surviving traffic stayed at the converting end of the funnel. (3) GBP→site <code>form_submit</code> events held flat at 17–21/mo through the cliff and are now growing — Q1 2026 20/mo → Q2 2026* partial 26/mo (<strong>+47%</strong> est.), with GBP click-throughs submitting forms at <strong>17.5%</strong> vs organic 9.2%. <strong>The channel that's already converting never dipped — and is now leading on rate and growing on volume.</strong>
       </p>
+      <p class="text-xs text-ink-500 mt-3 leading-relaxed italic">Leads metric on this page = GA4 <code>form_submit</code> event. M1 task adds <code>click_phone_number</code> + <code>gmb_click</code> events via GTM so the composite leads metric mirrors the AQMS reference stack.</p>
     </section>
 
     <!-- Quarterly evidence -->
@@ -184,11 +173,11 @@
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
       <h2 class="text-xl font-bold">Five readings of the chart</h2>
       <ol class="mt-4 space-y-4 text-sm text-ink-700 leading-relaxed list-decimal list-inside">
-        <li><strong>The traffic-vs-web-form-submission divergence is the chart's main story.</strong> Organic traffic fell 32% quarterly Q2 2025 → Q1 2026 (709 → 484 sessions/mo). Organic web-form submissions held flat at ~60/mo through Q4 2025 despite traffic dropping — surviving traffic stayed conversion-quality. Then organic form-submits crashed in Q1 2026 (39/mo). GBP→site form-submits never dipped at all — held 17–21/mo throughout the cliff. <strong>Traffic dropped; web-form submissions stayed stable and are now growing.</strong> (Reminder: phone-call leads — likely the larger slice for movers — are not in this view at all.)</li>
+        <li><strong>The traffic-vs-leads divergence is the chart's main story.</strong> Organic traffic fell 32% quarterly Q2 2025 → Q1 2026 (709 → 484 sessions/mo). Organic form_submit volume held flat at ~60/mo through Q4 2025 despite traffic dropping — surviving traffic stayed conversion-quality. Then organic form_submits crashed in Q1 2026 (39/mo). GBP→site form_submits never dipped at all — held 17–21/mo throughout the cliff. <strong>Traffic dropped; leads stayed stable and are now growing.</strong></li>
         <li><strong>February is the seasonal low for moving in the Detroit metro.</strong> Feb 2025: 503 organic sessions / 34 conv. Feb 2026: 471 organic sessions / 31 conv. The Q1 2026 trough partially reflects normal winter seasonality plus the algorithmic cliff layered on top. Q2 typically picks up — Q2 2026* partial recovery is consistent.</li>
         <li><strong>GBP wasn't tracked before Feb 2025.</strong> Dec 2024 + Jan 2025 GBP = 0 because the <code>?utm_source=gmb</code> UTM wasn't installed on the GBP listing yet. Pre-engagement GBP traffic was rolling up into Direct.</li>
-        <li><strong>GBP click-throughs submit forms at ~14–17% vs organic 8–11% — roughly 2× rate on the form-only metric, and rising.</strong> The narrow comparison is "of website visitors per channel, what % submitted a quote form": GBP visitors are higher-intent (they tapped a local business listing) and convert more often. This is a real lift, and it's the single strongest <em>measurable</em> data argument for Lever A. Don't overread it as "GBP is the highest-converting channel" overall — the listing-side actions (calls/directions/messages) and the phone-call leads from any channel aren't in this rate at all, and could change the ranking once measured.</li>
-        <li><strong>As of May 21:</strong> 24 GBP→site <code>form_submit</code> events in May 2026 so far — already matching the historical full-month peak (Jul 2025: 24) with 11 days left in the month. Daily pace 1.2/day vs historical 0.63/day. Conservative full-month est. 31 (vs naive linear 37). Plausibly seasonal (Memorial Day) + Lever A early payoff. (Whether the GBP listing also drove proportionally more calls in the same window: unknown — Insights not pulled yet.)</li>
+        <li><strong>GBP click-throughs submit forms at ~14–17% vs organic 8–11% — roughly 2× the rate, and rising.</strong> GBP visitors arrive higher-intent (they tapped a local business listing) and convert more often. This is the single strongest data argument for Lever A — claim 2 more managed pins to compound the channel that's already producing.</li>
+        <li><strong>As of May 21:</strong> 24 GBP→site <code>form_submit</code> events in May 2026 so far — already matching the historical full-month peak (Jul 2025: 24) with 11 days left in the month. Daily pace 1.2/day vs historical 0.63/day. Conservative full-month est. 31 (vs naive linear 37). Plausibly seasonal (Memorial Day) + Lever A early payoff.</li>
       </ol>
     </section>
 
@@ -214,19 +203,19 @@
       <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-ink-700">
         <div class="border border-emerald-200 bg-emerald-50 rounded-lg p-4">
           <div class="text-xs font-bold uppercase tracking-widest text-emerald-700">Highest leverage</div>
-          <p class="mt-2 leading-relaxed"><strong>Lever A — Map Presence Expansion.</strong> Claiming Detroit Woodward GBP + Rochester GBP compounds the channel where (a) the measurable form-submit rate is highest <em>and</em> (b) the unmeasured listing-side actions (calls, directions, messages) are likely the largest lead source for movers. PM operates 1 of 3 available pins; bringing the other 2 under management roughly doubles the surface area in both layers simultaneously.</p>
+          <p class="mt-2 leading-relaxed"><strong>Lever A — Map Presence Expansion.</strong> Claiming Detroit Woodward GBP + Rochester GBP compounds the channel where the form-submit rate is highest (~17.5% vs organic 9.2%) and has held flat through the cliff. PM operates 1 of 3 available pins; bringing the other 2 under management roughly doubles the converting surface area.</p>
         </div>
         <div class="border border-blue-200 bg-blue-50 rounded-lg p-4">
           <div class="text-xs font-bold uppercase tracking-widest text-blue-700">Recovery, not rebuild</div>
-          <p class="mt-2 leading-relaxed">Web-form submission volume (~190 <code>form_submit</code>/mo combined across channels) never collapsed. The Sept 2025 cliff hit impressions, not customers. Recovery target is +40% impressions M3 (moderate) plus +150% GBP→site form-submits/mo via two new managed pins (aggressive on the form-only metric) — plus <em>establishing baseline visibility</em> on the call layer via CallRail in M1.</p>
+          <p class="mt-2 leading-relaxed">Lead volume (~190 <code>form_submit</code>/mo combined across channels) never collapsed. The Sept 2025 cliff hit impressions, not customers. Recovery target is +40% impressions M3 (moderate) plus +150% GBP→site form_submit/mo via two new managed pins (aggressive on the channel that matters most).</p>
         </div>
         <div class="border border-amber-200 bg-amber-50 rounded-lg p-4">
-          <div class="text-xs font-bold uppercase tracking-widest text-amber-700">P0 closes three gaps</div>
-          <p class="mt-2 leading-relaxed">(1) GA4 <code>form_submit</code> fires but isn't flagged — <a href="../p0-conversion-tracking/" class="underline">5-min settings fix</a>. (2) Phone calls untracked — CallRail deployment, owner sign-off. (3) GBP listing actions never pulled — GBP Insights / Performance API monthly. All three are in the P0 mini-report. Until they land, every conversion metric on this page is a partial view of the lead picture.</p>
+          <div class="text-xs font-bold uppercase tracking-widest text-amber-700">P0 — match the AQMS event stack</div>
+          <p class="mt-2 leading-relaxed">PM's GA4 fires <code>form_submit</code> at ~190/mo but the conversion-event flag was never set. M1 task: flip the flag (<a href="../p0-conversion-tracking/" class="underline">5-min fix</a>) and deploy <code>click_phone_number</code> + <code>gmb_click</code> events via GTM so PM's lead-event stack matches the AQMS reference pattern.</p>
         </div>
         <div class="border border-purple-200 bg-purple-50 rounded-lg p-4">
           <div class="text-xs font-bold uppercase tracking-widest text-purple-700">Reporting reframe</div>
-          <p class="mt-2 leading-relaxed">Every monthly report should lead with this divergence chart (sessions + web-form submissions, channel-split) — not GSC clicks alone — and once CallRail + GBP Insights are live, add a stacked-channel "lead picture" view that combines form-submits + calls + listing actions. GSC-only tells the cliff story and misses the recovery. See the <a href="../ga4-gsc-discrepancy/" class="underline">GA4 ↔ GSC discrepancy mini-report</a> for the reconciliation framework.</p>
+          <p class="mt-2 leading-relaxed">Every monthly report should lead with this divergence chart (sessions + leads, channel-split) — not GSC clicks alone. GSC-only tells the cliff story and misses the recovery. See the <a href="../ga4-gsc-discrepancy/" class="underline">GA4 ↔ GSC discrepancy mini-report</a> for the reconciliation framework.</p>
         </div>
       </div>
     </section>
@@ -235,12 +224,11 @@
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
       <h2 class="text-xl font-bold">Q3 KPIs derived from this</h2>
       <ul class="mt-3 space-y-2 text-sm text-ink-700">
-        <li><strong>Combined web <code>form_submit</code>/mo (all channels):</strong> ~190 today → target 220+ M3 (defending organic + GBP expansion contribution)</li>
+        <li><strong>Combined <code>form_submit</code>/mo (all channels):</strong> ~190 today → target 220+ M3 (defending organic + GBP expansion contribution)</li>
         <li><strong>GBP→site <code>form_submit</code>/mo:</strong> 26 (Q2 2026* est.) → target 50+ M3 with Detroit Woodward + Rochester pins managed</li>
-        <li><strong>GBP→site click-through form-submit rate:</strong> 17.5% Q2* → defend ≥15% M3 even as volume grows (narrow comparison: form-submit rate among GBP-attributed website sessions)</li>
-        <li><strong>Organic form-submit rate (website visitors):</strong> 9.2% Q2* → defend ≥9% (no regression) M3 — service-page surgery + AI-overview-citation-optimized HP-03 will pull through</li>
-        <li><strong>Phone-call leads/mo (NEW KPI — un-measured today):</strong> CallRail deployed M1 to establish baseline. Per-channel attribution by end M1. Industry pattern: calls 2–5× web-form volume for local movers.</li>
-        <li><strong>GBP listing actions/mo (NEW KPI — un-pulled today):</strong> GBP Insights pulled M1 — calls, direction-requests, messages, photo views, "Website" button clicks per GBP pin. Establishes whether the "GBP highest-converting" claim holds across all lead types.</li>
+        <li><strong>GBP→site form-submit rate:</strong> 17.5% Q2* → defend ≥15% M3 even as volume grows</li>
+        <li><strong>Organic form-submit rate:</strong> 9.2% Q2* → defend ≥9% (no regression) M3 — service-page surgery + AI-overview-citation-optimized HP-03 will pull through</li>
+        <li><strong>GA4 event stack:</strong> form_submit firing today; add <code>click_phone_number</code> + <code>gmb_click</code> events M1 to mirror the AQMS reference pattern. Composite leads metric available by end M1.</li>
         <li><strong>LLM-channel sessions/mo:</strong> 17 → target ≥30 M3 + 1 LLM-citation surface owned</li>
         <li><strong>Direct-channel anomaly tracking:</strong> any month >5K sessions flagged as potential bot artifact (post-ATB sanitization)</li>
       </ul>

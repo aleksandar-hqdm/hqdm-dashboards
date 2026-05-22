@@ -29,73 +29,88 @@
   <section class="bg-gradient-to-br from-amber-700 via-amber-600 to-amber-500 text-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
       <div class="text-[11px] font-bold uppercase tracking-widest text-amber-100 mb-2">MINI-REPORT · P0 PREREQUISITE</div>
-      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Three gaps in the lead measurement stack — form_submit flag + CallRail + GBP Insights</h1>
-      <p class="text-base sm:text-lg mt-4 text-amber-100 max-w-3xl">PM dashboards currently report ONE slice of lead generation — web-form submits on the website — and call it "conversions." Three measurement gaps stack on top of each other: the GA4 form_submit flag isn't set, CallRail isn't deployed for phone calls (the dominant mover-lead path), and GBP Insights has never been pulled for listing-side actions. M1 closes all three.</p>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Lead-event stack — match the AQMS reference pattern</h1>
+      <p class="text-base sm:text-lg mt-4 text-amber-100 max-w-3xl">AQMS's GA4 fires four lead-intent events (form_submit, click_phone_number, gmb_click, contact_form_submit) — the reference stack for HQDM moving accounts. PM's GA4 fires only form_submit (~190/mo) and the conversion-event flag was never set. M1 lights up the rest of the stack and the composite leads metric becomes available.</p>
     </div>
   </section>
 
   <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 space-y-10">
 
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-      <h2 class="text-xl font-bold">What we measure today vs what we don't</h2>
-      <p class="text-sm text-ink-600 mt-2 leading-relaxed">A "lead" for PM has at least three independent surfaces. We currently see one. This is why the dashboard headlines say "GBP CR 17.5%" and "highest-converting channel" — those are true on the form-submit slice but are not statements about the channel's overall lead contribution.</p>
-      <div class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-        <div class="border border-emerald-200 bg-emerald-50 rounded-lg p-4">
-          <div class="text-xs font-bold uppercase tracking-widest text-emerald-700">Layer 1 — Web-form submits (visible)</div>
-          <p class="mt-2 text-emerald-900 leading-relaxed text-[13px]"><strong>~190 events/mo across all channels.</strong> Source: GA4 <code>form_submit</code> event (Gravity Forms DataLayer push, confirmed via DebugView). Per-channel breakdown: Direct 36–111, Organic 28–71, GBP→site 18–24 (37 est. May 2026), LLM 0–4. Channel grouping resolves correctly via UTMs.</p>
-          <p class="mt-2 text-emerald-900 leading-relaxed text-[13px]"><strong>Gap:</strong> the event fires but is NOT flagged as a conversion event in GA4 property settings → GA4 native reports show "0 conversions." 5-min HQDM-side fix (AN-01).</p>
-        </div>
-        <div class="border border-rose-200 bg-rose-50 rounded-lg p-4">
-          <div class="text-xs font-bold uppercase tracking-widest text-rose-700">Layer 2 — Phone-call leads (invisible)</div>
-          <p class="mt-2 text-rose-900 leading-relaxed text-[13px]"><strong>Volume unknown. Industry pattern: 2–5× the web-form number for local movers.</strong> PM publishes three phone numbers (Walled Lake (248) 926-9999 / Rochester (586) 371-7777 / Detroit (313) 964-4444). None have dynamic-number-insertion tracking; none are routed to GA4 events. We don't know which call came from which Google source — or whether the GBP listing's "Call" button drove the call vs an organic-search visit to <code>/about-us/contact/</code>.</p>
-          <p class="mt-2 text-rose-900 leading-relaxed text-[13px]"><strong>Gap:</strong> requires CallRail deployment (~$45–90/mo). Owner authorization needed (OCI Ask 3) → AN-02.</p>
-        </div>
-        <div class="border border-amber-200 bg-amber-50 rounded-lg p-4">
-          <div class="text-xs font-bold uppercase tracking-widest text-amber-700">Layer 3 — GBP listing actions (un-pulled)</div>
-          <p class="mt-2 text-amber-900 leading-relaxed text-[13px]"><strong>Volume unknown — Insights never pulled.</strong> Every action taken on the GBP listing itself — clicking "Call," tapping "Directions," sending a message, viewing photos, clicking "Website" — is logged by GBP and exposed via the GBP Performance API. None of this has been pulled for PM. The "Website" subset shows up in GA4 (Layer 1) as <code>utm_source=gmb</code>, but the calls + directions + messages have never been counted.</p>
-          <p class="mt-2 text-amber-900 leading-relaxed text-[13px]"><strong>Gap:</strong> requires monthly GBP Insights API pull (HQDM-side, no client auth) → AN-07 (new).</p>
-        </div>
+      <h2 class="text-xl font-bold">PM's GA4 event stack vs the AQMS reference</h2>
+      <p class="text-sm text-ink-600 mt-2 leading-relaxed">AQMS is HQDM's reference moving-account: four lead-intent events firing in GA4, all marked as conversion events, composite leads metric reported monthly. PM has form_submit firing — the rest of the stack needs deployment.</p>
+      <div class="mt-4 overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-2.5 px-3">Event</th>
+              <th class="text-left font-semibold py-2.5 px-3">What it captures</th>
+              <th class="text-center font-semibold py-2.5 px-3">AQMS</th>
+              <th class="text-center font-semibold py-2.5 px-3">PM today</th>
+              <th class="text-left font-semibold py-2.5 px-3">PM M1 action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 text-[13px]">
+            <tr>
+              <td class="py-2.5 px-3"><code>form_submit</code></td>
+              <td class="py-2.5 px-3">Quote-form submission</td>
+              <td class="py-2.5 px-3 text-center text-emerald-700 font-semibold">Firing · flagged</td>
+              <td class="py-2.5 px-3 text-center text-amber-700 font-semibold">Firing · NOT flagged</td>
+              <td class="py-2.5 px-3"><strong>AN-01</strong> — 5-min property-settings flag</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3"><code>click_phone_number</code></td>
+              <td class="py-2.5 px-3">Click on a tel: link on the website</td>
+              <td class="py-2.5 px-3 text-center text-emerald-700 font-semibold">Firing · flagged</td>
+              <td class="py-2.5 px-3 text-center text-rose-700 font-semibold">Not deployed</td>
+              <td class="py-2.5 px-3"><strong>AN-02</strong> — GTM trigger on all tel: clicks + GA4 event + flag</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3"><code>gmb_click</code></td>
+              <td class="py-2.5 px-3">Click on a GBP-tagged link (review CTA, Maps link)</td>
+              <td class="py-2.5 px-3 text-center text-emerald-700 font-semibold">Firing · flagged</td>
+              <td class="py-2.5 px-3 text-center text-rose-700 font-semibold">Not deployed</td>
+              <td class="py-2.5 px-3"><strong>AN-02</strong> — GTM trigger on GBP-tagged links + GA4 event + flag</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3"><code>contact_form_submit</code></td>
+              <td class="py-2.5 px-3">Contact-page form (separate from main quote form)</td>
+              <td class="py-2.5 px-3 text-center text-emerald-700 font-semibold">Firing · flagged</td>
+              <td class="py-2.5 px-3 text-center text-slate-500">N/A (single form)</td>
+              <td class="py-2.5 px-3 text-ink-500">No separate form on PM site — form_submit captures both intents</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="mt-4 p-4 rounded-lg bg-slate-50 border border-slate-200 text-[13px] text-ink-700 leading-relaxed">
-        <strong>Why this matters for client comms:</strong> Statements like "GBP is the highest-converting channel" or "GBP CR ~17.5% vs organic 9.2%" are technically claims about Layer 1 only — the form-submit rate of website visitors who came in via the GBP "Website" button. They are true and meaningful, but they're not statements about total GBP lead generation. The full lead picture stays open until all three layers are instrumented. Recommend client-facing copy uses "form submissions" rather than "conversions" or "leads" until Layers 2 + 3 are live.
+        Once the stack is live, the monthly report shows a composite leads metric (sum of all conversion events) per channel, alongside form_submit and the click events broken out. This is how AQMS reports today — PM matches the pattern by end of M1.
       </div>
     </section>
 
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-      <h2 class="text-xl font-bold">M1 action sequence — three gaps, three closes</h2>
+      <h2 class="text-xl font-bold">M1 action sequence</h2>
       <ol class="mt-3 space-y-3 text-sm text-ink-700 list-decimal list-inside leading-relaxed">
-        <li><strong>AN-01 — Close Gap 1 (web form-submit flag).</strong> GA4 → Admin → Events → find <code>form_submit</code> → toggle "Mark as conversion." From this moment forward, all reports populate the conversions column with web form-submit events. Backfill is NOT retroactive — only forward. 5 min, HQDM-side, no client auth.</li>
-        <li><strong>AN-02 — Close Gap 2 (phone-call attribution).</strong> Deploy CallRail dynamic-number-insertion for all three PM numbers + GA4 event mapping for <code>call_completed</code>. CallRail → Integrations → GA4 → paste Measurement ID + API secret. Then mark <code>call_completed</code> as a conversion event in GA4. Owner authorization required (OCI Ask 3, ~$45–90/mo). This is the gap that matters most for understanding total lead volume — calls are typically the dominant mover-lead path.</li>
-        <li><strong>AN-07 — Close Gap 3 (GBP listing-side actions).</strong> Pull GBP Insights / Performance API monthly for the Walled Lake pin (and Detroit Woodward + Rochester pins after Lever A claims). Capture: searches that surfaced the listing (direct vs discovery), profile views, "Website" clicks, "Call" clicks, "Direction" requests, photo views, messages received. Build a monthly dashboard row alongside form-submits + calls. No client auth needed — runs on existing HQDM GBP manager access.</li>
-        <li><strong>AN-03: Verify GBP UTM is firing.</strong> Open GA4 Realtime → click GBP "Website" link from incognito → confirm session shows <code>source: gmb, medium: click</code>. Already firing per our last 30d data; re-verify after GBP optimization (Lever A GBP-03..09) and after Detroit Woodward + Rochester pins go live to ensure UTM is consistent across all three pins.</li>
-        <li><strong>AN-04: Build Q3 baseline.</strong> Using AN-01 + AN-02 + AN-07 data, pull 30/60/90d baseline per channel + per pin. Three-layer view: <em>web form-submits</em>, <em>phone calls (per channel + per pin)</em>, <em>GBP listing actions (per pin)</em>. Update dashboard data.json with the complete view.</li>
-        <li><strong>AN-05: First monthly report — three-layer lead view.</strong> Lead with the divergence chart (sessions + web form-submits) + a NEW combined-lead chart (form + call + listing-action stacked per channel/pin). Resolves the "is GBP the highest-converting channel" question on actual lead volume rather than the form-only slice.</li>
-        <li><strong>AN-06: Q3 → Q4 quarterly comparison frame.</strong> Establish the reporting cadence so the Q4 report can show "measurement gaps closed M1; here's what M1-M3 actually drove across all three lead layers."</li>
+        <li><strong>AN-01 — Mark <code>form_submit</code> as a conversion event.</strong> GA4 → Admin → Events → find <code>form_submit</code> → toggle "Mark as conversion." All reports populate the conversions column from this point forward. Not retroactive. 5 min, HQDM-side, no client auth.</li>
+        <li><strong>AN-02 — Deploy <code>click_phone_number</code> + <code>gmb_click</code> events via GTM.</strong> Mirror the AQMS event config: tel: link click trigger → <code>click_phone_number</code> GA4 event; GBP-tagged link click trigger → <code>gmb_click</code> GA4 event. Mark both as conversion events in GA4. HQDM-side, no client auth, ~2-day implementation.</li>
+        <li><strong>AN-03 — Verify GBP UTM is firing.</strong> Open GA4 Realtime → click GBP "Website" link from incognito → confirm session shows <code>source: gmb, medium: click</code>. Re-verify after GBP optimization (Lever A GBP-03..09) and after Detroit Woodward + Rochester pins go live so the UTM is consistent across all three pins.</li>
+        <li><strong>AN-04 — Build Q3 baseline.</strong> Once the full event stack is live, pull 30/60/90d baseline per channel for the composite leads metric (sum of form_submit + click_phone_number + gmb_click). Update dashboard data.json.</li>
+        <li><strong>AN-05 — First monthly report with composite leads metric.</strong> Lead with the divergence chart (sessions + composite leads, channel-split) + per-event breakdowns where relevant.</li>
+        <li><strong>AN-06 — Q3 → Q4 quarterly comparison frame.</strong> Establish the reporting cadence carrying forward.</li>
       </ol>
-    </section>
-
-    <section class="bg-amber-50 border border-amber-200 rounded-xl p-6">
-      <h2 class="text-xl font-bold text-amber-900">Owner asks required to start</h2>
-      <ul class="mt-3 space-y-2 text-sm text-amber-900">
-        <li>· <strong>CallRail authorization + budget</strong> — typical ~$45-90/mo for 5-10 numbers. PM operates 3 offices + GBP, so 4-5 numbers minimum.</li>
-        <li>· <strong>Owner contact list of current phone-attribution sources</strong> — to validate that CallRail numbers cover all "incoming call" channels (forms, GBP, paid, referral).</li>
-        <li>· <strong>Confirmation of conversion source priorities</strong> — call > form > schedule-video-estimate? Drives the conversion-event weighting in GA4.</li>
-      </ul>
     </section>
 
     <section class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
       <h2 class="text-xl font-bold">Why this unblocks everything else</h2>
       <p class="text-sm text-ink-700 mt-3 leading-relaxed">
-        Every other lever — Map Presence (A), Page Surgery (B), Content (D) — is measured by lead lift, not just impression lift. Today we measure only one of three possible lead types. The Lever A case rests on the premise that "GBP is the highest-converting channel" — true on the form-submit slice, unknown on the call + listing-action slices. <strong>If CallRail + GBP Insights confirm that GBP also leads on calls and listing-side conversions, the Lever A ROI argument gets ~3× stronger.</strong> If they don't, we re-balance the lever weighting. Either way, the team stops making partial-view claims to clients.
+        Every other lever — Map Presence (A), Page Surgery (B), Content (D) — is measured by lead lift, not just impression lift. The Lever A case (claim Detroit Woodward + Rochester GBPs) rests on the data point that GBP→site click-throughs convert at ~2× organic. Adding the full lead-event stack lets the Q3 report show channel-specific lead impact per workstream and isolate which lever moved the needle. A 5-min property-settings flag plus a 2-day GTM rollout protects 90 days of measurement integrity.
       </p>
-      <p class="text-sm text-ink-700 mt-3 leading-relaxed">With AN-01 + AN-02 + AN-07 done in M1 week 1: the Q3 report can show channel-specific lead impact across all three layers, isolate which workstreams moved the needle on which surface, and justify continued investment per channel. <strong>5-min flag + 2-day CallRail rollout + 1-day GBP Insights pull protects 90 days of measurement integrity.</strong></p>
     </section>
 
     <section class="bg-slate-100 rounded-xl border border-slate-200 p-6">
       <h2 class="text-base font-bold">Related</h2>
       <ul class="mt-3 space-y-1.5 text-sm">
-        <li>→ <a class="text-brand-700 underline" href="../headline-traffic-vs-conversions/">Headline — what the trends look like even with broken conversion flagging</a></li>
-        <li>→ <a class="text-brand-700 underline" href="../ga4-gsc-discrepancy/">GA4 ↔ GSC discrepancy — the reporting framework after P0 lands</a></li>
+        <li>→ <a class="text-brand-700 underline" href="../headline-traffic-vs-conversions/">Headline — traffic down, leads up</a></li>
+        <li>→ <a class="text-brand-700 underline" href="../ga4-gsc-discrepancy/">GA4 ↔ GSC discrepancy — the reporting framework</a></li>
       </ul>
     </section>
   </main>
