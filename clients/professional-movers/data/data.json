@@ -14,18 +14,19 @@
   },
   "mini_report_base": "./",
   "headline_panel": {
-    "headline": "Traffic is dropping. Conversions held — and GBP is now the highest-converting channel.",
-    "lede": "Organic search clicks collapsed −74% Aug 2025 → May 2026, but conversion volume held through the cliff and GBP-attributed form_submits are at the peak of the 18-month series. GBP converts at ~17.5% (vs organic 9.2%) — roughly 2× the rate, never dipped, and growing. The recovery story is not 'add more traffic'; it's 'protect and multiply the converting channel.'",
+    "headline": "Traffic is dropping. Web-form submissions held — and GBP click-throughs convert at ~2× organic.",
+    "lede": "Organic search clicks collapsed −74% Aug 2025 → May 2026, but website form-submission volume held through the cliff. Visitors who arrive via the GBP \"Website\" button (the only GBP→lead path we can currently measure) submit forms at ~17.5% vs 9.2% for organic — and that subset has never dipped. CAVEAT: this excludes direct phone calls, direction requests, and messages triggered on the GBP listing itself (the dominant mover-lead path), none of which are tracked until CallRail + GBP Insights land. The recovery story is 'protect and multiply the converting touchpoint we can see — and instrument the ones we can't.'",
     "stat_tiles": [
       { "label": "Organic search clicks (12-mo trend)", "value": "−74%", "sub": "GSC 319K imp Aug 2025 → 82K May 2026; clicks 396 → 148", "sentiment": "negative" },
-      { "label": "GBP form_submits/mo (Q1 → Q2 2026*)", "value": "+47%", "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high", "sentiment": "positive" },
-      { "label": "GBP conversion rate (Q2 2026*)", "value": "17.5%", "sub": "vs organic 9.2% — ~2× lift, held flat through the cliff", "sentiment": "positive" },
-      { "label": "Combined form_submits/mo", "value": "~190", "sub": "GA4 form_submit IS firing — flag-not-set on conversion event (P0 5-min fix)", "sentiment": "neutral" }
+      { "label": "GBP→site form-submits/mo (Q1 → Q2 2026*)", "value": "+47%", "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high on the form-only metric", "sentiment": "positive" },
+      { "label": "GBP click-through form-submit rate (Q2 2026*)", "value": "17.5%", "sub": "vs organic 9.2% — narrow comparison: form-submit rate of website visitors per channel. Excludes calls/directions.", "sentiment": "positive" },
+      { "label": "Combined form-submits/mo (all channels)", "value": "~190", "sub": "Web forms only. GA4 form_submit IS firing — flag-not-set on conversion event (P0 5-min fix). Phone-call volume unknown until CallRail.", "sentiment": "neutral" }
     ],
     "callout_strip": [
-      { "label": "Where conversions live now", "detail": "GBP + Organic + Direct each carry ~25–40% of form_submits in any given month. GBP is the only channel that never dipped — and now leads on conversion rate." },
+      { "label": "Three things we're conflating — and shouldn't", "detail": "(1) GBP listing actions = calls, directions, messages, website clicks on the listing itself — measured only in GBP Insights, currently un-pulled. (2) GBP→site sessions = users who clicked the \"Website\" button and landed (~150/mo in GA4). (3) GBP→site form-submits = subset of (2) who submitted a quote form (~26/mo Q2*). We've been calling (3) \"GBP conversions\" — that's the form-submit slice only, NOT the channel's total lead contribution." },
+      { "label": "Where the visible form-submits live", "detail": "GBP + Organic + Direct each carry ~25–40% of website form_submits in any given month. GBP→site is the only channel where this visible slice never dipped. Whether GBP is also the lead-volume leader once calls are counted is genuinely unknown today." },
       { "label": "What '−74% impressions' hides", "detail": "Service pages still produce 43% of impressions and 50% of clicks. The cliff was concentrated in the templated burb cohort + long-tail wipeout, not the converting core." },
-      { "label": "Why GBP matters more now", "detail": "GBP converts at ~2× organic — and PM only operates 1 of 3 available pins. Lever A (claim Detroit Woodward + Rochester GBPs) compounds the highest-converting channel." }
+      { "label": "Why Lever A still compounds", "detail": "On the metric we CAN measure (web-form rate), GBP click-throughs convert at ~2× organic. On the metric we CAN'T yet measure (direct calls from the listing), industry pattern suggests GBP is the larger lead source for movers. PM operates 1 of 3 available pins — claiming Detroit Woodward + Rochester GBPs compounds both layers." }
     ],
     "mini_report_url": "headline-traffic-vs-conversions/"
   },
@@ -61,15 +62,15 @@
       "detail": "DFS Labs Ranked Keywords: 45 at 1–10, 83 at 11–20, 258 at 21–50, 196 at 51+. The 256 in 11–50 is Lever B's primary target."
     },
     {
-      "label": "Backlinks · conversion events",
+      "label": "Backlinks · web-form submits",
       "value": "990 · ~190/mo",
       "sentiment": "neutral",
-      "detail": "DFS Backlinks: 990 total, 247 ref domains, 17 Telegram-spam anchors. GA4 form_submit fires ~190/mo across all channels — not flagged as conversion event (P0 5-min fix)."
+      "detail": "DFS Backlinks: 990 total, 247 ref domains, 17 Telegram-spam anchors. GA4 form_submit fires ~190/mo across all channels — not flagged as conversion event (P0 5-min fix). Form-submits ONLY — phone-call lead volume unknown until CallRail."
     }
   ],
   "trend": {
-    "headline": "Traffic dropping, conversions stable + growing",
-    "annotation_text": "Organic traffic fell 32% Q2 2025 → Q1 2026 (709 → 484 sessions/mo) while GBP conversions held flat and are now growing. P0 prerequisite is a 5-minute GA4 settings fix + CallRail for phone attribution.",
+    "headline": "Traffic dropping, web-form submissions stable + growing",
+    "annotation_text": "Organic traffic fell 32% Q2 2025 → Q1 2026 (709 → 484 sessions/mo) while GBP→site form-submissions held flat and are now growing. METRIC CAVEAT: the \"conversions\" lines on this chart are GA4 form_submit events on the website only — direct phone calls (the dominant mover-lead path) and GBP listing actions (calls/directions/messages) are NOT in this view. P0 prerequisite is a 5-minute GA4 settings flag + CallRail for phone-attribution + GBP Insights pull for listing-side actions.",
     "months": [
       "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025",
       "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025",
@@ -127,10 +128,10 @@
       { "metric": "Organic clicks / Organic Search sessions (last 30d)", "gsc": "260 clicks", "ga4": "673 sessions", "ratio": "2.6×", "reason": "GA4 'Organic Search' channel includes Bing/DuckDuckGo/Yahoo + GBP click-through (gmb/click). GSC is Google Search clicks only." },
       { "metric": "Same comparison, last 90d", "gsc": "707 clicks", "ga4": "1,903 sessions", "ratio": "2.7×", "reason": "Same structural reasons; pattern is consistent." },
       { "metric": "Same comparison, last 365d", "gsc": "3,928 clicks", "ga4": "8,588 sessions", "ratio": "2.2×", "reason": "Ratio stable across all windows — divergence is structural, not seasonal." },
-      { "metric": "GBP-attributed sessions (last 30d)", "gsc": "0 (invisible)", "ga4": "149 (gmb/click)", "ratio": "n/a — invisible to GSC", "reason": "GBP 'Click to Website' bypasses Google Search results entirely. Only the UTM (?utm_source=gmb) captures it in GA4." },
+      { "metric": "GBP→site sessions (last 30d) — Website-button clicks only", "gsc": "0 (invisible)", "ga4": "149 (gmb/click)", "ratio": "n/a — invisible to GSC", "reason": "GBP 'Click to Website' bypasses Google Search results entirely. Only the UTM (?utm_source=gmb) captures it in GA4. NOTE: this is just the slice that visited the site; calls/directions/messages on the GBP listing itself are NOT in this number — they live in GBP Insights and are currently un-pulled." },
       { "metric": "Google-only organic (apples-to-apples) last 30d", "gsc": "260 clicks", "ga4": "389 sessions (google / organic only)", "ratio": "1.5×", "reason": "Even Google-only, GA4 > GSC: multi-page sessions, same-day repeat visits, sampling/bot-filter differences, and GA4 session-attribution windowing." },
       { "metric": "Direct (last 30d)", "gsc": "n/a (not measured)", "ga4": "2,198 sessions", "ratio": "n/a", "reason": "Direct is GA4-only. Likely contains brand-recall traffic + some bot residue (Sept–Oct 2025 spike to 16K/mo coincided with ATB tool active in Asana per Off-Page Risk Assessment §8)." },
-      { "metric": "Conversion events (form_submit, last 30d)", "gsc": "n/a", "ga4": "~160 firing (not flagged)", "ratio": "n/a", "reason": "P0 prerequisite: form_submit fires correctly; GA4 property settings don't mark it as a conversion event yet (5-min fix)." }
+      { "metric": "Conversion events (form_submit, last 30d) — web forms only", "gsc": "n/a", "ga4": "~160 firing (not flagged)", "ratio": "n/a", "reason": "P0 prerequisite: form_submit fires correctly; GA4 property settings don't mark it as a conversion event yet (5-min fix). DOES NOT INCLUDE phone calls — those are not tracked anywhere until CallRail deploys. For a mover, calls are typically the dominant lead path; expect total lead volume to be 2–5× the web-form number once CallRail is live." }
     ],
     "structural_reasons": [
       { "title": "GBP click-through (the big one)", "detail": "GBP 'Click to website' button → utm_source=gmb&utm_medium=click → GA4 buckets these into 'Organic Search'. GSC never sees them because they bypass Google Search. ~149/mo last 30d, ~421/mo last 90d, ~543/yr — fastest-growing slice of GA4 Organic." },
@@ -141,14 +142,16 @@
     "trust_matrix": [
       { "question": "How much organic search traffic do we get?", "trust": "GA4", "why": "GA4 includes all engines + measures sessions which approximate real visits. Use GA4 'Organic Search' channel for traffic-volume reporting." },
       { "question": "How is the site ranking on Google?", "trust": "GSC", "why": "Position, impressions, clicks, CTR per query and per page only exist in GSC. Use GSC for rank diagnostics." },
-      { "question": "What's converting?", "trust": "GA4", "why": "Conversions, channel attribution, form_submit events live in GA4. Cross-reference with CallRail once deployed for phone-call attribution." },
-      { "question": "How much traffic is GBP driving?", "trust": "GA4 (gmb/click)", "why": "Only GA4 sees the GBP click-through via the UTM. GSC can't measure it. CR ~17.5% (Q2 2026* partial) — the highest-converting channel." },
+      { "question": "What's submitting web forms?", "trust": "GA4", "why": "Web-form conversions, channel attribution, form_submit events live in GA4. This answers \"who fills the quote form,\" NOT \"who becomes a lead\" — phone-call leads need CallRail; GBP listing actions need GBP Insights." },
+      { "question": "How much website traffic is GBP driving?", "trust": "GA4 (gmb/click)", "why": "Only GA4 sees the GBP→site click-through via the UTM. GSC can't measure it. Among those click-throughs, web-form rate is ~17.5% (Q2 2026* partial) vs organic 9.2% — narrow apples-to-apples comparison of website visitors' form-fill behavior per channel. This is NOT the GBP's overall conversion rate." },
+      { "question": "How many calls / directions does the GBP listing drive?", "trust": "GBP Insights (un-pulled today) + CallRail (not deployed)", "why": "Neither GSC nor GA4 see GBP listing-side actions. GBP Insights / Performance API tracks call clicks, direction requests, photo views, messages. CallRail attributes which Google source actually produced each phone call. Until both are live, the GBP \"lead contribution\" is genuinely unknown — the form-submit story is a partial view." },
       { "question": "Is Google search visibility improving or declining?", "trust": "GSC", "why": "GSC is the cleanest signal for SERP-side health — impressions, position, click-loss. Use GSC for the cliff diagnosis." }
     ],
     "key_takeaways": [
-      "The −74% organic-impression decline in GSC is real and worth diagnosing — but it does not mean a −74% revenue cliff. GA4 shows organic-search **sessions** down ~32% Q2 2025 → Q1 2026, and **conversions** down only ~17%.",
+      "The −74% organic-impression decline in GSC is real and worth diagnosing — but it does not mean a −74% revenue cliff. GA4 shows organic-search **sessions** down ~32% Q2 2025 → Q1 2026, and **web-form submissions** down only ~17%.",
       "The GBP channel is invisible to GSC by design — every report that draws traffic conclusions from GSC alone undercounts PM's true reach by 30–40%.",
-      "When client meetings reference 'organic traffic,' specify which: GSC clicks (Google Search-only) ≠ GA4 Organic Search sessions (all engines + GBP). The numbers will always look ~2× different.",
+      "When client meetings reference 'organic traffic,' specify which: GSC clicks (Google Search-only) ≠ GA4 Organic Search sessions (all engines + GBP→site). The numbers will always look ~2× different.",
+      "**The conversions metric in this dashboard is web-form submissions only.** It does NOT include the phone calls or direction-requests the GBP listing generates — those need CallRail + GBP Insights to surface. Read every \"GBP CR\" / \"GBP conversion\" figure as \"GBP click-through web-form rate\" until the call layer is instrumented.",
       "Both should be reconciled in the monthly report. The mini-report linked below contains the full cross-reference table + a method for triangulating channel-level attribution."
     ],
     "mini_report_url": "ga4-gsc-discrepancy/"
@@ -319,7 +322,7 @@
     "60+ burb pages effectively deindexed; SEO Neo-precursor stack still active in Asana",
     "49.6% Ahrefs-flagged spam backlinks; 17 confirmed Telegram-spam anchors via DFS",
     "Non-brand CTR 0.09%; AI-Overview + local-pack suppression structural",
-    "GA4 returns 0 conversions across 65K sessions — measurement broken"
+    "Lead measurement is web-form-only: GA4 form_submit fires (~190/mo) but flag not set, so GA4 reports 0 conversions. Phone calls (dominant mover-lead path) untracked until CallRail. GBP listing-side actions (calls/directions/messages) never pulled."
   ],
   "levers": [
     {
@@ -328,16 +331,17 @@
       "priority": "P0 prerequisite",
       "color": "amber",
       "mini_report_url": "p0-conversion-tracking/",
-      "why": "GA4 returns 0 conversions across 65K sessions / 901 pages / 365d. Until that's fixed everything else is invisible. form_submit IS firing (~190 events/mo across all channels) but the property-settings flag was never set.",
+      "why": "Today we measure ONE slice of lead generation (web-form submissions) and call it \"conversions.\" Three measurement gaps stack: (1) GA4 form_submit IS firing ~190/mo across channels but the property-settings flag was never set, so GA4 reports 0 conversions; 5-min fix. (2) Phone calls — the dominant mover-lead path — aren't tracked anywhere; CallRail closes this. (3) GBP listing-side actions (calls, directions, messages, photo views from the GBP listing itself) live only in GBP Insights and have never been pulled. Until all three close, every \"conversion rate\" / \"highest-converting channel\" statement on the dashboard is the form-only slice — meaningful but partial.",
       "actions": [
-        { "code": "AN-01", "name": "Mark form_submit as conversion event in GA4 property settings", "month": "M1", "effort": "S" },
-        { "code": "AN-02", "name": "Deploy CallRail phone-call tracking integrated with GA4", "month": "M1", "effort": "M" },
+        { "code": "AN-01", "name": "Mark form_submit as conversion event in GA4 property settings (closes Gap 1)", "month": "M1", "effort": "S" },
+        { "code": "AN-02", "name": "Deploy CallRail phone-call tracking integrated with GA4 source/medium for all three numbers (closes Gap 2)", "month": "M1", "effort": "M" },
         { "code": "AN-03", "name": "Verify GBP UTM ?utm_source=gmb fires into GA4", "month": "M1", "effort": "S" },
-        { "code": "AN-04", "name": "Build Q3 reporting baseline using fresh conversion data", "month": "M2", "effort": "S" },
-        { "code": "AN-05", "name": "First monthly report with M1 cleanup landed", "month": "M2", "effort": "S" },
+        { "code": "AN-07", "name": "Pull GBP Insights / Performance API monthly — listing actions, calls, directions, messages, photo views (closes Gap 3)", "month": "M1", "effort": "S" },
+        { "code": "AN-04", "name": "Build Q3 reporting baseline using form-submits + CallRail + GBP Insights", "month": "M2", "effort": "S" },
+        { "code": "AN-05", "name": "First monthly report with three-layer lead view (form + call + listing-action)", "month": "M2", "effort": "S" },
         { "code": "AN-06", "name": "Q3 to Q4 quarterly comparison frame", "month": "M3", "effort": "S" }
       ],
-      "outcome": "Conversion + call-attribution data available for all subsequent reporting. Owner authorization required for CallRail deployment (OCI Ask 3)."
+      "outcome": "Full lead-attribution stack (form + call + GBP listing action) available for all subsequent reporting. Establishes whether the \"GBP is highest-converting\" claim holds across all lead types or only the web-form slice. Owner authorization required for CallRail deployment (OCI Ask 3)."
     },
     {
       "id": "A",
