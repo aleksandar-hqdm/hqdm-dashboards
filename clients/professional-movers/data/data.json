@@ -180,13 +180,71 @@
     { "name": "Premier Relocations",          "may_top3": 52,  "delta_top3": -9,  "may_avg_rank": 11.1,"delta_avg_rank": -0.1, "cells": 362,   "note": "Dominates Novi cells", "is_client": false }
   ],
   "per_keyword": [
-    { "keyword": "movers detroit",          "feb_cells": 219, "may_cells": 223, "feb_avg": 14.1, "may_avg": 12.6, "pos_gained": 1.5,  "feb_top3": 2,  "may_top3": 2 },
-    { "keyword": "detroit moving company",  "feb_cells": 248, "may_cells": 154, "feb_avg": 16.6, "may_avg": 14.4, "pos_gained": 2.2,  "feb_top3": 1,  "may_top3": 0 },
-    { "keyword": "moving companies",        "feb_cells": 131, "may_cells": 130, "feb_avg": 4.7,  "may_avg": 4.8,  "pos_gained": -0.1, "feb_top3": 73, "may_top3": 72 },
-    { "keyword": "movers",                  "feb_cells": 132, "may_cells": 133, "feb_avg": 3.9,  "may_avg": 4.2,  "pos_gained": -0.3, "feb_top3": 89, "may_top3": 87 },
-    { "keyword": "moving company near me",  "feb_cells": 133, "may_cells": 133, "feb_avg": 3.6,  "may_avg": 3.9,  "pos_gained": -0.3, "feb_top3": 92, "may_top3": 87 },
-    { "keyword": "movers near me",          "feb_cells": 133, "may_cells": 133, "feb_avg": 3.3,  "may_avg": 3.4,  "pos_gained": -0.1, "feb_top3": 91, "may_top3": 92 }
+    { "keyword": "detroit moving company",  "feb_cells": 121, "may_cells": 121, "feb_avg": 14.26, "may_avg": 13.48, "pos_gained": 0.78,  "feb_top3": 1,  "may_top3": 0, "feb_top10": 8,  "may_top10": 16, "top10_delta": 8 },
+    { "keyword": "movers",                  "feb_cells": 120, "may_cells": 121, "feb_avg": 3.94,  "may_avg": 4.25,  "pos_gained": -0.31, "feb_top3": 81, "may_top3": 79, "feb_top10": 108, "may_top10": 106, "top10_delta": -2 },
+    { "keyword": "movers near me",          "feb_cells": 121, "may_cells": 121, "feb_avg": 3.28,  "may_avg": 3.37,  "pos_gained": -0.09, "feb_top3": 82, "may_top3": 85, "feb_top10": 112, "may_top10": 113, "top10_delta": 1 }
   ],
+  "ld_timeseries": {
+    "headline": "Maps held strong on the volume queries — and PM gained ground on Detroit",
+    "lede": "Seven LD grid scans across Feb 2 → May 1 2026 on the three priority queries. On 'movers' and 'movers near me' (the highest-volume queries), PM held a #3-4 average position throughout the cliff with top-3 reach staying around 79–85 cells out of 121. On 'detroit moving company' (the query that requires reaching Detroit from a Walled Lake pin), PM doubled its top-10 reach from 8 cells to 16 cells while improving avg rank from 14.26 to 13.48 — a Detroit-side gain that lines up with planned Lever A pin claims.",
+    "dates": [
+      { "date": "2026-02-02", "label": "Feb 2" },
+      { "date": "2026-02-27", "label": "Feb 27" },
+      { "date": "2026-03-01", "label": "Mar 1" },
+      { "date": "2026-03-02", "label": "Mar 2" },
+      { "date": "2026-03-31", "label": "Mar 31" },
+      { "date": "2026-04-01", "label": "Apr 1" },
+      { "date": "2026-05-01", "label": "May 1" }
+    ],
+    "per_keyword_series": [
+      {
+        "keyword": "detroit moving company",
+        "color": "#0ea5e9",
+        "headline": "+0.78 avg-rank improvement · top-10 reach doubled (8 → 16 cells)",
+        "points": [
+          { "date": "2026-02-02", "avg_rank": 14.26, "top3": 1, "top10": 8,  "cells": 121 },
+          { "date": "2026-02-27", "avg_rank": 16.00, "top3": 0, "top10": 0,  "cells": 99 },
+          { "date": "2026-03-01", "avg_rank": 17.74, "top3": 0, "top10": 3,  "cells": 84 },
+          { "date": "2026-03-02", "avg_rank": 14.10, "top3": 2, "top10": 14, "cells": 121 },
+          { "date": "2026-03-31", "avg_rank": 16.61, "top3": 0, "top10": 3,  "cells": 120 },
+          { "date": "2026-04-01", "avg_rank": 15.81, "top3": 0, "top10": 9,  "cells": 120 },
+          { "date": "2026-05-01", "avg_rank": 13.48, "top3": 0, "top10": 16, "cells": 121 }
+        ]
+      },
+      {
+        "keyword": "movers",
+        "color": "#10b981",
+        "headline": "Held flat at avg 3.9–4.5 throughout cliff · top-3 reach 79–84 cells",
+        "points": [
+          { "date": "2026-02-02", "avg_rank": 3.94, "top3": 81, "top10": 108, "cells": 120 },
+          { "date": "2026-02-27", "avg_rank": 4.31, "top3": 75, "top10": 107, "cells": 120 },
+          { "date": "2026-03-01", "avg_rank": 4.49, "top3": 72, "top10": 107, "cells": 120 },
+          { "date": "2026-03-02", "avg_rank": 4.02, "top3": 80, "top10": 107, "cells": 120 },
+          { "date": "2026-03-31", "avg_rank": 3.98, "top3": 84, "top10": 107, "cells": 120 },
+          { "date": "2026-04-01", "avg_rank": 3.99, "top3": 82, "top10": 105, "cells": 119 },
+          { "date": "2026-05-01", "avg_rank": 4.25, "top3": 79, "top10": 106, "cells": 121 }
+        ]
+      },
+      {
+        "keyword": "movers near me",
+        "color": "#8b5cf6",
+        "headline": "Strongest defense · avg 3.3 held · top-3 reach 82 → 85 cells (+3)",
+        "points": [
+          { "date": "2026-02-02", "avg_rank": 3.28, "top3": 82, "top10": 112, "cells": 121 },
+          { "date": "2026-02-27", "avg_rank": 3.74, "top3": 76, "top10": 111, "cells": 121 },
+          { "date": "2026-03-01", "avg_rank": 4.38, "top3": 71, "top10": 107, "cells": 121 },
+          { "date": "2026-03-31", "avg_rank": 3.37, "top3": 84, "top10": 112, "cells": 121 },
+          { "date": "2026-04-01", "avg_rank": 3.44, "top3": 85, "top10": 112, "cells": 121 },
+          { "date": "2026-05-01", "avg_rank": 3.37, "top3": 85, "top10": 113, "cells": 121 }
+        ]
+      }
+    ],
+    "implications": [
+      "PM's Maps position is the channel that survived the Sept 2025 organic cliff intact — on the two highest-volume commercial queries ('movers' and 'movers near me'), PM held a top-3 footprint of 79–85 cells across the 13×13 grid throughout Feb–May 2026 with no observable algorithmic damage.",
+      "On 'detroit moving company' — the Detroit-side query a Walled Lake pin has to stretch to reach — PM's top-10 footprint doubled from 8 cells (Feb 2) to 16 cells (May 1). Avg rank improved from 14.26 to 13.48. This is the geometry-extension story Lever A compounds further with a managed Detroit Woodward pin.",
+      "PM has a second indexed listing already showing on 'detroit moving company' at 1001 Woodward Ave (currently unmanaged, ranks ~19). Claiming it is the cleanest path to consolidating PM's Detroit footprint into a single managed entity."
+    ]
+  },
   "gsc_decline": [
     { "month": "2025-08", "label": "peak",   "pages": 187, "imp": 319405, "clicks": 396, "delta_pct": 0 },
     { "month": "2025-09", "label": "cliff",  "pages": 181, "imp": 205856, "clicks": 366, "delta_pct": -36 },

@@ -3,10 +3,12 @@
 
 (async function () {
   let DATA, LD;
+  // Cache-bust on every load so dashboard always reflects the latest JSON
+  const v = '?v=' + Date.now();
   try {
     [DATA, LD] = await Promise.all([
-      fetch('./data/data.json').then(r => r.json()),
-      fetch('./data/ld_grids.json').then(r => r.json()).catch(() => null)
+      fetch('./data/data.json' + v).then(r => r.json()),
+      fetch('./data/ld_grids.json' + v).then(r => r.json()).catch(() => null)
     ]);
   } catch (err) {
     document.body.insertAdjacentHTML('afterbegin',
@@ -61,6 +63,9 @@
 
   // === Per-keyword (PM only) ===
   if (DATA.per_keyword && document.querySelector('#kw-table')) renderKeywordTable(DATA.per_keyword);
+
+  // === LD time series (PM only) ===
+  if (DATA.ld_timeseries && document.querySelector('#ld-ts-top10')) renderLDTimeSeries(DATA.ld_timeseries);
 
   // === GSC decline + URL class (PM) ===
   if (DATA.gsc_decline && document.querySelector('#gsc-chart')) renderGSCChart(DATA.gsc_decline);
@@ -2167,6 +2172,166 @@ function renderLLMVisibility(llm, miniBase) {
     `).join('');
   }
 }
+
+// ============================================================
+// LD Time Series (PM only) — renders 3 keyword lines x N dates
+// ============================================================
+function renderLDTimeSeries(ts) {
+  const lede = document.getElementById('ld-ts-lede');
+  if (lede) lede.textContent = ts.lede || '';
+
+  const tiles = document.getElementById('ld-ts-tiles');
+  if (tiles) {
+    tiles.innerHTML = (ts.per_keyword_series || []).map(s => {
+      const first = s.points[0], last = s.points[s.points.length - 1];
+      const avgDelta = (first.avg_rank - last.avg_rank).toFixed(2); // positive = improved (lower rank)
+      const top10Delta = last.top10 - first.top10;
+      const avgGood = parseFloat(avgDelta) >= 0;
+      const top10Good = top10Delta >= 0;
+      const accent = s.color || '#1d5b8a';
+      return `
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-4" style="border-left: 4px solid ${accent};">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500">${escapeHtml(s.keyword)}</div>
+          <div class="mt-2 grid grid-cols-2 gap-2">
+            <div>
+              <div class="text-[10px] uppercase tracking-wider text-ink-400 font-semibold">Avg rank</div>
+              <div class="text-lg font-bold text-ink-800">${first.avg_rank.toFixed(2)} → ${last.avg_rank.toFixed(2)}</div>
+              <div class="text-[11px] font-semibold ${avgGood ? 'text-emerald-700' : 'text-rose-700'}">${avgGood ? '▲' : '▼'} ${Math.abs(parseFloat(avgDelta)).toFixed(2)} pos</div>
+            </div>
+            <div>
+              <div class="text-[10px] uppercase tracking-wider text-ink-400 font-semibold">Top-10 cells</div>
+              <div class="text-lg font-bold text-ink-800">${first.top10} → ${last.top10}</div>
+              <div class="text-[11px] font-semibold ${top10Good ? 'text-emerald-700' : 'text-rose-700'}">${top10Good ? '▲' : '▼'} ${Math.abs(top10Delta)}</div>
+            </div>
+          </div>
+          <p class="text-xs text-ink-600 mt-2 leading-snug">${escapeHtml(s.headline || '')}</p>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Build labels (date labels from ts.dates) and per-keyword datasets
+  const labels = (ts.dates || []).map(d => d.label);
+  const dateOrder = (ts.dates || []).map(d => d.date);
+
+  const top10Datasets = (ts.per_keyword_series || []).map(s => {
+    // Align points to the full date set; missing dates render as null
+    const byDate = Object.fromEntries(s.points.map(p => [p.date, p]));
+    const data = dateOrder.map(d => (byDate[d] ? byDate[d].top10 : null));
+    return {
+      label: s.keyword,
+      data,
+      borderColor: s.color || '#1d5b8a',
+      backgroundColor: (s.color || '#1d5b8a') + '22',
+      borderWidth: 2.5,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      tension: 0.25,
+      fill: false,
+      spanGaps: true,
+    };
+  });
+  const avgRankDatasets = (ts.per_keyword_series || []).map(s => {
+    const byDate = Object.fromEntries(s.points.map(p => [p.date, p]));
+    const data = dateOrder.map(d => (byDate[d] ? byDate[d].avg_rank : null));
+    return {
+      label: s.keyword,
+      data,
+      borderColor: s.color || '#1d5b8a',
+      backgroundColor: (s.color || '#1d5b8a') + '22',
+      borderWidth: 2.5,
+      pointRadius: 4,
+      pointHoverRadius: 6,
+      tension: 0.25,
+      fill: false,
+      spanGaps: true,
+    };
+  });
+
+  const top10Canvas = document.getElementById('ld-ts-top10');
+  if (top10Canvas && typeof Chart !== 'undefined') {
+    new Chart(top10Canvas, {
+      type: 'line',
+      data: { labels, datasets: top10Datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 14 } },
+          tooltip: { backgroundColor: '#0b1220', padding: 10 },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { beginAtZero: true, max: 133, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 10 } }, title: { display: true, text: 'cells in top-10 (of 133)' } },
+        },
+      },
+    });
+  }
+  const avgCanvas = document.getElementById('ld-ts-avgrank');
+  if (avgCanvas && typeof Chart !== 'undefined') {
+    new Chart(avgCanvas, {
+      type: 'line',
+      data: { labels, datasets: avgRankDatasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 14 } },
+          tooltip: { backgroundColor: '#0b1220', padding: 10 },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { reverse: true, beginAtZero: false, min: 1, max: 21, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 10 } }, title: { display: true, text: 'avg rank (lower is better)' } },
+        },
+      },
+    });
+  }
+
+  // Detail table
+  const tbody = document.querySelector('#ld-ts-table tbody');
+  if (tbody) {
+    const rows = [];
+    (ts.per_keyword_series || []).forEach(s => {
+      const byDate = Object.fromEntries(s.points.map(p => [p.date, p]));
+      const cells = dateOrder.map(d => byDate[d] || null);
+      const first = s.points[0], last = s.points[s.points.length - 1];
+      const avgGood = (first.avg_rank - last.avg_rank) >= 0;
+      const top10Good = (last.top10 - first.top10) >= 0;
+      const top3Good = (last.top3 - first.top3) >= 0;
+      // Top-10 row
+      rows.push(`
+        <tr>
+          <td class="py-2.5 px-4 font-semibold" rowspan="3" style="border-left: 3px solid ${s.color || '#1d5b8a'};">${escapeHtml(s.keyword)}</td>
+          <td class="py-2.5 px-4 text-right text-xs uppercase tracking-wider text-ink-500 font-semibold">Top-10 cells</td>
+          ${cells.map(c => `<td class="py-2.5 px-4 text-right font-mono">${c ? c.top10 : '—'}</td>`).join('')}
+          <td class="py-2.5 px-4 text-right font-mono font-bold ${top10Good ? 'text-emerald-700' : 'text-rose-700'}">${top10Good ? '+' : ''}${last.top10 - first.top10}</td>
+        </tr>
+      `);
+      rows.push(`
+        <tr>
+          <td class="py-2.5 px-4 text-right text-xs uppercase tracking-wider text-ink-500 font-semibold">Avg rank</td>
+          ${cells.map(c => `<td class="py-2.5 px-4 text-right font-mono">${c ? c.avg_rank.toFixed(2) : '—'}</td>`).join('')}
+          <td class="py-2.5 px-4 text-right font-mono font-bold ${avgGood ? 'text-emerald-700' : 'text-rose-700'}">${avgGood ? '▲' : '▼'} ${Math.abs(first.avg_rank - last.avg_rank).toFixed(2)}</td>
+        </tr>
+      `);
+      rows.push(`
+        <tr class="border-b-2 border-slate-200">
+          <td class="py-2.5 px-4 text-right text-xs uppercase tracking-wider text-ink-500 font-semibold">Top-3 cells</td>
+          ${cells.map(c => `<td class="py-2.5 px-4 text-right font-mono">${c ? c.top3 : '—'}</td>`).join('')}
+          <td class="py-2.5 px-4 text-right font-mono font-bold ${top3Good ? 'text-emerald-700' : 'text-rose-700'}">${top3Good ? '+' : ''}${last.top3 - first.top3}</td>
+        </tr>
+      `);
+    });
+    tbody.innerHTML = rows.join('');
+  }
+
+  // Implications
+  const impl = document.getElementById('ld-ts-implications');
+  if (impl) {
+    impl.innerHTML = (ts.implications || []).map(s => `<li>· ${escapeHtml(s)}</li>`).join('');
+  }
+}
+
 
 // Minimal markdown helper for **bold** inside strings
 function renderInlineMarkdown(s) {

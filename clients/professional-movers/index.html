@@ -339,12 +339,12 @@
       </div>
     </div>
 
-    <!-- LD heatmap loop: PM vs top 3 competitors x 3 keywords x Feb<->May -->
+    <!-- LD heatmap loop: PM vs top 3 competitors x 3 keywords x 4 dates Feb→May -->
     <div>
       <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">LD Grid Heatmap — Time-Lapse Comparison</h2>
-          <p class="text-sm text-ink-500 mt-1">PM vs top 3 competitors across 3 proximity queries. Each panel is the 13×13 LD grid; cells colored by rank. Animation auto-loops Feb 2 ↔ May 1, 2026.</p>
+          <h2 class="text-2xl font-bold tracking-tight">LD Grid Heatmap — Four-Scan Time-Lapse</h2>
+          <p class="text-sm text-ink-500 mt-1">PM vs top 3 competitors across 3 proximity queries. Each panel is the 13×13 LD grid; cells colored by rank. Animation auto-loops Feb 2 → Feb 27 → Mar 31 → May 1.</p>
         </div>
       </div>
 
@@ -354,10 +354,7 @@
           <div class="flex gap-2 flex-wrap" id="hm-keyword-tabs"></div>
           <div class="flex items-center gap-3">
             <span class="text-xs font-mono text-ink-500">Date:</span>
-            <div class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold">
-              <button data-date="feb" class="hm-date-btn px-3 py-1.5">Feb 2</button>
-              <button data-date="may" class="hm-date-btn px-3 py-1.5 bg-brand-500 text-white">May 1</button>
-            </div>
+            <div id="hm-date-tabs" class="inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
             <button id="hm-play-pause" class="px-3 py-1.5 text-xs font-semibold bg-emerald-100 text-emerald-800 hover:bg-emerald-200 rounded inline-flex items-center gap-1.5">
               <svg id="hm-icon-pause" class="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor"><path d="M6 4h3v12H6V4zm5 0h3v12h-3V4z"/></svg>
               <svg id="hm-icon-play" class="w-3.5 h-3.5 hidden" viewBox="0 0 20 20" fill="currentColor"><path d="M5 4l11 6-11 6V4z"/></svg>
@@ -389,31 +386,56 @@
       </div>
     </div>
 
-    <!-- Per-keyword movement -->
+    <!-- Per-keyword time series (7 scans Feb 2 → May 1) -->
     <div>
       <div class="flex items-end justify-between mb-4 flex-wrap gap-2">
         <div>
-          <h2 class="text-2xl font-bold tracking-tight">Per-Keyword Movement — Feb 2 → May 1 2026</h2>
-          <p class="text-sm text-ink-500 mt-1">PM gained ground on hard Detroit-modified queries (+1.5 to +2.2 positions) but lost reach on `detroit moving company` (−94 cells) and slightly regressed on easier "near me" queries.</p>
+          <h2 class="text-2xl font-bold tracking-tight" id="ld-ts-heading">Per-Keyword Time Series — 7 Scans, Feb 2 → May 1 2026</h2>
+          <p class="text-sm text-ink-500 mt-1" id="ld-ts-lede">—</p>
         </div>
       </div>
+
+      <!-- Per-keyword headline tiles -->
+      <div id="ld-ts-tiles" class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4"></div>
+
+      <!-- Top-10 reach + avg rank charts -->
       <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="min-w-full text-sm" id="kw-table">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
+          <div class="p-5 border-b lg:border-b-0 lg:border-r border-slate-200">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Top-10 reach (cells) over time</h3>
+            <p class="text-xs text-ink-500 mt-1">Higher is better — # of 13×13 grid cells where PM ranks in the top-10 results.</p>
+            <div class="h-72 mt-3"><canvas id="ld-ts-top10"></canvas></div>
+          </div>
+          <div class="p-5">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Avg rank over time</h3>
+            <p class="text-xs text-ink-500 mt-1">Lower is better — average position across PM-visible cells. Reversed y-axis.</p>
+            <div class="h-72 mt-3"><canvas id="ld-ts-avgrank"></canvas></div>
+          </div>
+        </div>
+
+        <!-- Detail table -->
+        <div class="border-t border-slate-200 overflow-x-auto">
+          <table class="min-w-full text-sm" id="ld-ts-table">
             <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
               <tr>
                 <th class="text-left font-semibold py-3 px-4">Keyword</th>
-                <th class="text-right font-semibold py-3 px-4">Feb cells</th>
-                <th class="text-right font-semibold py-3 px-4">May cells</th>
-                <th class="text-right font-semibold py-3 px-4">Feb avg</th>
-                <th class="text-right font-semibold py-3 px-4">May avg</th>
-                <th class="text-right font-semibold py-3 px-4">Pos gained</th>
-                <th class="text-right font-semibold py-3 px-4">Feb top-3</th>
-                <th class="text-right font-semibold py-3 px-4">May top-3</th>
+                <th class="text-right font-semibold py-3 px-4">Metric</th>
+                <th class="text-right font-semibold py-3 px-4">Feb 2</th>
+                <th class="text-right font-semibold py-3 px-4">Feb 27</th>
+                <th class="text-right font-semibold py-3 px-4">Mar 1</th>
+                <th class="text-right font-semibold py-3 px-4">Mar 2</th>
+                <th class="text-right font-semibold py-3 px-4">Mar 31</th>
+                <th class="text-right font-semibold py-3 px-4">Apr 1</th>
+                <th class="text-right font-semibold py-3 px-4">May 1</th>
+                <th class="text-right font-semibold py-3 px-4">Δ Feb 2 → May 1</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200"></tbody>
           </table>
+        </div>
+
+        <div class="p-4 bg-slate-50 border-t border-slate-200">
+          <ul class="text-xs text-ink-600 space-y-1 leading-relaxed" id="ld-ts-implications"></ul>
         </div>
       </div>
     </div>
