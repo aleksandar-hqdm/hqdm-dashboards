@@ -89,17 +89,27 @@ def cells_entered_lost(grid_kw, entity, d1, d2):
 
 
 ld_apples_new = []
-for kw in ld['keywords']:
+# Iterate over BOTH main keywords AND supplementary kws (2-date series) so the
+# strategic dashboard shows the full LD picture.
+all_kws = list(ld['keywords']) + list(ld.get('supplementary_keywords', []))
+for kw in all_kws:
     g = ld['grids'][kw]
-    a = apples(g, CLIENT, 'feb', 'may')
+    present = g.get('dates_present', [])
+    if len(present) < 2:
+        continue
+    src, dst = present[0], present[-1]
+    a = apples(g, CLIENT, src, dst)
     if not a:
         continue
     s = g['summary'].get(CLIENT, {})
-    entered, lost = cells_entered_lost(g, CLIENT, 'feb', 'may')
+    entered, lost = cells_entered_lost(g, CLIENT, src, dst)
+    src_label = ld['dates'][ld['date_keys'].index(src)]
+    dst_label = ld['dates'][ld['date_keys'].index(dst)]
     ld_apples_new.append({
         "kw": kw,
-        "cells_jan": s.get('feb_cells', 0),
-        "cells_apr": s.get('may_cells', 0),
+        # Legacy field names — they're "src" and "dst" semantically, regardless of date
+        "cells_jan": s.get(f'{src}_cells', 0),
+        "cells_apr": s.get(f'{dst}_cells', 0),
         "rank_jan": round(a['avg_d1'], 2),
         "rank_apr": round(a['avg_d2'], 2),
         "top3_jan": a['top3_d1'],
@@ -108,8 +118,9 @@ for kw in ld['keywords']:
         "cells_entered": entered,
         "cells_lost": lost,
         "apples_n": a['n'],
-        "baseline_date": "Feb 23, 2026",
-        "current_date": "May 18, 2026",
+        "baseline_date": src_label,
+        "current_date": dst_label,
+        "is_supplementary": kw in ld.get('supplementary_keywords', []),
     })
 
 data['ld_apples'] = ld_apples_new
@@ -229,23 +240,29 @@ non_ld_kpis = [k for k in existing_kpis if not k.get('kpi', '').startswith(LD_KP
 data['m3_kpis'] = ld_kpis_new + non_ld_kpis
 
 # ---- ld_leaderboard_mtnm (refresh with new 'massage therapist near me' data) ----
+# Use the LONGEST window available for mtnm (Jan 19 -> May 18 = 5-date series).
 mtnm_grid = ld['grids']['massage therapist near me']
+mtnm_present = mtnm_grid.get('dates_present', [])
+mtnm_src = mtnm_present[0] if mtnm_present else 'feb'
+mtnm_dst = mtnm_present[-1] if mtnm_present else 'may'
 mtnm_lb = []
 for ent, s in mtnm_grid['summary'].items():
-    if (s.get('feb_cells') or 0) == 0 and (s.get('may_cells') or 0) == 0:
+    src_cells = s.get(f'{mtnm_src}_cells', 0) or 0
+    dst_cells = s.get(f'{mtnm_dst}_cells', 0) or 0
+    if src_cells == 0 and dst_cells == 0:
         continue
-    feb_avg = s.get('feb_avg')
-    may_avg = s.get('may_avg')
-    if feb_avg is None or may_avg is None:
+    src_avg = s.get(f'{mtnm_src}_avg')
+    dst_avg = s.get(f'{mtnm_dst}_avg')
+    if src_avg is None or dst_avg is None:
         continue
     mtnm_lb.append({
         "name": ent,
         "reviews": reviews_by_entity.get(ent, 0),
-        "cells_jan": s.get('feb_cells', 0),
-        "cells_apr": s.get('may_cells', 0),
-        "rank_jan": round(feb_avg, 2),
-        "rank_apr": round(may_avg, 2),
-        "mean_dx": round(feb_avg - may_avg, 2),
+        "cells_jan": src_cells,
+        "cells_apr": dst_cells,
+        "rank_jan": round(src_avg, 2),
+        "rank_apr": round(dst_avg, 2),
+        "mean_dx": round(src_avg - dst_avg, 2),
         "is_client": ent == CLIENT,
     })
 
@@ -286,23 +303,24 @@ def bucketize(rank):
 
 
 cells_by_town_new = {}
-for kw in ld['keywords']:
+for kw in ld['keywords'] + list(ld.get('supplementary_keywords', [])):
     g = ld['grids'][kw]
-    # Lookup: cell key -> rank for BB on May
-    bb_may_ranks = {(r['x'], r['y']): r['rank'] for r in (g.get('may') or {}).get(CLIENT, [])}
-    # Aggregate per town
+    present = g.get('dates_present', [])
+    if not present:
+        continue
+    # Use the latest available date for BB cell ranks
+    last_date = present[-1]
+    bb_ranks = {(r['x'], r['y']): r['rank'] for r in (g.get(last_date) or {}).get(CLIENT, [])}
     town_buckets = {town: {'town': town, 'top3': 0, 'close': 0, 'mid': 0,
                            'back': 0, 'far': 0, 'out': 0, 'total': 0}
                     for town in TOWN_CENTERS}
     for cell in g['cells']:
         town = nearest_town(cell['lat'], cell['lng'])
-        rank = bb_may_ranks.get((cell['x'], cell['y']))  # None if not in top-20
+        rank = bb_ranks.get((cell['x'], cell['y']))
         bucket = bucketize(rank)
         town_buckets[town][bucket] += 1
         town_buckets[town]['total'] += 1
-    # Convert to list, drop towns with 0 total
     rows = [r for r in town_buckets.values() if r['total'] > 0]
-    # Sort by total desc, then top3 desc
     rows.sort(key=lambda r: (-r['total'], -r['top3']))
     cells_by_town_new[kw] = rows
 

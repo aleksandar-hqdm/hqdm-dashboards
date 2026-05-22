@@ -1559,51 +1559,6 @@
   ],
   "ld_apples": [
     {
-      "kw": "massages",
-      "cells_jan": 86,
-      "cells_apr": 77,
-      "rank_jan": 8.08,
-      "rank_apr": 8.77,
-      "top3_jan": 20,
-      "top3_apr": 19,
-      "mean_dx": -0.68,
-      "cells_entered": 0,
-      "cells_lost": 8,
-      "apples_n": 73,
-      "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
-    },
-    {
-      "kw": "massage therapist",
-      "cells_jan": 90,
-      "cells_apr": 85,
-      "rank_jan": 7.66,
-      "rank_apr": 8.79,
-      "top3_jan": 27,
-      "top3_apr": 25,
-      "mean_dx": -1.12,
-      "cells_entered": 1,
-      "cells_lost": 5,
-      "apples_n": 80,
-      "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
-    },
-    {
-      "kw": "massage therapist near me",
-      "cells_jan": 96,
-      "cells_apr": 88,
-      "rank_jan": 7.06,
-      "rank_apr": 7.36,
-      "top3_jan": 25,
-      "top3_apr": 26,
-      "mean_dx": -0.3,
-      "cells_entered": 0,
-      "cells_lost": 7,
-      "apples_n": 83,
-      "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
-    },
-    {
       "kw": "massage subscription",
       "cells_jan": 98,
       "cells_apr": 98,
@@ -1616,7 +1571,8 @@
       "cells_lost": 0,
       "apples_n": 93,
       "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
     },
     {
       "kw": "deep tissue massage near me",
@@ -1631,7 +1587,72 @@
       "cells_lost": 5,
       "apples_n": 87,
       "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
+    },
+    {
+      "kw": "float therapy",
+      "cells_jan": 106,
+      "cells_apr": 106,
+      "rank_jan": 1.51,
+      "rank_apr": 1.52,
+      "top3_jan": 93,
+      "top3_apr": 93,
+      "mean_dx": -0.01,
+      "cells_entered": 0,
+      "cells_lost": 0,
+      "apples_n": 100,
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
+    },
+    {
+      "kw": "massage therapist near me",
+      "cells_jan": 97,
+      "cells_apr": 88,
+      "rank_jan": 6.67,
+      "rank_apr": 7.36,
+      "top3_jan": 25,
+      "top3_apr": 26,
+      "mean_dx": -0.69,
+      "cells_entered": 0,
+      "cells_lost": 8,
+      "apples_n": 83,
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
+    },
+    {
+      "kw": "massages",
+      "cells_jan": 86,
+      "cells_apr": 77,
+      "rank_jan": 8.08,
+      "rank_apr": 8.77,
+      "top3_jan": 20,
+      "top3_apr": 19,
+      "mean_dx": -0.68,
+      "cells_entered": 0,
+      "cells_lost": 8,
+      "apples_n": 73,
+      "baseline_date": "Feb 23, 2026",
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
+    },
+    {
+      "kw": "massage therapist",
+      "cells_jan": 90,
+      "cells_apr": 85,
+      "rank_jan": 7.66,
+      "rank_apr": 8.79,
+      "top3_jan": 27,
+      "top3_apr": 25,
+      "mean_dx": -1.12,
+      "cells_entered": 1,
+      "cells_lost": 5,
+      "apples_n": 80,
+      "baseline_date": "Feb 23, 2026",
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
     },
     {
       "kw": "massage american fork",
@@ -1646,22 +1667,24 @@
       "cells_lost": 0,
       "apples_n": 100,
       "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
     },
     {
-      "kw": "float therapy",
+      "kw": "float tank",
       "cells_jan": 106,
       "cells_apr": 106,
-      "rank_jan": 1.69,
-      "rank_apr": 1.52,
-      "top3_jan": 90,
-      "top3_apr": 93,
-      "mean_dx": 0.17,
+      "rank_jan": 1.2,
+      "rank_apr": 1.27,
+      "top3_jan": 98,
+      "top3_apr": 97,
+      "mean_dx": -0.07,
       "cells_entered": 0,
       "cells_lost": 0,
       "apples_n": 100,
-      "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
     },
     {
       "kw": "float tank near me",
@@ -1676,143 +1699,177 @@
       "cells_lost": 0,
       "apples_n": 100,
       "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "current_date": "May 18, 2026",
+      "is_supplementary": false
     },
     {
-      "kw": "float tank",
-      "cells_jan": 106,
-      "cells_apr": 106,
-      "rank_jan": 1.28,
-      "rank_apr": 1.27,
-      "top3_jan": 98,
-      "top3_apr": 97,
-      "mean_dx": 0.01,
-      "cells_entered": 0,
+      "kw": "massages near me",
+      "cells_jan": 93,
+      "cells_apr": 95,
+      "rank_jan": 8.33,
+      "rank_apr": 7.13,
+      "top3_jan": 17,
+      "top3_apr": 14,
+      "mean_dx": 1.2,
+      "cells_entered": 3,
+      "cells_lost": 2,
+      "apples_n": 86,
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "Apr 18, 2026",
+      "is_supplementary": true
+    },
+    {
+      "kw": "massage therapy",
+      "cells_jan": 89,
+      "cells_apr": 94,
+      "rank_jan": 9.87,
+      "rank_apr": 8.64,
+      "top3_jan": 14,
+      "top3_apr": 22,
+      "mean_dx": 1.23,
+      "cells_entered": 5,
       "cells_lost": 0,
-      "apples_n": 100,
-      "baseline_date": "Feb 23, 2026",
-      "current_date": "May 18, 2026"
+      "apples_n": 84,
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "Apr 18, 2026",
+      "is_supplementary": true
+    },
+    {
+      "kw": "massage therapist lehi",
+      "cells_jan": 75,
+      "cells_apr": 96,
+      "rank_jan": 15.56,
+      "rank_apr": 14.39,
+      "top3_jan": 1,
+      "top3_apr": 0,
+      "mean_dx": 1.17,
+      "cells_entered": 21,
+      "cells_lost": 1,
+      "apples_n": 71,
+      "baseline_date": "Jan 19, 2026",
+      "current_date": "Apr 18, 2026",
+      "is_supplementary": true
     }
   ],
   "ld_leaderboard_mtnm": [
     {
       "name": "Total Muscle Therapy: Massage Pleasant Grove",
       "reviews": 179,
-      "cells_jan": 92,
+      "cells_jan": 91,
       "cells_apr": 89,
-      "rank_jan": 5.98,
+      "rank_jan": 5.24,
       "rank_apr": 5.67,
-      "mean_dx": 0.31,
+      "mean_dx": -0.43,
       "is_client": false
     },
     {
       "name": "Body Balance Massage And Float",
       "reviews": 406,
-      "cells_jan": 96,
+      "cells_jan": 97,
       "cells_apr": 88,
-      "rank_jan": 8.05,
+      "rank_jan": 7.42,
       "rank_apr": 7.41,
-      "mean_dx": 0.64,
+      "mean_dx": 0.01,
       "is_client": true
     },
     {
       "name": "Soleil Spa",
       "reviews": 186,
-      "cells_jan": 91,
+      "cells_jan": 88,
       "cells_apr": 84,
-      "rank_jan": 7.71,
+      "rank_jan": 8.42,
       "rank_apr": 8.55,
-      "mean_dx": -0.84,
+      "mean_dx": -0.13,
       "is_client": false
     },
     {
       "name": "Paradise Massage Studio",
       "reviews": 55,
-      "cells_jan": 84,
+      "cells_jan": 86,
       "cells_apr": 80,
-      "rank_jan": 8.51,
+      "rank_jan": 8.37,
       "rank_apr": 7.75,
-      "mean_dx": 0.76,
-      "is_client": false
-    },
-    {
-      "name": "Paul and Tasha Massage",
-      "reviews": 26,
-      "cells_jan": 89,
-      "cells_apr": 79,
-      "rank_jan": 9.06,
-      "rank_apr": 8.81,
-      "mean_dx": 0.25,
+      "mean_dx": 0.62,
       "is_client": false
     },
     {
       "name": "MassageLuXe Pleasant Grove",
       "reviews": 135,
-      "cells_jan": 83,
+      "cells_jan": 75,
       "cells_apr": 79,
-      "rank_jan": 8.72,
+      "rank_jan": 10.65,
       "rank_apr": 9.62,
-      "mean_dx": -0.9,
+      "mean_dx": 1.03,
+      "is_client": false
+    },
+    {
+      "name": "Paul and Tasha Massage",
+      "reviews": 26,
+      "cells_jan": 84,
+      "cells_apr": 79,
+      "rank_jan": 8.9,
+      "rank_apr": 8.81,
+      "mean_dx": 0.09,
       "is_client": false
     },
     {
       "name": "Natural Healing and Massage, American Fork",
       "reviews": 75,
-      "cells_jan": 77,
+      "cells_jan": 81,
       "cells_apr": 76,
-      "rank_jan": 8.58,
+      "rank_jan": 8.94,
       "rank_apr": 8.32,
-      "mean_dx": 0.26,
+      "mean_dx": 0.62,
       "is_client": false
     },
     {
       "name": "Relaxing Remedy",
       "reviews": 61,
-      "cells_jan": 78,
+      "cells_jan": 77,
       "cells_apr": 73,
-      "rank_jan": 9.13,
+      "rank_jan": 9.77,
       "rank_apr": 9,
-      "mean_dx": 0.13,
+      "mean_dx": 0.77,
       "is_client": false
     },
     {
       "name": "Therapeutic Massage & Bodywork",
       "reviews": 155,
-      "cells_jan": 71,
+      "cells_jan": 70,
       "cells_apr": 64,
-      "rank_jan": 9.79,
+      "rank_jan": 9.96,
       "rank_apr": 10.41,
-      "mean_dx": -0.62,
+      "mean_dx": -0.45,
       "is_client": false
     },
     {
       "name": "Calming Touch Massage LLC",
       "reviews": 531,
-      "cells_jan": 68,
+      "cells_jan": 69,
       "cells_apr": 63,
-      "rank_jan": 7.03,
+      "rank_jan": 6.86,
       "rank_apr": 6.68,
-      "mean_dx": 0.35,
+      "mean_dx": 0.18,
       "is_client": false
     },
     {
       "name": "Nova Vita Massage in Pleasant Grove, Utah",
       "reviews": 31,
-      "cells_jan": 62,
+      "cells_jan": 59,
       "cells_apr": 54,
-      "rank_jan": 10.18,
+      "rank_jan": 10.15,
       "rank_apr": 10.07,
-      "mean_dx": 0.11,
+      "mean_dx": 0.08,
       "is_client": false
     },
     {
       "name": "Total Muscle Therapy: Massage Lehi Utah",
       "reviews": 83,
-      "cells_jan": 55,
+      "cells_jan": 51,
       "cells_apr": 49,
-      "rank_jan": 10.02,
+      "rank_jan": 10.98,
       "rank_apr": 10.96,
-      "mean_dx": -0.94,
+      "mean_dx": 0.02,
       "is_client": false
     }
   ],
@@ -1966,222 +2023,6 @@
     }
   ],
   "cells_by_town": {
-    "massages": [
-      {
-        "town": "Pleasant Grove",
-        "top3": 0,
-        "close": 7,
-        "mid": 4,
-        "back": 7,
-        "far": 4,
-        "out": 1,
-        "total": 23
-      },
-      {
-        "town": "American Fork",
-        "top3": 18,
-        "close": 3,
-        "mid": 1,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 22
-      },
-      {
-        "town": "Lehi",
-        "top3": 0,
-        "close": 4,
-        "mid": 5,
-        "back": 4,
-        "far": 1,
-        "out": 5,
-        "total": 19
-      },
-      {
-        "town": "Cedar Hills",
-        "top3": 2,
-        "close": 3,
-        "mid": 4,
-        "back": 3,
-        "far": 1,
-        "out": 1,
-        "total": 14
-      },
-      {
-        "town": "Lindon",
-        "top3": 0,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 1,
-        "out": 11,
-        "total": 12
-      },
-      {
-        "town": "Highland",
-        "top3": 0,
-        "close": 1,
-        "mid": 0,
-        "back": 1,
-        "far": 4,
-        "out": 5,
-        "total": 11
-      },
-      {
-        "town": "Vineyard",
-        "top3": 0,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 5,
-        "total": 5
-      }
-    ],
-    "massage therapist": [
-      {
-        "town": "Pleasant Grove",
-        "top3": 2,
-        "close": 6,
-        "mid": 4,
-        "back": 7,
-        "far": 2,
-        "out": 2,
-        "total": 23
-      },
-      {
-        "town": "American Fork",
-        "top3": 19,
-        "close": 2,
-        "mid": 0,
-        "back": 1,
-        "far": 0,
-        "out": 0,
-        "total": 22
-      },
-      {
-        "town": "Lehi",
-        "top3": 1,
-        "close": 4,
-        "mid": 2,
-        "back": 5,
-        "far": 3,
-        "out": 4,
-        "total": 19
-      },
-      {
-        "town": "Cedar Hills",
-        "top3": 4,
-        "close": 3,
-        "mid": 4,
-        "back": 2,
-        "far": 1,
-        "out": 0,
-        "total": 14
-      },
-      {
-        "town": "Lindon",
-        "top3": 0,
-        "close": 0,
-        "mid": 0,
-        "back": 1,
-        "far": 5,
-        "out": 6,
-        "total": 12
-      },
-      {
-        "town": "Highland",
-        "top3": 1,
-        "close": 0,
-        "mid": 0,
-        "back": 3,
-        "far": 4,
-        "out": 3,
-        "total": 11
-      },
-      {
-        "town": "Vineyard",
-        "top3": 0,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 5,
-        "total": 5
-      }
-    ],
-    "massage therapist near me": [
-      {
-        "town": "Pleasant Grove",
-        "top3": 0,
-        "close": 5,
-        "mid": 8,
-        "back": 6,
-        "far": 2,
-        "out": 2,
-        "total": 23
-      },
-      {
-        "town": "American Fork",
-        "top3": 19,
-        "close": 2,
-        "mid": 0,
-        "back": 0,
-        "far": 1,
-        "out": 0,
-        "total": 22
-      },
-      {
-        "town": "Lehi",
-        "top3": 1,
-        "close": 3,
-        "mid": 3,
-        "back": 6,
-        "far": 2,
-        "out": 4,
-        "total": 19
-      },
-      {
-        "town": "Cedar Hills",
-        "top3": 5,
-        "close": 7,
-        "mid": 2,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 14
-      },
-      {
-        "town": "Lindon",
-        "top3": 0,
-        "close": 0,
-        "mid": 0,
-        "back": 3,
-        "far": 0,
-        "out": 9,
-        "total": 12
-      },
-      {
-        "town": "Highland",
-        "top3": 2,
-        "close": 4,
-        "mid": 2,
-        "back": 2,
-        "far": 1,
-        "out": 0,
-        "total": 11
-      },
-      {
-        "town": "Vineyard",
-        "top3": 0,
-        "close": 1,
-        "mid": 0,
-        "back": 2,
-        "far": 0,
-        "out": 2,
-        "total": 5
-      }
-    ],
     "massage subscription": [
       {
         "town": "Pleasant Grove",
@@ -2326,78 +2167,6 @@
         "total": 5
       }
     ],
-    "massage american fork": [
-      {
-        "town": "Pleasant Grove",
-        "top3": 23,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 23
-      },
-      {
-        "town": "American Fork",
-        "top3": 22,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 22
-      },
-      {
-        "town": "Lehi",
-        "top3": 19,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 19
-      },
-      {
-        "town": "Cedar Hills",
-        "top3": 14,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 14
-      },
-      {
-        "town": "Lindon",
-        "top3": 12,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 12
-      },
-      {
-        "town": "Highland",
-        "top3": 11,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 11
-      },
-      {
-        "town": "Vineyard",
-        "top3": 5,
-        "close": 0,
-        "mid": 0,
-        "back": 0,
-        "far": 0,
-        "out": 0,
-        "total": 5
-      }
-    ],
     "float therapy": [
       {
         "town": "Pleasant Grove",
@@ -2470,7 +2239,223 @@
         "total": 5
       }
     ],
-    "float tank near me": [
+    "massage therapist near me": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 5,
+        "mid": 8,
+        "back": 6,
+        "far": 2,
+        "out": 2,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 19,
+        "close": 2,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 1,
+        "close": 3,
+        "mid": 3,
+        "back": 6,
+        "far": 2,
+        "out": 4,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 5,
+        "close": 7,
+        "mid": 2,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 3,
+        "far": 0,
+        "out": 9,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 2,
+        "close": 4,
+        "mid": 2,
+        "back": 2,
+        "far": 1,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 2,
+        "far": 0,
+        "out": 2,
+        "total": 5
+      }
+    ],
+    "massages": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 7,
+        "mid": 4,
+        "back": 7,
+        "far": 4,
+        "out": 1,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 18,
+        "close": 3,
+        "mid": 1,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 0,
+        "close": 4,
+        "mid": 5,
+        "back": 4,
+        "far": 1,
+        "out": 5,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 2,
+        "close": 3,
+        "mid": 4,
+        "back": 3,
+        "far": 1,
+        "out": 1,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 11,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 1,
+        "far": 4,
+        "out": 5,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 5,
+        "total": 5
+      }
+    ],
+    "massage therapist": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 2,
+        "close": 6,
+        "mid": 4,
+        "back": 7,
+        "far": 2,
+        "out": 2,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 19,
+        "close": 2,
+        "mid": 0,
+        "back": 1,
+        "far": 0,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 1,
+        "close": 4,
+        "mid": 2,
+        "back": 5,
+        "far": 3,
+        "out": 4,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 4,
+        "close": 3,
+        "mid": 4,
+        "back": 2,
+        "far": 1,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 1,
+        "far": 5,
+        "out": 6,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 1,
+        "close": 0,
+        "mid": 0,
+        "back": 3,
+        "far": 4,
+        "out": 3,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 5,
+        "total": 5
+      }
+    ],
+    "massage american fork": [
       {
         "town": "Pleasant Grove",
         "top3": 23,
@@ -2609,6 +2594,294 @@
         "close": 1,
         "mid": 0,
         "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 5
+      }
+    ],
+    "float tank near me": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 23,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 22,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 19,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 14,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 12,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 11,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 5,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 5
+      }
+    ],
+    "massages near me": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 8,
+        "mid": 10,
+        "back": 4,
+        "far": 1,
+        "out": 0,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 13,
+        "close": 8,
+        "mid": 1,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 1,
+        "close": 3,
+        "mid": 4,
+        "back": 7,
+        "far": 3,
+        "out": 1,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 1,
+        "close": 13,
+        "mid": 0,
+        "back": 0,
+        "far": 0,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 3,
+        "far": 1,
+        "out": 8,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 7,
+        "mid": 2,
+        "back": 1,
+        "far": 1,
+        "out": 0,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 1,
+        "mid": 0,
+        "back": 2,
+        "far": 0,
+        "out": 2,
+        "total": 5
+      }
+    ],
+    "massage therapy": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 2,
+        "mid": 11,
+        "back": 7,
+        "far": 3,
+        "out": 0,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 19,
+        "close": 2,
+        "mid": 0,
+        "back": 1,
+        "far": 0,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 2,
+        "close": 5,
+        "mid": 2,
+        "back": 5,
+        "far": 4,
+        "out": 1,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 1,
+        "close": 6,
+        "mid": 5,
+        "back": 2,
+        "far": 0,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 2,
+        "far": 4,
+        "out": 6,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 1,
+        "close": 0,
+        "mid": 2,
+        "back": 6,
+        "far": 1,
+        "out": 1,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 1,
+        "out": 4,
+        "total": 5
+      }
+    ],
+    "massage therapist lehi": [
+      {
+        "town": "Pleasant Grove",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 13,
+        "far": 10,
+        "out": 0,
+        "total": 23
+      },
+      {
+        "town": "American Fork",
+        "top3": 0,
+        "close": 3,
+        "mid": 9,
+        "back": 9,
+        "far": 1,
+        "out": 0,
+        "total": 22
+      },
+      {
+        "town": "Lehi",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 4,
+        "far": 8,
+        "out": 7,
+        "total": 19
+      },
+      {
+        "town": "Cedar Hills",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 0,
+        "far": 14,
+        "out": 0,
+        "total": 14
+      },
+      {
+        "town": "Lindon",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 12,
+        "far": 0,
+        "out": 0,
+        "total": 12
+      },
+      {
+        "town": "Highland",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 1,
+        "far": 9,
+        "out": 1,
+        "total": 11
+      },
+      {
+        "town": "Vineyard",
+        "top3": 0,
+        "close": 0,
+        "mid": 0,
+        "back": 5,
         "far": 0,
         "out": 0,
         "total": 5
@@ -4196,7 +4469,7 @@
     },
     {
       "kpi": "LD avg rank — massage therapist",
-      "baseline": "8.79 (#3 of 23)",
+      "baseline": "8.79 (#2 of 22)",
       "target": "≤ 8.0"
     },
     {
@@ -4294,11 +4567,11 @@
     "as_of": "May 2026 update",
     "hero": {
       "client": "Body Balance Massage & Float",
-      "tagline_main": "Q2 2026 update â€” whatâ€™s working, whatâ€™s next",
-      "tagline_sub": "Single-pin massage & float studio Â· American Fork, UT Â· 4.9â˜… Ã— 406 reviews"
+      "tagline_main": "Q2 2026 update - what's working, what's next",
+      "tagline_sub": "Single-pin massage & float studio - American Fork, UT - 4.9-star x 406 reviews"
     },
     "headline": {
-      "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 â†’ Q1 2026 â€” the cleanest, uninflated comparison we can run), the <strong>lead capture rate has nearly doubled in Q2</strong> (1.57% â†’ 2.98% on the first 6 weeks of Q2 data), and the <strong>float side of the business is at #1 across the entire local Maps grid</strong>. The strongest mover in the new map data is <strong>â€˜massage subscriptionâ€™ â€” top-3 cells jumped from 6 to 15</strong> in 3 months, the biggest single-keyword gain in the scan set. The room-for-growth picture: generic â€˜massageâ€™ and â€˜massage therapistâ€™ searches saw slight slippage in the contested Pleasant Grove cells (Pleasant Grove competitors are pushing) and the siteâ€™s overall CTR sits below par at 0.80% â€” both are direct targets for the next 90 days."
+      "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 -> Q1 2026 - the cleanest, uninflated comparison we can run). Two Maps queries gained <strong>+8 top-3 cells each</strong> across our local scans: 'massage subscription' (Feb 23 -> May 18) and 'massage therapy' (Jan 19 -> Apr 18). The <strong>float side of the business is at #1 across the entire local Maps grid</strong> and the AF pin holds top-3 in 100% of cells for 'massage american fork'. The room-for-growth picture: generic 'massage' and 'massage therapist' searches saw a few cells slip in the contested Pleasant Grove edge (Pleasant Grove competitors pushing) and the site's overall CTR sits below par at 0.80% - both are direct targets for the next 90 days."
     },
     "movement_tiles": [
       {
@@ -4306,28 +4579,28 @@
         "pct": "+18%",
         "baseline": "8,879 sessions",
         "current": "10,448 sessions",
-        "sub": "Q1 2025 â†’ Q1 2026"
+        "sub": "Q1 2025 -> Q1 2026"
       },
       {
         "label": "Organic Leads (YoY)",
         "pct": "+18%",
         "baseline": "139 leads",
         "current": "164 leads",
-        "sub": "Q1 2025 â†’ Q1 2026 Â· booking + form + call/email intent"
+        "sub": "Q1 2025 -> Q1 2026 - booking + form + call/email intent"
       },
       {
-        "label": "Lead Capture Rate (Q1 â†’ Q2 2026)",
-        "pct": "+90%",
-        "baseline": "1.57%",
-        "current": "2.98%",
-        "sub": "Visitors converting at nearly 2Ã— the Q1 rate in the first 6 weeks of Q2"
+        "label": "Biggest Maps Movers (apples-to-apples)",
+        "pct": "+8 / +8",
+        "baseline": "Top-3 cells gained",
+        "current": "subscription + therapy",
+        "sub": "massage subscription Feb->May, massage therapy Jan->Apr"
       },
       {
         "label": "Float Maps Position",
         "pct": "#1 throughout",
         "baseline": "avg rank 1.5",
-        "current": "98â€“106 top-3 cells / 106",
-        "sub": "Across all 3 float queries Â· the moat is intact"
+        "current": "97-100 top-3 cells / 106",
+        "sub": "Across all 3 float queries - the moat is intact"
       }
     ],
     "quarterly_snapshot": [
@@ -4336,82 +4609,75 @@
         "sessions": 8879,
         "leads": 139,
         "lcr": 1.57,
-        "context": "Baseline period; modest organic growth tied to LD rank tightening."
+        "context": "Baseline period. Modest organic growth tied to LD rank tightening."
       },
       {
         "q": "Q1 2026",
         "sessions": 10448,
         "leads": 164,
         "lcr": 1.57,
-        "context": "Sessions +18% YoY, leads +18% YoY at same lead capture rate."
-      },
-      {
-        "q": "Q2 2026* (Apr + May so far)",
-        "sessions": 4699,
-        "leads": 140,
-        "lcr": 2.98,
-        "context": "Partial quarter (2 months). LCR climbing â€” strategy work showing up in visitor quality.",
+        "context": "Sessions +18% YoY, leads +18% YoY at same lead capture rate.",
         "kind": "current"
       }
     ],
     "timeline": [
       {
-        "phase": "Q4 2025 â†’ early Q1 2026",
+        "phase": "Q4 2025 - Q1 2026",
         "kind": "neutral",
         "title": "Steady organic foundation",
-        "body": "Going into 2026, organic sessions averaged ~3,500/mo with a lead capture rate of ~1.57%. Strong on Maps (single AF pin, 4.9â˜… Ã— 402â€“406 reviews holding through the period), float dominance preserved at #1 across 100% of grid cells, but generic â€˜massageâ€™ queries were plateauing â€” Pleasant Grove + Lehi competitors pushing on the closer-suburb cells."
+        "body": "Going into 2026, organic sessions averaged ~3,500/mo with a lead capture rate of ~1.57%. Strong on Maps (single AF pin, 4.9-star x 406 reviews holding through the period), float dominance preserved at #1 across 100% of grid cells, but generic 'massage' queries plateauing as Pleasant Grove + Lehi competitors push into the closer-suburb cells."
       },
       {
-        "phase": "Jan â€“ Mar 2026",
+        "phase": "Jan - Mar 2026",
         "kind": "good",
-        "title": "Sessions +18% YoY Â· leads +18% YoY",
-        "body": "Q1 2025 â†’ Q1 2026: organic sessions 8,879 â†’ 10,448 and organic leads 139 â†’ 164. Lead capture rate held at 1.57% â€” visitors are converting at the same rate, with more of them. The +18% is the cleanest YoY signal we can run: it strips out the Aug 2025 GA4 engagement-event reconfiguration that would otherwise inflate the raw â€˜conversionâ€™ figure ~6Ã—."
+        "title": "Sessions +18% YoY - leads +18% YoY",
+        "body": "Q1 2025 -> Q1 2026: organic sessions 8,879 -> 10,448 and organic leads 139 -> 164. Lead capture rate held at 1.57% - visitors are converting at the same rate, with more of them. This is the cleanest YoY signal we can run: it strips out the Aug 2025 GA4 engagement-event reconfiguration that would otherwise inflate the raw 'conversion' figure ~6x."
       },
       {
-        "phase": "Apr â€“ mid-May 2026",
+        "phase": "Jan - May 2026 (LD scans)",
         "kind": "good",
-        "title": "Lead capture rate jumping â€” visitor quality up",
-        "body": "Q2 2026 partial (Apr + first 22 days of May): lead capture rate climbed from 1.57% to <strong>2.98%</strong> â€” almost double Q1â€™s rate. The strategic work (cannibal cleanup priority batch, on-site CTR work on bleeding-CTR URLs, GBP velocity lift) is starting to show up in the funnel before showing up in total traffic. Sessions running slightly below Q1â€™s pace â€” expected given seasonal massage demand and the off-page program halt mid-month."
+        "title": "Two big top-3 cell wins on the Maps grid",
+        "body": "Two queries gained +8 top-3 cells each on apples-to-apples scans: <strong>massage subscription</strong> (Feb 23 -> May 18: top-3 cells 6 -> 14) and <strong>massage therapy</strong> (Jan 19 -> Apr 18: top-3 cells 14 -> 22). Deep tissue +3. Float queries at full saturation (#1 across the local market). Generic 'massage' and 'massage therapist' saw a few cells slip in the contested Pleasant Grove edge - that's where the next 90 days focus."
       },
       {
-        "phase": "May 13, 2026 Â· Course correction",
+        "phase": "May 13, 2026 - Course correction",
         "kind": "neutral",
         "title": "Off-page program halted across the HQDM book of business",
-        "body": "Authority strategy pivoted from automated stack (SEO Neo / Aaron Gruenke) to manual + earned channels (AMTA / ABMP / Utah MTA citations, monthly digital-PR pitch, monthly partner-outreach touch). Deliberate course correction â€” short-term it slows backlink velocity; medium-term it removes algorithmic risk and builds defensible local authority."
+        "body": "Authority strategy pivoted from automated stack (SEO Neo / Aaron Gruenke) to manual + earned channels (AMTA / ABMP / Utah MTA citations, monthly digital-PR pitch, monthly partner-outreach touch). Deliberate course correction - short-term it slows backlink velocity; medium-term it removes algorithmic risk and builds defensible local authority."
       }
     ],
     "trend_chart": {
       "months": [
+        "Sep 2025",
         "Oct 2025",
         "Nov 2025",
         "Dec 2025",
         "Jan 2026",
         "Feb 2026",
         "Mar 2026",
-        "Apr 2026",
-        "May 2026*"
+        "Apr 2026"
       ],
       "sessions": [
+        1862,
         1815,
         1770,
         2367,
         3461,
         3577,
         3410,
-        2601,
-        2098
+        2601
       ],
       "leads": [
+        57,
         62,
         50,
         59,
         64,
         47,
         53,
-        59,
-        81
+        59
       ],
-      "partial_note": "May 2026 is partial through ~22 days. Treat the rightmost data point as â€˜where we are right now,â€™ not as a finished month. The dashed line on the chart signals this."
+      "partial_note": "Chart shows Oct 2025 - April 2026 (latest complete month). May 2026 is excluded because GA4 attribution config changed mid-month and several conversion events started double-counting - the May numbers are not yet reconciled. See Owner Ask #5."
     },
     "heatmap_keywords": [
       "massage subscription",
@@ -4422,27 +4688,33 @@
     "search_cards": [
       {
         "keyword": "massage subscription",
-        "verdict": "Biggest mover",
+        "verdict": "Biggest recent mover",
         "sentiment": "good",
-        "commentary": "Top-3 cells expanded from 6 to <strong>14 (+8)</strong> across 93 apples-to-apples cells. Subscription is the highest-LTV intent â€” a member is multi-visit revenue, not one-time. <strong>Action: build a dedicated <code>/massage-subscription-american-fork/</code> page + push it via GBP Posts.</strong>"
+        "commentary": "Top-3 cells expanded from 6 to <strong>14 (+8)</strong> across 93 apples-to-apples cells, Feb 23, 2026 to May 18, 2026. Subscription is the highest-LTV intent - a member is multi-visit revenue, not one-time. <strong>Action: build a dedicated /massage-subscription-american-fork/ page + push via GBP Posts.</strong>"
       },
       {
         "keyword": "deep tissue massage near me",
         "verdict": "Gaining",
         "sentiment": "good",
-        "commentary": "Top-3 cells 25 â†’ <strong>28 (+3)</strong> across 87 cells. Deep-tissue is a primary booking modality. <strong>Action: deep-tissue service page gets Service + FAQ schema in M2 (Lever F).</strong>"
+        "commentary": "Top-3 cells 25 -> <strong>28 (+3)</strong> across 87 cells, Feb 23, 2026 to May 18, 2026. Deep-tissue is a primary booking modality. <strong>Action: deep-tissue service page gets Service + FAQ schema in M2.</strong>"
       },
       {
         "keyword": "float therapy",
         "verdict": "Defending #1",
         "sentiment": "good",
-        "commentary": "Top-3 cells 90 â†’ <strong>93 (+3)</strong> at near-saturation (93/106 in top-3, avg rank <strong>1.52</strong>). No headroom up from 1.5 â€” defense posture only. <strong>Action: hold GBP photo cadence, monitor True REST + Purify for any aggressive moves.</strong>"
+        "commentary": "Top-3 cells 93 -> <strong>93</strong> at near-saturation (93/106 in top-3, avg rank <strong>1.52</strong>), Jan 19, 2026 to May 18, 2026. No headroom up from 1.5 - defense posture only. <strong>Action: hold GBP photo cadence, monitor True REST + Purify for any aggressive moves.</strong>"
       },
       {
         "keyword": "massage therapist near me",
-        "verdict": "Steady gain",
+        "verdict": "Steady gain over 4 months",
         "sentiment": "good",
-        "commentary": "Top-3 cells 25 â†’ <strong>26 (+1)</strong>, avg rank tightened from 7.06 to <strong>7.36</strong>. BB sits at <strong>#2 of 10</strong> substantial competitors in the Pleasant Grove + Lehi corridor. <strong>Action: M3 KPI target is top-3 cells â‰¥ 45 â€” closes the gap on Relaxing Remedy.</strong>"
+        "commentary": "Top-3 cells 25 -> <strong>26 (+1)</strong>, avg rank 6.67 -> 7.36, Jan 19, 2026 to May 18, 2026 (longest scan window available). BB sits at <strong>#2 of substantial competitors</strong> in the Pleasant Grove + Lehi corridor. <strong>Action: M3 KPI target is top-3 cells >= 35 - closes the gap on Relaxing Remedy.</strong>"
+      },
+      {
+        "keyword": "massage therapy",
+        "verdict": "Big gain (Jan -> Apr)",
+        "sentiment": "good",
+        "commentary": "Tracked on the Jan 19 and Apr 18 LD scans. Top-3 cells <strong>14 -> 22 (+8)</strong>, avg rank 9.87 -> 8.64 across 84 apples-to-apples cells. Same magnitude of top-3 gain as massage subscription. <strong>Action: re-add to the May+ LD cadence so we have continuous tracking, then push via on-page schema.</strong>"
       }
     ],
     "leaderboard": [
@@ -4450,8 +4722,8 @@
         "name": "Body Balance (you)",
         "is_client": true,
         "may_top3": 530,
-        "feb_top3": 516,
-        "delta_top3": 14,
+        "feb_top3": 520,
+        "delta_top3": 10,
         "kws_present": 9,
         "note": "Top-3 spots across all 9 tracked Maps queries combined."
       },
@@ -4459,10 +4731,19 @@
         "name": "Purify Wellness Center",
         "is_client": false,
         "may_top3": 208,
-        "feb_top3": 190,
-        "delta_top3": 18,
+        "feb_top3": 200,
+        "delta_top3": 8,
         "kws_present": 7,
-        "note": "Closest FLOAT challenger. Only really competes on float queries â€” strong rank (~3â€“4) but BBâ€™s review moat holds the #1."
+        "note": "Closest FLOAT challenger. Only competes on float queries - strong rank (~3-4) but BB's review moat holds the #1."
+      },
+      {
+        "name": "True REST Float Spa",
+        "is_client": false,
+        "may_top3": 205,
+        "feb_top3": 226,
+        "delta_top3": -21,
+        "kws_present": 3,
+        "note": "National float-only chain. Only competes on the 3 float queries; cell rank 4-7 - BB's #1 vs True REST is the moat for float."
       },
       {
         "name": "Relaxing Remedy",
@@ -4471,32 +4752,32 @@
         "feb_top3": 167,
         "delta_top3": 7,
         "kws_present": 6,
-        "note": "The closest AF-area massage competitor. Strong on the basic-commercial queries (massages, massage therapy) â€” head-to-head where the closest-suburb cells get won/lost."
+        "note": "The closest AF-area massage competitor. Strong on the basic-commercial queries - head-to-head where the closest-suburb cells get won/lost."
       },
       {
         "name": "MassageLuXe Pleasant Grove",
         "is_client": false,
         "may_top3": 127,
-        "feb_top3": 140,
-        "delta_top3": -13,
+        "feb_top3": 137,
+        "delta_top3": -10,
         "kws_present": 6,
-        "note": "National massage-membership chain entrant in PG. Watch on â€˜massage subscriptionâ€™ specifically."
+        "note": "National massage-membership chain entrant in PG. Watch on 'massage subscription' specifically."
       },
       {
         "name": "Calming Touch Massage LLC",
         "is_client": false,
         "may_top3": 126,
-        "feb_top3": 134,
-        "delta_top3": -8,
+        "feb_top3": 132,
+        "delta_top3": -6,
         "kws_present": 6,
-        "note": "Lehi-area challenger with 531 reviews (more than BBâ€™s nearby Lehi pins). Strong on â€˜massage therapist near meâ€™ in Lehi cells."
+        "note": "Lehi-area challenger with the highest review count of any Lehi competitor. Strong on 'massage therapist near me' in Lehi cells."
       },
       {
         "name": "Lucky PURE SPA",
         "is_client": false,
         "may_top3": 123,
-        "feb_top3": 111,
-        "delta_top3": 12,
+        "feb_top3": 110,
+        "delta_top3": 13,
         "kws_present": 6,
         "note": ""
       },
@@ -4504,111 +4785,249 @@
         "name": "Total Muscle Therapy: Massage Pleasant Grove",
         "is_client": false,
         "may_top3": 119,
-        "feb_top3": 117,
-        "delta_top3": 2,
+        "feb_top3": 125,
+        "delta_top3": -6,
         "kws_present": 6,
-        "note": "Active SEO/GBP work â€” worth watching closely."
+        "note": "Active SEO/GBP work - worth watching closely."
       },
       {
         "name": "Natural Healing and Massage, American Fork",
         "is_client": false,
         "may_top3": 108,
-        "feb_top3": 94,
-        "delta_top3": 14,
+        "feb_top3": 92,
+        "delta_top3": 16,
         "kws_present": 6,
-        "note": "AF-area massage challenger (75 reviews). Niche-positioned."
-      },
-      {
-        "name": "Zen Zone Massage",
-        "is_client": false,
-        "may_top3": 103,
-        "feb_top3": 98,
-        "delta_top3": 5,
-        "kws_present": 6,
-        "note": ""
+        "note": "AF-area massage challenger. Niche-positioned."
       }
     ],
     "ld_apples": [
       {
-        "kw": "massages",
-        "n": 73,
-        "avg_feb": 8.08,
-        "avg_may": 8.77,
-        "top3_feb": 20,
-        "top3_may": 19,
-        "dx_mean": -0.68
-      },
-      {
-        "kw": "massage therapist",
-        "n": 80,
-        "avg_feb": 7.66,
-        "avg_may": 8.79,
-        "top3_feb": 27,
-        "top3_may": 25,
-        "dx_mean": -1.12
-      },
-      {
-        "kw": "massage therapist near me",
-        "n": 83,
-        "avg_feb": 7.06,
-        "avg_may": 7.36,
-        "top3_feb": 25,
-        "top3_may": 26,
-        "dx_mean": -0.3
-      },
-      {
         "kw": "massage subscription",
-        "n": 93,
-        "avg_feb": 8.17,
-        "avg_may": 8.73,
-        "top3_feb": 6,
-        "top3_may": 14,
-        "dx_mean": -0.56
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 98,
+        "cells_dst": 98,
+        "rank_src": 8.17,
+        "rank_dst": 8.73,
+        "top3_src": 6,
+        "top3_dst": 14,
+        "mean_dx": -0.56,
+        "top3_dx": 8,
+        "cells_entered": 0,
+        "cells_lost": 0,
+        "apples_n": 93,
+        "is_supplementary": false
       },
       {
         "kw": "deep tissue massage near me",
-        "n": 87,
-        "avg_feb": 6.68,
-        "avg_may": 7.41,
-        "top3_feb": 25,
-        "top3_may": 28,
-        "dx_mean": -0.74
-      },
-      {
-        "kw": "massage american fork",
-        "n": 100,
-        "avg_feb": 1.75,
-        "avg_may": 1.85,
-        "top3_feb": 99,
-        "top3_may": 100,
-        "dx_mean": -0.1
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 98,
+        "cells_dst": 93,
+        "rank_src": 6.68,
+        "rank_dst": 7.41,
+        "top3_src": 25,
+        "top3_dst": 28,
+        "mean_dx": -0.74,
+        "top3_dx": 3,
+        "cells_entered": 0,
+        "cells_lost": 5,
+        "apples_n": 87,
+        "is_supplementary": false
       },
       {
         "kw": "float therapy",
-        "n": 100,
-        "avg_feb": 1.69,
-        "avg_may": 1.52,
-        "top3_feb": 90,
-        "top3_may": 93,
-        "dx_mean": 0.17
+        "src_date_key": "jan",
+        "dst_date_key": "may",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 106,
+        "cells_dst": 106,
+        "rank_src": 1.51,
+        "rank_dst": 1.52,
+        "top3_src": 93,
+        "top3_dst": 93,
+        "mean_dx": -0.01,
+        "top3_dx": 0,
+        "cells_entered": 0,
+        "cells_lost": 0,
+        "apples_n": 100,
+        "is_supplementary": false
       },
       {
-        "kw": "float tank near me",
-        "n": 100,
-        "avg_feb": 1.48,
-        "avg_may": 1.49,
-        "top3_feb": 99,
-        "top3_may": 100,
-        "dx_mean": -0.01
+        "kw": "massage therapist near me",
+        "src_date_key": "jan",
+        "dst_date_key": "may",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 97,
+        "cells_dst": 88,
+        "rank_src": 6.67,
+        "rank_dst": 7.36,
+        "top3_src": 25,
+        "top3_dst": 26,
+        "mean_dx": -0.69,
+        "top3_dx": 1,
+        "cells_entered": 0,
+        "cells_lost": 8,
+        "apples_n": 83,
+        "is_supplementary": false
+      },
+      {
+        "kw": "massages",
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 86,
+        "cells_dst": 77,
+        "rank_src": 8.08,
+        "rank_dst": 8.77,
+        "top3_src": 20,
+        "top3_dst": 19,
+        "mean_dx": -0.68,
+        "top3_dx": -1,
+        "cells_entered": 0,
+        "cells_lost": 8,
+        "apples_n": 73,
+        "is_supplementary": false
+      },
+      {
+        "kw": "massage therapist",
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 90,
+        "cells_dst": 85,
+        "rank_src": 7.66,
+        "rank_dst": 8.79,
+        "top3_src": 27,
+        "top3_dst": 25,
+        "mean_dx": -1.12,
+        "top3_dx": -2,
+        "cells_entered": 1,
+        "cells_lost": 5,
+        "apples_n": 80,
+        "is_supplementary": false
+      },
+      {
+        "kw": "massage american fork",
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 106,
+        "cells_dst": 106,
+        "rank_src": 1.75,
+        "rank_dst": 1.85,
+        "top3_src": 99,
+        "top3_dst": 100,
+        "mean_dx": -0.1,
+        "top3_dx": 1,
+        "cells_entered": 0,
+        "cells_lost": 0,
+        "apples_n": 100,
+        "is_supplementary": false
       },
       {
         "kw": "float tank",
-        "n": 100,
-        "avg_feb": 1.28,
-        "avg_may": 1.27,
-        "top3_feb": 98,
-        "top3_may": 97,
-        "dx_mean": 0.01
+        "src_date_key": "jan",
+        "dst_date_key": "may",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 106,
+        "cells_dst": 106,
+        "rank_src": 1.2,
+        "rank_dst": 1.27,
+        "top3_src": 98,
+        "top3_dst": 97,
+        "mean_dx": -0.07,
+        "top3_dx": -1,
+        "cells_entered": 0,
+        "cells_lost": 0,
+        "apples_n": 100,
+        "is_supplementary": false
+      },
+      {
+        "kw": "float tank near me",
+        "src_date_key": "feb",
+        "dst_date_key": "may",
+        "src_date_label": "Feb 23, 2026",
+        "dst_date_label": "May 18, 2026",
+        "cells_src": 106,
+        "cells_dst": 106,
+        "rank_src": 1.48,
+        "rank_dst": 1.49,
+        "top3_src": 99,
+        "top3_dst": 100,
+        "mean_dx": -0.01,
+        "top3_dx": 1,
+        "cells_entered": 0,
+        "cells_lost": 0,
+        "apples_n": 100,
+        "is_supplementary": false
+      },
+      {
+        "kw": "massages near me",
+        "src_date_key": "jan",
+        "dst_date_key": "apr",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "Apr 18, 2026",
+        "cells_src": 93,
+        "cells_dst": 95,
+        "rank_src": 8.33,
+        "rank_dst": 7.13,
+        "top3_src": 17,
+        "top3_dst": 14,
+        "mean_dx": 1.2,
+        "top3_dx": -3,
+        "cells_entered": 3,
+        "cells_lost": 2,
+        "apples_n": 86,
+        "is_supplementary": true
+      },
+      {
+        "kw": "massage therapy",
+        "src_date_key": "jan",
+        "dst_date_key": "apr",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "Apr 18, 2026",
+        "cells_src": 89,
+        "cells_dst": 94,
+        "rank_src": 9.87,
+        "rank_dst": 8.64,
+        "top3_src": 14,
+        "top3_dst": 22,
+        "mean_dx": 1.23,
+        "top3_dx": 8,
+        "cells_entered": 5,
+        "cells_lost": 0,
+        "apples_n": 84,
+        "is_supplementary": true
+      },
+      {
+        "kw": "massage therapist lehi",
+        "src_date_key": "jan",
+        "dst_date_key": "apr",
+        "src_date_label": "Jan 19, 2026",
+        "dst_date_label": "Apr 18, 2026",
+        "cells_src": 75,
+        "cells_dst": 96,
+        "rank_src": 15.56,
+        "rank_dst": 14.39,
+        "top3_src": 1,
+        "top3_dst": 0,
+        "mean_dx": 1.17,
+        "top3_dx": -1,
+        "cells_entered": 21,
+        "cells_lost": 1,
+        "apples_n": 71,
+        "is_supplementary": true
       }
     ],
     "priorities_90d": [
@@ -4616,64 +5035,69 @@
         "n": 1,
         "color": "#10b981",
         "title": "Defend the #1 American Fork pin + the float moat",
-        "body": "BB is #1 in the immediate AF pin across float AND on â€˜massage american forkâ€™ at saturation (100% of cells, avg rank 1.85). The review moat (4.9â˜… Ã— 406, +4 since Feb) holds the local pack. <strong>What weâ€™ll do:</strong> 4 GBP Posts/mo (up from 3), 8 geotagged photos/mo, lock in the review-acquisition workflow, Q&A seeding for the top massage + float questions. <strong>Goal: hold #1 + cross 450 reviews by M3.</strong>"
+        "body": "BB is #1 in the immediate AF pin across float AND on 'massage american fork' at saturation (100% of cells, avg rank 1.85). The review moat (4.9-star x 406, +4 since Feb) holds the local pack. <strong>What we'll do:</strong> 4 GBP Posts/mo (up from 3), 8 geotagged photos/mo, lock in the review-acquisition workflow, Q&A seeding for the top massage + float questions. <strong>Goal: hold #1 + cross 450 reviews by M3.</strong>"
       },
       {
         "n": 2,
         "color": "#1d5b8a",
-        "title": "Capitalize on the massage subscription breakthrough",
-        "body": "<strong>â€˜Massage subscriptionâ€™ is the biggest mover in the new LD scans</strong> â€” top-3 cells jumped from 6 to 15 (+8 across 93 apples-to-apples cells). Subscriptions are recurring revenue â€” different economics than single-session bookings. <strong>What weâ€™ll do:</strong> build <code>/massage-subscription-american-fork/</code> (membership-tier comparison, FAQ, schema), surface it via 2 GBP Posts/mo, add a blog cluster on â€˜is a massage membership worth itâ€™. Direct competitors: MassageLuXe PG + Hand & Stone (national membership chains) â€” BBâ€™s local + 4.9â˜… is the edge."
+        "title": "Capitalize on the subscription + massage-therapy breakthroughs",
+        "body": "<strong>Two queries gained +8 top-3 cells</strong> across our scans: 'massage subscription' (Feb -> May, top-3 6 -> 14) and 'massage therapy' (Jan -> Apr, top-3 14 -> 22). Subscription is recurring revenue; massage therapy is high-volume commercial. <strong>What we'll do:</strong> dedicated /massage-subscription-american-fork/ page (membership-tier comparison, FAQ, schema), refresh the /massage-therapy/ page with Service + FAQPage schema, surface both via 2 GBP Posts/mo, add a blog cluster on 'is a massage membership worth it'. Direct subscription competitors: MassageLuXe PG + Hand & Stone - BB's local + 4.9-star is the edge."
       },
       {
         "n": 3,
         "color": "#6366f1",
-        "title": "Fix the on-site click capture â€” the actual plateau lever",
-        "body": "Sitewide GSC CTR is 0.80% (vs ~1.5% par for local services). Three pages illustrate the problem: <code>/about/</code> 0.04% CTR, <code>/pricing-and-membership/</code> 0.10%, <code>/upgrades/</code> 0.00%. <strong>What weâ€™ll do:</strong> meta + title refresh on the top 22 bleeding-CTR URLs (Lever H), Service + FAQ schema on all 8 priority service pages (Lever F â€” currently 0/8 have it), sitewide NAP find-replace (372/372 pages use the chat phone), 84-URL cannibal cleanup batch (Lever B). The Q2 LCR jump from 1.57% â†’ 2.98% says the first wave of this work is already biting."
+        "title": "Fix the on-site click capture - the actual plateau lever",
+        "body": "Sitewide GSC CTR is 0.80% (vs ~1.5% par for local services). Three pages illustrate the problem: /about/ 0.04% CTR, /pricing-and-membership/ 0.10%, /upgrades/ 0.00%. <strong>What we'll do:</strong> meta + title refresh on the top 22 bleeding-CTR URLs (Lever H), Service + FAQ schema on all 8 priority service pages (Lever F - currently 0/8 have it), sitewide NAP find-replace (372/372 pages use the chat phone), 84-URL cannibal cleanup batch (Lever B)."
       },
       {
         "n": 4,
         "color": "#8b5cf6",
-        "title": "Unlock the 27 untracked services where BB ranks #1â€“#3",
-        "body": "DataForSEO Maps SERPs show BB already ranking <strong>#1â€“#3 at the AF pin for 27 service queries we donâ€™t currently track</strong> â€” without dedicated landing pages for most. The headline: <strong>lymphatic drainage massage (3,600 UT search volume)</strong> where BB ranks #1 with zero on-site page. <strong>What weâ€™ll do:</strong> 6 new location-pages/mo at matrix gaps (Cedar Hills Ã— deep tissue, PG Ã— cupping, Lehi Ã— Swedish â€” Lever C+D+E), <code>/myofascial-release/</code> + <code>/lymphatic-drainage-massage/</code> page builds (Lever G â€” lymphatic gated on Owner Ask #4). <strong>Goal: 12+ serviceÃ—city matrix cells covered by M3 (baseline 3â€“5).</strong>"
+        "title": "Unlock the 27 untracked services where BB ranks #1-#3",
+        "body": "DataForSEO Maps SERPs show BB already ranking <strong>#1-#3 at the AF pin for 27 service queries we don't currently track</strong> - without dedicated landing pages for most. The headline: <strong>lymphatic drainage massage (3,600 UT search volume)</strong> where BB ranks #1 with zero on-site page. <strong>What we'll do:</strong> 6 new location-pages/mo at matrix gaps (Cedar Hills x deep tissue, PG x cupping, Lehi x Swedish - Lever C+D+E), /myofascial-release/ + /lymphatic-drainage-massage/ page builds (Lever G - lymphatic gated on Owner Ask #4). <strong>Goal: 12+ service x city matrix cells covered by M3 (baseline 3-5).</strong>"
       },
       {
         "n": 5,
         "color": "#f59e0b",
-        "title": "Rebuild off-page authority â€” manual + earned, post-halt",
-        "body": "On 2026-05-13 the automated off-page stack (SEO Neo / Aaron Gruenke) was halted across the HQDM book of business â€” it was working, but with rising algorithmic risk. <strong>What weâ€™ll do:</strong> 2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers, mom blogs, regional wellness directories), 1 digital-PR pitch/mo (postpartum massage angle M2 â†’ athlete recovery angle M3), 1 partner-outreach touch/mo (yoga + chiro + doula + run-club cross-link partnerships). Backlink audit + disavow if needed. Slower than the halted stack but defensible â€” and DR-stable."
+        "title": "Rebuild off-page authority - manual + earned, post-halt",
+        "body": "On 2026-05-13 the automated off-page stack (SEO Neo / Aaron Gruenke) was halted across the HQDM book of business - it was working, but with rising algorithmic risk. <strong>What we'll do:</strong> 2 manual citations/mo (AMTA + ABMP + Utah MTA + Utah County + Pleasant Grove Chambers, mom blogs, regional wellness directories), 1 digital-PR pitch/mo (postpartum massage angle M2 -> athlete recovery angle M3), 1 partner-outreach touch/mo (yoga + chiro + doula + run-club cross-link partnerships). Backlink audit + disavow if needed."
       }
     ],
     "owner_asks_client": [
       {
         "n": 1,
         "label": "Trigger-point page rewrite sign-off",
-        "body": "Paul flagged the <code>/trigger-point-therapy/</code> page as referencing medical injections + dry needling â€” neither of which BB performs. Weâ€™ve drafted a rewrite focused on the soft-tissue trigger-point modality BB actually does. Need 15 min on a call to walk through the draft and confirm language before publish."
+        "body": "Paul flagged the /trigger-point-therapy/ page as referencing medical injections + dry needling - neither of which BB performs. We've drafted a rewrite focused on the soft-tissue trigger-point modality BB actually does. Need 15 min on a call to walk through the draft and confirm language before publish."
       },
       {
         "n": 2,
         "label": "Sitewide phone number canonical",
-        "body": "Every page on bbmassageandfloat.com (372/372) currently shows the live-chat phone (855-XXX-5834). The GBP primary is the local 734-XXX-9798. This breaks NAP consistency and likely sends a soft â€˜multiple businessesâ€™ signal. Confirming: switch sitewide to the local 734 number, or keep the chat-routing 855 + add a â€˜call directlyâ€™ secondary? (Recommendation: switch to local.)"
+        "body": "Every page on bbmassageandfloat.com (372/372) currently shows the live-chat phone (855-XXX-5834). The GBP primary is the local 734-XXX-9798. This breaks NAP consistency and likely sends a soft 'multiple businesses' signal. Confirming: switch sitewide to the local 734 number, or keep the chat-routing 855 + add a 'call directly' secondary? (Recommendation: switch to local.)"
       },
       {
         "n": 3,
         "label": "Is cupping still on the menu?",
-        "body": "Thereâ€™s a <code>/cupping-massage/</code> URL returning 404 alongside a live <code>/modalities-techniques/cupping/</code> canonical. Either small-301 the dead URL or rebuild it if cupping is back. Quick yes/no â€” does BB still offer cupping?"
+        "body": "There's a /cupping-massage/ URL returning 404 alongside a live /modalities-techniques/cupping/ canonical. Either small-301 the dead URL or rebuild it if cupping is back. Quick yes/no - does BB still offer cupping?"
       },
       {
         "n": 4,
-        "label": "Manual lymphatic drainage â€” yes or no?",
-        "body": "BB ranks <strong>#1 at the AF pin for â€˜lymphatic drainage massageâ€™</strong> (3,600 UT/mo search volume) with NO on-site page for it. Before we build the page (highest-ROI single page-build of the quarter), we need to confirm: does BB perform the manual lymphatic drainage modality, or is the rank a Maps-attribution artifact?"
+        "label": "Manual lymphatic drainage - yes or no?",
+        "body": "BB ranks <strong>#1 at the AF pin for 'lymphatic drainage massage'</strong> (3,600 UT/mo search volume) with NO on-site page for it. Before we build the page (highest-ROI single page-build of the quarter), we need to confirm: does BB perform the manual lymphatic drainage modality, or is the rank a Maps-attribution artifact?"
       },
       {
         "n": 5,
+        "label": "GA4 conversion config - what changed around May 1?",
+        "body": "We caught duplicate conversion events firing under different names: <code>session_booked</code> + <code>booking_confirmed</code> are the same booking action; <code>click_to_dial</code> + <code>click_phone_number</code> are the same call; <code>contact_form_submission</code> + <code>contact_form_submit</code> are the same form. In May 2026 GA4 started attributing both halves of each pair as separate conversions, inflating May leads by ~50%. We've excluded May from the headline numbers in this report. Need: who set up the duplicate events, and can we de-duplicate going forward?"
+      },
+      {
+        "n": 6,
         "label": "16-KPI M3 close-out scorecard sign-off",
-        "body": "Weâ€™ve drafted a 16-KPI scorecard for the M3 close-out (3 LD rank metrics, 2 GSC CTR metrics, 1 review-velocity metric, 1 CallRail quality metric, 4 page-build/cannibal metrics, etc.). The full list lives in the strategic dashboard. Want to confirm these are the right 16 â€” and lock the M3 targets â€” before we close Q2 against them."
+        "body": "We've drafted a 16-KPI scorecard for the M3 close-out (3 LD rank metrics, 2 GSC CTR metrics, 1 review-velocity metric, 1 CallRail quality metric, 4 page-build/cannibal metrics, etc.). The full list lives in the strategic dashboard. Want to confirm these are the right 16 - and lock the M3 targets - before we close Q2 against them."
       }
     ],
     "_data_provenance": {
-      "ga4": "GA4 property 332738090 Â· 18-month channel Ã— month pull 2026-05-22",
-      "gsc": "Google Search Console Â· bbmassageandfloat.com Â· 365d trailing 2025-05-22 â†’ 2026-05-21",
-      "localdominator": "36 CSV scans (9 keywords Ã— 4 dates: Feb 23 / Mar 18 / Apr 18 / May 18, 2026) Â· 13Ã—13 grid centered at the AF pin Â· 0.75-mile cell radius"
+      "ga4": "GA4 property 332738090 - 18-month channel x month pull 2026-05-22 (May 2026 excluded from chart due to mid-month attribution config change)",
+      "gsc": "Google Search Console - bbmassageandfloat.com - 365d trailing 2025-05-22 to 2026-05-21",
+      "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates: Jan 19 / Feb 23 / Mar 18 / Apr 18 / May 18, 2026 - 13x13 grid centered at the AF pin, 0.75-mile cell radius"
     }
   }
 }
