@@ -106,7 +106,7 @@
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v4 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v5 · 2026-05-22</div>
     </div>
   </header>
 
@@ -123,7 +123,7 @@
       <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl" id="hero-subtitle">—</p>
       <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85" id="hero-scope">—</p>
       <div class="mt-8 flex flex-wrap gap-3 text-xs">
-        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Refreshed</span> <span class="font-mono" id="hero-prepared">2026-05-22 · v4</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Refreshed</span> <span class="font-mono" id="hero-prepared">2026-05-22 · v5</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">AM</span> Matt Olderman</span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">bbmassageandfloat.com</span></span>
@@ -224,8 +224,39 @@
     </div>
   </section>
 
-  <!-- ============== MAPS — LD APPLES-TO-APPLES ============== -->
+  <!-- ============== MAPS PRESENCE AUDIT ============== -->
   <section id="maps" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Maps Presence Audit</h2>
+        <p class="text-sm text-ink-500 mt-1">LD 106-cell grid scan 2026-04-18 + DataForSEO outside-grid Maps SERP 2026-05-18. Per-town aggregate across 6 priority kws — single-pin reach via cell expansion (no multi-pin strategy).</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-4">
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="bg-slate-50 text-ink-600 text-xs uppercase tracking-wider">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">Coord / Town</th>
+              <th class="text-left font-semibold py-3 px-4 hidden md:table-cell">Distance / Context</th>
+              <th class="text-right font-semibold py-3 px-4">BB avg rank</th>
+              <th class="text-right font-semibold py-3 px-4">Top-3 cells</th>
+              <th class="text-right font-semibold py-3 px-4">Top-20 cells</th>
+              <th class="text-left font-semibold py-3 px-4 hidden lg:table-cell">Top gainer-against</th>
+              <th class="text-left font-semibold py-3 px-4">Action</th>
+            </tr>
+          </thead>
+          <tbody id="maps-presence-rows" class="divide-y divide-slate-200"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="text-sm text-ink-600 max-w-4xl">
+      <strong>The reading:</strong> BB's single-pin GBP at American Fork carries the conversion path; everything else is cell-expansion reach. Pleasant Grove is the most contested catchment (3 winners collapsed −188/−143/−138; 5 new entrants slid in) — Lever C matrix-fill location pages target PG/Lindon/Cedar Hills cells. Outside the ~10-mi grid BB is invisible across all 1,391 SERP rows tested — geographic constraint, not a marketing problem to solve in Q2.
+    </p>
+  </section>
+
+  <!-- ============== MAPS — LD APPLES-TO-APPLES ============== -->
+  <section id="maps-ld" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
       <div class="p-6 border-b border-slate-200">
         <h2 class="text-2xl font-bold tracking-tight">LD Apples-to-Apples — Rank Movement on Cells BB Holds (Jan 19 → Apr 18 2026)</h2>
@@ -489,8 +520,8 @@
   <!-- ============== FOOTER ============== -->
   <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
     <div class="border-t border-slate-200 pt-6 text-xs text-ink-500 space-y-2">
-      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Body Balance Massage &amp; Float · Q2 2026 Custom Strategy (v4, refreshed 2026-05-22)</div>
-      <div>v4 incorporates the 2026-05-13 off-page program halt: SEO Neo stack (DAS / Blast / Sniper / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin) removed from BB rotation. Authority workstream rebuilt around manual citations + 1 monthly PR pitch + 1 monthly partner-outreach touch + on-site link equity.</div>
+      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Body Balance Massage &amp; Float · Q2 2026 Custom Strategy (v5, refreshed 2026-05-22)</div>
+      <div>v5 adds the Maps Presence Audit (per-town reach across 6 priority kws, peer-formatted to PM) + GA4 property 332738090 verified connected (info@ token). REP-01 M1 W2 pulls Organic Search sessions + form_submit + GBP click-through (?utm_source=gmb) into the dashboard. v4 base: 2026-05-13 off-page program halt removes SEO Neo stack (DAS / Blast / Sniper / RD100 / NAP-overlay / AI Articles / Driving Directions / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin); authority workstream rebuilt around manual citations + 1 PR pitch/mo + 1 partner outreach/mo + on-site link equity.</div>
       <div class="text-ink-400">Confidential — internal HQDM use + authorized client viewing only. <code class="bg-slate-100 px-1.5 py-0.5 rounded text-[10px]">noindex</code> set; not indexable by search engines.</div>
     </div>
   </footer>
@@ -632,6 +663,27 @@
       // GA4 status
       document.getElementById('ga4-status-detail').textContent = data.ga4_status_panel.detail;
       document.getElementById('ga4-implication').innerHTML = '<strong>Implication: </strong>' + data.ga4_status_panel.implication;
+
+      // Maps Presence Audit
+      const mapsEl = document.getElementById('maps-presence-rows');
+      data.maps_presence.forEach(m => {
+        const tr = document.createElement('tr');
+        if (m.managed) tr.className = 'bg-emerald-50/40';
+        else if (m.coord.startsWith('Outside')) tr.className = 'bg-red-50/40';
+        const rankCell = m.avg_rank !== null ? `<span class="font-semibold">${m.avg_rank.toFixed(1)}</span>` : '<span class="text-ink-300">—</span>';
+        const top3 = m.top3_cells === 0 ? '<span class="text-ink-300">0</span>' : `<span class="font-semibold ${m.top3_cells > 10 ? 'text-accent-green' : ''}">${m.top3_cells}</span>`;
+        const top20 = `${m.top20_cells} / ${m.total_cells}`;
+        const managedTag = m.managed ? '<span class="pill pos">Managed pin</span> ' : '';
+        tr.innerHTML = `
+          <td class="py-3 px-4 font-semibold">${managedTag}${m.coord}</td>
+          <td class="py-3 px-4 text-xs text-ink-600 hidden md:table-cell">${m.distance}</td>
+          <td class="py-3 px-4 text-right font-mono">${rankCell}</td>
+          <td class="py-3 px-4 text-right font-mono">${top3}</td>
+          <td class="py-3 px-4 text-right font-mono">${top20}</td>
+          <td class="py-3 px-4 text-xs text-ink-600 hidden lg:table-cell">${m.winners}</td>
+          <td class="py-3 px-4 text-xs text-ink-700">${m.action}</td>`;
+        mapsEl.appendChild(tr);
+      });
 
       // LD apples-to-apples
       const ldRows = document.getElementById('ld-rows');
