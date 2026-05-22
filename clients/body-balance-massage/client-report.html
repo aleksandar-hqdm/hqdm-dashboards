@@ -54,7 +54,7 @@
         <span class="font-semibold truncate" id="hdr-client">Body Balance Massage &amp; Float</span>
         <span class="text-slate-400 hidden sm:inline">Q2 2026</span>
         <span class="text-slate-300 hidden sm:inline">·</span>
-        <span class="text-slate-500 hidden sm:inline">Client Report (v6)</span>
+        <span class="text-slate-500 hidden sm:inline">Client Report (v7)</span>
       </div>
       <div class="flex items-center gap-3">
         <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
@@ -72,7 +72,7 @@
       <p class="text-sm text-slate-600 mt-1" id="hero-tagline">Single-pin massage &amp; float studio · American Fork, UT · 4.9★ × 402 reviews</p>
       <div class="flex flex-wrap gap-4 mt-3 text-[11px] text-slate-500">
         <span><span class="font-semibold text-slate-700">Q2 2026 Client Report</span></span>
-        <span id="hero-prepared">Refreshed 2026-05-22 · v6</span>
+        <span id="hero-prepared">Refreshed 2026-05-22 · v7</span>
         <span id="hero-domain" class="font-mono">bbmassageandfloat.com</span>
         <span>Pin <span class="font-mono">40.378, −111.789</span></span>
         <span>AM <span class="text-slate-700">Matt Olderman</span></span>
@@ -87,19 +87,46 @@
       </div>
     </section>
 
-    <!-- ============ V6 CALLOUT ============ -->
+    <!-- ============ V7 CALLOUT ============ -->
     <section class="mb-5">
       <div class="rounded-lg p-4 sm:p-5" style="background: #ecfdf5; border-left: 4px solid #10b981;">
-        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v6 (2026-05-22)</div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-800 mb-2">What changed in v7 (2026-05-22)</div>
         <p class="text-sm leading-relaxed text-slate-800">
-          <strong>GA4 property 332738090 fully integrated</strong> — 18 months Dec 2024 → May 2026 partial. 8 channels surfaced (Organic / GBP / Direct / LLM / Referral / Paid / Social / Other). Quarterly aggregates, monthly trend, and Q1 2025 → Q1 2026 YoY comparison all live below.
+          <strong>Conversion-event categorization QA.</strong> GA4 reports 10 "conversion events" for BB, but 3 of them — <code class="bg-amber-100 px-1 rounded">gmb_click</code>, <code class="bg-amber-100 px-1 rounded">banner_booking_clicks</code>, <code class="bg-amber-100 px-1 rounded">giftcard_click</code> — are top-of-funnel engagement signals, not real business outcomes. They were added as conversion events in Aug 2025 and inflate the raw conversion count by ~6×. The YoY tile and trend chart above now use TRUE conversions (booking + lead only) as the headline metric. Raw GA4 conversions are still shown for transparency (the +1,177% inflated YoY); the +18% TRUE YoY is the apples-to-apples signal that matches the +18% sessions YoY.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
-          <strong>Aug 2025 measurement-system inflection:</strong> conversions jumped from ~150/mo to ~1,000+/mo. This is a GA4 configuration change (gmb_click + banner_booking_clicks added as conversion events Aug 2025), not a real business shift. Sessions are the cleaner YoY signal until the "true booking" event mix is rebaselined.
+          <strong>GA4 18-month integration:</strong> property 332738090 pulled Dec 2024 → May 2026 partial. 8 channels (Organic / GBP / Direct / LLM / Referral / Paid / Social / Other). Quarterly aggregates, monthly trend, and Q1 2025 → Q1 2026 YoY all driven by this data.
         </p>
         <p class="text-sm leading-relaxed text-slate-800 mt-2">
           <strong>Off-page program halt 2026-05-13:</strong> SEO Neo stack (DAS / Blast / Sniper / RD100 / NAP-overlay / AI Article Creator / Driving Directions / Cloud Page / Embedinator / Link Revolver / BatchGeo / ATB / GMB Pin Creation) removed from BB's playbook. Forward authority: manual citations (AMTA / ABMP / Utah MTA / chambers), 1 monthly PR pitch, 1 partner-outreach touch/mo, on-site link equity. Spend posture unchanged.
         </p>
+      </div>
+    </section>
+
+    <!-- ============ EVENT CATEGORIZATION DISCLOSURE ============ -->
+    <section class="mb-5">
+      <div class="rounded-lg p-4 sm:p-5 bg-white border border-slate-200">
+        <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+          <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">How we categorize GA4 "conversion events" — 3 buckets</h2>
+          <div class="flex flex-wrap gap-2 text-[10px] font-bold">
+            <span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800">TRUE = report this</span>
+            <span class="px-2 py-1 rounded bg-blue-100 text-blue-800">INTENT = track separately</span>
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800">ENGAGEMENT = diagnostic only</span>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead class="text-slate-500 text-[11px] bg-slate-50">
+              <tr>
+                <th class="text-left py-2 px-3 font-semibold">Event</th>
+                <th class="text-left py-2 px-3 font-semibold">Bucket</th>
+                <th class="text-right py-2 px-3 font-semibold">90d conversions</th>
+                <th class="text-left py-2 px-3 font-semibold">Status</th>
+              </tr>
+            </thead>
+            <tbody id="event-cat-body" class="divide-y divide-slate-100"></tbody>
+          </table>
+        </div>
       </div>
     </section>
 
@@ -274,7 +301,7 @@
     <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
       <div>
         <span class="font-semibold text-slate-700">HQDM Search Intelligence</span>
-        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v6)
+        · Q2 2026 · Prepared by Aleksandar Spasevski · Refreshed 2026-05-22 (v7)
       </div>
       <div class="text-slate-400">Confidential — authorized client viewing only. noindex.</div>
     </footer>
@@ -300,11 +327,11 @@
         tilesEl.appendChild(div);
       });
 
-      // YoY tiles (Q1 2025 vs Q1 2026 organic)
+      // YoY tiles (Q1 2025 vs Q1 2026 organic) — TRUE conversions, not raw
       const yoyEl = document.getElementById('yoy-tiles');
       const yoy = data.trend.yoy;
       if (yoy) {
-        function yoyTile(label, baseline, current, pct, fmtFn) {
+        function yoyTile(label, baseline, current, pct, fmtFn, subtext) {
           const dir = pct > 0 ? 'pos' : (pct < 0 ? 'neg' : 'neu');
           const arrow = pct > 0 ? '▲' : (pct < 0 ? '▼' : '–');
           const sign = pct > 0 ? '+' : '';
@@ -312,16 +339,21 @@
             <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">${label}</div>
             <div class="text-3xl font-extrabold delta-${dir === 'pos' ? 'pos' : dir === 'neg' ? 'neg' : 'neu'}">${arrow} ${sign}${Math.abs(pct).toFixed(0)}%</div>
             <div class="text-[11px] text-slate-500 mt-1">${fmtFn(baseline)} → ${fmtFn(current)}</div>
+            ${subtext ? `<div class="text-[10px] text-slate-400 mt-1 italic">${subtext}</div>` : ''}
           </div>`;
         }
         const fmtInt = v => v.toLocaleString();
         const fmtPct = v => v.toFixed(2) + '%';
         yoyEl.innerHTML =
-          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt) +
-          yoyTile('Organic conversions YoY', yoy.org_conv_baseline, yoy.org_conv_current, yoy.org_conv_pct, fmtInt) +
-          yoyTile('Organic CVR YoY', yoy.org_cr_baseline, yoy.org_cr_current, yoy.org_cr_pct, fmtPct);
+          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
+          (yoy.true_conv_pct !== null && yoy.true_conv_pct !== undefined
+            ? yoyTile('TRUE conversions YoY', yoy.true_conv_baseline, yoy.true_conv_current, yoy.true_conv_pct, fmtInt, 'Booking + lead only · excludes gmb_click etc')
+            : '') +
+          (yoy.true_cr_pct !== null && yoy.true_cr_pct !== undefined
+            ? yoyTile('True conversion rate YoY', yoy.true_cr_baseline, yoy.true_cr_current, yoy.true_cr_pct, fmtPct, 'True conv ÷ organic sessions')
+            : '');
         document.getElementById('yoy-note').textContent =
-          'Q1 2025 → Q1 2026 · Organic Search · GA4. Conversion-side YoY reflects the Aug-2025 event-config expansion — sessions is the cleaner signal.';
+          'Q1 2025 → Q1 2026 · Organic Search · GA4. TRUE conversions = session_booked + booking_confirmed + contact_form_submission only. Raw GA4 conv (incl. gmb_click + banner_booking_clicks added Aug 2025) shown for transparency in the disclosure box below.';
       } else {
         yoyEl.innerHTML = '<div class="text-sm text-slate-500 italic col-span-3">YoY comparison not yet available.</div>';
       }
@@ -344,25 +376,33 @@
         qBody.appendChild(tr);
       });
 
-      // Monthly trend chart — GA4 organic sessions + organic conversions (dual axis)
+      // Monthly trend chart — Organic Sessions + TRUE Conversions (booking + lead) + Engagement signals overlay
       const months = data.trend.months;
       const partialIdx = months.findIndex(m => /\*/.test(m));
       const sessOrg = (data.trend.sessions && data.trend.sessions.organic) || [];
-      const convOrg = (data.trend.conversions && data.trend.conversions.organic) || [];
-      const sessSolid = sessOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
-      const sessDash = sessOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
-      const convSolid = convOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
-      const convDash = convOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
+      const trueConv = data.trend.true_conversions_monthly || [];
+      const engagement = data.trend.engagement_signals_monthly || [];
+      const split = (arr) => ({
+        solid: arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v),
+        dash:  arr.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null),
+      });
+      const sess = split(sessOrg);
+      const truec = split(trueConv);
+      const engs = split(engagement);
 
       new Chart(document.getElementById('trend-chart'), {
         type: 'line',
         data: {
           labels: months,
           datasets: [
-            { label: 'Organic Sessions', data: sessSolid, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,0.10)', yAxisID: 'y', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: false },
-            { label: 'Organic Sessions (partial)', data: sessDash, borderColor: '#1d5b8a', borderDash: [5,4], yAxisID: 'y', borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
-            { label: 'Organic Conversions', data: convSolid, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.10)', yAxisID: 'y1', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: false },
-            { label: 'Organic Conversions (partial)', data: convDash, borderColor: '#10b981', borderDash: [5,4], yAxisID: 'y1', borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
+            // Sessions (primary, left axis)
+            { label: 'Organic Sessions', data: sess.solid, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,0.10)', yAxisID: 'y', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointHoverRadius: 5, spanGaps: false },
+            { label: 'Organic Sessions (partial)', data: sess.dash, borderColor: '#1d5b8a', borderDash: [5,4], yAxisID: 'y', borderWidth: 2, tension: 0.3, pointRadius: 2, spanGaps: false },
+            // True conversions (primary, right axis, GREEN — the cleanest signal)
+            { label: 'TRUE Conversions (booking + lead)', data: truec.solid, borderColor: '#059669', backgroundColor: 'rgba(5,150,105,0.10)', yAxisID: 'y1', borderWidth: 3, tension: 0.3, pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false },
+            { label: 'TRUE Conversions (partial)', data: truec.dash, borderColor: '#059669', borderDash: [5,4], yAxisID: 'y1', borderWidth: 2.5, tension: 0.3, pointRadius: 3, pointStyle: 'rectRot', spanGaps: false },
+            // Engagement signals (right axis, AMBER — for context, NOT a real conversion)
+            { label: 'Engagement signals (NOT conversions)', data: engs.solid, borderColor: '#d97706', backgroundColor: 'rgba(217,119,6,0.05)', yAxisID: 'y1', borderWidth: 2, borderDash: [2,2], tension: 0.3, pointRadius: 2, pointHoverRadius: 4, spanGaps: false },
           ],
         },
         options: {
@@ -378,7 +418,7 @@
           scales: {
             x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 18 }, grid: { display: false } },
             y: { position: 'left', title: { display: true, text: 'Sessions', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
-            y1: { position: 'right', title: { display: true, text: 'Conversions', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { display: false } },
+            y1: { position: 'right', title: { display: true, text: 'Conversions / signals', font: { size: 11 } }, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { display: false } },
           },
         },
       });
@@ -386,7 +426,7 @@
       // Partial-month + measurement-shift note
       const partialBase = data.trend.may_extrapolation_note || '';
       const shift = data.trend.measurement_shift;
-      const shiftNote = shift ? ` · Aug 2025 conversion-event-config expansion: ~${shift.pre_avg_per_month}/mo → ~${shift.post_avg_per_month}/mo (${shift.factor}× factor).` : '';
+      const shiftNote = shift ? ` · TRUE conv (booking+lead): ~${shift.true_conv_pre_avg}/mo pre-Aug-2025 → ~${shift.true_conv_post_avg}/mo post (${shift.true_conv_factor}× — essentially stable). Engagement signals (gmb_click + banner_booking_clicks + giftcard_click) jumped 0 → ~${shift.post_avg_per_month - shift.true_conv_post_avg}/mo from Aug 2025 onward — they were added as conversion events in GA4 but are NOT real business outcomes.` : '';
       document.getElementById('trend-partial-note').textContent = partialBase + shiftNote;
 
       // Maps Presence
@@ -481,6 +521,41 @@
           <td class="py-1.5 px-3 text-[12px] font-mono font-semibold text-slate-900">${k.target}</td>`;
         kpiBody.appendChild(tr);
       });
+
+      // Event categorization disclosure table
+      const eventCatBody = document.getElementById('event-cat-body');
+      if (eventCatBody) {
+        const evCats = data.trend.event_categorization || {};
+        const CAT_DISPLAY = {
+          booking: { label: 'TRUE · Booking', cls: 'bg-emerald-100 text-emerald-800', order: 1 },
+          lead: { label: 'TRUE · Lead', cls: 'bg-emerald-100 text-emerald-800', order: 1 },
+          intent_call: { label: 'INTENT · Call', cls: 'bg-blue-100 text-blue-800', order: 2 },
+          intent_email: { label: 'INTENT · Email', cls: 'bg-blue-100 text-blue-800', order: 2 },
+          engagement_gbp: { label: 'ENGAGEMENT · GBP tap', cls: 'bg-amber-100 text-amber-800', order: 3 },
+          engagement_banner: { label: 'ENGAGEMENT · Banner CTA', cls: 'bg-amber-100 text-amber-800', order: 3 },
+          engagement_giftcard: { label: 'ENGAGEMENT · Giftcard', cls: 'bg-amber-100 text-amber-800', order: 3 },
+        };
+        const shiftEv = ['gmb_click', 'banner_booking_clicks', 'giftcard_click'];
+        const ev = [...(data.trend.conversion_events_90d || [])].sort((a, b) => {
+          const oa = CAT_DISPLAY[evCats[a.event]]?.order || 99;
+          const ob = CAT_DISPLAY[evCats[b.event]]?.order || 99;
+          if (oa !== ob) return oa - ob;
+          return b.conversions_90d - a.conversions_90d;
+        });
+        ev.forEach(e => {
+          const cat = evCats[e.event];
+          const disp = CAT_DISPLAY[cat] || { label: 'UNCATEGORIZED', cls: 'bg-slate-100 text-slate-700' };
+          const tr = document.createElement('tr');
+          if (cat && cat.startsWith('engagement_')) tr.style.background = '#fffbeb';
+          else if (cat === 'booking' || cat === 'lead') tr.style.background = '#f0fdf4';
+          tr.innerHTML = `
+            <td class="py-1.5 px-3 font-mono text-[12px]">${e.event}</td>
+            <td class="py-1.5 px-3"><span class="px-2 py-1 rounded text-[10px] font-bold ${disp.cls}">${disp.label}</span></td>
+            <td class="py-1.5 px-3 text-right font-mono text-sm">${e.conversions_90d.toLocaleString()}</td>
+            <td class="py-1.5 px-3 text-[11px]">${shiftEv.includes(e.event) ? '<span class="pill warn">Added Aug 2025</span>' : '<span class="pill muted">Pre-existing</span>'}</td>`;
+          eventCatBody.appendChild(tr);
+        });
+      }
 
     }).catch(err => {
       console.error('Failed to load data.json', err);

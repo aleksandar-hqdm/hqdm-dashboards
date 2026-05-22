@@ -106,7 +106,7 @@
         <a href="#strategy" class="px-3 py-1.5 rounded hover:bg-slate-100">Strategy</a>
         <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
       </nav>
-      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v6 · 2026-05-22</div>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-prepared">v7 · 2026-05-22</div>
     </div>
   </header>
 
@@ -226,14 +226,25 @@
         <p class="text-[11px] text-ink-500 italic mt-3" id="quarterly-footnote">—</p>
       </div>
 
-      <!-- Conversion events panel -->
+      <!-- Conversion events panel — categorized 3 ways -->
       <div class="border-t border-slate-200 p-6">
-        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600 mb-3">Conversion events firing (last 90 days)</h3>
+        <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Conversion events firing (last 90 days) — categorized</h3>
+          <div class="flex flex-wrap gap-2 text-[10px] font-bold">
+            <span class="px-2 py-1 rounded bg-emerald-100 text-emerald-800">BOOKING + LEAD = true conversion</span>
+            <span class="px-2 py-1 rounded bg-blue-100 text-blue-800">QUALIFIED INTENT = high-quality intent</span>
+            <span class="px-2 py-1 rounded bg-amber-100 text-amber-800">ENGAGEMENT = NOT a conversion</span>
+          </div>
+        </div>
+        <p class="text-xs text-ink-600 mb-3 leading-relaxed">
+          GA4 reports 10 "conversion events" — but 3 of them (<code class="bg-slate-100 px-1 rounded">gmb_click</code>, <code class="bg-slate-100 px-1 rounded">banner_booking_clicks</code>, <code class="bg-slate-100 px-1 rounded">giftcard_click</code>) are top-of-funnel engagement signals, not real business outcomes. They were added as conversion events in Aug 2025 and inflate the raw conversion count by ~6×. The conversions chart above plots both the raw GA4 line and the apples-to-apples TRUE conversions line (booking + lead only) so the actual booking trend is visible.
+        </p>
         <div class="overflow-x-auto">
           <table class="min-w-full text-sm" id="conv-events-table">
             <thead class="text-ink-500 text-xs bg-slate-50">
               <tr>
                 <th class="text-left font-semibold py-2 px-3">Event name</th>
+                <th class="text-left font-semibold py-2 px-3">Category</th>
                 <th class="text-right font-semibold py-2 px-3">Conversions (90d)</th>
                 <th class="text-right font-semibold py-2 px-3">Event count (90d)</th>
                 <th class="text-left font-semibold py-2 px-3">Status</th>
@@ -624,11 +635,11 @@
         document.getElementById('trend-may-extrapolation').textContent = data.trend.may_extrapolation_note;
       }
 
-      // YoY tiles (Q1 2025 vs Q1 2026 organic)
+      // YoY tiles (Q1 2025 vs Q1 2026 organic) — uses TRUE conversions, not raw GA4
       const yoyTilesEl = document.getElementById('yoy-tiles');
       const yoy = data.trend.yoy;
       if (yoy) {
-        function yoyTile(label, baseline, current, pct, fmtFn) {
+        function yoyTile(label, baseline, current, pct, fmtFn, subtext) {
           const dir = pct > 0 ? 'positive' : (pct < 0 ? 'negative' : 'neutral');
           const arrow = pct > 0 ? '▲' : (pct < 0 ? '▼' : '–');
           const sign = pct > 0 ? '+' : '';
@@ -636,25 +647,52 @@
             <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 leading-tight">${label}</div>
             <div class="text-2xl font-extrabold text-ink-900 mt-1.5 leading-none">${arrow} ${sign}${pct.toFixed(0)}%</div>
             <div class="text-xs text-ink-600 mt-1.5 leading-snug">${fmtFn(baseline)} → ${fmtFn(current)}</div>
+            ${subtext ? `<div class="text-[10px] text-ink-500 mt-1 italic">${subtext}</div>` : ''}
           </div>`;
         }
         const fmtInt = v => v.toLocaleString();
         const fmtPct = v => v.toFixed(2) + '%';
         yoyTilesEl.innerHTML =
-          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt) +
-          yoyTile('Organic conversions YoY', yoy.org_conv_baseline, yoy.org_conv_current, yoy.org_conv_pct, fmtInt) +
-          yoyTile('Organic CVR YoY', yoy.org_cr_baseline, yoy.org_cr_current, yoy.org_cr_pct, fmtPct);
+          yoyTile('Organic sessions YoY', yoy.org_sess_baseline, yoy.org_sess_current, yoy.org_sess_pct, fmtInt, 'Cleanest uninflated signal') +
+          (yoy.true_conv_pct !== null && yoy.true_conv_pct !== undefined
+            ? yoyTile('TRUE conversions YoY', yoy.true_conv_baseline, yoy.true_conv_current, yoy.true_conv_pct, fmtInt, 'Booking + lead events only (gmb_click excluded)')
+            : '') +
+          (yoy.true_cr_pct !== null && yoy.true_cr_pct !== undefined
+            ? yoyTile('True conversion rate YoY', yoy.true_cr_baseline, yoy.true_cr_current, yoy.true_cr_pct, fmtPct, 'True conv ÷ organic sessions')
+            : '');
+        // Add a 4th tile with the raw-conversions disclosure
+        if (yoy.org_conv_raw_pct !== null && yoy.org_conv_raw_pct !== undefined) {
+          yoyTilesEl.insertAdjacentHTML('beforeend', `
+            <div class="stat-tile" style="border-color:#fcd34d; background: linear-gradient(135deg,#fffbeb,#fffbeb);">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-amber-800 leading-tight">RAW GA4 conversions (inflated)</div>
+              <div class="text-2xl font-extrabold text-amber-900 mt-1.5 leading-none">+${yoy.org_conv_raw_pct.toFixed(0)}%</div>
+              <div class="text-xs text-amber-700 mt-1.5 leading-snug">${yoy.org_conv_raw_baseline} → ${yoy.org_conv_raw_current.toLocaleString()}</div>
+              <div class="text-[10px] text-amber-600 mt-1 italic">Includes engagement events added Aug 2025 — DO NOT report this to client</div>
+            </div>`);
+          // Switch the grid to 4-col
+          yoyTilesEl.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3';
+        }
       } else {
         yoyTilesEl.innerHTML = '<div class="text-sm text-ink-500 italic col-span-3">YoY comparison not yet available.</div>';
       }
 
-      // Measurement-shift callout
+      // Measurement-shift callout — 3-category event explanation
       const shift = data.trend.measurement_shift;
       if (shift) {
+        const truePre = shift.true_conv_pre_avg;
+        const truePost = shift.true_conv_post_avg;
+        const trueFactor = shift.true_conv_factor;
         document.getElementById('measurement-shift-callout').innerHTML = `
           <div class="text-xs font-bold uppercase tracking-widest text-amber-700 mb-2">Aug 2025 conversion-event configuration shift — read the conversion chart with this in mind</div>
           <p class="text-sm text-ink-700 leading-relaxed">
-            Conversions across all channels jumped from ~<strong>${shift.pre_avg_per_month}/mo</strong> (Dec 2024–Jul 2025) to ~<strong>${shift.post_avg_per_month}/mo</strong> (Aug 2025–May 2026) — a <strong>${shift.factor}× factor</strong> tied to <strong>${shift.type}</strong>. ${shift.explanation}
+            <strong>Raw GA4 conversions</strong> jumped from ~<strong>${shift.pre_avg_per_month}/mo</strong> (Dec 2024–Jul 2025) to ~<strong>${shift.post_avg_per_month}/mo</strong> (Aug 2025–May 2026) — a <strong>${shift.factor}× factor</strong>. This is a measurement artifact, not a business shift. Three events were added as conversion events in Aug 2025: <code class="bg-amber-100 px-1 rounded">gmb_click</code> (a tap on the GBP listing), <code class="bg-amber-100 px-1 rounded">banner_booking_clicks</code> (a click on the booking banner — NOT a confirmed booking), and <code class="bg-amber-100 px-1 rounded">giftcard_click</code> (a giftcard page click). None represent real business outcomes.
+          </p>
+          ${(truePre && truePost) ? `
+          <p class="text-sm text-ink-700 leading-relaxed mt-2">
+            <strong>True conversions</strong> (booking + lead events only — <code class="bg-emerald-100 px-1 rounded">session_booked</code> + <code class="bg-emerald-100 px-1 rounded">booking_confirmed</code> + <code class="bg-emerald-100 px-1 rounded">contact_form_submission</code> + <code class="bg-emerald-100 px-1 rounded">contact_form_submit</code>) averaged <strong>~${truePre}/mo before Aug 2025</strong> and <strong>~${truePost}/mo after</strong> — a <strong>${trueFactor}× factor</strong>, essentially stable. The chart above plots both lines: green (TRUE conversions, the cleaner apples-to-apples signal) and the channel-stacked raw GA4 lines.
+          </p>` : ''}
+          <p class="text-sm text-ink-700 leading-relaxed mt-2">
+            <strong>Recommendation:</strong> ${shift.recommendation || 'Report TRUE conversions as the headline; track qualified intent as secondary; treat engagement events as diagnostics only.'}
           </p>`;
       }
 
@@ -733,8 +771,36 @@
         sessChart = new Chart(document.getElementById('trend-sessions').getContext('2d'), {
           type: 'line', data: { labels: months, datasets: buildDatasets(sessionsByCh, defaultVisible) }, options: commonOpts,
         });
+
+        // Conversions chart now includes a TRUE-CONVERSIONS overlay + ENGAGEMENT-SIGNAL overlay
+        const convDatasets = buildDatasets(convByCh, defaultVisible);
+        const trueConv = data.trend.true_conversions_monthly;
+        const engagement = data.trend.engagement_signals_monthly;
+        if (trueConv) {
+          const solid = trueConv.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
+          const dash = trueConv.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
+          convDatasets.push({
+            label: 'TRUE conversions (booking + lead)', data: solid,
+            borderColor: '#059669', backgroundColor: '#05966915', borderWidth: 3, tension: 0.3,
+            pointRadius: 4, pointHoverRadius: 6, pointStyle: 'rectRot', spanGaps: false,
+          });
+          convDatasets.push({
+            label: 'TRUE conversions (partial)', data: dash,
+            borderColor: '#059669', borderDash: [5,4], borderWidth: 2.5, tension: 0.3,
+            pointRadius: 3, pointStyle: 'rectRot', spanGaps: false,
+          });
+        }
+        if (engagement) {
+          const solid = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v);
+          const dash = engagement.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1) ? v : null);
+          convDatasets.push({
+            label: 'Engagement signals (NOT conversions)', data: solid,
+            borderColor: '#d97706', backgroundColor: '#fef3c7', borderWidth: 2, tension: 0.3,
+            pointRadius: 2, pointHoverRadius: 4, borderDash: [2,2], spanGaps: false,
+          });
+        }
         convChart = new Chart(document.getElementById('trend-conversions').getContext('2d'), {
-          type: 'line', data: { labels: months, datasets: buildDatasets(convByCh, defaultVisible) }, options: commonOpts,
+          type: 'line', data: { labels: months, datasets: convDatasets }, options: commonOpts,
         });
       }
 
@@ -775,14 +841,38 @@
       document.getElementById('quarterly-footnote').textContent =
         'Quarterly totals from GA4 (channel-attributed). Latest quarter highlighted; Q2 2026 is partial through ' + (data.trend.may_extrapolation_note || '').match(/through (\S+ \d+)/)?.[1] || '';
 
-      // Conversion events panel
+      // Conversion events panel — categorized 3 ways
       const ceBody = document.querySelector('#conv-events-table tbody');
-      const shiftEvents = ['gmb_click', 'banner_booking_clicks'];
-      (data.trend.conversion_events_90d || []).forEach(e => {
+      const eventCategories = data.trend.event_categorization || {};
+      const categoryLabels = data.trend.category_labels || {};
+      const CAT_BUCKET = {
+        booking: { label: 'BOOKING', cls: 'bg-emerald-100 text-emerald-800', sortOrder: 1 },
+        lead: { label: 'LEAD', cls: 'bg-emerald-100 text-emerald-800', sortOrder: 1 },
+        intent_call: { label: 'CALL INTENT', cls: 'bg-blue-100 text-blue-800', sortOrder: 2 },
+        intent_email: { label: 'EMAIL INTENT', cls: 'bg-blue-100 text-blue-800', sortOrder: 2 },
+        engagement_gbp: { label: 'ENGAGEMENT (GBP)', cls: 'bg-amber-100 text-amber-800', sortOrder: 3 },
+        engagement_banner: { label: 'ENGAGEMENT (BANNER)', cls: 'bg-amber-100 text-amber-800', sortOrder: 3 },
+        engagement_giftcard: { label: 'ENGAGEMENT (GIFTCARD)', cls: 'bg-amber-100 text-amber-800', sortOrder: 3 },
+      };
+      const shiftEvents = ['gmb_click', 'banner_booking_clicks', 'giftcard_click'];
+      // Sort by category bucket first, then by conversions desc
+      const sortedEvents = [...(data.trend.conversion_events_90d || [])].sort((a, b) => {
+        const ca = CAT_BUCKET[eventCategories[a.event]]?.sortOrder || 99;
+        const cb = CAT_BUCKET[eventCategories[b.event]]?.sortOrder || 99;
+        if (ca !== cb) return ca - cb;
+        return b.conversions_90d - a.conversions_90d;
+      });
+      sortedEvents.forEach(e => {
         const isShift = shiftEvents.includes(e.event);
+        const cat = eventCategories[e.event];
+        const bucket = CAT_BUCKET[cat] || { label: 'UNCATEGORIZED', cls: 'bg-slate-100 text-slate-700' };
         const tr = document.createElement('tr');
+        // Row background tint by category
+        if (cat && cat.startsWith('engagement_')) tr.style.background = '#fffbeb';
+        else if (cat === 'booking' || cat === 'lead') tr.style.background = '#f0fdf4';
         tr.innerHTML = `
           <td class="py-2 px-3 font-mono text-sm">${e.event}</td>
+          <td class="py-2 px-3"><span class="px-2 py-1 rounded text-[10px] font-bold ${bucket.cls}">${bucket.label}</span></td>
           <td class="py-2 px-3 text-right font-mono">${e.conversions_90d.toLocaleString()}</td>
           <td class="py-2 px-3 text-right font-mono">${e.count_90d.toLocaleString()}</td>
           <td class="py-2 px-3 text-xs">${isShift ? '<span class="pill warn">Added Aug 2025</span>' : '<span class="pill muted">Pre-existing</span>'}</td>`;
