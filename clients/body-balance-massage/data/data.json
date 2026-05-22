@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "client": "Body Balance Massage & Float",
+    "short": "Body Balance",
+    "domain": "bbmassageandfloat.com",
+    "tagline": "Single-pin massage & float studio · American Fork, UT · 4.9★ × 402 reviews",
+    "tier": "Tier 3 · Local Services",
+    "vertical": "Massage Therapy + Float Therapy",
+    "owner_name": "Paul (Body Balance)",
+    "hqdm_am": "Matt Olderman",
+    "hqdm_owner": "Aleksandar Spasevski",
+    "prepared_date": "2026-05-18",
+    "quarter": "Q2 2026",
+    "address": "366 S 500 E Suite B, American Fork UT 84003",
+    "pin": "40.378, -111.789",
+    "campaign_posture": "Hold budget · Redirect targeting · Same production scale",
+    "doc_subtitle": "Q2 2026 strategic diagnosis. The pin is gaining rank where it holds cells, not plateauing. Marginal lift sits on 7 structural fixes + redirected production at full scale."
+  },
+  "kpis": [
+    {
+      "label": "Rank tightening — massage therapist near me",
+      "value": "7.43 → 5.97",
+      "sentiment": "positive",
+      "detail": "Avg rank on 95 cells visible both dates. BB #2 of 10 main pins. Top-3 cells 27 → 37. Mean dx +1.46/cell."
+    },
+    {
+      "label": "Float surface owned",
+      "value": "#1 of 20",
+      "sentiment": "positive",
+      "detail": "BB #1 on both float queries across 106/106 saturated cells at avg rank 1.34 / 1.68. The moat."
+    },
+    {
+      "label": "Sitewide NAP mismatch",
+      "value": "372 / 372",
+      "sentiment": "negative",
+      "detail": "Every page uses chat phone 855-5834; GBP primary is 734-9798. One-line WordPress fix. HP-01 in M1 W1."
+    },
+    {
+      "label": "Trigger-point page scope",
+      "value": "P0 Fix",
+      "sentiment": "negative",
+      "detail": "/trigger-point-therapy/ (2,773 words live 2026-05-18) references medical injections + dry needling. Owner-flagged."
+    },
+    {
+      "label": "GSC cannibalization",
+      "value": "326 queries",
+      "sentiment": "negative",
+      "detail": "2+ BB URLs ranking simultaneously. 'best massage near me' = 20 URLs, 196K imps, 2 clicks. Fix: 84 small-301 to MAIN."
+    },
+    {
+      "label": "Untracked rank surface",
+      "value": "27 queries #1-#3",
+      "sentiment": "neutral",
+      "detail": "DataForSEO Maps SERP at AF pin shows BB top-3 for 27 unranked service queries — lymphatic drainage (3,600 UT vol) is the biggest."
+    }
+  ],
+  "ld_apples_to_apples": [
+    {"kw": "massage therapist near me", "cells_jan": 97, "cells_apr": 100, "rank_jan": 7.43, "rank_apr": 5.97, "top3_jan": 27, "top3_apr": 37, "bb_rank_in_set": "#2 of 10"},
+    {"kw": "massages near me", "cells_jan": 93, "cells_apr": 95, "rank_jan": 8.29, "rank_apr": 7.08, "top3_jan": 18, "top3_apr": 15, "bb_rank_in_set": "#3 of 14"},
+    {"kw": "massage therapy", "cells_jan": 89, "cells_apr": 94, "rank_jan": 9.76, "rank_apr": 8.54, "top3_jan": 15, "top3_apr": 23, "bb_rank_in_set": "#7 of 14"},
+    {"kw": "massage therapist lehi", "cells_jan": 75, "cells_apr": 96, "rank_jan": 15.62, "rank_apr": 14.41, "top3_jan": 1, "top3_apr": 0, "bb_rank_in_set": "#15 of 17 (proximity-locked)"},
+    {"kw": "float therapy", "cells_jan": 106, "cells_apr": 106, "rank_jan": 1.52, "rank_apr": 1.68, "top3_jan": 98, "top3_apr": 94, "bb_rank_in_set": "#1 of 20"},
+    {"kw": "float tank", "cells_jan": 106, "cells_apr": 106, "rank_jan": 1.21, "rank_apr": 1.34, "top3_jan": 104, "top3_apr": 102, "bb_rank_in_set": "#1 of 18"}
+  ],
+  "competitor_churn": [
+    {"name": "The Spa Lounge (Pleasant Grove)", "delta": 210, "note": "Surged into dominance"},
+    {"name": "Seven Springs Spa (Pleasant Grove)", "delta": 172, "note": "New entrant"},
+    {"name": "LIV Massage (Pleasant Grove)", "delta": 132, "note": "New entrant"},
+    {"name": "Hurts So Good Bodywork (Lindon)", "delta": 124, "note": "New entrant"},
+    {"name": "The Spa Lounge (Lehi)", "delta": 77, "note": "Same-chain sibling"},
+    {"name": "Natural Healing & Massage (AF)", "delta": 54, "note": "Same-city"},
+    {"name": "Megan the Massager (Highland)", "delta": 53, "note": "Push catchment"},
+    {"name": "Hand & Stone (Traverse Mtn)", "delta": 39, "note": "National chain"},
+    {"name": "The Centered Stone (AF)", "delta": 38, "note": "Same-city"},
+    {"name": "Total Muscle Therapy: PG", "delta": 37, "note": "Push catchment"},
+    {"name": "Body Balance (us)", "delta": 23, "note": "Our gain", "is_client": true},
+    {"name": "The Massage Barre (Lehi)", "delta": -59, "note": "Collapsed"},
+    {"name": "Fashion Massage & Spa (Lehi)", "delta": -77, "note": "Collapsed"},
+    {"name": "Zen Zone Massage (Highland)", "delta": -82, "note": "Collapsed"},
+    {"name": "Calming Touch Massage (Lehi, 521 rev)", "delta": -97, "note": "Highest-review competitor collapsed"},
+    {"name": "MassageLuXe (Pleasant Grove)", "delta": -138, "note": "Collapsed — open cells"},
+    {"name": "Paradise Massage Studio (Pleasant Grove)", "delta": -143, "note": "Collapsed — open cells"},
+    {"name": "Paul and Tasha Massage (sibling pin)", "delta": -188, "note": "Owner's other pin — out of scope"}
+  ],
+  "root_causes": [
+    {"severity": "P0", "title": "Trigger-point page scope mismatch + duplicate canonical", "body": "/trigger-point-therapy/ references medical injections + dry needling (owner-flagged). SP-01 rewrites body content (same H1, same URL); CN-01 301s the duplicate to /modalities-techniques/trigger-point-therapy/ canonical (745 inbound links)."},
+    {"severity": "P0", "title": "Sitewide NAP + schema thinness + cupping 404", "body": "372/372 pages use chat phone (855); only 1 has GBP primary (734). Every page carries generic DaySpa schema only — no Service / FAQPage / LocalBusiness anywhere. /cupping-massage/ returns 404 while 10+ cupping blog posts link to it. HP-01 + TPL-01 (M1) + SP-02/03 schema rollout (M2-M3) close the structural gap."},
+    {"severity": "Secondary", "title": "Doorway + geo cohort needs fill + small-redirect (never bulk NOINDEX)", "body": "326 GSC queries have 2+ BB URLs ranking. 130 URLs decisioned: 3 LEAVE · 9 REFRESH · 19 REPURPOSE · 84 small-301-to-MAIN · 14 REVIEW. Production at scale CONTINUES — 6 new location pages/month redirected to real catchment × service matrix gaps."},
+    {"severity": "Opportunity", "title": "Pleasant Grove cells open + 27 untracked service ranks at AF pin", "body": "3 PG winners collapsed (Paradise -143, MassageLuXe -138, owner's sibling -188); 5 new entrants filled. DataForSEO Maps SERP at AF pin shows BB #1 for 15 untracked queries (couples massage AF, deep tissue AF, cupping near me, myofascial release...) and #2-#3 for 12 more — lymphatic drainage massage (3,600 UT vol) is the single biggest unlocked surface, gated on Owner #7."},
+    {"severity": "Positive", "title": "Float moat held + near-me tightening + 4.9★ × 402 + DA 20→28 documented", "body": "Float queries held at 106/106 saturation. On near-me queries BB is #2 and #3 of substantial competitive sets. Off-page lift (DA 20→28) is documented progress. Marginal lift is now post cadence + matrix-fill builds + Q-format LLM articles + service-page schema, not new doorways."}
+  ],
+  "levers": [
+    {"id": "A", "name": "Single-shift fixes (M1)", "color": "red", "impact": "P0 · M1", "items": ["HP-01 sitewide NAP find-replace", "SP-01 trigger point rewrite (owner-flagged)", "CN-01 duplicate-canonical 301", "TPL-01 cupping 404 → 301 to canonical"]},
+    {"id": "B", "name": "Cannibal cleanup — fill + small-redirect", "color": "amber", "impact": "High · 90d", "items": ["M1 refresh real-catchment-bleeding batch (3-4 URLs)", "M2 84 small-301-to-MAIN + 19 repurpose", "M3 14 review + typo + final refresh batch"]},
+    {"id": "C+D+E", "name": "Production at scale — 57 builds Q2", "color": "green", "impact": "High · 90d", "items": ["LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × Swedish...)", "BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort)", "GEO-NEW 3/mo on-topic wellness + athletic-recovery (replaces burger/dermatologist cadence)"]},
+    {"id": "F", "name": "Service schema rollout sitewide", "color": "blue", "impact": "High · 90d", "items": ["SP-02 M2 Swedish + DT + Sports + Prenatal", "SP-03 M3 Float + Cranial Sacral + Reflexology + Gua Sha", "ON-07 M3 sitewide BlogPosting + BreadcrumbList"]},
+    {"id": "G", "name": "Missing-page builds", "color": "indigo", "impact": "Opp · 60d", "items": ["MR-01 M2 build /myofascial-release/ (BB #1 at AF pin, no page)", "LD-01 M3 build /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7)"]},
+    {"id": "H", "name": "Meta + title refresh sweep", "color": "purple", "impact": "High · 60d", "items": ["ON-01_M1 top 12 bleeding-CTR URLs (/about/, /pricing/, /upgrades/...)", "ON-01_M2 next 10 URLs"]},
+    {"id": "I", "name": "GBP velocity + photo blitz", "color": "amber", "impact": "High · 90d", "items": ["Posts 3/mo → 4/mo sustained", "8 photos/mo geotagged 40.378,-111.789", "M3 Services-tab audit"]},
+    {"id": "J", "name": "Authority + PR layered on existing rotation", "color": "blue", "impact": "Medium · 90d", "items": ["2 manual citations/mo (AMTA + ABMP + Utah MTA + chambers; mom blogs; recovery vertical)", "1 PR pitch/mo (postpartum M2; athlete M3)", "OFF-Rotation continues at current cadence"]},
+    {"id": "K", "name": "Reporting", "color": "indigo", "impact": "P0 · M3", "items": ["M1 add 14 untracked-service kws to LD cadence", "M2 indexation + CTR delta tracker", "M3 Q2 close-out vs 16-KPI scorecard"]}
+  ],
+  "owner_asks": [
+    {"id": "#1", "label": "Trigger-point page rewrite", "status": "Approved in email 2026-05-15 · Send diff before push"},
+    {"id": "#2", "label": "Sitewide phone canonical (734 vs 855)", "status": "Pending — 2 min confirmation"},
+    {"id": "#3", "label": "Is cupping still on the menu?", "status": "Pending — gates TPL-01 restore vs prune"},
+    {"id": "#7 NEW", "label": "Does BB perform manual lymphatic drainage?", "status": "Pending — gates LD-01 (3,600 UT searches/mo)"},
+    {"id": "#8 NEW", "label": "Confirm 16-KPI M3 close-out scorecard", "status": "Pending — locks success criteria"}
+  ],
+  "m3_kpis": [
+    {"kpi": "LD avg rank — massage therapist near me", "baseline": "5.97 (#2 of 10)", "target": "≤ 5.0"},
+    {"kpi": "LD avg rank — massages near me", "baseline": "7.08 (#3 of 14)", "target": "≤ 6.0"},
+    {"kpi": "LD avg rank — massage therapy", "baseline": "8.54 (#7 of 14)", "target": "≤ 7.5"},
+    {"kpi": "LD avg rank — massage therapist lehi", "baseline": "14.41 (#15 of 17)", "target": "≤ 13.0 (stretch)"},
+    {"kpi": "LD top-3 cells — massage therapist near me", "baseline": "37 cells", "target": "≥ 45"},
+    {"kpi": "Float queries — hold #1, avg rank ≤2.0", "baseline": "#1 / 1.34 / 1.68", "target": "Hold"},
+    {"kpi": "Sitewide CTR (GSC)", "baseline": "0.80%", "target": "≥ 1.2%"},
+    {"kpi": "GSC clicks (30d)", "baseline": "2,743", "target": "≥ 3,500"},
+    {"kpi": "Cannibal queries (2+ URLs)", "baseline": "326", "target": "≤ 250"},
+    {"kpi": "/about/ CTR", "baseline": "0.04%", "target": "≥ 3%"},
+    {"kpi": "/pricing-and-membership/ CTR", "baseline": "0.10%", "target": "≥ 4%"},
+    {"kpi": "First-time callers ≥ 90 sec (CallRail)", "baseline": "39 / Mar 2026", "target": "≥ 45 / M3"},
+    {"kpi": "GBP Posts cadence", "baseline": "~3 / mo", "target": "4 / mo sustained"},
+    {"kpi": "Service pages with FAQ schema", "baseline": "0 / 8", "target": "8 / 8"},
+    {"kpi": "Service × city matrix coverage", "baseline": "3-5 / 150", "target": "≥ 12 / 150"},
+    {"kpi": "LD tracked kws", "baseline": "18", "target": "≥ 32"}
+  ],
+  "data_sources": [
+    "Local Dominator grid scans 2026-01-19 vs 2026-04-18 (106-cell grid, 6 priority kws)",
+    "Google Search Console pages + queries + query-page pairs last 365d (info@ token)",
+    "DataForSEO Maps SERP live 2026-05-18 — 49 service queries at AF pin + 9 queries × 10 outside-grid cities = 1,820+ pin observations",
+    "DataForSEO Google Ads Search Volume US national + Utah state + Salt Lake City DMA (131 keywords)",
+    "Body Balance Asana project history (553 completed tasks, 6-month review window)",
+    "Live HTML probe of all 372 sitemap URLs"
+  ],
+  "deliverables": [
+    {"name": "Strategic Diagnosis (PDF)", "path": "Body_Balance_Strategic_Diagnosis_2026-05-18.pdf"},
+    {"name": "Q2 Strategy Condensed v2", "path": "Body_Balance_Q2_2026_Strategy_Condensed_v2.md"},
+    {"name": "Q2 Custom Strategy (long-form)", "path": "Body_Balance_Q2_2026_Custom_Strategy.md"},
+    {"name": "3-Month Plan", "path": "bodybalance_3month_plan.md"},
+    {"name": "Tasks v2 CSV (33 rows)", "path": "Body_Balance_3Month_Tasks_v2.csv"},
+    {"name": "Owner Conversation Items", "path": "Body_Balance_Owner_Conversation_Items.md"},
+    {"name": "AM Reply Note for Paul", "path": "Body_Balance_AM_Reply_Note_For_Paul.md"},
+    {"name": "SP-01 Trigger Point Rewrite Brief", "path": "SP-01_Trigger_Point_Therapy_Page_Rewrite.docx"},
+    {"name": "CN-01 URL Consolidation Brief", "path": "CN-01_Trigger_Point_URL_Consolidation_Brief.docx"},
+    {"name": "CSM-01 First Matrix Build Brief", "path": "CSM-01_First_Matrix_Build_Brief.docx"},
+    {"name": "LocalDominator Analysis", "path": "Body_Balance_LocalDominator_Analysis.xlsx"},
+    {"name": "Opportunity Analysis", "path": "Body_Balance_Opportunity_Analysis.xlsx"},
+    {"name": "Production Pipeline (57 builds)", "path": "Body_Balance_Production_Pipeline.xlsx"},
+    {"name": "Cannibal Cleanup Plan (130 URLs)", "path": "Body_Balance_Cannibal_Cleanup_Plan.xlsx"},
+    {"name": "Service × City Matrix", "path": "Body_Balance_Service_City_Matrix.xlsx"},
+    {"name": "Missing Pages Plan", "path": "Body_Balance_Missing_Pages_Plan.xlsx"},
+    {"name": "Service Pages Plan", "path": "Body_Balance_Service_Pages_Plan.xlsx"},
+    {"name": "Schema Plan", "path": "Body_Balance_Schema_Plan.xlsx"},
+    {"name": "Page Refresh Pages", "path": "Body_Balance_Page_Refresh_Pages.xlsx"},
+    {"name": "GBP Posts 3-Month", "path": "Body_Balance_GBP_Posts_3Month.xlsx"},
+    {"name": "Citations 3-Month", "path": "Body_Balance_Citations_3Month.xlsx"},
+    {"name": "OffPage Stack 3-Month", "path": "Body_Balance_OffPage_Stack_3Month.xlsx"}
+  ]
+}

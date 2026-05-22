@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Body Balance Massage &amp; Float · Q2 2026 Strategic Dashboard · HQDM</title>
+  <meta name="description" content="Q2 2026 strategic dashboard for Body Balance Massage &amp; Float — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 400: '#3b82f6', 300: '#8ecae6' },
+            accent: { teal: '#0ea5a4', amber: '#f59e0b', red: '#ef4444', green: '#10b981', indigo: '#6366f1', purple: '#8b5cf6', blue: '#3b82f6' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Diverging bar for competitor churn */
+    .churn-row { display: grid; grid-template-columns: 220px 1fr 70px; gap: 6px; align-items: center; padding: 3px 0; font-size: 12px; }
+    .churn-row .label { text-align: right; padding-right: 4px; color: #1f2937; }
+    .churn-row.is-client { background: linear-gradient(90deg, rgb(254 252 232 / 0.7), rgb(254 252 232 / 0.2)); }
+    .churn-row.is-client .label { font-weight: 700; }
+    .churn-track { position: relative; height: 14px; }
+    .churn-track .axis { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #cbd5e1; }
+    .churn-bar { position: absolute; top: 1px; height: 12px; border-radius: 2px; }
+    .churn-bar.pos { background: #10b981; }
+    .churn-bar.neg { background: #ef4444; }
+    .churn-bar.client { background: #0b1220; }
+    .churn-bar.muted { background: #9ca3af; }
+    .churn-val { font-variant-numeric: tabular-nums; text-align: left; font-weight: 600; }
+
+    .pill { display: inline-block; padding: 2px 8px; font-size: 11px; font-weight: 700; border-radius: 4px; }
+    .pill.pos { background: #d1fae5; color: #065f46; }
+    .pill.neg { background: #fee2e2; color: #991b1b; }
+    .pill.warn { background: #fef3c7; color: #92400e; }
+    .pill.info { background: #dbeafe; color: #1e40af; }
+    .pill.muted { background: #e2e8f0; color: #475569; }
+
+    /* Root-cause cards */
+    .rc { border-left: 4px solid #ef4444; background: #fef2f2; padding: 12px 16px; margin: 8px 0; border-radius: 0 6px 6px 0; }
+    .rc.sec { border-left-color: #f59e0b; background: #fffbeb; }
+    .rc.opp { border-left-color: #06b6d4; background: #ecfeff; }
+    .rc.pos { border-left-color: #10b981; background: #f0fdf4; }
+    .rc .tag { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #b91c1c; color: white; letter-spacing: 0.05em; }
+    .rc.sec .tag { background: #d97706; }
+    .rc.opp .tag { background: #0891b2; }
+    .rc.pos .tag { background: #059669; }
+    .rc strong.title { display: inline-block; margin-left: 6px; font-size: 14px; color: #0b1220; }
+    .rc p { margin: 6px 0 0; font-size: 13px; line-height: 1.55; color: #1f2937; }
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <!-- ============== STICKY HEADER ============== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="../../index.html" class="text-xs text-ink-500 hover:text-ink-800 hidden sm:inline">← HQDM Dashboards</a>
+        <span class="text-ink-300 hidden sm:inline">/</span>
+        <div class="min-w-0">
+          <div class="font-semibold text-sm sm:text-base truncate">Body Balance Massage &amp; Float</div>
+          <div class="text-xs text-ink-500 truncate">Q2 2026 Strategic Dashboard</div>
+        </div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#snapshot" class="px-3 py-1.5 rounded hover:bg-slate-100">Snapshot</a>
+        <a href="#ld" class="px-3 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#churn" class="px-3 py-1.5 rounded hover:bg-slate-100">Churn</a>
+        <a href="#root" class="px-3 py-1.5 rounded hover:bg-slate-100">Root Causes</a>
+        <a href="#levers" class="px-3 py-1.5 rounded hover:bg-slate-100">Q2 Levers</a>
+        <a href="#owner" class="px-3 py-1.5 rounded hover:bg-slate-100">Owner Asks</a>
+        <a href="#kpis" class="px-3 py-1.5 rounded hover:bg-slate-100">M3 KPIs</a>
+        <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700">Client Report →</a>
+      </nav>
+      <div class="text-xs text-ink-500 font-mono hidden md:block">2026-05-18</div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,0.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span>Tier 3 · Local Services</span>
+        <span class="text-brand-300/50">·</span>
+        <span>HQDM Search Intelligence</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Body Balance Massage &amp; Float</h1>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Single-pin massage &amp; float studio · American Fork UT · 4.9★ × 402 reviews</p>
+      <p class="text-base sm:text-lg mt-6 max-w-3xl text-white/85">Q2 2026 strategic diagnosis. The pin is gaining rank where it holds cells, not plateauing. Marginal lift sits on 7 structural fixes plus redirected production at full scale.</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono">2026-05-18</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">AM</span> Matt Olderman</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">bbmassageandfloat.com</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Pin</span> <span class="font-mono">40.378, −111.789</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TL;DR ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR — the headline</div>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
+        Body Balance is <strong>gaining rank on the cells it holds</strong>. Apples-to-apples LD (avg rank on cells visible both dates) tightened <strong>+1.21 to +1.46 ranks/cell</strong> across the four massage queries Jan 19 → Apr 18. Float is owned at #1 of substantial competitors (106/106 cells, rank 1.34 / 1.68). On near-me queries BB is <strong>#2 of 10</strong> and <strong>#3 of 14</strong>. Lehi-tagged is proximity-locked (Lehi-resident pins own the head). Outside the ~10-mi grid BB is invisible (0 of 1,391 DataForSEO Maps SERP rows). The owner's perceived plateau is real for organic-side CTR (sitewide 0.80%; conversion pages 0.04–0.10%), not the underlying Maps engine. <strong>Q2 posture: hold budget · redirect targeting only · ship at the same volume as today.</strong>
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs">
+        <a href="client-report.html" class="px-3 py-1.5 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700">View full client report (3-page PDF/HTML) →</a>
+        <a href="#levers" class="px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-100">Jump to Q2 levers</a>
+        <a href="#owner" class="px-3 py-1.5 rounded border border-slate-300 hover:bg-slate-100">Owner-side asks</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HEALTH SNAPSHOT (KPIs) ============== -->
+  <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-2xl font-bold tracking-tight">Health Snapshot</h2>
+      <span class="text-xs text-ink-500">6 KPIs · click to expand</span>
+    </div>
+    <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </section>
+
+  <!-- ============== LD APPLES-TO-APPLES ============== -->
+  <section id="ld" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">LD Apples-to-Apples — Rank Movement on Cells BB Holds (Jan 19 → Apr 18 2026)</h2>
+        <p class="text-sm text-ink-500 mt-1">Avg rank computed only on cells where BB was in LD top-20 on <em>both</em> dates (106-cell grid at Lehi center). Smaller = better. BB rank-in-main-set filtered to substantial competitors (cells_both ≥ 30).</p>
+      </div>
+      <div class="overflow-x-auto p-2">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs">
+            <tr>
+              <th class="text-left font-semibold py-3 px-3">Keyword</th>
+              <th class="text-right font-semibold py-3 px-3">Cells Jan/Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Avg rank Jan → Apr</th>
+              <th class="text-right font-semibold py-3 px-3">Mean dx</th>
+              <th class="text-right font-semibold py-3 px-3">Top-3 Jan → Apr</th>
+              <th class="text-left font-semibold py-3 px-3">BB rank in main set</th>
+            </tr>
+          </thead>
+          <tbody id="ld-rows" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+      <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
+        BB tightened rank on every massage query and gained cell visibility on every non-saturated keyword. Float queries lost sub-1-rank slippage at the very top (no headroom up from rank 1.21–1.52). "Massage therapist lehi" top-3 going 1 → 0 reflects Lehi-resident pins crowding the top, not BB losing ground — BB simultaneously gained <strong>+21 cells</strong> of new top-20 visibility on that keyword.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COMPETITOR CHURN ============== -->
+  <section id="churn" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">Competitor Churn — Pleasant Grove is the Most Contested Catchment</h2>
+        <p class="text-sm text-ink-500 mt-1">Δ top-10 cells pooled across 6 priority queries × 169 cells × 2 dates. Per-GBP standalone (sibling pins independent). 18 highest-magnitude movers.</p>
+      </div>
+      <div id="churn-rows" class="p-6"></div>
+      <div class="p-4 border-t border-slate-200 bg-slate-50/60 text-xs text-ink-500 italic">
+        Body Balance gained against a churning field. Three Pleasant Grove "old winners" collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening cells that 5 new entrants filled — Spa Lounge PG +210 leads, plus Seven Springs +172, LIV +132, Hurts So Good Lindon +124. Spa Lounge PG, Hand &amp; Stone Traverse Mtn, and Calming Touch Lehi are the three competitive realities to defend against.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ROOT CAUSES ============== -->
+  <section id="root" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4">
+      <h2 class="text-2xl font-bold tracking-tight">Root Cause, Ranked</h2>
+      <span class="text-xs text-ink-500">5 buckets · P0 / Secondary / Opportunity / Positive</span>
+    </div>
+    <div id="root-cards"></div>
+  </section>
+
+  <!-- ============== Q2 LEVERS ============== -->
+  <section id="levers" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-end justify-between mb-4">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Strategic Priorities — Q2 Levers</h2>
+        <p class="text-sm text-ink-500 mt-1">11 pillars · 33 task rows · every task → specific working sheet · production continues at full scale (57 builds Q2)</p>
+      </div>
+      <span class="text-xs text-ink-500">Click a lever to expand</span>
+    </div>
+    <div id="levers-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-4"></div>
+  </section>
+
+  <!-- ============== OWNER ASKS ============== -->
+  <section id="owner" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">Owner-Side Asks (1 × 20-min call with Paul)</h2>
+        <p class="text-sm text-ink-500 mt-1">Bundle into Matt's next AM touch. Easy yeses first; substantive items grouped at the end.</p>
+      </div>
+      <div class="divide-y divide-slate-100" id="owner-rows"></div>
+    </div>
+  </section>
+
+  <!-- ============== M3 KPI SCORECARD ============== -->
+  <section id="kpis" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <h2 class="text-2xl font-bold tracking-tight">M3 Close-Out Scorecard</h2>
+        <p class="text-sm text-ink-500 mt-1">16 KPIs Aleksa &amp; Marija will report against at the M3 (August 2026) close-out. Paul to sign off via Owner Ask #8.</p>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="min-w-full text-sm">
+          <thead class="text-ink-500 text-xs bg-slate-50">
+            <tr>
+              <th class="text-left font-semibold py-3 px-4">KPI</th>
+              <th class="text-left font-semibold py-3 px-4">Baseline (May 18, 2026)</th>
+              <th class="text-left font-semibold py-3 px-4">M3 Target</th>
+            </tr>
+          </thead>
+          <tbody id="kpi-table" class="divide-y divide-slate-100"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DATA SOURCES ============== -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-slate-100/60 rounded-xl p-6 border border-slate-200">
+      <div class="text-xs font-bold uppercase tracking-widest text-ink-500 mb-3">Data sources backing this strategy</div>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-ink-600" id="sources-list"></ul>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="border-t border-slate-200 pt-6 text-xs text-ink-500 space-y-2">
+      <div><strong class="text-ink-700">HQDM Search Intelligence</strong> · Body Balance Massage &amp; Float · Q2 2026 Custom Strategy</div>
+      <div>Companion documents (Drive): Strategic Diagnosis PDF · Q2 Strategy Condensed v2 · Custom Strategy long-form · 3-Month Plan · Tasks v2 CSV · Production Pipeline · Cannibal Cleanup Plan · Service × City Matrix · Schema Plan · Service Pages Plan · Page Refresh · GBP Posts · Citations · OffPage Stack · SP-01 / CN-01 / CSM-01 briefs · Owner Conversation Items · AM Reply Note.</div>
+      <div class="text-ink-400">Confidential — internal HQDM use + authorized client viewing only. <code class="bg-slate-100 px-1.5 py-0.5 rounded text-[10px]">noindex</code> set; not indexable by search engines.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ============== Bootstrap from data.json ==============
+    fetch('data/data.json').then(r => r.json()).then(data => {
+      // KPIs
+      const kpiGrid = document.getElementById('kpi-grid');
+      data.kpis.forEach(k => {
+        const sent = k.sentiment;
+        const div = document.createElement('div');
+        div.className = `kpi-tile sent-${sent} bg-white rounded-xl border-2 p-5 shadow-sm`;
+        div.innerHTML = `
+          <div class="flex items-start gap-2">
+            <span class="sent-dot ${sent} mt-1.5"></span>
+            <div class="flex-1 min-w-0">
+              <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 leading-tight">${k.label}</div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-ink-900 mt-2 leading-none">${k.value}</div>
+              <div class="kpi-detail text-xs text-ink-600 leading-relaxed">${k.detail}</div>
+            </div>
+          </div>`;
+        div.addEventListener('click', () => div.classList.toggle('open'));
+        kpiGrid.appendChild(div);
+      });
+
+      // LD apples-to-apples
+      const ldRows = document.getElementById('ld-rows');
+      data.ld_apples_to_apples.forEach(r => {
+        const dx = (r.rank_jan - r.rank_apr).toFixed(2);
+        const dxPill = parseFloat(dx) > 0 ? `<span class="pill pos">+${dx}</span>` : `<span class="pill warn">${dx}</span>`;
+        const isFloat = r.kw.startsWith('float');
+        const cellDelta = r.cells_apr - r.cells_jan;
+        const cellDeltaStr = cellDelta > 0 ? `(+${cellDelta})` : (cellDelta < 0 ? `(${cellDelta})` : '');
+        const top3Bold = r.top3_apr > r.top3_jan ? `<strong>${r.top3_apr}</strong>` : `${r.top3_apr}`;
+        const rankBold = r.rank_apr < r.rank_jan ? `<strong>${r.rank_apr.toFixed(2)}</strong>` : `${r.rank_apr.toFixed(2)}`;
+        const setBold = r.bb_rank_in_set.startsWith('#1') || r.bb_rank_in_set.startsWith('#2') || r.bb_rank_in_set.startsWith('#3') ? `<strong>${r.bb_rank_in_set}</strong>` : r.bb_rank_in_set;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-medium text-ink-800">${r.kw}</td>
+          <td class="py-2.5 px-3 text-right font-mono text-ink-700">${r.cells_jan} / ${r.cells_apr} <span class="text-ink-400">${cellDeltaStr}</span></td>
+          <td class="py-2.5 px-3 text-right font-mono">${r.rank_jan.toFixed(2)} → ${rankBold}</td>
+          <td class="py-2.5 px-3 text-right">${dxPill}</td>
+          <td class="py-2.5 px-3 text-right font-mono">${r.top3_jan} → ${top3Bold}</td>
+          <td class="py-2.5 px-3">${setBold}</td>`;
+        ldRows.appendChild(tr);
+      });
+
+      // Competitor churn diverging bars
+      const churnEl = document.getElementById('churn-rows');
+      const maxAbs = Math.max(...data.competitor_churn.map(c => Math.abs(c.delta)));
+      data.competitor_churn.forEach(c => {
+        const widthPct = (Math.abs(c.delta) / maxAbs) * 45;
+        const row = document.createElement('div');
+        row.className = `churn-row ${c.is_client ? 'is-client' : ''}`;
+        const sibling = c.name.includes('sibling');
+        const barCls = c.is_client ? 'client' : (sibling ? 'muted' : (c.delta > 0 ? 'pos' : 'neg'));
+        const side = c.delta > 0 ? 'left: 50%' : `right: 50%`;
+        const label = c.is_client ? 'Body Balance (us)' : c.name;
+        const valStr = c.delta > 0 ? `+${c.delta}` : `${c.delta}`;
+        const valColor = c.is_client ? 'color:#0b1220' : (sibling ? 'color:#64748b;font-style:italic' : '');
+        row.innerHTML = `
+          <div class="label" style="${valColor}">${label}</div>
+          <div class="churn-track"><div class="axis"></div><div class="churn-bar ${barCls}" style="${side}; width: ${widthPct}%;"></div></div>
+          <div class="churn-val" style="${valColor}">${valStr}</div>`;
+        churnEl.appendChild(row);
+      });
+
+      // Root cause cards
+      const rcEl = document.getElementById('root-cards');
+      const sevMap = { 'P0': '', 'Secondary': 'sec', 'Opportunity': 'opp', 'Positive': 'pos' };
+      const sevTagMap = { 'P0': 'PRIMARY · P0', 'Secondary': 'SECONDARY', 'Opportunity': 'OPPORTUNITY', 'Positive': 'POSITIVE' };
+      data.root_causes.forEach(rc => {
+        const cls = sevMap[rc.severity] || '';
+        const tag = sevTagMap[rc.severity] || rc.severity;
+        const card = document.createElement('div');
+        card.className = `rc ${cls}`;
+        card.innerHTML = `<span class="tag">${tag}</span><strong class="title">${rc.title}</strong><p>${rc.body}</p>`;
+        rcEl.appendChild(card);
+      });
+
+      // Levers
+      const leversEl = document.getElementById('levers-grid');
+      data.levers.forEach(l => {
+        const items = l.items.map(i => `<li class="text-xs text-ink-600 leading-relaxed py-0.5">• ${i}</li>`).join('');
+        const card = document.createElement('div');
+        card.className = `lever-card lever-${l.color} bg-white rounded-lg border border-slate-200 p-5 shadow-sm`;
+        card.innerHTML = `
+          <div class="flex items-start justify-between gap-3 mb-2">
+            <div class="min-w-0">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-ink-400">Lever ${l.id}</div>
+              <h3 class="text-base font-bold text-ink-900 leading-tight mt-0.5">${l.name}</h3>
+            </div>
+            <span class="badge-${l.color} text-[10px] font-bold uppercase px-2 py-1 rounded whitespace-nowrap">${l.impact}</span>
+          </div>
+          <ul class="mt-3 space-y-0.5">${items}</ul>`;
+        leversEl.appendChild(card);
+      });
+
+      // Owner asks
+      const ownerEl = document.getElementById('owner-rows');
+      data.owner_asks.forEach(o => {
+        const div = document.createElement('div');
+        div.className = 'p-4 sm:p-5 hover:bg-slate-50';
+        const pillCls = o.status.toLowerCase().startsWith('approved') ? 'pos' : 'warn';
+        const pillTxt = o.status.toLowerCase().startsWith('approved') ? 'Approved' : 'Pending';
+        div.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-mono font-bold text-ink-500">${o.id}</span>
+                <span class="pill ${pillCls}">${pillTxt}</span>
+              </div>
+              <div class="font-semibold text-sm text-ink-900">${o.label}</div>
+              <div class="text-xs text-ink-600 mt-1 leading-relaxed">${o.status}</div>
+            </div>
+          </div>`;
+        ownerEl.appendChild(div);
+      });
+
+      // M3 KPIs
+      const kpiTable = document.getElementById('kpi-table');
+      data.m3_kpis.forEach(k => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="py-2.5 px-4 font-medium text-ink-800">${k.kpi}</td>
+          <td class="py-2.5 px-4 text-ink-600 font-mono text-xs">${k.baseline}</td>
+          <td class="py-2.5 px-4 text-ink-900 font-semibold font-mono text-xs">${k.target}</td>`;
+        kpiTable.appendChild(tr);
+      });
+
+      // Data sources
+      const sourcesEl = document.getElementById('sources-list');
+      data.data_sources.forEach(s => {
+        const li = document.createElement('li');
+        li.className = 'before:content-["—"] before:text-ink-400 before:mr-2 leading-relaxed';
+        li.textContent = s;
+        sourcesEl.appendChild(li);
+      });
+    }).catch(err => {
+      console.error('Failed to load data.json', err);
+      document.getElementById('kpi-grid').innerHTML = '<div class="text-sm text-accent-red">Failed to load dashboard data. Check console.</div>';
+    });
+  </script>
+</body>
+</html>

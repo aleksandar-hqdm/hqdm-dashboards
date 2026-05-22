@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Body Balance Massage &amp; Float — Q2 2026 Strategic Diagnosis (v2)</title>
+<style>
+  @page { size: A4; margin: 11mm 11mm 11mm 11mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font: 8pt/1.28 -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #0b1726;
+    background: white;
+  }
+  .banner {
+    background: linear-gradient(90deg, #c97a17 0 10px, transparent 10px);
+    padding: 4px 0 4px 16px;
+    margin-bottom: 4px;
+  }
+  .banner .label {
+    background: #c97a17;
+    color: white;
+    font-weight: 700;
+    font-size: 7.5pt;
+    padding: 2px 7px;
+    letter-spacing: 0.4px;
+  }
+  .banner .meta {
+    font-size: 7.5pt;
+    color: #5b6671;
+    margin-left: 8px;
+  }
+  h1 {
+    font-size: 15pt;
+    line-height: 1.12;
+    margin: 4px 0 3px;
+    color: #0b1726;
+    font-weight: 700;
+  }
+  .subtitle {
+    font-size: 8.5pt;
+    color: #5b6671;
+    margin: 0 0 7px;
+    max-width: 760px;
+  }
+  h2 {
+    font-size: 9.5pt;
+    margin: 7px 0 4px;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid #0b1726;
+    color: #0b1726;
+  }
+  h2 .num {
+    background: #0b1726;
+    color: white;
+    font-size: 7pt;
+    padding: 1.5px 5px;
+    margin-right: 5px;
+    font-weight: 700;
+  }
+  p { margin: 3px 0 4px; }
+  strong { color: #0b1726; }
+
+  /* KPI tiles — 3 cols, 2 rows */
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 6px; margin: 3px 0 5px; }
+  .tile { border: 1px solid #ddd; border-top: 3px solid #1f7a3a; padding: 4px 6px; }
+  .tile.warn { border-top-color: #d97706; }
+  .tile.neg { border-top-color: #b91c1c; }
+  .tile.info { border-top-color: #0e7490; }
+  .tile .lbl { font-size: 6.5pt; color: #5b6671; text-transform: uppercase; letter-spacing: 0.3px; font-weight: 600; line-height: 1.15; }
+  .tile .val { font-size: 13pt; font-weight: 700; color: #0b1726; line-height: 1.05; margin: 1px 0 2px; }
+  .tile .cap { font-size: 7pt; color: #5b6671; line-height: 1.22; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 3px 0 5px; font-size: 7.5pt; }
+  th { background: #0b1726; color: white; text-align: left; padding: 3px 5px; font-weight: 700; font-size: 7.5pt; }
+  td { padding: 2px 5px; border-bottom: 1px solid #e8eaee; vertical-align: top; line-height: 1.25; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .pill { display: inline-block; padding: 1px 5px; font-size: 6.8pt; font-weight: 700; }
+  .pill.pos { background: #c6efce; color: #1f7a3a; }
+  .pill.neg { background: #ffc7ce; color: #b91c1c; }
+  .pill.warn { background: #fff4c2; color: #92400e; }
+  .pill.info { background: #cffafe; color: #0e7490; }
+
+  /* Root-cause cards */
+  .rc { border-left: 3px solid #b91c1c; background: #fff5f5; padding: 3px 6px; margin: 3px 0; }
+  .rc.rc-p0 { border-left-color: #7f1d1d; background: #fee2e2; }
+  .rc.sec { border-left-color: #d97706; background: #fffbeb; }
+  .rc.opp { border-left-color: #0e7490; background: #ecfeff; }
+  .rc.pos { border-left-color: #1f7a3a; background: #f0fdf4; }
+  .rc .tag { display: inline-block; background: #b91c1c; color: white; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.3px; padding: 1px 5px; margin-right: 4px; }
+  .rc.rc-p0 .tag { background: #7f1d1d; }
+  .rc.sec .tag { background: #d97706; }
+  .rc.opp .tag { background: #0e7490; }
+  .rc.pos .tag { background: #1f7a3a; }
+  .rc strong.title { font-size: 8pt; }
+  .rc p { margin: 1px 0; font-size: 7.5pt; line-height: 1.25; }
+
+  /* Diverging bar */
+  .div-row { display: grid; grid-template-columns: 180px 1fr 55px; gap: 3px; align-items: center; padding: 0.5px 0; font-size: 7pt; }
+  .div-row .label { text-align: right; padding-right: 3px; color: #0b1726; line-height: 1.15; }
+  .div-row.bb { background: #fffbe6; }
+  .div-row.bb .label { font-weight: 700; }
+  .div-track { position: relative; height: 9px; }
+  .div-track .axis { position: absolute; left: 50%; top: 0; bottom: 0; width: 1px; background: #c0c5cd; }
+  .div-bar { position: absolute; top: 0; height: 9px; }
+  .div-bar.pos { background: #1f7a3a; }
+  .div-bar.neg { background: #b91c1c; }
+  .div-val { font-size: 7pt; font-variant-numeric: tabular-nums; text-align: left; }
+
+  .caption { font-size: 7pt; color: #5b6671; line-height: 1.28; margin: 3px 0 5px; }
+  ul.tight { margin: 3px 0 4px; padding-left: 16px; }
+  ul.tight li { margin: 1.5px 0; font-size: 7.5pt; line-height: 1.28; }
+
+  @page { @bottom-right { content: "Page " counter(page) " of " counter(pages); font-size: 7pt; color: #5b6671; font-family: -apple-system, Arial, sans-serif; } }
+  .pgbreak { page-break-before: always; }
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .lead p { margin: 2px 0 4px; font-size: 8pt; line-height: 1.3; }
+
+  /* HQDM hub navigation strip (hidden on print) */
+  .hqdm-navstrip {
+    background: #0b1726;
+    color: #fff;
+    padding: 9px 14px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+  .hqdm-navstrip a { color: #8ecae6; text-decoration: none; font-weight: 600; }
+  .hqdm-navstrip a:hover { color: #fff; text-decoration: underline; }
+  .hqdm-navstrip .sep { color: #5b6671; padding: 0 3px; }
+  .hqdm-navstrip .meta { color: #94a3b8; }
+  .hqdm-navstrip .btn {
+    background: #1d5b8a;
+    color: #fff !important;
+    padding: 4px 10px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+  .hqdm-navstrip .btn:hover { background: #2b7ab8; text-decoration: none; }
+  body { padding-top: 0; }
+  @media screen { body { background: #f1f5f9; padding: 0 !important; }
+    .banner, h1, .subtitle, h2, .lead, .tiles, table, .div-row, .rc, .grid-2, ul.tight, p.caption, p { max-width: 940px; margin-left: auto; margin-right: auto; }
+    .banner { margin-top: 14px; }
+  }
+  @media print { .hqdm-navstrip { display: none !important; } }
+</style>
+</head>
+<body>
+
+<!-- HQDM hub nav strip (hidden on print) -->
+<div class="hqdm-navstrip">
+  <div>
+    <a href="../../index.html">← HQDM Dashboards</a>
+    <span class="sep">/</span>
+    <span class="meta">Body Balance Massage &amp; Float</span>
+    <span class="sep">·</span>
+    <span class="meta">Client Report</span>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center;">
+    <a href="index.html" class="btn">Full strategic dashboard →</a>
+    <a href="javascript:window.print()" class="btn" style="background:#475569;">Print / PDF</a>
+  </div>
+</div>
+
+<!-- ====== PAGE 1 ====== -->
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h1>Body Balance Massage &amp; Float: Q2 2026 Strategic Diagnosis (v2)</h1>
+<p class="subtitle">Single-pin massage and float studio in American Fork UT. The pin is gaining rank where it holds cells, not plateauing. Where the marginal dollar lifts in the next 90 days — at the same production scale as today.</p>
+
+<h2><span class="num">01</span>Executive Summary</h2>
+<div class="lead">
+<p>Body Balance is <strong>gaining rank on the cells it holds.</strong> Apples-to-apples LD (avg rank on cells visible both dates) tightened <strong>+1.21 to +1.46 ranks/cell</strong> across the four massage queries Jan 19 → Apr 18. Float is owned at #1 of substantial competitors (106/106 cells, rank 1.34 / 1.68). On near-me queries BB is <strong>#2 of 10</strong> and <strong>#3 of 14.</strong> Lehi-tagged is proximity-locked (#15 of 17 — Lehi-resident pins own the head). Outside the ~10-mi grid BB is invisible (0 of 1,391 DataForSEO Maps SERP rows at 10 outside cities). The owner's perceived plateau is real for organic-side CTR (sitewide 0.80%; conversion pages 0.04–0.10%), not the underlying Maps engine.</p>
+
+<p>Marginal lift sits on seven structural fixes <em>plus</em> redirected content targeting — at the same production scale. <strong>(1)</strong> /trigger-point-therapy/ still references medical injections + dry needling (verified live 2026-05-18); owner-flagged P0 rewrite + 301 the duplicate canonical. <strong>(2)</strong> Sitewide NAP: 372/372 pages carry chat phone (855-5834); only 1 has GBP primary (734-9798). One-line fix. <strong>(3)</strong> /cupping-massage/ returns 404 → small-level 301 to /modalities-techniques/cupping/ canonical. <strong>(4)</strong> 326 GSC cannibal queries — 84 redundant pages get <strong>small-level 301 to MAIN canonicals</strong> (not bulk NOINDEX — location pages are a primary deliverable; production never paused). <strong>(5)</strong> Service + LocalBusiness + FAQPage schema on 8 priority canonicals (every page today only has generic DaySpa). <strong>(6)</strong> Continued production at full scale: 6 location pages + 10 blogs + 3 on-topic geo pages per month — retargeted at real catchment × service matrix gaps (Cedar Hills × deep tissue, Pleasant Grove × cupping, Lehi × swedish). <strong>(7)</strong> Authority layer: 2 manual citations/mo + 1 PR pitch/mo on top of existing off-page rotation.</p>
+
+<p>Three competitive realities to defend against: <strong>The Spa Lounge Pleasant Grove</strong> (4.8★ × 803 — surged 11.27 → 2.96 avg rank with +35 cells), <strong>Hand &amp; Stone Traverse Mountain</strong> (chain, 602 reviews), <strong>Calming Touch Massage Lehi</strong> (4.9★ × 521 — collapsed 8+ ranks; the open-cells gain). One opportunity: three mid-2025 Pleasant Grove winners collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening grid cells in a catchment BB already serves. <strong>Q2 spend posture: hold budget; redirect targeting only; ship at the same volume as today.</strong></p>
+</div>
+
+<h2><span class="num">02</span>Health Snapshot</h2>
+<div class="tiles">
+  <div class="tile">
+    <div class="lbl">Rank tightening — massage therapist near me</div>
+    <div class="val">7.43 → 5.97</div>
+    <div class="cap">Avg rank on 95 cells both dates. BB #2 of 10. Top-3 cells 27 → 37.</div>
+  </div>
+  <div class="tile">
+    <div class="lbl">Float surface</div>
+    <div class="val">#1 / 106 cells</div>
+    <div class="cap">BB #1 on both float queries. Rank 1.34 / 1.68. Owned moat.</div>
+  </div>
+  <div class="tile info">
+    <div class="lbl">Outside-grid Maps visibility</div>
+    <div class="val">0 / 1,391</div>
+    <div class="cap">10 outside cities × 9 queries. Invisible outside ~10-mi grid. Geographic constraint.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">Sitewide NAP mismatch</div>
+    <div class="val">372 / 372 pages</div>
+    <div class="cap">Every page uses chat phone (855-5834). GBP primary is (801) 734-9798. One-line fix.</div>
+  </div>
+  <div class="tile neg">
+    <div class="lbl">Trigger-point page scope</div>
+    <div class="val">P0 Fix</div>
+    <div class="cap">/trigger-point-therapy/ still references medical injections + dry needling. Owner-flagged.</div>
+  </div>
+  <div class="tile warn">
+    <div class="lbl">GSC cannibalization</div>
+    <div class="val">326 queries</div>
+    <div class="cap">2+ BB URLs ranking on the same query. Fix: small-level 301-to-MAIN on 84 redundant pages.</div>
+  </div>
+</div>
+
+<h2><span class="num">03</span>LD Apples-to-Apples — Rank Movement on Cells BB Holds (Jan 19 → Apr 18 2026)</h2>
+<p class="caption">Avg rank computed only on cells where BB was in LD top-20 on <em>both</em> dates (106-cell grid at Lehi center). Smaller = better. Cells visible only one date tracked separately. BB rank-in-main-set filtered to substantial competitors (cells_both ≥ 30).</p>
+
+<table>
+  <thead>
+    <tr><th>Keyword</th><th>Cells Jan/Apr</th><th>Avg rank Jan → Apr</th><th>Mean dx</th><th>Top-3 Jan → Apr</th><th>BB rank in main set</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>massage therapist near me</td><td class="num">97 / 100 (+3)</td><td class="num">7.43 → <strong>5.97</strong></td><td class="num"><span class="pill pos">+1.46</span></td><td class="num">27 → <strong>37</strong></td><td><strong>#2 of 10</strong></td></tr>
+    <tr><td>massages near me</td><td class="num">93 / 95 (+2)</td><td class="num">8.29 → <strong>7.08</strong></td><td class="num"><span class="pill pos">+1.21</span></td><td class="num">18 → 15</td><td><strong>#3 of 14</strong></td></tr>
+    <tr><td>massage therapy</td><td class="num">89 / 94 (+5)</td><td class="num">9.76 → <strong>8.54</strong></td><td class="num"><span class="pill pos">+1.22</span></td><td class="num">15 → <strong>23</strong></td><td>#7 of 14</td></tr>
+    <tr><td>massage therapist lehi</td><td class="num">75 / 96 (<strong>+21</strong>)</td><td class="num">15.62 → 14.41</td><td class="num"><span class="pill pos">+1.22</span></td><td class="num">1 → 0</td><td>#15 of 17 (proximity-locked)</td></tr>
+    <tr><td>float therapy</td><td class="num">106 / 106</td><td class="num">1.52 → 1.68</td><td class="num"><span class="pill warn">−0.16</span></td><td class="num">98 → 94</td><td><strong>#1 of 20</strong></td></tr>
+    <tr><td>float tank</td><td class="num">106 / 106</td><td class="num">1.21 → 1.34</td><td class="num"><span class="pill warn">−0.13</span></td><td class="num">104 → 102</td><td><strong>#1 of 18</strong></td></tr>
+  </tbody>
+</table>
+<p class="caption">BB tightened rank on every massage query and gained cell visibility on every non-saturated keyword. Float queries lost sub-1-rank slippage at the very top (no headroom up from rank 1.21–1.52). "Massage therapist lehi" top-3 going 1 → 0 reflects Lehi-resident pins crowding the very top, not BB losing ground — BB simultaneously gained <strong>+21 cells of new top-20 visibility</strong> on that keyword.</p>
+
+<!-- ====== PAGE 2 ====== -->
+<div class="pgbreak"></div>
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h2><span class="num">04</span>Service-Area Priority Matrix &amp; Critical Issues</h2>
+<div class="grid-2">
+  <table>
+    <thead><tr><th>Anchor town</th><th>Dist</th><th>Q2 priority</th></tr></thead>
+    <tbody>
+      <tr><td><strong>American Fork (pin)</strong></td><td>0</td><td><span class="pill info">Defend</span></td></tr>
+      <tr><td>Lehi</td><td>~3 mi N</td><td><span class="pill info">Defend</span></td></tr>
+      <tr><td><strong>Pleasant Grove</strong></td><td>~3 mi NW</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td><strong>Lindon</strong></td><td>~3 mi N</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td><strong>Highland</strong></td><td>~3 mi NE</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td><strong>Cedar Hills</strong></td><td>~2 mi NE</td><td><span class="pill pos">Push</span></td></tr>
+      <tr><td>Orem</td><td>~5 mi S</td><td>Maintain</td></tr>
+      <tr><td>Saratoga Springs</td><td>~5 mi W</td><td>Maintain</td></tr>
+      <tr><td>Alpine / Vineyard</td><td>~4 mi</td><td>Defer Q3</td></tr>
+    </tbody>
+  </table>
+  <table>
+    <thead><tr><th>Critical issue</th><th>Severity</th></tr></thead>
+    <tbody>
+      <tr><td>Sitewide NAP (372/372 chat phone)</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>/trigger-point-therapy/ medical-injection refs</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>/cupping-massage/ 404 + duplicate canonical</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>Service-page schema generic DaySpa only</td><td><span class="pill neg">P0</span></td></tr>
+      <tr><td>326 cannibal queries (small-301 cleanup)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>83 pages bleeding CTR at pos 4-20 (/about/ 0.04%, /pricing/ 0.10%)</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>Service × city matrix: 3-5 of 150 cells covered</td><td><span class="pill warn">P1</span></td></tr>
+      <tr><td>BB ranks #1–#3 at AF pin for 27 untracked queries</td><td><span class="pill info">Opp</span></td></tr>
+      <tr><td>Outside-grid invisibility (geographic, not fixable)</td><td><span class="pill info">N/A</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<h2><span class="num">05</span>Competitor Churn — Pleasant Grove is the Most Contested Catchment</h2>
+<p class="caption">Δ top-10 cells pooled across 6 priority queries × 169 cells × 2 dates. Per-GBP standalone (sibling pins independent). 18 highest-magnitude movers.</p>
+
+<div style="margin: 4px 0;">
+  <div class="div-row"><div class="label">The Spa Lounge (Pleasant Grove)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 30%;"></div></div><div class="div-val">+210</div></div>
+  <div class="div-row"><div class="label">Seven Springs Spa (Pleasant Grove)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 24.5%;"></div></div><div class="div-val">+172</div></div>
+  <div class="div-row"><div class="label">LIV Massage (Pleasant Grove)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 18.9%;"></div></div><div class="div-val">+132</div></div>
+  <div class="div-row"><div class="label">Hurts So Good Bodywork (Lindon)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 17.7%;"></div></div><div class="div-val">+124</div></div>
+  <div class="div-row"><div class="label">The Spa Lounge (Lehi)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 11%;"></div></div><div class="div-val">+77</div></div>
+  <div class="div-row"><div class="label">Natural Healing &amp; Massage (American Fork)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 7.7%;"></div></div><div class="div-val">+54</div></div>
+  <div class="div-row"><div class="label">Megan the Massager (Highland)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 7.6%;"></div></div><div class="div-val">+53</div></div>
+  <div class="div-row"><div class="label">Hand &amp; Stone (Traverse Mtn)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 5.6%;"></div></div><div class="div-val">+39</div></div>
+  <div class="div-row"><div class="label">The Centered Stone (American Fork)</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 5.4%;"></div></div><div class="div-val">+38</div></div>
+  <div class="div-row"><div class="label">Total Muscle Therapy: PG</div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 5.3%;"></div></div><div class="div-val">+37</div></div>
+  <div class="div-row bb"><div class="label"><strong>Body Balance (us)</strong></div><div class="div-track"><div class="axis"></div><div class="div-bar pos" style="left: 50%; width: 3.3%; background: #0b1726;"></div></div><div class="div-val"><strong>+23 · gained</strong></div></div>
+  <div class="div-row"><div class="label">The Massage Barre (Lehi)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 8.4%;"></div></div><div class="div-val">−59</div></div>
+  <div class="div-row"><div class="label">Fashion Massage &amp; Spa (Lehi)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 11%;"></div></div><div class="div-val">−77</div></div>
+  <div class="div-row"><div class="label">Zen Zone Massage (Highland)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 11.7%;"></div></div><div class="div-val">−82</div></div>
+  <div class="div-row"><div class="label">Calming Touch Massage (Lehi, 521 rev)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 13.9%;"></div></div><div class="div-val">−97</div></div>
+  <div class="div-row"><div class="label">MassageLuXe (Pleasant Grove)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 19.7%;"></div></div><div class="div-val">−138</div></div>
+  <div class="div-row"><div class="label">Paradise Massage Studio (Pleasant Grove)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 20.4%;"></div></div><div class="div-val">−143</div></div>
+  <div class="div-row" style="color: #5b6671; font-style: italic;"><div class="label">Paul and Tasha Massage (owner's sibling pin)</div><div class="div-track"><div class="axis"></div><div class="div-bar neg" style="right: 50%; width: 26.9%; background: #9ca3af;"></div></div><div class="div-val" style="color: #5b6671;">−188</div></div>
+</div>
+
+<p class="caption">Body Balance gained against a churning field. Three Pleasant Grove "old winners" collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling Paul and Tasha −188), opening cells that 5 new entrants filled — Spa Lounge PG +210 leads, plus Seven Springs +172, LIV +132, Hurts So Good Lindon +124, Total Muscle PG +37. Same-city American Fork competitors also gained (Natural Healing +54, The Centered Stone +38, Relaxing Remedy +45). Pleasant Grove is the most contested catchment surface. Spa Lounge PG, Hand &amp; Stone Traverse Mtn, and Calming Touch Lehi are the three competitive realities to defend against.</p>
+
+<!-- ====== PAGE 3 ====== -->
+<div class="pgbreak"></div>
+<div class="banner">
+  <span class="label">STRATEGIC DIAGNOSIS · TIER 3</span>
+  <span class="meta">Prepared 2026-05-18 · Aleksandar Spasevski · HQDM Search Intelligence</span>
+</div>
+
+<h2><span class="num">06</span>Root Cause, Ranked</h2>
+
+<div class="rc rc-p0">
+  <span class="tag">PRIMARY · P0</span>
+  <strong class="title">Trigger-point page scope mismatch + duplicate canonical</strong>
+  <p>/trigger-point-therapy/ (2,773 words live 2026-05-18) references "trigger point injection" + "dry needling" — medical procedures BB does not perform. Owner-flagged 2026-05-15. <strong>SP-01</strong> rewrite retains H1 + URL, replaces body content, deploys Service + LocalBusiness + FAQPage schema. <strong>CN-01</strong> then 301s the duplicate /trigger-point-therapy/ to its canonical /modalities-techniques/trigger-point-therapy/ (745 inbound links — the internally-canonical version).</p>
+</div>
+
+<div class="rc">
+  <span class="tag">PRIMARY</span>
+  <strong class="title">Sitewide NAP mismatch + schema thinness + cupping 404</strong>
+  <p>372/372 sitemap pages use chat phone (855-5834); only 1 has GBP primary (734-9798). Every page carries a single generic DaySpa schema block — no Service / LocalBusiness / FAQPage anywhere. <strong>HP-01</strong> NAP fix is a one-hour edit. Schema rollout: <strong>SP-02</strong> M2 on 4 canonicals (Swedish + Deep Tissue + Sports + Prenatal); <strong>SP-03</strong> M3 on 4 more (Float + Cranial Sacral + Reflexology + Gua Sha); <strong>ON-07</strong> M3 sitewide BlogPosting + BreadcrumbList. <strong>TPL-01</strong> small-level 301 from /cupping-massage/ to /modalities-techniques/cupping/ canonical resolves the orphaned-cupping-cluster blog posts.</p>
+</div>
+
+<div class="rc sec">
+  <span class="tag">SECONDARY</span>
+  <strong class="title">Doorway + geo cohort needs targeted fill + small-redirect (location pages are a primary deliverable — never bulk NOINDEX)</strong>
+  <p>The sitemap holds 90 templated suburb URLs + 40 off-topic geo pages. 326 GSC queries have 2+ BB URLs ranking. Per-URL decisions in Cannibal_Cleanup_Plan.xlsx: <strong>3 LEAVE / 9 REFRESH / 1 REFRESH-TO-REAL / 19 REPURPOSE / 84 small-level 301-to-MAIN / 14 REVIEW.</strong> Production at scale CONTINUES — 6 new location pages/month redirected at real catchment × service matrix gaps (Cedar Hills × deep tissue, Pleasant Grove × cupping, Lehi × swedish, etc.). One typo flagged: /skilled-massage-herapist-in-harvest-park-ut/ (missing "t").</p>
+</div>
+
+<div class="rc opp">
+  <span class="tag">OPPORTUNITY</span>
+  <strong class="title">Pleasant Grove cells open + BB ranks #1–#3 at AF pin for 27 untracked service queries</strong>
+  <p>3 PG winners collapsed in the same window (Paradise −143, MassageLuXe −138, owner's sibling −188). 5 new PG entrants filled the space. 8 of BB's 19 declared service-area towns sit in the PG / Lindon radius. Concurrently, DataForSEO Maps SERP at AF pin shows BB <strong>#1 for 15 untracked service queries</strong> (couples massage AF, deep tissue AF, cupping therapy near me, myofascial release, sensory deprivation tank, etc.) and #2-#3 for 12 more — <strong>lymphatic drainage massage</strong> (3,600 UT vol) is the biggest unlocked surface, gated on Owner #7. <strong>MR-01</strong> M2 builds /myofascial-release/ to capture existing #1 rank; <strong>LD-01</strong> M3 builds /lymphatic-drainage-massage/ if owner confirms the service.</p>
+</div>
+
+<div class="rc pos">
+  <span class="tag">POSITIVE</span>
+  <strong class="title">Float moat held + near-me growth tightening + 4.9★ × 402 + DA 20 → 28 documented</strong>
+  <p>Float queries held at 106/106 saturation at rank 1.21-1.68. On near-me queries BB is #2 and #3 of substantial competitive sets. Top-3 cells on "massage therapist near me" 27 → 37. 4.9★ × 402 reviews is a real asset. GBP Posts ~3/mo (close to 4/mo SOP). Off-page lift (DA 20 → 28 per Matt's email) is documented progress. Marginal lift is now post cadence + matrix-fill pages + Q-format LLM articles + service-page schema, not new doorways.</p>
+</div>
+
+<h2><span class="num">07</span>Strategic Priorities — Q2 Levers (11 pillars · 33 task rows · each → specific sheet)</h2>
+<table>
+  <thead><tr><th style="width: 22px;">#</th><th>Lever and action</th><th style="width: 76px;">Owner</th><th style="width: 130px;">Sheet</th><th style="width: 64px;">Impact</th></tr></thead>
+  <tbody>
+    <tr><td>A</td><td><strong>Single-shift fixes (M1).</strong> HP-01 sitewide NAP · SP-01 trigger point rewrite (owner-flagged) · CN-01 duplicate-canonical 301 · TPL-01 cupping 404 → 301 to canonical.</td><td>HQDM On-Page</td><td>Schema_Plan + Service_Pages_Plan + SP-01 + CN-01 briefs</td><td><span class="pill neg">P0 · M1</span></td></tr>
+    <tr><td>B</td><td><strong>Cannibal cleanup — fill + small-redirect (never bulk-kill).</strong> 130 URLs decisioned. M1 refresh real-catchment-bleeding batch. M2: 84 small-level 301-to-MAIN + 19 repurpose. M3: 14 review + typo + final refresh.</td><td>HQDM On-Page</td><td>Cannibal_Cleanup_Plan</td><td><span class="pill warn">High · 90d</span></td></tr>
+    <tr><td>C+D+E</td><td><strong>PRODUCTION AT SCALE — 57 builds Q2.</strong> LP-NEW 6 location pages/mo at matrix gaps (Cedar Hills × DT, PG × cupping, Lehi × swedish…) · BLOG-NEW 10/mo strategic mix (Q-format LLM + on-topic clusters + refresh-cohort incl. BB's #1 click-driver) · GEO-NEW 3/mo on-topic wellness + athletic-recovery + buyer's-guide (replaces burger/dermatologist cadence).</td><td>Aleksa + Alex Liam + Content</td><td><strong>Production_Pipeline</strong> (3 tabs)</td><td><span class="pill pos">High · 90d</span></td></tr>
+    <tr><td>F</td><td><strong>Service schema rollout sitewide.</strong> SP-02 M2 (Swedish + DT + Sports + Prenatal) · SP-03 M3 (Float + Cranial Sacral + Reflexology + Gua Sha) · ON-07 M3 sitewide BlogPosting + BreadcrumbList.</td><td>HQDM On-Page</td><td>Service_Pages_Plan + Schema_Plan</td><td><span class="pill warn">High · 90d</span></td></tr>
+    <tr><td>G</td><td><strong>Missing-page builds.</strong> MR-01 M2 /myofascial-release/ (BB #1 at AF pin, no page). LD-01 M3 /lymphatic-drainage-massage/ (3,600 UT vol — gated on Owner #7).</td><td>HQDM On-Page</td><td>Missing_Pages_Plan</td><td><span class="pill pos">Opp · 60d</span></td></tr>
+    <tr><td>H</td><td><strong>Meta + title refresh sweep.</strong> ON-01_M1 top 12 bleeding-CTR URLs (/about/, /pricing-and-membership/, /upgrades/…). ON-01_M2 next 10.</td><td>HQDM On-Page</td><td>Page_Refresh_Pages</td><td><span class="pill warn">High · 60d</span></td></tr>
+    <tr><td>I</td><td><strong>GBP velocity + photo blitz.</strong> Posts 3/mo → 4/mo sustained. 8 photos/mo geotagged 40.378,-111.789. M3 Services-tab audit.</td><td>HQDM Local</td><td>GBP_Posts_3Month</td><td><span class="pill warn">High · 90d</span></td></tr>
+    <tr><td>J</td><td><strong>Authority + PR layered on existing rotation.</strong> 2 manual citations/mo (AMTA + ABMP + Utah MTA + chambers; mom blogs; recovery vertical). 1 PR pitch/mo (postpartum M2; athlete M3). OFF-Rotation continues at current cadence.</td><td>HQDM Off-Page</td><td>Citations_3Month + OffPage_Stack</td><td>Medium · 90d</td></tr>
+    <tr><td>K</td><td><strong>Reporting.</strong> Add 14 untracked-service kws to LD cadence M1. Indexation + CTR delta tracker M2. Q2 close-out vs 16-KPI scorecard M3.</td><td>Marija + Aleksandar</td><td>OffPage_Stack (Reporting_Plan tab)</td><td><span class="pill neg">P0 · M3</span></td></tr>
+  </tbody>
+</table>
+
+<h2><span class="num">08</span>Marginal-Value KPIs and Owner-Side Asks</h2>
+<ul class="tight">
+  <li><strong>LD avg rank on cells visible both dates — M3 targets:</strong> massage therapist near me 5.97 → ≤5.0 · massages near me 7.08 → ≤6.0 · massage therapy 8.54 → ≤7.5 · massage therapist lehi 14.41 → ≤13.0 (proximity-locked stretch) · float queries hold #1 with avg rank ≤2.0. If 3 of 4 massage queries don't move toward target → reassess content mix.</li>
+  <li><strong>GSC sitewide CTR</strong> 0.80% → ≥1.2% · <strong>clicks/30d</strong> 2,743 → ≥3,500 · <strong>cannibal queries</strong> 326 → ≤250 · <strong>/about/</strong> CTR 0.04% → ≥3% · <strong>/pricing-and-membership/</strong> CTR 0.10% → ≥4% · <strong>CallRail callers ≥90 sec</strong> 39/mo → ≥45/mo · <strong>matrix coverage</strong> 3-5/150 → ≥12/150 · <strong>service pages with FAQ schema</strong> 0/8 → 8/8.</li>
+  <li><strong>Owner asks (one 20-min call):</strong> #2 confirm sitewide phone canonical · #3 confirm cupping is still on menu · #7 NEW — does BB perform manual lymphatic drainage (gates LD-01, 3,600 UT searches/mo) · #8 NEW — sign off on the 16-KPI M3 scorecard. #1 trigger-point rewrite already approved 2026-05-15.</li>
+</ul>
+
+<p class="caption" style="margin-top: 5px;"><strong>Companion docs (Drive):</strong> Custom Strategy long-form · 3-Month Plan · Tasks v2 CSV (33 rows) · <strong>Production_Pipeline.xlsx</strong> (57 builds across Suburb / Blog / Geo) · <strong>Cannibal_Cleanup_Plan.xlsx</strong> (130 URLs decisioned, 301-to-MAIN logic) · Service_City_Matrix · Missing_Pages_Plan · LocalDominator_Analysis · Opportunity_Analysis · Schema_Plan + Service_Pages_Plan + Page_Refresh + GBP_Posts + Citations + OffPage_Stack · SP-01 + CN-01 + CSM-01 briefs · Owner Conversation Items · AM Reply Note.</p>
+
+</body>
+</html>
