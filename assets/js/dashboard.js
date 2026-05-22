@@ -978,11 +978,30 @@ function renderHeatmapLoop(ld) {
   HM_STATE.ldData = ld;
   HM_STATE.currentKw = ld.keywords[0];
 
-  // Resolve date keys + labels — backwards-compatible: PM has no date_keys field,
-  // so fall back to the legacy ['feb','may'] pair with ['Feb 2','May 1'] labels.
-  HM_STATE.dateKeys   = ld.date_keys || ['feb', 'may'];
-  HM_STATE.dateLabels = ld.dates     || ['Feb 2, 2026', 'May 1, 2026'];
+  // Resolve global date keys + labels (the master set). Per-keyword dates are
+  // a subset of this — some keywords only have Feb/May, others have all four.
+  HM_STATE.dateKeysAll   = ld.date_keys || ['feb', 'may'];
+  HM_STATE.dateLabelsAll = ld.dates     || ['Feb 2, 2026', 'May 1, 2026'];
+  // Active per-keyword dates (recomputed on tab switch)
+  HM_STATE.dateKeys   = HM_STATE.dateKeysAll;
+  HM_STATE.dateLabels = HM_STATE.dateLabelsAll;
   HM_STATE.currentDate = HM_STATE.dateKeys[0];
+
+  // Per-keyword competitor sets (fallback to global ld.competitors)
+  HM_STATE.entitiesForKw = function (kw) {
+    const grid = ld.grids[kw];
+    const comps = (grid && grid.competitors) || ld.competitors || [];
+    return [ld.client, ...comps];
+  };
+  HM_STATE.activeDatesForKw = function (kw) {
+    const grid = ld.grids[kw];
+    const present = (grid && grid.dates_present) || HM_STATE.dateKeysAll;
+    const labels = present.map(k => {
+      const i = HM_STATE.dateKeysAll.indexOf(k);
+      return i >= 0 ? HM_STATE.dateLabelsAll[i] : k;
+    });
+    return { keys: present, labels };
+  };
 
   // Build keyword tabs
   const tabs = document.getElementById('hm-keyword-tabs');
@@ -1000,30 +1019,36 @@ function renderHeatmapLoop(ld) {
       btn.classList.add('bg-brand-500', 'text-white');
       btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-ink-700', 'hover:bg-slate-100');
       HM_STATE.currentKw = btn.dataset.kw;
+      refreshDatesForCurrentKw();
       buildPanels();
       applyState();
     });
   });
 
-  // Build/wire date buttons. If the HTML has a `#hm-date-tabs` placeholder,
-  // populate it dynamically with one button per ld.date_keys entry. Otherwise
-  // wire the existing static buttons (PM-legacy `.hm-date-btn` with data-date).
   const dateTabsContainer = document.getElementById('hm-date-tabs');
-  if (dateTabsContainer) {
-    dateTabsContainer.innerHTML = HM_STATE.dateKeys.map((k, i) => {
-      const label = HM_STATE.dateLabels[i] || k;
-      const active = i === 0;
-      return `<button data-date="${escapeHtml(k)}" class="hm-date-btn px-3 py-1.5 text-xs font-semibold ${active ? 'bg-brand-500 text-white' : 'bg-white text-ink-700'}">${escapeHtml(label)}</button>`;
-    }).join('');
+
+  function refreshDatesForCurrentKw() {
+    const { keys, labels } = HM_STATE.activeDatesForKw(HM_STATE.currentKw);
+    HM_STATE.dateKeys = keys;
+    HM_STATE.dateLabels = labels;
+    HM_STATE.currentDate = keys[0];
+    if (dateTabsContainer) {
+      dateTabsContainer.innerHTML = HM_STATE.dateKeys.map((k, i) => {
+        const label = HM_STATE.dateLabels[i] || k;
+        const active = i === 0;
+        return `<button data-date="${escapeHtml(k)}" class="hm-date-btn px-3 py-1.5 text-xs font-semibold ${active ? 'bg-brand-500 text-white' : 'bg-white text-ink-700'}">${escapeHtml(label)}</button>`;
+      }).join('');
+      dateTabsContainer.querySelectorAll('.hm-date-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          pauseLoop();
+          HM_STATE.currentDate = btn.dataset.date;
+          updateDateBtnStyles();
+          applyState();
+        });
+      });
+    }
   }
-  document.querySelectorAll('.hm-date-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      pauseLoop();
-      HM_STATE.currentDate = btn.dataset.date;
-      updateDateBtnStyles();
-      applyState();
-    });
-  });
+  refreshDatesForCurrentKw();
 
   // Play/pause
   document.getElementById('hm-play-pause').addEventListener('click', () => {
@@ -1047,7 +1072,7 @@ function buildPanels() {
   const kw = HM_STATE.currentKw;
   const grid = ld.grids[kw];
   if (!grid) return;
-  const entities = [ld.client, ...ld.competitors];
+  const entities = HM_STATE.entitiesForKw ? HM_STATE.entitiesForKw(kw) : [ld.client, ...(ld.competitors || [])];
 
   // Normalize bounds across the union of cells. Same x/y space across Feb/May.
   const minX = grid.bounds.min_x, maxX = grid.bounds.max_x;

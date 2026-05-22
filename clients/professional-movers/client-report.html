@@ -211,34 +211,68 @@
     <!-- ============ SEARCH-BY-SEARCH ============ -->
     <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What the Maps Are Telling Us — Search by Search</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
         <div class="panel" style="border-top: 4px solid #0ea5e9;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"movers detroit"</div>
+            <span class="pill good">Big Gain</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            <strong>The biggest single Maps move this quarter.</strong> Average position improved <strong>12.47 → 10.54 (+1.93 positions gained)</strong>, and your top-10 footprint exploded from <strong>9 cells to 67 cells</strong> across the 13×13 Detroit-area grid — more than 7× the reach. The Walled Lake pin is extending into Detroit-side cells at a rate that puts a managed Detroit Woodward GBP in play to convert this into top-3 placements.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #10b981;">
           <div class="flex items-center justify-between gap-2 mb-2">
             <div class="font-bold text-slate-800">"detroit moving company"</div>
             <span class="pill good">Gaining</span>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            This is the search where your Walled Lake pin has to "stretch" to reach Detroit. <strong>Your top-10 footprint doubled from 8 cells to 16 cells</strong> between February and May, and average position improved from <strong>14.3 → 13.5</strong>. A finding worth noting: Google has already indexed a <em>second</em> "Professional Movers.com" listing at the 1001 Woodward Ave address (ranking around #19). Claiming and managing that listing is the single biggest Maps move available to us next quarter.
+            Your top-10 footprint <strong>doubled from 8 cells to 16 cells</strong> between February and May, and average position improved <strong>14.26 → 13.54</strong>. A finding worth noting: Google has already indexed a <em>second</em> "Professional Movers.com" listing at the 1001 Woodward Ave address (ranking around #19). Claiming and managing that listing is the single biggest Maps move available next quarter.
           </p>
         </div>
-        <div class="panel" style="border-top: 4px solid #10b981;">
-          <div class="flex items-center justify-between gap-2 mb-2">
-            <div class="font-bold text-slate-800">"movers"</div>
-            <span class="pill good">Holding Strong</span>
-          </div>
-          <p class="text-sm text-slate-700 leading-relaxed">
-            The highest-volume commercial query in the moving vertical, and you've held <strong>#4 average position</strong> in the western Detroit metro (Walled Lake / Novi / Commerce / Wixom / Milford / Northville) throughout Feb–May 2026 with <strong>79-84 of 121 grid cells in top-3</strong>. The position dipped slightly in late February (avg 4.3 → 4.5) and recovered by March 31. No algorithmic damage on the Maps side here.
-          </p>
-        </div>
+
         <div class="panel" style="border-top: 4px solid #8b5cf6;">
           <div class="flex items-center justify-between gap-2 mb-2">
             <div class="font-bold text-slate-800">"movers near me"</div>
             <span class="pill good">Strongest Defense</span>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Your strongest search by every measure. Average position <strong>3.3 → 3.4</strong> across all 121 grid cells (essentially flat), and top-3 footprint actually <strong>grew from 82 cells to 85 cells</strong>. This is the highest-intent "near me" query and you own it — the work going forward is keeping it.
+            Your strongest "near me" search. Average position <strong>3.30 → 3.40</strong> across all 121 grid cells (essentially flat), top-3 footprint <strong>grew from 82 to 84 cells</strong>, top-10 reach <strong>112 → 113</strong>. Highest-intent commercial query and you own it.
           </p>
         </div>
+
+        <div class="panel" style="border-top: 4px solid #f59e0b;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"moving companies"</div>
+            <span class="pill good">Holding</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Stable through the cliff. Average position <strong>4.77 → 4.83</strong> (essentially flat), top-3 reach <strong>65 → 64 cells</strong>, top-10 reach <strong>105 → 104</strong>. Bos Moving and Moving Made Easy are the closest competitors in the western metro grid.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #ec4899;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"moving company near me"</div>
+            <span class="pill watch">Slight Dip</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            Slight position dip we're watching. Average <strong>3.61 → 3.89</strong>, top-3 reach <strong>83 → 79 cells</strong>. Still a top-4 position across 121 cells — well within the strong-defense band — but worth flagging for the GBP optimization work in Priority 1.
+          </p>
+        </div>
+
+        <div class="panel" style="border-top: 4px solid #6366f1;">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <div class="font-bold text-slate-800">"movers"</div>
+            <span class="pill watch">Slight Dip</span>
+          </div>
+          <p class="text-sm text-slate-700 leading-relaxed">
+            The most competitive commercial query in the moving vertical. Average position <strong>3.96 → 4.26</strong>, top-3 reach <strong>81 → 79 cells</strong> — both essentially flat with a small dip we expect to recover via the GBP review-velocity work + photo refresh in Q3.
+          </p>
+        </div>
+
       </div>
     </section>
 
@@ -277,14 +311,6 @@
           </p>
           <p class="text-sm text-slate-700 mt-2 leading-relaxed">
             Beyond that, we'll add two more tracking events to mirror the pattern we use on our other moving accounts: <code>click_phone_number</code> (fires when someone taps a phone-number link on the website) and <code>gmb_click</code> (fires on Google Business Profile-tagged link clicks). Once both are live, monthly reports will show a complete leads picture by channel.
-          </p>
-        </div>
-
-        <div class="panel" style="border-left: 4px solid #8b5cf6;">
-          <div class="text-[10px] font-bold uppercase tracking-widest text-purple-700 mb-1">Backlink hygiene</div>
-          <h3 class="font-bold text-slate-900 text-base">Spam-flagged links in your backlink profile</h3>
-          <p class="text-sm text-slate-700 mt-2 leading-relaxed">
-            Ahrefs (a leading SEO tool) flags 49.6% of your referring pages as spam-pattern links. Google's algorithm weights this kind of link profile more heavily than it did before 2025. We'll be auditing the full backlink list, building a Google "disavow" file for the worst offenders, and shifting off-page work toward earned-link channels like the Detroit Free Press / Oakland Press relationship you already have, plus citations in industry-specific directories (BBB, AMSA, ProMover).
           </p>
         </div>
 
@@ -463,14 +489,34 @@
     function renderHeatmap(ld) {
       const state = {
         currentKw: ld.keywords[0],
-        currentDate: (ld.date_keys || [])[0],
-        dateKeys: ld.date_keys || ['feb', 'may'],
-        dateLabels: ld.dates || ['Feb', 'May'],
+        currentDate: null,
+        dateKeysAll: ld.date_keys || ['feb', 'may'],
+        dateLabelsAll: ld.dates || ['Feb', 'May'],
+        // Per-keyword active date sequence — recomputed on tab switch
+        dateKeys: [],
+        dateLabels: [],
         playing: true,
         timer: null,
         PHASE_MS: 1100,
       };
-      const entities = [ld.client, ...(ld.competitors || [])];
+
+      // Per-keyword competitor sets (fallback to global ld.competitors if not set)
+      function entitiesForKw(kw) {
+        const grid = ld.grids[kw];
+        const comps = (grid && grid.competitors) || ld.competitors || [];
+        return [ld.client, ...comps];
+      }
+
+      // Per-keyword active dates (from grid.dates_present), fallback to all
+      function activeDatesForKw(kw) {
+        const grid = ld.grids[kw];
+        const present = (grid && grid.dates_present) || state.dateKeysAll;
+        const labels = present.map(k => {
+          const i = state.dateKeysAll.indexOf(k);
+          return i >= 0 ? state.dateLabelsAll[i] : k;
+        });
+        return { keys: present, labels };
+      }
 
       const kwTabs = document.getElementById('cr-kw-tabs');
       kwTabs.innerHTML = ld.keywords.map((kw, i) => `
@@ -485,23 +531,33 @@
           btn.classList.add('bg-brand-500', 'text-white');
           btn.classList.remove('bg-white', 'border', 'border-slate-300', 'text-slate-700', 'hover:bg-slate-100');
           state.currentKw = btn.dataset.kw;
+          refreshDatesForKw();
           buildPanels(); applyState();
+          if (state.playing) play();
         });
       });
 
       const dateTabs = document.getElementById('cr-date-tabs');
-      dateTabs.innerHTML = state.dateKeys.map((k, i) => {
-        const label = state.dateLabels[i] || k;
-        const active = i === 0;
-        return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
-      }).join('');
-      dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          pause();
-          state.currentDate = btn.dataset.date;
-          updateDateBtns(); applyState();
+
+      function refreshDatesForKw() {
+        const { keys, labels } = activeDatesForKw(state.currentKw);
+        state.dateKeys = keys;
+        state.dateLabels = labels;
+        state.currentDate = keys[0];
+        dateTabs.innerHTML = state.dateKeys.map((k, i) => {
+          const label = state.dateLabels[i] || k;
+          const active = i === 0;
+          return `<button data-date="${k}" class="cr-date-btn px-2.5 py-1 text-xs font-semibold ${active?'bg-brand-500 text-white':'bg-white text-slate-700'}">${label}</button>`;
+        }).join('');
+        dateTabs.querySelectorAll('.cr-date-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            pause();
+            state.currentDate = btn.dataset.date;
+            updateDateBtns(); applyState();
+          });
         });
-      });
+      }
+      refreshDatesForKw();
 
       const playBtn = document.getElementById('cr-play');
       playBtn.addEventListener('click', () => { if (state.playing) pause(); else play(); });
@@ -545,6 +601,7 @@
         const cols = maxX - minX + 1;
         const rows = maxY - minY + 1;
         const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
+        const entities = entitiesForKw(kw);
 
         const idx = {};
         state.dateKeys.forEach(d => {
@@ -604,6 +661,7 @@
         const grid = ld.grids[kw];
         if (!grid || !_idx) return;
         const date = state.currentDate;
+        const entities = entitiesForKw(kw);
         entities.forEach(entity => {
           const gridEl = document.querySelector(`.cr-grid[data-entity="${CSS.escape(entity)}"]`);
           if (!gridEl) return;
