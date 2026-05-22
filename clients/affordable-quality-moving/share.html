@@ -90,24 +90,24 @@
       </div>
     </section>
 
-    <!-- ============ TREND CHART — Google Search + GBP, Q4 2025 → NOW ============ -->
+    <!-- ============ TREND CHART — Organic Search only, Q4 2025 → NOW ============ -->
     <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of <strong>Google Search</strong> (people finding your website organically) plus <strong>Google Business Profile</strong> (people clicking from your Maps listing) — the two channels that together account for ~85% of your real customer lead flow. Top chart = monthly visitors per channel; bottom = monthly leads (form submits + phone calls + GBP clicks). The cliff in Jan–Feb (HQDM's first two months) and the recovery in Apr–May are visible on both lines.
+          Eight months of <strong>organic search performance</strong> — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026, HQDM's first two months), the stabilization (Mar), and the recovery (Apr–May). Top chart = monthly visitors; bottom = monthly leads (form submits + phone calls + GBP clicks).
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Visitors / Month — by channel</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors / Month</div>
             <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
           </div>
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Leads / Month — by channel</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Month</div>
             <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
           </div>
         </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">"Google Business Profile" = sessions arriving via the GBP "Website" button (utm_source=gmb). May 2026 is a partial month (first 22 days) — dashed lines. The 18-month + all-channels view is in the full strategic dashboard.</p>
+        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days) — dashed line. The 18-month + all-channels (Direct, Paid, Referral) view is in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -263,10 +263,10 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
         <div class="panel">
           <div class="flex items-center justify-between gap-2 mb-1">
-            <div class="font-bold text-slate-800">"local movers"</div>
-            <span class="pill watch">Watch</span>
+            <div class="font-bold text-slate-800">"packing &amp; storage"</div>
+            <span class="pill good">Gaining</span>
           </div>
-          <p class="text-sm text-slate-700">Still #1 in market (avg position 3.95), but lost 13 top-3 spots since March. Choppy across 4 scans — strong run through early May then dipped. <strong>Action: defend.</strong></p>
+          <p class="text-sm text-slate-700">Your bright spot. Moved up almost a full position (4.73 → 3.82). +5 top-3 spots. Storage is recurring revenue — different economics than one-time moves. <strong>Action: double down.</strong></p>
         </div>
         <div class="panel">
           <div class="flex items-center justify-between gap-2 mb-1">
@@ -277,10 +277,10 @@
         </div>
         <div class="panel">
           <div class="flex items-center justify-between gap-2 mb-1">
-            <div class="font-bold text-slate-800">"packing &amp; storage"</div>
-            <span class="pill good">Gaining</span>
+            <div class="font-bold text-slate-800">"local movers"</div>
+            <span class="pill watch">Watch</span>
           </div>
-          <p class="text-sm text-slate-700">Your bright spot. Moved up almost a full position (4.73 → 3.82). +5 top-3 spots. Storage is recurring revenue — different economics than one-time moves. <strong>Action: double down.</strong></p>
+          <p class="text-sm text-slate-700">Still #1 in market (avg position 3.95), but lost 13 top-3 spots since March. Choppy across 4 scans — strong run through early May then dipped. <strong>Action: defend.</strong></p>
         </div>
       </div>
     </section>
@@ -297,6 +297,7 @@
             <thead>
               <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
                 <th class="py-2 pr-3">Competitor</th>
+                <th class="py-2 pr-3 text-right">Avg Rank</th>
                 <th class="py-2 pr-3 text-right">Top-3 Map Spots</th>
                 <th class="py-2 text-right">Change Since March</th>
               </tr>
@@ -304,38 +305,44 @@
             <tbody>
               <tr class="border-b border-slate-100 bg-brand-50/40">
                 <td class="py-2 pr-3 font-bold text-brand-700">AQMS (you)</td>
+                <td class="py-2 pr-3 text-right font-mono font-bold text-brand-700">3.6</td>
                 <td class="py-2 pr-3 text-right font-mono font-bold">224</td>
                 <td class="py-2 text-right text-rose-700 font-bold">−15</td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="py-2 pr-3">Camelot Moving &amp; Storage</td>
+                <td class="py-2 pr-3 text-right font-mono">6.6</td>
                 <td class="py-2 pr-3 text-right font-mono">109</td>
                 <td class="py-2 text-right text-rose-700 font-bold">+47</td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="py-2 pr-3">Expert Santa Clarita Movers</td>
+                <td class="py-2 pr-3 text-right font-mono">7.5</td>
                 <td class="py-2 pr-3 text-right font-mono">72</td>
                 <td class="py-2 text-right text-slate-500">+3</td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="py-2 pr-3">J&amp;G Full Service Moving</td>
+                <td class="py-2 pr-3 text-right font-mono">6.3</td>
                 <td class="py-2 pr-3 text-right font-mono">65</td>
                 <td class="py-2 text-right text-emerald-700">−24</td>
               </tr>
               <tr class="border-b border-slate-100">
                 <td class="py-2 pr-3">Precision Moving &amp; Storage <span class="text-xs text-slate-500">(new entrant)</span></td>
+                <td class="py-2 pr-3 text-right font-mono">9.2</td>
                 <td class="py-2 pr-3 text-right font-mono">39</td>
                 <td class="py-2 text-right text-rose-700 font-bold">+31</td>
               </tr>
               <tr>
                 <td class="py-2 pr-3">Victory Moving</td>
+                <td class="py-2 pr-3 text-right font-mono">9.4</td>
                 <td class="py-2 pr-3 text-right font-mono">36</td>
                 <td class="py-2 text-right text-rose-700">+20</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-slate-500 mt-3 italic">"Change" = top-3 map spots gained or lost since March 8 2026. A negative number for J&amp;G (green) means they lost spots — good for you.</p>
+        <p class="text-xs text-slate-500 mt-3 italic">"Avg Rank" = average position across the same 350 map cells × 3 priority queries (May 18 scan). Lower is better — AQMS at 3.6 is dominant. "Change" = top-3 map spots gained or lost since March 8 2026. A negative number for J&amp;G (green) means they lost spots — good for you.</p>
       </div>
     </section>
 
@@ -492,9 +499,9 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
       <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
         <ul class="space-y-2.5 text-sm text-slate-800">
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition cadence.</strong> Our team is already calling your customers post-job to request reviews — we'll keep that running and target <strong>+20 reviews by end of M3</strong>. Anything specific you'd like us to mention (or avoid) in the outreach script?</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Service-area expansion priority.</strong> We're going to build dedicated city pages + Driving Direction pins for the 5 outer cities your single Santa Clarita pin doesn't reach. Default queue: Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce. If any other city in your 20-city service area drives more bookings, let us know so it can jump the queue.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Two other Google Business profiles we'd like to take on.</strong> Our DataForSEO sweep found AQMS-branded GBPs we didn't know about: <strong>Burbank</strong> (4500 Lakeside Dr Suite 101, 5★ but only 10 reviews) and <strong>Encinitas</strong> (5★ / 48 reviews). Both are under-optimized — we'd like to verify they're yours, get manager access, and bring them under the same defense + review-acquisition cadence as the Santa Clarita pin.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review acquisition.</strong> Reviews are the single highest-leverage thing for defending your #1 Maps position — and you're already at 452/4.9★, ahead of every local competitor. We'd like to understand what you're doing today to ask customers for reviews (calls? texts? emails?) so we can either amplify what's working or layer on a complementary cadence. What does your post-job review process look like?</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Service-area priorities.</strong> Your declared service area lists 20 cities including Castaic, Simi Valley, San Fernando, Moorpark, and Agua Dulce — all outside your Santa Clarita pin's effective Maps reach. Before we propose how to extend coverage, which of those (or others) actually drive the most bookings for you today?</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Other Google Business profiles.</strong> We're aware AQMS has Google Business listings in <strong>Burbank</strong> and <strong>Encinitas</strong> in addition to the Santa Clarita pin we manage. Both look under-optimized today, and bringing them under the same review + content + posting cadence as Santa Clarita could meaningfully grow your bookings out of those metros. Worth a separate conversation about whether/how to onboard them — let's talk.</span></li>
           <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Paid ads restart?</strong> Your Google Ads went to zero around April 2025 (before our engagement). Want us to audit the account and restart, or is paid permanently off the roadmap?</span></li>
           <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Prior-vendor traffic-tool.</strong> The October–December 2025 Direct-traffic spike (1,103 → 1,901 → 1,288 sessions) is consistent with a third-party "traffic tool" or link-building automation that was running before we engaged. We'd like to confirm any such campaign is fully halted so it doesn't trigger another algorithmic flag.</span></li>
         </ul>
@@ -529,50 +536,46 @@
     renderTrendCharts(DATA);
     if (LD) renderHeatmap(LD);
 
-    // ====== Trend Charts (Google Search + GBP · last 8 months · Q4 2025 → now) ======
+    // ====== Trend Charts (Organic Search only · last 8 months · Q4 2025 → now) ======
+    // Note: previously experimented with splitting Organic into Google Search + GBP-utm series,
+    // but GBP-utm GA4 conversion attribution looked suspicious (Apr-May 2026 showing ~100% CVR),
+    // so reverted to the full Organic Search channel (which DOES include GBP-utm-tagged traffic,
+    // since site uses utm_medium=organic). Cleaner story until we can verify GBP-only numbers.
     function renderTrendCharts(d) {
       const t = d.trend; if (!t) return;
-      const months = t.months || [];
-      const split = t.organic_split;
-      if (!split) return;
-
-      // Slice the organic_split series to align with last 8 months on the main `months` x-axis.
       const WINDOW = 8;
-      const startIdx = Math.max(0, months.length - WINDOW);
-      const monthsWindow = months.slice(startIdx);
-      // organic_split.months_iso may differ in length from t.months. Align by ISO position to be safe.
-      const splitMonthsIso = split.months_iso || [];
-      const splitStartIdx = Math.max(0, splitMonthsIso.length - WINDOW);
-      const googleSearchSess = (split.sessions.google_search || []).slice(splitStartIdx);
-      const gbpSess          = (split.sessions.gbp_utm       || []).slice(splitStartIdx);
-      const googleSearchConv = (split.form_submits.google_search || []).slice(splitStartIdx);
-      const gbpConv          = (split.form_submits.gbp_utm       || []).slice(splitStartIdx);
+      const allMonths = t.months || [];
+      const startIdx = Math.max(0, allMonths.length - WINDOW);
+      const months = allMonths.slice(startIdx);
+      const organicSessions = (t.sessions?.organic || []).slice(startIdx);
+      const organicConversions = (t.form_submits?.organic || []).slice(startIdx);
 
-      const partialIdx = monthsWindow.findIndex(m => /\*/.test(m));
-      const splitForPartial = (data) => {
+      const partialIdx = months.findIndex(m => /\*/.test(m));
+      const splitSeries = (data) => {
         if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
         const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
         const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
         return { solid, dashed };
       };
+      const ses = splitSeries(organicSessions);
+      const con = splitSeries(organicConversions);
 
-      const buildSeries = (data, color, label) => {
-        const s = splitForPartial(data);
-        return [
-          {
-            label: label, data: s.solid,
-            borderColor: color, backgroundColor: color + '18',
-            borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6,
-            fill: true, spanGaps: false,
-          },
-          {
-            label: label + ' (partial month)', data: s.dashed,
-            borderColor: color, backgroundColor: 'transparent',
-            borderDash: [6, 4], borderWidth: 2.5, tension: 0.25,
-            pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false,
-          },
-        ];
-      };
+      const buildDatasets = (split, color, label) => [
+        {
+          label: label,
+          data: split.solid,
+          borderColor: color, backgroundColor: color + '20',
+          borderWidth: 3, tension: 0.25, pointRadius: 3, pointHoverRadius: 6,
+          fill: true, spanGaps: false,
+        },
+        {
+          label: label + ' (partial month)',
+          data: split.dashed,
+          borderColor: color, backgroundColor: 'transparent',
+          borderDash: [6, 4], borderWidth: 2.5, tension: 0.25,
+          pointRadius: 3, pointHoverRadius: 6, fill: false, spanGaps: false,
+        },
+      ];
 
       const opts = (yLabel) => ({
         responsive: true, maintainAspectRatio: false,
@@ -597,21 +600,15 @@
       });
 
       const sesEl = document.getElementById('trend-sessions');
-      if (sesEl) new Chart(sesEl, {
+      if (sesEl && organicSessions.length) new Chart(sesEl, {
         type: 'line',
-        data: { labels: monthsWindow, datasets: [
-          ...buildSeries(googleSearchSess, '#1d5b8a', 'Google Search'),
-          ...buildSeries(gbpSess,          '#f59e0b', 'Google Business Profile'),
-        ] },
+        data: { labels: months, datasets: buildDatasets(ses, '#1d5b8a', 'Organic Search Visitors') },
         options: opts('monthly visitors'),
       });
       const conEl = document.getElementById('trend-conversions');
-      if (conEl) new Chart(conEl, {
+      if (conEl && organicConversions.length) new Chart(conEl, {
         type: 'line',
-        data: { labels: monthsWindow, datasets: [
-          ...buildSeries(googleSearchConv, '#10b981', 'Google Search Leads'),
-          ...buildSeries(gbpConv,          '#0ea5a4', 'GBP Leads'),
-        ] },
+        data: { labels: months, datasets: buildDatasets(con, '#10b981', 'Organic Search Leads') },
         options: opts('monthly leads'),
       });
     }
