@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Client Report · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/client-report.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+
+  <!-- Slim navigation strip (hidden when printed) -->
+  <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="report-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <a href="../../index.html" class="text-slate-500 hover:text-slate-900">← All clients</a>
+        <span class="text-slate-300">/</span>
+        <span class="font-semibold truncate" id="hdr-client">Client</span>
+        <span class="text-slate-400 hidden sm:inline" id="hdr-quarter"></span>
+        <span class="text-slate-300 hidden sm:inline">·</span>
+        <span class="text-slate-500 hidden sm:inline">Client Report</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="./index.html" class="text-brand-500 font-semibold hover:underline">Full strategic dashboard →</a>
+        <button onclick="window.print()" class="px-2.5 py-1 rounded border border-slate-300 text-slate-600 hover:bg-slate-50">Print / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
+
+    <!-- ============ HERO ============ -->
+    <section class="border-b border-slate-200 pb-4 mb-5">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM Search Intelligence</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight" id="hero-client">Client</h1>
+      <p class="text-sm text-slate-600 mt-1" id="hero-tagline"></p>
+      <div class="flex flex-wrap gap-4 mt-3 text-[11px] text-slate-500">
+        <span><span class="font-semibold text-slate-700" id="hero-period">Client Report</span></span>
+        <span id="hero-prepared"></span>
+        <span id="hero-domain" class="font-mono"></span>
+        <span id="hero-tier"></span>
+      </div>
+    </section>
+
+    <!-- ============ EXECUTIVE SUMMARY ============ -->
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Executive Summary</h2>
+      <div class="summary-card rounded-lg p-4 sm:p-5 border-l-4 border-brand-500">
+        <p id="exec-summary" class="text-sm sm:text-[15px] leading-relaxed text-slate-800"></p>
+      </div>
+    </section>
+
+    <!-- ============ YoY HEADLINE TILES ============ -->
+    <section class="mb-5">
+      <div class="flex items-end justify-between mb-2">
+        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Year-over-Year Movement</h2>
+        <span class="text-[10px] text-slate-400" id="yoy-note">Organic Search channel</span>
+      </div>
+      <div id="yoy-tiles" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+    </section>
+
+    <!-- ============ QUARTERLY KPI TABLE ============ -->
+    <section class="mb-6 qtable-wrap">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Quarterly Movement — Organic Search</h2>
+      <div class="bg-white rounded-lg border border-slate-200 overflow-hidden">
+        <table class="qtable w-full text-sm">
+          <thead class="bg-slate-50">
+            <tr>
+              <th class="text-left py-2 px-3">Quarter</th>
+              <th class="text-right py-2 px-3">Sessions (qtr total)</th>
+              <th class="text-right py-2 px-3">Conversions (qtr total)</th>
+              <th class="text-right py-2 px-3">CVR</th>
+            </tr>
+          </thead>
+          <tbody id="qtable-body"></tbody>
+        </table>
+      </div>
+      <p class="text-[10px] text-slate-400 mt-1.5">Quarter totals from GA4 (Organic Search). Most recent quarter highlighted; partial quarters carry an asterisk in the label.</p>
+    </section>
+
+    <!-- ============ PAGE BREAK (print only) ============ -->
+    <div class="page-break"></div>
+
+    <!-- ============ MONTHLY TREND CHART ============ -->
+    <section class="mb-6 trend-wrap">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — Traffic + Conversions</h2>
+      <div class="bg-white rounded-lg border border-slate-200 p-4">
+        <div style="height: 280px;"><canvas id="trend-chart"></canvas></div>
+        <p class="text-[10px] text-slate-500 mt-2 italic" id="trend-partial-note"></p>
+      </div>
+    </section>
+
+    <!-- ============ STRATEGIC FOCUS ============ -->
+    <section class="mb-6">
+      <div class="flex items-end justify-between mb-2">
+        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Strategic Focus — Next 3 Months</h2>
+        <span class="text-[10px] text-slate-400">Condensed view · full plan in the strategic dashboard</span>
+      </div>
+      <div id="levers-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <div>
+        <span class="font-semibold text-slate-700" id="footer-org">HQDM Search Intelligence</span>
+        · <span id="footer-quarter"></span>
+        · Prepared by <span id="footer-author"></span>
+        · <span id="footer-prepared"></span>
+      </div>
+      <div class="text-slate-400">Confidential — authorized client viewing only. noindex.</div>
+    </footer>
+
+  </main>
+
+  <script src="../../assets/js/client-report.js"></script>
+</body>
+</html>
