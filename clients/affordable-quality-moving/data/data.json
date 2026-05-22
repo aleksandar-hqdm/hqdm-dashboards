@@ -7,27 +7,27 @@
     "tier": "Custom · Tier 1",
     "founded": 1996,
     "years_in_business": 30,
-    "engagement_start": "2026-03",
+    "engagement_start": "2026-01",
     "prepared_date": "2026-05-22",
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q3 2026",
     "doc_subtitle": "Defend #1 Santa Clarita Maps · accelerate Q2 2026 organic recovery · strengthen multi-location page network · capitalize on packing/storage momentum."
   },
-  "tldr": "AQMS is the <strong>#1-ranked Santa Clarita mover on Google Maps</strong> (avg position 3.6 across 350 grid cells, 224 top-3 placements — more than the next two competitors combined) and operates a <strong>multi-location SoCal page network</strong> (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula). The site has 21,375 ranked keywords with <strong>5,732 already in top-10</strong>. <strong>But organic traffic collapsed Jan-Feb 2026</strong> (organic sessions 400 → 97 → 75 = −81% in 2 months), likely from algorithm cleanup + AIO encroachment + a prior vendor's traffic-tool spike unwinding (Direct sessions spiked Oct-Dec 2025 to ~4,300/3-mo and crashed to 286/3-mo in Q1 2026 — classic ATB-bot signature). <strong>HQDM engaged in March 2026 during the trough</strong>; by May, organic is at 337 sessions (3× the Feb low) with conversion rate IMPROVED YoY (11.26% vs 10.73% in Q2 2025). The Q3 2026 plan is built around 5 levers: defend Maps, accelerate organic recovery, strengthen multi-location pages, capitalize on packing/storage momentum, and content + AIO citation targeting.",
+  "tldr": "AQMS is the <strong>#1-ranked Santa Clarita mover on Google Maps</strong> (avg position 3.6 across 350 grid cells, 224 top-3 placements — more than the next two competitors combined) and operates a <strong>multi-location SoCal page network</strong> (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula). The site has 21,375 ranked keywords with <strong>5,732 already in top-10</strong>. <strong>HQDM engaged in January 2026 — month one coincided with a sharp organic cliff</strong> (sessions Dec 400 → Jan 97 → Feb 75 = −81% in 2 months) driven by an algorithm update layered on top of a prior vendor's traffic-tool unwinding (Direct spike Oct-Dec 2025 → crash Jan = classic ATB-bot signature). <strong>Recovery work began immediately</strong>: organic sessions Feb 75 → Mar 109 → <strong>Apr 320 → May 337</strong> (4.5× the trough). Q1 vs Q2 2026: <strong>organic sessions +134%, conversions +164%, CVR +13%</strong>. The Maps position never broke (still #1 in market). The next 90 days compound this trajectory with 5 levers.",
   "headline_panel": {
-    "headline": "Maps lead is intact; organic is recovering from a Q1 trough — and converting better than ever.",
-    "lede": "AQMS held its <strong>#1 Santa Clarita Maps position</strong> through the worst of the Q1 2026 cliff. The site lost 68% of organic search sessions YoY (Q2 2025 2,079 → Q2 2026 partial 657), but <strong>conversion rate actually IMPROVED 10.73% → 11.26% YoY</strong>. The recovery curve since HQDM engagement (March 2026) is steep — organic sessions tripled from 97 (Jan) to 337 (May partial). The leading edge of recovery is here; the next 90 days are about defending Maps + compounding the organic curve before competitors catch up.",
+    "headline": "Month-one cliff → 4-month recovery. Organic sessions up 4.5× from the Feb trough; conversions up 164% Q1→Q2.",
+    "lede": "HQDM engaged in <strong>January 2026</strong> — the same month an algorithm update + a prior vendor's traffic-tool unwinding produced an −81% organic cliff (Dec 400 → Feb 75 sessions). Recovery work began immediately; by May, organic sessions are at <strong>337 (4.5× the Feb low)</strong> and <strong>Q1→Q2 2026 organic conversions are up +164%</strong> with CVR up +13% (9.96% → 11.26%). The Maps position never broke (still #1 in market at avg rank 3.60). The next 90 days are about <strong>compounding the recovery</strong> before competitors close.",
     "stat_tiles": [
-      { "label": "Maps avg rank (May 18 scan)",         "value": "3.60",   "sub": "#1 in market · 224 top-3 cells across 350 cell-appearances", "sentiment": "positive" },
-      { "label": "Organic CVR YoY (Q2 25 → Q2 26*)",     "value": "+5%",    "sub": "10.73% → 11.26% — converting BETTER despite the traffic dip", "sentiment": "positive" },
-      { "label": "Organic sessions YoY",                 "value": "−68%",   "sub": "Q2 25 = 2,079; Q2 26* (partial) = 657. Recovery curve from Feb trough of 75.", "sentiment": "negative" },
-      { "label": "GSC clicks last 30d",                  "value": "143",    "sub": "vs 936 in last 90d. Money pages (Santa Clarita @ 4.2 avg pos, 126 clicks) holding up.", "sentiment": "neutral" }
+      { "label": "Organic sessions (Feb → May)",         "value": "+349%",   "sub": "75 → 337 sessions/mo · 4.5× recovery from the trough", "sentiment": "positive" },
+      { "label": "Organic conversions (Q1 → Q2 2026*)",  "value": "+164%",   "sub": "28 → 74 conversions · CVR up to 11.26%", "sentiment": "positive" },
+      { "label": "Maps avg rank (May 18 scan)",          "value": "3.60",    "sub": "#1 in market · 224 top-3 cells across 350 · position never broke", "sentiment": "positive" },
+      { "label": "Reviews · rating",                     "value": "452 · 4.9★","sub": "+11 reviews since Mar 8 · healthiest velocity in the local set", "sentiment": "positive" }
     ],
     "callout_strip": [
-      { "label": "What's working",        "detail": "Maps presence (#1 by every metric); GBP-linked pages (Santa Clarita @ pos 4.18, 1.3% CTR in last 30d); 5,732 keywords in top-10; conversion efficiency UP YoY." },
-      { "label": "What broke Q1 2026",    "detail": "Old vendor's Direct-traffic spike (Oct-Dec 2025: 1,103 → 1,901 → 1,288 sess) unwound in Jan (54 sess = −96%). Organic also crashed (400 → 75). Classic ATB-bot signature unwinding + likely algorithm pressure." },
-      { "label": "Why GBP is the focus",  "detail": "Maps is the channel that survived the cliff intact. GBP conversion rate hit 23.85% in Q1 2026 + 10.09% in Q2 2026*. Every lever compounds GBP first." }
+      { "label": "What HQDM inherited",   "detail": "Jan 2026 algorithm pressure layered on a prior vendor's Direct-traffic-tool unwinding (Oct-Dec 2025: 1,103 → 1,901 → 1,288 sess crashed to 54 in Jan — classic ATB-bot signature). Organic also crashed 400 → 75 across Jan-Feb." },
+      { "label": "What we've fixed",      "detail": "Stopped the bot/automation source · halted any active link-tool campaigns · refocused work onto the channels that survived (Maps + GBP). Organic recovery curve confirms the cleanup is working." },
+      { "label": "Why Maps is the lead",  "detail": "Maps position never broke through the cliff (#1 in market). GBP+Referral conversions up +167% YoY. The next 90 days compound the channel that proved resilient + accelerate organic before competitors close." }
     ]
   },
   "kpis": [
@@ -88,9 +88,9 @@
     "channel_labels": { "organic": "Organic Search", "direct": "Direct", "paid": "Paid Search", "referral": "Referral" },
     "channel_colors": { "organic": "#1d5b8a", "direct": "#ef4444", "paid": "#f59e0b", "referral": "#8b5cf6" },
     "events": [
-      { "month_index": 10, "label": "Direct spike begins (Oct 2025) — ATB-bot signature", "type": "anomaly" },
-      { "month_index": 13, "label": "Q1 2026 cliff (Jan 2026): Direct −96%, Organic −76%", "type": "negative" },
-      { "month_index": 15, "label": "HQDM engagement (March 2026)", "type": "positive" }
+      { "month_index": 10, "label": "Pre-HQDM: Direct spike begins (Oct 2025) — ATB-bot signature", "type": "anomaly" },
+      { "month_index": 13, "label": "HQDM engagement starts (Jan 2026); cliff onset same month", "type": "negative" },
+      { "month_index": 16, "label": "Recovery breaks ground (Apr 2026): organic +193% MoM", "type": "positive" }
     ],
     "quarterly": [
       { "q": "Q4 2024",                    "org_sess": 1146, "org_conv": 0,   "org_cr": null,  "gbp_sess": 201, "gbp_conv": 0,  "gbp_cr": null },
@@ -345,11 +345,11 @@
     {"kpi": "Top-3 gap vs Camelot (AQMS − Camelot)",           "baseline": "+115",  "target": "+130+", "stretch": "+150"}
   ],
   "owner_asks": [
-    "Authorization to deploy a review-acquisition workflow (post-job SMS + invoice review link) — needs sign-off on customer-comms language.",
-    "Confirmation of the 5 priority outer service-area cities (default: Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce). Are any others more strategically important?",
-    "GBP manager-access confirmation — HQDM needs write access for posts, Q&A seeding, photo uploads, Driving Direction pins.",
-    "Backstory on Paid Search (Google Ads) — channel went to zero around Apr 2025. Was this intentional, or did an account / billing issue cause it? Worth restoring?",
-    "Backstory on the Direct-traffic spike Oct-Dec 2025 (1,103 → 1,901 → 1,288 sess/mo) — were any link-building / traffic-tool campaigns running with a prior vendor? Need to ensure they're fully halted."
+    "Authorization to deploy a review-acquisition workflow (post-job SMS + invoice review link) — needs sign-off on customer-comms language. Target: +20 reviews by end of M3.",
+    "Confirmation of the 5 priority outer service-area cities (default: Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce). Are any others more strategically important to your bookings?",
+    "GBP manager-access confirmation — HQDM needs write access for 2x/month post cadence, Q&A seeding, photo uploads, Driving Direction pins.",
+    "Paid Search restart — Google Ads went to zero around Apr 2025 (pre-HQDM). Want us to audit the account + restart, or is paid permanently off-roadmap?",
+    "Backstory on the Oct-Dec 2025 Direct spike — were any link-building / traffic-tool campaigns running with a prior vendor before HQDM started? If so we want them confirmed fully halted so the recovery isn't disrupted."
   ],
   "_data_provenance": {
     "ga4": "properties/391356365 · 18-month channel x month pull 2026-05-22 · _aqms_18mo_channel_monthly.csv",

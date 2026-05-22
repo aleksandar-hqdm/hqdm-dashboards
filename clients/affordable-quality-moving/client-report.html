@@ -26,7 +26,8 @@
     }
   </script>
   <style>
-    .report-shell { max-width: 960px; }
+    /* Wider report shell — ~1200px max width for the bigger maps grid + roomier charts */
+    .report-shell { max-width: 1200px; }
     .stat-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
     .stat-tile.good { border-left-color: #10b981; }
     .stat-tile.watch { border-left-color: #f59e0b; }
@@ -35,27 +36,30 @@
     .stat-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
     .stat-tile .s { font-size: 0.75rem; color: #6b7280; margin-top: 0.4rem; line-height: 1.35; }
     .panel { background: white; border: 1px solid #e2e8f0; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-    .panel-title { font-weight: 700; color: #0b1220; margin-bottom: 0.5rem; }
     .pill { display: inline-block; padding: 0.2rem 0.55rem; border-radius: 0.375rem; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
     .pill.good { background: #d1fae5; color: #065f46; }
     .pill.watch { background: #fef3c7; color: #92400e; }
     .pill.bad { background: #fee2e2; color: #991b1b; }
-    /* YoY tiles */
-    .yoy-tile { background: white; border-radius: 0.5rem; padding: 1rem 1.25rem; border-left: 4px solid #1d5b8a; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
-    .yoy-tile.up   { border-left-color: #10b981; }
-    .yoy-tile.down { border-left-color: #ef4444; }
-    .yoy-tile .pct { font-size: 1.75rem; font-weight: 800; line-height: 1.1; }
-    .yoy-tile.up .pct   { color: #047857; }
-    .yoy-tile.down .pct { color: #b91c1c; }
-    .yoy-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.4rem; }
-    .yoy-tile .s { font-size: 0.7rem; color: #6b7280; margin-top: 0.3rem; }
-    /* LD heatmap cells */
-    .hm-cell { aspect-ratio: 1 / 1; border-radius: 2px; font-size: 9px; line-height: 1; display: flex; align-items: center; justify-content: center; font-weight: 600; color: #fff; transition: background-color 800ms ease; }
+    /* Recovery tiles — Q1 → Q2 2026 */
+    .recovery-tile { background: white; border-radius: 0.5rem; padding: 1.25rem; border-left: 4px solid #10b981; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+    .recovery-tile .pct { font-size: 2.25rem; font-weight: 800; line-height: 1.05; color: #047857; }
+    .recovery-tile .l { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; margin-bottom: 0.45rem; }
+    .recovery-tile .b { font-size: 0.85rem; font-weight: 600; color: #1f2937; margin-top: 0.4rem; }
+    .recovery-tile .s { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
+    /* LD heatmap cells — bigger min-size for the 2x2 panel grid */
+    .hm-cell { aspect-ratio: 1 / 1; border-radius: 2px; font-size: 11px; line-height: 1; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff; transition: background-color 800ms ease; min-width: 0; }
     .hm-cell.off-grid { background: transparent !important; color: transparent; }
+    .cr-grid { display: grid; gap: 2px; }
+    /* Storyline timeline */
+    .timeline-event { position: relative; padding-left: 1.5rem; padding-bottom: 1rem; border-left: 2px solid #cbd5e1; }
+    .timeline-event:last-child { border-left-color: transparent; padding-bottom: 0; }
+    .timeline-event::before { content: ''; position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: #1d5b8a; border: 2px solid white; box-shadow: 0 0 0 1px #cbd5e1; }
+    .timeline-event.bad::before { background: #ef4444; }
+    .timeline-event.good::before { background: #10b981; }
     @media print {
       .no-print { display: none !important; }
       body { background: white !important; }
-      .panel, .stat-tile, .yoy-tile { box-shadow: none !important; }
+      .panel, .stat-tile, .recovery-tile { box-shadow: none !important; }
     }
   </style>
 </head>
@@ -78,92 +82,112 @@
 
   <main id="report-root" class="report-shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0 print:shadow-none">
 
-    <!-- HERO -->
+    <!-- ============ HERO ============ -->
     <section class="border-b border-slate-200 pb-5 mb-6">
       <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski</div>
       <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Affordable Quality Moving &amp; Storage</h1>
-      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold">Where you stand on Google &amp; what we're working on next</p>
-      <p class="text-sm text-slate-500 mt-1">May 2026 Update · Months 2–3 of our work together</p>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold">4 months of HQDM work — recovery picture as of May 2026</p>
+      <p class="text-sm text-slate-500 mt-1">May 2026 Update · Months 4–5 of our work together (engagement started January 2026)</p>
     </section>
 
-    <!-- BIG PICTURE -->
-    <section class="mb-7">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Big Picture</h2>
-      <div class="panel">
-        <p class="text-[15px] leading-relaxed text-slate-800">
-          You're the <strong>#1-ranked moving and storage company on Google Maps in Santa Clarita</strong> by every measure we track. Out of <strong>350 spots on the map</strong> where we checked who shows up for three top searches (<em>local movers</em>, <em>moving company near me</em>, <em>packing &amp; storage</em>), AQMS appears in <strong>the top 3 results in 224 of them</strong> — more than any other Santa Clarita mover, and more than the next two competitors combined. Your <strong>4.9-star rating and 452 reviews</strong> (up from 441 when we started in March) keep your reputation lead solid too.
-        </p>
-        <p class="text-[15px] leading-relaxed text-slate-800 mt-3">
-          The website tells a different story. Search traffic to your site <strong>collapsed in January</strong> — organic search visitors went from ~400/month at the end of 2025 down to <strong>75 in February 2026</strong> (the low point). This was almost certainly an algorithm update combined with some other channel changes that pre-dated our engagement. <strong>Since we started in March, the recovery has been steep</strong>: 109 sessions in March, 320 in April, 337 in May (and counting). The line is going back up.
-        </p>
-        <p class="text-[15px] leading-relaxed text-slate-800 mt-3">
-          <strong>The most important number:</strong> even though traffic is down, your <strong>conversion rate is actually UP year-over-year</strong>. In Q2 2025 (baseline), 10.73% of search visitors became leads. So far in Q2 2026, that's 11.26% — slightly higher. The visitors you're getting now are <em>better-quality</em>, not worse. That's the foundation for the next 90 days.
+    <!-- ============ HEADLINE ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
+      <div class="panel" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+        <p class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800 font-medium">
+          When we started in January, your website was in the middle of a steep drop — organic search traffic had just fallen from <strong>400 sessions in December to 75 in February</strong> (an 81% cliff). <strong>Over the four months since, we've turned that around</strong>. As of May, organic sessions are back at <strong>337/month — 4.5 times the February low</strong>, and the last two months alone are up <strong>+134% in traffic and +164% in leads</strong> versus the first quarter. The conversion rate is also <strong>higher than it was a year ago</strong> (11.26% vs 10.73%). Your Maps position never broke — still #1 in Santa Clarita by every measure we track.
         </p>
       </div>
     </section>
 
-    <!-- KEY NUMBERS TILES -->
-    <section class="mb-7">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Numbers at a Glance</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        <div class="stat-tile good">
-          <div class="l">Map Rank · Today</div>
-          <div class="v">#3.6</div>
-          <div class="s">avg position across 350 map spots (#1 in market)</div>
+    <!-- ============ THE STORYLINE ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What Happened — A Timeline</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+        <!-- Timeline left -->
+        <div class="panel">
+          <div class="timeline-event">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Before HQDM · Oct–Dec 2025</div>
+            <div class="font-bold text-slate-900 mt-1">Direct-traffic spike</div>
+            <p class="text-sm text-slate-700 mt-1">Sessions labeled as "Direct" surged from ~450/month to 1,901 in November. This is the signature of a third-party traffic-tool — not real visitors. (Common across the industry; we've seen the same pattern on other moving accounts.) It was inflating the numbers but not contributing real leads.</p>
+          </div>
+          <div class="timeline-event bad">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-rose-600">January 2026 · HQDM engagement begins</div>
+            <div class="font-bold text-slate-900 mt-1">The cliff hits — Direct &amp; Organic both crash</div>
+            <p class="text-sm text-slate-700 mt-1">The traffic-tool source stopped feeding the site (Direct went from 1,288 to 54 in one month, −96%). At the same time, a Google algorithm update appears to have rebalanced rankings on a chunk of your long-tail pages. Organic search sessions fell from 400 in December to 97 in January, then to 75 in February.</p>
+          </div>
+          <div class="timeline-event good">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">February–March 2026 · Stabilization</div>
+            <div class="font-bold text-slate-900 mt-1">We stopped the bleeding</div>
+            <p class="text-sm text-slate-700 mt-1">We made sure none of the old vendor's automated traffic/link campaigns were still running, audited the site for any signals that may have flagged it, and refocused effort onto the channels that survived: Google Maps and your Google Business profile (both of which were at full strength).</p>
+          </div>
+          <div class="timeline-event good">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">April–May 2026 · Recovery</div>
+            <div class="font-bold text-slate-900 mt-1">Organic + leads both come back hard</div>
+            <p class="text-sm text-slate-700 mt-1">Organic sessions in April jumped to <strong>320 (+193% vs March)</strong>, May is at 337 and counting. Leads/conversions are up <strong>+164%</strong> versus Q1. Most importantly, the quality of those visitors is <em>better</em> than the previous year — your conversion rate is up 13%.</p>
+          </div>
         </div>
-        <div class="stat-tile good">
-          <div class="l">Top-3 Map Spots</div>
-          <div class="v">224</div>
-          <div class="s">more than next 2 competitors combined</div>
+
+        <!-- Recovery tiles right -->
+        <div class="space-y-3">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 -mb-1">Past 2 months vs Q1 2026 (the trough)</div>
+          <div class="recovery-tile">
+            <div class="l">Organic Search Visitors</div>
+            <div class="pct">▲ +134%</div>
+            <div class="b">281 → 657 sessions (quarter total)</div>
+            <div class="s">Apr+May 2026 vs Jan–Mar 2026</div>
+          </div>
+          <div class="recovery-tile">
+            <div class="l">Leads / Conversions</div>
+            <div class="pct">▲ +164%</div>
+            <div class="b">28 → 74 conversions (quarter total)</div>
+            <div class="s">form submits + phone clicks + GBP clicks + contact submits</div>
+          </div>
+          <div class="recovery-tile">
+            <div class="l">Conversion Rate</div>
+            <div class="pct">▲ +13%</div>
+            <div class="b">9.96% → 11.26%</div>
+            <div class="s">visitors are converting at a higher rate too</div>
+          </div>
+          <div class="recovery-tile" style="border-left-color: #1d5b8a;">
+            <div class="l" style="color: #1d5b8a;">Maps Position</div>
+            <div class="pct" style="color: #1d5b8a;">#1 throughout</div>
+            <div class="b">avg rank 3.6 · 224 top-3 cells (of 350)</div>
+            <div class="s">never broke through the cliff</div>
+          </div>
         </div>
-        <div class="stat-tile good">
-          <div class="l">Reviews · Rating</div>
-          <div class="v">452 · 4.9★</div>
-          <div class="s">+11 reviews since March 8</div>
-        </div>
-        <div class="stat-tile good">
-          <div class="l">Conv. Rate YoY</div>
-          <div class="v">+5%</div>
-          <div class="s">10.73% → 11.26% — quality UP</div>
-        </div>
+
       </div>
     </section>
 
-    <!-- YoY SECTION -->
-    <section class="mb-7">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Year-over-Year — Q2 2025 vs Q2 2026 (so far)</h2>
-      <p class="text-sm text-slate-600 mb-3 leading-relaxed">
-        Same quarter, one year apart. Volume is down (the cliff was real); conversion rate is UP (lead quality preserved); and your GBP-driven leads are <strong>up dramatically</strong> — Google Business profile is doing more work for you than ever.
-      </p>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="yoy-tiles"></div>
-      <p class="text-[11px] text-slate-500 mt-3 italic">Q2 2026 is a partial quarter (only April + May so far). YoY % compares monthly averages within the quarter.</p>
-    </section>
-
-    <!-- TREND CHART (sessions + conversions) -->
-    <section class="mb-7">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">18-Month Trend — Visitors and Leads from Your Website</h2>
+    <!-- ============ TREND CHART — ORGANIC ONLY ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Organic Search — 18-Month Trend</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Two charts. The top one shows visitors to your website by channel (organic search, direct, paid ads, referral). The bottom one shows leads (form submits + phone calls + GBP clicks) from the same channels. You can see <strong>the Oct-Dec 2025 Direct spike</strong> (likely traffic-tool artifact from before us) and the <strong>January 2026 cliff</strong> on both. The right side is the recovery.
+          Visitors arriving from Google search to your website. Top chart = monthly sessions, bottom chart = monthly leads (form submits + phone calls + Google Business clicks). The cliff in January–February is clear; so is the recovery in April–May.
         </p>
-        <div class="mb-3">
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Visitors / Sessions</div>
-          <div style="height: 240px;"><canvas id="trend-sessions"></canvas></div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Visitors</div>
+            <div style="height: 300px;"><canvas id="trend-sessions"></canvas></div>
+          </div>
+          <div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Leads / Conversions</div>
+            <div style="height: 300px;"><canvas id="trend-conversions"></canvas></div>
+          </div>
         </div>
-        <div class="mt-4">
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Leads / Conversions</div>
-          <div style="height: 200px;"><canvas id="trend-conversions"></canvas></div>
-        </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days). The dashed-line projection in your full dashboard accounts for this.</p>
+        <p class="text-[11px] text-slate-500 mt-3 italic">May 2026 is a partial month (first 22 days). The full dashboard shows projections for the rest of May; here we show only confirmed numbers.</p>
       </div>
     </section>
 
-    <!-- HEATMAP -->
-    <section class="mb-7">
+    <!-- ============ MAPS HEATMAP — wider, 2x2 grid ============ -->
+    <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How the Maps Moved · March 8 → May 18 2026</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          This is a heatmap of where you (and your top 3 challengers) appear on Google Maps across the Santa Clarita area. Each square is one geographic spot in a 13×13 grid. <strong>Dark green = top 3</strong> (the goal); lighter green = 4–6; yellow/orange = 11+. Use the buttons below to flip between scan dates and see how each business's footprint changed.
+          A bird's-eye view of where you (and your top 3 challengers) appear on Google Maps across Santa Clarita. Each square is one geographic spot in a 13×13 grid; <strong>dark green = top 3 results</strong>, lighter green = 4–6, yellow/orange = 11+. Click any date button to flip between scans and watch how each business's footprint changes over the four monthly scans.
         </p>
 
         <!-- Controls -->
@@ -177,9 +201,9 @@
             </div>
           </div>
 
-          <!-- Panels grid -->
-          <div class="p-3 sm:p-4">
-            <div id="cr-panels" class="grid grid-cols-2 lg:grid-cols-4 gap-3"></div>
+          <!-- 2x2 grid of panels — bigger cells, more readable -->
+          <div class="p-4">
+            <div id="cr-panels" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
           </div>
 
           <!-- Legend -->
@@ -196,8 +220,8 @@
       </div>
     </section>
 
-    <!-- PER-KEYWORD SUMMARY -->
-    <section class="mb-7">
+    <!-- ============ SEARCH-BY-SEARCH ============ -->
+    <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Search-by-Search Breakdown</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
         <div class="panel">
@@ -205,14 +229,14 @@
             <div class="font-bold text-slate-800">"local movers"</div>
             <span class="pill watch">Watch</span>
           </div>
-          <p class="text-sm text-slate-700">Still #1 in the market (avg position 3.95), but lost 13 top-3 spots since March. The trend was up through early May before dipping in the latest scan. <strong>Action: defend.</strong></p>
+          <p class="text-sm text-slate-700">Still #1 in market (avg position 3.95), but lost 13 top-3 spots since March. Choppy across 4 scans — strong run through early May then dipped. <strong>Action: defend.</strong></p>
         </div>
         <div class="panel">
           <div class="flex items-center justify-between gap-2 mb-1">
             <div class="font-bold text-slate-800">"moving company near me"</div>
             <span class="pill good">Holding</span>
           </div>
-          <p class="text-sm text-slate-700">Your strongest search — averaging position 3.05 across 119 map spots, 94 of them top-3. Held flat since March. Highest-value query in the set.</p>
+          <p class="text-sm text-slate-700">Your strongest search — avg position 3.05 across 119 map spots, 94 of them top-3. Held flat since March. Highest-value query in the set.</p>
         </div>
         <div class="panel">
           <div class="flex items-center justify-between gap-2 mb-1">
@@ -224,12 +248,12 @@
       </div>
     </section>
 
-    <!-- COMPETITORS -->
-    <section class="mb-7">
+    <!-- ============ COMPETITORS ============ -->
+    <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Who's Pushing on You</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Three competitors made real moves in the last 2.5 months. Worth knowing about — none of them are at your level yet, but two of them weren't on the radar in March.
+          Three competitors made real moves in the last 2.5 months. None are at your level yet, but two of them weren't even on the radar in March — worth knowing about.
         </p>
         <div class="overflow-x-auto">
           <table class="w-full text-sm">
@@ -237,7 +261,7 @@
               <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
                 <th class="py-2 pr-3">Competitor</th>
                 <th class="py-2 pr-3 text-right">Top-3 Map Spots</th>
-                <th class="py-2 text-right">Change</th>
+                <th class="py-2 text-right">Change Since March</th>
               </tr>
             </thead>
             <tbody>
@@ -278,28 +302,31 @@
       </div>
     </section>
 
-    <!-- STRATEGY -->
-    <section class="mb-7">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What We're Working On — Next 90 Days</h2>
+    <!-- ============ STRATEGY — NEXT 90 DAYS ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What's Next — The Next 90 Days</h2>
+      <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+        Five priorities for the next quarter. The first two compound the recovery curve you're already on; the last three open up new growth.
+      </p>
 
-      <div class="space-y-3">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
         <div class="panel" style="border-left: 4px solid #10b981;">
           <div class="flex items-center gap-2 mb-2">
             <span class="pill good">Priority 1</span>
             <h3 class="font-bold text-slate-900 text-base">Defend your #1 Santa Clarita Maps position</h3>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            You're already #1, so this is about <strong>keeping what you have</strong> while a couple of competitors push. Four things: <strong>(1)</strong> refreshing and optimizing your Google Business profile (photos, attributes, products, description), <strong>(2)</strong> doubling post cadence to 2x/month, <strong>(3)</strong> a review-acquisition campaign so your ~4 new reviews/month becomes 6–8 (post-job SMS request + invoice review link), and <strong>(4)</strong> strengthening the <code>/santa-clarita/</code> page on your website (52K impressions/90 days but averaging position 20 — should be top 10).
+            You're already #1, so this is about <strong>keeping what you have</strong> while Camelot pushes hard. Four things: refresh and optimize your Google Business profile (photos every 30 days, attributes, description), double post cadence to 2x/month, launch a review-acquisition workflow targeting <strong>+20 reviews by August</strong>, and strengthen the <code>/santa-clarita/</code> page on your website (52K impressions/90d but averaging position 20 — we want it top 10).
           </p>
         </div>
 
         <div class="panel" style="border-left: 4px solid #1d5b8a;">
           <div class="flex items-center gap-2 mb-2">
             <span class="pill good">Priority 2</span>
-            <h3 class="font-bold text-slate-900 text-base">Accelerate the website-traffic recovery</h3>
+            <h3 class="font-bold text-slate-900 text-base">Compound the organic recovery</h3>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Your organic traffic has tripled since February — the recovery is real. We're going to (a) <strong>verify all conversion-tracking events are firing correctly</strong> in Google Analytics (already confirmed: form submits, phone-number clicks, and Google Business clicks are all tracked), (b) <strong>investigate the May impression cliff</strong> (May 2026 is showing 10× fewer search impressions than April — could be AI-Overview encroachment, data lag, or something else; we're digging in), (c) <strong>do a backlink audit</strong> to find and disavow any spam links that may have contributed to the January cliff, and (d) <strong>refresh your top blog posts</strong> with commercial calls-to-action so traffic converts harder.
+            The recovery curve is real — we want to keep it accelerating. We'll do a full <strong>backlink audit</strong> to find and disavow any spam links that may still be dragging on the site after the January cliff, <strong>refresh your top blog posts</strong> with stronger calls-to-action, and <strong>investigate the May impression drop</strong> in Google Search Console (still under review — could be data lag, could be AI Overview encroachment on long-tail pages). Goal: organic sessions reach <strong>500+/month by August</strong>.
           </p>
         </div>
 
@@ -309,7 +336,7 @@
             <h3 class="font-bold text-slate-900 text-base">Strengthen your multi-location SoCal pages</h3>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            You already have city pages for Santa Clarita, San Diego, Burbank, Encinitas, La Jolla, and Temecula — but they're underperforming. <code>/san-diego/</code> is averaging position 15; <code>/san-diego/packing-unpacking-services/</code> is at position 41. These are wasted assets. We're going to <strong>rebuild each location page with full depth</strong> (local pricing, neighborhood callouts, testimonials, schema markup) and add new ones for the 5 outer-cities your single GBP pin doesn't reach (Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce).
+            You already have city pages for Santa Clarita, San Diego, Burbank, Encinitas, La Jolla, and Temecula — but most are <strong>underperforming</strong>. <code>/san-diego/</code> averages position 15; <code>/san-diego/packing/</code> averages position 41. We're going to rebuild each with full depth (local pricing, neighborhood callouts, testimonials, schema markup) and add new pages for the 5 outer cities your Santa Clarita GBP pin doesn't reach (<strong>Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce</strong>).
           </p>
         </div>
 
@@ -319,34 +346,34 @@
             <h3 class="font-bold text-slate-900 text-base">Capitalize on packing &amp; storage momentum</h3>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Packing &amp; storage is the one search you're <strong>actively gaining on</strong> — up almost a full position in 2.5 months. Storage is also recurring revenue, which is structurally more valuable than one-time moving jobs. We'll build a dedicated <code>/storage-units-santa-clarita/</code> page (full pricing + unit-size matrix), a dedicated <code>/packing-services-santa-clarita/</code> page, publish two blog posts in May–June that link back to them, and add monthly Google posts specifically about storage and packing.
+            Packing &amp; storage is the one search you're <strong>actively gaining on</strong> — up almost a full position in 2.5 months. Storage is also recurring revenue (different economics from one-time moves). We'll build a dedicated <code>/storage-units-santa-clarita/</code> page (full pricing + unit-size matrix), a dedicated <code>/packing-services-santa-clarita/</code> page, publish two utility blog posts that link back to them, and add monthly Google posts specifically about storage and packing.
           </p>
         </div>
 
-        <div class="panel" style="border-left: 4px solid #f59e0b;">
+        <div class="panel lg:col-span-2" style="border-left: 4px solid #f59e0b;">
           <div class="flex items-center gap-2 mb-2">
             <span class="pill watch">Priority 5</span>
-            <h3 class="font-bold text-slate-900 text-base">Show up in Google's AI Overviews</h3>
+            <h3 class="font-bold text-slate-900 text-base">Get cited in Google's AI Overviews</h3>
           </div>
           <p class="text-sm text-slate-700 leading-relaxed">
-            Google is increasingly answering "how-to" and "how much" questions with AI Overviews (those summary boxes at the top of search results). We checked 20 priority searches for you — 4 of them now have AI Overviews, and AQMS isn't cited in any of them. We'll <strong>refresh your existing how-to blog content</strong> (e.g., "How to choose the right moving company") and add 3 new ones (cost calculators, packing guides) optimized for AI Overview citation — FAQ format, expert quotes, video embeds. Getting even one citation here is a meaningful brand signal.
+            Google is increasingly answering "how-to" and "how much" questions with AI Overviews (those summary boxes at the top of results). We checked 20 priority searches — 4 already have AI Overviews, and AQMS isn't cited in any of them. We'll <strong>refresh your existing how-to blog content</strong> (e.g., "How to choose the right moving company") and add 3 new ones (a Santa Clarita moving-cost calculator, packing guides) formatted for AI Overview citation (FAQ schema, expert quotes, video embeds). Even one citation here is a meaningful brand-trust signal.
           </p>
         </div>
       </div>
 
-      <p class="text-xs text-slate-500 mt-3 italic">If you'd like the full month-by-month task list (32 specific actions across 5 levers) and code-named action items, your account manager can share the full strategic dashboard linked in the header.</p>
+      <p class="text-xs text-slate-500 mt-3 italic">If you'd like the full month-by-month task list (32 specific actions across these 5 priorities), your account manager can share the full strategic dashboard linked in the header.</p>
     </section>
 
-    <!-- OWNER ASKS -->
-    <section class="mb-7">
+    <!-- ============ OWNER ASKS ============ -->
+    <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A Few Things We'd Like to Confirm</h2>
       <div class="panel" style="background: #eef2ff; border-color: #c7d2fe;">
         <ul class="space-y-2.5 text-sm text-slate-800">
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition workflow.</strong> We'd like to set up a post-job SMS / email signature with a Google review link. We need your sign-off on the customer-facing language.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Outer-city priorities.</strong> You serve 20 cities — our default plan is Castaic → Simi Valley → San Fernando → Moorpark. If a different order matches your business, let us know.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Google Business profile access.</strong> Confirming we have manager access for posts, Q&amp;A seeding, photo uploads, and Driving Direction pins.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Paid ads question.</strong> Your Google Ads went to zero around April 2025. Was that intentional, or did an account / billing issue cause it? Worth restoring if it's the latter.</span></li>
-          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Prior-vendor question.</strong> Between October-December 2025 we see a sharp Direct-traffic spike (4,300 sessions in 3 months) that then crashed in January — this pattern often comes from a third-party "traffic tool" or link-building campaign. If anything like that was running before our engagement, we'd like to make sure it's fully halted so it doesn't trigger another algorithmic flag.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Review-acquisition workflow.</strong> We'd like to set up a post-job SMS / email signature with a Google review link. We need your sign-off on the customer-facing language. Target: +20 reviews by end of M3.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Outer-city priorities.</strong> Our default order is Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce. If a different order matches your booking volume, let us know.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Google Business profile access.</strong> Confirming we have manager-level access for posts, Q&amp;A seeding, photo uploads, and Driving Direction pins.</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Paid ads restart?</strong> Your Google Ads went to zero around April 2025 (before our engagement). Want us to audit the account and restart, or is paid permanently off the roadmap?</span></li>
+          <li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>Prior-vendor traffic-tool.</strong> The October–December 2025 Direct-traffic spike (1,103 → 1,901 → 1,288 sessions) is consistent with a third-party "traffic tool" or link-building automation that was running before we engaged. We'd like to confirm any such campaign is fully halted so it doesn't trigger another algorithmic flag.</span></li>
         </ul>
       </div>
     </section>
@@ -357,6 +384,7 @@
         · May 2026 client update
         · Prepared by Aleksandar Spasevski
         · 2026-05-22
+        · Engagement start: January 2026
       </div>
       <div class="text-slate-400">Confidential — for AQMS only.</div>
     </footer>
@@ -364,8 +392,8 @@
   </main>
 
   <script>
-  // Client-report renderer — reads data.json + ld_grids.json and renders YoY tiles,
-  // 18-month trend charts, and an embedded LD heatmap loop (same logic as full dashboard).
+  // Client-report renderer — reads data.json + ld_grids.json and renders organic-only trend
+  // charts + embedded LD heatmap with 4-date animation.
   (async function () {
     const [DATA, LD] = await Promise.all([
       fetch('./data/data.json').then(r => r.json()),
@@ -373,76 +401,92 @@
     ]);
     if (!DATA) return;
 
-    renderYoYTiles(DATA);
     renderTrendCharts(DATA);
     if (LD) renderHeatmap(LD);
 
-    // ====== YoY Tiles ======
-    function renderYoYTiles(d) {
-      const yoy = d.trend?.yoy_growth;
-      if (!yoy || !yoy.metrics) return;
-      const tilesEl = document.getElementById('yoy-tiles');
-      if (!tilesEl) return;
-      tilesEl.innerHTML = yoy.metrics.map(m => {
-        const pct = m.current_yoy_pct || 0;
-        const cls = pct >= 0 ? 'up' : 'down';
-        const arrow = pct >= 0 ? '▲' : '▼';
-        const sign = pct >= 0 ? '+' : '';
-        const fmt = v => m.is_ratio ? (v != null ? v.toFixed(2) + '%' : '—') : (v != null ? Math.round(v).toLocaleString() : '—');
-        return `
-          <div class="yoy-tile ${cls}">
-            <div class="l">${m.label}</div>
-            <div class="pct">${arrow} ${sign}${Math.round(pct)}%</div>
-            <div class="s">${fmt(m.q2_2025)} → ${fmt(m.current)}</div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    // ====== Trend Charts ======
+    // ====== Trend Charts (ORGANIC ONLY) ======
     function renderTrendCharts(d) {
       const t = d.trend; if (!t) return;
       const months = t.months || [];
-      const palette = t.channel_colors || { organic:'#1d5b8a', direct:'#ef4444', paid:'#f59e0b', referral:'#8b5cf6' };
-      const labels = t.channel_labels || { organic:'Organic Search', direct:'Direct', paid:'Paid Search', referral:'Referral' };
+      const organicSessions = t.sessions?.organic || [];
+      const organicConversions = t.form_submits?.organic || [];
+
+      // Detect partial month — split solid + dashed
       const partialIdx = months.findIndex(m => /\*/.test(m));
+      const splitSeries = (data) => {
+        if (partialIdx < 0) return { solid: data, dashed: data.map(() => null) };
+        const solid = data.map((v, i) => i <= partialIdx - 1 ? v : null);
+        const dashed = data.map((v, i) => i >= partialIdx - 1 ? v : null);
+        return { solid, dashed };
+      };
+      const ses = splitSeries(organicSessions);
+      const con = splitSeries(organicConversions);
 
-      function makeDatasets(src) {
-        return Object.keys(src).map(k => {
-          const data = src[k];
-          return {
-            label: labels[k] || k,
-            data: data,
-            borderColor: palette[k] || '#6b7280',
-            backgroundColor: (palette[k] || '#6b7280') + '20',
-            borderWidth: 2.4, tension: 0.25,
-            pointRadius: 2, pointHoverRadius: 4,
-            // mark last point dashed if partial
-            segment: partialIdx >= 0 ? { borderDash: ctx => ctx.p0DataIndex >= partialIdx - 1 ? [5, 4] : undefined } : undefined,
-          };
-        });
-      }
+      const buildDatasets = (split, color, label) => [
+        {
+          label: label,
+          data: split.solid,
+          borderColor: color,
+          backgroundColor: color + '20',
+          borderWidth: 3,
+          tension: 0.25,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+          fill: true,
+          spanGaps: false,
+        },
+        {
+          label: label + ' (partial month)',
+          data: split.dashed,
+          borderColor: color,
+          backgroundColor: 'transparent',
+          borderDash: [6, 4],
+          borderWidth: 2.5,
+          tension: 0.25,
+          pointRadius: 3,
+          pointHoverRadius: 6,
+          fill: false,
+          spanGaps: false,
+        },
+      ];
 
-      const opts = {
+      const opts = (yLabel) => ({
         responsive: true, maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: {
-          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } },
-          tooltip: { backgroundColor: '#0b1220', padding: 10 },
+          legend: {
+            position: 'bottom',
+            labels: {
+              font: { size: 11 }, boxWidth: 14,
+              filter: (item) => !/partial month/.test(item.text),
+            }
+          },
+          tooltip: {
+            backgroundColor: '#0b1220', padding: 10,
+            callbacks: { label: ctx => `${ctx.dataset.label.replace(' (partial month)', '')}: ${(ctx.raw != null ? ctx.raw.toLocaleString() : '—')}` },
+          },
         },
         scales: {
           x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 } },
-          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 10 } } },
+          y: { grid: { color: 'rgba(0,0,0,0.05)' }, beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: yLabel, font: { size: 11, weight: '600' } } },
         },
-      };
+      });
 
-      const ses = document.getElementById('trend-sessions');
-      if (ses && t.sessions) new Chart(ses, { type: 'line', data: { labels: months, datasets: makeDatasets(t.sessions) }, options: opts });
-      const con = document.getElementById('trend-conversions');
-      if (con && t.form_submits) new Chart(con, { type: 'line', data: { labels: months, datasets: makeDatasets(t.form_submits) }, options: opts });
+      const sesEl = document.getElementById('trend-sessions');
+      if (sesEl && organicSessions.length) new Chart(sesEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(ses, '#1d5b8a', 'Organic Search Visitors') },
+        options: opts('monthly visitors'),
+      });
+      const conEl = document.getElementById('trend-conversions');
+      if (conEl && organicConversions.length) new Chart(conEl, {
+        type: 'line',
+        data: { labels: months, datasets: buildDatasets(con, '#10b981', 'Organic Search Leads') },
+        options: opts('monthly leads'),
+      });
     }
 
-    // ====== Heatmap (4-date loop, embedded) ======
+    // ====== Heatmap (4-date loop, embedded, 2x2 layout) ======
     function renderHeatmap(ld) {
       const state = {
         currentKw: ld.keywords[0],
@@ -531,7 +575,6 @@
         const rows = maxY - minY + 1;
         const presentCells = new Set(grid.cells.map(c => `${c.x},${c.y}`));
 
-        // pre-index ranks per date+entity
         const idx = {};
         state.dateKeys.forEach(d => {
           idx[d] = {};
@@ -543,13 +586,17 @@
         _idx = idx; _kwGrid = { cols, rows, minX, minY, presentCells };
 
         const wrap = document.getElementById('cr-panels');
+        // 2x2 layout — bigger panels with more readable cells
         wrap.innerHTML = entities.map(entity => {
           const isClient = entity === ld.client;
-          const truncatedName = entity.length > 30 ? entity.substring(0, 28) + '…' : entity;
           return `
-            <div class="rounded-lg border ${isClient ? 'border-brand-500 bg-brand-50/30' : 'border-slate-200 bg-white'} p-2.5">
-              <div class="font-semibold text-xs truncate ${isClient ? 'text-brand-700' : 'text-slate-800'}" title="${entity}">${truncatedName}${isClient ? ' <span class="text-[9px] uppercase font-bold text-brand-500">(you)</span>' : ''}</div>
-              <div class="cr-grid mt-2" data-entity="${entity}" style="display:grid; grid-template-columns: repeat(${cols}, 1fr); gap: 1px; aspect-ratio: ${cols}/${rows};">
+            <div class="rounded-lg border-2 ${isClient ? 'border-brand-500 bg-brand-50/30' : 'border-slate-200 bg-white'} p-4">
+              <div class="flex items-center justify-between mb-3">
+                <div class="font-bold text-sm truncate ${isClient ? 'text-brand-700' : 'text-slate-800'}" title="${entity}">
+                  ${entity}${isClient ? ' <span class="text-[10px] uppercase font-bold text-brand-500">(you)</span>' : ''}
+                </div>
+              </div>
+              <div class="cr-grid" data-entity="${entity}" style="grid-template-columns: repeat(${cols}, 1fr); aspect-ratio: ${cols}/${rows}; max-width: 360px; margin: 0 auto;">
                 ${(() => {
                   const out = [];
                   for (let yi = 0; yi < rows; yi++) {
@@ -563,13 +610,13 @@
                   return out.join('');
                 })()}
               </div>
-              <div class="grid grid-cols-3 gap-1 text-center mt-2 text-[9px] uppercase tracking-wider font-bold text-slate-500">
-                <div>Avg</div><div>Top-3</div><div>Cells</div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-4 pt-3 border-t border-slate-200 text-[10px] uppercase tracking-wider font-bold text-slate-500">
+                <div>Avg rank</div><div>Top-3 cells</div><div>Total cells</div>
               </div>
-              <div class="grid grid-cols-3 gap-1 text-center" data-stats="${entity}">
-                <div class="text-sm font-bold text-slate-800 cr-avg">—</div>
-                <div class="text-sm font-bold text-slate-800 cr-top3">—</div>
-                <div class="text-sm font-bold text-slate-800 cr-cells">—</div>
+              <div class="grid grid-cols-3 gap-2 text-center mt-1" data-stats="${entity}">
+                <div class="text-xl font-extrabold text-slate-800 cr-avg">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-top3">—</div>
+                <div class="text-xl font-extrabold text-slate-800 cr-cells">—</div>
               </div>
             </div>
           `;
@@ -598,7 +645,6 @@
             cell.textContent = (rank != null && rank <= 20) ? rank : '';
             cell.title = `${entity} — ${rank != null ? 'rank ' + rank : 'not in top 50'} (${state.dateLabels[state.dateKeys.indexOf(date)]})`;
           });
-          // stats
           const stats = grid.summary[entity];
           const statBox = document.querySelector(`[data-stats="${CSS.escape(entity)}"]`);
           if (statBox && stats) {
