@@ -103,7 +103,7 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Last 8 Months</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads. "Leads" is the apples-to-apples lead count — <strong>booking events + form submissions + phone/email click intents</strong>. We deliberately <em>exclude</em> the three "engagement events" (GBP listing taps, banner CTA clicks, gift-card page clicks) that were added to GA4 in Aug 2025 — those are top-funnel taps, not bookings, and including them would inflate the numbers ~6×. The numbers below are the conservative, defensible version of the story.
+          Eight months of <strong>organic search performance</strong> (Google search arrivals only). Top chart = monthly visitors; bottom = monthly leads. "Leads" is the conservative count — <strong>booking events + form submissions + phone/email click intents</strong>, excluding engagement signals and de-duplicating the May 2026 GA4 attribution change. See "How we count leads" below for the full methodology.
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
@@ -116,6 +116,17 @@
           </div>
         </div>
         <p class="text-[11px] text-slate-700 mt-3 font-semibold" id="trend-partial-note">—</p>
+      </div>
+    </section>
+
+    <!-- ============ CONVERSIONS SETUP ============ -->
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How We Count Leads · Conversions Setup</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">
+          Two GA4 configuration changes since launch have inflated the raw "conversions" line. We strip both out of every number in this report. Here's what we count, what we exclude, and why.
+        </p>
+        <div id="conversions-setup-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3"></div>
       </div>
     </section>
 
@@ -436,26 +447,61 @@
         </li>`);
     });
 
-    // ===== Heatmap =====
-    if (LD) renderHeatmap(LD, V.heatmap_keywords);
+    // ===== Conversions setup =====
+    const cs = V.conversions_setup;
+    if (cs) {
+      const csEl = document.getElementById('conversions-setup-grid');
+      const sections = [
+        { key: 'old_setup',       border: '#10b981', pill: 'good',  pillText: 'BASELINE' },
+        { key: 'what_we_report',  border: '#10b981', pill: 'good',  pillText: 'WHAT WE REPORT' },
+        { key: 'aug_2025_change', border: '#f59e0b', pill: 'watch', pillText: 'EXCLUDED - ENGAGEMENT' },
+        { key: 'may_2026_change', border: '#ef4444', pill: 'bad',   pillText: 'EXCLUDED - DUPLICATES' },
+      ];
+      sections.forEach(sec => {
+        const s = cs[sec.key];
+        if (!s) return;
+        const eventChips = (s.events || []).map(e =>
+          `<code class="text-[10px] bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">${e}</code>`
+        ).join(' ');
+        csEl.insertAdjacentHTML('beforeend', `
+          <div class="panel" style="border-left: 4px solid ${sec.border}">
+            <div class="flex items-center justify-between mb-2 gap-2">
+              <h3 class="font-bold text-slate-900 text-sm">${s.title}</h3>
+              <span class="pill ${sec.pill}">${sec.pillText}</span>
+            </div>
+            <div class="mb-2">${eventChips}</div>
+            <p class="text-[13px] text-slate-700 leading-relaxed">${s.description}</p>
+          </div>`);
+      });
+    }
 
-    function renderHeatmap(ld, heatmapKws) {
+    // ===== Heatmap =====
+    if (LD) renderHeatmap(LD, V.heatmap_keywords, V.heatmap_competitors, V.heatmap_date_keys, V.heatmap_dates);
+
+    function renderHeatmap(ld, heatmapKws, competitorOverride, dateKeysOverride, dateLabelsOverride) {
       // Filter the available keywords down to the heatmap selection (in given order)
       const allowed = (heatmapKws || ld.keywords).filter(k => ld.grids[k]);
-      // Initial date = earliest available date for the FIRST keyword (lets the auto-cycle
-      // tell a "baseline -> latest" story starting from a meaningful baseline)
+      // Date set: use v2 override if provided (lets the client report lock a tighter
+      // window than the full ld_grids.json date set, e.g. Jan->Apr only)
+      const dateKeys = dateKeysOverride || ld.date_keys || [];
+      const dateLabels = dateLabelsOverride || ld.dates || [];
+      // Initial date = earliest available date for the FIRST keyword INTERSECTED with
+      // the report date window (so we don't auto-park on a date that's been dropped)
       const firstKwGrid = ld.grids[allowed[0]];
-      const firstKwPresent = (firstKwGrid && firstKwGrid.dates_present) || ld.date_keys || [];
+      const firstKwPresent = ((firstKwGrid && firstKwGrid.dates_present) || ld.date_keys || [])
+        .filter(d => dateKeys.includes(d));
       const state = {
         currentKw: allowed[0],
-        currentDate: firstKwPresent[0] || (ld.date_keys || [])[0],
-        dateKeys: ld.date_keys || [],
-        dateLabels: ld.dates || [],
+        currentDate: firstKwPresent[0] || dateKeys[0],
+        dateKeys: dateKeys,
+        dateLabels: dateLabels,
         playing: true,
         timer: null,
         PHASE_MS: 1100,
       };
-      const entities = [ld.client, ...(ld.competitors || [])];
+      // Competitor set: use v2 override if provided (controls panel order)
+      const competitors = competitorOverride || ld.competitors || [];
+      const entities = [ld.client, ...competitors];
 
       // Friendly display names
       const friendlyName = (e) => {
@@ -534,10 +580,13 @@
 
       let _idx = null, _kwGrid = null;
 
-      // Compute the src/dst dates for the current kw — these are the earliest and
-      // latest dates where data is available for THIS keyword.
+      // Compute the src/dst dates for the current kw — earliest and latest dates
+      // where data is available, INTERSECTED with the report date window so the
+      // badge stays consistent with what's actually shown in the heatmap.
       function kwDateRange(grid) {
-        const present = grid.dates_present || state.dateKeys;
+        const allPresent = grid.dates_present || state.dateKeys;
+        const inWindow = allPresent.filter(d => state.dateKeys.includes(d));
+        const present = inWindow.length ? inWindow : allPresent;
         return { src: present[0], dst: present[present.length - 1] };
       }
 

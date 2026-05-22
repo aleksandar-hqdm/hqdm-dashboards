@@ -4571,7 +4571,7 @@
       "tagline_sub": "Single-pin massage & float studio - American Fork, UT - 4.9-star x 406 reviews"
     },
     "headline": {
-      "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 -> Q1 2026 - the cleanest, uninflated comparison we can run). Two Maps queries gained <strong>+8 top-3 cells each</strong> across our local scans: 'massage subscription' (Feb 23 -> May 18) and 'massage therapy' (Jan 19 -> Apr 18). The <strong>float side of the business is at #1 across the entire local Maps grid</strong> and the AF pin holds top-3 in 100% of cells for 'massage american fork'. The room-for-growth picture: generic 'massage' and 'massage therapist' searches saw a few cells slip in the contested Pleasant Grove edge (Pleasant Grove competitors pushing) and the site's overall CTR sits below par at 0.80% - both are direct targets for the next 90 days."
+      "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 -> Q1 2026 - the cleanest, uninflated comparison we can run). The biggest Maps mover was <strong>'massage therapy' - top-3 cells jumped from 14 to 22 (+8)</strong> Jan 19 -> Apr 18, with avg rank also improving from 9.87 to 8.64. The <strong>float side of the business is at #1 across the entire local Maps grid</strong> and the AF pin holds top-3 in 100% of cells for 'massage american fork'. The room-for-growth picture: generic 'massage' and 'massage therapist' searches saw a few cells slip in the contested Pleasant Grove edge (Pleasant Grove competitors pushing) and the site's overall CTR sits below par at 0.80% - both are direct targets for the next 90 days."
     },
     "movement_tiles": [
       {
@@ -4589,17 +4589,17 @@
         "sub": "Q1 2025 -> Q1 2026 - booking + form + call/email intent"
       },
       {
-        "label": "Biggest Maps Movers (apples-to-apples)",
-        "pct": "+8 / +8",
-        "baseline": "Top-3 cells gained",
-        "current": "subscription + therapy",
-        "sub": "massage subscription Feb->May, massage therapy Jan->Apr"
+        "label": "Biggest Maps Mover (Jan 19 -> Apr 18)",
+        "pct": "+8 top-3",
+        "baseline": "massage therapy",
+        "current": "14 -> 22 top-3 cells",
+        "sub": "Avg rank also improved 9.87 -> 8.64"
       },
       {
         "label": "Float Maps Position",
         "pct": "#1 throughout",
         "baseline": "avg rank 1.5",
-        "current": "97-100 top-3 cells / 106",
+        "current": "93-99 top-3 cells / 106",
         "sub": "Across all 3 float queries - the moat is intact"
       }
     ],
@@ -4634,10 +4634,10 @@
         "body": "Q1 2025 -> Q1 2026: organic sessions 8,879 -> 10,448 and organic leads 139 -> 164. Lead capture rate held at 1.57% - visitors are converting at the same rate, with more of them. This is the cleanest YoY signal we can run: it strips out the Aug 2025 GA4 engagement-event reconfiguration that would otherwise inflate the raw 'conversion' figure ~6x."
       },
       {
-        "phase": "Jan - May 2026 (LD scans)",
+        "phase": "Jan - Apr 2026 (LD scans)",
         "kind": "good",
-        "title": "Two big top-3 cell wins on the Maps grid",
-        "body": "Two queries gained +8 top-3 cells each on apples-to-apples scans: <strong>massage subscription</strong> (Feb 23 -> May 18: top-3 cells 6 -> 14) and <strong>massage therapy</strong> (Jan 19 -> Apr 18: top-3 cells 14 -> 22). Deep tissue +3. Float queries at full saturation (#1 across the local market). Generic 'massage' and 'massage therapist' saw a few cells slip in the contested Pleasant Grove edge - that's where the next 90 days focus."
+        "title": "Big top-3 cell wins on massage therapy + subscription",
+        "body": "<strong>Massage therapy</strong> top-3 cells 14 -> 22 (+8) Jan 19 -> Apr 18, avg rank 9.87 -> 8.64 across 89 apples-to-apples cells. <strong>Massage subscription</strong> top-3 cells 6 -> 11 (+5) Feb 23 -> Apr 18. Deep tissue near me +3. Float queries at #1 saturation across the local market. Generic 'massage' and 'massage therapist' saw a few cells slip in the contested Pleasant Grove edge - that's where the next 90 days focus."
       },
       {
         "phase": "May 13, 2026 - Course correction",
@@ -4648,73 +4648,124 @@
     ],
     "trend_chart": {
       "months": [
-        "Sep 2025",
         "Oct 2025",
         "Nov 2025",
         "Dec 2025",
         "Jan 2026",
         "Feb 2026",
         "Mar 2026",
-        "Apr 2026"
+        "Apr 2026",
+        "May 2026*"
       ],
       "sessions": [
-        1862,
         1815,
         1770,
         2367,
         3461,
         3577,
         3410,
-        2601
+        2601,
+        2098
       ],
       "leads": [
-        57,
         62,
         50,
         59,
         64,
         47,
         53,
-        59
+        59,
+        81
       ],
-      "partial_note": "Chart shows Oct 2025 - April 2026 (latest complete month). May 2026 is excluded because GA4 attribution config changed mid-month and several conversion events started double-counting - the May numbers are not yet reconciled. See Owner Ask #5."
+      "partial_note": "May 2026 is partial through 2026-05-16 (16 of 31 days) - shown as a dashed line. The May leads value (81) is the raw GA4 figure; it runs ~50% high because three duplicate conversion events started attributing as separate conversions on May 1 (see 'How we count leads' below). Real May organic leads tracking ~46 over the 16-day window, roughly in line with April's daily rate."
+    },
+    "conversions_setup": {
+      "old_setup": {
+        "title": "OLD setup (Dec 2024 - Jul 2025)",
+        "events": [
+          "session_booked",
+          "contact_form_submission",
+          "click_to_dial",
+          "click_to_email"
+        ],
+        "description": "4 events, 4 distinct business actions: a booking-flow start, a form submission, a phone-link click, an email-link click. Lead capture rate ran ~1.5-2.5% of organic sessions - the normal range for a single-pin local-service business."
+      },
+      "aug_2025_change": {
+        "title": "What changed Aug 2025",
+        "events": [
+          "gmb_click",
+          "banner_booking_clicks",
+          "giftcard_click"
+        ],
+        "description": "3 engagement events were added as conversion events in GA4. These are top-funnel taps - a tap on the GBP listing button, a click on the booking banner CTA, a click on the gift-card page. None of them represent a booking. After this change the raw GA4 'conversions' line runs ~6x higher than the actual booking + lead funnel. <strong>We exclude all 3 from every number we report.</strong>"
+      },
+      "may_2026_change": {
+        "title": "What changed May 2026",
+        "events": [
+          "booking_confirmed (duplicate of session_booked)",
+          "click_phone_number (duplicate of click_to_dial)",
+          "contact_form_submit (duplicate of contact_form_submission)"
+        ],
+        "description": "3 duplicate event names started attributing as separate conversions on May 1. The raw event counts are identical to their primary-name pairs going back to Sep/Oct 2025 (e.g. booking_confirmed fires every time session_booked fires - they're the same business action firing under two different tags). After May 1 the all-channel reported lead count runs ~50% high. <strong>We de-duplicate these out of every reported number.</strong> Owner Ask #5 surfaces the cleanup work."
+      },
+      "what_we_report": {
+        "title": "What we report",
+        "events": [
+          "session_booked",
+          "contact_form_submission",
+          "click_to_dial",
+          "click_to_email"
+        ],
+        "description": "The same 4 events as the OLD setup. Engagement excluded. Duplicates excluded. This is the conservative, defensible number that matches the actual booking + form + intent funnel."
+      }
     },
     "heatmap_keywords": [
-      "massage subscription",
+      "massage therapy",
+      "massage therapist near me",
       "deep tissue massage near me",
-      "float therapy",
-      "massage therapist near me"
+      "float therapy"
+    ],
+    "heatmap_competitors": [
+      "Relaxing Remedy",
+      "Therapeutic Massage & Bodywork",
+      "Purify Wellness Center"
+    ],
+    "heatmap_date_keys": [
+      "jan",
+      "feb",
+      "mar",
+      "apr"
+    ],
+    "heatmap_dates": [
+      "Jan 19, 2026",
+      "Feb 23, 2026",
+      "Mar 18, 2026",
+      "Apr 18, 2026"
     ],
     "search_cards": [
       {
-        "keyword": "massage subscription",
-        "verdict": "Biggest recent mover",
+        "keyword": "massage therapy",
+        "verdict": "Biggest mover",
         "sentiment": "good",
-        "commentary": "Top-3 cells expanded from 6 to <strong>14 (+8)</strong> across 93 apples-to-apples cells, Feb 23, 2026 to May 18, 2026. Subscription is the highest-LTV intent - a member is multi-visit revenue, not one-time. <strong>Action: build a dedicated /massage-subscription-american-fork/ page + push via GBP Posts.</strong>"
+        "commentary": "Top-3 cells expanded from 14 to <strong>22 (+8)</strong> across 84 apples-to-apples cells, Jan 19, 2026 to Apr 18, 2026. Avg rank also tightened from 9.87 to <strong>8.64</strong>. <strong>Action: re-add to the May+ LD cadence so we have continuous tracking, then push via Service + FAQ schema on /massage-therapy/.</strong>"
+      },
+      {
+        "keyword": "massage therapist near me",
+        "verdict": "Steady gain across the full window",
+        "sentiment": "good",
+        "commentary": "Top-3 cells 25 -> <strong>36 (+11)</strong>, avg rank 7.34 -> <strong>5.90</strong> across 89 apples-to-apples cells, Jan 19, 2026 to Apr 18, 2026 (longest scan window). BB sits at <strong>#2 of substantial competitors</strong> in the Pleasant Grove + Lehi corridor - Total Muscle Therapy PG is the only one above. <strong>Action: M3 KPI target is top-3 cells >= 35.</strong>"
       },
       {
         "keyword": "deep tissue massage near me",
         "verdict": "Gaining",
         "sentiment": "good",
-        "commentary": "Top-3 cells 25 -> <strong>28 (+3)</strong> across 87 cells, Feb 23, 2026 to May 18, 2026. Deep-tissue is a primary booking modality. <strong>Action: deep-tissue service page gets Service + FAQ schema in M2.</strong>"
+        "commentary": "Top-3 cells 25 -> <strong>26 (+1)</strong> across 92 cells, Feb 23, 2026 to Apr 18, 2026. Deep-tissue is a primary booking modality. <strong>Action: deep-tissue service page gets Service + FAQ schema in M2.</strong>"
       },
       {
         "keyword": "float therapy",
         "verdict": "Defending #1",
         "sentiment": "good",
-        "commentary": "Top-3 cells 93 -> <strong>93</strong> at near-saturation (93/106 in top-3, avg rank <strong>1.52</strong>), Jan 19, 2026 to May 18, 2026. No headroom up from 1.5 - defense posture only. <strong>Action: hold GBP photo cadence, monitor True REST + Purify for any aggressive moves.</strong>"
-      },
-      {
-        "keyword": "massage therapist near me",
-        "verdict": "Steady gain over 4 months",
-        "sentiment": "good",
-        "commentary": "Top-3 cells 25 -> <strong>26 (+1)</strong>, avg rank 6.67 -> 7.36, Jan 19, 2026 to May 18, 2026 (longest scan window available). BB sits at <strong>#2 of substantial competitors</strong> in the Pleasant Grove + Lehi corridor. <strong>Action: M3 KPI target is top-3 cells >= 35 - closes the gap on Relaxing Remedy.</strong>"
-      },
-      {
-        "keyword": "massage therapy",
-        "verdict": "Big gain (Jan -> Apr)",
-        "sentiment": "good",
-        "commentary": "Tracked on the Jan 19 and Apr 18 LD scans. Top-3 cells <strong>14 -> 22 (+8)</strong>, avg rank 9.87 -> 8.64 across 84 apples-to-apples cells. Same magnitude of top-3 gain as massage subscription. <strong>Action: re-add to the May+ LD cadence so we have continuous tracking, then push via on-page schema.</strong>"
+        "commentary": "Top-3 cells 93 -> <strong>89</strong> at near-saturation (89/106 in top-3, avg rank <strong>1.68</strong>), Jan 19, 2026 to Apr 18, 2026. No headroom up from 1.5 - defense posture only. <strong>Action: hold GBP photo cadence, monitor Purify Wellness for any aggressive moves.</strong>"
       }
     ],
     "leaderboard": [
@@ -4804,17 +4855,17 @@
       {
         "kw": "massage subscription",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 98,
         "cells_dst": 98,
         "rank_src": 8.17,
-        "rank_dst": 8.73,
+        "rank_dst": 7.57,
         "top3_src": 6,
-        "top3_dst": 14,
-        "mean_dx": -0.56,
-        "top3_dx": 8,
+        "top3_dst": 8,
+        "mean_dx": 0.6,
+        "top3_dx": 2,
         "cells_entered": 0,
         "cells_lost": 0,
         "apples_n": 93,
@@ -4823,36 +4874,36 @@
       {
         "kw": "deep tissue massage near me",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 98,
-        "cells_dst": 93,
-        "rank_src": 6.68,
-        "rank_dst": 7.41,
+        "cells_dst": 98,
+        "rank_src": 7.08,
+        "rank_dst": 6.49,
         "top3_src": 25,
-        "top3_dst": 28,
-        "mean_dx": -0.74,
-        "top3_dx": 3,
+        "top3_dst": 26,
+        "mean_dx": 0.59,
+        "top3_dx": 1,
         "cells_entered": 0,
-        "cells_lost": 5,
-        "apples_n": 87,
+        "cells_lost": 0,
+        "apples_n": 92,
         "is_supplementary": false
       },
       {
         "kw": "float therapy",
         "src_date_key": "jan",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Jan 19, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 106,
         "cells_dst": 106,
         "rank_src": 1.51,
-        "rank_dst": 1.52,
+        "rank_dst": 1.68,
         "top3_src": 93,
-        "top3_dst": 93,
-        "mean_dx": -0.01,
-        "top3_dx": 0,
+        "top3_dst": 89,
+        "mean_dx": -0.17,
+        "top3_dx": -4,
         "cells_entered": 0,
         "cells_lost": 0,
         "apples_n": 100,
@@ -4861,73 +4912,73 @@
       {
         "kw": "massage therapist near me",
         "src_date_key": "jan",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Jan 19, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 97,
-        "cells_dst": 88,
-        "rank_src": 6.67,
-        "rank_dst": 7.36,
+        "cells_dst": 100,
+        "rank_src": 7.34,
+        "rank_dst": 5.9,
         "top3_src": 25,
-        "top3_dst": 26,
-        "mean_dx": -0.69,
-        "top3_dx": 1,
-        "cells_entered": 0,
-        "cells_lost": 8,
-        "apples_n": 83,
+        "top3_dst": 36,
+        "mean_dx": 1.44,
+        "top3_dx": 11,
+        "cells_entered": 5,
+        "cells_lost": 2,
+        "apples_n": 89,
         "is_supplementary": false
       },
       {
         "kw": "massages",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 86,
-        "cells_dst": 77,
-        "rank_src": 8.08,
-        "rank_dst": 8.77,
+        "cells_dst": 92,
+        "rank_src": 9.03,
+        "rank_dst": 8.41,
         "top3_src": 20,
-        "top3_dst": 19,
-        "mean_dx": -0.68,
-        "top3_dx": -1,
-        "cells_entered": 0,
-        "cells_lost": 8,
-        "apples_n": 73,
+        "top3_dst": 12,
+        "mean_dx": 0.61,
+        "top3_dx": -8,
+        "cells_entered": 7,
+        "cells_lost": 1,
+        "apples_n": 80,
         "is_supplementary": false
       },
       {
         "kw": "massage therapist",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 90,
-        "cells_dst": 85,
-        "rank_src": 7.66,
-        "rank_dst": 8.79,
+        "cells_dst": 95,
+        "rank_src": 8.33,
+        "rank_dst": 7.15,
         "top3_src": 27,
-        "top3_dst": 25,
-        "mean_dx": -1.12,
-        "top3_dx": -2,
-        "cells_entered": 1,
-        "cells_lost": 5,
-        "apples_n": 80,
+        "top3_dst": 29,
+        "mean_dx": 1.18,
+        "top3_dx": 2,
+        "cells_entered": 5,
+        "cells_lost": 0,
+        "apples_n": 85,
         "is_supplementary": false
       },
       {
         "kw": "massage american fork",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 106,
         "cells_dst": 106,
         "rank_src": 1.75,
-        "rank_dst": 1.85,
+        "rank_dst": 1.24,
         "top3_src": 99,
         "top3_dst": 100,
-        "mean_dx": -0.1,
+        "mean_dx": 0.51,
         "top3_dx": 1,
         "cells_entered": 0,
         "cells_lost": 0,
@@ -4937,17 +4988,17 @@
       {
         "kw": "float tank",
         "src_date_key": "jan",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Jan 19, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 106,
         "cells_dst": 106,
         "rank_src": 1.2,
-        "rank_dst": 1.27,
+        "rank_dst": 1.34,
         "top3_src": 98,
-        "top3_dst": 97,
-        "mean_dx": -0.07,
-        "top3_dx": -1,
+        "top3_dst": 96,
+        "mean_dx": -0.14,
+        "top3_dx": -2,
         "cells_entered": 0,
         "cells_lost": 0,
         "apples_n": 100,
@@ -4956,17 +5007,17 @@
       {
         "kw": "float tank near me",
         "src_date_key": "feb",
-        "dst_date_key": "may",
+        "dst_date_key": "apr",
         "src_date_label": "Feb 23, 2026",
-        "dst_date_label": "May 18, 2026",
+        "dst_date_label": "Apr 18, 2026",
         "cells_src": 106,
         "cells_dst": 106,
         "rank_src": 1.48,
-        "rank_dst": 1.49,
+        "rank_dst": 1.59,
         "top3_src": 99,
-        "top3_dst": 100,
-        "mean_dx": -0.01,
-        "top3_dx": 1,
+        "top3_dst": 96,
+        "mean_dx": -0.11,
+        "top3_dx": -3,
         "cells_entered": 0,
         "cells_lost": 0,
         "apples_n": 100,
@@ -5095,9 +5146,9 @@
       }
     ],
     "_data_provenance": {
-      "ga4": "GA4 property 332738090 - 18-month channel x month pull 2026-05-22 (May 2026 excluded from chart due to mid-month attribution config change)",
+      "ga4": "GA4 property 332738090 - 18-month channel x month pull 2026-05-22. May 2026 partial included (16 of 31 days) with a duplicate-event flag in the chart caption.",
       "gsc": "Google Search Console - bbmassageandfloat.com - 365d trailing 2025-05-22 to 2026-05-21",
-      "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates: Jan 19 / Feb 23 / Mar 18 / Apr 18 / May 18, 2026 - 13x13 grid centered at the AF pin, 0.75-mile cell radius"
+      "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates. Client-report heatmap locks all keywords to the common Jan 19 -> Apr 18 window (massage therapy has no May 18 scan, so May 18 is excluded report-wide for apples-to-apples consistency). May 18 data remains in ld_grids.json for the strategic dashboard. 13x13 grid centered at the AF pin, 0.75-mile cell radius."
     }
   }
 }

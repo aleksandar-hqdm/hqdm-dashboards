@@ -46,14 +46,31 @@ def cells_entered_lost(grid_kw, entity, d1, d2):
     return len(pts2 - pts1), len(pts1 - pts2)
 
 
-# Per-keyword apples-to-apples using the LONGEST AVAILABLE window for each keyword
+# Client-report locks the LD comparison window to Jan 19 -> Apr 18 across ALL
+# keywords (so every keyword has the same span). The biggest-mover keyword
+# (massage therapy) has no May 18 scan, so we lock everyone to Jan->Apr for an
+# apples-to-apples cross-keyword view. The May 18 data is still in ld_grids.json
+# for the strategic dashboard.
+REPORT_DATE_KEYS = ['jan', 'feb', 'mar', 'apr']
+REPORT_DATES = ['Jan 19, 2026', 'Feb 23, 2026', 'Mar 18, 2026', 'Apr 18, 2026']
+
+
+def report_window_dates(g):
+    """Return (src, dst) restricted to REPORT_DATE_KEYS for a given grid."""
+    present = [d for d in g.get('dates_present', []) if d in REPORT_DATE_KEYS]
+    if not present:
+        return None, None
+    return present[0], present[-1]
+
+
+# Per-keyword apples-to-apples using the LONGEST AVAILABLE window WITHIN the
+# Jan->Apr report window (May 18 excluded for the client report).
 ld_apples = []
 for kw in ld['keywords'] + ld.get('supplementary_keywords', []):
     g = ld['grids'][kw]
-    present = g.get('dates_present', [])
-    if len(present) < 2:
+    src, dst = report_window_dates(g)
+    if not src or not dst or src == dst:
         continue
-    src, dst = present[0], present[-1]
     src_label = ld['dates'][ld['date_keys'].index(src)]
     dst_label = ld['dates'][ld['date_keys'].index(dst)]
     a = apples(g, CLIENT, src, dst)
@@ -86,8 +103,6 @@ q = {row['q']: row for row in data['trend']['quarterly']}
 q1_25 = q['Q1 2025']
 q1_26 = q['Q1 2026']
 
-# Movement tiles — anchor on Q1 25 -> Q1 26 YoY (uncontaminated). Drop LCR jump
-# claim; May 2026 partial is excluded because GA4 attribution changed mid-month.
 movement_tiles = [
     {
         "label": "Organic Visitors (YoY)",
@@ -104,17 +119,17 @@ movement_tiles = [
         "sub": "Q1 2025 -> Q1 2026 - booking + form + call/email intent"
     },
     {
-        "label": "Biggest Maps Movers (apples-to-apples)",
-        "pct": "+8 / +8",
-        "baseline": "Top-3 cells gained",
-        "current": "subscription + therapy",
-        "sub": "massage subscription Feb->May, massage therapy Jan->Apr"
+        "label": "Biggest Maps Mover (Jan 19 -> Apr 18)",
+        "pct": "+8 top-3",
+        "baseline": "massage therapy",
+        "current": "14 -> 22 top-3 cells",
+        "sub": "Avg rank also improved 9.87 -> 8.64"
     },
     {
         "label": "Float Maps Position",
         "pct": "#1 throughout",
         "baseline": "avg rank 1.5",
-        "current": "97-100 top-3 cells / 106",
+        "current": "93-99 top-3 cells / 106",
         "sub": "Across all 3 float queries - the moat is intact"
     },
 ]
@@ -142,10 +157,10 @@ timeline = [
         "body": "Q1 2025 -> Q1 2026: organic sessions 8,879 -> 10,448 and organic leads 139 -> 164. Lead capture rate held at 1.57% - visitors are converting at the same rate, with more of them. This is the cleanest YoY signal we can run: it strips out the Aug 2025 GA4 engagement-event reconfiguration that would otherwise inflate the raw 'conversion' figure ~6x."
     },
     {
-        "phase": "Jan - May 2026 (LD scans)",
+        "phase": "Jan - Apr 2026 (LD scans)",
         "kind": "good",
-        "title": "Two big top-3 cell wins on the Maps grid",
-        "body": "Two queries gained +8 top-3 cells each on apples-to-apples scans: <strong>massage subscription</strong> (Feb 23 -> May 18: top-3 cells 6 -> 14) and <strong>massage therapy</strong> (Jan 19 -> Apr 18: top-3 cells 14 -> 22). Deep tissue +3. Float queries at full saturation (#1 across the local market). Generic 'massage' and 'massage therapist' saw a few cells slip in the contested Pleasant Grove edge - that's where the next 90 days focus."
+        "title": "Big top-3 cell wins on massage therapy + subscription",
+        "body": "<strong>Massage therapy</strong> top-3 cells 14 -> 22 (+8) Jan 19 -> Apr 18, avg rank 9.87 -> 8.64 across 89 apples-to-apples cells. <strong>Massage subscription</strong> top-3 cells 6 -> 11 (+5) Feb 23 -> Apr 18. Deep tissue near me +3. Float queries at #1 saturation across the local market. Generic 'massage' and 'massage therapist' saw a few cells slip in the contested Pleasant Grove edge - that's where the next 90 days focus."
     },
     {
         "phase": "May 13, 2026 - Course correction",
@@ -155,35 +170,43 @@ timeline = [
     },
 ]
 
-# Trend window — Oct 2025 -> April 2026 (drop May 2026* partial: GA4 event
-# attribution changed mid-month, several events started double-counting). Anchor
-# the story on the clean YoY comparison instead.
+# Trend window — last 8 months INCLUDING May 2026* partial. The May leads number
+# is shown as a dashed/partial point and the "How we count leads" section explains
+# why the raw May figure runs ~50% high (duplicate events newly attributed).
 months_all = data['trend']['months']
 sess_org_all = data['trend']['sessions']['organic']
 leads_monthly = [round(v or 0) for v in data['trend']['conversions']['organic']]
 
-# Find index of 'May 2026*' and trim it
-may_idx = next((i for i, m in enumerate(months_all) if '*' in m), None)
-end_idx = may_idx if may_idx is not None else len(months_all)
 WINDOW = 8
-start = max(0, end_idx - WINDOW)
+start = max(0, len(months_all) - WINDOW)
 
 trend_chart = {
-    "months": months_all[start:end_idx],
-    "sessions": sess_org_all[start:end_idx],
-    "leads": leads_monthly[start:end_idx],
-    "partial_note": "Chart shows Oct 2025 - April 2026 (latest complete month). May 2026 is excluded because GA4 attribution config changed mid-month and several conversion events started double-counting - the May numbers are not yet reconciled. See Owner Ask #5.",
+    "months": months_all[start:],
+    "sessions": sess_org_all[start:],
+    "leads": leads_monthly[start:],
+    "partial_note": "May 2026 is partial through 2026-05-16 (16 of 31 days) - shown as a dashed line. The May leads value (81) is the raw GA4 figure; it runs ~50% high because three duplicate conversion events started attributing as separate conversions on May 1 (see 'How we count leads' below). Real May organic leads tracking ~46 over the 16-day window, roughly in line with April's daily rate.",
 }
 
 # Heatmap keywords — biggest-movement story first
 heatmap_keywords = [
-    "massage subscription",          # +8 top-3 Feb->May, default tab
-    "deep tissue massage near me",   # +3
-    "float therapy",                 # saturation hold
-    "massage therapist near me",     # main commercial, longest window (Jan->May)
+    "massage therapy",                # +8 top-3 Jan->Apr - biggest mover, default tab
+    "massage therapist near me",      # main commercial query, longest scan window
+    "deep tissue massage near me",    # +3 top-3
+    "float therapy",                  # saturation hold - the moat
 ]
 
-# Search-by-search cards — one per heatmap kw + the supplementary big mover
+# Competitor order in the heatmap panels (left -> right). User-requested:
+# BB | Relaxing Remedy | Therapeutic Massage & Bodywork | Purify Wellness
+# Therapeutic Massage & Bodywork was picked over Total Muscle Therapy PG because
+# it's the only candidate with substantial cells in all 4 heatmap kws (including
+# float therapy at 106 cells), filling the "lots of empty grids" gap.
+heatmap_competitors = [
+    "Relaxing Remedy",
+    "Therapeutic Massage & Bodywork",
+    "Purify Wellness Center",
+]
+
+# Search-by-search cards — one per heatmap kw
 apples_by_kw = {a['kw']: a for a in ld_apples}
 search_cards = []
 for kw in heatmap_keywords:
@@ -191,10 +214,15 @@ for kw in heatmap_keywords:
     if not a:
         continue
     sign = '+' if a['top3_dx'] >= 0 else ''
-    if kw == "massage subscription":
+    if kw == "massage therapy":
         search_cards.append({
-            "keyword": kw, "verdict": "Biggest recent mover", "sentiment": "good",
-            "commentary": f"Top-3 cells expanded from {a['top3_src']} to <strong>{a['top3_dst']} ({sign}{a['top3_dx']})</strong> across {a['apples_n']} apples-to-apples cells, {a['src_date_label']} to {a['dst_date_label']}. Subscription is the highest-LTV intent - a member is multi-visit revenue, not one-time. <strong>Action: build a dedicated /massage-subscription-american-fork/ page + push via GBP Posts.</strong>"
+            "keyword": kw, "verdict": "Biggest mover", "sentiment": "good",
+            "commentary": f"Top-3 cells expanded from {a['top3_src']} to <strong>{a['top3_dst']} ({sign}{a['top3_dx']})</strong> across {a['apples_n']} apples-to-apples cells, {a['src_date_label']} to {a['dst_date_label']}. Avg rank also tightened from {a['rank_src']:.2f} to <strong>{a['rank_dst']:.2f}</strong>. <strong>Action: re-add to the May+ LD cadence so we have continuous tracking, then push via Service + FAQ schema on /massage-therapy/.</strong>"
+        })
+    elif kw == "massage therapist near me":
+        search_cards.append({
+            "keyword": kw, "verdict": "Steady gain across the full window", "sentiment": "good",
+            "commentary": f"Top-3 cells {a['top3_src']} -> <strong>{a['top3_dst']} ({sign}{a['top3_dx']})</strong>, avg rank {a['rank_src']:.2f} -> <strong>{a['rank_dst']:.2f}</strong> across {a['apples_n']} apples-to-apples cells, {a['src_date_label']} to {a['dst_date_label']} (longest scan window). BB sits at <strong>#2 of substantial competitors</strong> in the Pleasant Grove + Lehi corridor - Total Muscle Therapy PG is the only one above. <strong>Action: M3 KPI target is top-3 cells >= 35.</strong>"
         })
     elif kw == "deep tissue massage near me":
         search_cards.append({
@@ -204,24 +232,8 @@ for kw in heatmap_keywords:
     elif kw == "float therapy":
         search_cards.append({
             "keyword": kw, "verdict": "Defending #1", "sentiment": "good",
-            "commentary": f"Top-3 cells {a['top3_src']} -> <strong>{a['top3_dst']}</strong> at near-saturation ({a['top3_dst']}/106 in top-3, avg rank <strong>{a['rank_dst']:.2f}</strong>), {a['src_date_label']} to {a['dst_date_label']}. No headroom up from 1.5 - defense posture only. <strong>Action: hold GBP photo cadence, monitor True REST + Purify for any aggressive moves.</strong>"
+            "commentary": f"Top-3 cells {a['top3_src']} -> <strong>{a['top3_dst']}</strong> at near-saturation ({a['top3_dst']}/106 in top-3, avg rank <strong>{a['rank_dst']:.2f}</strong>), {a['src_date_label']} to {a['dst_date_label']}. No headroom up from 1.5 - defense posture only. <strong>Action: hold GBP photo cadence, monitor Purify Wellness for any aggressive moves.</strong>"
         })
-    elif kw == "massage therapist near me":
-        search_cards.append({
-            "keyword": kw, "verdict": "Steady gain over 4 months", "sentiment": "good",
-            "commentary": f"Top-3 cells {a['top3_src']} -> <strong>{a['top3_dst']} ({sign}{a['top3_dx']})</strong>, avg rank {a['rank_src']:.2f} -> {a['rank_dst']:.2f}, {a['src_date_label']} to {a['dst_date_label']} (longest scan window available). BB sits at <strong>#2 of substantial competitors</strong> in the Pleasant Grove + Lehi corridor. <strong>Action: M3 KPI target is top-3 cells >= 35 - closes the gap on Relaxing Remedy.</strong>"
-        })
-
-# Add the supplementary big mover (massage therapy, Jan->Apr +8) as a 5th card
-mt = apples_by_kw.get('massage therapy')
-if mt:
-    sign = '+' if mt['top3_dx'] >= 0 else ''
-    search_cards.append({
-        "keyword": "massage therapy",
-        "verdict": "Big gain (Jan -> Apr)",
-        "sentiment": "good",
-        "commentary": f"Tracked on the Jan 19 and Apr 18 LD scans. Top-3 cells <strong>{mt['top3_src']} -> {mt['top3_dst']} ({sign}{mt['top3_dx']})</strong>, avg rank {mt['rank_src']:.2f} -> {mt['rank_dst']:.2f} across {mt['apples_n']} apples-to-apples cells. Same magnitude of top-3 gain as massage subscription. <strong>Action: re-add to the May+ LD cadence so we have continuous tracking, then push via on-page schema.</strong>"
-    })
 
 # Competitor leaderboard (aggregate top-3 across MAIN 9 kws on latest date per kw)
 def latest_top3(g, ent):
@@ -344,6 +356,32 @@ owner_asks_client = [
      "body": "We've drafted a 16-KPI scorecard for the M3 close-out (3 LD rank metrics, 2 GSC CTR metrics, 1 review-velocity metric, 1 CallRail quality metric, 4 page-build/cannibal metrics, etc.). The full list lives in the strategic dashboard. Want to confirm these are the right 16 - and lock the M3 targets - before we close Q2 against them."},
 ]
 
+# Conversions setup — old vs new. This is the answer to "Also try to define the
+# updated conversions setup to the old setup."
+conversions_setup = {
+    "old_setup": {
+        "title": "OLD setup (Dec 2024 - Jul 2025)",
+        "events": ["session_booked", "contact_form_submission", "click_to_dial", "click_to_email"],
+        "description": "4 events, 4 distinct business actions: a booking-flow start, a form submission, a phone-link click, an email-link click. Lead capture rate ran ~1.5-2.5% of organic sessions - the normal range for a single-pin local-service business."
+    },
+    "aug_2025_change": {
+        "title": "What changed Aug 2025",
+        "events": ["gmb_click", "banner_booking_clicks", "giftcard_click"],
+        "description": "3 engagement events were added as conversion events in GA4. These are top-funnel taps - a tap on the GBP listing button, a click on the booking banner CTA, a click on the gift-card page. None of them represent a booking. After this change the raw GA4 'conversions' line runs ~6x higher than the actual booking + lead funnel. <strong>We exclude all 3 from every number we report.</strong>"
+    },
+    "may_2026_change": {
+        "title": "What changed May 2026",
+        "events": ["booking_confirmed (duplicate of session_booked)", "click_phone_number (duplicate of click_to_dial)", "contact_form_submit (duplicate of contact_form_submission)"],
+        "description": "3 duplicate event names started attributing as separate conversions on May 1. The raw event counts are identical to their primary-name pairs going back to Sep/Oct 2025 (e.g. booking_confirmed fires every time session_booked fires - they're the same business action firing under two different tags). After May 1 the all-channel reported lead count runs ~50% high. <strong>We de-duplicate these out of every reported number.</strong> Owner Ask #5 surfaces the cleanup work."
+    },
+    "what_we_report": {
+        "title": "What we report",
+        "events": ["session_booked", "contact_form_submission", "click_to_dial", "click_to_email"],
+        "description": "The same 4 events as the OLD setup. Engagement excluded. Duplicates excluded. This is the conservative, defensible number that matches the actual booking + form + intent funnel."
+    }
+}
+
+
 # Compose
 client_report_v2 = {
     "version": "v10",
@@ -355,22 +393,26 @@ client_report_v2 = {
         "tagline_sub": "Single-pin massage & float studio - American Fork, UT - 4.9-star x 406 reviews"
     },
     "headline": {
-        "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 -> Q1 2026 - the cleanest, uninflated comparison we can run). Two Maps queries gained <strong>+8 top-3 cells each</strong> across our local scans: 'massage subscription' (Feb 23 -> May 18) and 'massage therapy' (Jan 19 -> Apr 18). The <strong>float side of the business is at #1 across the entire local Maps grid</strong> and the AF pin holds top-3 in 100% of cells for 'massage american fork'. The room-for-growth picture: generic 'massage' and 'massage therapist' searches saw a few cells slip in the contested Pleasant Grove edge (Pleasant Grove competitors pushing) and the site's overall CTR sits below par at 0.80% - both are direct targets for the next 90 days."
+        "lede": "Where Body Balance stands as of May 2026: <strong>organic visitors and organic leads are both up +18% year-over-year</strong> (Q1 2025 -> Q1 2026 - the cleanest, uninflated comparison we can run). The biggest Maps mover was <strong>'massage therapy' - top-3 cells jumped from 14 to 22 (+8)</strong> Jan 19 -> Apr 18, with avg rank also improving from 9.87 to 8.64. The <strong>float side of the business is at #1 across the entire local Maps grid</strong> and the AF pin holds top-3 in 100% of cells for 'massage american fork'. The room-for-growth picture: generic 'massage' and 'massage therapist' searches saw a few cells slip in the contested Pleasant Grove edge (Pleasant Grove competitors pushing) and the site's overall CTR sits below par at 0.80% - both are direct targets for the next 90 days."
     },
     "movement_tiles": movement_tiles,
     "quarterly_snapshot": quarterly_snapshot,
     "timeline": timeline,
     "trend_chart": trend_chart,
+    "conversions_setup": conversions_setup,
     "heatmap_keywords": heatmap_keywords,
+    "heatmap_competitors": heatmap_competitors,
+    "heatmap_date_keys": REPORT_DATE_KEYS,
+    "heatmap_dates": REPORT_DATES,
     "search_cards": search_cards,
     "leaderboard": leaderboard,
     "ld_apples": ld_apples,
     "priorities_90d": priorities,
     "owner_asks_client": owner_asks_client,
     "_data_provenance": {
-        "ga4": "GA4 property 332738090 - 18-month channel x month pull 2026-05-22 (May 2026 excluded from chart due to mid-month attribution config change)",
+        "ga4": "GA4 property 332738090 - 18-month channel x month pull 2026-05-22. May 2026 partial included (16 of 31 days) with a duplicate-event flag in the chart caption.",
         "gsc": "Google Search Console - bbmassageandfloat.com - 365d trailing 2025-05-22 to 2026-05-21",
-        "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates: Jan 19 / Feb 23 / Mar 18 / Apr 18 / May 18, 2026 - 13x13 grid centered at the AF pin, 0.75-mile cell radius"
+        "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates. Client-report heatmap locks all keywords to the common Jan 19 -> Apr 18 window (massage therapy has no May 18 scan, so May 18 is excluded report-wide for apples-to-apples consistency). May 18 data remains in ld_grids.json for the strategic dashboard. 13x13 grid centered at the AF pin, 0.75-mile cell radius."
     }
 }
 
