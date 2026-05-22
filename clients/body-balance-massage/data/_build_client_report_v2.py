@@ -191,7 +191,7 @@ trend_chart = {
     "months": months_all[start:end_idx],
     "sessions": sess_org_all[start:end_idx],
     "leads": leads_monthly[start:end_idx],
-    "partial_note": "Chart ends at April 2026 (latest fully reconciled month). May 2026 is excluded because three duplicate conversion events started attributing as separate conversions on May 1, inflating the raw May organic leads number ~2x. Owner Ask #5 surfaces the GA4 cleanup; we'll bring May back into the chart once the duplicates are removed.",
+    "partial_note": "Chart ends at April 2026 (latest fully reconciled month). May 2026 is excluded pending a GA4 measurement reconciliation - May goes back into the chart once that's resolved.",
 }
 
 # Heatmap keywords — biggest-movement story first
@@ -347,20 +347,18 @@ priorities = [
     },
 ]
 
-# Owner asks — adds Ask #5 about GA4 May config
+# Owner asks shown to the CLIENT (Paul). Internal items (GA4 config history,
+# M3 scorecard sign-off) live on the strategic dashboard's owner_asks block,
+# not here.
 owner_asks_client = [
     {"n": 1, "label": "Trigger-point page rewrite sign-off",
-     "body": "Paul flagged the /trigger-point-therapy/ page as referencing medical injections + dry needling - neither of which BB performs. We've drafted a rewrite focused on the soft-tissue trigger-point modality BB actually does. Need 15 min on a call to walk through the draft and confirm language before publish."},
+     "body": "Paul flagged the /trigger-point-therapy/ page as referencing medical injections + dry needling - neither of which BB performs. We've drafted a rewrite focused on the soft-tissue trigger-point modality BB actually does. Need a quick call to walk through the draft and confirm language before publish."},
     {"n": 2, "label": "Sitewide phone number canonical",
      "body": "Every page on bbmassageandfloat.com currently shows the live-chat phone (855-XXX-5834). The GBP primary is the local 734-XXX-9798. This breaks NAP consistency and likely sends a soft 'multiple businesses' signal. Confirming: switch sitewide to the local 734 number, or keep the chat-routing 855 + add a 'call directly' secondary? (Recommendation: switch to local.)"},
     {"n": 3, "label": "Is cupping still on the menu?",
      "body": "There's a /cupping-massage/ URL returning 404 alongside a live /modalities-techniques/cupping/ canonical. Either small-301 the dead URL or rebuild it if cupping is back. Quick yes/no - does BB still offer cupping?"},
     {"n": 4, "label": "Manual lymphatic drainage - yes or no?",
      "body": "BB ranks <strong>#1 at the AF pin for 'lymphatic drainage massage'</strong> (3,600 UT/mo search volume) with NO on-site page for it. Before we build the page (highest-ROI single page-build of the quarter), we need to confirm: does BB perform the manual lymphatic drainage modality, or is the rank a Maps-attribution artifact?"},
-    {"n": 5, "label": "GA4 conversion config - what changed around May 1?",
-     "body": "We caught duplicate conversion events firing under different names: <code>session_booked</code> + <code>booking_confirmed</code> are the same booking action; <code>click_to_dial</code> + <code>click_phone_number</code> are the same call; <code>contact_form_submission</code> + <code>contact_form_submit</code> are the same form. In May 2026 GA4 started attributing both halves of each pair as separate conversions, inflating May leads by ~50%. We've excluded May from the headline numbers in this report. Need: who set up the duplicate events, and can we de-duplicate going forward?"},
-    {"n": 6, "label": "16-KPI M3 close-out scorecard sign-off",
-     "body": "We've drafted a 16-KPI scorecard for the M3 close-out (3 LD rank metrics, 2 GSC CTR metrics, 1 review-velocity metric, 1 CallRail quality metric, 4 page-build/cannibal metrics, etc.). The full list lives in the strategic dashboard. Want to confirm these are the right 16 - and lock the M3 targets - before we close Q2 against them."},
 ]
 
 # Conversions setup — old vs new. This is the answer to "Also try to define the
