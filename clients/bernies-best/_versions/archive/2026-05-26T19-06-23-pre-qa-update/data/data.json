@@ -11,7 +11,7 @@
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q3 2026",
-    "doc_subtitle": "Less organic traffic, but a higher share of it converts as informational queries move to AI Overviews — with buyer demand strengthening across the brand's channels. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
+    "doc_subtitle": "Less organic traffic, materially higher buyer quality. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
     "mini_reports": [
       { "name": "Spot & Tango content pattern — 20 pair audit", "slug": "st-pattern/", "summary": "Full evidence trail for the S&T structural pattern claim, verified across 20 head-to-head article pairs." },
       { "name": "Top 50 BLOG losers + Ideal Sitemap mapping", "slug": "top-50-losers/", "summary": "Per-URL bleed inventory, each joined against the Ideal Sitemap action recommendations." },
@@ -30,13 +30,13 @@
       "label": "Organic CVR Q1 YoY",
       "value": "+223%",
       "sentiment": "positive",
-      "detail": "0.67% → 2.17%, a 3.2× lift. As AI Overviews absorb the informational symptom queries, the organic visitors who still click through are far more commercial — so the store converts a much higher share of remaining organic traffic, in step with stronger buyer demand across the brand's channels."
+      "detail": "0.67% → 2.17%, a 3.2× lift. The remaining organic traffic is materially higher quality — commercial-intent buyers, not informational browsers."
     },
     {
       "label": "Organic transactions Q1 YoY",
       "value": "+54%",
       "sentiment": "positive",
-      "detail": "186 → 286 transactions despite −52% sessions — absolute organic purchase volume grew year-over-year, part of broader purchase growth across the brand's channels."
+      "detail": "186 → 286 transactions despite −52% sessions. Absolute purchase volume from organic GREW year-over-year."
     },
     {
       "label": "GSC clicks YoY 90d",
@@ -68,11 +68,14 @@
     "proposed": {
       "upgrades_per_month": 20,
       "new_blogs_per_month": 5,
-      "rationale": "Most upside is content hygiene + cornerstone upgrades, not net-new articles. Shift production weight from net-new toward refresh-with-S&T-pattern."
+      "rationale": "Most upside is content hygiene + cornerstone upgrades, NOT new articles. Shift production weight from net-new to refresh-with-S&T-pattern. Approved direction (Milica sync 2026-05-20)."
     },
-    "implication": "At current cadence (12 upgrades/mo), all top 50 BLOG losers ship by end of M3 (4 months) — Q3 plan completes within capacity. At proposed cadence (20/mo), top 50 ships in M2 + 4 PDP refreshes + 2 site-level template changes in M1. Either way, capacity is sufficient.",
+    "implication": "At current cadence (12 upgrades/mo), all top 50 BLOG losers ship by end of M3 (4 months) — Q3 plan completes within capacity. At proposed cadence (20/mo), top 50 ships in M2 + 4 PDP refreshes + 2 site-level template changes in M1. Either way, capacity is sufficient — the bottleneck is approval throughput on PDP edits, not production.",
     "constraints": [
-      "Each page upgrade is a hands-on senior-SEO content pass with editorial review"
+      "Separate approvers for blog vs PDP content; PDP change requests historically don't ship",
+      "HQDM has direct site access for blog publishing since Sept 2025 (no upload bottleneck on blog)",
+      "Internal linking implementation status unverified — needs check with Alexa (on-page)",
+      "Each upgrade currently runs Surfer SEO + Zach's Claude prompt + manual senior-SEO back-and-forth"
     ]
   },
   "site_level_upgrades": {
@@ -161,7 +164,7 @@
         "name": "Author/vet credentials visibility — byline + body-citation pattern",
         "scope": "Every blog post · per-refresh + template",
         "current": "Bernie's HAS vet credentials on 10/10 audited URLs (vs 58% of competitors) but they aren't surfaced consistently. AnimalBiome pattern (verified competitor): 'Reviewed by Dr. X, DVM' header note + body-cited vet attribution. Bernie's already has the credibility — currently invisible.",
-        "change": "Template byline: 'By: Bernie's · Reviewed by Dr. X, DVM · Updated [date]'. Per-refresh: when an article makes a clinical claim, body-cite the reviewing vet inline. Add the byline + bio + inline vet citations.",
+        "change": "Template byline: 'By: Bernie's · Reviewed by Dr. X, DVM · Updated [date]'. Per-refresh: when an article makes a clinical claim, body-cite the reviewing vet inline. Owner ask required: authorize byline + bio + body-citations format.",
         "why_it_matters": "Bernie's strongest moat vs Spot & Tango (S&T top-gainers deliberately omit DVM citation). Surfacing what S&T omits = direct E-E-A-T differentiation on YMYL queries.",
         "lift": "Per-refresh application sitewide.",
         "effort": "M (template edit) + S per refresh",
@@ -171,9 +174,9 @@
         "id": "TPL-09",
         "name": "Internal linking from blog→Knowledge Base + Knowledge Base→Blog/PDP",
         "scope": "Knowledge base + blog cross-link surface",
-        "current": "Knowledge Base + University sections are a key brand asset but currently siloed. Articles within KB rarely link to corresponding blog cornerstone or PDP.",
+        "current": "Knowledge Base + University sections are 'Jim's pride' (end-of-2025 focus) but currently silo'd. Articles within KB rarely link to corresponding blog cornerstone or PDP. Approach restructuring suggestions with that framing.",
         "change": "Add bidirectional linking: each KB article gets a 'Learn more in our blog' contextual link to the cluster main article. Each cluster main blog gets a 'Quick answers in our Knowledge Base' inset linking to relevant KB entries. Same cluster_label keying.",
-        "why_it_matters": "Concentrates the existing KB authority into the topical clusters that need lifting. Doesn't remove or restructure the KB; just adds cross-link density.",
+        "why_it_matters": "Concentrates the existing KB authority into the topical clusters that need lifting. Doesn't remove or restructure the KB (preserving Jim's pride); just adds cross-link density.",
         "lift": "+100-200 KB↔blog cross-links sitewide.",
         "effort": "M",
         "priority": "M2"
@@ -184,16 +187,16 @@
         "scope": "Architectural · M3+ if approved",
         "current": "Bernie's blog URLs are 3 segments (<code>/blogs/bernies-blog/&lt;slug&gt;</code>); S&T's are 2 (<code>/blog/&lt;slug&gt;</code>). Click-depth from home is 3-4 hops vs S&T's 2.",
         "change": "Long-term migration to 2-segment paths. Lowers crawl depth, improves PageRank distribution. Combined with redirect-chain cleanup discovered in pairs 15+16 (S&T audit).",
-        "why_it_matters": "Defer to M3+ — large surface; phase the 250+ URL 301-redirect plan carefully.",
+        "why_it_matters": "Defer to M3+ — large surface, owner sign-off required for 250+ URL 301-redirect plan.",
         "lift": "Sitewide.",
         "effort": "L",
-        "priority": "M3+"
+        "priority": "M3+ (gated on owner approval)"
       }
     ]
   },
   "trend": {
     "headline": "Less traffic, more buyers — organic Q1 YoY: sessions ▼-52%, transactions ▲+54%, CVR ▲+223%",
-    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). As AI Overviews absorb informational queries, the organic visitors who remain convert far more — and buyer demand is strengthening across the brand's channels in parallel. May 2026 is partial (through May 21); shown as dashed continuation.",
+    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). The remaining organic traffic is materially higher quality — commercial-intent buyers, not informational browsers. May 2026 is partial (through May 21); shown as dashed continuation.",
     "may_extrapolation_note": "May 2026 = partial month (through May 21).",
     "months": [
       "Nov 2024", "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025",
@@ -227,7 +230,7 @@
     "channel_labels": { "organic": "Organic Search" }
   },
   "quarterly_chart": {
-    "headline": "Bernie's Best — Organic Search · quarterly: traffic fell sharply, but a higher share of the remaining clicks converted",
+    "headline": "Bernie's Best — Organic Search · quarterly: traffic fell sharply, but the buyers who remained converted at materially higher rates",
     "subtitle": "Q1 2025 → Q1 2026. Q2 2026 (est) shown hatched/dashed — Apr 2026 actual + May run-rate projection + June projected from May.",
     "quarters": ["Q1 2025", "Q2 2025", "Q3 2025", "Q4 2025", "Q1 2026", "Q2 2026* (est)"],
     "sessions":     [27617, 19581, 16014, 13527, 13160, 12162],
@@ -243,7 +246,7 @@
   },
   "quarterly_yoy_infographic": {
     "headline": "Q1 2025 vs Q1 2026 — the headline inversion in one frame",
-    "subtitle": "Organic only. Fewer visitors, more buyers, a higher share converting.",
+    "subtitle": "Organic only. Fewer visitors, more buyers, materially higher conversion.",
     "panels": [
       {
         "metric": "Sessions",
@@ -270,7 +273,7 @@
         "old_value": 0.67,
         "new_value": 2.17,
         "format": "pct",
-        "context": "As AI Overviews absorb informational queries, the organic visitors who remain are far more likely to buy — the same buyer-demand strength showing across the brand's channels."
+        "context": "Remaining traffic is materially higher quality — commercial-intent, not informational."
       }
     ]
   },
@@ -317,7 +320,7 @@
     "may_2025_total": 18,
     "may_2026_aio": 16,
     "may_2026_total": 18,
-    "ctr_note": "Industry CTR studies show AIO reduces #1 organic CTR by ~40–70%; #5–#20 CTR by ~60–90%. Bernie's rankings mostly held; clicks per ranking position collapsed.",
+    "ctr_note": "Industry CTR studies (Ahrefs, BrightEdge, Seer): AIO reduces #1 organic CTR by ~40–70%; #5–#20 CTR by ~60–90%. Bernie's rankings mostly held; clicks per ranking position collapsed.",
     "exceptions": [
       { "kw": "are border collie smart",  "reason": "Low-medical query (not YMYL pet-health)" },
       { "kw": "dog poop powder",          "reason": "Transactional / store-related" }
@@ -339,7 +342,7 @@
       "Parameter pollution diluting canonical PDP signal (Crawled — not indexed pile)",
       "5×5 cannibalization — Learn More pages on www outrank store PDPs"
     ],
-    "how_short": "5-step detection: build the in-SKU keyword universe → pull ranked keywords for both subdomains (blog + store) → classify (PURE_OPPORTUNITY / WRONG_URL / STORE_GOOD) → dedup cross-SKU overlap → manual SERP-intent validation on the top 60 keywords.",
+    "how_short": "5-step pipeline (research/12_store_gap_analysis.py): build SKU kw universe via DFS keyword_suggestions → pull Ahrefs ranked_keywords for BOTH subdomains → classify (PURE_OPPORTUNITY / WRONG_URL / STORE_GOOD) → dedup cross-SKU overlap → manual SERP intent validation on top 60 kws.",
     "where_short": "5 PDPs on store.bernies.com — Perfect Poop (45 rankings, mostly branded) · Healthy Hips (1) · OMG Omegas (2-3) · Charming Chompers (2-3) · Marvelous Mobility (0). Plus 5 'Learn More' pages on www.bernies.com that cannibalize the PDPs."
   },
   "sku_coverage": [
@@ -363,7 +366,7 @@
     "headline": "S&T content pattern — verified across 20 head-to-head article pairs",
     "deep_dive_url": "st-pattern/",
     "pair_count": 20,
-    "method_summary": "40 articles analyzed (20 S&T winners + 20 Bernie's matched losers on the same query). Parsed each into structured sections, measured heading hierarchy, semantic patterns, and content-gap inventory.",
+    "method_summary": "Fetched 40 articles with Googlebot UA (20 S&T winners + 20 Bernie's matched losers on the same query). Parsed each into structured sections, measured heading hierarchy, semantic patterns, and content-gap inventory.",
     "headline_findings": [
       { "label": "S&T avg H3 / article", "value": "22.6", "bernies": "8.2", "note": "Bernie's averages 36% of S&T's H3 count" },
       { "label": "Numbered H3 enumeration (total across 20)", "value": "219", "bernies": "4", "note": "55× delta — the single biggest measured signal" },
@@ -378,7 +381,7 @@
       "30-60w intro paragraph before any bullet list (S&T does this; Bernie's BARE_LIST count is already low)",
       "Brand byline + visible publish date + visible 'Updated' date (TPL-01)",
       "FAQ section as 2nd-to-last H2 (3-5 Q&A) — recommended not mandatory",
-      "'Final Thoughts' conclusion (the most consistent gainer element)",
+      "'Final Thoughts' conclusion (10 of 12 articles in prior audit — most consistent gainer element)",
       "5-8 inline product mentions + sidebar Related Products (down from Bernie's current ~36/article)"
     ],
     "bernies_overlay": "Bernie's wins what S&T deliberately omits: 'Reviewed by Dr. X, DVM' header note (AnimalBiome-style), body-cited vet credentials on clinical claims, citations to Cornell/NIH/Merck on YMYL claims. Apply S&T structural skeleton + AnimalBiome E-E-A-T overlay.",
@@ -404,8 +407,8 @@
       "consolidate_learn_more": 5,
       "review_manually": 1
     },
-    "narrative": "The per-URL bleed inventory spans 50 URLs, each joined against the Ideal Sitemap workflow's per-cluster action recommendations. 15 of 50 already mapped to Perfect Poop cluster actions; remaining 35 await the next-4-SKU cluster runs.",
-    "ideal_sitemap_connection": "The Ideal Sitemap workflow is HQDM's reusable workflow that maps a client's current content state vs. ideal state per topical cluster. Output keyed by main_keyword with rule-based suggested_actions: upgrade_main_article / solve_cannibalization / manage_redirects / consolidate_learn_more / write_new_article / review_manually. Bernie's MVP cluster (Perfect Poop, 39 main_keyword rows) drives the top-50 mapping. Same workflow reusable for Bernie's 4 remaining SKU clusters and every future HQDM client.",
+    "narrative": "Prior versions surfaced 5-10 highest-loss URLs. Full per-URL bleed inventory now spans 50 URLs, each joined against the Ideal Sitemap workflow's per-cluster action recommendations. 15 of 50 already mapped to Perfect Poop cluster actions; remaining 35 await the next-4-SKU cluster runs.",
+    "ideal_sitemap_connection": "The Ideal Sitemap workflow is HQDM's reusable Python pipeline (research/ideal_sitemap/) that maps a client's current content state vs. ideal state per topical cluster. Output keyed by main_keyword with rule-based suggested_actions: upgrade_main_article / solve_cannibalization / manage_redirects / consolidate_learn_more / write_new_article / review_manually. Bernie's MVP cluster (Perfect Poop, 39 main_keyword rows) drives the top-50 mapping. Same workflow reusable for Bernie's 4 remaining SKU clusters and every future HQDM client.",
     "top_5_visible_in_dashboard": [
       { "rank": 1, "url": "/blogs/dog-has-diarrhea-at-night/", "loss": 1446, "current_rank": 12, "target_kw": "my dog has diarrhea at night but is acting fine", "sv": 720, "sitemap_action": "manage_redirects + solve_cannibalization", "in_plan": "BLOG-REF-01 · P0 · M1" },
       { "rank": 2, "url": "/blogs/help-why-is-my-dog-throwing-up-undigested-food/", "loss": 983, "current_rank": 28, "target_kw": "canine vomiting undigested food", "sv": 2900, "sitemap_action": "no_cluster_mapped", "in_plan": "BLOG-REF-02 · P0 · M1" },
@@ -433,7 +436,7 @@
     { "kpi": "GSC clicks (last 90d sitewide)",          "baseline": "7,800",  "target": "9,500 (+22%)", "stretch": "11,000 (+41%)" },
     { "kpi": "Organic CVR (sitewide)",                  "baseline": "2.17%",  "target": "≥ 2.0% (hold)", "stretch": "≥ 2.5%" },
     { "kpi": "Top-50 BLOG refresh velocity",            "baseline": "0/50",   "target": "30/50 by M2", "stretch": "50/50 by M3" },
-    { "kpi": "Pages ranking",                    "baseline": "130",    "target": "175",          "stretch": "220" },
+    { "kpi": "Ahrefs pages ranking",                    "baseline": "130",    "target": "175",          "stretch": "220" },
     { "kpi": "Store PDP rankings ≤20 on in-SKU kws",    "baseline": "3",      "target": "30",           "stretch": "80" },
     { "kpi": "Store organic traffic capture (est.)",    "baseline": "~10/d",  "target": "200/d",        "stretch": "500/d" },
     { "kpi": "Crawled — not indexed (lower is better)", "baseline": "2,670",  "target": "2,000",        "stretch": "1,500 (back to Feb baseline)" },
@@ -443,8 +446,8 @@
     "Foundation signals held — vet credentials + last-updated dates on 10/10 audited URLs",
     "GSC 90d PoP +6.3% — bleed has stopped at sitewide level (Q1 2026 recovery)",
     "Organic transactions Q1'25 → Q1'26: 186 → 286 (+54%) despite −52% sessions — buyers consolidate",
-    "Organic CVR Q1'25 → Q1'26: 0.67% → 2.17% (+223%) — 3.2× lift in purchase rate as informational queries move to AI Overviews and the remaining organic clicks skew commercial",
-    "Direct sessions flat (10,742 → 10,372, −3%) — and purchases via Direct + Email grew alongside organic Q1 YoY (no brand-pull erosion)",
+    "Organic CVR Q1'25 → Q1'26: 0.67% → 2.17% (+223%) — 3.2× lift in click quality",
+    "Direct sessions flat (10,742 → 10,372, −3%) — no brand-pull erosion visible",
     "S&T content pattern verified across 20 head-to-head pairs (st-pattern.html) — recipe is measured, not opinion",
     "/products/charming-chompers gained BOTH +69% sessions AND +340% transactions in Q1'26",
     "Verified Lever 2 thesis: PDPs do the conversion work, blog drives volume",
@@ -452,14 +455,15 @@
   ],
   "negatives": [
     "GSC clicks YoY 90d: 16,411 → 7,800 (−52.5%) — half of last year's clicks gone",
-    "Pages ranking: 393 (peak Jul 2025) → 130 (May 2026) — −67%",
+    "Ahrefs pages ranking: 393 (peak Jul 2025) → 130 (May 2026) — −67%",
     "Crawled-not-indexed: 1,492 → 2,670 in 84 days (+79%) — index health actively degrading",
     "AI Overview presence: ~20-40% (May 2025) → 89% (May 2026) on Bernie's top kws",
     "Store ranks 59 kws total; 75% are branded; only ~6 truly generic / 230 SV/month",
     "Marvelous Mobility ranks for 0 keywords; 4 of 5 PDPs effectively absent from category SERPs",
     "Bernie's averages 36% of S&T's H3 count (8.2 vs 22.6); uses 4 numbered-enum headings vs S&T's 219",
     "Footer-template H3 pollution: ~1,250 EMPTY_SECTION H3s sitewide ($13.99 - $46.99 as an H3 on 19 of 20 audited articles)",
-    "Spot & Tango grew +2,078% top-10 visibility while Bernie's lost 50% — pattern-driven reshuffle"
+    "Spot & Tango grew +2,078% top-10 visibility while Bernie's lost 50% — pattern-driven reshuffle",
+    "Approval throughput on PDP edits is the binding constraint, not production capacity"
   ],
   "levers": [
     {
@@ -522,7 +526,7 @@
         { "code": "TPL-04", "name": "Increase blog→PDP internal links (commercial funnel, per refresh)", "month": "M1-M3", "effort": "S" },
         { "code": "TPL-07", "name": "BreadcrumbList JSON-LD + Article schema improvements", "month": "M2", "effort": "S" },
         { "code": "TPL-09", "name": "Blog ↔ Knowledge Base cross-linking", "month": "M2", "effort": "M" },
-        { "code": "TPL-10", "name": "URL-path consolidation (M3+)", "month": "M3+", "effort": "L" }
+        { "code": "TPL-10", "name": "URL-path consolidation (gated on owner approval, M3+)", "month": "M3+", "effort": "L" }
       ],
       "outcome": "Sitewide. TPL-05 alone removes ~1,250 pollution H3s. TPL-01 + TPL-08 surface E-E-A-T signals Bernie's already has but currently hides. TPL-02 + TPL-03 + TPL-04 build the topical-cluster + commercial-funnel link surface."
     },

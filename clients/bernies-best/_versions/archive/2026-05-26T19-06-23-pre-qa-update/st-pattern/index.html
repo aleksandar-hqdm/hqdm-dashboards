@@ -42,7 +42,7 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-sky-500 p-4">
       <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Pairs verified</div>
       <div class="text-3xl font-extrabold text-ink-900 mt-1">20</div>
-      <div class="text-xs text-ink-500 mt-1">40 articles · 20 head-to-head pairs</div>
+      <div class="text-xs text-ink-500 mt-1">40 articles · Googlebot UA fetch</div>
     </div>
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 border-t-4 border-t-rose-500 p-4">
       <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">S&amp;T avg body length</div>
@@ -66,8 +66,8 @@
     <h2 class="text-xl font-bold">Methodology</h2>
     <ul class="mt-4 space-y-2 text-sm text-ink-700 leading-relaxed">
       <li><strong>Pair selection.</strong> 20 queries where Spot &amp; Tango ranks in top-15 and Bernie's ranks below 15. Pairs span Bernie's Perfect Poop SKU cluster (digestive, stool quality, bowel) plus adjacent dog-health topics.</li>
-      <li><strong>Fetch.</strong> All 40 URLs captured as rendered; redirects followed and noted.</li>
-      <li><strong>Parse.</strong> Parsed with chrome-stripping (<code class="text-xs">script</code>, <code class="text-xs">style</code>, <code class="text-xs">nav</code>, <code class="text-xs">header</code>, <code class="text-xs">footer</code>, <code class="text-xs">aside</code>, <code class="text-xs">form</code>, any <code class="text-xs">display:none</code> / <code class="text-xs">aria-hidden=true</code> removed). Widget classes (related posts, sidebars, share buttons, breadcrumbs, author bios, product carousels) stripped.</li>
+      <li><strong>Fetch.</strong> All 40 URLs fetched with <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">Mozilla/5.0 (compatible; Googlebot/2.1)</code> User-Agent. Redirects followed and noted.</li>
+      <li><strong>Parse.</strong> BeautifulSoup with chrome-stripping (<code class="text-xs">script</code>, <code class="text-xs">style</code>, <code class="text-xs">nav</code>, <code class="text-xs">header</code>, <code class="text-xs">footer</code>, <code class="text-xs">aside</code>, <code class="text-xs">form</code>, any <code class="text-xs">display:none</code> / <code class="text-xs">aria-hidden=true</code> removed). Widget classes (related posts, sidebars, share buttons, breadcrumbs, author bios, product carousels) stripped.</li>
       <li><strong>Structure extraction.</strong> Each article parsed into ordered sections defined by H1/H2/H3/H4 boundaries. Record: heading text, level, paragraph count, bullet count, paragraph words, list words, total words.</li>
       <li><strong>Semantic classification.</strong> Every heading classified — <em>declarative</em>, <em>numbered_list_item</em>, <em>question</em>, <em>how_to</em>, <em>FAQ_or_conclusion</em>.</li>
       <li><strong>Content-gap detection.</strong> Five gap types — STUB (heading &lt;50w body), EMPTY_SECTION (heading no body), BARE_LIST (bullets only), LIST_HEAVY (lists dominate), THIN_H2 (single-paragraph H2 no sub-structure).</li>

@@ -44,7 +44,7 @@
       <h2 class="text-xl font-bold">The headline numbers</h2>
     </div>
     <p class="text-sm text-ink-700 mt-3 leading-relaxed">
-      The store subdomain (<code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">store.bernies.com</code>) ranks for <strong>59 keywords total</strong> — 53 of them in top-20 — but <strong>44 of 59 (75%) are branded</strong> ("Bernie's Perfect Poop", "Charming Chompers", brand misspellings like "betnies"). Of the 15 flagged as non-branded, ~7 are "perfect poop" product-name variants (quasi-branded). <strong>Truly generic non-brand rankings: ~6 keywords / ~230 SV/month.</strong>
+      The store subdomain (<code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">store.bernies.com</code>) ranks for <strong>59 keywords total</strong> — 53 of them in top-20 — but <strong>44 of 59 (75%) are branded</strong> ("Bernie's Perfect Poop", "Charming Chompers", brand misspellings like "betnies"). Of the 15 Ahrefs flags as non-branded, ~7 are "perfect poop" product-name variants (quasi-branded). <strong>Truly generic non-brand rankings: ~6 keywords / ~230 SV/month.</strong>
     </p>
     <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
       <div class="bg-amber-50 border border-amber-200 rounded p-3">
@@ -125,18 +125,18 @@
       <span class="inline-block px-2 py-1 rounded text-xs font-bold bg-sky-100 text-sky-800">HOW</span>
       <h2 class="text-xl font-bold">Detection methodology — 5-step pipeline</h2>
     </div>
-    <p class="text-sm text-ink-700 mt-3">Run end-to-end across 5 steps:</p>
+    <p class="text-sm text-ink-700 mt-3">Run end-to-end by <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">research/12_store_gap_analysis.py</code> + <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">14_dedup_gap.py</code> + <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">40_store_analysis.py</code>:</p>
     <ol class="mt-4 space-y-3 text-sm">
       <li class="flex items-start gap-3">
         <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-sky-500 text-white text-sm font-bold flex-shrink-0">1</span>
         <div>
-          <strong>Built the SKU keyword universe.</strong> For each of Bernie's 5 SKUs, expanded 8–15 seed queries per product (e.g. for Perfect Poop: "dog probiotic", "digestive supplement for dogs", "dog gut health", "probiotic chews for dogs", "fiber for dogs", "psyllium for dogs"…). Result: <strong>3,429 unique kws</strong> across 5 SKUs.
+          <strong>Built the SKU keyword universe.</strong> For each of Bernie's 5 SKUs, ran DFS <code class="bg-slate-100 px-1 rounded text-xs">keyword_suggestions</code> across 8–15 seed queries per product (e.g. for Perfect Poop: "dog probiotic", "digestive supplement for dogs", "dog gut health", "probiotic chews for dogs", "fiber for dogs", "psyllium for dogs"…). Result: <strong>3,429 unique kws</strong> across 5 SKUs.
         </div>
       </li>
       <li class="flex items-start gap-3">
         <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-sky-500 text-white text-sm font-bold flex-shrink-0">2</span>
         <div>
-          <strong>Pulled ranked keywords for both subdomains.</strong> <code class="bg-slate-100 px-1 rounded text-xs">www.bernies.com</code> (blog) and <code class="bg-slate-100 px-1 rounded text-xs">store.bernies.com</code> (commerce) separately. <strong>GSC is blind on the store subdomain</strong> (data gap from day one — store.bernies.com is NOT in GSC), so the store subdomain relies on third-party ranking signals for keyword-level validation.
+          <strong>Pulled Ahrefs ranked_keywords for both subdomains.</strong> <code class="bg-slate-100 px-1 rounded text-xs">www.bernies.com</code> (blog) and <code class="bg-slate-100 px-1 rounded text-xs">store.bernies.com</code> (commerce) separately. <strong>GSC is blind on the store subdomain</strong> (data gap from day one — store.bernies.com is NOT in GSC), so DFS + Ahrefs are the only signals. DFS supplemented as third source for keyword-level rank validation.
         </div>
       </li>
       <li class="flex items-start gap-3">
@@ -157,7 +157,7 @@
       <li class="flex items-start gap-3">
         <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-sky-500 text-white text-sm font-bold flex-shrink-0">5</span>
         <div>
-          <strong>Validated SERP intent on the top opportunity kws.</strong> Manual SERP checks on the 60 highest-SV kws to filter out wrong-intent (e.g. "dog probiotic" returns commercial-intent SERPs → keep; "best dog food" returns informational/listicle SERPs → flag as informational, redirect to blog content).
+          <strong>Validated SERP intent on the top opportunity kws.</strong> Manual DFS SERP pulls on the 60 highest-SV kws to filter out wrong-intent (e.g. "dog probiotic" returns commercial-intent SERPs → keep; "best dog food" returns informational/listicle SERPs → flag as informational, redirect to blog content).
         </div>
       </li>
     </ol>
