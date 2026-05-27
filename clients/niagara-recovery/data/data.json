@@ -1348,5 +1348,387 @@
         "gbp_cr": null
       }
     ]
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Niagara Recovery",
+    "short_name": "Niagara Recovery",
+    "subtitle": "Q2 2026 · Western NY · Newfane pin · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Niagara Recovery <strong>owns its home market</strong> — 100% of Maps cells within 15 miles of the Newfane pin rank #1–2 across alcohol-rehab, detox, and addiction searches, and branded search converts at a 17% click rate. The pin gave back some outer-ring coverage this period as the grid widened (−55 top-3 cells), and non-branded clicks pulled back sharply. The plan: a brand-canonical fix sitewide, a Google Business service-area swap with a photo and posts cadence, service-page consolidation, and a location-page rebuild.</p>",
+    "chips": [
+      {
+        "v": "100%",
+        "l": "cells 0–15mi of pin",
+        "good": true
+      },
+      {
+        "v": "#1–2",
+        "l": "home-market Maps",
+        "good": true
+      },
+      {
+        "v": "17.1%",
+        "l": "branded search CTR",
+        "good": true
+      },
+      {
+        "v": "−87%",
+        "l": "non-branded clicks 30d",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        1995,
+        1647,
+        1396,
+        1263,
+        976,
+        1166,
+        985,
+        721
+      ],
+      "leads": [],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        4713,
+        2163,
+        5439,
+        3469,
+        1679,
+        1135,
+        853
+      ],
+      "leads": [],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Organic Visitors"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-84%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-66%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-21%",
+            "cls": "neg"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "focus": [
+      {
+        "title": "Brand-canonical sitewide",
+        "color": "#1d5b8a",
+        "body": "Fix the brand-canonical signal across the site so the brand engine isn’t fighting itself."
+      },
+      {
+        "title": "GBP service-area swap",
+        "color": "#10b981",
+        "body": "Swap the Google Business service area off the capped ZIP set and add a photo blitz + posting cadence."
+      },
+      {
+        "title": "Service-page consolidation",
+        "color": "#6366f1",
+        "body": "Consolidate overlapping service pages, set a schema floor, and rewrite the three priority pages."
+      },
+      {
+        "title": "Location-page architecture",
+        "color": "#f59e0b",
+        "body": "Build, upgrade, or redirect location pages into a clean architecture that supports the outer-ring towns."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Feb 22 → Apr 30, 2026 · 9 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "alcohol detox near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.45 → <strong>1.55</strong></span>"
+            },
+            {
+              "t": "115 → <strong>112</strong>"
+            },
+            {
+              "t": "-3",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.40 → <strong>1.45</strong></span>"
+            },
+            {
+              "t": "112 → <strong>111</strong>"
+            },
+            {
+              "t": "-1",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "inpatient rehab near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">2.40 → <strong>2.55</strong></span>"
+            },
+            {
+              "t": "99 → <strong>97</strong>"
+            },
+            {
+              "t": "-2",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "addiction rehab"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">2.15 → <strong>2.30</strong></span>"
+            },
+            {
+              "t": "104 → <strong>96</strong>"
+            },
+            {
+              "t": "-8",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "addiction rehab near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.85 → <strong>2.00</strong></span>"
+            },
+            {
+              "t": "104 → <strong>96</strong>"
+            },
+            {
+              "t": "-8",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "addiction treatment center"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">2.90 → <strong>3.30</strong></span>"
+            },
+            {
+              "t": "99 → <strong>86</strong>"
+            },
+            {
+              "t": "-13",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": null
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across 9 tracked searches · Feb 22 → Apr 30, 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Niagara Recovery (you)"
+            },
+            {
+              "t": "1.9"
+            },
+            {
+              "t": "759"
+            },
+            {
+              "t": "-55",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Niagara Rehabilitation-Nursing"
+            },
+            {
+              "t": "1.0"
+            },
+            {
+              "t": "230"
+            },
+            {
+              "t": "+5",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Casa Di Vita (Cazenovia Recovery)"
+            },
+            {
+              "t": "4.8"
+            },
+            {
+              "t": "220"
+            },
+            {
+              "t": "+12",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Renaissance Addiction Services at BestSelf"
+            },
+            {
+              "t": "5.7"
+            },
+            {
+              "t": "198"
+            },
+            {
+              "t": "+22",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Pathways (CHS Buffalo)"
+            },
+            {
+              "t": "7.3"
+            },
+            {
+              "t": "195"
+            },
+            {
+              "t": "+18",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Niagara Health & Rehab Centre"
+            },
+            {
+              "t": "2.0"
+            },
+            {
+              "t": "195"
+            },
+            {
+              "t": "+4",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "You're #1 by a wide margin (759 top-3 cells vs 230 for the next provider), though you gave back some outer-ring coverage this period (−55) as the grid widened. Lower avg rank is better."
+    }
   }
 }

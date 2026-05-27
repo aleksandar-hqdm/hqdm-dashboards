@@ -1407,5 +1407,387 @@
         "gbp_cr": null
       }
     ]
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Urban Recovery",
+    "short_name": "Urban Recovery",
+    "subtitle": "Q2 2026 · Brooklyn · Red Hook pin · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Urban Recovery <strong>held its Red Hook Maps grid while the market churned hard around it</strong> — you're the only Brooklyn addiction-treatment pin to gain net top-10 coverage this period (+21 cells across eight priority searches), holding 92.8% of the 1,344-cell grid. Your brand engine is strong (1,357 clicks at position 2.3). The drag is on-site: thousands of high-intent service-page queries rank on page one but convert at near-zero. Rebuilding those service pages, fixing the homepage business-info mismatch, and a Google Business depth push are the priorities.</p>",
+    "chips": [
+      {
+        "v": "92.8%",
+        "l": "Maps grid held",
+        "good": true
+      },
+      {
+        "v": "+21",
+        "l": "top-10 cells vs churn",
+        "good": true
+      },
+      {
+        "v": "pos 2.3",
+        "l": "brand search",
+        "good": true
+      },
+      {
+        "v": "9,269",
+        "l": "kws leaking CTR",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        5992,
+        5277,
+        4533,
+        3863,
+        2861,
+        3149,
+        4424,
+        4568
+      ],
+      "leads": [],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        9469,
+        15203,
+        10003,
+        7641,
+        5267,
+        3291,
+        4496
+      ],
+      "leads": [],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Organic Visitors"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-55%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-45%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+8%",
+            "cls": "pos"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "focus": [
+      {
+        "title": "GBP depth surge",
+        "color": "#10b981",
+        "body": "Defend Red Hook and diffuse outward with a Google Business depth push — posts, photos, services, Q&A."
+      },
+      {
+        "title": "Service-page rebuild",
+        "color": "#1d5b8a",
+        "body": "Rebuild the high-intent service pages that rank but don’t convert, and fix the homepage business-info mismatch."
+      },
+      {
+        "title": "Cross-borough location pages",
+        "color": "#6366f1",
+        "body": "Upgrade cross-borough location pages and clean up the thin, data-driven ones."
+      },
+      {
+        "title": "Counter category drift",
+        "color": "#f59e0b",
+        "body": "Push inpatient-rehab framing to counter the nursing-facility category drift pulling on those rankings."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Jan 27 → Apr 22, 2026 · 8 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab brooklyn"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">2.11 → <strong>2.16</strong></span>"
+            },
+            {
+              "t": "168 → <strong>168</strong>"
+            },
+            {
+              "t": "0",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab brooklyn"
+            },
+            {
+              "t": "<span class=\"arrow-up\">2.07 → <strong>2.04</strong></span>"
+            },
+            {
+              "t": "168 → <strong>168</strong>"
+            },
+            {
+              "t": "0",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "rehabs in new york"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.25 → <strong>3.39</strong></span>"
+            },
+            {
+              "t": "132 → <strong>128</strong>"
+            },
+            {
+              "t": "-4",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab new york"
+            },
+            {
+              "t": "<span class=\"arrow-up\">4.14 → <strong>4.12</strong></span>"
+            },
+            {
+              "t": "95 → <strong>98</strong>"
+            },
+            {
+              "t": "+3",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab"
+            },
+            {
+              "t": "<span class=\"arrow-up\">5.71 → <strong>4.48</strong></span>"
+            },
+            {
+              "t": "45 → <strong>78</strong>"
+            },
+            {
+              "t": "+33",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab"
+            },
+            {
+              "t": "<span class=\"arrow-up\">6.49 → <strong>5.64</strong></span>"
+            },
+            {
+              "t": "32 → <strong>56</strong>"
+            },
+            {
+              "t": "+24",
+              "c": "pos"
+            }
+          ]
+        }
+      ],
+      "note_html": null
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across 8 tracked searches · Jan 27 → Apr 22, 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Detox & Drug/Alcohol Rehab Center In Brooklyn, NY"
+            },
+            {
+              "t": "3.7"
+            },
+            {
+              "t": "1217"
+            },
+            {
+              "t": "+52",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Urban Recovery (Red Hook) (you)"
+            },
+            {
+              "t": "3.9"
+            },
+            {
+              "t": "1113"
+            },
+            {
+              "t": "+21",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Surfpoint Recovery (sister-pin, Coney Island)"
+            },
+            {
+              "t": "4.2"
+            },
+            {
+              "t": "950"
+            },
+            {
+              "t": "+33",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Anchor House"
+            },
+            {
+              "t": "7.1"
+            },
+            {
+              "t": "842"
+            },
+            {
+              "t": "+36",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Elevate Point – Alcohol & Drug Rehab NYC"
+            },
+            {
+              "t": "9.8"
+            },
+            {
+              "t": "566"
+            },
+            {
+              "t": "+88",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Spring Hill Wellness NY – Outpatient"
+            },
+            {
+              "t": "8.2"
+            },
+            {
+              "t": "565"
+            },
+            {
+              "t": "+37",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "Detox &amp; Drug/Alcohol Recovery edges you on raw footprint (1,217 vs 1,113 top-3 cells), but you're the only Brooklyn pin that gained net coverage this period (+21). Lower avg rank is better."
+    }
   }
 }

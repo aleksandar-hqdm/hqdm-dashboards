@@ -1,0 +1,170 @@
+/* Shared renderer for the single-screen "Client" snapshot report.
+   Reads ./data/data.json -> `snapshot` block (written by _build_snapshots.py) and builds
+   the full DOM + charts into #snap-root. One renderer for every client.
+
+   snapshot block shape:
+   {
+     eyebrow, title, subtitle, exec_html,
+     chips: [{v,l,good|watch}],
+     line:    {labels[], visitors[], leads[], leads_label, visitors_label, partial_index},
+     quarters:{labels[], visitors[], leads[], leads_label, partial_index},
+     boxes: [{win, cmp, kind:'good'|'watch'|'', rows:[{m,d,cls}], extra:{m,d,cls}|null}],
+     boxes_reading_html,
+     maps:        {enabled, title, window, headers:[], rows:[{me, cells:[{t,c}]}], note_html},
+     competitors: {enabled, title, window, headers:[], rows:[{me, cells:[{t,c}]}], note_html},
+     focus: [{title, body, color}]
+   }
+*/
+(async function () {
+  const root = document.getElementById('snap-root');
+  const DATA = await fetch('./data/data.json').then(r => r.json()).catch(() => null);
+  if (!DATA || !DATA.snapshot) {
+    root.innerHTML = '<div style="max-width:680px;margin:3rem auto;padding:1.5rem;border:1px solid #fde68a;background:#fffbeb;border-radius:.5rem;color:#92400e;font-family:Inter,sans-serif">This client’s snapshot data hasn’t been generated yet. Run <code>_build_snapshots.py</code>.</div>';
+    return;
+  }
+  const s = DATA.snapshot;
+  if (s.title) document.title = s.title + ' · Client Snapshot';
+
+  root.innerHTML = buildHTML(s);
+  if (s.line) renderLine(s.line);
+  if (s.quarters) renderQuarter(s.quarters);
+
+  // ---------------- DOM ----------------
+  function chip(c) {
+    return `<span class="chip ${c.good ? 'good' : (c.watch ? 'watch' : '')}"><span class="v">${c.v}</span><span class="l">${c.l}</span></span>`;
+  }
+  function boxEl(b) {
+    const rows = (b.rows || []).map(r => `<div class="row"><span class="m">${r.m}</span><span class="d ${r.cls || ''}">${r.d}</span></div>`).join('');
+    const extra = b.extra ? `<div class="row extra"><span class="m">${b.extra.m}</span><span class="d ${b.extra.cls || ''}">${b.extra.d}</span></div>` : '';
+    return `<div class="mbox ${b.kind || ''}"><div class="win">${b.win}</div><div class="cmp">${b.cmp || ''}</div>${rows}${extra}</div>`;
+  }
+  function tablePanel(t) {
+    const head = `<tr>${t.headers.map((h, i) => `<th${i === 0 ? '' : ''}>${h}</th>`).join('')}</tr>`;
+    const body = t.rows.map(r => `<tr class="${r.me ? 'me' : ''}">${r.cells.map(c => `<td class="${c.c || ''}">${c.t}</td>`).join('')}</tr>`).join('');
+    return `<div class="panel p-3.5">
+      <div class="secthead mb-1">${t.title}</div>
+      ${t.window ? `<p class="text-[11px] text-slate-500 mb-2">${t.window}</p>` : ''}
+      <table class="mv"><thead>${head}</thead><tbody>${body}</tbody></table>
+      ${t.note_html ? `<p class="text-[11px] text-slate-500 mt-2">${t.note_html}</p>` : ''}
+    </div>`;
+  }
+  function focusCard(f) {
+    return `<div class="focus-card" style="border-left-color:${f.color || '#1d5b8a'};"><div class="ft">${f.title}</div><div class="fb">${f.body}</div></div>`;
+  }
+
+  function buildHTML(s) {
+    const tablesOn = [s.maps && s.maps.enabled, s.competitors && s.competitors.enabled].filter(Boolean).length;
+    const tablesGrid = tablesOn === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+    const tablesHtml = [s.maps, s.competitors].filter(t => t && t.enabled).map(tablePanel).join('');
+    const focusCols = Math.min(Math.max((s.focus || []).length, 1), 4);
+    return `
+    <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+      <div class="snap-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
+        <div class="flex items-center gap-2 min-w-0">
+          <span class="font-semibold truncate">${s.title}</span>
+          <span class="text-slate-400 hidden sm:inline">· ${s.subtitle || 'Client Snapshot'}</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="./client-report.html" class="text-brand-500 font-semibold hover:underline">Condensed report →</a>
+          <a href="./index.html" class="text-slate-500 hover:text-slate-900 hidden sm:inline">Full strategy →</a>
+          <button onclick="window.print()" class="px-2.5 py-1 rounded border border-slate-300 text-slate-600 hover:bg-slate-50">Print / PDF</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="snap-shell mx-auto px-4 sm:px-6 py-4">
+      <section class="mb-3">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">${s.eyebrow || 'HQDM Search Intelligence'}</div>
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-1">
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">${s.title}</h1>
+          ${s.subtitle ? `<div class="text-sm text-slate-500">${s.subtitle}</div>` : ''}
+        </div>
+        <div class="panel mt-2.5 p-3.5" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
+          <div class="text-[15px] leading-relaxed text-slate-800">${s.exec_html || ''}</div>
+          ${(s.chips && s.chips.length) ? `<div class="flex flex-wrap gap-2 mt-3">${s.chips.map(chip).join('')}</div>` : ''}
+        </div>
+      </section>
+
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
+        <div class="panel p-3.5">
+          <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
+          <div style="height: 184px;"><canvas id="line-chart"></canvas></div>
+          ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
+        </div>
+        <div class="panel p-3.5">
+          <div class="secthead mb-2">${(s.quarters && s.quarters.title) || 'By Quarter'}</div>
+          <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
+          ${(s.boxes && s.boxes.length) ? `<div class="grid grid-cols-3 gap-2 mt-3">${s.boxes.map(boxEl).join('')}</div>` : ''}
+          ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-2">${s.boxes_reading_html}</p>` : ''}
+        </div>
+      </section>
+
+      ${tablesOn ? `<section class="grid grid-cols-1 ${tablesGrid} gap-4 mb-3">${tablesHtml}</section>` : ''}
+
+      ${(s.focus && s.focus.length) ? `<section class="mb-2">
+        <div class="secthead mb-2">Our Focus · Next 90 Days</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${focusCols} gap-3">${s.focus.map(focusCard).join('')}</div>
+      </section>` : ''}
+
+      <footer class="mt-4 pt-3 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
+        <div><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · ${s.footer || 'Client snapshot'}</div>
+        <div class="text-slate-400">Confidential — for ${s.short_name || s.title} only.</div>
+      </footer>
+    </main>`;
+  }
+
+  // ---------------- Charts ----------------
+  function splitPartial(arr, pIdx) {
+    if (pIdx == null || pIdx < 0) return { solid: arr, dashed: arr.map(() => null) };
+    return {
+      solid: arr.map((v, i) => i <= pIdx - 1 ? v : null),
+      dashed: arr.map((v, i) => i >= pIdx - 1 ? v : null),
+    };
+  }
+  function renderLine(l) {
+    const hasLeads = Array.isArray(l.leads) && l.leads.length > 0;
+    const ds = (sp, color, label, axis) => ([
+      { label, data: sp.solid, borderColor: color, backgroundColor: color + '18', yAxisID: axis, borderWidth: 3, tension: 0.25, pointRadius: 2.5, pointHoverRadius: 6, fill: true, spanGaps: false },
+      { label: label + ' (partial)', data: sp.dashed, borderColor: color, backgroundColor: 'transparent', yAxisID: axis, borderDash: [5, 4], borderWidth: 2.5, tension: 0.25, pointRadius: 2.5, pointHoverRadius: 6, fill: false, spanGaps: false },
+    ]);
+    const datasets = ds(splitPartial(l.visitors, l.partial_index), '#1d5b8a', l.visitors_label || 'Organic visitors', 'y');
+    if (hasLeads) datasets.push(...ds(splitPartial(l.leads, l.partial_index), '#10b981', l.leads_label || 'Organic leads', 'y1'));
+    const scales = {
+      x: { grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: false } },
+      y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: l.visitors_label || 'visitors', font: { size: 9, weight: '600' }, color: '#1d5b8a' } },
+    };
+    if (hasLeads) scales.y1 = { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } }, title: { display: true, text: l.leads_label || 'leads', font: { size: 9, weight: '600' }, color: '#10b981' } };
+    new Chart(document.getElementById('line-chart'), {
+      type: 'line',
+      data: { labels: l.labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: hasLeads, position: 'bottom', labels: { font: { size: 10 }, boxWidth: 12, filter: i => !/partial/.test(i.text) } },
+          tooltip: { backgroundColor: '#0b1220', padding: 9, callbacks: { label: c => `${c.dataset.label.replace(' (partial)', '')}: ${c.raw != null ? c.raw.toLocaleString() : '—'}` } },
+        },
+        scales,
+      },
+    });
+  }
+  function renderQuarter(q) {
+    const hasLeads = Array.isArray(q.leads) && q.leads.length > 0;
+    const partialColors = q.visitors.map((_, i) => i === q.partial_index ? '#9ec5e0' : '#1d5b8a');
+    const datasets = [{ type: 'bar', label: q.visitors_label || 'Visitors', data: q.visitors, yAxisID: 'y', order: 2, backgroundColor: partialColors, borderRadius: 3, barPercentage: 0.78, categoryPercentage: 0.8 }];
+    if (hasLeads) datasets.push({ type: 'line', label: q.leads_label || 'Leads', data: q.leads, yAxisID: 'y1', order: 1, borderColor: '#10b981', backgroundColor: '#10b981', borderWidth: 2.5, tension: 0.25, pointRadius: 2.5, pointHoverRadius: 6 });
+    const scales = {
+      x: { grid: { display: false }, ticks: { font: { size: 9 } } },
+      y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } } },
+    };
+    if (hasLeads) scales.y1 = { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } } };
+    new Chart(document.getElementById('quarter-chart'), {
+      type: 'bar',
+      data: { labels: q.labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: hasLeads, position: 'bottom', labels: { font: { size: 10 }, boxWidth: 12 } }, tooltip: { backgroundColor: '#0b1220', padding: 9 } },
+        scales,
+      },
+    });
+  }
+})();

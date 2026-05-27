@@ -1166,5 +1166,387 @@
         "gbp_cr": null
       }
     ]
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Elev8 Centers",
+    "short_name": "Elev8 Centers",
+    "subtitle": "Q2 2026 · NYC · Harlem pin · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Your Harlem pin is the <strong>only NYC addiction-treatment provider that gained ground on all eight tracked Maps searches</strong> last quarter — <strong>+787 grid positions with zero losses</strong> — and you own the Harlem-neighborhood searches outright (positions 1–2). Organic sessions stepped back in April–May after a strong winter, but the Maps position is durable. The next leg is structural: your homepage is trying to rank for nine different commercial searches at once. Splitting it into dedicated pages, building borough hubs, and adding MAT and dual-diagnosis service hubs unlocks page-one candidates you don't have today.</p>",
+    "chips": [
+      {
+        "v": "+787",
+        "l": "grid positions gained",
+        "good": true
+      },
+      {
+        "v": "3 / 8",
+        "l": "Maps searches owned",
+        "good": true
+      },
+      {
+        "v": "#1",
+        "l": "NYC pin on Maps",
+        "good": true
+      },
+      {
+        "v": "pos 1.2–2.1",
+        "l": "Harlem organic",
+        "good": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        5224,
+        4689,
+        5713,
+        6893,
+        8347,
+        9133,
+        4834,
+        3366
+      ],
+      "leads": [],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        3604,
+        4801,
+        6320,
+        5764,
+        5208,
+        8124,
+        4100
+      ],
+      "leads": [],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Organic Visitors"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-35%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+9%",
+            "cls": "pos"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-17%",
+            "cls": "neg"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "focus": [
+      {
+        "title": "Split the homepage",
+        "color": "#1d5b8a",
+        "body": "Break the single overloaded homepage into dedicated pages for the nine commercial NYC searches it’s straining to rank for."
+      },
+      {
+        "title": "Borough organic hubs",
+        "color": "#10b981",
+        "body": "Build borough-level hubs and fix the Queens Google Business signal to capture searches bleeding at page 5+."
+      },
+      {
+        "title": "MAT + dual-diagnosis hubs",
+        "color": "#6366f1",
+        "body": "Stand up service hubs for MAT and dual-diagnosis with commercial pull-through from the blog."
+      },
+      {
+        "title": "Consolidate /suburb/ + GBP",
+        "color": "#f59e0b",
+        "body": "Consolidate thin /suburb/ pages, deepen the Upper East Side page, and close the Google Business audit fixes."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Jan 27 → Apr 22, 2026 · 8 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "dual diagnosis treatment centers nyc"
+            },
+            {
+              "t": "<span class=\"arrow-up\">2.18 → <strong>1.98</strong></span>"
+            },
+            {
+              "t": "95 → <strong>105</strong>"
+            },
+            {
+              "t": "+10",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "inpatient drug rehab nyc"
+            },
+            {
+              "t": "<span class=\"arrow-up\">3.80 → <strong>3.42</strong></span>"
+            },
+            {
+              "t": "58 → <strong>72</strong>"
+            },
+            {
+              "t": "+14",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "inpatient alcohol rehab nyc"
+            },
+            {
+              "t": "<span class=\"arrow-up\">3.75 → <strong>3.39</strong></span>"
+            },
+            {
+              "t": "60 → <strong>70</strong>"
+            },
+            {
+              "t": "+10",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab nyc"
+            },
+            {
+              "t": "<span class=\"arrow-up\">5.16 → <strong>3.79</strong></span>"
+            },
+            {
+              "t": "22 → <strong>60</strong>"
+            },
+            {
+              "t": "+38",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "addiction rehab ny"
+            },
+            {
+              "t": "<span class=\"arrow-up\">4.09 → <strong>3.56</strong></span>"
+            },
+            {
+              "t": "35 → <strong>52</strong>"
+            },
+            {
+              "t": "+17",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab near me"
+            },
+            {
+              "t": "<span class=\"arrow-up\">6.68 → <strong>5.57</strong></span>"
+            },
+            {
+              "t": "12 → <strong>28</strong>"
+            },
+            {
+              "t": "+16",
+              "c": "pos"
+            }
+          ]
+        }
+      ],
+      "note_html": null
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across 8 tracked searches · Jan 27 → Apr 22, 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Elev8 Recovery (you)"
+            },
+            {
+              "t": "4.1"
+            },
+            {
+              "t": "425"
+            },
+            {
+              "t": "+105",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Ascendant Intensive Outpatient"
+            },
+            {
+              "t": "4.8"
+            },
+            {
+              "t": "380"
+            },
+            {
+              "t": "+88",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Wellbridge Drug & Alcohol Rehab"
+            },
+            {
+              "t": "5.2"
+            },
+            {
+              "t": "285"
+            },
+            {
+              "t": "+12",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Odyssey House George Rosenfeld"
+            },
+            {
+              "t": "6.9"
+            },
+            {
+              "t": "245"
+            },
+            {
+              "t": "+52",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "The Bridge NYC Sober Living"
+            },
+            {
+              "t": "7.5"
+            },
+            {
+              "t": "165"
+            },
+            {
+              "t": "+48",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Hazelden Betty Ford Foundation"
+            },
+            {
+              "t": "9.1"
+            },
+            {
+              "t": "130"
+            },
+            {
+              "t": "+28",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "You're <strong>#1 on Maps</strong> across these searches (425 top-3 cells, +105) and gained more than any competitor; Ascendant is the nearest challenger (+88). Lower avg rank is better."
+    }
   }
 }

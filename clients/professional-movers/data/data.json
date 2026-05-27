@@ -17,16 +17,48 @@
     "headline": "Traffic is dropping. Leads from the GBP→site path are at an 18-month high — and converting at ~2× organic.",
     "lede": "Organic search clicks collapsed −74% Aug 2025 → May 2026, but on-site lead volume held through the cliff. Visitors who arrive via the GBP \"Website\" button submit quote forms at ~17.5% vs 9.2% for organic, and that subset never dipped. The Q3 plan compounds the channel that's already converting — claim 2 more managed GBP pins, surgery the templated burb cohort that triggered the demotion, and rebuild the earned-link channel that the automated stack hollowed out.",
     "stat_tiles": [
-      { "label": "Organic search clicks (12-mo trend)", "value": "−74%", "sub": "GSC 319K imp Aug 2025 → 82K May 2026; clicks 396 → 148", "sentiment": "negative" },
-      { "label": "GBP→site form_submit/mo (Q1 → Q2 2026*)", "value": "+47%", "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high", "sentiment": "positive" },
-      { "label": "GBP→site form-submit rate (Q2 2026*)", "value": "17.5%", "sub": "vs organic 9.2% — GBP click-throughs convert at ~2× the organic rate and held flat through the cliff", "sentiment": "positive" },
-      { "label": "On-site lead events/mo (all channels)", "value": "~190", "sub": "GA4 form_submit firing at ~190/mo across channels. Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add to mirror the AQMS event stack.", "sentiment": "neutral" }
+      {
+        "label": "Organic search clicks (12-mo trend)",
+        "value": "−74%",
+        "sub": "GSC 319K imp Aug 2025 → 82K May 2026; clicks 396 → 148",
+        "sentiment": "negative"
+      },
+      {
+        "label": "GBP→site form_submit/mo (Q1 → Q2 2026*)",
+        "value": "+47%",
+        "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high",
+        "sentiment": "positive"
+      },
+      {
+        "label": "GBP→site form-submit rate (Q2 2026*)",
+        "value": "17.5%",
+        "sub": "vs organic 9.2% — GBP click-throughs convert at ~2× the organic rate and held flat through the cliff",
+        "sentiment": "positive"
+      },
+      {
+        "label": "On-site lead events/mo (all channels)",
+        "value": "~190",
+        "sub": "GA4 form_submit firing at ~190/mo across channels. Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add to mirror the AQMS event stack.",
+        "sentiment": "neutral"
+      }
     ],
     "callout_strip": [
-      { "label": "What 'leads' counts here", "detail": "GA4 form_submit events on the website (~190/mo across channels). Mirrors the AQMS lead-counting pattern except PM's GA4 only has form_submit firing today — adding click_phone_number + gmb_click events captures the rest of the on-site lead-intent signals. Off-site GBP actions (calls/directions from the listing itself) are out of scope for this measurement layer." },
-      { "label": "Where the leads live now", "detail": "GBP + Organic + Direct each carry ~25–40% of form_submit volume in any given month. The GBP→site slice is the only one that never dipped — and now leads on conversion rate." },
-      { "label": "What '−74% impressions' hides", "detail": "Service pages still produce 43% of impressions and 50% of clicks. The cliff was concentrated in the templated burb cohort + long-tail wipeout, not the converting core." },
-      { "label": "Why Lever A compounds", "detail": "GBP→site click-throughs convert at ~2× organic. PM operates 1 of 3 available pins — claiming Detroit Woodward + Rochester GBPs roughly doubles the converting surface area at no incremental ad spend." }
+      {
+        "label": "What 'leads' counts here",
+        "detail": "GA4 form_submit events on the website (~190/mo across channels). Mirrors the AQMS lead-counting pattern except PM's GA4 only has form_submit firing today — adding click_phone_number + gmb_click events captures the rest of the on-site lead-intent signals. Off-site GBP actions (calls/directions from the listing itself) are out of scope for this measurement layer."
+      },
+      {
+        "label": "Where the leads live now",
+        "detail": "GBP + Organic + Direct each carry ~25–40% of form_submit volume in any given month. The GBP→site slice is the only one that never dipped — and now leads on conversion rate."
+      },
+      {
+        "label": "What '−74% impressions' hides",
+        "detail": "Service pages still produce 43% of impressions and 50% of clicks. The cliff was concentrated in the templated burb cohort + long-tail wipeout, not the converting core."
+      },
+      {
+        "label": "Why Lever A compounds",
+        "detail": "GBP→site click-throughs convert at ~2× organic. PM operates 1 of 3 available pins — claiming Detroit Woodward + Rochester GBPs roughly doubles the converting surface area at no incremental ad spend."
+      }
     ],
     "mini_report_url": "headline-traffic-vs-conversions/"
   },
@@ -72,36 +104,277 @@
     "headline": "Traffic dropping, leads stable and growing",
     "annotation_text": "Organic traffic fell 32% Q2 2025 → Q1 2026 (709 → 484 sessions/mo) while GBP→site form_submit volume held flat and is now growing. Lead lines on this chart show GA4 form_submit events (the only conversion event currently firing on PM). Phone-link click + GBP-link click events not yet deployed — small GTM/GA4 add to match the AQMS lead-counting pattern.",
     "months": [
-      "Dec 2024", "Jan 2025", "Feb 2025", "Mar 2025", "Apr 2025", "May 2025",
-      "Jun 2025", "Jul 2025", "Aug 2025", "Sep 2025", "Oct 2025", "Nov 2025",
-      "Dec 2025", "Jan 2026", "Feb 2026", "Mar 2026", "Apr 2026", "May 2026*"
+      "Dec 2024",
+      "Jan 2025",
+      "Feb 2025",
+      "Mar 2025",
+      "Apr 2025",
+      "May 2025",
+      "Jun 2025",
+      "Jul 2025",
+      "Aug 2025",
+      "Sep 2025",
+      "Oct 2025",
+      "Nov 2025",
+      "Dec 2025",
+      "Jan 2026",
+      "Feb 2026",
+      "Mar 2026",
+      "Apr 2026",
+      "May 2026*"
     ],
     "sessions": {
-      "organic": [572, 582, 503, 494, 659, 703, 765, 760, 618, 592, 536, 561, 473, 492, 471, 488, 504, 556],
-      "gbp":     [0,   0,   49,  103, 141, 123, 141, 143, 155, 133, 132, 109, 140, 137, 132, 142, 151, 155],
-      "direct":  [2689, 2934, 2220, 2122, 2235, 2125, 1723, 2137, 2201, 6781, 16109, 3224, 3000, 2930, 2821, 2934, 2313, 2251],
-      "llm":     [0, 3, 3, 1, 1, 12, 17, 20, 11, 23, 20, 8, 6, 10, 8, 7, 4, 17]
+      "organic": [
+        572,
+        582,
+        503,
+        494,
+        659,
+        703,
+        765,
+        760,
+        618,
+        592,
+        536,
+        561,
+        473,
+        492,
+        471,
+        488,
+        504,
+        556
+      ],
+      "gbp": [
+        0,
+        0,
+        49,
+        103,
+        141,
+        123,
+        141,
+        143,
+        155,
+        133,
+        132,
+        109,
+        140,
+        137,
+        132,
+        142,
+        151,
+        155
+      ],
+      "direct": [
+        2689,
+        2934,
+        2220,
+        2122,
+        2235,
+        2125,
+        1723,
+        2137,
+        2201,
+        6781,
+        16109,
+        3224,
+        3000,
+        2930,
+        2821,
+        2934,
+        2313,
+        2251
+      ],
+      "llm": [
+        0,
+        3,
+        3,
+        1,
+        1,
+        12,
+        17,
+        20,
+        11,
+        23,
+        20,
+        8,
+        6,
+        10,
+        8,
+        7,
+        4,
+        17
+      ]
     },
     "form_submits": {
-      "organic": [48, 44, 34, 56, 47, 65, 64, 64, 44, 71, 63, 57, 58, 36, 31, 49, 51, 43],
-      "gbp":     [0,  0,  3,  12, 20, 18, 19, 24, 19, 19, 18, 19, 15, 19, 20, 20, 20, 37],
-      "direct":  [82, 82, 55, 79, 85, 70, 100, 111, 93, 76, 95, 71, 80, 72, 36, 40, 49, 76],
-      "llm":     [0, 0, 0, 0, 0, 1, 4, 2, 0, 1, 0, 0, 2, 0, 0, 2, 0, 3]
+      "organic": [
+        48,
+        44,
+        34,
+        56,
+        47,
+        65,
+        64,
+        64,
+        44,
+        71,
+        63,
+        57,
+        58,
+        36,
+        31,
+        49,
+        51,
+        43
+      ],
+      "gbp": [
+        0,
+        0,
+        3,
+        12,
+        20,
+        18,
+        19,
+        24,
+        19,
+        19,
+        18,
+        19,
+        15,
+        19,
+        20,
+        20,
+        20,
+        37
+      ],
+      "direct": [
+        82,
+        82,
+        55,
+        79,
+        85,
+        70,
+        100,
+        111,
+        93,
+        76,
+        95,
+        71,
+        80,
+        72,
+        36,
+        40,
+        49,
+        76
+      ],
+      "llm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4,
+        2,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        2,
+        0,
+        3
+      ]
     },
     "may_extrapolation_note": "May 2026 conservatively extrapolated: 20 days actual + 11 days at trailing-12-month historical daily rate.",
     "events": [
-      { "month_index": 8, "label": "Cliff onset (Sep 2025 core update)", "type": "negative" },
-      { "month_index": 9, "label": "ATB direct spike (Oct 2025)", "type": "anomaly" }
+      {
+        "month_index": 8,
+        "label": "Cliff onset (Sep 2025 core update)",
+        "type": "negative"
+      },
+      {
+        "month_index": 9,
+        "label": "ATB direct spike (Oct 2025)",
+        "type": "anomaly"
+      }
     ],
     "quarterly": [
-      { "q": "Dec 2024", "org_sess": 572, "org_conv": 48, "org_cr": 8.4, "gbp_sess": 0,   "gbp_conv": 0,  "gbp_cr": null },
-      { "q": "Q1 2025",  "org_sess": 526, "org_conv": 45, "org_cr": 8.5, "gbp_sess": 51,  "gbp_conv": 5,  "gbp_cr": 10.0 },
-      { "q": "Q2 2025 (peak)", "org_sess": 709, "org_conv": 59, "org_cr": 8.3, "gbp_sess": 135, "gbp_conv": 19, "gbp_cr": 14.1 },
-      { "q": "Q3 2025 (cliff)", "org_sess": 657, "org_conv": 60, "org_cr": 9.2, "gbp_sess": 144, "gbp_conv": 21, "gbp_cr": 14.3 },
-      { "q": "Q4 2025",  "org_sess": 523, "org_conv": 59, "org_cr": 11.3, "gbp_sess": 127, "gbp_conv": 17, "gbp_cr": 13.6 },
-      { "q": "Q1 2026 (trough)", "org_sess": 484, "org_conv": 39, "org_cr": 8.0, "gbp_sess": 137, "gbp_conv": 20, "gbp_cr": 14.4 },
-      { "q": "Q2 2026* current (partial)", "org_sess": 537, "org_conv": 50, "org_cr": 9.2, "gbp_sess": 150, "gbp_conv": 26, "gbp_cr": 17.5, "kind": "current" },
-      { "q": "Q2 2026 est. (full-Q)",      "org_sess": 535, "org_conv": 48, "org_cr": 9.0, "gbp_sess": 153, "gbp_conv": 29, "gbp_cr": 18.9, "kind": "estimate" }
+      {
+        "q": "Dec 2024",
+        "org_sess": 572,
+        "org_conv": 48,
+        "org_cr": 8.4,
+        "gbp_sess": 0,
+        "gbp_conv": 0,
+        "gbp_cr": null
+      },
+      {
+        "q": "Q1 2025",
+        "org_sess": 526,
+        "org_conv": 45,
+        "org_cr": 8.5,
+        "gbp_sess": 51,
+        "gbp_conv": 5,
+        "gbp_cr": 10.0
+      },
+      {
+        "q": "Q2 2025 (peak)",
+        "org_sess": 709,
+        "org_conv": 59,
+        "org_cr": 8.3,
+        "gbp_sess": 135,
+        "gbp_conv": 19,
+        "gbp_cr": 14.1
+      },
+      {
+        "q": "Q3 2025 (cliff)",
+        "org_sess": 657,
+        "org_conv": 60,
+        "org_cr": 9.2,
+        "gbp_sess": 144,
+        "gbp_conv": 21,
+        "gbp_cr": 14.3
+      },
+      {
+        "q": "Q4 2025",
+        "org_sess": 523,
+        "org_conv": 59,
+        "org_cr": 11.3,
+        "gbp_sess": 127,
+        "gbp_conv": 17,
+        "gbp_cr": 13.6
+      },
+      {
+        "q": "Q1 2026 (trough)",
+        "org_sess": 484,
+        "org_conv": 39,
+        "org_cr": 8.0,
+        "gbp_sess": 137,
+        "gbp_conv": 20,
+        "gbp_cr": 14.4
+      },
+      {
+        "q": "Q2 2026* current (partial)",
+        "org_sess": 537,
+        "org_conv": 50,
+        "org_cr": 9.2,
+        "gbp_sess": 150,
+        "gbp_conv": 26,
+        "gbp_cr": 17.5,
+        "kind": "current"
+      },
+      {
+        "q": "Q2 2026 est. (full-Q)",
+        "org_sess": 535,
+        "org_conv": 48,
+        "org_cr": 9.0,
+        "gbp_sess": 153,
+        "gbp_conv": 29,
+        "gbp_cr": 18.9,
+        "kind": "estimate"
+      }
     ],
     "yoy_growth": {
       "headline": "YoY change vs Q2 2025 — current state + full-quarter estimate",
@@ -111,12 +384,70 @@
       "current_definition": "April 2026 actual + May 2026 with last 11 days extrapolated at trailing-12-month daily rate (state as of 2026-05-21). 2-month quarterly average through 5/31. Does NOT include June.",
       "estimate_definition": "Same April + May, plus June 2026 projected at trailing-12-month daily rate. 3-month average — the full-Q projection.",
       "metrics": [
-        { "label": "Organic sess/mo",     "axis": "left",  "q2_2025": 709,  "current": 537,  "estimate": 535,  "current_yoy_pct": -24.3, "estimate_yoy_pct": -24.5, "is_ratio": false },
-        { "label": "Organic conv/mo",     "axis": "left",  "q2_2025": 59,   "current": 50,   "estimate": 48,   "current_yoy_pct": -15.3, "estimate_yoy_pct": -18.6, "is_ratio": false },
-        { "label": "Organic CR",          "axis": "right", "q2_2025": 8.3,  "current": 9.2,  "estimate": 9.0,  "current_yoy_pct": 10.8,  "estimate_yoy_pct": 8.4,   "is_ratio": true,  "pts_delta_current": 0.9, "pts_delta_estimate": 0.7 },
-        { "label": "GBP sess/mo",         "axis": "left",  "q2_2025": 135,  "current": 150,  "estimate": 153,  "current_yoy_pct": 11.1,  "estimate_yoy_pct": 13.3,  "is_ratio": false },
-        { "label": "GBP conv/mo",         "axis": "left",  "q2_2025": 19,   "current": 26,   "estimate": 29,   "current_yoy_pct": 36.8,  "estimate_yoy_pct": 52.6,  "is_ratio": false },
-        { "label": "GBP CR",              "axis": "right", "q2_2025": 14.1, "current": 17.5, "estimate": 18.9, "current_yoy_pct": 24.1,  "estimate_yoy_pct": 34.0,  "is_ratio": true,  "pts_delta_current": 3.4, "pts_delta_estimate": 4.8 }
+        {
+          "label": "Organic sess/mo",
+          "axis": "left",
+          "q2_2025": 709,
+          "current": 537,
+          "estimate": 535,
+          "current_yoy_pct": -24.3,
+          "estimate_yoy_pct": -24.5,
+          "is_ratio": false
+        },
+        {
+          "label": "Organic conv/mo",
+          "axis": "left",
+          "q2_2025": 59,
+          "current": 50,
+          "estimate": 48,
+          "current_yoy_pct": -15.3,
+          "estimate_yoy_pct": -18.6,
+          "is_ratio": false
+        },
+        {
+          "label": "Organic CR",
+          "axis": "right",
+          "q2_2025": 8.3,
+          "current": 9.2,
+          "estimate": 9.0,
+          "current_yoy_pct": 10.8,
+          "estimate_yoy_pct": 8.4,
+          "is_ratio": true,
+          "pts_delta_current": 0.9,
+          "pts_delta_estimate": 0.7
+        },
+        {
+          "label": "GBP sess/mo",
+          "axis": "left",
+          "q2_2025": 135,
+          "current": 150,
+          "estimate": 153,
+          "current_yoy_pct": 11.1,
+          "estimate_yoy_pct": 13.3,
+          "is_ratio": false
+        },
+        {
+          "label": "GBP conv/mo",
+          "axis": "left",
+          "q2_2025": 19,
+          "current": 26,
+          "estimate": 29,
+          "current_yoy_pct": 36.8,
+          "estimate_yoy_pct": 52.6,
+          "is_ratio": false
+        },
+        {
+          "label": "GBP CR",
+          "axis": "right",
+          "q2_2025": 14.1,
+          "current": 17.5,
+          "estimate": 18.9,
+          "current_yoy_pct": 24.1,
+          "estimate_yoy_pct": 34.0,
+          "is_ratio": true,
+          "pts_delta_current": 3.4,
+          "pts_delta_estimate": 4.8
+        }
       ],
       "reading": "Organic metrics down 15–25% YoY in both views; GBP metrics up 11–53% YoY. The full-Q estimate widens the GBP wins (June added at trailing-12-month rate compounds May's surge) and slightly worsens the organic picture (May's recovery flattens out)."
     }
@@ -125,26 +456,100 @@
     "headline": "GA4 and GSC tell different stories. Both are right — they measure different things.",
     "lede": "GSC says PM's organic-search clicks fell 74% in the last 12 months. GA4 says PM's 'Organic Search' channel is 2–4× larger than GSC reports. Neither is wrong. GSC measures clicks on Google's search results page; GA4 measures sessions on the site, however the user arrived. Four structural gaps account for the divergence — and one of them (GBP click-through) is the reason GBP looks so strong in GA4 but invisible in GSC.",
     "comparison_rows": [
-      { "metric": "Organic clicks / Organic Search sessions (last 30d)", "gsc": "260 clicks", "ga4": "673 sessions", "ratio": "2.6×", "reason": "GA4 'Organic Search' channel includes Bing/DuckDuckGo/Yahoo + GBP click-through (gmb/click). GSC is Google Search clicks only." },
-      { "metric": "Same comparison, last 90d", "gsc": "707 clicks", "ga4": "1,903 sessions", "ratio": "2.7×", "reason": "Same structural reasons; pattern is consistent." },
-      { "metric": "Same comparison, last 365d", "gsc": "3,928 clicks", "ga4": "8,588 sessions", "ratio": "2.2×", "reason": "Ratio stable across all windows — divergence is structural, not seasonal." },
-      { "metric": "GBP→site sessions (last 30d)", "gsc": "0 (invisible)", "ga4": "149 (gmb/click)", "ratio": "n/a — invisible to GSC", "reason": "GBP 'Click to Website' bypasses Google Search results entirely. Only the UTM (?utm_source=gmb) captures it in GA4." },
-      { "metric": "Google-only organic (apples-to-apples) last 30d", "gsc": "260 clicks", "ga4": "389 sessions (google / organic only)", "ratio": "1.5×", "reason": "Even Google-only, GA4 > GSC: multi-page sessions, same-day repeat visits, sampling/bot-filter differences, and GA4 session-attribution windowing." },
-      { "metric": "Direct (last 30d)", "gsc": "n/a (not measured)", "ga4": "2,198 sessions", "ratio": "n/a", "reason": "Direct is GA4-only. Likely contains brand-recall traffic + some bot residue (Sept–Oct 2025 spike to 16K/mo coincided with ATB tool active in Asana per Off-Page Risk Assessment §8)." },
-      { "metric": "form_submit events (last 30d)", "gsc": "n/a", "ga4": "~160 firing", "ratio": "n/a", "reason": "form_submit fires correctly. P0 task flags it as a conversion event in property settings (5-min) and deploys click_phone_number + gmb_click events to mirror the AQMS lead-counting stack." }
+      {
+        "metric": "Organic clicks / Organic Search sessions (last 30d)",
+        "gsc": "260 clicks",
+        "ga4": "673 sessions",
+        "ratio": "2.6×",
+        "reason": "GA4 'Organic Search' channel includes Bing/DuckDuckGo/Yahoo + GBP click-through (gmb/click). GSC is Google Search clicks only."
+      },
+      {
+        "metric": "Same comparison, last 90d",
+        "gsc": "707 clicks",
+        "ga4": "1,903 sessions",
+        "ratio": "2.7×",
+        "reason": "Same structural reasons; pattern is consistent."
+      },
+      {
+        "metric": "Same comparison, last 365d",
+        "gsc": "3,928 clicks",
+        "ga4": "8,588 sessions",
+        "ratio": "2.2×",
+        "reason": "Ratio stable across all windows — divergence is structural, not seasonal."
+      },
+      {
+        "metric": "GBP→site sessions (last 30d)",
+        "gsc": "0 (invisible)",
+        "ga4": "149 (gmb/click)",
+        "ratio": "n/a — invisible to GSC",
+        "reason": "GBP 'Click to Website' bypasses Google Search results entirely. Only the UTM (?utm_source=gmb) captures it in GA4."
+      },
+      {
+        "metric": "Google-only organic (apples-to-apples) last 30d",
+        "gsc": "260 clicks",
+        "ga4": "389 sessions (google / organic only)",
+        "ratio": "1.5×",
+        "reason": "Even Google-only, GA4 > GSC: multi-page sessions, same-day repeat visits, sampling/bot-filter differences, and GA4 session-attribution windowing."
+      },
+      {
+        "metric": "Direct (last 30d)",
+        "gsc": "n/a (not measured)",
+        "ga4": "2,198 sessions",
+        "ratio": "n/a",
+        "reason": "Direct is GA4-only. Likely contains brand-recall traffic + some bot residue (Sept–Oct 2025 spike to 16K/mo coincided with ATB tool active in Asana per Off-Page Risk Assessment §8)."
+      },
+      {
+        "metric": "form_submit events (last 30d)",
+        "gsc": "n/a",
+        "ga4": "~160 firing",
+        "ratio": "n/a",
+        "reason": "form_submit fires correctly. P0 task flags it as a conversion event in property settings (5-min) and deploys click_phone_number + gmb_click events to mirror the AQMS lead-counting stack."
+      }
     ],
     "structural_reasons": [
-      { "title": "GBP click-through (the big one)", "detail": "GBP 'Click to website' button → utm_source=gmb&utm_medium=click → GA4 buckets these into 'Organic Search'. GSC never sees them because they bypass Google Search. ~149/mo last 30d, ~421/mo last 90d, ~543/yr — fastest-growing slice of GA4 Organic." },
-      { "title": "Non-Google search engines", "detail": "Bing (50 sess 30d), DuckDuckGo (42), Yahoo (42), MSN (9). ~134 sessions/mo in 'Organic Search' that GSC by definition cannot report." },
-      { "title": "Sessions ≠ clicks (the GA4 vs GSC unit gap)", "detail": "One GSC click → one Google Search result click. One GA4 session → can contain multiple pageviews, lasts 30 min of inactivity. Same-day repeat searches from the same user count as separate GSC clicks but one GA4 session. The 1.5× google-only gap is mostly this." },
-      { "title": "Sampling + bot-filter divergence", "detail": "GA4 has its own bot/spam filter applied at the property level. GSC has its own (independent) filter. Neither is documented in full. Small residual gap is unavoidable; tracking month-over-month change is reliable, absolute parity is not." }
+      {
+        "title": "GBP click-through (the big one)",
+        "detail": "GBP 'Click to website' button → utm_source=gmb&utm_medium=click → GA4 buckets these into 'Organic Search'. GSC never sees them because they bypass Google Search. ~149/mo last 30d, ~421/mo last 90d, ~543/yr — fastest-growing slice of GA4 Organic."
+      },
+      {
+        "title": "Non-Google search engines",
+        "detail": "Bing (50 sess 30d), DuckDuckGo (42), Yahoo (42), MSN (9). ~134 sessions/mo in 'Organic Search' that GSC by definition cannot report."
+      },
+      {
+        "title": "Sessions ≠ clicks (the GA4 vs GSC unit gap)",
+        "detail": "One GSC click → one Google Search result click. One GA4 session → can contain multiple pageviews, lasts 30 min of inactivity. Same-day repeat searches from the same user count as separate GSC clicks but one GA4 session. The 1.5× google-only gap is mostly this."
+      },
+      {
+        "title": "Sampling + bot-filter divergence",
+        "detail": "GA4 has its own bot/spam filter applied at the property level. GSC has its own (independent) filter. Neither is documented in full. Small residual gap is unavoidable; tracking month-over-month change is reliable, absolute parity is not."
+      }
     ],
     "trust_matrix": [
-      { "question": "How much organic search traffic do we get?", "trust": "GA4", "why": "GA4 includes all engines + measures sessions which approximate real visits. Use GA4 'Organic Search' channel for traffic-volume reporting." },
-      { "question": "How is the site ranking on Google?", "trust": "GSC", "why": "Position, impressions, clicks, CTR per query and per page only exist in GSC. Use GSC for rank diagnostics." },
-      { "question": "What's converting?", "trust": "GA4", "why": "Conversion events, channel attribution, form_submit live in GA4. For PM today this means form_submit only; M1 task adds click_phone_number + gmb_click events to mirror the AQMS lead stack." },
-      { "question": "How much traffic is GBP driving to the site?", "trust": "GA4 (gmb/click)", "why": "Only GA4 sees the GBP→site click-through via the UTM. GSC can't measure it. Among those click-throughs, form_submit rate is ~17.5% (Q2 2026* partial) vs organic 9.2% — GBP click-throughs convert at ~2× the organic rate." },
-      { "question": "Is Google search visibility improving or declining?", "trust": "GSC", "why": "GSC is the cleanest signal for SERP-side health — impressions, position, click-loss. Use GSC for the cliff diagnosis." }
+      {
+        "question": "How much organic search traffic do we get?",
+        "trust": "GA4",
+        "why": "GA4 includes all engines + measures sessions which approximate real visits. Use GA4 'Organic Search' channel for traffic-volume reporting."
+      },
+      {
+        "question": "How is the site ranking on Google?",
+        "trust": "GSC",
+        "why": "Position, impressions, clicks, CTR per query and per page only exist in GSC. Use GSC for rank diagnostics."
+      },
+      {
+        "question": "What's converting?",
+        "trust": "GA4",
+        "why": "Conversion events, channel attribution, form_submit live in GA4. For PM today this means form_submit only; M1 task adds click_phone_number + gmb_click events to mirror the AQMS lead stack."
+      },
+      {
+        "question": "How much traffic is GBP driving to the site?",
+        "trust": "GA4 (gmb/click)",
+        "why": "Only GA4 sees the GBP→site click-through via the UTM. GSC can't measure it. Among those click-throughs, form_submit rate is ~17.5% (Q2 2026* partial) vs organic 9.2% — GBP click-throughs convert at ~2× the organic rate."
+      },
+      {
+        "question": "Is Google search visibility improving or declining?",
+        "trust": "GSC",
+        "why": "GSC is the cleanest signal for SERP-side health — impressions, position, click-loss. Use GSC for the cliff diagnosis."
+      }
     ],
     "key_takeaways": [
       "The −74% organic-impression decline in GSC is real and worth diagnosing — but it does not mean a −74% revenue cliff. GA4 shows organic-search sessions down ~32% Q2 2025 → Q1 2026, and form_submit volume down only ~17%.",
@@ -156,45 +561,317 @@
     "mini_report_url": "ga4-gsc-discrepancy/"
   },
   "maps_presence": [
-    { "coord": "Walled Lake HQ (pin)", "ll": "42.538,−83.481", "distance": "0 mi", "managed": true,  "avg_rank": 1.0, "top3": 6, "top20": 6, "winners": "PM, Irelo Moving, Rental Crates.com", "action": "Defend — GBP optimize, review velocity, photo set" },
-    { "coord": "Novi", "ll": "42.481,−83.476", "distance": "4 mi S", "managed": false, "avg_rank": 2.0, "top3": 5, "top20": 5, "winners": "Premier Relocations, Signature Professional Movers of Novi, PM", "action": "Defend — extension of WL pin reach" },
-    { "coord": "Detroit Woodward", "ll": "42.332,−83.046", "distance": "PM unmanaged office", "managed": false, "avg_rank": 2.7, "top3": 6, "top20": 6, "winners": "Affordable Muscle Movers, Bellhop Moving, PM (pin-bleed)", "action": "CLAIM + MANAGE — closes #3 → #1 on every Detroit-modified query" },
-    { "coord": "Rochester office", "ll": "42.680,−83.134", "distance": "PM unmanaged office", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Auto Hauler Exchange, The Delia Group, Service First Logistics (non-movers)", "action": "CLAIM + MANAGE — zero Maps presence despite physical office" },
-    { "coord": "Royal Oak", "ll": "42.490,−83.145", "distance": "18 mi E (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "O'Sullivan Moving, College Hunks, New Beginnings Moving, Wondermove", "action": "Driving Directions pin — proximity-decay structural" },
-    { "coord": "Birmingham", "ll": "42.547,−83.211", "distance": "12 mi E (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Kenway Moving, Modern Moving Michigan, Schea Van Lines, Stevens Greater Detroit", "action": "Driving Directions pin" },
-    { "coord": "Farmington Hills", "ll": "42.499,−83.368", "distance": "7 mi SE (real catchment)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "EZ Storage, Penguin Junk Removal (non-movers)", "action": "Driving Directions pin — even non-movers outrank PM here" },
-    { "coord": "Plymouth", "ll": "42.372,−83.470", "distance": "10 mi S (declared SA)", "managed": false, "avg_rank": null, "top3": 0, "top20": 0, "winners": "Stow and Go Self Storage, Dakota Lines, Expedited Freightways (non-movers)", "action": "Driving Directions pin" }
+    {
+      "coord": "Walled Lake HQ (pin)",
+      "ll": "42.538,−83.481",
+      "distance": "0 mi",
+      "managed": true,
+      "avg_rank": 1.0,
+      "top3": 6,
+      "top20": 6,
+      "winners": "PM, Irelo Moving, Rental Crates.com",
+      "action": "Defend — GBP optimize, review velocity, photo set"
+    },
+    {
+      "coord": "Novi",
+      "ll": "42.481,−83.476",
+      "distance": "4 mi S",
+      "managed": false,
+      "avg_rank": 2.0,
+      "top3": 5,
+      "top20": 5,
+      "winners": "Premier Relocations, Signature Professional Movers of Novi, PM",
+      "action": "Defend — extension of WL pin reach"
+    },
+    {
+      "coord": "Detroit Woodward",
+      "ll": "42.332,−83.046",
+      "distance": "PM unmanaged office",
+      "managed": false,
+      "avg_rank": 2.7,
+      "top3": 6,
+      "top20": 6,
+      "winners": "Affordable Muscle Movers, Bellhop Moving, PM (pin-bleed)",
+      "action": "CLAIM + MANAGE — closes #3 → #1 on every Detroit-modified query"
+    },
+    {
+      "coord": "Rochester office",
+      "ll": "42.680,−83.134",
+      "distance": "PM unmanaged office",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Auto Hauler Exchange, The Delia Group, Service First Logistics (non-movers)",
+      "action": "CLAIM + MANAGE — zero Maps presence despite physical office"
+    },
+    {
+      "coord": "Royal Oak",
+      "ll": "42.490,−83.145",
+      "distance": "18 mi E (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "O'Sullivan Moving, College Hunks, New Beginnings Moving, Wondermove",
+      "action": "Driving Directions pin — proximity-decay structural"
+    },
+    {
+      "coord": "Birmingham",
+      "ll": "42.547,−83.211",
+      "distance": "12 mi E (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Kenway Moving, Modern Moving Michigan, Schea Van Lines, Stevens Greater Detroit",
+      "action": "Driving Directions pin"
+    },
+    {
+      "coord": "Farmington Hills",
+      "ll": "42.499,−83.368",
+      "distance": "7 mi SE (real catchment)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "EZ Storage, Penguin Junk Removal (non-movers)",
+      "action": "Driving Directions pin — even non-movers outrank PM here"
+    },
+    {
+      "coord": "Plymouth",
+      "ll": "42.372,−83.470",
+      "distance": "10 mi S (declared SA)",
+      "managed": false,
+      "avg_rank": null,
+      "top3": 0,
+      "top20": 0,
+      "winners": "Stow and Go Self Storage, Dakota Lines, Expedited Freightways (non-movers)",
+      "action": "Driving Directions pin"
+    }
   ],
   "ld_leaderboard": [
-    { "name": "Bos Moving & Service",         "may_top3": 180, "delta_top3": 0,   "may_avg_rank": 6.5, "delta_avg_rank": -0.1, "cells": 384,   "note": "#1 by rank quality — defend-against", "is_client": false },
-    { "name": "Moving Made Easy",             "may_top3": 141, "delta_top3": -20, "may_avg_rank": 7.2, "delta_avg_rank": -0.5, "cells": 509,   "note": "#2 by rank quality", "is_client": false },
-    { "name": "Professional Movers.com",      "may_top3": 340, "delta_top3": -8,  "may_avg_rank": 7.9, "delta_avg_rank": null, "cells": 906,   "note": "#3 by rank quality; #2 by placements", "is_client": true },
-    { "name": "Elite Piano Movers",           "may_top3": 83,  "delta_top3": 6,   "may_avg_rank": 8.4, "delta_avg_rank": 0.3,  "cells": 247,   "note": "Specialty vertical", "is_client": false },
-    { "name": "Quick and Careful Moving",     "may_top3": 95,  "delta_top3": -28, "may_avg_rank": 8.7, "delta_avg_rank": -0.9, "cells": 591,   "note": "Biggest collapse — freed cells", "is_client": false },
-    { "name": "Affordable Movers",            "may_top3": 122, "delta_top3": 59,  "may_avg_rank": 8.8, "delta_avg_rank": 0.5,  "cells": 732,   "note": "Sharp gainer", "is_client": false },
-    { "name": "Alpha Moving Company",         "may_top3": 96,  "delta_top3": -14, "may_avg_rank": 8.8, "delta_avg_rank": -0.4, "cells": 420,   "note": "—", "is_client": false },
-    { "name": "Reasonable Movers",            "may_top3": 109, "delta_top3": -24, "may_avg_rank": 9.3, "delta_avg_rank": -0.6, "cells": 436,   "note": "Losing share", "is_client": false },
-    { "name": "Two Men and a Truck Moving",   "may_top3": 352, "delta_top3": -12, "may_avg_rank": 9.6, "delta_avg_rank": 0.5,  "cells": 1392,  "note": "Multi-pin aggregate; leader by placements", "is_client": false },
-    { "name": "University Moving and Storage","may_top3": 57,  "delta_top3": -3,  "may_avg_rank": 9.8, "delta_avg_rank": -0.1, "cells": 523,   "note": "—", "is_client": false },
-    { "name": "A2 MOVING (new entrant)",      "may_top3": 98,  "delta_top3": 98,  "may_avg_rank": 10.3,"delta_avg_rank": 4.8,  "cells": 583,   "note": "Top placement gainer", "is_client": false },
-    { "name": "Premier Relocations",          "may_top3": 52,  "delta_top3": -9,  "may_avg_rank": 11.1,"delta_avg_rank": -0.1, "cells": 362,   "note": "Dominates Novi cells", "is_client": false }
+    {
+      "name": "Bos Moving & Service",
+      "may_top3": 180,
+      "delta_top3": 0,
+      "may_avg_rank": 6.5,
+      "delta_avg_rank": -0.1,
+      "cells": 384,
+      "note": "#1 by rank quality — defend-against",
+      "is_client": false
+    },
+    {
+      "name": "Moving Made Easy",
+      "may_top3": 141,
+      "delta_top3": -20,
+      "may_avg_rank": 7.2,
+      "delta_avg_rank": -0.5,
+      "cells": 509,
+      "note": "#2 by rank quality",
+      "is_client": false
+    },
+    {
+      "name": "Professional Movers.com",
+      "may_top3": 340,
+      "delta_top3": -8,
+      "may_avg_rank": 7.9,
+      "delta_avg_rank": null,
+      "cells": 906,
+      "note": "#3 by rank quality; #2 by placements",
+      "is_client": true
+    },
+    {
+      "name": "Elite Piano Movers",
+      "may_top3": 83,
+      "delta_top3": 6,
+      "may_avg_rank": 8.4,
+      "delta_avg_rank": 0.3,
+      "cells": 247,
+      "note": "Specialty vertical",
+      "is_client": false
+    },
+    {
+      "name": "Quick and Careful Moving",
+      "may_top3": 95,
+      "delta_top3": -28,
+      "may_avg_rank": 8.7,
+      "delta_avg_rank": -0.9,
+      "cells": 591,
+      "note": "Biggest collapse — freed cells",
+      "is_client": false
+    },
+    {
+      "name": "Affordable Movers",
+      "may_top3": 122,
+      "delta_top3": 59,
+      "may_avg_rank": 8.8,
+      "delta_avg_rank": 0.5,
+      "cells": 732,
+      "note": "Sharp gainer",
+      "is_client": false
+    },
+    {
+      "name": "Alpha Moving Company",
+      "may_top3": 96,
+      "delta_top3": -14,
+      "may_avg_rank": 8.8,
+      "delta_avg_rank": -0.4,
+      "cells": 420,
+      "note": "—",
+      "is_client": false
+    },
+    {
+      "name": "Reasonable Movers",
+      "may_top3": 109,
+      "delta_top3": -24,
+      "may_avg_rank": 9.3,
+      "delta_avg_rank": -0.6,
+      "cells": 436,
+      "note": "Losing share",
+      "is_client": false
+    },
+    {
+      "name": "Two Men and a Truck Moving",
+      "may_top3": 352,
+      "delta_top3": -12,
+      "may_avg_rank": 9.6,
+      "delta_avg_rank": 0.5,
+      "cells": 1392,
+      "note": "Multi-pin aggregate; leader by placements",
+      "is_client": false
+    },
+    {
+      "name": "University Moving and Storage",
+      "may_top3": 57,
+      "delta_top3": -3,
+      "may_avg_rank": 9.8,
+      "delta_avg_rank": -0.1,
+      "cells": 523,
+      "note": "—",
+      "is_client": false
+    },
+    {
+      "name": "A2 MOVING (new entrant)",
+      "may_top3": 98,
+      "delta_top3": 98,
+      "may_avg_rank": 10.3,
+      "delta_avg_rank": 4.8,
+      "cells": 583,
+      "note": "Top placement gainer",
+      "is_client": false
+    },
+    {
+      "name": "Premier Relocations",
+      "may_top3": 52,
+      "delta_top3": -9,
+      "may_avg_rank": 11.1,
+      "delta_avg_rank": -0.1,
+      "cells": 362,
+      "note": "Dominates Novi cells",
+      "is_client": false
+    }
   ],
   "per_keyword": [
-    { "keyword": "movers detroit",          "feb_cells": 121, "may_cells": 121, "feb_avg": 12.47, "may_avg": 10.54, "pos_gained": 1.93,  "feb_top3": 2,  "may_top3": 2,  "feb_top10": 9,   "may_top10": 67,  "top10_delta": 58 },
-    { "keyword": "detroit moving company",  "feb_cells": 121, "may_cells": 121, "feb_avg": 14.26, "may_avg": 13.54, "pos_gained": 0.72,  "feb_top3": 1,  "may_top3": 0,  "feb_top10": 8,   "may_top10": 16,  "top10_delta": 8 },
-    { "keyword": "moving companies",        "feb_cells": 119, "may_cells": 118, "feb_avg": 4.77,  "may_avg": 4.83,  "pos_gained": -0.06, "feb_top3": 65, "may_top3": 64, "feb_top10": 105, "may_top10": 104, "top10_delta": -1 },
-    { "keyword": "movers near me",          "feb_cells": 121, "may_cells": 121, "feb_avg": 3.30,  "may_avg": 3.40,  "pos_gained": -0.10, "feb_top3": 82, "may_top3": 84, "feb_top10": 112, "may_top10": 113, "top10_delta": 1 },
-    { "keyword": "moving company near me",  "feb_cells": 121, "may_cells": 121, "feb_avg": 3.61,  "may_avg": 3.89,  "pos_gained": -0.28, "feb_top3": 83, "may_top3": 79, "feb_top10": 111, "may_top10": 109, "top10_delta": -2 },
-    { "keyword": "movers",                  "feb_cells": 120, "may_cells": 121, "feb_avg": 3.96,  "may_avg": 4.26,  "pos_gained": -0.30, "feb_top3": 81, "may_top3": 79, "feb_top10": 108, "may_top10": 106, "top10_delta": -2 }
+    {
+      "keyword": "movers detroit",
+      "feb_cells": 121,
+      "may_cells": 121,
+      "feb_avg": 12.47,
+      "may_avg": 10.54,
+      "pos_gained": 1.93,
+      "feb_top3": 2,
+      "may_top3": 2,
+      "feb_top10": 9,
+      "may_top10": 67,
+      "top10_delta": 58
+    },
+    {
+      "keyword": "detroit moving company",
+      "feb_cells": 121,
+      "may_cells": 121,
+      "feb_avg": 14.26,
+      "may_avg": 13.54,
+      "pos_gained": 0.72,
+      "feb_top3": 1,
+      "may_top3": 0,
+      "feb_top10": 8,
+      "may_top10": 16,
+      "top10_delta": 8
+    },
+    {
+      "keyword": "moving companies",
+      "feb_cells": 119,
+      "may_cells": 118,
+      "feb_avg": 4.77,
+      "may_avg": 4.83,
+      "pos_gained": -0.06,
+      "feb_top3": 65,
+      "may_top3": 64,
+      "feb_top10": 105,
+      "may_top10": 104,
+      "top10_delta": -1
+    },
+    {
+      "keyword": "movers near me",
+      "feb_cells": 121,
+      "may_cells": 121,
+      "feb_avg": 3.3,
+      "may_avg": 3.4,
+      "pos_gained": -0.1,
+      "feb_top3": 82,
+      "may_top3": 84,
+      "feb_top10": 112,
+      "may_top10": 113,
+      "top10_delta": 1
+    },
+    {
+      "keyword": "moving company near me",
+      "feb_cells": 121,
+      "may_cells": 121,
+      "feb_avg": 3.61,
+      "may_avg": 3.89,
+      "pos_gained": -0.28,
+      "feb_top3": 83,
+      "may_top3": 79,
+      "feb_top10": 111,
+      "may_top10": 109,
+      "top10_delta": -2
+    },
+    {
+      "keyword": "movers",
+      "feb_cells": 120,
+      "may_cells": 121,
+      "feb_avg": 3.96,
+      "may_avg": 4.26,
+      "pos_gained": -0.3,
+      "feb_top3": 81,
+      "may_top3": 79,
+      "feb_top10": 108,
+      "may_top10": 106,
+      "top10_delta": -2
+    }
   ],
   "ld_timeseries": {
     "headline": "Maps gained on Detroit-side queries and held strong defense on the volume queries",
     "lede": "Six priority queries scanned across the 13×13 LD grid. Headline: PM extended top-10 footprint on 'movers detroit' from 9 cells to 67 cells (+58 cells, +1.93 avg-rank positions gained) and doubled top-10 reach on 'detroit moving company' (8 → 16 cells). On the volume queries ('movers', 'movers near me', 'moving companies', 'moving company near me') PM held a top-3 footprint of 64–84 cells out of 121 with essentially flat avg rank through the cliff.",
     "dates": [
-      { "date": "2026-02-02", "label": "Feb 2" },
-      { "date": "2026-02-27", "label": "Feb 27" },
-      { "date": "2026-03-31", "label": "Mar 31" },
-      { "date": "2026-05-01", "label": "May 1" }
+      {
+        "date": "2026-02-02",
+        "label": "Feb 2"
+      },
+      {
+        "date": "2026-02-27",
+        "label": "Feb 27"
+      },
+      {
+        "date": "2026-03-31",
+        "label": "Mar 31"
+      },
+      {
+        "date": "2026-05-01",
+        "label": "May 1"
+      }
     ],
     "per_keyword_series": [
       {
@@ -202,8 +879,20 @@
         "color": "#0ea5e9",
         "headline": "Avg rank improved 12.47 → 10.54 (+1.93 positions gained) · top-10 cells 9 → 67",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 12.47, "top3": 2, "top10": 9,  "cells": 121 },
-          { "date": "2026-05-01", "avg_rank": 10.54, "top3": 2, "top10": 67, "cells": 121 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 12.47,
+            "top3": 2,
+            "top10": 9,
+            "cells": 121
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 10.54,
+            "top3": 2,
+            "top10": 67,
+            "cells": 121
+          }
         ]
       },
       {
@@ -211,10 +900,34 @@
         "color": "#10b981",
         "headline": "Avg rank improved 14.26 → 13.54 (+0.72 positions gained) · top-10 cells 8 → 16",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 14.26, "top3": 1, "top10": 8,  "cells": 121 },
-          { "date": "2026-02-27", "avg_rank": 16.04, "top3": 0, "top10": 0,  "cells": 99 },
-          { "date": "2026-03-31", "avg_rank": 16.61, "top3": 0, "top10": 3,  "cells": 120 },
-          { "date": "2026-05-01", "avg_rank": 13.54, "top3": 0, "top10": 16, "cells": 121 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 14.26,
+            "top3": 1,
+            "top10": 8,
+            "cells": 121
+          },
+          {
+            "date": "2026-02-27",
+            "avg_rank": 16.04,
+            "top3": 0,
+            "top10": 0,
+            "cells": 99
+          },
+          {
+            "date": "2026-03-31",
+            "avg_rank": 16.61,
+            "top3": 0,
+            "top10": 3,
+            "cells": 120
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 13.54,
+            "top3": 0,
+            "top10": 16,
+            "cells": 121
+          }
         ]
       },
       {
@@ -222,8 +935,20 @@
         "color": "#8b5cf6",
         "headline": "Held flat · avg 4.77 → 4.83 · top-3 cells 65 → 64",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 4.77, "top3": 65, "top10": 105, "cells": 119 },
-          { "date": "2026-05-01", "avg_rank": 4.83, "top3": 64, "top10": 104, "cells": 118 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 4.77,
+            "top3": 65,
+            "top10": 105,
+            "cells": 119
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 4.83,
+            "top3": 64,
+            "top10": 104,
+            "cells": 118
+          }
         ]
       },
       {
@@ -231,10 +956,34 @@
         "color": "#f59e0b",
         "headline": "Strongest defense · avg 3.30 → 3.40 held · top-3 cells 82 → 84",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 3.30, "top3": 82, "top10": 112, "cells": 121 },
-          { "date": "2026-02-27", "avg_rank": 3.79, "top3": 75, "top10": 111, "cells": 121 },
-          { "date": "2026-03-31", "avg_rank": 3.39, "top3": 84, "top10": 112, "cells": 121 },
-          { "date": "2026-05-01", "avg_rank": 3.40, "top3": 84, "top10": 113, "cells": 121 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 3.3,
+            "top3": 82,
+            "top10": 112,
+            "cells": 121
+          },
+          {
+            "date": "2026-02-27",
+            "avg_rank": 3.79,
+            "top3": 75,
+            "top10": 111,
+            "cells": 121
+          },
+          {
+            "date": "2026-03-31",
+            "avg_rank": 3.39,
+            "top3": 84,
+            "top10": 112,
+            "cells": 121
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 3.4,
+            "top3": 84,
+            "top10": 113,
+            "cells": 121
+          }
         ]
       },
       {
@@ -242,8 +991,20 @@
         "color": "#ec4899",
         "headline": "Avg rank moved 3.61 → 3.89 · top-3 cells 83 → 79",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 3.61, "top3": 83, "top10": 111, "cells": 121 },
-          { "date": "2026-05-01", "avg_rank": 3.89, "top3": 79, "top10": 109, "cells": 121 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 3.61,
+            "top3": 83,
+            "top10": 111,
+            "cells": 121
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 3.89,
+            "top3": 79,
+            "top10": 109,
+            "cells": 121
+          }
         ]
       },
       {
@@ -251,10 +1012,34 @@
         "color": "#6366f1",
         "headline": "Avg rank moved 3.96 → 4.26 · top-3 cells 81 → 79",
         "points": [
-          { "date": "2026-02-02", "avg_rank": 3.96, "top3": 81, "top10": 108, "cells": 120 },
-          { "date": "2026-02-27", "avg_rank": 4.33, "top3": 75, "top10": 107, "cells": 120 },
-          { "date": "2026-03-31", "avg_rank": 3.99, "top3": 84, "top10": 107, "cells": 120 },
-          { "date": "2026-05-01", "avg_rank": 4.26, "top3": 79, "top10": 106, "cells": 121 }
+          {
+            "date": "2026-02-02",
+            "avg_rank": 3.96,
+            "top3": 81,
+            "top10": 108,
+            "cells": 120
+          },
+          {
+            "date": "2026-02-27",
+            "avg_rank": 4.33,
+            "top3": 75,
+            "top10": 107,
+            "cells": 120
+          },
+          {
+            "date": "2026-03-31",
+            "avg_rank": 3.99,
+            "top3": 84,
+            "top10": 107,
+            "cells": 120
+          },
+          {
+            "date": "2026-05-01",
+            "avg_rank": 4.26,
+            "top3": 79,
+            "top10": 106,
+            "cells": 121
+          }
         ]
       }
     ],
@@ -266,34 +1051,153 @@
     ]
   },
   "gsc_decline": [
-    { "month": "2025-08", "label": "peak",   "pages": 187, "imp": 319405, "clicks": 396, "delta_pct": 0 },
-    { "month": "2025-09", "label": "cliff",  "pages": 181, "imp": 205856, "clicks": 366, "delta_pct": -36 },
-    { "month": "2025-12", "label": "",       "pages": 196, "imp": 139022, "clicks": 245, "delta_pct": -56 },
-    { "month": "2026-02", "label": "",       "pages": 209, "imp": 83509,  "clicks": 209, "delta_pct": -74 },
-    { "month": "2026-05", "label": "current","pages": 187, "imp": 81538,  "clicks": 148, "delta_pct": -74 }
+    {
+      "month": "2025-08",
+      "label": "peak",
+      "pages": 187,
+      "imp": 319405,
+      "clicks": 396,
+      "delta_pct": 0
+    },
+    {
+      "month": "2025-09",
+      "label": "cliff",
+      "pages": 181,
+      "imp": 205856,
+      "clicks": 366,
+      "delta_pct": -36
+    },
+    {
+      "month": "2025-12",
+      "label": "",
+      "pages": 196,
+      "imp": 139022,
+      "clicks": 245,
+      "delta_pct": -56
+    },
+    {
+      "month": "2026-02",
+      "label": "",
+      "pages": 209,
+      "imp": 83509,
+      "clicks": 209,
+      "delta_pct": -74
+    },
+    {
+      "month": "2026-05",
+      "label": "current",
+      "pages": 187,
+      "imp": 81538,
+      "clicks": 148,
+      "delta_pct": -74
+    }
   ],
   "url_class": [
-    { "class": "service",         "pages": 79, "imp": 50720, "imp_pct": 43.1, "clicks": 131, "clicks_pct": 50.4 },
-    { "class": "home",            "pages": 1,  "imp": 34268, "imp_pct": 29.1, "clicks": 69,  "clicks_pct": 26.5 },
-    { "class": "blog",            "pages": 49, "imp": 15831, "imp_pct": 13.4, "clicks": 15,  "clicks_pct": 5.8 },
-    { "class": "location_other",  "pages": 2,  "imp": 5815,  "imp_pct": 4.9,  "clicks": 8,   "clicks_pct": 3.1 },
-    { "class": "other / about",   "pages": 52, "imp": 9384,  "imp_pct": 7.9,  "clicks": 34,  "clicks_pct": 13.1 },
-    { "class": "burb_templated",  "pages": 10, "imp": 1586,  "imp_pct": 1.3,  "clicks": 3,   "clicks_pct": 1.2 }
+    {
+      "class": "service",
+      "pages": 79,
+      "imp": 50720,
+      "imp_pct": 43.1,
+      "clicks": 131,
+      "clicks_pct": 50.4
+    },
+    {
+      "class": "home",
+      "pages": 1,
+      "imp": 34268,
+      "imp_pct": 29.1,
+      "clicks": 69,
+      "clicks_pct": 26.5
+    },
+    {
+      "class": "blog",
+      "pages": 49,
+      "imp": 15831,
+      "imp_pct": 13.4,
+      "clicks": 15,
+      "clicks_pct": 5.8
+    },
+    {
+      "class": "location_other",
+      "pages": 2,
+      "imp": 5815,
+      "imp_pct": 4.9,
+      "clicks": 8,
+      "clicks_pct": 3.1
+    },
+    {
+      "class": "other / about",
+      "pages": 52,
+      "imp": 9384,
+      "imp_pct": 7.9,
+      "clicks": 34,
+      "clicks_pct": 13.1
+    },
+    {
+      "class": "burb_templated",
+      "pages": 10,
+      "imp": 1586,
+      "imp_pct": 1.3,
+      "clicks": 3,
+      "clicks_pct": 1.2
+    }
   ],
   "brand_pull": {
-    "brand":     { "imp": 18651,  "imp_pct": 12.1, "clicks": 147, "clicks_pct": 53.8 },
-    "non_brand": { "imp": 135466, "imp_pct": 87.9, "clicks": 126, "clicks_pct": 46.2 },
+    "brand": {
+      "imp": 18651,
+      "imp_pct": 12.1,
+      "clicks": 147,
+      "clicks_pct": 53.8
+    },
+    "non_brand": {
+      "imp": 135466,
+      "imp_pct": 87.9,
+      "clicks": 126,
+      "clicks_pct": 46.2
+    },
     "note": "Brand carries 54% of clicks from 12% of impressions — classic brand-pull pattern. Non-brand CTR collapsed to 0.09%."
   },
   "organic_competitors": [
-    { "domain": "twomenandatruck.com",    "shared": 324, "type": "Multi-pin local + national brand" },
-    { "domain": "hireahelper.com",        "shared": 281, "type": "Aggregator / comparison" },
-    { "domain": "moveadvisor.com",        "shared": 211, "type": "Aggregator / comparison" },
-    { "domain": "allied.com",             "shared": 181, "type": "National van line" },
-    { "domain": "allmysons.com",          "shared": 181, "type": "National chain" },
-    { "domain": "extraspace.com",         "shared": 174, "type": "Storage adjacent" },
-    { "domain": "homedepot.com",          "shared": 171, "type": "DIY truck rental adjacent" },
-    { "domain": "movinghelp.com",         "shared": 168, "type": "U-Haul-owned labor marketplace" }
+    {
+      "domain": "twomenandatruck.com",
+      "shared": 324,
+      "type": "Multi-pin local + national brand"
+    },
+    {
+      "domain": "hireahelper.com",
+      "shared": 281,
+      "type": "Aggregator / comparison"
+    },
+    {
+      "domain": "moveadvisor.com",
+      "shared": 211,
+      "type": "Aggregator / comparison"
+    },
+    {
+      "domain": "allied.com",
+      "shared": 181,
+      "type": "National van line"
+    },
+    {
+      "domain": "allmysons.com",
+      "shared": 181,
+      "type": "National chain"
+    },
+    {
+      "domain": "extraspace.com",
+      "shared": 174,
+      "type": "Storage adjacent"
+    },
+    {
+      "domain": "homedepot.com",
+      "shared": 171,
+      "type": "DIY truck rental adjacent"
+    },
+    {
+      "domain": "movinghelp.com",
+      "shared": 168,
+      "type": "U-Haul-owned labor marketplace"
+    }
   ],
   "llm_visibility": {
     "headline": "AI Overview saturation on PM's keyword set: 35% (7/20). PM cited in zero AIOs. YouTube + Reddit dominate.",
@@ -306,41 +1210,327 @@
       "pm_in_top10_organic": 2,
       "pm_cited_in_aio": 0,
       "dfs_pulled_at": "2026-05-22",
-      "dfs_cost_usd": 0.10
+      "dfs_cost_usd": 0.1
     },
     "queries": [
-      { "keyword": "movers detroit",                "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 23,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Local Pack dominates. PM #23 organic. Lever A claim Detroit Woodward GBP for Local Pack lift." },
-      { "keyword": "moving companies detroit",      "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 20,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Local Pack dominates. PM #20 organic. Same Lever A path." },
-      { "keyword": "movers near me",                "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM off page-1. Hyperlocal — proximity-decay queries." },
-      { "keyword": "movers walled lake",            "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": false, "has_paa": true, "pm_organic_rank": 2,    "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #2 organic — branded geo. AI Overview suppression flagged in root-cause #3. Confirm AIO present in monthly re-scan." },
-      { "keyword": "moving companies michigan",     "bucket": "commercial_geo",       "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 28,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Statewide intent. HP-04 (`/moving-companies-michigan/`) Lever B target." },
-      { "keyword": "piano movers detroit",          "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 21,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-02 piano-moving Lever B target. Local Pack dominates." },
-      { "keyword": "hot tub movers",                "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-01 hot-tub-moving Lever B target. PM off page-1." },
-      { "keyword": "office moving companies",       "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Office vertical — Lever B SP-06 furniture-installation page." },
-      { "keyword": "long distance movers detroit",  "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 29,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM has the depth-grade `/long-distance-moving-services/` already. IL-001..020 routes equity to it." },
-      { "keyword": "senior moving services",        "bucket": "commercial_service",   "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "SP-04 senior-moving Lever B target — partnership work LL-03." },
-      { "keyword": "how to pack dishes for moving", "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.homedepot.com", "www.youtube.com", "realestate.usnews.com", "www.extraspace.com"], "note": "PM's existing blog ranks elsewhere but not cited. BLG-01 refresh to add commercial pull-through." },
-      { "keyword": "how to move a pool table",      "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.youtube.com", "forums.azbilliards.com", "www.allied.com", "twomenandatruck.com", "www.jackcooper.com"], "note": "Two competitors (Allied + Two Men) cited in AIO. BLG-02 refresh + cross-link to piano-moving." },
-      { "keyword": "how to move a refrigerator",    "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.youtube.com", "www.whirlpool.com", "www.lowes.com", "www.taskrabbit.com"], "note": "Manufacturer + DIY-retailer citations. BLG-03 refresh + add brand context." },
-      { "keyword": "how to pack lamps for moving",  "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.youtube.com", "www.uhaul.com", "www.reddit.com", "www.extraspace.com", "www.getbellhops.com"], "note": "U-Haul + Bellhops cited. Net-new packing blog target opportunity." },
-      { "keyword": "how to pack fridge for moving", "bucket": "informational",        "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.zippyshell.com", "www.whirlpool.com", "www.reddit.com", "mypieceofcakemove.com", "www.homedepot.com"], "note": "Variant of fridge-moving — same content target." },
-      { "keyword": "moving cost detroit",           "bucket": "midfunnel_commercial", "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": 27,   "pm_cited_in_aio": false, "aio_cited_domains": [],  "note": "AIO present but no citations parsed by DFS — likely cost-aggregator pull (HireAHelper/MoveAdvisor pattern). BLG-04 `Moving cost Detroit MI 2026` Lever D direct target." },
-      { "keyword": "best moving company detroit",   "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 9,    "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #9 organic — best PM result in the set. BLG-05 `Best moving company Detroit reviews` Lever D target to push to top-5." },
-      { "keyword": "how much to tip movers",        "bucket": "midfunnel_commercial", "has_ai_overview": true,  "has_local_pack": false, "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": ["www.reddit.com", "www.facebook.com", "www.cnet.com", "www.extraspace.com", "www.coolhandmovers.com"], "note": "Social + 1 moving company cited (Cool Hand Movers). BLG-06 Lever D direct target." },
-      { "keyword": "moving company near me",        "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": null, "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "Hyperlocal Local Pack. Lever A territory." },
-      { "keyword": "detroit movers",                "bucket": "midfunnel_commercial", "has_ai_overview": false, "has_local_pack": true,  "has_paa": true, "pm_organic_rank": 17,   "pm_cited_in_aio": false, "aio_cited_domains": [], "note": "PM #17 organic. HP-01/HP-02 Lever B direct target." }
+      {
+        "keyword": "movers detroit",
+        "bucket": "commercial_geo",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 23,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "Local Pack dominates. PM #23 organic. Lever A claim Detroit Woodward GBP for Local Pack lift."
+      },
+      {
+        "keyword": "moving companies detroit",
+        "bucket": "commercial_geo",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 20,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "Local Pack dominates. PM #20 organic. Same Lever A path."
+      },
+      {
+        "keyword": "movers near me",
+        "bucket": "commercial_geo",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "PM off page-1. Hyperlocal — proximity-decay queries."
+      },
+      {
+        "keyword": "movers walled lake",
+        "bucket": "commercial_geo",
+        "has_ai_overview": false,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": 2,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "PM #2 organic — branded geo. AI Overview suppression flagged in root-cause #3. Confirm AIO present in monthly re-scan."
+      },
+      {
+        "keyword": "moving companies michigan",
+        "bucket": "commercial_geo",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 28,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "Statewide intent. HP-04 (`/moving-companies-michigan/`) Lever B target."
+      },
+      {
+        "keyword": "piano movers detroit",
+        "bucket": "commercial_service",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 21,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "SP-02 piano-moving Lever B target. Local Pack dominates."
+      },
+      {
+        "keyword": "hot tub movers",
+        "bucket": "commercial_service",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "SP-01 hot-tub-moving Lever B target. PM off page-1."
+      },
+      {
+        "keyword": "office moving companies",
+        "bucket": "commercial_service",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "Office vertical — Lever B SP-06 furniture-installation page."
+      },
+      {
+        "keyword": "long distance movers detroit",
+        "bucket": "commercial_service",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 29,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "PM has the depth-grade `/long-distance-moving-services/` already. IL-001..020 routes equity to it."
+      },
+      {
+        "keyword": "senior moving services",
+        "bucket": "commercial_service",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "SP-04 senior-moving Lever B target — partnership work LL-03."
+      },
+      {
+        "keyword": "how to pack dishes for moving",
+        "bucket": "informational",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.reddit.com",
+          "www.homedepot.com",
+          "www.youtube.com",
+          "realestate.usnews.com",
+          "www.extraspace.com"
+        ],
+        "note": "PM's existing blog ranks elsewhere but not cited. BLG-01 refresh to add commercial pull-through."
+      },
+      {
+        "keyword": "how to move a pool table",
+        "bucket": "informational",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.youtube.com",
+          "forums.azbilliards.com",
+          "www.allied.com",
+          "twomenandatruck.com",
+          "www.jackcooper.com"
+        ],
+        "note": "Two competitors (Allied + Two Men) cited in AIO. BLG-02 refresh + cross-link to piano-moving."
+      },
+      {
+        "keyword": "how to move a refrigerator",
+        "bucket": "informational",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.reddit.com",
+          "www.youtube.com",
+          "www.whirlpool.com",
+          "www.lowes.com",
+          "www.taskrabbit.com"
+        ],
+        "note": "Manufacturer + DIY-retailer citations. BLG-03 refresh + add brand context."
+      },
+      {
+        "keyword": "how to pack lamps for moving",
+        "bucket": "informational",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.youtube.com",
+          "www.uhaul.com",
+          "www.reddit.com",
+          "www.extraspace.com",
+          "www.getbellhops.com"
+        ],
+        "note": "U-Haul + Bellhops cited. Net-new packing blog target opportunity."
+      },
+      {
+        "keyword": "how to pack fridge for moving",
+        "bucket": "informational",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.zippyshell.com",
+          "www.whirlpool.com",
+          "www.reddit.com",
+          "mypieceofcakemove.com",
+          "www.homedepot.com"
+        ],
+        "note": "Variant of fridge-moving — same content target."
+      },
+      {
+        "keyword": "moving cost detroit",
+        "bucket": "midfunnel_commercial",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": 27,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "AIO present but no citations parsed by DFS — likely cost-aggregator pull (HireAHelper/MoveAdvisor pattern). BLG-04 `Moving cost Detroit MI 2026` Lever D direct target."
+      },
+      {
+        "keyword": "best moving company detroit",
+        "bucket": "midfunnel_commercial",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 9,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "PM #9 organic — best PM result in the set. BLG-05 `Best moving company Detroit reviews` Lever D target to push to top-5."
+      },
+      {
+        "keyword": "how much to tip movers",
+        "bucket": "midfunnel_commercial",
+        "has_ai_overview": true,
+        "has_local_pack": false,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [
+          "www.reddit.com",
+          "www.facebook.com",
+          "www.cnet.com",
+          "www.extraspace.com",
+          "www.coolhandmovers.com"
+        ],
+        "note": "Social + 1 moving company cited (Cool Hand Movers). BLG-06 Lever D direct target."
+      },
+      {
+        "keyword": "moving company near me",
+        "bucket": "midfunnel_commercial",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": null,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "Hyperlocal Local Pack. Lever A territory."
+      },
+      {
+        "keyword": "detroit movers",
+        "bucket": "midfunnel_commercial",
+        "has_ai_overview": false,
+        "has_local_pack": true,
+        "has_paa": true,
+        "pm_organic_rank": 17,
+        "pm_cited_in_aio": false,
+        "aio_cited_domains": [],
+        "note": "PM #17 organic. HP-01/HP-02 Lever B direct target."
+      }
     ],
     "top_cited_domains_in_aio": [
-      { "domain": "www.youtube.com",   "citations": 18, "unique_queries": 5, "note": "Dominates informational moving content — video format wins" },
-      { "domain": "www.reddit.com",    "citations": 7,  "unique_queries": 5, "note": "Community Q&A — high authority signal for 'how to' / 'how much' queries" },
-      { "domain": "www.extraspace.com","citations": 3,  "unique_queries": 3, "note": "Storage-adjacent — broad authoritative footprint" },
-      { "domain": "www.lowes.com",     "citations": 2,  "unique_queries": 2, "note": "Retailer — product-handling queries (fridge)" },
-      { "domain": "www.whirlpool.com", "citations": 2,  "unique_queries": 2, "note": "Manufacturer — brand-asset citations" },
-      { "domain": "www.jackcooper.com","citations": 2,  "unique_queries": 2, "note": "Moving brand — possible content-pattern study target" },
-      { "domain": "www.homedepot.com", "citations": 2,  "unique_queries": 2, "note": "Retailer — packing-supply queries" },
-      { "domain": "bigleaguemovers.com", "citations": 1, "unique_queries": 1, "note": "Single-citation small mover — proves it's possible" },
-      { "domain": "murphymovers.com",  "citations": 1,  "unique_queries": 1, "note": "Single-citation small mover" },
-      { "domain": "clancymoving.com",  "citations": 1,  "unique_queries": 1, "note": "Single-citation small mover" }
+      {
+        "domain": "www.youtube.com",
+        "citations": 18,
+        "unique_queries": 5,
+        "note": "Dominates informational moving content — video format wins"
+      },
+      {
+        "domain": "www.reddit.com",
+        "citations": 7,
+        "unique_queries": 5,
+        "note": "Community Q&A — high authority signal for 'how to' / 'how much' queries"
+      },
+      {
+        "domain": "www.extraspace.com",
+        "citations": 3,
+        "unique_queries": 3,
+        "note": "Storage-adjacent — broad authoritative footprint"
+      },
+      {
+        "domain": "www.lowes.com",
+        "citations": 2,
+        "unique_queries": 2,
+        "note": "Retailer — product-handling queries (fridge)"
+      },
+      {
+        "domain": "www.whirlpool.com",
+        "citations": 2,
+        "unique_queries": 2,
+        "note": "Manufacturer — brand-asset citations"
+      },
+      {
+        "domain": "www.jackcooper.com",
+        "citations": 2,
+        "unique_queries": 2,
+        "note": "Moving brand — possible content-pattern study target"
+      },
+      {
+        "domain": "www.homedepot.com",
+        "citations": 2,
+        "unique_queries": 2,
+        "note": "Retailer — packing-supply queries"
+      },
+      {
+        "domain": "bigleaguemovers.com",
+        "citations": 1,
+        "unique_queries": 1,
+        "note": "Single-citation small mover — proves it's possible"
+      },
+      {
+        "domain": "murphymovers.com",
+        "citations": 1,
+        "unique_queries": 1,
+        "note": "Single-citation small mover"
+      },
+      {
+        "domain": "clancymoving.com",
+        "citations": 1,
+        "unique_queries": 1,
+        "note": "Single-citation small mover"
+      }
     ],
     "implications": [
       "**AIO is not yet at commercial-geo + commercial-service queries.** 12 of 12 commercial queries still surface Local Pack. Lever A (GBP claims + DD pins) is the right lever for these — they're still local-pack-dominated SERPs.",
@@ -353,33 +1543,177 @@
     "mini_report_url": "llm-visibility/"
   },
   "keyword_buckets": [
-    { "bucket": "Pos 1–10 (Owned)",             "keywords": 45,  "pct": 8,  "posture": "Defend" },
-    { "bucket": "Pos 11–20 (Ship-ready primary)", "keywords": 83,  "pct": 14, "posture": "Lever B + C primary target" },
-    { "bucket": "Pos 21–50 (Build territory)",   "keywords": 258, "pct": 44, "posture": "Depth + internal-link consolidation" },
-    { "bucket": "Pos 51+ (Deep gap)",            "keywords": 196, "pct": 34, "posture": "Long-term — Q4 onward" }
+    {
+      "bucket": "Pos 1–10 (Owned)",
+      "keywords": 45,
+      "pct": 8,
+      "posture": "Defend"
+    },
+    {
+      "bucket": "Pos 11–20 (Ship-ready primary)",
+      "keywords": 83,
+      "pct": 14,
+      "posture": "Lever B + C primary target"
+    },
+    {
+      "bucket": "Pos 21–50 (Build territory)",
+      "keywords": 258,
+      "pct": 44,
+      "posture": "Depth + internal-link consolidation"
+    },
+    {
+      "bucket": "Pos 51+ (Deep gap)",
+      "keywords": 196,
+      "pct": 34,
+      "posture": "Long-term — Q4 onward"
+    }
   ],
   "top_urls": [
-    { "url": "/", "imp_90d": 86283, "clicks_90d": 215, "pos": 26.1, "class": "home", "lever": "HP-01..05 Lever B" },
-    { "url": "/residential/hot-tub-moving-services/", "imp_90d": 38000, "clicks_90d": 80, "pos": 14.7, "class": "service", "lever": "SP-01 Lever B" },
-    { "url": "/about-us/contact/", "imp_90d": 11884, "clicks_90d": 29, "pos": 30.5, "class": "core", "lever": "nav" },
-    { "url": "/residential/piano-moving-services/", "imp_90d": 29000, "clicks_90d": 10, "pos": 19.7, "class": "service", "lever": "SP-02 Lever B" },
-    { "url": "/senior-moving/flat-screen-tv-moving/", "imp_90d": 18000, "clicks_90d": 250, "pos": 10.6, "class": "service", "lever": "Exemplar (1.36% CTR niche model)" },
-    { "url": "/artwork-moving/", "imp_90d": 19000, "clicks_90d": 10, "pos": 21.9, "class": "service", "lever": "SP-03 Lever B" },
-    { "url": "/office/", "imp_90d": 17000, "clicks_90d": 5, "pos": 39.3, "class": "service", "lever": "depth target" },
-    { "url": "/office/furniture-installation-services/", "imp_90d": 29000, "clicks_90d": 8, "pos": 40.7, "class": "service", "lever": "SP-06 Lever B (biggest rank-lift)" },
-    { "url": "/senior-moving/", "imp_90d": 14000, "clicks_90d": 15, "pos": 17.0, "class": "service", "lever": "SP-04 Lever B" },
-    { "url": "/residential/local-moving-services/", "imp_90d": 13000, "clicks_90d": 2, "pos": 21.7, "class": "service", "lever": "SP-05 Lever B" }
+    {
+      "url": "/",
+      "imp_90d": 86283,
+      "clicks_90d": 215,
+      "pos": 26.1,
+      "class": "home",
+      "lever": "HP-01..05 Lever B"
+    },
+    {
+      "url": "/residential/hot-tub-moving-services/",
+      "imp_90d": 38000,
+      "clicks_90d": 80,
+      "pos": 14.7,
+      "class": "service",
+      "lever": "SP-01 Lever B"
+    },
+    {
+      "url": "/about-us/contact/",
+      "imp_90d": 11884,
+      "clicks_90d": 29,
+      "pos": 30.5,
+      "class": "core",
+      "lever": "nav"
+    },
+    {
+      "url": "/residential/piano-moving-services/",
+      "imp_90d": 29000,
+      "clicks_90d": 10,
+      "pos": 19.7,
+      "class": "service",
+      "lever": "SP-02 Lever B"
+    },
+    {
+      "url": "/senior-moving/flat-screen-tv-moving/",
+      "imp_90d": 18000,
+      "clicks_90d": 250,
+      "pos": 10.6,
+      "class": "service",
+      "lever": "Exemplar (1.36% CTR niche model)"
+    },
+    {
+      "url": "/artwork-moving/",
+      "imp_90d": 19000,
+      "clicks_90d": 10,
+      "pos": 21.9,
+      "class": "service",
+      "lever": "SP-03 Lever B"
+    },
+    {
+      "url": "/office/",
+      "imp_90d": 17000,
+      "clicks_90d": 5,
+      "pos": 39.3,
+      "class": "service",
+      "lever": "depth target"
+    },
+    {
+      "url": "/office/furniture-installation-services/",
+      "imp_90d": 29000,
+      "clicks_90d": 8,
+      "pos": 40.7,
+      "class": "service",
+      "lever": "SP-06 Lever B (biggest rank-lift)"
+    },
+    {
+      "url": "/senior-moving/",
+      "imp_90d": 14000,
+      "clicks_90d": 15,
+      "pos": 17.0,
+      "class": "service",
+      "lever": "SP-04 Lever B"
+    },
+    {
+      "url": "/residential/local-moving-services/",
+      "imp_90d": 13000,
+      "clicks_90d": 2,
+      "pos": 21.7,
+      "class": "service",
+      "lever": "SP-05 Lever B"
+    }
   ],
   "map_upside": [
-    { "coord": "Walled Lake HQ",  "today": "#1 avg",       "m3_target": "Defend #1",          "managed": true,  "delta_text": "Defend" },
-    { "coord": "Novi",            "today": "#2 avg",       "m3_target": "Defend #2 or improve","managed": false, "delta_text": "Defend" },
-    { "coord": "Detroit Woodward","today": "#2.7 pin-bleed","m3_target": "#1 with managed pin","managed": false, "delta_text": "Claim" },
-    { "coord": "Rochester",       "today": "not in top-20","m3_target": "top-5 with managed pin","managed": false, "delta_text": "Claim" },
-    { "coord": "Royal Oak",       "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
-    { "coord": "Birmingham",      "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
-    { "coord": "Farmington Hills","today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
-    { "coord": "Plymouth",        "today": "not in top-20","m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" },
-    { "coord": "Bloomfield Hills","today": "not tested",   "m3_target": "top-20 via DD pin",  "managed": false, "delta_text": "DD pin" }
+    {
+      "coord": "Walled Lake HQ",
+      "today": "#1 avg",
+      "m3_target": "Defend #1",
+      "managed": true,
+      "delta_text": "Defend"
+    },
+    {
+      "coord": "Novi",
+      "today": "#2 avg",
+      "m3_target": "Defend #2 or improve",
+      "managed": false,
+      "delta_text": "Defend"
+    },
+    {
+      "coord": "Detroit Woodward",
+      "today": "#2.7 pin-bleed",
+      "m3_target": "#1 with managed pin",
+      "managed": false,
+      "delta_text": "Claim"
+    },
+    {
+      "coord": "Rochester",
+      "today": "not in top-20",
+      "m3_target": "top-5 with managed pin",
+      "managed": false,
+      "delta_text": "Claim"
+    },
+    {
+      "coord": "Royal Oak",
+      "today": "not in top-20",
+      "m3_target": "top-20 via DD pin",
+      "managed": false,
+      "delta_text": "DD pin"
+    },
+    {
+      "coord": "Birmingham",
+      "today": "not in top-20",
+      "m3_target": "top-20 via DD pin",
+      "managed": false,
+      "delta_text": "DD pin"
+    },
+    {
+      "coord": "Farmington Hills",
+      "today": "not in top-20",
+      "m3_target": "top-20 via DD pin",
+      "managed": false,
+      "delta_text": "DD pin"
+    },
+    {
+      "coord": "Plymouth",
+      "today": "not in top-20",
+      "m3_target": "top-20 via DD pin",
+      "managed": false,
+      "delta_text": "DD pin"
+    },
+    {
+      "coord": "Bloomfield Hills",
+      "today": "not tested",
+      "m3_target": "top-20 via DD pin",
+      "managed": false,
+      "delta_text": "DD pin"
+    }
   ],
   "positives": [
     "#1 Maps rank at Walled Lake coord on 8/8 priority queries (DFS live)",
@@ -410,12 +1744,42 @@
       "mini_report_url": "p0-conversion-tracking/",
       "why": "PM's GA4 fires form_submit ~190/mo across channels but the property-settings flag was never set, so GA4 native reports show 0 conversions. AQMS's GA4 stack — the reference implementation — fires four lead-intent events (form_submit, click_phone_number, gmb_click, contact_form_submit). PM has only form_submit firing. M1 closes the property-settings flag and deploys the missing click events via GTM so PM's leads picture matches the AQMS pattern.",
       "actions": [
-        { "code": "AN-01", "name": "Mark form_submit as conversion event in GA4 property settings", "month": "M1", "effort": "S" },
-        { "code": "AN-02", "name": "Deploy click_phone_number + gmb_click GTM events on the website; mark as conversion events in GA4", "month": "M1", "effort": "M" },
-        { "code": "AN-03", "name": "Verify GBP UTM ?utm_source=gmb fires into GA4", "month": "M1", "effort": "S" },
-        { "code": "AN-04", "name": "Build Q3 reporting baseline using full GA4 lead-event stack", "month": "M2", "effort": "S" },
-        { "code": "AN-05", "name": "First monthly report with composite leads metric across all events", "month": "M2", "effort": "S" },
-        { "code": "AN-06", "name": "Q3 to Q4 quarterly comparison frame", "month": "M3", "effort": "S" }
+        {
+          "code": "AN-01",
+          "name": "Mark form_submit as conversion event in GA4 property settings",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "AN-02",
+          "name": "Deploy click_phone_number + gmb_click GTM events on the website; mark as conversion events in GA4",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "AN-03",
+          "name": "Verify GBP UTM ?utm_source=gmb fires into GA4",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "AN-04",
+          "name": "Build Q3 reporting baseline using full GA4 lead-event stack",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "AN-05",
+          "name": "First monthly report with composite leads metric across all events",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "AN-06",
+          "name": "Q3 to Q4 quarterly comparison frame",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "PM's GA4 lead-event stack matches AQMS's reference pattern. Composite leads metric available per channel and per pin for all subsequent reporting."
     },
@@ -427,12 +1791,42 @@
       "mini_report_url": "lever-a-map-presence/",
       "why": "PM has Maps reach in 3 of 8 tested metro coords. Two managed-GBP claims (Detroit Woodward + Rochester) plus 5 Driving Direction pins close the geometric ceiling that a single Walled Lake pin can't.",
       "actions": [
-        { "code": "GBP-01", "name": "Claim + manage Detroit Woodward GBP (1001 Woodward Ave) — #2.7 pin-bleed closes to #1", "month": "M1", "effort": "M" },
-        { "code": "GBP-02", "name": "Claim + manage Rochester GBP (419 Golf View Ln) — zero Maps reach today", "month": "M1", "effort": "M" },
-        { "code": "GBP-03..09", "name": "Walled Lake HQ pin optimization (description, products, photos, attributes, posts, reviews)", "month": "M1", "effort": "L" },
-        { "code": "DD-01..05", "name": "Driving Direction pins at Birmingham / Royal Oak / Farmington Hills / Plymouth / Bloomfield Hills", "month": "M1", "effort": "M" },
-        { "code": "GBP-10", "name": "Detroit Woodward post-claim optimization", "month": "M2", "effort": "M" },
-        { "code": "GBP-11", "name": "Rochester post-claim optimization", "month": "M3", "effort": "M" }
+        {
+          "code": "GBP-01",
+          "name": "Claim + manage Detroit Woodward GBP (1001 Woodward Ave) — #2.7 pin-bleed closes to #1",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-02",
+          "name": "Claim + manage Rochester GBP (419 Golf View Ln) — zero Maps reach today",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-03..09",
+          "name": "Walled Lake HQ pin optimization (description, products, photos, attributes, posts, reviews)",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "DD-01..05",
+          "name": "Driving Direction pins at Birmingham / Royal Oak / Farmington Hills / Plymouth / Bloomfield Hills",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-10",
+          "name": "Detroit Woodward post-claim optimization",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "GBP-11",
+          "name": "Rochester post-claim optimization",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "3/8 coords with PM in top-3 → 6/8 (M3 target). Detroit Woodward → #1 within 30d of claim. Rochester → top-5 within 60d."
     },
@@ -444,20 +1838,90 @@
       "mini_report_url": "lever-b-page-surgery/",
       "why": "60+ of 70 burb pages effectively deindexed but still in sitemap, polluting site-quality signal. 256 keywords sit at pos 11–50 ship-ready. Homepage forced to rank for 9+ commercial queries at avg pos 26.",
       "actions": [
-        { "code": "PA-02..22", "name": "26 burb-page DELETE+301 redirects per Pages_Action_List", "month": "M1", "effort": "L" },
-        { "code": "PA-23..26", "name": "Upgrade 4 surviving burb pages into real location pages", "month": "M1", "effort": "M" },
-        { "code": "SP-01", "name": "/residential/hot-tub-moving-services/ (173K imp pos 14.7) brand-specific upgrade", "month": "M1", "effort": "L" },
-        { "code": "SP-02", "name": "/residential/piano-moving-services/ (125K imp pos 19.7) depth upgrade", "month": "M1", "effort": "L" },
-        { "code": "SP-03", "name": "/artwork-moving/ (76K imp pos 21.9) custom crating + museum case studies", "month": "M2", "effort": "L" },
-        { "code": "SP-04", "name": "/senior-moving/ (59K imp pos 17.0) senior-community partnerships", "month": "M2", "effort": "L" },
-        { "code": "SP-05", "name": "/residential/local-moving-services/ (52K imp pos 21.7) homepage-split cross-links", "month": "M2", "effort": "M" },
-        { "code": "SP-06", "name": "/office/furniture-installation-services/ (29K imp pos 40.7) biggest rank-lift potential", "month": "M2", "effort": "L" },
-        { "code": "SP-07", "name": "/residential/internal-small-moving/ (20K imp pos 35.0) niche specialty", "month": "M3", "effort": "M" },
-        { "code": "HP-01", "name": "Build /movers-detroit-mi/ national-mover-grade depth", "month": "M1", "effort": "L" },
-        { "code": "HP-02", "name": "Build /moving-companies-detroit-mi/ separate intent split", "month": "M2", "effort": "L" },
-        { "code": "HP-03", "name": "Build /movers-walled-lake-mi/ AI-Overview-citation-optimized", "month": "M2", "effort": "L" },
-        { "code": "HP-04", "name": "Build /moving-companies-michigan/ statewide cluster", "month": "M3", "effort": "L" },
-        { "code": "HP-05", "name": "Refocus / on brand + 3-office overview + nav into HP-01..04", "month": "M3", "effort": "M" }
+        {
+          "code": "PA-02..22",
+          "name": "26 burb-page DELETE+301 redirects per Pages_Action_List",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "PA-23..26",
+          "name": "Upgrade 4 surviving burb pages into real location pages",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "SP-01",
+          "name": "/residential/hot-tub-moving-services/ (173K imp pos 14.7) brand-specific upgrade",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "SP-02",
+          "name": "/residential/piano-moving-services/ (125K imp pos 19.7) depth upgrade",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "SP-03",
+          "name": "/artwork-moving/ (76K imp pos 21.9) custom crating + museum case studies",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-04",
+          "name": "/senior-moving/ (59K imp pos 17.0) senior-community partnerships",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-05",
+          "name": "/residential/local-moving-services/ (52K imp pos 21.7) homepage-split cross-links",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "SP-06",
+          "name": "/office/furniture-installation-services/ (29K imp pos 40.7) biggest rank-lift potential",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "SP-07",
+          "name": "/residential/internal-small-moving/ (20K imp pos 35.0) niche specialty",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "HP-01",
+          "name": "Build /movers-detroit-mi/ national-mover-grade depth",
+          "month": "M1",
+          "effort": "L"
+        },
+        {
+          "code": "HP-02",
+          "name": "Build /moving-companies-detroit-mi/ separate intent split",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "HP-03",
+          "name": "Build /movers-walled-lake-mi/ AI-Overview-citation-optimized",
+          "month": "M2",
+          "effort": "L"
+        },
+        {
+          "code": "HP-04",
+          "name": "Build /moving-companies-michigan/ statewide cluster",
+          "month": "M3",
+          "effort": "L"
+        },
+        {
+          "code": "HP-05",
+          "name": "Refocus / on brand + 3-office overview + nav into HP-01..04",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Each homepage-split page reaches pos 8–12. 3 of 5 priority service pages reach top-10 by M3. Site-wide quality signal lifts as burb pages drop."
     },
@@ -469,10 +1933,30 @@
       "mini_report_url": "lever-c-internal-linking/",
       "why": "Service pages share homepage nav + footer but lack cross-cluster links. Blog packing posts (4,884 imp 30d) don't link to commercial /packing/. Equity not routed to the ship-ready surface.",
       "actions": [
-        { "code": "IL-001..020", "name": "Priority nav + body changes routing equity into Lever B targets; footer to HP-01..04 sitewide", "month": "M1", "effort": "M" },
-        { "code": "IL-021..040", "name": "Blog-to-commercial pull-through + service-cluster hub-and-spoke", "month": "M2", "effort": "M" },
-        { "code": "IL-041..050", "name": "Areas-served hub-to-spoke (Walled Lake hub → surviving burb pages)", "month": "M3", "effort": "S" },
-        { "code": "SCH-01..14", "name": "Schema markup deploy on all new + upgraded pages (LocalBusiness + Service + FAQ + BreadcrumbList)", "month": "M1-M3", "effort": "M" }
+        {
+          "code": "IL-001..020",
+          "name": "Priority nav + body changes routing equity into Lever B targets; footer to HP-01..04 sitewide",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "IL-021..040",
+          "name": "Blog-to-commercial pull-through + service-cluster hub-and-spoke",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "IL-041..050",
+          "name": "Areas-served hub-to-spoke (Walled Lake hub → surviving burb pages)",
+          "month": "M3",
+          "effort": "S"
+        },
+        {
+          "code": "SCH-01..14",
+          "name": "Schema markup deploy on all new + upgraded pages (LocalBusiness + Service + FAQ + BreadcrumbList)",
+          "month": "M1-M3",
+          "effort": "M"
+        }
       ],
       "outcome": "Service-page rankings lift 3-8 positions across the ship-ready 256-keyword band via internal-link equity routing. Schema improves SERP feature acquisition."
     },
@@ -484,16 +1968,66 @@
       "mini_report_url": "lever-d-content/",
       "why": "Top-imp blog gets tons of impressions but few clicks (how-to-pack-dishes 4,884 imp / 1 click). Adding commercial pull-through converts impressions into authority + click-through. New Detroit commercial-intent blog targets the 196 pos-51+ keywords.",
       "actions": [
-        { "code": "BLG-01", "name": "/2025/09/16/how-to-pack-dishes-for-moving/ → add /packing/ links + Detroit context", "month": "M1", "effort": "S" },
-        { "code": "BLG-02", "name": "/2025/09/16/how-to-move-a-pool-table/ → add piano-moving cross-link", "month": "M1", "effort": "S" },
-        { "code": "BLG-03", "name": "/2025/09/16/how-to-move-a-refrigerator/ → add local-moving cross-link", "month": "M1", "effort": "S" },
-        { "code": "BLG-04", "name": "New: Moving cost Detroit MI 2026", "month": "M2", "effort": "M" },
-        { "code": "BLG-05", "name": "New: Best moving company Detroit reviews — what to look for", "month": "M2", "effort": "M" },
-        { "code": "BLG-06", "name": "New: How much to tip movers in Detroit", "month": "M2", "effort": "S" },
-        { "code": "BLG-07", "name": "PAA Implementation per existing Asana task", "month": "M2", "effort": "M" },
-        { "code": "BLG-08", "name": "New: piano-moving-cost (niche-service replica of TV exemplar)", "month": "M3", "effort": "M" },
-        { "code": "BLG-09", "name": "New: hot-tub-moving-cost", "month": "M3", "effort": "M" },
-        { "code": "BLG-10", "name": "New: artwork-moving-cost / museum-grade-handling", "month": "M3", "effort": "M" }
+        {
+          "code": "BLG-01",
+          "name": "/2025/09/16/how-to-pack-dishes-for-moving/ → add /packing/ links + Detroit context",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-02",
+          "name": "/2025/09/16/how-to-move-a-pool-table/ → add piano-moving cross-link",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-03",
+          "name": "/2025/09/16/how-to-move-a-refrigerator/ → add local-moving cross-link",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-04",
+          "name": "New: Moving cost Detroit MI 2026",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-05",
+          "name": "New: Best moving company Detroit reviews — what to look for",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-06",
+          "name": "New: How much to tip movers in Detroit",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "BLG-07",
+          "name": "PAA Implementation per existing Asana task",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-08",
+          "name": "New: piano-moving-cost (niche-service replica of TV exemplar)",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-09",
+          "name": "New: hot-tub-moving-cost",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "BLG-10",
+          "name": "New: artwork-moving-cost / museum-grade-handling",
+          "month": "M3",
+          "effort": "M"
+        }
       ],
       "outcome": "3–5 new commercial-intent posts ranking top-20 within 60d post-publish. Existing high-imp blog converts more clicks via commercial pull-through."
     },
@@ -505,21 +2039,505 @@
       "mini_report_url": "lever-e-link-hygiene/",
       "why": "DFS Backlinks shows 990 / 247 ref domains with 17 confirmed Telegram-spam anchors. Ahrefs flags 211 of 425 (49.6%) as spam. SEO Neo-precursor stack still active in Asana. Earned-channel rebuild replaces the automated stack.",
       "actions": [
-        { "code": "OP-01", "name": "Export full backlink profile via DataForSEO Backlinks (per-URL granularity)", "month": "M1", "effort": "S" },
-        { "code": "OP-02", "name": "Build disavow file: 17 Telegram-spam + 211 Ahrefs-flagged + 44 templated anchor", "month": "M1", "effort": "M" },
-        { "code": "OP-03", "name": "Submit disavow via GSC (owner authorization OCI Ask 3)", "month": "M1", "effort": "S" },
-        { "code": "OP-04", "name": "HALT all active SEO Neo-precursor campaigns in Asana — principal instruction to Julce", "month": "M1", "effort": "S" },
-        { "code": "CIT-01..05", "name": "Top 20 local citations (BBB / Yelp / Yellow Pages / Foursquare + 10 MI directories)", "month": "M1", "effort": "M" },
-        { "code": "CIT-06..10", "name": "Industry citations (AMSA / ProMover / MoversAuthority / Moving.com / Mover Stars)", "month": "M2", "effort": "M" },
-        { "code": "PR-01", "name": "Detroit Free Press re-engagement on 'Best Moving Company' relationship", "month": "M2", "effort": "M" },
-        { "code": "PR-02", "name": "Oakland Press follow-up", "month": "M2", "effort": "S" },
-        { "code": "PR-03", "name": "Expert-quote pitches to Mover Magazine + Moving.com editorial", "month": "M3", "effort": "M" },
-        { "code": "LL-01", "name": "Realtor moving-niche partner outreach (Detroit area)", "month": "M2", "effort": "M" },
-        { "code": "LL-02", "name": "Oakland University relocation partner (Rochester office near OU)", "month": "M2", "effort": "M" },
-        { "code": "LL-03", "name": "Senior community partner (PM offers Senior Moving service)", "month": "M2", "effort": "M" },
-        { "code": "LL-04..05", "name": "Partner agreement follow-up", "month": "M3", "effort": "S" }
+        {
+          "code": "OP-01",
+          "name": "Export full backlink profile via DataForSEO Backlinks (per-URL granularity)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "OP-02",
+          "name": "Build disavow file: 17 Telegram-spam + 211 Ahrefs-flagged + 44 templated anchor",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "OP-03",
+          "name": "Submit disavow via GSC (owner authorization OCI Ask 3)",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "OP-04",
+          "name": "HALT all active SEO Neo-precursor campaigns in Asana — principal instruction to Julce",
+          "month": "M1",
+          "effort": "S"
+        },
+        {
+          "code": "CIT-01..05",
+          "name": "Top 20 local citations (BBB / Yelp / Yellow Pages / Foursquare + 10 MI directories)",
+          "month": "M1",
+          "effort": "M"
+        },
+        {
+          "code": "CIT-06..10",
+          "name": "Industry citations (AMSA / ProMover / MoversAuthority / Moving.com / Mover Stars)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "PR-01",
+          "name": "Detroit Free Press re-engagement on 'Best Moving Company' relationship",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "PR-02",
+          "name": "Oakland Press follow-up",
+          "month": "M2",
+          "effort": "S"
+        },
+        {
+          "code": "PR-03",
+          "name": "Expert-quote pitches to Mover Magazine + Moving.com editorial",
+          "month": "M3",
+          "effort": "M"
+        },
+        {
+          "code": "LL-01",
+          "name": "Realtor moving-niche partner outreach (Detroit area)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LL-02",
+          "name": "Oakland University relocation partner (Rochester office near OU)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LL-03",
+          "name": "Senior community partner (PM offers Senior Moving service)",
+          "month": "M2",
+          "effort": "M"
+        },
+        {
+          "code": "LL-04..05",
+          "name": "Partner agreement follow-up",
+          "month": "M3",
+          "effort": "S"
+        }
       ],
       "outcome": "Backlink toxicity drops as disavow processes. New automated-pattern links stop accruing. First earned link from vetted publication by M3. Citation completeness 90%+. 2-3 partner links live."
     }
-  ]
+  ],
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Professional Movers.com",
+    "short_name": "Professional Movers",
+    "subtitle": "Q3 2026 · Walled Lake, MI · Client Snapshot",
+    "footer": "Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Organic search traffic has come down hard over the past year (organic clicks <strong>−74% since August 2025</strong>), but the leads that matter held through the drop. Visitors who arrive through your Google Business <em>Website</em> button submit quote forms at <strong>~17.5% — nearly double the 9.2%</strong> from regular organic search — and that high-intent path never dipped. Year over year, organic visits are <strong>−24%</strong> but your <strong>conversion rate is up (+11%)</strong>, so the site is converting what it gets more efficiently. On Maps you hold coverage in <strong>3 of 8 surrounding metros</strong> — real room to grow. The Q3 plan compounds the channel already winning: claim two more Google Business pins, fix the templated city pages that triggered the ranking drop, and rebuild the earned-link profile.</p>",
+    "chips": [
+      {
+        "v": "−74%",
+        "l": "organic clicks (12-mo)",
+        "watch": true
+      },
+      {
+        "v": "17.5%",
+        "l": "GBP→site lead rate",
+        "good": true
+      },
+      {
+        "v": "+11%",
+        "l": "conversion rate YoY",
+        "good": true
+      },
+      {
+        "v": "3 / 8",
+        "l": "metros on Maps",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        536,
+        561,
+        473,
+        492,
+        471,
+        488,
+        504,
+        556
+      ],
+      "leads": [
+        63,
+        57,
+        58,
+        36,
+        31,
+        49,
+        51,
+        43
+      ],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Performance · Monthly (Q4 2025 → now)",
+      "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        572,
+        526,
+        709,
+        657,
+        523,
+        484,
+        537
+      ],
+      "leads": [
+        48,
+        45,
+        59,
+        60,
+        59,
+        39,
+        50
+      ],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Visitors & Leads"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-24%",
+            "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-15%",
+            "cls": "neg"
+          }
+        ],
+        "extra": {
+          "m": "Conv. rate",
+          "d": "+11%",
+          "cls": "pos"
+        }
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-22%",
+            "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-26%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+8%",
+            "cls": "pos"
+          },
+          {
+            "m": "Leads",
+            "d": "+14%",
+            "cls": "pos"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Traffic is still below last year, but conversion rate is up and the Google-Business lead path is at an 18-month high — the next 90 days lean into that channel.",
+    "focus": [
+      {
+        "title": "Expand Maps presence",
+        "color": "#10b981",
+        "body": "Claim + manage the Detroit Woodward and Rochester Google Business pins and add Driving-Direction pins to close the metros a single Walled Lake pin can’t reach."
+      },
+      {
+        "title": "Page surgery on city pages",
+        "color": "#1d5b8a",
+        "body": "Clean up the templated suburb pages that triggered the ranking demotion, consolidate thin pages, and rebuild the ones worth keeping with real depth."
+      },
+      {
+        "title": "Rebuild the earned-link profile",
+        "color": "#6366f1",
+        "body": "Replace the hollowed-out automated link stack with local PR, citations, and genuine local links to restore authority."
+      },
+      {
+        "title": "Content + conversion tracking",
+        "color": "#f59e0b",
+        "body": "Lock down conversion tracking, refresh top blog posts, and add commercial-intent articles that feed the quote form."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Feb → May 2026 · 6 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "movers near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.30 → <strong>3.40</strong></span>"
+            },
+            {
+              "t": "82 → <strong>84</strong>"
+            },
+            {
+              "t": "+2",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "moving company near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.61 → <strong>3.89</strong></span>"
+            },
+            {
+              "t": "83 → <strong>79</strong>"
+            },
+            {
+              "t": "-4",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "movers"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.96 → <strong>4.26</strong></span>"
+            },
+            {
+              "t": "81 → <strong>79</strong>"
+            },
+            {
+              "t": "-2",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "moving companies"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">4.77 → <strong>4.83</strong></span>"
+            },
+            {
+              "t": "65 → <strong>64</strong>"
+            },
+            {
+              "t": "-1",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "movers detroit"
+            },
+            {
+              "t": "<span class=\"arrow-up\">12.47 → <strong>10.54</strong></span>"
+            },
+            {
+              "t": "2 → <strong>2</strong>"
+            },
+            {
+              "t": "0",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "detroit moving company"
+            },
+            {
+              "t": "<span class=\"arrow-up\">14.26 → <strong>13.54</strong></span>"
+            },
+            {
+              "t": "1 → <strong>0</strong>"
+            },
+            {
+              "t": "-1",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "You hold strong top-3 coverage on the core “movers / moving company” searches; movement has softened slightly this period — defend and re-extend."
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across 6 tracked searches · to May 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Two Men and a Truck Moving"
+            },
+            {
+              "t": "9.6"
+            },
+            {
+              "t": "352"
+            },
+            {
+              "t": "-12",
+              "c": "muted"
+            }
+          ]
+        },
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Professional Movers.com (you)"
+            },
+            {
+              "t": "7.9"
+            },
+            {
+              "t": "340"
+            },
+            {
+              "t": "-8",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Bos Moving & Service"
+            },
+            {
+              "t": "6.5"
+            },
+            {
+              "t": "180"
+            },
+            {
+              "t": "0",
+              "c": "muted"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Moving Made Easy"
+            },
+            {
+              "t": "7.2"
+            },
+            {
+              "t": "141"
+            },
+            {
+              "t": "-20",
+              "c": "muted"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Affordable Movers"
+            },
+            {
+              "t": "8.8"
+            },
+            {
+              "t": "122"
+            },
+            {
+              "t": "+59",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Reasonable Movers"
+            },
+            {
+              "t": "9.3"
+            },
+            {
+              "t": "109"
+            },
+            {
+              "t": "-24",
+              "c": "muted"
+            }
+          ]
+        }
+      ],
+      "note_html": "By top-3 footprint you're <strong>#2 in the market</strong> (behind Two Men &amp; a Truck); by average rank you're #3 (Bos and Moving Made Easy rank tighter). The one to watch is <strong>Affordable Movers (+59)</strong>. Lower avg rank is better."
+    }
+  }
 }

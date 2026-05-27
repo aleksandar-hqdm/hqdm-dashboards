@@ -1513,5 +1513,387 @@
         "gbp_cr": null
       }
     ]
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Surfpoint Recovery",
+    "short_name": "Surfpoint Recovery",
+    "subtitle": "Q2 2026 · Coney Island · South Brooklyn · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Surfpoint is <strong>punching above its website</strong>. Your Google Business listing is the standout asset — average Maps rank <strong>1.47 with 96% top-3 coverage</strong> on the core alcohol-rehab search, a 4.8★ / 120-review profile (up 29 reviews in 16 days), and Google-Business clicks convert at 2.53% — roughly 8× the rest of organic. The website is the bottleneck: search impressions are down 79% as architecture issues and over-built pages drag. The plan cleans up the site, rebuilds the homepage and service pages, and protects the Google Business lead.</p>",
+    "chips": [
+      {
+        "v": "1.47",
+        "l": "Maps rank · 96% top-3",
+        "good": true
+      },
+      {
+        "v": "2.53%",
+        "l": "GBP conv (8× organic)",
+        "good": true
+      },
+      {
+        "v": "4.8★ / 120",
+        "l": "reviews (+29 in 16d)",
+        "good": true
+      },
+      {
+        "v": "−79%",
+        "l": "search impressions",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        2841,
+        2685,
+        3483,
+        5285,
+        7548,
+        7193,
+        2544,
+        1816
+      ],
+      "leads": [],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        2199,
+        2127,
+        2550,
+        2688,
+        3003,
+        6675,
+        2180
+      ],
+      "leads": [],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Organic Visitors"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-15%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+74%",
+            "cls": "pos"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-29%",
+            "cls": "neg"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "focus": [
+      {
+        "title": "Site architecture cleanup",
+        "color": "#1d5b8a",
+        "body": "Fix the structural issues dragging search impressions — the execution layer comes first."
+      },
+      {
+        "title": "Homepage + service rebuild",
+        "color": "#10b981",
+        "body": "Rebuild the homepage and service pages and refactor interlinking so the site matches the Google Business strength."
+      },
+      {
+        "title": "GBP optimization",
+        "color": "#6366f1",
+        "body": "Take the Google Business profile beyond reviews — depth, attributes, and closing audit-risk items."
+      },
+      {
+        "title": "Citations + disavow",
+        "color": "#f59e0b",
+        "body": "Disavow first, then build citations and earned links on a clean foundation."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "5 scans · Oct 2025 → May 2026 · 8 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab brooklyn"
+            },
+            {
+              "t": "<span class=\"arrow-up\">1.88 → <strong>1.47</strong></span>"
+            },
+            {
+              "t": "133 → <strong>130</strong>"
+            },
+            {
+              "t": "-3",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol cluster"
+            },
+            {
+              "t": "<strong>2.65</strong>"
+            },
+            {
+              "t": "<strong>99</strong>"
+            },
+            {
+              "t": "+99",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug cluster"
+            },
+            {
+              "t": "<strong>2.98</strong>"
+            },
+            {
+              "t": "<strong>98</strong>"
+            },
+            {
+              "t": "+98",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "near-me cluster"
+            },
+            {
+              "t": "<strong>3.29</strong>"
+            },
+            {
+              "t": "<strong>87</strong>"
+            },
+            {
+              "t": "+87",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "detox cluster"
+            },
+            {
+              "t": "<strong>4.11</strong>"
+            },
+            {
+              "t": "<strong>73</strong>"
+            },
+            {
+              "t": "+73",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "inpatient cluster"
+            },
+            {
+              "t": "<strong>4.97</strong>"
+            },
+            {
+              "t": "<strong>60</strong>"
+            },
+            {
+              "t": "+60",
+              "c": "pos"
+            }
+          ]
+        }
+      ],
+      "note_html": null
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across tracked searches · Oct 2025 → May 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Genesis Detox of Brooklyn"
+            },
+            {
+              "t": "2.2"
+            },
+            {
+              "t": "136"
+            },
+            {
+              "t": "+18",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Under Angel's Wings Recovery"
+            },
+            {
+              "t": "2.0"
+            },
+            {
+              "t": "136"
+            },
+            {
+              "t": "+13",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Surfpoint Recovery (you)"
+            },
+            {
+              "t": "1.5"
+            },
+            {
+              "t": "130"
+            },
+            {
+              "t": "-3",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Elevate Point NYC (new entrant)"
+            },
+            {
+              "t": "1.8"
+            },
+            {
+              "t": "127"
+            },
+            {
+              "t": "+127",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Realization Center (unclaimed)"
+            },
+            {
+              "t": "2.2"
+            },
+            {
+              "t": "117"
+            },
+            {
+              "t": "+19",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Spring Hill Wellness NY (outpatient)"
+            },
+            {
+              "t": "1.0"
+            },
+            {
+              "t": "95"
+            },
+            {
+              "t": "+8",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "Tight three-way race at the top — Genesis Detox and Under Angel's Wings edge you on raw cells (136 each vs your 130), but your average rank (1.47) is the best in the set and still improving. Lower avg rank is better."
+    }
   }
 }

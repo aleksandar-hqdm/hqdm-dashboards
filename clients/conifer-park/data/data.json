@@ -1390,5 +1390,387 @@
         "gbp_cr": null
       }
     ]
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Conifer Park",
+    "short_name": "Conifer Park",
+    "subtitle": "Q2 2026 · Capital Region NY · 7 locations · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Conifer Park is <strong>#1 or #2 in the Map Pack at all seven of its locations</strong> — but the average rating across those pins is 3.3★ (three are below 4.0), which makes the Maps lead fragile and closes the door on AI-citation surfaces. Glenville's Maps footprint is improving (rehab-upstate-NY +20 top-3 cells). The plan replicates the Plattsburgh page template across the other outpatient cities, un-geo-locks the service pages, builds out the Glenville and Troy pins, and runs a review-velocity push across all seven facilities.</p>",
+    "chips": [
+      {
+        "v": "7 / 7",
+        "l": "pins #1–2 on Maps",
+        "good": true
+      },
+      {
+        "v": "+19",
+        "l": "Glenville top-10 cells",
+        "good": true
+      },
+      {
+        "v": "3.3★",
+        "l": "avg rating (fragile)",
+        "watch": true
+      },
+      {
+        "v": "1 / 7",
+        "l": "Plattsburgh template",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        9471,
+        7346,
+        5657,
+        5956,
+        4596,
+        5594,
+        4468,
+        2764
+      ],
+      "leads": [],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Organic leads",
+      "partial_index": 7,
+      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+    },
+    "quarters": {
+      "labels": [
+        "Dec '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        13096,
+        7,
+        0,
+        7186,
+        7491,
+        5382,
+        3616
+      ],
+      "leads": [],
+      "visitors_label": "Visitors",
+      "leads_label": "Leads",
+      "partial_index": 6,
+      "title": "By Quarter · Organic Visitors"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "vs Q2 2025",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "—",
+            "cls": "muted"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-24%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-21%",
+            "cls": "neg"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "focus": [
+      {
+        "title": "Replicate Plattsburgh template",
+        "color": "#10b981",
+        "body": "Roll the proven Plattsburgh city-page template across the other five outpatient locations."
+      },
+      {
+        "title": "Un-geo-lock service pages",
+        "color": "#1d5b8a",
+        "body": "Remove the geo-lock on service pages and clean up site architecture so each location can rank."
+      },
+      {
+        "title": "Glenville + Troy GBP build-out",
+        "color": "#6366f1",
+        "body": "Build out the HQDM-scoped Glenville and Troy Google Business pins."
+      },
+      {
+        "title": "Review-velocity SOP",
+        "color": "#f59e0b",
+        "body": "Run a review-velocity SOP across all seven facilities to lift ratings above the 4★ AI-citation threshold."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Feb → Apr 2026 · 9 tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "outpatient rehab troy"
+            },
+            {
+              "t": "<span class=\"arrow-up\">1.74 → <strong>1.18</strong></span>"
+            },
+            {
+              "t": "168 → <strong>169</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab troy"
+            },
+            {
+              "t": "<span class=\"\">2.00 → <strong>2.00</strong></span>"
+            },
+            {
+              "t": "168 → <strong>169</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "rehab upstate new york"
+            },
+            {
+              "t": "<span class=\"arrow-up\">2.83 → <strong>1.81</strong></span>"
+            },
+            {
+              "t": "136 → <strong>156</strong>"
+            },
+            {
+              "t": "+20",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab near me"
+            },
+            {
+              "t": "<span class=\"arrow-up\">4.48 → <strong>3.92</strong></span>"
+            },
+            {
+              "t": "100 → <strong>110</strong>"
+            },
+            {
+              "t": "+10",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "alcohol rehab"
+            },
+            {
+              "t": "<span class=\"arrow-up\">4.95 → <strong>4.55</strong></span>"
+            },
+            {
+              "t": "71 → <strong>84</strong>"
+            },
+            {
+              "t": "+13",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "rehab near me"
+            },
+            {
+              "t": "<span class=\"arrow-up\">6.57 → <strong>5.55</strong></span>"
+            },
+            {
+              "t": "38 → <strong>54</strong>"
+            },
+            {
+              "t": "+16",
+              "c": "pos"
+            }
+          ]
+        }
+      ],
+      "note_html": null
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "Across 9 tracked searches · Feb → Apr 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Top-3 spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Conifer Park Glenville Inpatient (this GBP) (you)"
+            },
+            {
+              "t": "4.0"
+            },
+            {
+              "t": "584"
+            },
+            {
+              "t": "+19",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Every1 Center (Inpatient Detox & Rehab)"
+            },
+            {
+              "t": "4.2"
+            },
+            {
+              "t": "527"
+            },
+            {
+              "t": "+64",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Hospitality House TC (Troy grid)"
+            },
+            {
+              "t": "4.8"
+            },
+            {
+              "t": "411"
+            },
+            {
+              "t": "+258",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "St. Peter's Addiction Recovery"
+            },
+            {
+              "t": "5.1"
+            },
+            {
+              "t": "311"
+            },
+            {
+              "t": "+132",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Whitney M Young Rehab Clinic (Troy grid)"
+            },
+            {
+              "t": "5.4"
+            },
+            {
+              "t": "301"
+            },
+            {
+              "t": "+155",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Healing Springs Recovery Community Center"
+            },
+            {
+              "t": "6.4"
+            },
+            {
+              "t": "299"
+            },
+            {
+              "t": "-132",
+              "c": "muted"
+            }
+          ]
+        }
+      ],
+      "note_html": "Your Glenville inpatient pin leads the reference set (584 top-3 cells, +19), but several competitors are gaining fast — Hospitality House (+258) and Every1 Center (+64). Review velocity is the lever to defend. Lower avg rank is better."
+    }
   }
 }
