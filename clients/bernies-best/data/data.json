@@ -209,8 +209,8 @@
   },
   "trend": {
     "headline": "Less traffic, more buyers — organic Q1 YoY: sessions ▼-52%, transactions ▲+54%, CVR ▲+223%",
-    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). As AI Overviews absorb informational queries, the organic visitors who remain convert far more — and buyer demand is strengthening across the brand's channels in parallel. May 2026 is partial (through May 21); shown as dashed continuation.",
-    "may_extrapolation_note": "May 2026 = partial month (through May 21).",
+    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). As AI Overviews absorb informational queries, the organic visitors who remain convert far more — and buyer demand is strengthening across the brand's channels in parallel. May 2026 is partial (through May 26).",
+    "may_extrapolation_note": "May 2026 = partial month (through May 26).",
     "months": [
       "Nov 2024",
       "Dec 2024",
@@ -252,7 +252,7 @@
         4127,
         4450,
         3728,
-        2857
+        3764
       ]
     },
     "form_submits": {
@@ -275,17 +275,11 @@
         91,
         89,
         87,
-        58
+        76
       ]
     },
     "form_submits_label": "Transactions",
     "form_submits_caption": "GA4 e-commerce purchase events (transactions)",
-    "may_projection": {
-      "sessions_organic_full_month_est": 4217,
-      "transactions_organic_full_month_est": 86,
-      "cvr_organic_full_month_est": 2.03,
-      "note": "Straight run-rate projection from May 1-21 actual."
-    },
     "quarterly": [
       {
         "q": "Q1 2025 (baseline)",
@@ -1541,7 +1535,7 @@
         4127,
         4450,
         3728,
-        2857
+        3764
       ],
       "leads": [
         65,
@@ -1551,7 +1545,7 @@
         91,
         89,
         87,
-        58
+        76
       ],
       "visitors_label": "Organic visitors",
       "leads_label": "Transactions",
