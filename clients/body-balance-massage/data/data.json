@@ -5140,5 +5140,424 @@
       "gsc": "Google Search Console - bbmassageandfloat.com - 365d trailing 2025-05-22 to 2026-05-21",
       "localdominator": "44 CSV scans across 12 keywords (9 main + 3 supplementary) x up to 5 dates. Client-report heatmap locks all keywords to the common Jan 19 -> Apr 18 window (massage therapy has no May 18 scan, so May 18 is excluded report-wide for apples-to-apples consistency). May 18 data remains in ld_grids.json for the strategic dashboard. 13x13 grid centered at the AF pin, 0.75-mile cell radius."
     }
+  },
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Body Balance Massage & Float",
+    "short_name": "Body Balance",
+    "subtitle": "Q2 2026 · American Fork, UT · Client Snapshot",
+    "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
+    "exec_html": "<p>Your organic traffic grew a modest but real <strong>+18% year over year</strong> (Q1 2025 → 2026, 8,879 → 10,448 sessions), and genuine <strong>bookings + leads grew in step (+18%)</strong>. One important note: the raw “GA4 conversions” figure looks like a massive jump, but that's a measurement artifact — gift-card and banner clicks were being counted as conversions. The number shown here is the real, booking-level count. You <strong>own the float category outright</strong> (#1 across every cell) and rank #1–2 for “massage American Fork”; on the broader “near me” searches you sit mid-pack and softened slightly this period. The biggest quick win is a sitewide phone-number mismatch (every page shows a chat number, not your Google Business line) that's leaking calls.</p>",
+    "chips": [
+      {
+        "v": "+18%",
+        "l": "organic sessions YoY",
+        "good": true
+      },
+      {
+        "v": "+18%",
+        "l": "true bookings & leads YoY",
+        "good": true
+      },
+      {
+        "v": "#1",
+        "l": "float surface · 106 cells",
+        "good": true
+      },
+      {
+        "v": "372",
+        "l": "pages w/ NAP mismatch",
+        "watch": true
+      }
+    ],
+    "line": {
+      "labels": [
+        "Oct '25",
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26*"
+      ],
+      "visitors": [
+        1815,
+        1770,
+        2367,
+        3461,
+        3577,
+        3410,
+        2601,
+        2098
+      ],
+      "leads": [
+        62.0,
+        50.0,
+        59.0,
+        64.0,
+        47.0,
+        53.0,
+        59.0,
+        81.0
+      ],
+      "visitors_label": "Organic visitors",
+      "leads_label": "Bookings & leads",
+      "partial_index": 7,
+      "title": "Organic Performance · Monthly (Q4 2025 → now)",
+      "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
+    },
+    "quarters": {
+      "labels": [
+        "Q4 '24",
+        "Q1 '25",
+        "Q2 '25",
+        "Q3 '25",
+        "Q4 '25",
+        "Q1 '26",
+        "Q2 '26*"
+      ],
+      "visitors": [
+        3055,
+        8879,
+        8077,
+        5974,
+        5952,
+        10448,
+        4699
+      ],
+      "leads": [
+        45,
+        139,
+        184,
+        169,
+        171,
+        164,
+        140
+      ],
+      "visitors_label": "Visitors",
+      "leads_label": "Bookings",
+      "partial_index": 6,
+      "title": "By Quarter · Visitors & Leads"
+    },
+    "boxes": [
+      {
+        "win": "Year over Year",
+        "cmp": "Q1 2026 vs Q1 2025",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+18%",
+            "cls": "pos"
+          },
+          {
+            "m": "Bookings",
+            "d": "+18%",
+            "cls": "pos"
+          }
+        ],
+        "extra": {
+          "m": "Conv. rate",
+          "d": "≈ flat",
+          "cls": "muted"
+        }
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+46%",
+            "cls": "pos"
+          },
+          {
+            "m": "Bookings",
+            "d": "+6%",
+            "cls": "pos"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-14%",
+            "cls": "neg"
+          },
+          {
+            "m": "Bookings",
+            "d": "+14%",
+            "cls": "pos"
+          }
+        ]
+      }
+    ],
+    "boxes_reading_html": null,
+    "focus": [
+      {
+        "title": "Fix the sitewide phone mismatch",
+        "color": "#10b981",
+        "body": "Every page shows a chat number instead of your Google Business line — a one-shift fix that stops leaking calls."
+      },
+      {
+        "title": "Clean up competing pages",
+        "color": "#1d5b8a",
+        "body": "Consolidate pages that compete with each other for the same searches so the right page ranks."
+      },
+      {
+        "title": "Roll out service schema",
+        "color": "#6366f1",
+        "body": "Add service schema sitewide so Google understands your massage and float offerings."
+      },
+      {
+        "title": "GBP velocity + photos",
+        "color": "#f59e0b",
+        "body": "Keep the review velocity and a photo blitz going to convert your review lead into Maps rank."
+      }
+    ],
+    "maps": {
+      "enabled": true,
+      "title": "Maps Movement · Top Keywords",
+      "window": "Jan/Feb → May 18, 2026 · tracked searches",
+      "headers": [
+        "Search",
+        "Avg position",
+        "Top-3 map spots",
+        "Change"
+      ],
+      "rows": [
+        {
+          "cells": [
+            {
+              "t": "massage american fork"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.75 → <strong>1.85</strong></span>"
+            },
+            {
+              "t": "99 → <strong>100</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "float tank near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.48 → <strong>1.49</strong></span>"
+            },
+            {
+              "t": "99 → <strong>100</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "float tank"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.20 → <strong>1.27</strong></span>"
+            },
+            {
+              "t": "98 → <strong>97</strong>"
+            },
+            {
+              "t": "-1",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "float therapy"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">1.51 → <strong>1.52</strong></span>"
+            },
+            {
+              "t": "93 → <strong>93</strong>"
+            },
+            {
+              "t": "0",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "deep tissue massage near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">6.68 → <strong>7.41</strong></span>"
+            },
+            {
+              "t": "25 → <strong>28</strong>"
+            },
+            {
+              "t": "+3",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "massage therapist near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">6.67 → <strong>7.36</strong></span>"
+            },
+            {
+              "t": "25 → <strong>26</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        }
+      ],
+      "note_html": "You own float and “massage American Fork” outright (#1). On competitive “near me” searches you're mid-pack and softened slightly — the rank-tightening plan targets these."
+    },
+    "competitors": {
+      "enabled": true,
+      "title": "Competitor Movement · Maps",
+      "window": "“massage therapist near me” grid · Jan → Apr 2026",
+      "headers": [
+        "Business",
+        "Avg rank",
+        "Cells",
+        "Rank Δ"
+      ],
+      "rows": [
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Total Muscle Therapy: Massage Pleasant Grove"
+            },
+            {
+              "t": "5.7"
+            },
+            {
+              "t": "89"
+            },
+            {
+              "t": "-0.43",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Calming Touch Massage LLC"
+            },
+            {
+              "t": "6.7"
+            },
+            {
+              "t": "63"
+            },
+            {
+              "t": "+0.18",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": true,
+          "cells": [
+            {
+              "t": "Body Balance Massage And Float (you)"
+            },
+            {
+              "t": "7.4"
+            },
+            {
+              "t": "88"
+            },
+            {
+              "t": "+0.01",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Paradise Massage Studio"
+            },
+            {
+              "t": "7.8"
+            },
+            {
+              "t": "80"
+            },
+            {
+              "t": "+0.62",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Natural Healing and Massage, American Fork"
+            },
+            {
+              "t": "8.3"
+            },
+            {
+              "t": "76"
+            },
+            {
+              "t": "+0.62",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Soleil Spa"
+            },
+            {
+              "t": "8.6"
+            },
+            {
+              "t": "84"
+            },
+            {
+              "t": "-0.13",
+              "c": "neg"
+            }
+          ]
+        }
+      ],
+      "note_html": "On the core “massage therapist near me” grid you sit just behind the leaders (Total Muscle Therapy out front), holding steady this period. Your <strong>406-review base is the largest in the set</strong> — the lever to convert into rank. Lower avg rank is better."
+    }
   }
 }

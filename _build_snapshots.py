@@ -207,6 +207,65 @@ def build_comp_table(leaderboard, window, note_html=None, title='Competitor Move
             'headers': ['Business', 'Avg rank', 'Top-3 spots', 'Change'], 'rows': rows, 'note_html': note_html}
 
 
+def build_kw_table_apples(apples, window, note_html=None, title='Maps Movement · Top Keywords', limit=6):
+    """Body Balance shape: ld_apples (kw, rank_jan/apr, top3_jan/apr, cells_apr)."""
+    import re
+    items = sorted(apples, key=lambda a: -(a.get('top3_apr') or 0))
+    rows = []
+    for a in items[:limit]:
+        kw = re.sub(r'\s*\(.*?\)', '', a.get('kw', '')).strip()
+        rj, ra = a.get('rank_jan'), a.get('rank_apr')
+        tj, ta = a.get('top3_jan'), a.get('top3_apr')
+        davg = round(rj - ra, 2) if (rj is not None and ra is not None) else None
+        dtop = (ta or 0) - (tj or 0)
+        avg_cell = (f'<span class="{arrow(davg)}">{rj:.2f} → <strong>{ra:.2f}</strong></span>'
+                    if rj is not None else f'<strong>{ra:.2f}</strong>')
+        rows.append({'cells': [
+            {'t': kw}, {'t': avg_cell}, {'t': f'{tj} → <strong>{ta}</strong>'},
+            {'t': ('+' if dtop > 0 else '') + str(dtop), 'c': 'pos' if dtop >= 0 else 'neg'}]})
+    return {'enabled': True, 'title': title, 'window': window,
+            'headers': ['Search', 'Avg position', 'Top-3 map spots', 'Change'], 'rows': rows, 'note_html': note_html}
+
+
+def build_comp_table_mtnm(mtnm, window, note_html=None, title='Competitor Movement · Maps', limit=6):
+    """Body Balance shape: ld_leaderboard_mtnm (name, rank_jan/apr, cells_apr, mean_dx)."""
+    items = sorted(mtnm, key=lambda r: (r.get('rank_apr') if r.get('rank_apr') is not None else 99))
+    client = next((r for r in items if r.get('is_client')), None)
+    top = items[:limit]
+    if client and client not in top:
+        top = items[:limit - 1] + [client]
+        top.sort(key=lambda r: (r.get('rank_apr') if r.get('rank_apr') is not None else 99))
+    rows = []
+    for r in top:
+        nm = r['name'] + (' (you)' if r.get('is_client') else '')
+        dx = r.get('mean_dx')  # positive = rank improved
+        dcls = 'pos' if (dx or 0) > 0 else ('neg' if (dx or 0) < 0 else 'muted')
+        ra = r.get('rank_apr')
+        rows.append({'me': bool(r.get('is_client')), 'cells': [
+            {'t': nm},
+            {'t': f'{ra:.1f}' if ra is not None else '—'},
+            {'t': str(r.get('cells_apr'))},
+            {'t': (('+' if (dx or 0) > 0 else '') + f'{dx:.2f}') if dx is not None else '—', 'c': dcls}]})
+    return {'enabled': True, 'title': title, 'window': window,
+            'headers': ['Business', 'Avg rank', 'Cells', 'Rank Δ'], 'rows': rows, 'note_html': note_html}
+
+
+def build_comp_table_reshuffle(resh, window, note_html=None, title='Competitor Movement · Organic', limit=6):
+    """Bernie's shape: competitor_reshuffle (name, may25_top10, may26_top10, delta_pct, verified_pattern)."""
+    items = sorted(resh, key=lambda r: -(r.get('may26_top10') or 0))
+    rows = []
+    for r in items[:limit]:
+        d = r.get('delta_pct')
+        dcls = 'neg' if (d or 0) > 0 else 'muted'   # a competitor's organic growth = watch
+        nm = r['name'] + (' ★' if r.get('verified_pattern') else '')
+        rows.append({'me': bool(r.get('is_client')), 'cells': [
+            {'t': nm},
+            {'t': f"{r.get('may25_top10'):,} → <strong>{r.get('may26_top10'):,}</strong>"},
+            {'t': ('+' if (d or 0) > 0 else '') + str(d) + '%', 'c': dcls}]})
+    return {'enabled': True, 'title': title, 'window': window,
+            'headers': ['Brand', 'Top-10 keywords (YoY)', 'Change'], 'rows': rows, 'note_html': note_html}
+
+
 # ---------------- per-client config ----------------
 EYEBROW = 'HQDM Search Intelligence · Prepared by Aleksandar Spasevski'
 
@@ -405,6 +464,75 @@ CLIENTS = {
             {'title': 'Review-velocity SOP', 'color': '#f59e0b', 'body': 'Run a review-velocity SOP across all seven facilities to lift ratings above the 4★ AI-citation threshold.'},
         ],
     },
+
+    'body-balance-massage': {
+        'short_name': 'Body Balance', 'title': 'Body Balance Massage & Float',
+        'subtitle': 'Q2 2026 · American Fork, UT · Client Snapshot',
+        'footer': 'Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski',
+        'conversions_field': 'conversions.organic',
+        'leads_label': 'Bookings & leads', 'q_leads_label': 'Bookings', 'box_lead_word': 'Bookings',
+        'yoy': {'v': 18, 'l': 18, 'cmp': 'Q1 2026 vs Q1 2025',
+                'extra': {'m': 'Conv. rate', 'd': '≈ flat', 'cls': 'muted'}},
+        'exec_html': ("<p>Your organic traffic grew a modest but real <strong>+18% year over year</strong> "
+                      "(Q1 2025 → 2026, 8,879 → 10,448 sessions), and genuine <strong>bookings + leads grew in step (+18%)</strong>. "
+                      "One important note: the raw “GA4 conversions” figure looks like a massive jump, but that's a "
+                      "measurement artifact — gift-card and banner clicks were being counted as conversions. The number shown "
+                      "here is the real, booking-level count. You <strong>own the float category outright</strong> (#1 across every cell) "
+                      "and rank #1–2 for “massage American Fork”; on the broader “near me” searches you sit mid-pack and softened "
+                      "slightly this period. The biggest quick win is a sitewide phone-number mismatch (every page shows a chat number, "
+                      "not your Google Business line) that's leaking calls.</p>"),
+        'chips': [{'v': '+18%', 'l': 'organic sessions YoY', 'good': True}, {'v': '+18%', 'l': 'true bookings & leads YoY', 'good': True},
+                  {'v': '#1', 'l': 'float surface · 106 cells', 'good': True}, {'v': '372', 'l': 'pages w/ NAP mismatch', 'watch': True}],
+        'maps_source': 'ld_apples',
+        'maps_window': 'Jan/Feb → May 18, 2026 · tracked searches',
+        'maps_note': ("You own float and “massage American Fork” outright (#1). On competitive “near me” searches you're mid-pack "
+                      "and softened slightly — the rank-tightening plan targets these."),
+        'competitor_source': 'mtnm',
+        'comp_window': '“massage therapist near me” grid · Jan → Apr 2026',
+        'comp_note': ("On the core “massage therapist near me” grid you sit just behind the leaders (Total Muscle Therapy out front), "
+                      "holding steady this period. Your <strong>406-review base is the largest in the set</strong> — the lever to convert into rank. "
+                      "Lower avg rank is better."),
+        'focus': [
+            {'title': 'Fix the sitewide phone mismatch', 'color': '#10b981', 'body': 'Every page shows a chat number instead of your Google Business line — a one-shift fix that stops leaking calls.'},
+            {'title': 'Clean up competing pages', 'color': '#1d5b8a', 'body': 'Consolidate pages that compete with each other for the same searches so the right page ranks.'},
+            {'title': 'Roll out service schema', 'color': '#6366f1', 'body': 'Add service schema sitewide so Google understands your massage and float offerings.'},
+            {'title': 'GBP velocity + photos', 'color': '#f59e0b', 'body': 'Keep the review velocity and a photo blitz going to convert your review lead into Maps rank.'},
+        ],
+    },
+
+    'bernies-best': {
+        'short_name': "Bernie's Best", 'title': "Bernie's Best",
+        'subtitle': 'Q3 2026 · DTC dog supplements · Client Snapshot',
+        'footer': 'Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski',
+        'leads_label': 'Transactions', 'q_leads_label': 'Transactions', 'box_lead_word': 'Transactions',
+        'line_title': 'Organic Performance · Monthly (traffic + transactions)',
+        'line_caption': 'Organic visitors (left axis) and e-commerce transactions (right axis). A dashed tail marks the partial current month.',
+        'yoy': {'v': -52, 'l': 54, 'cmp': 'Q1 2026 vs Q1 2025',
+                'extra': {'m': 'Conv. rate', 'd': '+223%', 'cls': 'pos'}},
+        'exec_html': ("<p>Organic traffic is down hard — roughly <strong>half of last year's clicks are gone (−52% YoY)</strong> as Google's "
+                      "AI Overviews absorb the informational searches that used to bring visitors. But the people who do arrive are "
+                      "buying far more often: your organic <strong>conversion rate more than tripled (0.67% → 2.17%, +223%)</strong> and organic "
+                      "<strong>transactions actually rose +54%</strong> year over year despite the traffic drop. The competitive story is Spot &amp; Tango, "
+                      "whose top-10 keyword footprint exploded <strong>+2,078%</strong> off a verified PR-stunt link pattern — the highest-ROI tactic "
+                      "to replicate. The plan refreshes the top blog losers on that pattern, builds out the product pages, fixes index "
+                      "hygiene, and runs a PR push.</p>"),
+        'chips': [{'v': '+54%', 'l': 'organic transactions YoY', 'good': True}, {'v': '+223%', 'l': 'conversion rate YoY', 'good': True},
+                  {'v': '−52%', 'l': 'organic clicks YoY', 'watch': True}, {'v': '2,670', 'l': 'crawled, not indexed', 'watch': True}],
+        'maps_source': 'none',
+        'competitor_source': 'reshuffle',
+        'comp_title': 'Competitor Movement · Organic (top-10 keywords)',
+        'comp_window': 'Top-10 keyword footprint · May 2025 → May 2026',
+        'comp_note': ("Spot &amp; Tango (★) is the story — a <strong>+2,078%</strong> jump in top-10 keywords off a verified PR-stunt backlink "
+                      "pattern. That's the highest-ROI tactic to replicate. ★ marks the verified pattern."),
+        'boxes_reading': ("Fewer visitors, but they convert far better — transactions and conversion rate are both up sharply year over "
+                          "year even as AI Overviews absorb informational traffic. The current quarter is partial."),
+        'focus': [
+            {'title': 'Refresh top blog losers', 'color': '#10b981', 'body': 'Sequenced refresh of the top-50 blog pages that lost ground, using the Spot & Tango pattern that’s working in the category.'},
+            {'title': 'Build out the product pages', 'color': '#1d5b8a', 'body': 'Expand the five SKU product pages so commercial searches land on pages built to convert.'},
+            {'title': 'Index hygiene', 'color': '#6366f1', 'body': 'Restore the 2,670 crawled-but-not-indexed URLs by cleaning up parameter pollution and duplicate pages.'},
+            {'title': 'PR stunt + citations', 'color': '#f59e0b', 'body': 'Run the PR-stunt + citation + affiliate push that drove Spot & Tango’s footprint gain.'},
+        ],
+    },
 }
 
 
@@ -440,9 +568,9 @@ def build_snapshot(slug, cfg):
         line['leads'] = []
         quarters['leads'] = []
 
-    # YoY override
-    yoy = None
-    if t.get('yoy_growth') and t['yoy_growth'].get('metrics'):
+    # YoY: explicit config override wins, then trend.yoy_growth.metrics auto-detect
+    yoy = cfg.get('yoy')
+    if not yoy and t.get('yoy_growth') and t['yoy_growth'].get('metrics'):
         ms = {m['label']: m for m in t['yoy_growth']['metrics']}
         sess = next((v for k, v in ms.items() if 'sess' in k.lower()), None)
         conv = next((v for k, v in ms.items() if 'conv' in k.lower()), None)
@@ -477,16 +605,25 @@ def build_snapshot(slug, cfg):
         'focus': cfg.get('focus', []),
     }
 
-    # maps + competitors
-    if cfg.get('maps_source', 'per_keyword') == 'per_keyword' and d.get('per_keyword'):
+    # maps
+    ms = cfg.get('maps_source', 'per_keyword')
+    if ms == 'per_keyword' and d.get('per_keyword'):
         snap['maps'] = build_kw_table(d['per_keyword'], cfg.get('maps_window', ''),
                                       first=cfg.get('maps_first', 'feb'), last=cfg.get('maps_last', 'may'),
                                       note_html=cfg.get('maps_note'))
+    elif ms == 'ld_apples' and d.get('ld_apples'):
+        snap['maps'] = build_kw_table_apples(d['ld_apples'], cfg.get('maps_window', ''), note_html=cfg.get('maps_note'))
     else:
         snap['maps'] = {'enabled': False}
-    if cfg.get('competitor_source', 'ld_leaderboard') == 'ld_leaderboard' and d.get('ld_leaderboard'):
-        snap['competitors'] = build_comp_table(d['ld_leaderboard'], cfg.get('comp_window', ''),
-                                               note_html=cfg.get('comp_note'))
+    # competitors
+    cs = cfg.get('competitor_source', 'ld_leaderboard')
+    if cs == 'ld_leaderboard' and d.get('ld_leaderboard'):
+        snap['competitors'] = build_comp_table(d['ld_leaderboard'], cfg.get('comp_window', ''), note_html=cfg.get('comp_note'))
+    elif cs == 'mtnm' and d.get('ld_leaderboard_mtnm'):
+        snap['competitors'] = build_comp_table_mtnm(d['ld_leaderboard_mtnm'], cfg.get('comp_window', ''), note_html=cfg.get('comp_note'))
+    elif cs == 'reshuffle' and d.get('competitor_reshuffle'):
+        snap['competitors'] = build_comp_table_reshuffle(d['competitor_reshuffle'], cfg.get('comp_window', ''),
+                                                         note_html=cfg.get('comp_note'), title=cfg.get('comp_title', 'Competitor Movement · Organic'))
     else:
         snap['competitors'] = {'enabled': False}
 
