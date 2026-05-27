@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <title>Maison Moving &amp; Storage · Condensed Strategy · HQDM</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:{900:'#0b1220',700:'#1f2937',500:'#6b7280'},brand:{900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6'}}}}}</script>
@@ -51,6 +52,15 @@
     </section>
 
     <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Organic search &amp; conversions</h2>
+      <div class="panel">
+        <div style="height:240px"><canvas id="cd-ga4-trend"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="cd-organic-note"></p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3" id="cd-ga4-tiles"></div>
+      </div>
+    </section>
+
+    <section class="mb-6">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Are the profiles built right?</h2>
       <div class="panel"><p class="text-sm text-slate-700 leading-relaxed" id="gbp-summary"></p>
         <ul class="mt-3 space-y-1.5 text-sm text-slate-700" id="gbp-gaps"></ul></div>
@@ -88,7 +98,7 @@
 
   <script>
   (async function(){
-    const [DATA,SUM]=await Promise.all([fetch('data/data.json').then(r=>r.json()),fetch('data/ld_summary.json').then(r=>r.json())]);
+    const [DATA,SUM,GA4]=await Promise.all([fetch('data/data.json').then(r=>r.json()),fetch('data/ld_summary.json').then(r=>r.json()),fetch('data/ga4.json').then(r=>r.json()).catch(()=>null)]);
     const $=id=>document.getElementById(id);
     $('tldr').innerHTML=DATA.tldr;
     $('tiles').innerHTML=DATA.headline.tiles.map(t=>`<div class="tile ${t.tone}"><div class="l">${t.label}</div><div class="v">${t.value}</div><div class="s">${t.sub}</div></div>`).join('');
@@ -113,6 +123,24 @@
 
     $('kpi').innerHTML=DATA.kpi_targets.map(k=>`<tr><td>${k.metric}</td><td class="num">${k.current}</td><td class="num font-semibold text-brand-700">${k.target}</td><td class="num text-slate-500">${k.stretch}</td></tr>`).join('');
     $('asks').innerHTML=DATA.owner_asks.map(a=>`<li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span><span><strong>${a.q}</strong> ${a.why}</span></li>`).join('');
+
+    if (GA4 && GA4.trend){
+      const t=GA4.trend;
+      new Chart($('cd-ga4-trend'),{data:{labels:t.months,datasets:[
+        {type:'line',label:'Organic clicks',data:t.organic_clicks,borderColor:'#1d5b8a',backgroundColor:'rgba(29,91,138,.12)',borderWidth:2.5,tension:.25,pointRadius:1.5,yAxisID:'y',fill:true,spanGaps:false},
+        {type:'line',label:'Lead actions',data:t.lead_actions,borderColor:'#10b981',borderWidth:2,tension:.25,pointRadius:1.5,yAxisID:'y1',spanGaps:false}]},
+        options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+          plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:12,usePointStyle:true}}},
+          scales:{x:{grid:{display:false},ticks:{font:{size:9},maxRotation:0,autoSkip:true,maxTicksLimit:10}},
+            y:{position:'left',beginAtZero:true,grid:{color:'rgba(0,0,0,.05)'}},y1:{position:'right',beginAtZero:true,grid:{display:false}}}}});
+      $('cd-organic-note').textContent=`Organic clicks = Google Search Console (17 mo). Lead actions tracked from Jan 2026.${t.partial_last?' Last month partial.':''} Native GA4 conversions are not configured (P0).`;
+      const q1=(GA4.yoy_clicks||[]).find(y=>/^Q1 2026/.test(y.q)); const lq1=GA4.quarterly.find(q=>q.q==='Q1 2026'),lq2=GA4.quarterly.find(q=>q.partial);
+      let tiles='';
+      if(q1) tiles+=`<div class="tile ${q1.pct>=0?'good':'bad'}"><div class="l">Organic clicks · Q1 YoY</div><div class="v">${q1.pct>=0?'+':''}${q1.pct}%</div><div class="s">${q1.clicks_prior}→${q1.clicks_cur}</div></div>`;
+      if(lq1&&lq2&&lq2.leads!=null) tiles+=`<div class="tile good"><div class="l">Lead actions Q1→Q2</div><div class="v">${lq1.leads}→${lq2.leads}</div><div class="s">calls+GBP+forms · Q2 partial</div></div>`;
+      tiles+=`<div class="tile bad"><div class="l">GA4 conversions</div><div class="v">~0</div><div class="s">lead events not flagged — configure (P0)</div></div>`;
+      $('cd-ga4-tiles').innerHTML=tiles;
+    }
   })();
   </script>
 </body>

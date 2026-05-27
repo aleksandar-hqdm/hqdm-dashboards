@@ -1,0 +1,199 @@
+{
+  "property": "properties/518766417",
+  "gsc_property": "sc-domain:maisonmoving.com",
+  "pulled": "2026-05-27",
+  "ga4_history_months": 5,
+  "ga4_from": "2026-01",
+  "conversion_tracking": {
+    "configured": false,
+    "native_conversions_total": 4,
+    "lead_event_totals_since_jan": {
+      "form_submit": 7,
+      "contact_form_submit": 0,
+      "click_phone_number": 26,
+      "gmb_click": 98,
+      "click_email": 6
+    },
+    "note": "GA4 native conversions are effectively unconfigured: lead events (form_submit, click_phone_number, gmb_click, click_email) fire but are not flagged as key events/conversions, so GA4 reports ~0 conversions. The 'leads' line is a composite of those lead-action events. Configuring them as conversions is a P0 (same gap seen on Professional Movers)."
+  },
+  "trend": {
+    "months": [
+      "Jan 25",
+      "Feb 25",
+      "Mar 25",
+      "Apr 25",
+      "May 25",
+      "Jun 25",
+      "Jul 25",
+      "Aug 25",
+      "Sep 25",
+      "Oct 25",
+      "Nov 25",
+      "Dec 25",
+      "Jan 26",
+      "Feb 26",
+      "Mar 26",
+      "Apr 26",
+      "May 26*"
+    ],
+    "months_iso": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "organic_clicks": [
+      68,
+      109,
+      134,
+      132,
+      116,
+      114,
+      124,
+      94,
+      103,
+      100,
+      81,
+      110,
+      104,
+      111,
+      139,
+      116,
+      113
+    ],
+    "organic_impressions": [
+      6110,
+      9556,
+      15385,
+      12920,
+      40693,
+      42947,
+      39278,
+      12886,
+      8909,
+      8159,
+      8196,
+      10607,
+      17583,
+      18898,
+      34609,
+      58079,
+      108720
+    ],
+    "lead_actions": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      2,
+      2,
+      9,
+      72,
+      52
+    ],
+    "organic_sessions_ga4": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      131,
+      170,
+      207,
+      223,
+      183
+    ],
+    "partial_last": true,
+    "ga4_from": "2026-01"
+  },
+  "quarterly": [
+    {
+      "q": "Q1 2025",
+      "clicks": 311,
+      "months": 3,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q2 2025",
+      "clicks": 362,
+      "months": 3,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q3 2025",
+      "clicks": 321,
+      "months": 3,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q4 2025",
+      "clicks": 291,
+      "months": 3,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q1 2026",
+      "clicks": 354,
+      "months": 3,
+      "leads": 13,
+      "partial": false
+    },
+    {
+      "q": "Q2 2026",
+      "clicks": 229,
+      "months": 2,
+      "leads": 124,
+      "partial": true
+    }
+  ],
+  "yoy_clicks": [
+    {
+      "q": "Q1 2026",
+      "prior": "Q1 2025",
+      "clicks_cur": 354,
+      "clicks_prior": 311,
+      "pct": 13.8,
+      "partial": false
+    },
+    {
+      "q": "Q2 2026",
+      "prior": "Q2 2025",
+      "clicks_cur": 229,
+      "clicks_prior": 248,
+      "pct": -7.7,
+      "partial": true
+    }
+  ]
+}

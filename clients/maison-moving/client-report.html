@@ -6,6 +6,7 @@
   <meta name="robots" content="noindex, nofollow, noarchive" />
   <title>Maison Moving &amp; Storage · May 2026 Update</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:{900:'#0b1220',700:'#1f2937',500:'#6b7280'},brand:{900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6'}}}}}</script>
@@ -71,6 +72,17 @@
     </section>
 
     <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Your organic search traffic &amp; leads</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed" id="c-organic-intro"></p>
+        <div style="height:300px"><canvas id="c-ga4-trend"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="c-organic-note"></p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-4" id="c-ga4-tiles"></div>
+        <p class="text-xs text-slate-600 mt-3 leading-relaxed" id="c-ga4-conv"></p>
+      </div>
+    </section>
+
+    <section class="mb-8">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How your two profiles look</h2>
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="panel" style="border-left:4px solid #10b981">
@@ -132,9 +144,10 @@
 
   <script>
   (async function(){
-    const [DATA,SUM,LDT,LDC]=await Promise.all([
+    const [DATA,SUM,LDT,LDC,GA4]=await Promise.all([
       fetch('data/data.json').then(r=>r.json()),fetch('data/ld_summary.json').then(r=>r.json()),
-      fetch('data/ld_grids_tustin.json').then(r=>r.json()),fetch('data/ld_grids_chinohills.json').then(r=>r.json())]);
+      fetch('data/ld_grids_tustin.json').then(r=>r.json()),fetch('data/ld_grids_chinohills.json').then(r=>r.json()),
+      fetch('data/ga4.json').then(r=>r.json()).catch(()=>null)]);
     const $=id=>document.getElementById(id);
     $('tiles').innerHTML=DATA.headline.tiles.map(t=>`<div class="tile ${t.tone}"><div class="l">${t.label}</div><div class="v">${t.value}</div><div class="s">${t.sub}</div></div>`).join('');
     $('pin-cards').innerHTML=['tustin','chinohills'].map(k=>{const p=DATA.pins[k];const good=p.trend.indexOf('domin')>=0||p.trend.indexOf('hold')>=0;
@@ -190,6 +203,27 @@
     $('levers').innerHTML=DATA.levers.map(l=>`<div class="panel" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">
       <h3 class="font-bold text-slate-900">${l.title}</h3><p class="text-sm text-slate-700 mt-1.5 leading-relaxed">${l.summary}</p></div>`).join('');
     $('asks').innerHTML=DATA.owner_asks.map(a=>`<li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>${a.q}</strong> ${a.why}</span></li>`).join('');
+
+    if (GA4 && GA4.trend) {
+      $('c-organic-intro').textContent = "Beyond Google Maps, this is how your website does in regular Google Search results — and the leads we can currently track. Organic clicks are up year-over-year for the first quarter, and tracked lead actions (phone calls, Google Business clicks and form submissions) have climbed sharply since spring.";
+      const t=GA4.trend;
+      new Chart($('c-ga4-trend'), { data:{labels:t.months, datasets:[
+          {type:'line',label:'Organic clicks (Google Search)',data:t.organic_clicks,borderColor:'#1d5b8a',backgroundColor:'rgba(29,91,138,.12)',borderWidth:3,tension:.25,pointRadius:2,pointHoverRadius:5,yAxisID:'y',fill:true,spanGaps:false},
+          {type:'line',label:'Lead actions (calls + GBP clicks + forms)',data:t.lead_actions,borderColor:'#10b981',borderWidth:2.5,tension:.25,pointRadius:2,pointHoverRadius:5,yAxisID:'y1',spanGaps:false}]},
+        options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+          plugins:{legend:{position:'bottom',labels:{font:{size:11},boxWidth:14,usePointStyle:true}},tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.raw==null?'—':c.raw}`}}},
+          scales:{x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0,autoSkip:true,maxTicksLimit:12}},
+            y:{position:'left',beginAtZero:true,title:{display:true,text:'organic clicks / mo',font:{size:11}}},
+            y1:{position:'right',beginAtZero:true,title:{display:true,text:'lead actions / mo',font:{size:11}},grid:{display:false}}}}});
+      $('c-organic-note').textContent=`Organic clicks: Google Search Console (Jan 2025 – May 2026). Lead actions tracked from January 2026.${t.partial_last?' The last month is partial.':''}`;
+      const q1=(GA4.yoy_clicks||[]).find(y=>/^Q1 2026/.test(y.q)); const lq1=GA4.quarterly.find(q=>q.q==='Q1 2026'),lq2=GA4.quarterly.find(q=>q.partial);
+      let tiles='';
+      if(q1) tiles+=`<div class="tile ${q1.pct>=0?'good':'bad'}"><div class="l">Organic clicks · Q1 YoY</div><div class="v">${q1.pct>=0?'+':''}${q1.pct}%</div><div class="s">${q1.clicks_prior} → ${q1.clicks_cur} vs a year ago</div></div>`;
+      if(lq1&&lq2&&lq1.leads!=null&&lq2.leads!=null) tiles+=`<div class="tile good"><div class="l">Tracked leads · Q1 → Q2</div><div class="v">${lq1.leads} → ${lq2.leads}</div><div class="s">calls + GBP clicks + forms (Q2 partial)</div></div>`;
+      tiles+=`<div class="tile watch"><div class="l">Lead tracking</div><div class="v">Setup</div><div class="s">configuring GA4 so every call + form counts</div></div>`;
+      $('c-ga4-tiles').innerHTML=tiles;
+      $('c-ga4-conv').textContent="One thing we're fixing: your analytics isn't set up to count leads as conversions yet — calls and form submissions happen but don't register in reports. We're configuring that so every lead is measured from here on.";
+    }
   })();
   </script>
 </body>

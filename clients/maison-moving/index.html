@@ -7,6 +7,7 @@
   <title>Maison Moving &amp; Storage · GBP &amp; Maps Strategic Dashboard · HQDM</title>
   <meta name="description" content="GBP + Maps strategic dashboard for Maison Moving & Storage (Tustin HQ + Chino Hills) — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -51,6 +52,7 @@
         <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#pins" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Two pins</a>
         <a href="#maps" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#organic" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Organic</a>
         <a href="#gbp" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GBP audit</a>
         <a href="#connection" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Connection</a>
         <a href="#strategy" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Strategy</a>
@@ -148,6 +150,32 @@
     </div>
   </section>
 
+  <section id="organic" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Organic search &amp; conversions</h2>
+    <p class="text-sm text-ink-500 mb-4" id="organic-intro"></p>
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Monthly — organic search clicks (Google Search) + lead actions</div>
+      <div style="height:320px"><canvas id="ga4-trend"></canvas></div>
+      <p class="text-[11px] text-slate-500 mt-2" id="organic-note"></p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Quarterly + year-over-year</div>
+        <div class="overflow-x-auto"><table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Quarter</th><th class="num">Organic clicks</th><th class="num">YoY</th><th class="num">Lead actions</th></tr></thead>
+          <tbody id="ga4-quarterly"></tbody></table></div>
+        <p class="text-[11px] text-slate-500 mt-2">Organic clicks = Google Search Console. Lead actions tracked from Jan 2026 (GA4 setup). * = partial quarter.</p>
+      </div>
+      <div class="space-y-3">
+        <div id="ga4-yoy-tiles" class="grid grid-cols-2 gap-3"></div>
+        <div class="panel" style="border-left:4px solid #ef4444; background:#fef2f2">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-rose-700 mb-1">Conversion tracking gap · P0</div>
+          <p class="text-sm text-slate-700" id="ga4-conv-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="gbp" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
     <h2 class="text-2xl font-bold tracking-tight mb-1">GBP completeness — are the profiles built right?</h2>
     <p class="text-sm text-ink-500 mb-4" id="gbp-intro"></p>
@@ -212,11 +240,12 @@
 
   <script>
   (async function () {
-    const [DATA, SUM, LDT, LDC] = await Promise.all([
+    const [DATA, SUM, LDT, LDC, GA4] = await Promise.all([
       fetch('data/data.json').then(r=>r.json()),
       fetch('data/ld_summary.json').then(r=>r.json()),
       fetch('data/ld_grids_tustin.json').then(r=>r.json()),
       fetch('data/ld_grids_chinohills.json').then(r=>r.json()),
+      fetch('data/ga4.json').then(r=>r.json()).catch(()=>null),
     ]);
     const $ = id => document.getElementById(id);
     const esc = s => (s==null?'':String(s));
@@ -380,6 +409,37 @@
 
     // ---------- deliverables ----------
     $('deliverables').innerHTML=DATA.deliverables.map(d=>`<a href="${d.href}" class="panel block hover:border-brand-500 transition"><div class="text-[10px] font-bold uppercase tracking-widest text-brand-500">${d.type}</div><div class="font-bold text-slate-900 mt-0.5">${d.name}</div><p class="text-xs text-slate-600 mt-1">${d.desc}</p></a>`).join('');
+
+    // ---------- organic search & conversions (GSC clicks + GA4 lead actions) ----------
+    if (GA4 && GA4.trend) {
+      $('organic-intro').textContent = "Organic search traffic (clicks from Google Search, last 17 months) plus lead actions — phone calls, Google Business clicks and form/email actions — tracked since GA4 was set up in January 2026.";
+      const t = GA4.trend;
+      new Chart($('ga4-trend'), {
+        data: { labels: t.months, datasets: [
+          { type:'line', label:'Organic clicks (Google Search)', data:t.organic_clicks, borderColor:'#1d5b8a', backgroundColor:'rgba(29,91,138,.12)', borderWidth:3, tension:.25, pointRadius:2, pointHoverRadius:5, yAxisID:'y', fill:true, spanGaps:false },
+          { type:'line', label:'Lead actions (calls + GBP clicks + forms)', data:t.lead_actions, borderColor:'#10b981', backgroundColor:'transparent', borderWidth:2.5, tension:.25, pointRadius:2, pointHoverRadius:5, yAxisID:'y1', spanGaps:false },
+        ]},
+        options: { responsive:true, maintainAspectRatio:false, interaction:{mode:'index',intersect:false},
+          plugins:{ legend:{position:'bottom',labels:{font:{size:11},boxWidth:14,usePointStyle:true}},
+            tooltip:{callbacks:{label:c=>`${c.dataset.label}: ${c.raw==null?'—':c.raw}`}}},
+          scales:{ x:{grid:{display:false},ticks:{font:{size:10},maxRotation:0,autoSkip:true,maxTicksLimit:12}},
+            y:{position:'left',beginAtZero:true,title:{display:true,text:'organic clicks / mo',font:{size:11}},grid:{color:'rgba(0,0,0,.05)'}},
+            y1:{position:'right',beginAtZero:true,title:{display:true,text:'lead actions / mo',font:{size:11}},grid:{display:false}} } }
+      });
+      $('organic-note').textContent = `Organic clicks: Google Search Console, Jan 2025 – May 2026. Lead actions begin Jan 2026 (GA4 setup).${t.partial_last?' The final month is partial.':''}`;
+      const yoyByQ={}; (GA4.yoy_clicks||[]).forEach(y=>yoyByQ[y.q]=y);
+      $('ga4-quarterly').innerHTML = GA4.quarterly.map(q=>{
+        const y=yoyByQ[q.q]; const pc=(y&&y.pct!=null)?`<span class="${y.pct>=0?'text-emerald-700':'text-rose-700'} font-semibold">${y.pct>=0?'+':''}${y.pct}%</span>`:'<span class="text-slate-400">—</span>';
+        return `<tr><td>${q.q}${q.partial?'*':''}</td><td class="num">${q.clicks}</td><td class="num">${pc}</td><td class="num">${q.leads==null?'<span class="text-slate-400">—</span>':q.leads}</td></tr>`;
+      }).join('');
+      const q1=(GA4.yoy_clicks||[]).find(y=>/^Q1 2026/.test(y.q));
+      const lq1=GA4.quarterly.find(q=>q.q==='Q1 2026'), lq2=GA4.quarterly.find(q=>q.partial);
+      let tiles='';
+      if(q1) tiles+=`<div class="stat-tile ${q1.pct>=0?'good':'bad'}"><div class="l">Organic clicks · Q1 YoY</div><div class="v">${q1.pct>=0?'+':''}${q1.pct}%</div><div class="s">${q1.clicks_prior} → ${q1.clicks_cur} · Q1 2025 → Q1 2026</div></div>`;
+      if(lq1&&lq2&&lq1.leads!=null&&lq2.leads!=null) tiles+=`<div class="stat-tile good"><div class="l">Lead actions · Q1 → Q2 2026</div><div class="v">${lq1.leads} → ${lq2.leads}</div><div class="s">calls + GBP clicks + forms · Q2 partial</div></div>`;
+      $('ga4-yoy-tiles').innerHTML=tiles;
+      $('ga4-conv-note').textContent = GA4.conversion_tracking ? GA4.conversion_tracking.note : '';
+    }
   })();
   </script>
 </body>
