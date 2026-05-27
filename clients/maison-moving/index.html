@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Maison Moving &amp; Storage · GBP &amp; Maps Strategic Dashboard · HQDM</title>
+  <meta name="description" content="GBP + Maps strategic dashboard for Maison Moving & Storage (Tustin HQ + Chino Hills) — prepared by Aleksandar Spasevski, HQDM Search Intelligence." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] },
+      colors: {
+        ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' },
+        brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',400:'#3b82f6',300:'#8ecae6' }
+      } } } }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-feature-settings: "cv02","cv03","cv04","cv11"; }
+    .panel { background:#fff; border:1px solid #e2e8f0; border-radius:.75rem; padding:1.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+    .stat-tile { background:#fff; border-radius:.5rem; padding:1rem 1.25rem; border-left:4px solid #1d5b8a; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+    .stat-tile.good { border-left-color:#10b981; } .stat-tile.watch { border-left-color:#f59e0b; } .stat-tile.bad { border-left-color:#ef4444; }
+    .stat-tile .v { font-size:1.7rem; font-weight:800; line-height:1.1; color:#0b1220; }
+    .stat-tile .l { font-size:.62rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:#6b7280; margin-bottom:.35rem; }
+    .stat-tile .s { font-size:.72rem; color:#6b7280; margin-top:.4rem; line-height:1.35; }
+    .pill { display:inline-block; padding:.15rem .5rem; border-radius:.375rem; font-size:.6rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; }
+    .pill.good { background:#d1fae5; color:#065f46; } .pill.watch { background:#fef3c7; color:#92400e; } .pill.bad { background:#fee2e2; color:#991b1b; }
+    .pill.high { background:#fee2e2; color:#991b1b; } .pill.med { background:#fef3c7; color:#92400e; } .pill.low { background:#e0e7ff; color:#3730a3; }
+    .hm-cell { aspect-ratio:1/1; border-radius:2px; font-size:10px; line-height:1; display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff; transition:background-color 700ms ease; min-width:0; }
+    .hm-cell.off-grid { background:transparent !important; color:transparent; }
+    .cr-grid { display:grid; gap:2px; }
+    .dot { display:inline-block; width:6px; height:6px; border-radius:50%; margin-right:.4rem; }
+    th.num, td.num { text-align:right; font-variant-numeric:tabular-nums; font-family:'JetBrains Mono',monospace; }
+    .ttable td, .ttable th { padding:.5rem .6rem; border-bottom:1px solid #f1f5f9; }
+    @media print { .no-print { display:none !important; } body { background:#fff !important; } .panel,.stat-tile { box-shadow:none !important; } }
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <div class="font-semibold text-sm sm:text-base truncate">Maison Moving &amp; Storage</div>
+        <div class="text-xs text-ink-500 truncate">GBP &amp; Maps Strategic Dashboard · Tier 2 · two pins</div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
+        <a href="#pins" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Two pins</a>
+        <a href="#maps" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#gbp" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GBP audit</a>
+        <a href="#connection" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Connection</a>
+        <a href="#strategy" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Strategy</a>
+        <a href="#tasks" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Tasks</a>
+      </nav>
+      <div class="flex items-center gap-2 text-xs">
+        <a href="condensed.html" class="px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 font-semibold">Condensed</a>
+        <a href="client-report.html" class="px-2.5 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700 font-semibold">Client report</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span>Tier 2 · Moving &amp; Storage</span><span class="text-brand-300/50">·</span><span>HQDM Search Intelligence</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Maison Moving &amp; Storage</h1>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Two managed Google Business Profiles · Tustin HQ + Chino Hills · a Maps &amp; profile-connection diagnosis</p>
+      <p class="text-base mt-5 max-w-3xl text-white/85" id="hero-scope">—</p>
+      <div class="mt-7 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono">2026-05-27</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">maisonmoving.com</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Maps data</span> <span class="font-mono">Mar 8 – May 18 2026</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR</div>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed" id="tldr-text"></p>
+    </div>
+  </section>
+
+  <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-amber-50 shadow-sm overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-amber-600">THE HEADLINE</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1" id="headline-h2">—</h2>
+        <p class="text-sm sm:text-base text-ink-700 leading-relaxed mt-3 max-w-4xl" id="headline-lede">—</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-tiles"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pins" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Two pins, opposite trajectories</h2>
+    <p class="text-sm text-ink-500 mb-4">Same brand, same website — but the satellite outranks the flagship.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pin-cards"></div>
+  </section>
+
+  <section id="maps" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight">Maps coverage — geo-grid heatmaps</h2>
+        <p class="text-sm text-ink-500 mt-1">Each square is one point in a 13×13 (133-cell) grid centered on the pin. Dark green = top-3. Switch location, pick a query, watch the monthly scans.</p>
+      </div>
+      <div class="inline-flex rounded-lg border border-slate-300 overflow-hidden text-sm font-semibold no-print">
+        <button id="loc-tustin" class="px-3.5 py-2 bg-brand-500 text-white">Tustin (HQ) · #4</button>
+        <button id="loc-chino" class="px-3.5 py-2 bg-white text-slate-700 hover:bg-slate-100">Chino Hills · #1</button>
+      </div>
+    </div>
+    <div class="panel">
+      <div id="hm-tustin"></div>
+      <div id="hm-chino" class="hidden"></div>
+      <div class="border-t border-slate-200 mt-4 pt-3 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+        <span>Rank:</span>
+        <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#047857"></span>1–3</span>
+        <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#10b981"></span>4–6</span>
+        <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#84cc16"></span>7–10</span>
+        <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+        <span class="inline-flex items-center gap-1 normal-case"><span class="inline-block w-3 h-3 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top 20</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Query-by-query movement</h2>
+    <p class="text-sm text-ink-500 mb-4">Top-3 map cells and average rank, first scan (Mar 8) → latest (May 18). Green = gaining, red = slipping.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel"><div class="font-bold text-slate-800 mb-2">Tustin (HQ)</div><div id="movement-tustin"></div></div>
+      <div class="panel"><div class="font-bold text-slate-800 mb-2">Chino Hills</div><div id="movement-chino"></div></div>
+    </div>
+  </section>
+
+  <section id="competition" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Competitor leaderboards</h2>
+    <p class="text-sm text-ink-500 mb-4">Top-3 map cells across each pin's tracked queries (latest scan), with change since March and the review profile behind each.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel"><div class="font-bold text-slate-800 mb-2">Tustin market</div><div id="lb-tustin"></div></div>
+      <div class="panel"><div class="font-bold text-slate-800 mb-2">Chino Hills market</div><div id="lb-chino"></div></div>
+    </div>
+  </section>
+
+  <section id="gbp" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">GBP completeness — are the profiles built right?</h2>
+    <p class="text-sm text-ink-500 mb-4" id="gbp-intro"></p>
+    <div class="panel overflow-x-auto"><div id="gbp-audit"></div></div>
+  </section>
+
+  <section id="connection" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Site ↔ GBP connection — is it wired right?</h2>
+    <p class="text-sm text-ink-500 mb-3" id="connection-intro"></p>
+    <div class="panel mb-4" style="background:#fef2f2; border-color:#fecaca;">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-rose-700 mb-1">Verdict</div>
+      <p class="text-sm font-semibold text-slate-800" id="connection-verdict"></p>
+    </div>
+    <div id="connection-rows" class="space-y-3"></div>
+  </section>
+
+  <section id="strategy" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Strategy — the 90-day plan</h2>
+    <p class="text-sm text-ink-500 mb-4">Five levers, GBP- and Maps-first. Lever A is the prerequisite — it's what lets everything else compound.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" id="levers"></div>
+  </section>
+
+  <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="flex items-end justify-between mb-3 flex-wrap gap-2">
+      <h2 class="text-2xl font-bold tracking-tight">Task list</h2>
+      <div class="flex flex-wrap gap-1.5 text-xs no-print" id="tasks-filters"></div>
+    </div>
+    <div class="panel overflow-x-auto">
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>ID</th><th>Lever</th><th>Dept</th><th>Location</th><th>Priority</th><th>Task</th></tr></thead>
+        <tbody id="tasks-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-3">KPI targets · next 90 days</h2>
+    <div class="panel overflow-x-auto">
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Metric</th><th class="num">Today</th><th class="num">90-day target</th><th class="num">Stretch</th></tr></thead>
+        <tbody id="kpi-targets"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-3">What we'd like to confirm</h2>
+    <div class="panel" style="background:#eef2ff; border-color:#c7d2fe;"><ul class="space-y-3 text-sm text-slate-800" id="owner-asks"></ul></div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-3">Deliverables</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="deliverables"></div>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-8 mt-4 border-t border-slate-200 text-[11px] text-slate-500">
+    <p><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Maison Moving &amp; Storage · GBP &amp; Maps strategic dashboard · prepared by Aleksandar Spasevski · 2026-05-27</p>
+    <p class="mt-1">Maps data = Local Dominator 13×13 geo-grid scans (133 active cells) centered on each pin, Mar 8 – May 18 2026. "Top-3 cells" = grid points where the profile ranks 1–3. An early-May dip across several Tustin queries recovered partially by May 12–18. GBP completeness from GBP Manager; connection findings from a full crawl of maisonmoving.com. No GA4 property is connected for this account, so this view is GBP/Maps-only by design. Confidential — internal + authorized client viewing only.</p>
+  </footer>
+
+  <script>
+  (async function () {
+    const [DATA, SUM, LDT, LDC] = await Promise.all([
+      fetch('data/data.json').then(r=>r.json()),
+      fetch('data/ld_summary.json').then(r=>r.json()),
+      fetch('data/ld_grids_tustin.json').then(r=>r.json()),
+      fetch('data/ld_grids_chinohills.json').then(r=>r.json()),
+    ]);
+    const $ = id => document.getElementById(id);
+    const esc = s => (s==null?'':String(s));
+
+    // hero + tldr + headline
+    $('hero-scope').textContent = DATA.meta.focus;
+    $('tldr-text').innerHTML = DATA.tldr;
+    $('headline-h2').textContent = DATA.headline.h2;
+    $('headline-lede').textContent = DATA.headline.lede;
+    $('headline-tiles').innerHTML = DATA.headline.tiles.map(t=>`
+      <div class="stat-tile ${t.tone}"><div class="l">${esc(t.label)}</div><div class="v">${esc(t.value)}</div><div class="s">${esc(t.sub)}</div></div>`).join('');
+
+    // pin cards
+    $('pin-cards').innerHTML = ['tustin','chinohills'].map(k=>{
+      const p = DATA.pins[k]; const good = p.trend.indexOf('domin')>=0 || p.trend.indexOf('hold')>=0;
+      return `<div class="panel" style="border-left:4px solid ${good?'#10b981':'#ef4444'}">
+        <div class="flex items-center justify-between"><div class="font-bold text-lg text-slate-900">${esc(p.label)}</div>
+          <span class="pill ${good?'good':'bad'}">${esc(p.market_rank)}</span></div>
+        <div class="text-xs text-slate-500 mt-0.5">${esc(p.address)}</div>
+        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+          <div><div class="text-2xl font-extrabold text-slate-800">${esc(p.rating)}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">rating</div></div>
+          <div><div class="text-2xl font-extrabold text-slate-800">${esc(p.reviews)}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">reviews</div></div>
+          <div><div class="text-2xl font-extrabold ${good?'text-emerald-700':'text-rose-700'}">${good?'▲':'▼'}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">${esc(p.trend)}</div></div>
+        </div>
+        <p class="text-sm text-slate-700 mt-3 leading-relaxed">${esc(p.note)}</p>
+        <div class="text-xs text-slate-500 mt-2">GBP phone: <span class="font-mono">${esc(p.gbp_phone)}</span></div></div>`;
+    }).join('');
+
+    // ---------- heatmap factory ----------
+    function rankColor(r){ if(r==null) return '#f8fafc'; if(r<=3) return '#047857'; if(r<=6) return '#10b981'; if(r<=10) return '#84cc16'; if(r<=20) return '#f59e0b'; if(r<=50) return '#f97316'; return '#e5e7eb'; }
+    function makeHeatmap(root, ld){
+      const entities=[ld.client, ...ld.competitors];
+      const st={ kw:ld.keywords[0], date:ld.date_keys[0], keys:ld.date_keys, labels:ld.dates, playing:true, timer:null };
+      root.innerHTML=`
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <div class="flex gap-1.5 flex-wrap hm-kw"></div>
+          <div class="flex items-center gap-2 no-print">
+            <span class="text-[10px] font-mono text-slate-500 uppercase">Date:</span>
+            <div class="hm-date inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
+            <button class="hm-play px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 rounded">Pause</button>
+          </div>
+        </div>
+        <div class="hm-panels grid grid-cols-2 lg:grid-cols-4 gap-3"></div>`;
+      const kwWrap=root.querySelector('.hm-kw'), dWrap=root.querySelector('.hm-date'), playBtn=root.querySelector('.hm-play'), panels=root.querySelector('.hm-panels');
+      kwWrap.innerHTML=ld.keywords.map((k,i)=>`<button data-kw="${k}" class="kwb text-xs font-semibold px-2.5 py-1 rounded ${i===0?'bg-brand-500 text-white':'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'}">${k}</button>`).join('');
+      dWrap.innerHTML=st.keys.map((k,i)=>`<button data-d="${k}" class="db px-2.5 py-1 ${i===0?'bg-brand-500 text-white':'bg-white text-slate-700'}">${st.labels[i].replace(', 2026','')}</button>`).join('');
+      let idx={}, shape=null;
+      function build(){
+        const g=ld.grids[st.kw]; if(!g) return;
+        const {min_x,max_x,min_y,max_y}=g.bounds, cols=max_x-min_x+1, rows=max_y-min_y+1;
+        const present=new Set(g.cells.map(c=>c.x+','+c.y));
+        idx={}; st.keys.forEach(d=>{ idx[d]={}; entities.forEach(e=>{ idx[d][e]={}; ((g[d]&&g[d][e])||[]).forEach(r=>idx[d][e][r.x+','+r.y]=r.rank); }); });
+        shape={cols,rows,min_x,min_y,present};
+        panels.innerHTML=entities.map(e=>{ const me=e===ld.client; return `
+          <div class="rounded-lg border-2 ${me?'border-brand-500 bg-brand-50/30':'border-slate-200 bg-white'} p-3">
+            <div class="font-bold text-xs truncate mb-2 ${me?'text-brand-700':'text-slate-700'}" title="${e}">${e}${me?' <span class="text-[9px] uppercase text-brand-500">(you)</span>':''}</div>
+            <div class="cr-grid" data-e="${e}" style="grid-template-columns:repeat(${cols},1fr); aspect-ratio:${cols}/${rows};">
+              ${(()=>{let o=[];for(let yi=0;yi<rows;yi++)for(let xi=0;xi<cols;xi++){const x=min_x+xi,y=min_y+yi,k=x+','+y;o.push(`<div class="hm-cell ${present.has(k)?'':'off-grid'}" data-k="${k}"></div>`);}return o.join('');})()}
+            </div>
+            <div class="grid grid-cols-3 gap-1 text-center mt-2 pt-2 border-t border-slate-200 text-[9px] uppercase tracking-wider font-bold text-slate-500"><div>avg</div><div>top-3</div><div>cells</div></div>
+            <div class="grid grid-cols-3 gap-1 text-center" data-s="${e}"><div class="text-base font-extrabold text-slate-800 sa">—</div><div class="text-base font-extrabold text-slate-800 st3">—</div><div class="text-base font-extrabold text-slate-800 sc">—</div></div>
+          </div>`;}).join('');
+      }
+      function apply(){
+        const g=ld.grids[st.kw]; if(!g) return;
+        entities.forEach(e=>{
+          const gel=root.querySelector('.cr-grid[data-e="'+CSS.escape(e)+'"]'); if(!gel) return;
+          gel.querySelectorAll('.hm-cell').forEach(c=>{ if(c.classList.contains('off-grid')){c.style.background='transparent';return;} const r=idx[st.date][e]?.[c.dataset.k]; c.style.background=rankColor(r); c.textContent=(r!=null&&r<=20)?r:''; });
+          const s=g.summary[e], box=root.querySelector('[data-s="'+CSS.escape(e)+'"]');
+          if(s&&box){ const a=s[st.date+'_avg'],t=s[st.date+'_top3'],cc=s[st.date+'_cells']; box.querySelector('.sa').textContent=a!=null?Number(a).toFixed(1):'—'; box.querySelector('.st3').textContent=t!=null?t:'—'; box.querySelector('.sc').textContent=cc!=null?cc:'—'; }
+        });
+      }
+      function setDate(d){ st.date=d; dWrap.querySelectorAll('.db').forEach(b=>{const on=b.dataset.d===d; b.classList.toggle('bg-brand-500',on);b.classList.toggle('text-white',on);b.classList.toggle('bg-white',!on);b.classList.toggle('text-slate-700',!on);}); apply(); }
+      function pause(){ if(st.timer){clearInterval(st.timer);st.timer=null;} st.playing=false; playBtn.textContent='Play'; playBtn.classList.replace('bg-emerald-100','bg-slate-200'); playBtn.classList.replace('text-emerald-800','text-slate-700'); }
+      function play(){ if(st.timer)clearInterval(st.timer); st.playing=true; playBtn.textContent='Pause'; playBtn.classList.replace('bg-slate-200','bg-emerald-100'); playBtn.classList.replace('text-slate-700','text-emerald-800'); st.timer=setInterval(()=>{const i=st.keys.indexOf(st.date); setDate(st.keys[(i+1)%st.keys.length]);},900); }
+      kwWrap.querySelectorAll('.kwb').forEach(b=>b.addEventListener('click',()=>{ kwWrap.querySelectorAll('.kwb').forEach(x=>{x.classList.remove('bg-brand-500','text-white');x.classList.add('bg-white','border','border-slate-300','text-slate-700','hover:bg-slate-100');}); b.classList.add('bg-brand-500','text-white'); b.classList.remove('bg-white','border','border-slate-300','text-slate-700','hover:bg-slate-100'); st.kw=b.dataset.kw; build(); apply(); }));
+      dWrap.querySelectorAll('.db').forEach(b=>b.addEventListener('click',()=>{ pause(); setDate(b.dataset.d); }));
+      playBtn.addEventListener('click',()=>{ st.playing?pause():play(); });
+      build(); apply(); play();
+      return { pause, play };
+    }
+    const hmT=makeHeatmap($('hm-tustin'), LDT);
+    const hmC=makeHeatmap($('hm-chino'), LDC);
+    hmC.pause();
+    $('loc-tustin').addEventListener('click',()=>{ $('hm-tustin').classList.remove('hidden'); $('hm-chino').classList.add('hidden'); hmC.pause(); hmT.play(); toggleLoc(true); });
+    $('loc-chino').addEventListener('click',()=>{ $('hm-chino').classList.remove('hidden'); $('hm-tustin').classList.add('hidden'); hmT.pause(); hmC.play(); toggleLoc(false); });
+    function toggleLoc(t){ $('loc-tustin').className='px-3.5 py-2 '+(t?'bg-brand-500 text-white':'bg-white text-slate-700 hover:bg-slate-100'); $('loc-chino').className='px-3.5 py-2 '+(t?'bg-white text-slate-700 hover:bg-slate-100':'bg-brand-500 text-white'); }
+
+    // ---------- movement tables ----------
+    function arrow(d,invert){ if(d===0||d==null) return '<span class="text-slate-400">0</span>'; const goodUp=!invert; const pos=d>0; const good=pos?goodUp:!goodUp; return `<span class="${good?'text-emerald-700':'text-rose-700'} font-bold">${pos?'+':''}${d}</span>`; }
+    function movementTable(rows){
+      return `<table class="w-full text-sm ttable"><thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+        <th>Query</th><th class="num">Top-3 Mar→May</th><th class="num">Δ</th><th class="num">Avg Mar→May</th><th class="num">Reach</th></tr></thead><tbody>
+        ${rows.map(r=>`<tr><td>${r.keyword}</td>
+          <td class="num">${r.first_top3} → <strong>${r.last_top3}</strong></td>
+          <td class="num">${arrow(r.d_top3,false)}</td>
+          <td class="num">${r.first_avg} → ${r.last_avg}</td>
+          <td class="num">${r.last_reach}/133</td></tr>`).join('')}</tbody></table>`;
+    }
+    $('movement-tustin').innerHTML=movementTable(SUM.pins.tustin.movement);
+    $('movement-chino').innerHTML=movementTable(SUM.pins.chinohills.movement);
+
+    // ---------- leaderboards ----------
+    function lbTable(rows){
+      return `<table class="w-full text-sm ttable"><thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+        <th>Business</th><th class="num">Top-3</th><th class="num">Δ Mar</th><th class="num">Avg</th><th class="num">Rating/Revs</th></tr></thead><tbody>
+        ${rows.map(r=>`<tr class="${r.is_maison?'bg-brand-50/60':''}"><td class="${r.is_maison?'font-bold text-brand-700':''}">${r.name}${r.is_maison?' <span class="text-[9px] uppercase text-brand-500">(you)</span>':''}</td>
+          <td class="num font-semibold">${r.top3}</td><td class="num">${arrow(r.d_top3,false)}</td><td class="num">${r.avg}</td>
+          <td class="num">${r.rating??'—'} / ${r.reviews??'—'}</td></tr>`).join('')}</tbody></table>`;
+    }
+    $('lb-tustin').innerHTML=lbTable(SUM.pins.tustin.leaderboard);
+    $('lb-chino').innerHTML=lbTable(SUM.pins.chinohills.leaderboard);
+
+    // ---------- gbp completeness ----------
+    $('gbp-intro').textContent=DATA.gbp_completeness.intro;
+    const dot=s=>`<span class="dot" style="background:${s==='good'?'#10b981':s==='watch'?'#f59e0b':'#ef4444'}"></span>`;
+    $('gbp-audit').innerHTML=`<table class="w-full text-sm ttable"><thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+      <th>Element</th><th>Tustin (HQ)</th><th>Chino Hills</th></tr></thead><tbody>
+      ${DATA.gbp_completeness.rows.map(r=>`<tr><td class="font-semibold text-slate-700 align-top">${r.area}</td>
+        <td class="align-top">${dot(r.tustin.s)}${r.tustin.t}</td><td class="align-top">${dot(r.chino.s)}${r.chino.t}</td></tr>`).join('')}</tbody></table>`;
+
+    // ---------- connection ----------
+    $('connection-intro').innerHTML=DATA.connection.intro;
+    $('connection-verdict').textContent=DATA.connection.verdict;
+    $('connection-rows').innerHTML=DATA.connection.rows.map(r=>`
+      <div class="panel"><div class="flex items-start justify-between gap-3 flex-wrap">
+        <div class="font-bold text-slate-900">${r.issue}</div><span class="pill ${r.sev}">${r.sev}</span></div>
+        <p class="text-sm text-slate-700 mt-1.5 leading-relaxed">${r.detail}</p>
+        <p class="text-sm text-slate-800 mt-2"><span class="font-semibold text-emerald-700">Fix →</span> ${r.fix}</p></div>`).join('');
+
+    // ---------- levers ----------
+    $('levers').innerHTML=DATA.levers.map(l=>`
+      <div class="panel ${l.priority.indexOf('P0')>=0?'lg:col-span-2':''}" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">
+        <div class="flex items-center gap-2 mb-1.5"><span class="pill ${l.tone}">Lever ${l.id} · ${l.priority}</span></div>
+        <h3 class="font-bold text-slate-900 text-base">${l.title}</h3>
+        <p class="text-sm text-slate-700 mt-1.5 leading-relaxed">${l.summary}</p></div>`).join('');
+
+    // ---------- tasks (filterable) ----------
+    const levers=[...new Set(DATA.tasks.map(t=>t.lever))], depts=[...new Set(DATA.tasks.map(t=>t.dept))];
+    let filt={lever:'all',dept:'all'};
+    function renderTasks(){
+      const rows=DATA.tasks.filter(t=>(filt.lever==='all'||t.lever===filt.lever)&&(filt.dept==='all'||t.dept===filt.dept));
+      $('tasks-body').innerHTML=rows.map(t=>{const pc=t.priority==='P0'?'bad':t.priority==='High'?'med':'low';
+        return `<tr><td class="font-mono text-xs">${t.id}</td><td>${t.lever}</td><td>${t.dept}</td><td>${t.loc}</td><td><span class="pill ${pc}">${t.priority}</span></td><td>${t.title}</td></tr>`;}).join('');
+    }
+    function chip(label,active){ return `<button class="px-2.5 py-1 rounded border ${active?'bg-brand-500 text-white border-brand-500':'bg-white border-slate-300 text-slate-700 hover:bg-slate-100'}">${label}</button>`; }
+    function renderFilters(){
+      $('tasks-filters').innerHTML='<span class="text-slate-400 self-center mr-1">Lever:</span>'+chip('All',filt.lever==='all')+levers.map(l=>chip(l,filt.lever===l)).join('')
+        +'<span class="text-slate-400 self-center mx-1">Dept:</span>'+chip('All',filt.dept==='all')+depts.map(d=>chip(d,filt.dept===d)).join('');
+      const btns=$('tasks-filters').querySelectorAll('button'); let i=0;
+      btns[i++].onclick=()=>{filt.lever='all';renderFilters();renderTasks();}; levers.forEach(l=>btns[i++].onclick=()=>{filt.lever=l;renderFilters();renderTasks();});
+      btns[i++].onclick=()=>{filt.dept='all';renderFilters();renderTasks();}; depts.forEach(d=>btns[i++].onclick=()=>{filt.dept=d;renderFilters();renderTasks();});
+    }
+    renderFilters(); renderTasks();
+
+    // ---------- kpi targets ----------
+    $('kpi-targets').innerHTML=DATA.kpi_targets.map(k=>`<tr><td class="font-medium text-slate-700">${k.metric}</td><td class="num">${k.current}</td><td class="num font-semibold text-brand-700">${k.target}</td><td class="num text-slate-500">${k.stretch}</td></tr>`).join('');
+
+    // ---------- owner asks ----------
+    $('owner-asks').innerHTML=DATA.owner_asks.map(a=>`<li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>${a.q}</strong> ${a.why}</span></li>`).join('');
+
+    // ---------- deliverables ----------
+    $('deliverables').innerHTML=DATA.deliverables.map(d=>`<a href="${d.href}" class="panel block hover:border-brand-500 transition"><div class="text-[10px] font-bold uppercase tracking-widest text-brand-500">${d.type}</div><div class="font-bold text-slate-900 mt-0.5">${d.name}</div><p class="text-xs text-slate-600 mt-1">${d.desc}</p></a>`).join('');
+  })();
+  </script>
+</body>
+</html>

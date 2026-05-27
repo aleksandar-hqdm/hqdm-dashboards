@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Maison Moving &amp; Storage · Condensed Strategy · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:{900:'#0b1220',700:'#1f2937',500:'#6b7280'},brand:{900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6'}}}}}</script>
+  <style>
+    html{scroll-behavior:smooth} @page{size:Letter;margin:.5in}
+    .shell{max-width:1100px}
+    .panel{background:#fff;border:1px solid #e2e8f0;border-radius:.75rem;padding:1.25rem 1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .tile{background:#fff;border-radius:.5rem;padding:.9rem 1.1rem;border-left:4px solid #1d5b8a}
+    .tile.good{border-left-color:#10b981}.tile.watch{border-left-color:#f59e0b}.tile.bad{border-left-color:#ef4444}
+    .tile .v{font-size:1.5rem;font-weight:800;color:#0b1220;line-height:1.1}.tile .l{font-size:.6rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6b7280;margin-bottom:.3rem}.tile .s{font-size:.7rem;color:#6b7280;margin-top:.3rem;line-height:1.3}
+    .pill{display:inline-block;padding:.12rem .5rem;border-radius:.375rem;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .pill.good{background:#d1fae5;color:#065f46}.pill.watch{background:#fef3c7;color:#92400e}.pill.bad{background:#fee2e2;color:#991b1b}
+    td,th{padding:.4rem .55rem;border-bottom:1px solid #f1f5f9} .num{text-align:right;font-variant-numeric:tabular-nums}
+    @media print{.no-print{display:none!important}body{background:#fff!important}.panel,.tile{box-shadow:none!important}}
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+  <main class="shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0">
+    <div class="flex items-center justify-between gap-3 border-b border-slate-200 pb-4 mb-5">
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500">HQDM · Condensed Strategy</div>
+        <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Maison Moving &amp; Storage</h1>
+        <p class="text-sm text-slate-500 mt-0.5">GBP &amp; Maps · Tustin HQ + Chino Hills · May 2026</p>
+      </div>
+      <div class="flex gap-2 text-xs no-print">
+        <a href="index.html" class="px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 font-semibold">Full dashboard</a>
+        <a href="client-report.html" class="px-2.5 py-1.5 rounded bg-brand-500 text-white font-semibold">Client report</a>
+      </div>
+    </div>
+
+    <section class="mb-6">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f8fafc)"><p class="text-[15px] leading-relaxed text-slate-800" id="tldr"></p></div>
+    </section>
+
+    <section class="mb-6"><div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="tiles"></div></section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The two pins</h2>
+      <div class="panel overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Pin</th><th>Maps</th><th class="num">Top-3 cells (Mar→May)</th><th class="num">Avg rank</th><th class="num">Rating / Reviews</th><th>Velocity</th></tr></thead>
+        <tbody id="pin-rows"></tbody></table></div>
+      <p class="text-xs text-slate-500 mt-2" id="pin-note"></p>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Are the profiles built right?</h2>
+      <div class="panel"><p class="text-sm text-slate-700 leading-relaxed" id="gbp-summary"></p>
+        <ul class="mt-3 space-y-1.5 text-sm text-slate-700" id="gbp-gaps"></ul></div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Is the site connected to the profiles?</h2>
+      <div class="panel" style="background:#fef2f2;border-color:#fecaca">
+        <p class="text-sm font-semibold text-slate-800" id="conn-verdict"></p>
+        <ul class="mt-3 space-y-2 text-sm text-slate-700" id="conn-items"></ul></div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The 90-day plan</h2>
+      <div class="space-y-2.5" id="levers"></div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">KPI targets · 90 days</h2>
+      <div class="panel overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Metric</th><th class="num">Today</th><th class="num">Target</th><th class="num">Stretch</th></tr></thead>
+        <tbody id="kpi"></tbody></table></div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What we'd like to confirm</h2>
+      <div class="panel" style="background:#eef2ff;border-color:#c7d2fe"><ul class="space-y-2 text-sm text-slate-800" id="asks"></ul></div>
+    </section>
+
+    <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
+      <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Condensed strategy · Aleksandar Spasevski · 2026-05-27</span>
+      <span class="text-slate-400">Confidential — for Maison Moving &amp; Storage.</span>
+    </footer>
+  </main>
+
+  <script>
+  (async function(){
+    const [DATA,SUM]=await Promise.all([fetch('data/data.json').then(r=>r.json()),fetch('data/ld_summary.json').then(r=>r.json())]);
+    const $=id=>document.getElementById(id);
+    $('tldr').innerHTML=DATA.tldr;
+    $('tiles').innerHTML=DATA.headline.tiles.map(t=>`<div class="tile ${t.tone}"><div class="l">${t.label}</div><div class="v">${t.value}</div><div class="s">${t.sub}</div></div>`).join('');
+    const P=SUM.pins;
+    const row=(p,name,good)=>`<tr><td class="font-semibold">${name}</td><td><span class="pill ${good?'good':'bad'}">${good?'#1':'#4'}</span></td>
+      <td class="num">${p.agg_top3_first} → <strong>${p.agg_top3_last}</strong></td><td class="num">${p.agg_avg_last}</td>
+      <td class="num">${p.rating} / ${p.reviews}</td><td>${p.velocity[0].reviews} → ${p.velocity[p.velocity.length-1].reviews} reviews</td></tr>`;
+    $('pin-rows').innerHTML=row(P.tustin,'Tustin (HQ)',false)+row(P.chinohills,'Chino Hills',true);
+    $('pin-note').textContent='Top-3 cells = grid points (of 133 per query) where the profile ranks 1–3, summed across each pin’s tracked queries. Tustin tracks 6 queries; Chino Hills tracks 8.';
+
+    $('gbp-summary').textContent=DATA.gbp_completeness.intro;
+    const worst=DATA.gbp_completeness.rows.filter(r=>r.tustin.s==='bad'||r.chino.s==='bad');
+    $('gbp-gaps').innerHTML=worst.map(r=>`<li class="flex gap-2"><span class="text-rose-500 font-bold">•</span><span><strong>${r.area}.</strong> Tustin — ${r.tustin.t}; Chino Hills — ${r.chino.t}.</span></li>`).join('');
+
+    $('conn-verdict').textContent=DATA.connection.verdict;
+    const hi=DATA.connection.rows.filter(r=>r.sev==='high'||r.sev==='med');
+    $('conn-items').innerHTML=hi.map(r=>`<li class="flex gap-2"><span class="pill ${r.sev} mt-0.5">${r.sev}</span><span><strong>${r.issue}.</strong> ${r.fix}</span></li>`).join('');
+
+    $('levers').innerHTML=DATA.levers.map(l=>`<div class="panel" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">
+      <div class="flex items-center gap-2"><span class="pill ${l.tone}">Lever ${l.id}</span><span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">${l.priority}</span></div>
+      <h3 class="font-bold text-slate-900 mt-1">${l.title}</h3><p class="text-sm text-slate-700 mt-1 leading-relaxed">${l.summary}</p></div>`).join('');
+
+    $('kpi').innerHTML=DATA.kpi_targets.map(k=>`<tr><td>${k.metric}</td><td class="num">${k.current}</td><td class="num font-semibold text-brand-700">${k.target}</td><td class="num text-slate-500">${k.stretch}</td></tr>`).join('');
+    $('asks').innerHTML=DATA.owner_asks.map(a=>`<li class="flex gap-2"><span class="text-indigo-500 font-bold">•</span><span><strong>${a.q}</strong> ${a.why}</span></li>`).join('');
+  })();
+  </script>
+</body>
+</html>

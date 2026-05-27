@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Maison Moving &amp; Storage · May 2026 Update</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:{900:'#0b1220',700:'#1f2937',500:'#6b7280'},brand:{900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6'}}}}}</script>
+  <style>
+    html{scroll-behavior:smooth} @page{size:Letter;margin:.5in}
+    .shell{max-width:1180px}
+    .panel{background:#fff;border:1px solid #e2e8f0;border-radius:.75rem;padding:1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .tile{background:#fff;border-radius:.5rem;padding:1rem 1.2rem;border-left:4px solid #1d5b8a}
+    .tile.good{border-left-color:#10b981}.tile.watch{border-left-color:#f59e0b}.tile.bad{border-left-color:#ef4444}
+    .tile .v{font-size:1.8rem;font-weight:800;color:#0b1220;line-height:1.05}.tile .l{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#6b7280;margin-bottom:.35rem}.tile .s{font-size:.72rem;color:#6b7280;margin-top:.35rem;line-height:1.3}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:.375rem;font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .pill.good{background:#d1fae5;color:#065f46}.pill.bad{background:#fee2e2;color:#991b1b}
+    .hm-cell{aspect-ratio:1/1;border-radius:2px;font-size:10px;line-height:1;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;transition:background-color 700ms ease;min-width:0}
+    .hm-cell.off-grid{background:transparent!important;color:transparent}.cr-grid{display:grid;gap:2px}
+    td,th{padding:.45rem .6rem;border-bottom:1px solid #f1f5f9}.num{text-align:right;font-variant-numeric:tabular-nums}
+    @media print{.no-print{display:none!important}body{background:#fff!important}.panel,.tile{box-shadow:none!important}}
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+  <main class="shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0">
+
+    <section class="border-b border-slate-200 pb-5 mb-6">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM · Prepared by Aleksandar Spasevski</div>
+      <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Maison Moving &amp; Storage</h1>
+      <p class="text-base sm:text-lg text-slate-700 mt-2 font-semibold">Your Google presence across both locations — May 2026</p>
+      <p class="text-sm text-slate-500 mt-1">A look at how your Tustin and Chino Hills profiles are performing on Google Maps, and what we're doing next.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#f8fafc)">
+        <p class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800">
+          You have <strong>two Google Business Profiles</strong> — one for your Tustin headquarters and one for Chino Hills — and right now they're pulling in <strong>opposite directions</strong>. Your <strong>Chino Hills</strong> profile, even though it only has <strong>121 reviews</strong>, is the <strong>#1 mover on the map</strong> across the Inland Empire. Your <strong>Tustin</strong> headquarters — with <strong>856 reviews and decades in business</strong> — sits at about <strong>#4</strong> in a very crowded Orange County market, and has slipped a little since March. The good news: your profiles themselves are well-built, and the single biggest opportunity is a set of <strong>quick, behind-the-scenes fixes</strong> to connect your website to both profiles properly. That's what we're prioritizing.
+        </p>
+      </div>
+    </section>
+
+    <section class="mb-8"><div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="tiles"></div></section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Your two locations at a glance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="pin-cards"></div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Where you show up on the map</h2>
+      <div class="panel">
+        <p class="text-sm text-slate-700 mb-4 leading-relaxed">Each square is one spot on the map around your location. <strong>Dark green means you're in the top 3</strong> when someone there searches; yellow/orange means further down. Switch between your two locations, pick a search, and press play to watch the last few months. The contrast between Chino Hills (mostly green) and Tustin (more mixed) is the story.</p>
+        <div class="inline-flex rounded-lg border border-slate-300 overflow-hidden text-sm font-semibold no-print mb-4">
+          <button id="loc-t" class="px-3.5 py-2 bg-brand-500 text-white">Tustin (HQ)</button>
+          <button id="loc-c" class="px-3.5 py-2 bg-white text-slate-700 hover:bg-slate-100">Chino Hills</button>
+        </div>
+        <div id="hm-t"></div><div id="hm-c" class="hidden"></div>
+        <div class="border-t border-slate-200 mt-4 pt-3 flex flex-wrap items-center gap-3 text-[10px] uppercase tracking-wider font-semibold text-slate-600">
+          <span>Rank:</span>
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#047857"></span>1–3</span>
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#10b981"></span>4–6</span>
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#84cc16"></span>7–10</span>
+          <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-3 rounded-sm" style="background:#f59e0b"></span>11–20</span>
+          <span class="inline-flex items-center gap-1 normal-case"><span class="inline-block w-3 h-3 rounded-sm border border-slate-300" style="background:#f8fafc"></span>not in top 20</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">How your two profiles look</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="panel" style="border-left:4px solid #10b981">
+          <h3 class="font-bold text-slate-900">What's working</h3>
+          <ul class="mt-2 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span><span>Both profiles are well stocked — categories, services, product listings and social links are in place.</span></li>
+            <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span><span>Chino Hills is rated <strong>4.8★</strong> and its reviews are <strong>growing</strong> (115 → 121 since March).</span></li>
+            <li class="flex gap-2"><span class="text-emerald-600 font-bold">✓</span><span>You post to both profiles regularly, and your service area is broad.</span></li>
+          </ul>
+        </div>
+        <div class="panel" style="border-left:4px solid #f59e0b">
+          <h3 class="font-bold text-slate-900">Where we see opportunity</h3>
+          <ul class="mt-2 space-y-2 text-sm text-slate-700">
+            <li class="flex gap-2"><span class="text-amber-600 font-bold">•</span><span>At <strong>Tustin</strong>, your review count has been <strong>flat at ~856</strong> for over two months while competitors with 1,000–1,500 reviews keep adding more. Your rating (4.6) also trails the local leaders (4.9–5.0).</span></li>
+            <li class="flex gap-2"><span class="text-amber-600 font-bold">•</span><span>The two profiles list a <strong>different founding year</strong> (one says 1992, the other 1996, your tagline says 1984) and use slightly different category labels. We'd like to make these consistent.</span></li>
+            <li class="flex gap-2"><span class="text-amber-600 font-bold">•</span><span>Chino Hills is missing a couple of settings Tustin has (like "online estimates"), and both could post a bit more often and add more photos.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Connecting your website to your profiles</h2>
+      <div class="panel" style="background:#fff7ed;border-color:#fed7aa">
+        <p class="text-sm text-slate-700 leading-relaxed mb-3">This is the biggest opportunity we found — and the reason both pins aren't ranking as high as they could. Right now your <strong>website and your two Google profiles aren't fully connected</strong>:</p>
+        <ul class="space-y-2.5 text-sm text-slate-700">
+          <li class="flex gap-2"><span class="font-bold text-rose-600">1.</span><span><strong>The website is missing the behind-the-scenes code</strong> that confirms each location's name, address, phone and reviews to Google — and it still identifies itself as "Maison Moving (Staging)". This is a quick developer fix that helps Google trust and rank both locations.</span></li>
+          <li class="flex gap-2"><span class="font-bold text-rose-600">2.</span><span><strong>The phone numbers on your website don't match the ones on your Google profiles.</strong> Your site shows different numbers than your Tustin and Chino Hills listings — we'd like to confirm the right number for each and make them consistent everywhere.</span></li>
+          <li class="flex gap-2"><span class="font-bold text-rose-600">3.</span><span><strong>Your Chino Hills profile sends visitors to your homepage</strong> rather than your dedicated Chino Hills page. Pointing it to the right page (and adding a map + local phone there) makes that profile stronger.</span></li>
+        </ul>
+        <p class="text-sm text-slate-700 leading-relaxed mt-3">None of these are big projects — they're mostly one-time fixes, and together they're the highest-impact work we can do this quarter.</p>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Who you're competing with</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="panel"><div class="font-bold text-slate-800 mb-1">Tustin / Orange County</div><div id="lb-t"></div></div>
+        <div class="panel"><div class="font-bold text-slate-800 mb-1">Chino Hills / Inland Empire</div><div id="lb-c"></div></div>
+      </div>
+      <p class="text-xs text-slate-500 mt-2">"Top-3 spots" = the number of map points where each business ranks in the top 3, across the searches we track for that location. Lower "avg rank" is better.</p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What we're doing next — the next 90 days</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" id="levers"></div>
+    </section>
+
+    <section class="mb-6">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">A few things we'd like to confirm</h2>
+      <div class="panel" style="background:#eef2ff;border-color:#c7d2fe"><ul class="space-y-2.5 text-sm text-slate-800" id="asks"></ul></div>
+    </section>
+
+    <footer class="mt-8 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
+      <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · May 2026 update · Prepared by Aleksandar Spasevski · 2026-05-27</span>
+      <span class="text-slate-400">Confidential — for Maison Moving &amp; Storage.</span>
+    </footer>
+  </main>
+
+  <script>
+  (async function(){
+    const [DATA,SUM,LDT,LDC]=await Promise.all([
+      fetch('data/data.json').then(r=>r.json()),fetch('data/ld_summary.json').then(r=>r.json()),
+      fetch('data/ld_grids_tustin.json').then(r=>r.json()),fetch('data/ld_grids_chinohills.json').then(r=>r.json())]);
+    const $=id=>document.getElementById(id);
+    $('tiles').innerHTML=DATA.headline.tiles.map(t=>`<div class="tile ${t.tone}"><div class="l">${t.label}</div><div class="v">${t.value}</div><div class="s">${t.sub}</div></div>`).join('');
+    $('pin-cards').innerHTML=['tustin','chinohills'].map(k=>{const p=DATA.pins[k];const good=p.trend.indexOf('domin')>=0||p.trend.indexOf('hold')>=0;
+      return `<div class="panel" style="border-left:4px solid ${good?'#10b981':'#ef4444'}">
+        <div class="flex items-center justify-between"><div class="font-bold text-lg text-slate-900">${p.label}</div><span class="pill ${good?'good':'bad'}">${p.market_rank}</span></div>
+        <div class="text-xs text-slate-500 mt-0.5">${p.address}</div>
+        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+          <div><div class="text-2xl font-extrabold text-slate-800">${p.rating}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">rating</div></div>
+          <div><div class="text-2xl font-extrabold text-slate-800">${p.reviews}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">reviews</div></div>
+          <div><div class="text-2xl font-extrabold ${good?'text-emerald-700':'text-rose-700'}">${good?'▲':'▼'}</div><div class="text-[10px] uppercase tracking-wider text-slate-500">${p.trend}</div></div>
+        </div><p class="text-sm text-slate-700 mt-3 leading-relaxed">${p.note}</p></div>`;}).join('');
+
+    function rankColor(r){if(r==null)return'#f8fafc';if(r<=3)return'#047857';if(r<=6)return'#10b981';if(r<=10)return'#84cc16';if(r<=20)return'#f59e0b';if(r<=50)return'#f97316';return'#e5e7eb';}
+    function makeHeatmap(root,ld){
+      const entities=[ld.client,...ld.competitors];
+      const st={kw:ld.keywords[0],date:ld.date_keys[0],keys:ld.date_keys,labels:ld.dates,timer:null};
+      root.innerHTML=`<div class="flex flex-wrap items-center justify-between gap-3 mb-3"><div class="flex gap-1.5 flex-wrap hm-kw"></div>
+        <div class="flex items-center gap-2 no-print"><span class="text-[10px] font-mono text-slate-500 uppercase">Date:</span><div class="hm-date inline-flex border border-slate-300 rounded overflow-hidden text-xs font-semibold"></div>
+        <button class="hm-play px-2.5 py-1 text-xs font-semibold bg-emerald-100 text-emerald-800 rounded">Pause</button></div></div>
+        <div class="hm-panels grid grid-cols-2 lg:grid-cols-4 gap-3"></div>`;
+      const kwWrap=root.querySelector('.hm-kw'),dWrap=root.querySelector('.hm-date'),playBtn=root.querySelector('.hm-play'),panels=root.querySelector('.hm-panels');
+      kwWrap.innerHTML=ld.keywords.map((k,i)=>`<button data-kw="${k}" class="kwb text-xs font-semibold px-2.5 py-1 rounded ${i===0?'bg-brand-500 text-white':'bg-white border border-slate-300 text-slate-700 hover:bg-slate-100'}">${k}</button>`).join('');
+      dWrap.innerHTML=st.keys.map((k,i)=>`<button data-d="${k}" class="db px-2.5 py-1 ${i===0?'bg-brand-500 text-white':'bg-white text-slate-700'}">${st.labels[i].replace(', 2026','')}</button>`).join('');
+      let idx={};
+      function build(){const g=ld.grids[st.kw];if(!g)return;const{min_x,max_x,min_y,max_y}=g.bounds,cols=max_x-min_x+1,rows=max_y-min_y+1,present=new Set(g.cells.map(c=>c.x+','+c.y));
+        idx={};st.keys.forEach(d=>{idx[d]={};entities.forEach(e=>{idx[d][e]={};((g[d]&&g[d][e])||[]).forEach(r=>idx[d][e][r.x+','+r.y]=r.rank);});});
+        panels.innerHTML=entities.map(e=>{const me=e===ld.client;return `<div class="rounded-lg border-2 ${me?'border-brand-500 bg-brand-50/30':'border-slate-200 bg-white'} p-3">
+          <div class="font-bold text-xs truncate mb-2 ${me?'text-brand-700':'text-slate-700'}" title="${e}">${e}${me?' <span class="text-[9px] uppercase text-brand-500">(you)</span>':''}</div>
+          <div class="cr-grid" data-e="${e}" style="grid-template-columns:repeat(${cols},1fr);aspect-ratio:${cols}/${rows};max-width:300px;margin:0 auto">
+          ${(()=>{let o=[];for(let yi=0;yi<rows;yi++)for(let xi=0;xi<cols;xi++){const x=min_x+xi,y=min_y+yi,k=x+','+y;o.push(`<div class="hm-cell ${present.has(k)?'':'off-grid'}" data-k="${k}"></div>`);}return o.join('');})()}</div>
+          <div class="grid grid-cols-3 gap-1 text-center mt-2 pt-2 border-t border-slate-200 text-[9px] uppercase tracking-wider font-bold text-slate-500"><div>avg</div><div>top-3</div><div>spots</div></div>
+          <div class="grid grid-cols-3 gap-1 text-center" data-s="${e}"><div class="text-base font-extrabold text-slate-800 sa">—</div><div class="text-base font-extrabold text-slate-800 st3">—</div><div class="text-base font-extrabold text-slate-800 sc">—</div></div></div>`;}).join('');}
+      function apply(){const g=ld.grids[st.kw];if(!g)return;entities.forEach(e=>{const gel=root.querySelector('.cr-grid[data-e="'+CSS.escape(e)+'"]');if(!gel)return;
+        gel.querySelectorAll('.hm-cell').forEach(c=>{if(c.classList.contains('off-grid')){c.style.background='transparent';return;}const r=idx[st.date][e]?.[c.dataset.k];c.style.background=rankColor(r);c.textContent=(r!=null&&r<=20)?r:'';});
+        const s=g.summary[e],box=root.querySelector('[data-s="'+CSS.escape(e)+'"]');if(s&&box){const a=s[st.date+'_avg'],t=s[st.date+'_top3'],cc=s[st.date+'_cells'];box.querySelector('.sa').textContent=a!=null?Number(a).toFixed(1):'—';box.querySelector('.st3').textContent=t!=null?t:'—';box.querySelector('.sc').textContent=cc!=null?cc:'—';}});}
+      function setDate(d){st.date=d;dWrap.querySelectorAll('.db').forEach(b=>{const on=b.dataset.d===d;b.classList.toggle('bg-brand-500',on);b.classList.toggle('text-white',on);b.classList.toggle('bg-white',!on);b.classList.toggle('text-slate-700',!on);});apply();}
+      function pause(){if(st.timer){clearInterval(st.timer);st.timer=null;}playBtn.textContent='Play';playBtn.classList.replace('bg-emerald-100','bg-slate-200');playBtn.classList.replace('text-emerald-800','text-slate-700');}
+      function play(){if(st.timer)clearInterval(st.timer);playBtn.textContent='Pause';playBtn.classList.replace('bg-slate-200','bg-emerald-100');playBtn.classList.replace('text-slate-700','text-emerald-800');st.timer=setInterval(()=>{const i=st.keys.indexOf(st.date);setDate(st.keys[(i+1)%st.keys.length]);},900);}
+      kwWrap.querySelectorAll('.kwb').forEach(b=>b.addEventListener('click',()=>{kwWrap.querySelectorAll('.kwb').forEach(x=>{x.classList.remove('bg-brand-500','text-white');x.classList.add('bg-white','border','border-slate-300','text-slate-700','hover:bg-slate-100');});b.classList.add('bg-brand-500','text-white');b.classList.remove('bg-white','border','border-slate-300','text-slate-700','hover:bg-slate-100');st.kw=b.dataset.kw;build();apply();}));
+      dWrap.querySelectorAll('.db').forEach(b=>b.addEventListener('click',()=>{pause();setDate(b.dataset.d);}));
+      playBtn.addEventListener('click',()=>{st.timer?pause():play();});
+      build();apply();play();return{pause,play};
+    }
+    const hmT=makeHeatmap($('hm-t'),LDT),hmC=makeHeatmap($('hm-c'),LDC);hmC.pause();
+    $('loc-t').addEventListener('click',()=>{$('hm-t').classList.remove('hidden');$('hm-c').classList.add('hidden');hmC.pause();hmT.play();$('loc-t').className='px-3.5 py-2 bg-brand-500 text-white';$('loc-c').className='px-3.5 py-2 bg-white text-slate-700 hover:bg-slate-100';});
+    $('loc-c').addEventListener('click',()=>{$('hm-c').classList.remove('hidden');$('hm-t').classList.add('hidden');hmT.pause();hmC.play();$('loc-c').className='px-3.5 py-2 bg-brand-500 text-white';$('loc-t').className='px-3.5 py-2 bg-white text-slate-700 hover:bg-slate-100';});
+
+    function lbTable(rows){return `<table class="w-full text-sm"><thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Business</th><th class="num">Top-3 spots</th><th class="num">Avg</th><th class="num">Reviews</th></tr></thead><tbody>
+      ${rows.slice(0,7).map(r=>`<tr class="${r.is_maison?'bg-brand-50/60':''}"><td class="${r.is_maison?'font-bold text-brand-700':''}">${r.name}${r.is_maison?' (you)':''}</td><td class="num font-semibold">${r.top3}</td><td class="num">${r.avg}</td><td class="num">${r.rating??'—'}★ / ${r.reviews??'—'}</td></tr>`).join('')}</tbody></table>`;}
+    $('lb-t').innerHTML=lbTable(SUM.pins.tustin.leaderboard);
+    $('lb-c').innerHTML=lbTable(SUM.pins.chinohills.leaderboard);
+
+    $('levers').innerHTML=DATA.levers.map(l=>`<div class="panel" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">
+      <h3 class="font-bold text-slate-900">${l.title}</h3><p class="text-sm text-slate-700 mt-1.5 leading-relaxed">${l.summary}</p></div>`).join('');
+    $('asks').innerHTML=DATA.owner_asks.map(a=>`<li class="flex items-start gap-2"><span class="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0" style="background:#4f46e5"></span><span><strong>${a.q}</strong> ${a.why}</span></li>`).join('');
+  })();
+  </script>
+</body>
+</html>

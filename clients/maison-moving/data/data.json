@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "client": "Maison Moving & Storage",
+    "domain": "maisonmoving.com",
+    "tier": "Tier 2",
+    "vertical": "Moving & Storage · multi-location",
+    "prepared_by": "Aleksandar Spasevski",
+    "date": "2026-05-27",
+    "focus": "Google Business Profile + Maps · two pins (Tustin HQ + Chino Hills) · profile completeness + site connection",
+    "data_window": "Local Dominator geo-grid scans Mar 8 – May 18 2026 (133-cell grids) + GBP Manager + site crawl"
+  },
+
+  "tldr": "Maison runs <strong>two Google Business Profiles with opposite trajectories</strong>. The Chino Hills satellite — only <strong>121 reviews</strong> — is <strong>#1</strong> across its Inland-Empire map grid (736 top-3 cells, avg rank 3.3). The Tustin HQ — <strong>856 reviews and 40+ years in business</strong> — sits at <strong>#4</strong> and has <strong>slipped 31 top-3 map cells since March</strong> in a brutal Orange County field. The profiles themselves are well-stocked (categories, services, products, posts), but they are <strong>barely connected to the website</strong>: there is no LocalBusiness/MovingCompany schema anywhere, <strong>neither profile's phone number appears correctly on the site</strong>, the Chino Hills profile points at the homepage instead of its own <code>/chino-hills/</code> page, and the site still calls itself \"Maison Moving (Staging)\". Repairing that profile↔site foundation is the single highest-leverage move for both pins — and the one most likely to reverse the Tustin slide.",
+
+  "headline": {
+    "h2": "Two pins, opposite directions — and a website that isn't wired to either",
+    "lede": "Across 14 map keywords scanned six times since March, the Chino Hills pin dominates while the flagship Tustin pin is mid-pack and losing ground. The GBPs are reasonably complete, but the connective tissue to the site — schema, NAP, the Chino Hills landing target — is missing, which caps how high either pin can climb.",
+    "tiles": [
+      {"label": "Tustin HQ · Maps", "value": "#4", "sub": "−31 top-3 cells since Mar · avg rank 8.8 · 856 reviews", "tone": "bad"},
+      {"label": "Chino Hills · Maps", "value": "#1", "sub": "736 top-3 cells (2× #2) · avg rank 3.3 · 121 reviews", "tone": "good"},
+      {"label": "Site → GBP schema", "value": "Missing", "sub": "no LocalBusiness/MovingCompany markup; org name = '(Staging)'", "tone": "bad"},
+      {"label": "Review velocity · HQ", "value": "Flat", "sub": "856 → 856 in 10 weeks while rivals at 1,000–1,530 keep gaining", "tone": "watch"}
+    ]
+  },
+
+  "pins": {
+    "tustin": {
+      "label": "Tustin (HQ)",
+      "address": "1371 Santa Fe Dr, Tustin, CA 92780",
+      "gbp_phone": "(714) 942-1061",
+      "rating": "4.6",
+      "reviews": "856",
+      "market_rank": "#4 of the local pack",
+      "trend": "declining",
+      "note": "Hyper-competitive Orange County market. Maison is behind Pro Movers, Universal Moving OC and Best Fit Movers, and has shed top-3 map coverage on five of six tracked queries since March. Only long-distance is gaining.",
+      "grids_file": "ld_grids_tustin.json"
+    },
+    "chinohills": {
+      "label": "Chino Hills",
+      "address": "15271 Fairfield Ranch Rd Ste 160, Chino Hills, CA 91709",
+      "gbp_phone": "(909) 552-7228",
+      "rating": "4.8",
+      "reviews": "121",
+      "market_rank": "#1 in market",
+      "trend": "dominant, holding",
+      "note": "Less-saturated Inland-Empire field (top rivals are national van-line agents — Allied, Berger Allied). Maison is in the top 3 on essentially every cell of every query. Reviews are rising and the rating is climbing — but several challengers are gaining fast.",
+      "grids_file": "ld_grids_chinohills.json"
+    }
+  },
+
+  "gbp_completeness": {
+    "intro": "Both profiles are reasonably well-built — rich service lists, product tiles, social links and active (if infrequent) posting. The gaps are in consistency between the two pins, review momentum at the HQ, and a handful of fields one profile fills and the other leaves blank.",
+    "rows": [
+      {"area": "Claimed & verified", "tustin": {"s": "good", "t": "Claimed"}, "chino": {"s": "good", "t": "Claimed"}},
+      {"area": "Primary category", "tustin": {"s": "watch", "t": "\"Removals company\""}, "chino": {"s": "watch", "t": "\"Removals Service\" — different label than Tustin; neither is the optimal US \"Mover\". Unify."}},
+      {"area": "Services / service items", "tustin": {"s": "good", "t": "Extensive (local, long-distance, commercial, packing, storage, specialty)"}, "chino": {"s": "good", "t": "Extensive — matches Tustin"}},
+      {"area": "Products (tiles + copy)", "tustin": {"s": "good", "t": "Full set of service-as-product tiles"}, "chino": {"s": "good", "t": "Full set incl. Boxes & Supplies"}},
+      {"area": "Business description", "tustin": {"s": "watch", "t": "Generic; no founding year / differentiators stated"}, "chino": {"s": "watch", "t": "\"Since 1996\" — conflicts with HQ founding claims"}},
+      {"area": "Service options", "tustin": {"s": "good", "t": "On-site services + online estimates set"}, "chino": {"s": "bad", "t": "None set — missing the options Tustin has"}},
+      {"area": "Attributes", "tustin": {"s": "watch", "t": "Wheelchair only — thin"}, "chino": {"s": "watch", "t": "Wheelchair + 'appointment required' — still thin"}},
+      {"area": "Photos", "tustin": {"s": "watch", "t": "~36 — low for a 40-yr mover"}, "chino": {"s": "watch", "t": "Build out team / trucks / facility"}},
+      {"area": "Posting cadence", "tustin": {"s": "watch", "t": "~Monthly — below the 1–2/week target"}, "chino": {"s": "watch", "t": "~Monthly"}},
+      {"area": "Social profiles", "tustin": {"s": "good", "t": "LinkedIn, X, Facebook, YouTube"}, "chino": {"s": "watch", "t": "Uses old twitter.com vs Tustin's x.com — minor mismatch"}},
+      {"area": "Rating", "tustin": {"s": "watch", "t": "4.6 — trails the field (rivals 4.9–5.0)"}, "chino": {"s": "good", "t": "4.8 and climbing"}},
+      {"area": "Reviews — count", "tustin": {"s": "good", "t": "856 — strong, but mid-field in OC"}, "chino": {"s": "watch", "t": "121 — thin, but #1 anyway"}},
+      {"area": "Review velocity (10 wk)", "tustin": {"s": "bad", "t": "Flat: 856 → 856"}, "chino": {"s": "good", "t": "Rising: 115 → 121"}},
+      {"area": "Website link target", "tustin": {"s": "watch", "t": "→ homepage (acceptable for HQ)"}, "chino": {"s": "bad", "t": "→ homepage?utm — should point to /chino-hills/"}},
+      {"area": "NAP matches the site", "tustin": {"s": "bad", "t": "Site shows 714-832-5950, not the GBP's 714-942-1061"}, "chino": {"s": "bad", "t": "Site shows 909-970-3518, not the GBP's 909-552-7228"}}
+    ]
+  },
+
+  "connection": {
+    "intro": "This is the part of the brief that matters most: <em>is the website connected to the profiles the right way?</em> Today it largely isn't. The site and the two GBPs read like separate assets, which limits how much authority and trust flow between them — and quietly caps Maps ranking, especially at the Tustin pin that needs every edge.",
+    "verdict": "Weakly connected. The fixes are concrete, mostly one-time, and developer-side — which makes this the highest-ROI workstream in the engagement.",
+    "rows": [
+      {"issue": "No LocalBusiness / MovingCompany schema anywhere", "sev": "high", "detail": "Only an Organization object — named \"Maison Moving (Staging)\" — plus WebSite/Article. No address, phone, geo, sameAs, areaServed or aggregateRating in structured data on the homepage, /tustin/ or /chino-hills/.", "fix": "Deploy MovingCompany + one LocalBusiness object per location with correct NAP, geo-coordinates, areaServed, sameAs to both Google Maps listings + all socials, and aggregateRating."},
+      {"issue": "Site phone numbers don't match either GBP", "sev": "high", "detail": "Contact page shows 714-832-5950 for Tustin (GBP primary is 714-942-1061) and 909-970-3518 for Chino Hills (GBP primary is 909-552-7228). Neither GBP number appears on the site.", "fix": "Reconcile to the GBP primaries; use one canonical local number per location everywhere (site, schema, citations)."},
+      {"issue": "Footer NAP shows Chino Hills only", "sev": "med", "detail": "Sitewide footer lists just the Chino Hills address with a toll-free number; the Tustin HQ is absent from the footer.", "fix": "Show both locations (name, address, local phone, hours) in the footer and on a /locations hub."},
+      {"issue": "Chino Hills GBP lands on the homepage, not /chino-hills/", "sev": "med", "detail": "A unique, city-specific /chino-hills/ page already exists, but the profile sends clicks to maisonmoving.com/?utm…chinohills instead.", "fix": "Repoint the Chino Hills GBP website link to /chino-hills/ once that page carries the local phone, map embed and service links."},
+      {"issue": "Location pages have no map, no local phone, and are typed as blog articles", "sev": "med", "detail": "/tustin/ and /chino-hills/ are unique pages but use og:type=article + BlogPosting schema, embed no Google Map (the only map embeds sitewide are on the contact page), and don't link in-body to the service pages.", "fix": "Re-type them as service/location pages, embed the correct pin, add the local phone + FAQ schema + in-body links to /localmoving/, /office-movers/, /storage/ etc."},
+      {"issue": "\"(Staging)\" brand name leaking sitewide", "sev": "med", "detail": "og:site_name and the schema Organization/WebSite name are both \"Maison Moving (Staging)\" on every page — the name Google reads in structured data.", "fix": "Set the production WordPress site title + og:site_name + schema name to \"Maison Moving & Storage\"."},
+      {"issue": "Duplicate city pages", "sev": "low", "detail": "/serving-all-of-tustin-ca/ and /serving-all-of-chino-hills-ca/ overlap with /tustin/ and /chino-hills/.", "fix": "Pick one canonical landing page per city; consolidate or 301 the weaker duplicate."},
+      {"issue": "Review link locale + coverage", "sev": "low", "detail": "The footer Google-reviews link is hardcoded to a Serbian locale (gl=rs / hl=en-RS) and points only at the Tustin listing.", "fix": "Drop the locale params; add a Chino Hills review link."},
+      {"issue": "Malformed tel: links & exposed agency email", "sev": "low", "detail": "Footer uses tel:%20800-832-5950 / tel:+800-832-5950 (non-dialable); page author/byline is info@hqdm.io with an /author/infohqdm-io/ archive.", "fix": "Clean tel: hrefs to E.164; set author to the brand."},
+      {"issue": "License visible but incomplete", "sev": "low", "detail": "Footer shows CPUC \"CAL MTR# 0190726\" (good). No USDOT number found anywhere.", "fix": "Keep the CPUC number on-site + in schema; add USDOT/MC if they run interstate."}
+    ]
+  },
+
+  "levers": [
+    {"id": "A", "title": "Wire the website to the two profiles (schema + NAP)", "priority": "P0 · prerequisite", "tone": "bad",
+     "summary": "Nothing else in Maps compounds until the site actually identifies its two locations to Google. Deploy MovingCompany + per-location LocalBusiness schema with correct NAP, geo, sameAs to both GBPs and socials, and aggregateRating; correct the site phone numbers to the GBP primaries; surface both addresses; and retire the \"(Staging)\" site name. Almost entirely one-time developer work."},
+    {"id": "B", "title": "Repoint & upgrade the location landing pages", "priority": "High", "tone": "watch",
+     "summary": "Point the Chino Hills GBP at /chino-hills/ (not the homepage), and make both /tustin/ and /chino-hills/ proper location pages: correct map embed, local phone, FAQ schema, and in-body links to the service pages. Resolve the /serving-all-of-…/ duplicates so each city has one clear page."},
+    {"id": "C", "title": "Reverse the Tustin slide", "priority": "High", "tone": "bad",
+     "summary": "The HQ has lost 31 top-3 map cells since March and its review count hasn't moved while rivals with 1,000–1,530 reviews keep climbing. Unify the primary category to Mover, fill service options + attributes, lift the photo set, post 1–2×/week, and stand up a review-acquisition workflow to restart velocity and nudge the 4.6 upward. Watch the new entrants (CC Relocation, Costa Mesa Moving, MoverTron)."},
+    {"id": "D", "title": "Extend the Chino Hills lead", "priority": "Med", "tone": "good",
+     "summary": "Defend #1: keep the review cadence climbing past 121, set the service options the profile is missing, and build out Inland-Empire service-area coverage (Eastvale, Ontario, Rancho Cucamonga, Diamond Bar). Monitor the fast risers — Berger Allied, Two Men and a Truck and Nelson Westerberg all gained ground since March."},
+    {"id": "E", "title": "Unify NAP, categories & citations across both pins", "priority": "Med", "tone": "watch",
+     "summary": "Align primary category, name, hours and — once the owner confirms it — the founding year across both profiles, the site, and the citation set (BBB, Yelp, chamber). Consistency across the two pins is itself a ranking and trust signal."}
+  ],
+
+  "tasks": [
+    {"id": "A1", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "P0", "title": "Deploy MovingCompany + per-location LocalBusiness schema (NAP, geo, areaServed, sameAs → both GBP Maps URLs + socials, aggregateRating)"},
+    {"id": "A2", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "P0", "title": "Correct site phone numbers to GBP primaries (Tustin 714-942-1061, Chino Hills 909-552-7228); fix malformed tel: hrefs"},
+    {"id": "A3", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "P0", "title": "Show both locations' NAP in footer + a /locations hub (footer currently Chino-Hills-only)"},
+    {"id": "A4", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "P0", "title": "Replace 'Maison Moving (Staging)' in WP site title, og:site_name and schema name"},
+    {"id": "A5", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "Med", "title": "Fix Google review links (drop gl=rs locale; add Chino Hills review link); reset author off info@hqdm.io"},
+    {"id": "A6", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "Low", "title": "Surface CPUC CAL MTR# 0190726 in schema; add USDOT/MC if interstate"},
+    {"id": "B1", "lever": "B", "dept": "GMB Ops", "loc": "Chino Hills", "priority": "High", "title": "Repoint Chino Hills GBP website link to /chino-hills/"},
+    {"id": "B2", "lever": "B", "dept": "Web Dev", "loc": "Both", "priority": "High", "title": "Embed the correct Google Map pin on /tustin/ and /chino-hills/"},
+    {"id": "B3", "lever": "B", "dept": "Content", "loc": "Both", "priority": "High", "title": "Add local phone + in-body links to service pages on /tustin/ and /chino-hills/"},
+    {"id": "B4", "lever": "B", "dept": "Web Dev", "loc": "Both", "priority": "Med", "title": "Re-type /tustin/ + /chino-hills/ from blog Article to service/location pages (og:type + schema)"},
+    {"id": "B5", "lever": "B", "dept": "Content", "loc": "Both", "priority": "Med", "title": "Resolve /serving-all-of-*-ca/ vs /tustin/ + /chino-hills/ duplication — choose canonical, consolidate/301"},
+    {"id": "C1", "lever": "C", "dept": "GMB Ops", "loc": "Tustin", "priority": "High", "title": "Unify Tustin primary category to 'Mover'; set all service options + attributes"},
+    {"id": "C2", "lever": "C", "dept": "GMB Ops", "loc": "Tustin", "priority": "High", "title": "Stand up review-acquisition workflow at Tustin (post-job SMS/email ask) to restart velocity + lift 4.6"},
+    {"id": "C3", "lever": "C", "dept": "GMB Ops", "loc": "Tustin", "priority": "Med", "title": "Lift Tustin photo set past 36 (crews, trucks, facility, jobs); move posting to 1–2/week"},
+    {"id": "C4", "lever": "C", "dept": "GMB Ops", "loc": "Tustin", "priority": "Med", "title": "Seed Tustin Q&A with top intent questions; respond to all recent reviews"},
+    {"id": "C5", "lever": "C", "dept": "GMB Ops", "loc": "Tustin", "priority": "Med", "title": "Weekly LD monitoring of Tustin grid + new entrants (CC Relocation, Costa Mesa Moving, MoverTron)"},
+    {"id": "D1", "lever": "D", "dept": "GMB Ops", "loc": "Chino Hills", "priority": "High", "title": "Set Chino Hills service options (online estimates, on-site services) to match Tustin"},
+    {"id": "D2", "lever": "D", "dept": "GMB Ops", "loc": "Chino Hills", "priority": "Med", "title": "Sustain Chino Hills review cadence past 121; add photos + Q&A"},
+    {"id": "D3", "lever": "D", "dept": "Content", "loc": "Chino Hills", "priority": "Med", "title": "Build Inland-Empire service-area depth (Eastvale, Ontario, Rancho Cucamonga, Diamond Bar) on /chino-hills/ + GBP service areas"},
+    {"id": "D4", "lever": "D", "dept": "GMB Ops", "loc": "Chino Hills", "priority": "Low", "title": "Monitor rising challengers (Berger Allied, Two Men and a Truck, Nelson Westerberg)"},
+    {"id": "E1", "lever": "E", "dept": "GMB Ops", "loc": "Both", "priority": "Med", "title": "Align primary category + name + hours across both profiles"},
+    {"id": "E2", "lever": "E", "dept": "Content", "loc": "Both", "priority": "Med", "title": "Confirm + unify founding year (1984 / 1992 / 1996) across site, GBP, citations"},
+    {"id": "E3", "lever": "E", "dept": "Off-Page", "loc": "Both", "priority": "Med", "title": "Citation sync (BBB, Yelp, YellowPages, chamber) to matched NAP for both pins"}
+  ],
+
+  "kpi_targets": [
+    {"metric": "Tustin — top-3 map cells (6 queries)", "current": "133", "target": "165+ (recover Mar baseline)", "stretch": "190+"},
+    {"metric": "Tustin — avg map rank", "current": "8.8", "target": "7.0", "stretch": "6.0"},
+    {"metric": "Tustin — review velocity / quarter", "current": "~0", "target": "+30", "stretch": "+45"},
+    {"metric": "Tustin — rating", "current": "4.6", "target": "4.7", "stretch": "4.8"},
+    {"metric": "Chino Hills — top-3 map cells (8 queries)", "current": "736", "target": "760+ (hold/extend)", "stretch": "800+"},
+    {"metric": "Chino Hills — reviews", "current": "121", "target": "150+", "stretch": "175+"},
+    {"metric": "LocalBusiness schema live (per pin)", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
+    {"metric": "Site phone matches GBP (per pin)", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
+    {"metric": "Location pages w/ map + schema", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"}
+  ],
+
+  "owner_asks": [
+    {"q": "GBP manager access for both profiles.", "why": "Most of the highest-leverage work (schema-linked NAP, service options, posts, photos, Q&A, service areas) needs write access to both the Tustin and Chino Hills listings."},
+    {"q": "What is the correct public phone number for each location?", "why": "The website shows numbers that match neither GBP (714-832-5950 vs 714-942-1061 at Tustin; 909-970-3518 vs 909-552-7228 at Chino Hills). We need the real dispatch line per location before we unify NAP everywhere."},
+    {"q": "What founding year should we use — 1984, 1992 or 1996?", "why": "The tagline says 1984, the Tustin profile says 1992, and Chino Hills says 1996. One consistent year strengthens the 'about', the schema and every citation."},
+    {"q": "What does review-acquisition look like today, especially at Tustin?", "why": "The HQ's review count has been flat for 10 weeks while competitors with 1,000–1,530 reviews keep gaining. Restarting velocity is the surest way to defend and recover the Tustin pin."},
+    {"q": "Are there any other Google Business Profiles or planned locations we should fold in?", "why": "We now manage two pins; if more exist (or are coming), we want them on the same schema, NAP, review and posting cadence from day one."}
+  ],
+
+  "deliverables": [
+    {"name": "Strategic Dashboard", "type": "Full · internal", "href": "index.html", "desc": "Complete analyst view — both GBP audits, the site-connection audit, both Maps heatmaps, competitor leaderboards, levers, the full task list, KPI targets and owner asks."},
+    {"name": "Condensed Strategy", "type": "Summary · AM", "href": "condensed.html", "desc": "The findings and the 90-day plan on one page — for packaging into client communication."},
+    {"name": "Client Report", "type": "Client-facing", "href": "client-report.html", "desc": "Plain-English report: what we found across the two profiles, how the Maps look, and what we'll do next."}
+  ]
+}
