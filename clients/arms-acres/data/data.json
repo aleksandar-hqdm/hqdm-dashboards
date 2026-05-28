@@ -1571,7 +1571,7 @@
       "leads_label": "Organic leads",
       "partial_index": -1,
       "title": "Organic Visitors · Monthly (Q4 2025 → Apr 2026)",
-      "caption": "Monthly organic visitors. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "caption": "Monthly organic visitors."
     },
     "quarters": {
       "labels": [
@@ -1634,7 +1634,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. The current month is partial.",
     "focus": [
       {
         "title": "Service-page conversion",
