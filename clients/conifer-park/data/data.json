@@ -1424,8 +1424,6 @@
     ],
     "line": {
       "labels": [
-        "Oct '25",
-        "Nov '25",
         "Dec '25",
         "Jan '26",
         "Feb '26",
@@ -1433,8 +1431,6 @@
         "Apr '26"
       ],
       "visitors": [
-        9471,
-        7346,
         5657,
         5956,
         4596,
@@ -1442,8 +1438,6 @@
         4468
       ],
       "leads": [
-        54,
-        62,
         45,
         51,
         40,
@@ -1453,41 +1447,41 @@
       "visitors_label": "Organic visitors",
       "leads_label": "Organic leads (form submits)",
       "partial_index": -1,
-      "title": "Organic Visitors + Leads · Monthly (Q4 2025 → Apr 2026)",
+      "title": "Organic Visitors + Leads · Monthly (Dec 2025 → Apr 2026)",
       "caption": "Sessions are softening as the older blog cluster loses rankings, but the lead line is roughly steady — meaning each visit is more likely to convert. Leads = form-submits; phone-call tracking is not yet wired (see note below)."
     },
     "boxes": [
       {
-        "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "",
+        "win": "Maps clicks · this month",
+        "cmp": "May MTD vs April",
+        "kind": "good",
         "rows": [
           {
-            "m": "Sessions / leads",
-            "d": "n/a",
-            "cls": "muted"
+            "m": "Daily pace",
+            "d": "~42 / day",
+            "cls": "pos"
           },
           {
-            "m": "Q2 '25 was the migration gap",
-            "d": "—",
-            "cls": "muted"
+            "m": "vs April (~33 / day)",
+            "d": "+27%",
+            "cls": "pos"
           }
         ]
       },
       {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "watch",
+        "win": "Maps clicks · last 2 months",
+        "cmp": "Mar–Apr vs Jan–Feb",
+        "kind": "good",
         "rows": [
           {
-            "m": "Sessions",
-            "d": "-23%",
-            "cls": "neg"
+            "m": "Total",
+            "d": "2,077 vs 1,781",
+            "cls": "pos"
           },
           {
-            "m": "Leads",
-            "d": "-8%",
-            "cls": "muted"
+            "m": "Period over period",
+            "d": "+17%",
+            "cls": "pos"
           }
         ]
       },
@@ -1509,7 +1503,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "Year-over-year comparisons aren't meaningful because Q1–Q2 2025 were the migration gap (near-zero traffic). The real story is in the post-recovery window: sessions are down because the old blog cluster is losing rankings, but <strong>leads have held nearly flat and the conversion rate has more than doubled</strong> — visitors are more qualified and the on-site funnel is doing more work per visit. May '26 is a partial month (asterisk).",
+    "boxes_reading_html": "Sessions are softening as the old blog cluster loses rankings, but <strong>leads have held nearly flat, organic conversion rate has more than doubled, and Maps clicks are accelerating</strong> — visitors are more qualified, the on-site funnel is doing more work per visit, and the Google Business surface is absorbing more of the demand. May '26 is partial (MTD daily pace shown).",
     "focus": [
       {
         "title": "Replicate Plattsburgh template",
