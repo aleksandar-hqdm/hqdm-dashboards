@@ -128,9 +128,9 @@
     }
   ],
   "trend": {
-    "headline": "GA4 18-month trend · Sessions + true conversions (booking + lead) — engagement signals broken out separately",
-    "annotation_text": "GA4 property 332738090. The 'conversions' figure GA4 reports across all channels jumped from ~126/mo (Dec 2024–Jul 2025) to ~1169/mo (Aug 2025–May 2026) — but this is a measurement artifact, not a business shift. In Aug 2025, three events were added as conversion events in GA4: <strong>gmb_click</strong> (a GBP listing tap), <strong>banner_booking_clicks</strong> (a banner CTA click — not a confirmed booking), and <strong>giftcard_click</strong> (a giftcard page click). None of these are real business outcomes. The <strong>true conversion stack — session_booked + booking_confirmed + contact_form_submission + contact_form_submit</strong> — averages 56/mo before Aug 2025 and 62/mo after (1.11× — essentially stable). The chart below plots both: raw GA4 conversions (inflated) and the apples-to-apples 'true conversions' line.",
-    "may_extrapolation_note": "May 2026 is partial through 2026-05-16 (16 of 31 days). Sessions & conversions shown as-reported by GA4; full-month run-rate not extrapolated on this chart.",
+    "headline": "GA4 18-month trend · Sessions + true conversions (booking + lead + qualified intent) — engagement signals and duplicate-tag events scrubbed",
+    "annotation_text": "GA4 property 332738090. Two GA4 measurement artifacts are scrubbed from the conversion numbers below. <strong>(1) Aug 2025 engagement-as-conversion configuration.</strong> Three events were flagged as conversion events in Aug 2025: <strong>gmb_click</strong> (GBP listing tap), <strong>banner_booking_clicks</strong> (banner CTA click), and <strong>giftcard_click</strong> (giftcard page click). None are real business outcomes; all three are excluded. <strong>(2) May 2026 duplicate event tags.</strong> Three new tags — <strong>booking_confirmed</strong>, <strong>click_phone_number</strong>, <strong>contact_form_submit</strong> — started attributing as conversions on May 1, alongside their existing twin tags (session_booked / click_to_dial / contact_form_submission). They fire on the same business action; we subtract them out (May 1-27 organic 95 raw → 53 de-duped). The reported conversion stack = session_booked + contact_form_submission (booking + lead) + click_to_dial + click_to_email (qualified intent). Pre-Aug-2025 monthly average: 56; post-cleanup average: 62 (1.11× — essentially stable).",
+    "may_extrapolation_note": "May 2026 is partial through 2026-05-27 (27 of 31 days). Sessions shown as-reported by GA4. Conversions for May are de-duplicated (subtract booking_confirmed + click_phone_number + contact_form_submit, which started double-firing on May 1). Full-month run-rate not extrapolated on this chart.",
     "months": [
       "Dec 2024",
       "Jan 2025",
@@ -170,7 +170,7 @@
         3577,
         3410,
         2601,
-        2098
+        2469
       ],
       "direct": [
         1198,
@@ -332,7 +332,7 @@
         47.0,
         53.0,
         59.0,
-        81.0
+        53.0
       ],
       "direct": [
         27.0,
@@ -706,11 +706,11 @@
       },
       {
         "q": "Q2 2026* (partial)",
-        "org_sess": 4699,
-        "org_conv": 140,
+        "org_sess": 5070,
+        "org_conv": 112,
         "org_conv_raw": 1335,
-        "org_true_only": 81,
-        "org_cr": 2.98,
+        "org_true_only": 69,
+        "org_cr": 2.21,
         "org_cr_raw": 28.41,
         "gbp_sess": 979,
         "gbp_conv": 95,
@@ -5189,7 +5189,7 @@
         3577,
         3410,
         2601,
-        2098
+        2469
       ],
       "leads": [
         62.0,
@@ -5199,7 +5199,7 @@
         47.0,
         53.0,
         59.0,
-        81.0
+        53.0
       ],
       "visitors_label": "Organic visitors",
       "leads_label": "Bookings & leads",
@@ -5224,7 +5224,7 @@
         5974,
         5952,
         10448,
-        4699
+        5070
       ],
       "leads": [
         45,
@@ -5233,7 +5233,7 @@
         169,
         171,
         164,
-        140
+        112
       ],
       "visitors_label": "Visitors",
       "leads_label": "Bookings",
@@ -5266,17 +5266,17 @@
       {
         "win": "Last 6 Months",
         "cmp": "vs prior 6 mo",
-        "kind": "good",
+        "kind": "watch",
         "rows": [
           {
             "m": "Visitors",
-            "d": "+46%",
+            "d": "+49%",
             "cls": "pos"
           },
           {
             "m": "Bookings",
-            "d": "+6%",
-            "cls": "pos"
+            "d": "−2%",
+            "cls": "neg"
           }
         ]
       },
@@ -5287,13 +5287,13 @@
         "rows": [
           {
             "m": "Visitors",
-            "d": "-14%",
+            "d": "−10%",
             "cls": "neg"
           },
           {
             "m": "Bookings",
-            "d": "+14%",
-            "cls": "pos"
+            "d": "−3%",
+            "cls": "neg"
           }
         ]
       }
