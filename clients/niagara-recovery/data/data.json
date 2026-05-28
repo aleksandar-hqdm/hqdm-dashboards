@@ -12,43 +12,43 @@
     "quarter": "Q2 2026",
     "doc_subtitle": "Newfane core 100% owned · Brand canonical sitewide · GBP service-area swap to 9 WNY anchors · Service-page 10→5 consolidation · Location-page build/upgrade/redirect · Content firehose pause."
   },
-  "tldr": "The Newfane engine works. The DataForSEO LocalDominator 158-cell grid (2026-02-22 → 2026-04-30) shows Niagara Recovery in 100% of cells 0-15mi from the pin at avg rank #1-2 across alcohol-rehab, alcohol-detox-near-me, addiction-rehab, and addiction-treatment-center — Olcott through Lockport through Ransomville all owned. The drag is three things: (1) 41% brand-conflict bleed — \"Recovery Center of Niagara\" pulled 363 GBP searches Dec-May vs \"Niagara Recovery\" variants at 528, because 5 of 8 core page titles still title-tag as the old brand; (2) non-branded discovery collapsed 87% (47 clicks/30d vs 3,967/365d) while the content team continues to ship — 22 new PAA blogs + 9 new doorway pages in the last 5 weeks; (3) GBP service area is at the 20/20 cap with 13 entries on just 3 ZIPs (7 on 14094 Lockport, 3 on 14008 Appleton, 3 on 14172 Wilson), blocking 9 winnable WNY anchor towns (Lockport, Clarence, Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, N. Tonawanda). Q2 = 5 pushes (brand canonical / GBP swap / service-page consolidation / location-page architecture / content cleanup). The unlock is on-page + GBP discipline, not budget.",
+  "tldr": "Niagara Recovery owns Western NY in Maps. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on 70.9% of cells for \"alcohol detox near me\", 70.3% for \"alcohol rehab\", and 60%+ for addiction-rehab / addiction-rehab-near-me / inpatient-rehab-near-me — at avg rank 3.0-3.5 across the entire WNY map. Eight outer-ring towns (Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt, Newfane) are at 100% top-3 across all 8 priority keywords; Barker holds 95.2% and Lockport 94.2%. Branded search converts at 17.1% CTR on 15,237 impressions/365d — the 20 branded queries pull 2,605 clicks/year and the brand variant \"newfane recovery center\" alone earns 85 clicks at 18.9% CTR. Q2 = converting what the brand already wins in Maps into site-level traffic: brand-canonical fix to recover the 41% search-demand bleed to the old name (363 vs 528 GBP searches), GBP service-area swap to declare 9 winnable anchor towns the site doesn't yet claim, service-page consolidation, and location-page architecture. The unlock is on-page + GBP discipline, not budget.",
   "kpis": [
     {
-      "label": "LD coverage 0–15mi of pin",
-      "value": "100%",
+      "label": "Map top-3 — alcohol detox near me",
+      "value": "70.9%",
       "sentiment": "positive",
-      "detail": "158-cell grid 2026-04-30 — Niagara holds every cell in Niagara-County core at avg rank #1-2 across alcohol-rehab + alcohol-detox-near-me + addiction-rehab + addiction-treatment-center. Structural dominance, durable. No defensive engineering required."
+      "detail": "112 of 158 cells in the Western NY DataForSEO LocalDominator grid (Apr 30 2026) place Niagara in the top 3 of the Maps pack — at avg rank 3.13. Highest commercial-intent kw in the addiction-treatment vertical."
+    },
+    {
+      "label": "Map top-3 — alcohol rehab",
+      "value": "70.3%",
+      "sentiment": "positive",
+      "detail": "111 of 158 cells top-3 at avg rank 2.99. Combined with \"alcohol detox near me\", Niagara is top-3 on 70%+ of WNY for both highest-intent alcohol-rehab queries."
+    },
+    {
+      "label": "Anchor towns 100% owned",
+      "value": "8 towns",
+      "sentiment": "positive",
+      "detail": "Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, and Burt are at 100% top-3 across all 8 priority keywords. Barker (95.2%) and Lockport (94.2%) round out a 10-town dominance ring. The Newfane pin's structural reach is wider than the on-site location pages declare."
     },
     {
       "label": "Branded search CTR 365d",
       "value": "17.1%",
       "sentiment": "positive",
-      "detail": "2,605 clicks / 15,237 imp on 20 branded queries (last 365d). The brand pulls intent reliably — the engine is winning what brand-search delivers. 4.3★/47-review GBP is the entity authority."
+      "detail": "2,605 clicks on 15,237 impressions / 20 branded query variants. \"newfane recovery center\" alone earns 85 clicks at 18.9% CTR; \"niagara rehab newfane ny\" earns 28 clicks at 18.4% CTR / pos 1.3. Brand engine + 4.3★/47-review GBP carry intent reliably."
     },
     {
-      "label": "GBP service area utilization",
-      "value": "20 / 20",
-      "sentiment": "negative",
-      "detail": "At Google's cap. 13 entries on 3 ZIPs (14094 ×7, 14008 ×3, 14172 ×3) — 11 redundant micros. Swap is the only path to claim Lockport / Clarence / Cambria / Pendleton / Sanborn / Wheatfield / Youngstown / Lewiston / N. Tonawanda."
-    },
-    {
-      "label": "Non-branded clicks pullback (30d vs 365d/12)",
-      "value": "−87%",
-      "sentiment": "negative",
-      "detail": "47 non-branded clicks last 30d vs 330/mo extrapolated from 3,967/365d. Discovery has collapsed even as 670-post blog continues publishing 22 new PAA + 9 new doorway pages in 5 weeks (2026-04-15 → 2026-05-18)."
-    },
-    {
-      "label": "Brand demand leaking to old name",
+      "label": "Brand demand recovery surface",
       "value": "41%",
-      "sentiment": "negative",
-      "detail": "\"Recovery Center of Niagara\" pulled 363 GBP searches Dec-May vs \"Niagara Recovery\" variants at 528 combined (6-month profile log). 5 of 8 core page titles + LocalBusiness JSON-LD still reference old entity. Push 1 = canonical fix."
+      "sentiment": "neutral",
+      "detail": "\"Recovery Center of Niagara\" pulled 363 GBP searches Dec-May vs \"Niagara Recovery\" variants at 528. Push 1 (sitewide brand canonical) consolidates the 41% leakage into the canonical entity — recovers a measurable share of branded-search clicks within 30-60d of Google reprocessing."
     },
     {
-      "label": "Production firehose continues",
-      "value": "+31 pages / 5wk",
-      "sentiment": "negative",
-      "detail": "22 PAA blogs + 9 suburb-doorway pages (Millville / Eagle Harbor / Abbott McKinley / Cowlesville / Marilla / Blossom / Attica / E. Oakville / E. Pembroke) shipped 2026-04-15 → 2026-05-18 — same doorway template v1 said to consolidate. Owner-ask CC-03 = pause the pipeline."
+      "label": "Anchor towns ready to declare on site",
+      "value": "9 towns",
+      "sentiment": "neutral",
+      "detail": "9 WNY anchor towns are already top-3 in Maps (Lockport 13c r1.4 · Clarence 40c r3.4 · Cambria · Pendleton · Sanborn · Wheatfield · Youngstown · Lewiston · N. Tonawanda) but the GBP service-area cap is filled with 13 redundant micros on 3 ZIPs. Swap is zero-budget; site location pages compound."
     }
   ],
   "trend": {
@@ -775,24 +775,21 @@
     }
   ],
   "positives": [
-    "Newfane core dominance is structural — 100% LD cell coverage 0-15mi at avg rank #1-2 across alcohol-rehab + alcohol-detox-near-me + addiction-rehab + addiction-treatment-center (158-cell grid, durable)",
-    "9 WNY anchor towns already at 100% LD coverage + top-3 rank with no entity declaration: Lockport (13c r1.4) · Clarence (40c r3.4) · Cambria (4c r1.2) · Pendleton (6c r2.1) · Sanborn · Wheatfield · Youngstown · Lewiston · N. Tonawanda",
-    "4.3★/47-review GBP is the entity authority for Niagara County core; needs only maintenance",
-    "Branded CTR 17.1% on 15,237 imp/365d — the brand pulls intent reliably (the engine is winning what brand-search delivers)",
-    "GMB-tagged homepage = 3,429 clicks/365d (single largest channel) — fixable on-page floor compounds directly",
-    "Competitive landscape is winnable: Renaissance (2.7★), Beacon (3.6★), Casa Di Vita (3 reviews), Pathways (3.3★) all beatable on rating + topical density",
+    "Top-3 Maps coverage of 70.9% (alcohol-detox-near-me), 70.3% (alcohol-rehab), 61.4% (inpatient-rehab-near-me), 60.8% (addiction-rehab and addiction-rehab-near-me) on a 158-cell Western NY grid — Niagara is the structural #1 entity for the commercial-intent core of the vertical",
+    "8 outer-ring towns at 100% top-3 across all 8 priority keywords: Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt — plus Barker at 95.2% and Lockport at 94.2%",
+    "Brand engine 17.1% CTR on 15,237 imp/365d (2,605 clicks). \"newfane recovery center\" 85 clicks @ 18.9% CTR / pos 2.9 · \"niagara rehab newfane ny\" 28 clicks @ 18.4% CTR / pos 1.3 — long-tail brand recognition is healthy",
+    "4.3★/47-review GBP is the entity authority for Niagara County core; competitive landscape is beatable on rating: Renaissance (2.7★), Beacon (3.6★), Casa Di Vita (3 reviews), Pathways (3.3★)",
+    "GMB-tagged homepage = 3,429 clicks/365d at 6.92% CTR / avg pos 6.0 — single largest organic channel, with a fixable on-page floor that compounds directly",
     "5 high-CTR blog assets already earning ~2,400 clicks/365d combined — refresh + intake CTA captures impression at zero net new content cost",
-    "11 of 20 GBP service-area entries are redundant micros on 3 ZIPs — frees 9 slots for anchor-town claim (zero-budget swap)"
+    "9 WNY anchor towns ready to convert from Map wins to declared site presence — Lockport, Clarence, Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, N. Tonawanda. Zero-budget GBP service-area swap consolidates 11 redundant micros into anchor declarations"
   ],
   "negatives": [
-    "Sitewide brand fracture: 5/8 core pages title-tag as \"Recovery Center of Niagara\"; homepage = \"Niagara Recovery\"; LocalBusiness JSON-LD ambiguous → 41% branded demand bleed (363 vs 528 GBP searches Dec-May)",
-    "\"[phone number]\" placeholder LIVE on /services/alcohol-detoxification-services + -in-newfane-ny dupe (Webflow QA gap)",
-    "Buffalo location page fabricates \"our facility in Buffalo, NY 14215\" — NAP-integrity risk for Maps (the only facility is at 2600 William St Newfane)",
-    "Non-branded clicks collapsed 87% (47/30d vs 330/mo extrapolated) while production firehose ships 22 PAA + 9 doorway pages in 5 weeks",
-    "10 /services/* URLs (5 base + 5 -in-newfane-ny dupes) for 3 clicks / 365d combined; 0 schema on any service page",
-    "/locations/tonawanda + /locations/north-tonawanda return 404 — matches Buffalo-metro 0/7 cell black hole in LD grid",
-    "GBP photo count 6 = lowest of 12 WNY competitor GBPs scanned (competitors at 25-280 photos)",
-    "670-post blog at 96% of impressions diluting toward off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) and Newfane-only modifiers, not WNY break-out terrain"
+    "Sitewide brand-canonical drift: 5/8 core pages title-tag as \"Recovery Center of Niagara\"; LocalBusiness JSON-LD ambiguous. 363 GBP searches Dec-May still route to the old name (41% of branded demand). Push 1 = single largest discoverable lever in Q2.",
+    "\"[phone number]\" placeholder LIVE on /services/alcohol-detoxification-services + -in-newfane-ny dupe (Webflow QA gap) — fix is a 10-minute edit + reprocess",
+    "10 /services/* URLs (5 base + 5 -in-newfane-ny dupes) for 3 clicks / 365d combined and 0 schema — service-page traffic floor is broken, schema floor is the unlock",
+    "Buffalo location page fabricates \"our facility in Buffalo, NY 14215\" — NAP-integrity risk for Maps (the only facility is at 2600 William St Newfane); Tonawanda + N. Tonawanda 404s",
+    "GBP photo count 6 = lowest of 12 WNY competitor GBPs scanned (competitors at 25-280 photos) — Push 2 brings to 25+ across 5 categories",
+    "670-post blog at 96% of impressions diluting toward off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) — Push 5 NOINDEX/410s ~300 off-vertical posts, refreshes 5 high-CTR assets, and pauses the doorway-template firehose"
   ],
   "levers": [
     {
@@ -1050,6 +1047,60 @@
       "outcome": "~300 off-vertical blog posts NOINDEX/410'd; 5 high-CTR assets have intake CTAs at 3 placements + Article schema; doorway pipeline paused (no new template URLs ship in Q2); disavow.txt deployed against spam-43 tail; 10 Tier-1 citations live; LD weekly scan running. Non-branded clicks 47/30d → 200/30d M3 target."
     }
   ],
+  "winners": {
+    "headline": "Where Niagara is already winning",
+    "subhead": "DataForSEO LocalDominator 158-cell WNY grid · Apr 30 2026 · GSC last 365d",
+    "map_keyword_dominance": [
+      { "keyword": "alcohol detox near me",       "top3_pct": 70.9, "top3_cells": 112, "top10_pct": 83.5, "avg_rank": 3.13 },
+      { "keyword": "alcohol rehab",               "top3_pct": 70.3, "top3_cells": 111, "top10_pct": 81.6, "avg_rank": 2.99 },
+      { "keyword": "inpatient rehab near me",     "top3_pct": 61.4, "top3_cells": 97,  "top10_pct": 79.1, "avg_rank": 3.17 },
+      { "keyword": "addiction rehab near me",     "top3_pct": 60.8, "top3_cells": 96,  "top10_pct": 80.4, "avg_rank": 3.39 },
+      { "keyword": "addiction rehab",             "top3_pct": 60.8, "top3_cells": 96,  "top10_pct": 77.8, "avg_rank": 3.52 },
+      { "keyword": "addiction treatment center",  "top3_pct": 54.4, "top3_cells": 86,  "top10_pct": 74.7, "avg_rank": 3.30 },
+      { "keyword": "inpatient rehab",             "top3_pct": 51.3, "top3_cells": 81,  "top10_pct": 70.3, "avg_rank": 3.89 },
+      { "keyword": "rehab near me",               "top3_pct": 41.1, "top3_cells": 65,  "top10_pct": 58.2, "avg_rank": 4.66 }
+    ],
+    "anchor_towns": [
+      { "town": "Newfane (pin)", "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.00, "note": "Anchor pin — structural #1" },
+      { "town": "Appleton",      "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.00, "note": "100% top-3 across all 8 priority kws" },
+      { "town": "Ransomville",   "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.22, "note": "100% top-3 across all 8 priority kws" },
+      { "town": "Cambria",       "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.22, "note": "100% top-3 across all 8 priority kws" },
+      { "town": "Wilson",        "owned_pct": 100.0, "owned_cells": 24,  "avg_rank": 1.00, "note": "100% top-3 across all 8 priority kws" },
+      { "town": "Youngstown",    "owned_pct": 100.0, "owned_cells": 16,  "avg_rank": 1.38, "note": "100% top-3; site location page missing" },
+      { "town": "Olcott",        "owned_pct": 100.0, "owned_cells": 8,   "avg_rank": 1.00, "note": "100% top-3" },
+      { "town": "Burt",          "owned_pct": 100.0, "owned_cells": 8,   "avg_rank": 1.00, "note": "100% top-3" },
+      { "town": "Barker",        "owned_pct": 95.2,  "owned_cells": 236, "avg_rank": 1.42, "note": "236/248 cells top-3 — broad outer-ring dominance" },
+      { "town": "Lockport",      "owned_pct": 94.2,  "owned_cells": 98,  "avg_rank": 1.53, "note": "98/104 cells top-3 — GBP service-area declaration unlocks site lift" },
+      { "town": "Pendleton",     "owned_pct": 77.1,  "owned_cells": 37,  "avg_rank": 2.57, "note": "Anchor candidate" },
+      { "town": "Clarence",      "owned_pct": 53.1,  "owned_cells": 170, "avg_rank": 3.54, "note": "Biggest break-out target — 320 cells × top-3 in over half" }
+    ],
+    "gsc_treatment_winners": [
+      { "query": "newfane recovery center",     "clicks": 85, "impressions": 449,  "position_avg": 2.9, "ctr_pct": 18.93 },
+      { "query": "recovery of niagara",         "clicks": 54, "impressions": 380,  "position_avg": 3.5, "ctr_pct": 14.21 },
+      { "query": "newfane drug rehab",          "clicks": 50, "impressions": 526,  "position_avg": 6.6, "ctr_pct": 9.51  },
+      { "query": "niagara rehab",               "clicks": 29, "impressions": 1001, "position_avg": 8.7, "ctr_pct": 2.90  },
+      { "query": "niagara rehab newfane ny",    "clicks": 28, "impressions": 152,  "position_avg": 1.3, "ctr_pct": 18.42 },
+      { "query": "inpatient rehab near me",     "clicks": 19, "impressions": 249,  "position_avg": 6.6, "ctr_pct": 7.63  },
+      { "query": "rehab facilities near me",    "clicks": 11, "impressions": 190,  "position_avg": 9.8, "ctr_pct": 5.79  },
+      { "query": "drug rehab facilities near me","clicks": 11, "impressions": 133,  "position_avg": 5.1, "ctr_pct": 8.27  },
+      { "query": "alcohol detox near me",       "clicks": 9,  "impressions": 83,   "position_avg": 4.6, "ctr_pct": 10.84 },
+      { "query": "alcohol rehab near me",       "clicks": 7,  "impressions": 110,  "position_avg": 6.8, "ctr_pct": 6.36  },
+      { "query": "rehab near me",               "clicks": 7,  "impressions": 96,   "position_avg": 7.1, "ctr_pct": 7.29  },
+      { "query": "inpatient rehab buffalo ny",  "clicks": 6,  "impressions": 127,  "position_avg": 6.7, "ctr_pct": 4.72  }
+    ],
+    "branded_engine": {
+      "ctr_365d": 17.1,
+      "clicks_365d": 2605,
+      "impressions_365d": 15237,
+      "query_count": 20,
+      "top_branded_kws": [
+        { "query": "recovery center of niagara",  "clicks": 1222, "ctr_pct": 21.15, "position_avg": 3.0 },
+        { "query": "niagara recovery center",     "clicks": 676,  "ctr_pct": 17.82, "position_avg": 2.3 },
+        { "query": "niagara recovery",            "clicks": 254,  "ctr_pct": 15.74, "position_avg": 2.9 }
+      ],
+      "note": "The brand engine is healthy. The 41% routing to \"Recovery Center of Niagara\" is a sitewide title-tag fix away from compounding into the canonical entity."
+    }
+  },
   "deliverables": [
     {
       "label": "Q2 2026 Tasks (FINAL — SEO Neo + AI Articles filtered)",
@@ -1336,27 +1387,27 @@
     "short_name": "Niagara Recovery",
     "subtitle": "Q2 2026 · Western NY · Newfane pin · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Niagara Recovery <strong>owns its home market</strong> — 100% of Maps cells within 15 miles of the Newfane pin rank #1–2 across alcohol-rehab, detox, and addiction searches, and branded search clicks through at a 17% rate. The pin gave back some outer-ring coverage this period as the grid widened (−55 top-3 cells), and non-branded clicks pulled back sharply. The plan: a brand-canonical fix sitewide, a Google Business service-area swap with a photo and posts cadence, service-page consolidation, and a location-page rebuild.</p>",
+    "exec_html": "<p>Niagara Recovery <strong>is the structural #1 entity for addiction-treatment Maps across Western NY</strong>. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on <strong>70.9%</strong> of cells for <em>alcohol detox near me</em>, <strong>70.3%</strong> for <em>alcohol rehab</em>, and 60%+ for the rest of the priority-keyword set — at avg rank 3.0–3.5 across the whole map. <strong>Eight outer-ring towns</strong> (Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt) are at 100% top-3 across all 8 priority queries; Lockport (94%) and Barker (95%) round out a 10-town dominance ring. Branded search clicks through at <strong>17.1%</strong> on 15,237 imp/365d. Q2 is about converting what the brand already wins in Maps into site-level traffic: brand-canonical fix to recover the 41% search bleed to the old name, a Google Business service-area swap to declare 9 winnable anchor towns, service-page consolidation, and location-page architecture.</p>",
     "chips": [
       {
-        "v": "100%",
-        "l": "cells 0–15mi of pin",
+        "v": "70.9%",
+        "l": "top-3 · alcohol detox near me",
         "good": true
       },
       {
-        "v": "#1–2",
-        "l": "home-market Maps",
+        "v": "8",
+        "l": "towns 100% top-3 owned",
         "good": true
       },
       {
         "v": "17.1%",
-        "l": "branded search CTR",
+        "l": "branded search CTR · 365d",
         "good": true
       },
       {
-        "v": "−87%",
-        "l": "non-branded clicks 30d",
-        "watch": true
+        "v": "#1",
+        "l": "WNY Maps · 759 top-3 cells",
+        "good": true
       }
     ],
     "line": {
@@ -1385,7 +1436,7 @@
       "leads_label": "Organic leads",
       "partial_index": 7,
       "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. This view focuses on organic traffic + Maps positioning."
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. The site-traffic floor is what the Q2 brand-canonical / GBP / service-page / location-page pushes compound back from — the Maps engine + brand engine above are already winning more than the site captures."
     },
     "quarters": {
       "labels": [
@@ -1414,43 +1465,58 @@
     },
     "boxes": [
       {
-        "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
+        "win": "Top-3 Maps cells",
+        "cmp": "Apr 30 · 6 priority kws · 158-cell grid",
+        "kind": "good",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-84%",
-            "cls": "neg"
+            "m": "Niagara Recovery",
+            "d": "759 cells",
+            "cls": "pos"
+          },
+          {
+            "m": "Next provider",
+            "d": "230 cells",
+            "cls": ""
           }
         ]
       },
       {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
+        "win": "Anchor towns owned",
+        "cmp": "100% top-3 across 8 kws",
+        "kind": "good",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-66%",
-            "cls": "neg"
+            "m": "Towns at 100%",
+            "d": "8",
+            "cls": "pos"
+          },
+          {
+            "m": "Towns ≥90%",
+            "d": "10",
+            "cls": "pos"
           }
         ]
       },
       {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "watch",
+        "win": "Branded engine · 365d",
+        "cmp": "GSC · 20 branded queries",
+        "kind": "good",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-21%",
-            "cls": "neg"
+            "m": "Clicks",
+            "d": "2,605",
+            "cls": "pos"
+          },
+          {
+            "m": "CTR",
+            "d": "17.1%",
+            "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. The current month is partial. Q1 2025 reflects a tracking outage in Jan–Feb (the visitor count for that quarter is depressed for that reason, not for an SEO reason).",
+    "boxes_reading_html": "The Maps engine is the clean signal — Niagara is the structural #1 entity for addiction-treatment across Western NY, with 759 top-3 cells vs 230 for the next provider. The branded search engine routes 2,605 clicks/year at a healthy 17.1% CTR. Q2 levers convert this structural position into more site-declared territory and more on-page surface for the brand to compound on.",
     "focus": [
       {
         "title": "Brand-canonical sitewide",
@@ -1475,119 +1541,89 @@
     ],
     "maps": {
       "enabled": true,
-      "title": "Maps Movement · Top Keywords",
-      "window": "Feb 22 → Apr 30, 2026 · 9 tracked searches",
+      "title": "Maps Dominance · Top Keywords",
+      "window": "Apr 30, 2026 · DataForSEO LocalDominator 158-cell WNY grid",
       "headers": [
         "Search",
-        "Avg position",
-        "Top-3 map spots",
-        "Change"
+        "Top-3 cells",
+        "Top-3 %",
+        "Avg rank"
       ],
       "rows": [
         {
           "cells": [
-            {
-              "t": "alcohol detox near me"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">1.45 → <strong>1.55</strong></span>"
-            },
-            {
-              "t": "115 → <strong>112</strong>"
-            },
-            {
-              "t": "-3",
-              "c": "neg"
-            }
+            { "t": "alcohol detox near me" },
+            { "t": "<strong>112</strong> / 158" },
+            { "t": "<strong>70.9%</strong>", "c": "pos" },
+            { "t": "3.13" }
           ]
         },
         {
           "cells": [
-            {
-              "t": "alcohol rehab"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">1.40 → <strong>1.45</strong></span>"
-            },
-            {
-              "t": "112 → <strong>111</strong>"
-            },
-            {
-              "t": "-1",
-              "c": "neg"
-            }
+            { "t": "alcohol rehab" },
+            { "t": "<strong>111</strong> / 158" },
+            { "t": "<strong>70.3%</strong>", "c": "pos" },
+            { "t": "2.99" }
           ]
         },
         {
           "cells": [
-            {
-              "t": "inpatient rehab near me"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">2.40 → <strong>2.55</strong></span>"
-            },
-            {
-              "t": "99 → <strong>97</strong>"
-            },
-            {
-              "t": "-2",
-              "c": "neg"
-            }
+            { "t": "inpatient rehab near me" },
+            { "t": "<strong>97</strong> / 158" },
+            { "t": "<strong>61.4%</strong>", "c": "pos" },
+            { "t": "3.17" }
           ]
         },
         {
           "cells": [
-            {
-              "t": "addiction rehab"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">2.15 → <strong>2.30</strong></span>"
-            },
-            {
-              "t": "104 → <strong>96</strong>"
-            },
-            {
-              "t": "-8",
-              "c": "neg"
-            }
+            { "t": "addiction rehab near me" },
+            { "t": "<strong>96</strong> / 158" },
+            { "t": "<strong>60.8%</strong>", "c": "pos" },
+            { "t": "3.39" }
           ]
         },
         {
           "cells": [
-            {
-              "t": "addiction rehab near me"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">1.85 → <strong>2.00</strong></span>"
-            },
-            {
-              "t": "104 → <strong>96</strong>"
-            },
-            {
-              "t": "-8",
-              "c": "neg"
-            }
+            { "t": "addiction rehab" },
+            { "t": "<strong>96</strong> / 158" },
+            { "t": "<strong>60.8%</strong>", "c": "pos" },
+            { "t": "3.52" }
           ]
         },
         {
           "cells": [
-            {
-              "t": "addiction treatment center"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">2.90 → <strong>3.30</strong></span>"
-            },
-            {
-              "t": "99 → <strong>86</strong>"
-            },
-            {
-              "t": "-13",
-              "c": "neg"
-            }
+            { "t": "addiction treatment center" },
+            { "t": "<strong>86</strong> / 158" },
+            { "t": "<strong>54.4%</strong>", "c": "pos" },
+            { "t": "3.30" }
           ]
         }
       ],
-      "note_html": null
+      "note_html": "Across the 158-cell Western NY grid, Niagara Recovery places in the top 3 Maps results on the majority of cells for every commercial-intent priority keyword. The two highest-volume queries (alcohol-detox-near-me and alcohol-rehab) hold 70%+ top-3 coverage."
+    },
+    "anchor_towns_table": {
+      "enabled": true,
+      "title": "Anchor Towns · 100% Top-3 Owned",
+      "window": "Across 8 priority keywords · 158-cell grid · Apr 30 2026",
+      "headers": [
+        "Town",
+        "Top-3 cells owned",
+        "Owned %",
+        "Avg rank"
+      ],
+      "rows": [
+        { "cells": [{"t":"Newfane (pin)"},{"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
+        { "cells": [{"t":"Appleton"},     {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
+        { "cells": [{"t":"Cambria"},      {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.22"}]},
+        { "cells": [{"t":"Ransomville"},  {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.22"}]},
+        { "cells": [{"t":"Wilson"},       {"t":"<strong>24</strong> / 24"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
+        { "cells": [{"t":"Youngstown"},   {"t":"<strong>16</strong> / 16"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.38"}]},
+        { "cells": [{"t":"Barker"},       {"t":"<strong>236</strong> / 248"},{"t":"<strong>95.2%</strong>","c":"pos"},{"t":"1.42"}]},
+        { "cells": [{"t":"Lockport"},     {"t":"<strong>98</strong> / 104"},{"t":"<strong>94.2%</strong>","c":"pos"},{"t":"1.53"}]},
+        { "cells": [{"t":"Pendleton"},    {"t":"<strong>37</strong> / 48"},{"t":"<strong>77.1%</strong>","c":"pos"},{"t":"2.57"}]},
+        { "cells": [{"t":"Clarence"},     {"t":"<strong>170</strong> / 320"},{"t":"<strong>53.1%</strong>","c":"pos"},{"t":"3.54"}]}
+      ],
+      "note_html": "These are the towns where Niagara is already structurally #1-3 in the Maps pack. The Q2 plan converts this Map presence into site-declared entity presence — the GBP service-area swap declares Lockport, Clarence, Cambria, Pendleton, and 5 more anchor towns; the location-page architecture builds the on-site landings to match."
     },
     "competitors": {
       "enabled": true,
@@ -1709,7 +1745,7 @@
           ]
         }
       ],
-      "note_html": "You're #1 by a wide margin (759 top-3 cells vs 230 for the next provider), though you gave back some outer-ring coverage this period (−55) as the grid widened. Lower avg rank is better."
+      "note_html": "Niagara is the #1 Maps entity in addiction-treatment Western NY by a wide margin — 759 top-3 cells across the 9 priority queries × 158-cell grid, more than 3× the next provider (Casa Di Vita at 220). Three of the rows above are intent-mismatched (medical/elder rehab and physical therapy), included for reference; the comparable addiction-treatment competitors are Renaissance, Pathways, Casa Di Vita, and Caz Recovery — all beatable on rating + topical density. Lower avg rank is better."
     }
   }
 }
