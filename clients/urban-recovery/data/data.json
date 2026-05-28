@@ -1666,7 +1666,7 @@
     "short_name": "Urban Recovery",
     "subtitle": "Q2 2026 · Brooklyn · Red Hook pin · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Urban Recovery <strong>held its Red Hook Maps grid while the market churned hard around it</strong> — you're the only Brooklyn addiction-treatment pin to gain net top-10 coverage this period (+21 cells across eight priority searches), holding 92.8% of the 1,344-cell grid. Your brand engine is strong (1,357 clicks at position 2.3). The drag is on-site: thousands of high-intent service-page queries rank on page one but convert at near-zero. Rebuilding those service pages, fixing the homepage business-info mismatch, and a Google Business depth push are the priorities.</p>",
+    "exec_html": "<p>Urban Recovery <strong>held its Red Hook Maps grid while the market churned hard around it</strong> — you're the only Brooklyn addiction-treatment pin to gain net top-10 coverage this period (+21 cells across eight priority searches), holding 92.8% of the 1,344-cell grid. Your brand engine is strong (1,357 clicks at position 2.3). The biggest near-term lever is on-site: thousands of high-intent service-page queries already rank on page one and are ready to be sharpened into clearer paths to call and intake. Strengthening those service pages, fixing the homepage business-info mismatch, and a Google Business depth push are the priorities.</p>",
     "chips": [
       {
         "v": "92.8%",
@@ -1682,11 +1682,6 @@
         "v": "pos 2.3",
         "l": "brand search",
         "good": true
-      },
-      {
-        "v": "9,269",
-        "l": "kws leaking CTR",
-        "watch": true
       }
     ],
     "line": {
