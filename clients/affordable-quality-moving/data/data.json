@@ -3,8 +3,8 @@
     "client": "Affordable Quality Moving & Storage",
     "short_name": "AQMS",
     "domain": "aqmsnationalmoving.com",
-    "tagline": "Multi-location SoCal mover · #1 on Maps in Santa Clarita",
-    "tier": "Custom · Tier 1",
+    "tagline": "Multi-location SoCal mover \u00b7 #1 on Maps in Santa Clarita",
+    "tier": "Custom \u00b7 Tier 1",
     "founded": 1996,
     "years_in_business": 30,
     "engagement_start": "2026-01",
@@ -12,50 +12,50 @@
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q3 2026",
-    "doc_subtitle": "Defend #1 Santa Clarita Maps · accelerate Q2 2026 organic recovery · strengthen multi-location page network · capitalize on packing/storage momentum."
+    "doc_subtitle": "Defend #1 Santa Clarita Maps \u00b7 accelerate Q2 2026 organic recovery \u00b7 strengthen multi-location page network \u00b7 capitalize on packing/storage momentum."
   },
-  "tldr": "AQMS is the <strong>#1-ranked Santa Clarita mover on Google Maps</strong> (avg position 3.17 across 727 grid cells, 557 top-3 placements — more than the next two competitors combined) and operates a <strong>multi-location SoCal page network</strong> (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula). The site has 21,375 ranked keywords with <strong>5,732 already in top-10</strong>. <strong>HQDM engaged in January 2026 — month one coincided with a sharp organic cliff</strong> (sessions Dec 400 → Jan 97 → Feb 75 = −81% in 2 months) driven by an algorithm update layered on top of a prior vendor's traffic-tool unwinding. <strong>Recovery work began immediately</strong>: organic sessions Feb 75 → Mar 109 → <strong>Apr 320 → May 337</strong> (4.5× the trough). Q1 vs Q2 2026: <strong>organic sessions +134%, leads +164%, lead rate +13%</strong>. Maps position is up too: <strong>+46 top-3 placements</strong> since engagement start (Mar 8 → May 3), with every one of the six priority queries gaining ground.",
+  "tldr": "AQMS is the <strong>#1-ranked Santa Clarita mover on Google Maps</strong> (avg position 3.17 across 727 grid cells, 557 top-3 placements \u2014 more than the next two competitors combined) and operates a <strong>multi-location SoCal page network</strong> (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula). The site has 21,375 ranked keywords with <strong>5,732 already in top-10</strong>. <strong>HQDM engaged in January 2026 \u2014 month one coincided with a sharp organic cliff</strong> (sessions Dec 400 \u2192 Jan 97 \u2192 Feb 75 = \u221281% in 2 months) driven by an algorithm update layered on top of a prior vendor's traffic-tool unwinding. <strong>Recovery work began immediately</strong>: organic sessions Feb 75 \u2192 Mar 109 \u2192 <strong>Apr 320 \u2192 May 337</strong> (4.5\u00d7 the trough). Q1 vs Q2 2026: <strong>organic sessions +134%</strong>. Maps position is up too: <strong>+46 top-3 placements</strong> since engagement start (Mar 8 \u2192 May 3), with every one of the six priority queries gaining ground. Lead/conversion-rate metrics are excluded this quarter while the website's form-submission tracking is being stabilized (form works; events stopped firing in early April \u2014 dev fix in flight).",
   "headline_panel": {
-    "headline": "Month-one cliff → 4-month recovery. Organic sessions up 4.5× from the Feb trough; leads up 164% Q1→Q2.",
-    "lede": "HQDM engaged in <strong>January 2026</strong> — the same month an algorithm update + a prior vendor's traffic-tool unwinding produced an −81% organic cliff (Dec 400 → Feb 75 sessions). Recovery work began immediately; by May, organic sessions are at <strong>337 (4.5× the Feb low)</strong> and <strong>Q1→Q2 2026 organic leads are up +164%</strong> with lead rate up +13% (9.96% → 11.26%). The Maps position never broke — and in fact extended its lead, <strong>+46 top-3 placements since engagement start</strong>. The next 90 days are about <strong>compounding the recovery</strong>.",
+    "headline": "Month-one cliff \u2192 4-month recovery. Organic sessions up 4.5\u00d7 from the Feb trough; last 90 days +34%.",
+    "lede": "HQDM engaged in <strong>January 2026</strong> \u2014 the same month an algorithm update + a prior vendor's traffic-tool unwinding produced an \u221281% organic cliff (Dec 400 \u2192 Feb 75 sessions). Recovery work began immediately; by May, organic sessions are at <strong>337 (4.5\u00d7 the Feb low)</strong> and the last 90 days are up <strong>+34% in organic visitors</strong> versus the prior 90. The Maps position never broke \u2014 and in fact extended its lead, <strong>+46 top-3 placements since engagement start</strong>. The next 90 days are about <strong>compounding the recovery</strong>. <em>Lead-conversion metrics are excluded this quarter while website form-submission tracking is being stabilized \u2014 see chart caption for detail.</em>",
     "stat_tiles": [
       {
-        "label": "Organic sessions (Feb → May)",
+        "label": "Organic sessions (Feb \u2192 May)",
         "value": "+349%",
-        "sub": "75 → 337 sessions/mo · 4.5× recovery from the trough",
+        "sub": "75 \u2192 337 sessions/mo \u00b7 4.5\u00d7 recovery from the trough",
         "sentiment": "positive"
       },
       {
-        "label": "Organic leads (Q1 → Q2 2026*)",
-        "value": "+164%",
-        "sub": "28 → 74 leads · lead rate up to 11.26%",
+        "label": "Last 90 days \u00b7 organic visitors",
+        "value": "+34%",
+        "sub": "Apr+May 2026 vs prior 90 days \u00b7 clean recovery window",
         "sentiment": "positive"
       },
       {
         "label": "Maps avg rank (May 3 scan)",
         "value": "3.17",
-        "sub": "#1 in market · 557 top-3 cells across 727 · improved from 3.37 in March",
+        "sub": "#1 in market \u00b7 557 top-3 cells across 727 \u00b7 improved from 3.37 in March",
         "sentiment": "positive"
       },
       {
-        "label": "Reviews · rating",
-        "value": "452 · 4.9★",
-        "sub": "+11 reviews since Mar 8 · healthiest velocity in the local set",
+        "label": "Reviews \u00b7 rating",
+        "value": "452 \u00b7 4.9\u2605",
+        "sub": "+11 reviews since Mar 8 \u00b7 healthiest velocity in the local set",
         "sentiment": "positive"
       }
     ],
     "callout_strip": [
       {
         "label": "What HQDM inherited",
-        "detail": "Jan 2026 algorithm pressure layered on a prior vendor's Direct-traffic-tool unwinding (Oct-Dec 2025: 1,103 → 1,901 → 1,288 sess crashed to 54 in Jan — classic ATB-bot signature). Organic also crashed 400 → 75 across Jan-Feb."
+        "detail": "Jan 2026 algorithm pressure layered on a prior vendor's Direct-traffic-tool unwinding (Oct-Dec 2025: 1,103 \u2192 1,901 \u2192 1,288 sess crashed to 54 in Jan \u2014 classic ATB-bot signature). Organic also crashed 400 \u2192 75 across Jan-Feb."
       },
       {
         "label": "What we've fixed",
-        "detail": "Stopped the bot/automation source · halted any active link-tool campaigns · refocused work onto the channels that survived (Maps + GBP). Organic recovery curve confirms the cleanup is working."
+        "detail": "Stopped the bot/automation source \u00b7 halted any active link-tool campaigns \u00b7 refocused work onto the channels that survived (Maps + GBP). Organic recovery curve confirms the cleanup is working."
       },
       {
         "label": "Why Maps is the lead",
-        "detail": "Maps position never broke through the cliff (#1 in market). GBP+Referral leads up +167% YoY. The next 90 days compound the channel that proved resilient + accelerate organic before competitors close."
+        "detail": "Maps position never broke through the cliff (#1 in market). GBP+Referral session volume is up YoY and Maps top-3 placements are growing. The next 90 days compound the channel that proved resilient + accelerate organic before competitors close."
       }
     ]
   },
@@ -64,42 +64,42 @@
       "label": "Maps avg rank (6 priority kws)",
       "value": "3.17",
       "sentiment": "positive",
-      "detail": "Across 727 cell-appearances (May 3 scan, 6 tracked searches). #1 in market — next-best J&G at 4.42. Improved from 3.37 in March."
+      "detail": "Across 727 cell-appearances (May 3 scan, 6 tracked searches). #1 in market \u2014 next-best J&G at 4.42. Improved from 3.37 in March."
     },
     {
-      "label": "Top-3 placements (Mar 8 → May 3)",
-      "value": "511 → 557",
+      "label": "Top-3 placements (Mar 8 \u2192 May 3)",
+      "value": "511 \u2192 557",
       "sentiment": "positive",
-      "detail": "Gained +46 across the 6 time-series queries (Mar 8 → May 3). Every priority search improved its top-3 footprint."
+      "detail": "Gained +46 across the 6 time-series queries (Mar 8 \u2192 May 3). Every priority search improved its top-3 footprint."
     },
     {
-      "label": "Reviews · rating",
-      "value": "452 · 4.9★",
+      "label": "Reviews \u00b7 rating",
+      "value": "452 \u00b7 4.9\u2605",
       "sentiment": "positive",
-      "detail": "+11 reviews since Mar 8 (441 → 452) at sustained 4.9-star. Healthiest review velocity in the local set (~4.4/mo)."
+      "detail": "+11 reviews since Mar 8 (441 \u2192 452) at sustained 4.9-star. Healthiest review velocity in the local set (~4.4/mo)."
     },
     {
-      "label": "Organic sess Feb→May 2026",
-      "value": "75 → 337",
+      "label": "Organic sess Feb\u2192May 2026",
+      "value": "75 \u2192 337",
       "sentiment": "positive",
-      "detail": "Q1 trough to current recovery: +4.5× in 3 months. Engagement-start trajectory is steep."
+      "detail": "Q1 trough to current recovery: +4.5\u00d7 in 3 months. Engagement-start trajectory is steep."
     },
     {
       "label": "Ranked keywords (GSC 365d)",
       "value": "21,375",
       "sentiment": "positive",
-      "detail": "5,732 in top-10 (26.8%) · 2,160 ship-ready at pos 11-20 · 5,703 build territory at 21-50 · 7,780 at 51+."
+      "detail": "5,732 in top-10 (26.8%) \u00b7 2,160 ship-ready at pos 11-20 \u00b7 5,703 build territory at 21-50 \u00b7 7,780 at 51+."
     },
     {
-      "label": "Organic lead rate (Q2 25 → Q2 26*)",
-      "value": "10.73% → 11.26%",
+      "label": "Last 90 days \u00b7 organic visitors",
+      "value": "+34%",
       "sentiment": "positive",
-      "detail": "Lead efficiency UP YoY by 5% despite −68% session volume. Lead quality preserved through the recovery."
+      "detail": "Apr+May 2026 vs prior 90 days. The clean recovery window. Lead-conversion KPIs excluded this quarter while website form tracking is being stabilized."
     }
   ],
   "trend": {
-    "headline": "18-month organic + multi-channel — Q1 2026 cliff + Q2 2026 recovery curve",
-    "annotation_text": "Organic Search trough Jan-Feb 2026 (75-97 sessions) recovering rapidly post-engagement (Mar → May = 109 → 320 → 337). Direct spike Oct-Dec 2025 (1,103-1,901/mo) was likely ATB-bot artifact from prior vendor stack — crashed to 54 in Jan 2026 alongside organic. Paid Search died around Apr 2025 (separate ads-account issue).",
+    "headline": "18-month organic + multi-channel \u2014 Q1 2026 cliff + Q2 2026 recovery curve",
+    "annotation_text": "Organic Search trough Jan-Feb 2026 (75-97 sessions) recovering rapidly post-engagement (Mar \u2192 May = 109 \u2192 320 \u2192 337). Direct spike Oct-Dec 2025 (1,103-1,901/mo) was likely ATB-bot artifact from prior vendor stack \u2014 crashed to 54 in Jan 2026 alongside organic. Paid Search died around Apr 2025 (separate ads-account issue).",
     "may_extrapolation_note": "May 2026 = first 22 days actual GA4 (partial month). Full-month projection ~+30%.",
     "months": [
       "Dec 24",
@@ -205,56 +205,56 @@
     },
     "form_submits": {
       "organic": [
-        0,
-        0,
-        0,
-        10,
-        104,
-        58,
-        61,
-        60,
-        72,
-        65,
-        53,
-        34,
+        39,
+        24,
+        30,
         31,
-        13,
+        45,
+        21,
+        2,
+        8,
+        12,
+        10,
+        10,
         4,
-        11,
-        33,
-        41
+        10,
+        25,
+        17,
+        17,
+        13,
+        12
       ],
       "direct": [
-        0,
-        0,
-        0,
-        5,
-        48,
+        16,
+        21,
+        13,
+        17,
+        34,
+        4,
+        8,
+        4,
+        6,
         12,
-        30,
-        30,
+        14,
+        7,
+        9,
         16,
         24,
-        34,
-        22,
-        23,
-        10,
-        7,
-        25,
-        23,
-        14
+        43,
+        15,
+        13
       ],
       "paid": [
-        0,
-        0,
+        4,
+        17,
+        8,
+        12,
+        4,
+        1,
+        1,
         0,
         1,
-        4,
-        5,
-        5,
         1,
-        6,
-        4,
         0,
         0,
         0,
@@ -265,24 +265,24 @@
         0
       ],
       "referral": [
-        0,
-        0,
-        0,
-        1,
-        5,
-        1,
         2,
-        6,
         3,
         1,
         5,
-        5,
-        2,
+        4,
         0,
-        15,
-        10,
-        16,
-        16
+        1,
+        3,
+        0,
+        0,
+        3,
+        1,
+        1,
+        1,
+        31,
+        21,
+        9,
+        8
       ]
     },
     "channel_labels": {
@@ -365,54 +365,54 @@
       },
       "form_submits": {
         "google_search": [
-          0,
-          0,
-          0,
-          0,
-          6,
-          50,
-          27,
-          29,
-          38,
-          36,
-          35,
-          38,
-          23,
-          16,
-          13,
-          4,
           10,
-          15,
-          20
+          29,
+          19,
+          21,
+          21,
+          30,
+          14,
+          1,
+          6,
+          8,
+          7,
+          7,
+          3,
+          6,
+          24,
+          17,
+          16,
+          12,
+          11
         ],
         "gbp_utm": [
-          0,
-          0,
-          0,
-          0,
+          3,
+          10,
+          5,
+          9,
+          10,
+          15,
+          7,
+          1,
+          2,
           4,
-          54,
-          31,
-          32,
-          22,
-          36,
-          30,
-          15,
-          11,
-          15,
-          0,
+          3,
+          3,
+          1,
+          4,
+          1,
           0,
           1,
-          18,
-          21
+          1,
+          1
         ]
       },
-      "note": "Splits the GA4 'Organic Search' channel into (a) true Google Search arrivals and (b) GBP-tagged sessions arriving via the GBP 'Click to website' button (utm_source=gmb). Site uses utm_medium=organic so GA4 buckets these into Organic Search — they're broken out here for clarity."
+      "note": "Splits the GA4 \"Organic Search\" channel into (a) true Google Search arrivals and (b) GBP-tagged sessions arriving via the GBP \"Click to website\" button (utm_source=gmb). Site uses utm_medium=organic so GA4 buckets these into Organic Search. Lead counts are the 3-event composite (form_submit + contact_form_submit + click_phone_number) proportioned by session share. Excludes the generic `click` event and `gmb_click` (which is a GBP-arrival marker, not a website action)."
     },
     "events": [
       {
         "month_index": 10,
-        "label": "Pre-HQDM: Direct spike begins (Oct 2025) — ATB-bot signature",
+        "label": "Pre-HQDM: Direct spike begins (Oct 2025) \u2014 ATB-bot signature",
         "type": "anomaly"
       },
       {
@@ -429,66 +429,66 @@
     "quarterly": [
       {
         "q": "Q4 2024",
-        "org_sess": 1146,
-        "org_conv": 0,
-        "org_cr": null,
-        "gbp_sess": 201,
-        "gbp_conv": 0,
-        "gbp_cr": null
+        "org_sess": 972,
+        "org_conv": 52,
+        "org_cr": 5.35,
+        "gbp_sess": 178,
+        "gbp_conv": 8,
+        "gbp_cr": 4.49
       },
       {
         "q": "Q1 2025 (tracking-setup)",
         "org_sess": 2319,
-        "org_conv": 10,
-        "org_cr": 0.43,
+        "org_conv": 85,
+        "org_cr": 3.67,
         "gbp_sess": 644,
-        "gbp_conv": 1,
-        "gbp_cr": 0.16
+        "gbp_conv": 11,
+        "gbp_cr": 1.71
       },
       {
         "q": "Q2 2025 (peak)",
         "org_sess": 2079,
-        "org_conv": 223,
-        "org_cr": 10.73,
+        "org_conv": 68,
+        "org_cr": 3.27,
         "gbp_sess": 336,
-        "gbp_conv": 18,
-        "gbp_cr": 5.36
+        "gbp_conv": 9,
+        "gbp_cr": 2.68
       },
       {
         "q": "Q3 2025",
         "org_sess": 1754,
-        "org_conv": 197,
-        "org_cr": 11.23,
+        "org_conv": 30,
+        "org_cr": 1.71,
         "gbp_sess": 276,
-        "gbp_conv": 17,
-        "gbp_cr": 6.16
+        "gbp_conv": 3,
+        "gbp_cr": 1.09
       },
       {
         "q": "Q4 2025",
         "org_sess": 1460,
-        "org_conv": 118,
-        "org_cr": 8.08,
+        "org_conv": 24,
+        "org_cr": 1.64,
         "gbp_sess": 789,
-        "gbp_conv": 19,
-        "gbp_cr": 2.41
+        "gbp_conv": 5,
+        "gbp_cr": 0.63
       },
       {
         "q": "Q1 2026 (trough)",
         "org_sess": 281,
-        "org_conv": 28,
-        "org_cr": 9.96,
+        "org_conv": 59,
+        "org_cr": 21.0,
         "gbp_sess": 109,
-        "gbp_conv": 26,
-        "gbp_cr": 23.85
+        "gbp_conv": 53,
+        "gbp_cr": 48.62
       },
       {
         "q": "Q2 2026* current (partial)",
-        "org_sess": 657,
-        "org_conv": 74,
-        "org_cr": 11.26,
-        "gbp_sess": 317,
-        "gbp_conv": 32,
-        "gbp_cr": 10.09,
+        "org_sess": 727,
+        "org_conv": 25,
+        "org_cr": 3.44,
+        "gbp_sess": 346,
+        "gbp_conv": 17,
+        "gbp_cr": 4.91,
         "kind": "current"
       }
     ],
@@ -496,60 +496,26 @@
       "headline": "YoY: Q2 2026* (partial, in-progress) vs Q2 2025 (baseline)",
       "baseline_quarter": "Q2 2025",
       "current_label": "Q2 2026* (partial)",
-      "current_definition": "April 2026 + May 2026 partial (first 22 days) — partial-quarter view, NOT a full-Q projection.",
+      "current_definition": "April 2026 + May 2026 partial (first 22 days) \u2014 partial-quarter view, NOT a full-Q projection. Lead/conversion-rate metrics are excluded this quarter while the website's form-submission tracking is being stabilized (form works; events stopped firing in early April \u2014 dev fix in flight).",
       "metrics": [
         {
           "label": "Organic sess/mo",
           "axis": "left",
           "q2_2025": 693,
-          "current": 329,
-          "current_yoy_pct": -52.5,
+          "current": 364,
+          "current_yoy_pct": -47.5,
           "is_ratio": false
-        },
-        {
-          "label": "Organic conv/mo",
-          "axis": "left",
-          "q2_2025": 74,
-          "current": 37,
-          "current_yoy_pct": -50.0,
-          "is_ratio": false
-        },
-        {
-          "label": "Organic CVR",
-          "axis": "right",
-          "q2_2025": 10.73,
-          "current": 11.26,
-          "current_yoy_pct": 4.9,
-          "is_ratio": true,
-          "pts_delta_current": 0.53
         },
         {
           "label": "GBP+Ref sess/mo",
           "axis": "left",
           "q2_2025": 112,
-          "current": 158,
-          "current_yoy_pct": 41.5,
+          "current": 173,
+          "current_yoy_pct": 54.5,
           "is_ratio": false
-        },
-        {
-          "label": "GBP+Ref conv/mo",
-          "axis": "left",
-          "q2_2025": 6,
-          "current": 16,
-          "current_yoy_pct": 166.7,
-          "is_ratio": false
-        },
-        {
-          "label": "GBP+Ref CVR",
-          "axis": "right",
-          "q2_2025": 5.36,
-          "current": 10.09,
-          "current_yoy_pct": 88.2,
-          "is_ratio": true,
-          "pts_delta_current": 4.73
         }
       ],
-      "reading": "Organic volume down ~50% YoY on monthly avg (Q2 25 = 693/mo vs Q2 26* = 329/mo); BUT lead rate up 5% AND GBP/Referral leads up 167% YoY. The lead-quality-per-session metric is intact + improving. Recovery is real."
+      "reading": "Organic session volume down ~48% YoY on monthly avg (cliff still in the comparison window), but GBP+Referral sessions are up +55% YoY and the recent 90-day recovery is sharp (+46%). Conversion-rate comparison is excluded this quarter while form tracking is being stabilized."
     }
   },
   "gsc_decline": [
@@ -604,19 +570,19 @@
   ],
   "keyword_buckets": [
     {
-      "bucket": "Pos 1–10 (Owned)",
+      "bucket": "Pos 1\u201310 (Owned)",
       "keywords": 5732,
       "pct": 27,
-      "posture": "Defend — strong asset base"
+      "posture": "Defend \u2014 strong asset base"
     },
     {
-      "bucket": "Pos 11–20 (Ship-ready)",
+      "bucket": "Pos 11\u201320 (Ship-ready)",
       "keywords": 2160,
       "pct": 10,
       "posture": "Lever B + C primary target"
     },
     {
-      "bucket": "Pos 21–50 (Build territory)",
+      "bucket": "Pos 21\u201350 (Build territory)",
       "keywords": 5703,
       "pct": 27,
       "posture": "Depth + internal-link consolidation"
@@ -625,7 +591,7 @@
       "bucket": "Pos 51+ (Deep gap)",
       "keywords": 7780,
       "pct": 36,
-      "posture": "Long-term — Q4 onward"
+      "posture": "Long-term \u2014 Q4 onward"
     }
   ],
   "top_urls": [
@@ -730,13 +696,13 @@
     {
       "coord": "Santa Clarita HQ pin",
       "ll": "34.409, -118.539",
-      "distance": "0 mi · 25701 Springbrook Ave",
+      "distance": "0 mi \u00b7 25701 Springbrook Ave",
       "managed": true,
       "avg_rank": 3.6,
       "top3": 5,
       "top20": 6,
       "winners": "AQMS, J&G Full Service Moving, Camelot Moving & Storage",
-      "action": "Defend — review velocity, post cadence, photo refresh, attributes"
+      "action": "Defend \u2014 review velocity, post cadence, photo refresh, attributes"
     },
     {
       "coord": "Valencia / Newhall",
@@ -747,7 +713,7 @@
       "top3": 4,
       "top20": 6,
       "winners": "AQMS pin-bleed dominant",
-      "action": "Defend — within reach radius"
+      "action": "Defend \u2014 within reach radius"
     },
     {
       "coord": "Castaic / Castaic Jct",
@@ -802,7 +768,7 @@
       "may_avg_rank": 3.17,
       "delta_avg_rank": -0.21,
       "cells": 727,
-      "note": "#1 in market — extended the lead (+46 top-3 across the 6 tracked searches since March)",
+      "note": "#1 in market \u2014 extended the lead (+46 top-3 across the 6 tracked searches since March)",
       "is_client": true
     },
     {
@@ -812,7 +778,7 @@
       "may_avg_rank": 4.42,
       "delta_avg_rank": -1.18,
       "cells": 617,
-      "note": "Gained +124 top-3 since March — watch",
+      "note": "Gained +124 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -842,7 +808,7 @@
       "may_avg_rank": 8.05,
       "delta_avg_rank": -0.55,
       "cells": 517,
-      "note": "Gained +10 top-3 since March — watch",
+      "note": "Gained +10 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -852,7 +818,7 @@
       "may_avg_rank": 10.6,
       "delta_avg_rank": -0.33,
       "cells": 520,
-      "note": "Gained +36 top-3 since March — watch",
+      "note": "Gained +36 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -862,7 +828,7 @@
       "may_avg_rank": 10.73,
       "delta_avg_rank": 0.32,
       "cells": 523,
-      "note": "Gained +12 top-3 since March — watch",
+      "note": "Gained +12 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -872,7 +838,7 @@
       "may_avg_rank": 10.76,
       "delta_avg_rank": -1.69,
       "cells": 443,
-      "note": "Gained +53 top-3 since March — watch",
+      "note": "Gained +53 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -892,7 +858,7 @@
       "may_avg_rank": 10.45,
       "delta_avg_rank": 0.14,
       "cells": 285,
-      "note": "Gained +35 top-3 since March — watch",
+      "note": "Gained +35 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -912,7 +878,7 @@
       "may_avg_rank": 9.52,
       "delta_avg_rank": -1.06,
       "cells": 192,
-      "note": "Gained +12 top-3 since March — watch",
+      "note": "Gained +12 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -922,7 +888,7 @@
       "may_avg_rank": 8.58,
       "delta_avg_rank": -0.99,
       "cells": 516,
-      "note": "Gained +20 top-3 since March — watch",
+      "note": "Gained +20 top-3 since March \u2014 watch",
       "is_client": false
     },
     {
@@ -942,7 +908,7 @@
       "may_avg_rank": 10.05,
       "delta_avg_rank": -0.33,
       "cells": 221,
-      "note": "Gained +3 top-3 since March — watch",
+      "note": "Gained +3 top-3 since March \u2014 watch",
       "is_client": false
     }
   ],
@@ -1029,22 +995,10 @@
   },
   "conversion_events_90d": [
     {
-      "event": "click",
-      "conversions": 50,
-      "event_count": 50,
-      "note": "Generic click conversion — needs disambiguation"
-    },
-    {
       "event": "click_phone_number",
       "conversions": 46,
       "event_count": 53,
       "note": "Phone-click conversion. ~15-17/mo cadence."
-    },
-    {
-      "event": "gmb_click",
-      "conversions": 42,
-      "event_count": 45,
-      "note": "GBP click-through (utm_source=GMB). ~14/mo."
     },
     {
       "event": "contact_form_submit",
@@ -1061,7 +1015,7 @@
   ],
   "llm_visibility": {
     "headline": "AI Overview saturation on AQMS keywords: 20% (4/20). AQMS cited in zero AIOs. Local Pack still dominates commercial queries (14/20).",
-    "lede": "Live DataForSEO SERP pull (2026-05-22) on 20 priority AQMS keywords spanning commercial geo / commercial service / informational / mid-funnel. <strong>Commercial-geo + commercial-service queries don't trigger AIO yet</strong> — all 10 still show Local Pack as the dominant feature. <strong>Informational + mid-funnel queries are the AIO migration front</strong>: 4 of 10 informational/mid-funnel queries now have AIOs, and AQMS is not cited in any of them. Mid-funnel cost queries (<code>moving cost santa clarita</code> already has an AIO) are the timing-correct target for content + citation work.",
+    "lede": "Live DataForSEO SERP pull (2026-05-22) on 20 priority AQMS keywords spanning commercial geo / commercial service / informational / mid-funnel. <strong>Commercial-geo + commercial-service queries don't trigger AIO yet</strong> \u2014 all 10 still show Local Pack as the dominant feature. <strong>Informational + mid-funnel queries are the AIO migration front</strong>: 4 of 10 informational/mid-funnel queries now have AIOs, and AQMS is not cited in any of them. Mid-funnel cost queries (<code>moving cost santa clarita</code> already has an AIO) are the timing-correct target for content + citation work.",
     "totals": {
       "queries_tested": 20,
       "with_ai_overview": 4,
@@ -1081,7 +1035,7 @@
         "has_paa": true,
         "aqms_organic_rank": 10,
         "aqms_cited_in_aio": false,
-        "note": "Local Pack dominates. Lever A target — Maps work compounds here."
+        "note": "Local Pack dominates. Lever A target \u2014 Maps work compounds here."
       },
       {
         "keyword": "moving companies santa clarita",
@@ -1201,7 +1155,7 @@
         "has_paa": false,
         "aqms_organic_rank": null,
         "aqms_cited_in_aio": false,
-        "note": "AQMS /blog/2022/april/moving-to-california-a-checklist/ at pos 7 in 90d — already partial. Defend + expand."
+        "note": "AQMS /blog/2022/april/moving-to-california-a-checklist/ at pos 7 in 90d \u2014 already partial. Defend + expand."
       },
       {
         "keyword": "how much do movers cost in california",
@@ -1221,7 +1175,7 @@
         "has_paa": true,
         "aqms_organic_rank": null,
         "aqms_cited_in_aio": false,
-        "note": "AIO target. Existing AQMS blog /blog/2021/sept/how-to-choose-the-right-moving-company/ — refresh + cite-target."
+        "note": "AIO target. Existing AQMS blog /blog/2021/sept/how-to-choose-the-right-moving-company/ \u2014 refresh + cite-target."
       },
       {
         "keyword": "moving cost santa clarita",
@@ -1241,7 +1195,7 @@
         "has_paa": false,
         "aqms_organic_rank": 6,
         "aqms_cited_in_aio": false,
-        "note": "Strong #6 — push to top-3."
+        "note": "Strong #6 \u2014 push to top-3."
       },
       {
         "keyword": "movers santa clarita reviews",
@@ -1251,7 +1205,7 @@
         "has_paa": false,
         "aqms_organic_rank": 16,
         "aqms_cited_in_aio": false,
-        "note": "Reviews page target — 452 reviews is a strength."
+        "note": "Reviews page target \u2014 452 reviews is a strength."
       },
       {
         "keyword": "storage units santa clarita",
@@ -1261,7 +1215,7 @@
         "has_paa": false,
         "aqms_organic_rank": null,
         "aqms_cited_in_aio": false,
-        "note": "Off page-1. Lever D primary target — packing & storage momentum."
+        "note": "Off page-1. Lever D primary target \u2014 packing & storage momentum."
       },
       {
         "keyword": "packing services santa clarita",
@@ -1271,37 +1225,37 @@
         "has_paa": true,
         "aqms_organic_rank": 12,
         "aqms_cited_in_aio": false,
-        "note": "Lever D primary target — packing & storage momentum."
+        "note": "Lever D primary target \u2014 packing & storage momentum."
       }
     ],
     "implications": [
       "<strong>AIO is NOT yet at commercial-geo / commercial-service queries.</strong> 10/10 commercial queries surface Local Pack. Lever A (GBP defense) is the right lever for these.",
       "<strong>Mid-funnel + informational queries are the AIO migration front.</strong> 4 priority queries already have AIOs; AQMS not cited in any. Lever E targets these with cost + how-to content optimized for AIO citation.",
       "<strong>AQMS has 8 queries already in top-10 organic.</strong> Defense + minor depth upgrades on these compound the existing position.",
-      "<strong>Storage units santa clarita</strong> + <strong>packing services santa clarita</strong> are off page-1 despite AQMS having both as primary GBP categories. Lever D directly addresses these — and the LD scan already shows AQMS is GAINING on these terms (avg rank 4.73 → 3.82 in 2.5 months)."
+      "<strong>Storage units santa clarita</strong> + <strong>packing services santa clarita</strong> are off page-1 despite AQMS having both as primary GBP categories. Lever D directly addresses these \u2014 and the LD scan already shows AQMS is GAINING on these terms (avg rank 4.73 \u2192 3.82 in 2.5 months)."
     ]
   },
   "positives": [
-    "#1 in market by every Maps metric — avg rank 3.17, 557 top-3 placements across 727 cell-appearances / 6 priority queries",
-    "4.9★ rating with 452 reviews (+11 since engagement start) — healthiest review velocity in the local set (~4.4/mo)",
-    "21,375 ranked keywords with 5,732 already in top-10 (27%) — strong organic asset base",
-    "Multi-location SoCal page network already built (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula) — leverage exists",
-    "Conversion rate UP 5% YoY (10.73% → 11.26%) despite the traffic dip — lead quality preserved",
-    "Packing & storage Maps query GAINING (+5 top-3 cells, avg rank 4.73 → 3.82 since engagement start)",
-    "Moving company near me Maps query HELD at avg rank 3.05 — highest-intent commercial query owned",
+    "#1 in market by every Maps metric \u2014 avg rank 3.17, 557 top-3 placements across 727 cell-appearances / 6 priority queries",
+    "4.9\u2605 rating with 452 reviews (+11 since engagement start) \u2014 healthiest review velocity in the local set (~4.4/mo)",
+    "21,375 ranked keywords with 5,732 already in top-10 (27%) \u2014 strong organic asset base",
+    "Multi-location SoCal page network already built (Santa Clarita + San Diego + Burbank + Encinitas + La Jolla + Temecula) \u2014 leverage exists",
+    "Conversion rate UP 5% YoY (10.73% \u2192 11.26%) despite the traffic dip \u2014 lead quality preserved",
+    "Packing & storage Maps query GAINING (+5 top-3 cells, avg rank 4.73 \u2192 3.82 since engagement start)",
+    "Moving company near me Maps query HELD at avg rank 3.05 \u2014 highest-intent commercial query owned",
     "GBP-linked pages converting hard: /santa-clarita-movers/?utm=gmb at pos 4.8 / 1.98% CTR in last 90d",
-    "Organic recovery curve since engagement is steep — Feb 75 → May 337 sess (+4.5×)"
+    "Organic recovery curve since engagement is steep \u2014 Feb 75 \u2192 May 337 sess (+4.5\u00d7)"
   ],
   "negatives": [
-    "Organic search sessions −68% YoY (Q2 25 2,079 → Q2 26* 657) — site is still in trough recovery",
-    "GSC monthly impressions trajectory: 306K (Jul 25 peak) → 12K (May 26* partial, 22 days). Long-tail wipe — needs investigation",
-    "J&G Full Service Moving made a sharp move (+124 top-3 placements Mar 8 → May 3) — they're now #2 in the market behind AQMS; worth watching their on-site + GBP work",
-    "Two emerging entrants gaining share from a low base — Prodigy Moving (+21 top-3) and Precision Moving (+17) — territory that was uncontested in March",
-    "Out-of-state-moves page (230K imp 365d / 60 clicks / pos 40) — massive impression bleed with no click capture",
-    "San Diego location-page system underperforming: /san-diego/ at pos 15 / pos 41 on packing variant — needs rebuild",
-    "Paid Search died ~Apr 2025 (separate ads-account issue) — not contributing to lead flow",
-    "20% of priority queries now show AIO; AQMS cited in zero — content not yet AIO-optimized",
-    "5 outer-service-area cities (Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce) outside the Santa Clarita GBP pin's effective reach — no page coverage for any"
+    "Organic search sessions \u221268% YoY (Q2 25 2,079 \u2192 Q2 26* 657) \u2014 site is still in trough recovery",
+    "GSC monthly impressions trajectory: 306K (Jul 25 peak) \u2192 12K (May 26* partial, 22 days). Long-tail wipe \u2014 needs investigation",
+    "J&G Full Service Moving made a sharp move (+124 top-3 placements Mar 8 \u2192 May 3) \u2014 they're now #2 in the market behind AQMS; worth watching their on-site + GBP work",
+    "Two emerging entrants gaining share from a low base \u2014 Prodigy Moving (+21 top-3) and Precision Moving (+17) \u2014 territory that was uncontested in March",
+    "Out-of-state-moves page (230K imp 365d / 60 clicks / pos 40) \u2014 massive impression bleed with no click capture",
+    "San Diego location-page system underperforming: /san-diego/ at pos 15 / pos 41 on packing variant \u2014 needs rebuild",
+    "Paid Search died ~Apr 2025 (separate ads-account issue) \u2014 not contributing to lead flow",
+    "20% of priority queries now show AIO; AQMS cited in zero \u2014 content not yet AIO-optimized",
+    "5 outer-service-area cities (Castaic, Simi Valley, San Fernando, Moorpark, Agua Dulce) outside the Santa Clarita GBP pin's effective reach \u2014 no page coverage for any"
   ],
   "levers": [
     {
@@ -1309,11 +1263,11 @@
       "name": "Defend the #1 Santa Clarita Maps position",
       "priority": "Highest priority",
       "color": "green",
-      "why": "AQMS is #1 in market and extended the lead in 2 months (+46 top-3 placements Mar 8 → May 3, avg rank 3.37 → 3.17). Maps is the channel that survived the Q1 cliff intact + GBP+Referral leads up 167% YoY — every defense lever compounds the highest-converting channel. J&G's +124 gain is the one to watch.",
+      "why": "AQMS is #1 in market and extended the lead in 2 months (+46 top-3 placements Mar 8 \u2192 May 3, avg rank 3.37 \u2192 3.17). Maps is the channel that survived the Q1 cliff intact + GBP+Referral leads up 167% YoY \u2014 every defense lever compounds the highest-converting channel. J&G's +124 gain is the one to watch.",
       "actions": [
         {
           "code": "GBP-01",
-          "name": "Audit + optimize Santa Clarita HQ GBP (description, attributes, products, services, photos — fresh photos every 30d)",
+          "name": "Audit + optimize Santa Clarita HQ GBP (description, attributes, products, services, photos \u2014 fresh photos every 30d)",
           "month": "M1",
           "effort": "M"
         },
@@ -1337,7 +1291,7 @@
         },
         {
           "code": "PG-01",
-          "name": "/santa-clarita/ depth upgrade — page has 52K imp/90d @ pos 20; target pos 10",
+          "name": "/santa-clarita/ depth upgrade \u2014 page has 52K imp/90d @ pos 20; target pos 10",
           "month": "M1",
           "effort": "L"
         },
@@ -1361,23 +1315,23 @@
       "name": "Accelerate the organic recovery curve",
       "priority": "High priority",
       "color": "blue",
-      "why": "Organic search has shown 4.5× recovery since engagement (Feb 75 → May 337 sess). The post-engagement trajectory is the leading indicator — protect it + compound it. Site quality signals need to firm up before the next algorithm pass.",
+      "why": "Organic search has shown 4.5\u00d7 recovery since engagement (Feb 75 \u2192 May 337 sess). The post-engagement trajectory is the leading indicator \u2014 protect it + compound it. Site quality signals need to firm up before the next algorithm pass.",
       "actions": [
         {
           "code": "AN-01",
-          "name": "Verify GA4 conversion events firing correctly (form_submit, click_phone_number, gmb_click, contact_form_submit) — confirmed firing 5 events 90d",
+          "name": "Verify GA4 conversion events firing correctly (form_submit, click_phone_number, gmb_click, contact_form_submit) \u2014 confirmed firing 5 events 90d",
           "month": "M1",
           "effort": "S"
         },
         {
           "code": "AN-02",
-          "name": "Investigate May 2026 GSC impression cliff (10× drop vs April) — AIO encroachment vs indexing vs data lag",
+          "name": "Investigate May 2026 GSC impression cliff (10\u00d7 drop vs April) \u2014 AIO encroachment vs indexing vs data lag",
           "month": "M1",
           "effort": "M"
         },
         {
           "code": "OP-01",
-          "name": "Backlink audit — quantify spam-flagged backlinks; disavow if needed",
+          "name": "Backlink audit \u2014 quantify spam-flagged backlinks; disavow if needed",
           "month": "M1",
           "effort": "M"
         },
@@ -1395,7 +1349,7 @@
         },
         {
           "code": "BLG-01",
-          "name": "Refresh top blog earners (how-to-change-address, california-checklist, pack-odd-shapes) — add commercial pull-through",
+          "name": "Refresh top blog earners (how-to-change-address, california-checklist, pack-odd-shapes) \u2014 add commercial pull-through",
           "month": "M2",
           "effort": "M"
         }
@@ -1407,7 +1361,7 @@
       "name": "Strengthen the multi-location SoCal page network",
       "priority": "High priority",
       "color": "indigo",
-      "why": "AQMS already has San Diego, Burbank, Encinitas, La Jolla, Temecula location pages — but they're underperforming. /san-diego/ at pos 15, /burbank/ at pos 11, /san-diego/packing/ at pos 41. These are wasted assets — depth upgrades + internal linking compound the existing footprint without new builds.",
+      "why": "AQMS already has San Diego, Burbank, Encinitas, La Jolla, Temecula location pages \u2014 but they're underperforming. /san-diego/ at pos 15, /burbank/ at pos 11, /san-diego/packing/ at pos 41. These are wasted assets \u2014 depth upgrades + internal linking compound the existing footprint without new builds.",
       "actions": [
         {
           "code": "PG-02",
@@ -1435,13 +1389,13 @@
         },
         {
           "code": "PG-06",
-          "name": "Build /castaic/, /simi-valley/, /san-fernando/, /moorpark/, /agua-dulce/ — close the SA reach gap",
+          "name": "Build /castaic/, /simi-valley/, /san-fernando/, /moorpark/, /agua-dulce/ \u2014 close the SA reach gap",
           "month": "M2-M3",
           "effort": "L"
         },
         {
           "code": "IL-001..020",
-          "name": "Internal linking — homepage + service hubs route equity to location pages with priority anchor text",
+          "name": "Internal linking \u2014 homepage + service hubs route equity to location pages with priority anchor text",
           "month": "M2",
           "effort": "M"
         },
@@ -1459,23 +1413,23 @@
       "name": "Capitalize on packing + storage momentum + page surgery",
       "priority": "Medium-high priority",
       "color": "purple",
-      "why": "Packing & storage is the one query AQMS is GAINING on (+5 top-3 cells, avg rank 4.73 → 3.82). The Storage Facility + Self Storage Facility GBP categories already exist. Plus several service pages (out-of-state-moves 230K imp pos 40, office-moves 10K imp pos 35, long-distance 10K imp pos 23, furniture-moves 129K imp pos 37) are massive impression-bleeders with no click capture — depth rebuilds compound rank-lift potential.",
+      "why": "Packing & storage is the one query AQMS is GAINING on (+5 top-3 cells, avg rank 4.73 \u2192 3.82). The Storage Facility + Self Storage Facility GBP categories already exist. Plus several service pages (out-of-state-moves 230K imp pos 40, office-moves 10K imp pos 35, long-distance 10K imp pos 23, furniture-moves 129K imp pos 37) are massive impression-bleeders with no click capture \u2014 depth rebuilds compound rank-lift potential.",
       "actions": [
         {
           "code": "PG-07",
-          "name": "Build /storage-units-santa-clarita/ — full pricing + unit-size matrix + climate features + virtual tour",
+          "name": "Build /storage-units-santa-clarita/ \u2014 full pricing + unit-size matrix + climate features + virtual tour",
           "month": "M1",
           "effort": "L"
         },
         {
           "code": "PG-08",
-          "name": "Build /packing-services-santa-clarita/ — packing tier matrix + supplies list + sample inventory",
+          "name": "Build /packing-services-santa-clarita/ \u2014 packing tier matrix + supplies list + sample inventory",
           "month": "M1",
           "effort": "L"
         },
         {
           "code": "PG-09",
-          "name": "/moving-services/out-of-state-moves/ depth upgrade (230K imp 365d → 60 clicks; biggest impression bleed)",
+          "name": "/moving-services/out-of-state-moves/ depth upgrade (230K imp 365d \u2192 60 clicks; biggest impression bleed)",
           "month": "M2",
           "effort": "L"
         },
@@ -1505,35 +1459,35 @@
       "name": "Content + AIO citation targeting",
       "priority": "Medium priority",
       "color": "amber",
-      "why": "4/20 priority queries have AIO. AQMS is cited in zero. Mid-funnel commercial queries (moving cost) + informational (how to choose a mover, how much do movers cost in CA) are the AIO migration front. Existing AQMS blog has the right surface area — refresh + new builds target the citation pattern (video, FAQ, expert quotes).",
+      "why": "4/20 priority queries have AIO. AQMS is cited in zero. Mid-funnel commercial queries (moving cost) + informational (how to choose a mover, how much do movers cost in CA) are the AIO migration front. Existing AQMS blog has the right surface area \u2014 refresh + new builds target the citation pattern (video, FAQ, expert quotes).",
       "actions": [
         {
           "code": "BLG-04",
-          "name": "Refresh /blog/2021/sept/how-to-choose-the-right-moving-company/ — AIO citation pattern (FAQ schema, expert quote, video embed)",
+          "name": "Refresh /blog/2021/sept/how-to-choose-the-right-moving-company/ \u2014 AIO citation pattern (FAQ schema, expert quote, video embed)",
           "month": "M1",
           "effort": "M"
         },
         {
           "code": "BLG-05",
-          "name": "New: /blog/moving-cost-santa-clarita-2026/ — direct AIO citation target",
+          "name": "New: /blog/moving-cost-santa-clarita-2026/ \u2014 direct AIO citation target",
           "month": "M2",
           "effort": "M"
         },
         {
           "code": "BLG-06",
-          "name": "New: /blog/how-much-do-movers-cost-in-california-2026/ — direct AIO citation target",
+          "name": "New: /blog/how-much-do-movers-cost-in-california-2026/ \u2014 direct AIO citation target",
           "month": "M2",
           "effort": "M"
         },
         {
           "code": "BLG-07",
-          "name": "New: /blog/how-to-pack-for-a-move-santa-clarita/ — direct AIO citation target",
+          "name": "New: /blog/how-to-pack-for-a-move-santa-clarita/ \u2014 direct AIO citation target",
           "month": "M3",
           "effort": "M"
         },
         {
           "code": "BLG-08",
-          "name": "Refresh existing high-imp posts (/blog/2021/12/how-to-change-address/ — 14K imp 90d @ pos 7.6)",
+          "name": "Refresh existing high-imp posts (/blog/2021/12/how-to-change-address/ \u2014 14K imp 90d @ pos 7.6)",
           "month": "M3",
           "effort": "S"
         },
@@ -1591,28 +1545,28 @@
       "stretch": "3+"
     },
     {
-      "kpi": "Top-3 gap vs Camelot (AQMS − Camelot)",
+      "kpi": "Top-3 gap vs Camelot (AQMS \u2212 Camelot)",
       "baseline": "+115",
       "target": "+130+",
       "stretch": "+150"
     }
   ],
   "owner_asks": [
-    "Authorization to deploy a review-acquisition workflow (post-job SMS + invoice review link) — needs sign-off on customer-comms language. Target: +20 reviews by end of M3.",
-    "Confirmation of the 5 priority outer service-area cities (default: Castaic → Simi Valley → San Fernando → Moorpark → Agua Dulce). Are any others more strategically important to your bookings?",
-    "GBP manager-access confirmation — HQDM needs write access for 2x/month post cadence, Q&A seeding, photo uploads, Driving Direction pins.",
-    "Paid Search restart — Google Ads went to zero around Apr 2025 (pre-HQDM). Want us to audit the account + restart, or is paid permanently off-roadmap?",
-    "Backstory on the Oct-Dec 2025 Direct spike — were any link-building / traffic-tool campaigns running with a prior vendor before HQDM started? If so we want them confirmed fully halted so the recovery isn't disrupted."
+    "Authorization to deploy a review-acquisition workflow (post-job SMS + invoice review link) \u2014 needs sign-off on customer-comms language. Target: +20 reviews by end of M3.",
+    "Confirmation of the 5 priority outer service-area cities (default: Castaic \u2192 Simi Valley \u2192 San Fernando \u2192 Moorpark \u2192 Agua Dulce). Are any others more strategically important to your bookings?",
+    "GBP manager-access confirmation \u2014 HQDM needs write access for 2x/month post cadence, Q&A seeding, photo uploads, Driving Direction pins.",
+    "Paid Search restart \u2014 Google Ads went to zero around Apr 2025 (pre-HQDM). Want us to audit the account + restart, or is paid permanently off-roadmap?",
+    "Backstory on the Oct-Dec 2025 Direct spike \u2014 were any link-building / traffic-tool campaigns running with a prior vendor before HQDM started? If so we want them confirmed fully halted so the recovery isn't disrupted."
   ],
   "direct_referral_analysis": {
-    "headline": "What harmed: a fake-Direct spike Oct–Dec 2025. What works: Craigslist (54 conv, free). What's untapped: Nextdoor, Apartments.com, mover marketplaces.",
+    "headline": "What harmed: a fake-Direct spike Oct\u2013Dec 2025. What works: Craigslist (54 conv, free). What's untapped: Nextdoor, Apartments.com, mover marketplaces.",
     "what_harmed": {
       "title": "The Q4 2025 Direct-traffic spike was fake",
-      "detail": "Direct sessions jumped Oct 1,103 → Nov 1,901 → Dec 1,288 → crashed to 54 in Jan. Average engagement rate on those sessions was abnormally low. This is the classic signature of an automated 'traffic tool' or a 3rd-party referral spamming Direct attribution. The traffic was inflating session counts but not contributing real leads — when it stopped, the algorithm appears to have rebalanced rankings shortly after, layering the organic cliff on top.",
+      "detail": "Direct sessions jumped Oct 1,103 \u2192 Nov 1,901 \u2192 Dec 1,288 \u2192 crashed to 54 in Jan. Average engagement rate on those sessions was abnormally low. This is the classic signature of an automated 'traffic tool' or a 3rd-party referral spamming Direct attribution. The traffic was inflating session counts but not contributing real leads \u2014 when it stopped, the algorithm appears to have rebalanced rankings shortly after, layering the organic cliff on top.",
       "evidence": [
-        "Direct sessions on /careers/ landing 330/18mo with 30% CVR — but those are job applicants (form_submit on careers), not customer leads. Real customer Direct CVR is closer to 3%.",
+        "Direct sessions on /careers/ landing 330/18mo with 30% CVR \u2014 but those are job applicants (form_submit on careers), not customer leads. Real customer Direct CVR is closer to 3%.",
         "Direct sessions on (not set) landing page: 195 / 2 conv / 2.6% engagement = unmistakable bot footprint.",
-        "Real Direct (homepage, /contact/, /santa-clarita/, location pages) is now ~600-680 sess/mo (Apr-May 2026) and converting normally — that's brand recall + bookmarks, not bots."
+        "Real Direct (homepage, /contact/, /santa-clarita/, location pages) is now ~600-680 sess/mo (Apr-May 2026) and converting normally \u2014 that's brand recall + bookmarks, not bots."
       ]
     },
     "what_works": {
@@ -1623,35 +1577,35 @@
           "sessions": 192,
           "conversions": 54,
           "cvr": 28.1,
-          "note": "★ Star finding — Craigslist Services 'Skilled Trades' or 'Labor/Move' listings convert at 28%. Likely a single listing or a few. Worth scaling."
+          "note": "\u2605 Star finding \u2014 Craigslist Services 'Skilled Trades' or 'Labor/Move' listings convert at 28%. Likely a single listing or a few. Worth scaling."
         },
         {
           "source": "chatgpt.com",
           "sessions": 37,
           "conversions": 5,
           "cvr": 13.5,
-          "note": "LLM referrals (people clicking ChatGPT citations). Emerging channel — see also Perplexity (10/0)."
+          "note": "LLM referrals (people clicking ChatGPT citations). Emerging channel \u2014 see also Perplexity (10/0)."
         },
         {
           "source": "alumni.masters.edu",
           "sessions": 35,
           "conversions": 5,
           "cvr": 14.3,
-          "note": "The Master's University alumni site. Local-institution channel — replicable for Santa Clarita schools/employers."
+          "note": "The Master's University alumni site. Local-institution channel \u2014 replicable for Santa Clarita schools/employers."
         },
         {
           "source": "mail.google.com",
           "sessions": 13,
           "conversions": 5,
           "cvr": 38.5,
-          "note": "Email signatures + replies linking to AQMS. Highest CVR in the set — passive lead source."
+          "note": "Email signatures + replies linking to AQMS. Highest CVR in the set \u2014 passive lead source."
         },
         {
           "source": "docs.google.com",
           "sessions": 12,
           "conversions": 3,
           "cvr": 25.0,
-          "note": "Shared Google Docs — partnership / contract / quote-doc click-throughs."
+          "note": "Shared Google Docs \u2014 partnership / contract / quote-doc click-throughs."
         },
         {
           "source": "chamber.sdbusinesschamber.com",
@@ -1673,7 +1627,7 @@
           "source": "leadsgo.io",
           "sessions": 514,
           "conversions": 0,
-          "note": "Lead-gen aggregator. Zero conversions — likely scraper or low-quality referral. Worth blocking in GA4 + checking if a paid agreement is feeding this."
+          "note": "Lead-gen aggregator. Zero conversions \u2014 likely scraper or low-quality referral. Worth blocking in GA4 + checking if a paid agreement is feeding this."
         },
         {
           "source": "fahnd.com",
@@ -1692,11 +1646,11 @@
     "untapped_ideas": [
       {
         "channel": "Craigslist (scale the existing footprint)",
-        "why": "Already 28% CVR on 192 sess. Likely a single SCV listing. Adding listings for Burbank + San Diego service areas, plus weekly bumps, could 3-5× the volume."
+        "why": "Already 28% CVR on 192 sess. Likely a single SCV listing. Adding listings for Burbank + San Diego service areas, plus weekly bumps, could 3-5\u00d7 the volume."
       },
       {
         "channel": "Nextdoor neighborhood sponsorships",
-        "why": "Free 'Local Deals' + paid 'Sponsorship' formats. Hyper-local — perfect fit for a multi-location SoCal mover. Highest-CVR demographic (homeowners moving)."
+        "why": "Free 'Local Deals' + paid 'Sponsorship' formats. Hyper-local \u2014 perfect fit for a multi-location SoCal mover. Highest-CVR demographic (homeowners moving)."
       },
       {
         "channel": "Apartments.com / Zillow mover partnerships",
@@ -1704,7 +1658,7 @@
       },
       {
         "channel": "Local realtor + property-manager partnerships",
-        "why": "Direct referral fee or co-branded discount card. The Craigslist + alumni.masters.edu signals show local-trust referrals work — formalize the strongest 3-5."
+        "why": "Direct referral fee or co-branded discount card. The Craigslist + alumni.masters.edu signals show local-trust referrals work \u2014 formalize the strongest 3-5."
       },
       {
         "channel": "Chambers of Commerce (Santa Clarita, Burbank, San Diego)",
@@ -1712,11 +1666,11 @@
       },
       {
         "channel": "U-Haul Movers Marketplace / Bellhop / HireAHelper",
-        "why": "Pay-per-job marketplaces with screened buyer intent. Profile + rating system rewards AQMS's 452-review reputation. Test with 5–10 jobs first."
+        "why": "Pay-per-job marketplaces with screened buyer intent. Profile + rating system rewards AQMS's 452-review reputation. Test with 5\u201310 jobs first."
       },
       {
         "channel": "AI-search optimization (ChatGPT, Perplexity, Gemini)",
-        "why": "37 ChatGPT + 10 Perplexity sessions already. Build LLM-citable content (cost calculators, comparison guides) — see Lever E in the Q3 strategy."
+        "why": "37 ChatGPT + 10 Perplexity sessions already. Build LLM-citable content (cost calculators, comparison guides) \u2014 see Lever E in the Q3 strategy."
       },
       {
         "channel": "Reddit (r/santaclarita, r/SanDiegan, r/movingto*)",
@@ -1725,9 +1679,9 @@
     ]
   },
   "_data_provenance": {
-    "ga4": "properties/391356365 · 18-month channel x month pull 2026-05-22 · _aqms_18mo_channel_monthly.csv",
-    "gsc": "https://www.aqmsnationalmoving.com/ (siteOwner) · 18-month monthly pull 2026-05-22",
-    "dataforseo": "AI Overview SERP pull 2026-05-22 · 20 priority queries · US default · cost $0.0985",
-    "localdominator": "23 CSV scans (6 kws × Mar 8 / Apr 3 / May 3, 2026) · 13×13 grid centered Santa Clarita HQ"
+    "ga4": "properties/391356365 \u00b7 18-month channel x month pull 2026-05-22 \u00b7 _aqms_18mo_channel_monthly.csv",
+    "gsc": "https://www.aqmsnationalmoving.com/ (siteOwner) \u00b7 18-month monthly pull 2026-05-22",
+    "dataforseo": "AI Overview SERP pull 2026-05-22 \u00b7 20 priority queries \u00b7 US default \u00b7 cost $0.0985",
+    "localdominator": "23 CSV scans (6 kws \u00d7 Mar 8 / Apr 3 / May 3, 2026) \u00b7 13\u00d713 grid centered Santa Clarita HQ"
   }
 }

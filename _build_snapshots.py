@@ -551,7 +551,11 @@ def build_snapshot(slug, cfg):
     else:
         leads = t[conv_field]['organic']
 
-    RECOVERY = {'elev8-recovery', 'urban-recovery', 'niagara-recovery', 'surfpoint-recovery', 'arms-acres', 'conifer-park'}
+    # Slugs whose conversion tracking is unreliable this quarter (snapshot will exclude
+    # leads/CR from charts + boxes). RECOVERY = recovery-vertical clients still
+    # stabilizing GA4 events. AQMS added 2026-05-28: website form_submit + thank-you
+    # redirect broke in early April; tracking-fix in flight with the AQMS dev team.
+    RECOVERY = {'elev8-recovery', 'urban-recovery', 'niagara-recovery', 'surfpoint-recovery', 'arms-acres', 'conifer-park', 'affordable-quality-moving'}
     reliable = cfg.get('conversions_reliable', slug not in RECOVERY)
 
     lead_label = cfg.get('leads_label', 'Organic leads')
