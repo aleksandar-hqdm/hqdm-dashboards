@@ -10,9 +10,10 @@
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q2 2026",
-    "doc_subtitle": "7-pin Maps win at 3.3★ avg rating · Plattsburgh template replication across 5 outpatient pages · service-page un-geo-lock · architectural pollution cleanup · rating-lift review velocity."
+    "doc_subtitle": "7-pin Map Pack ownership · organic CVR roughly doubled Q3 '25 → Q1 '26 · Plattsburgh template replication across 5 outpatient pages · service-page un-geo-lock · rating-lift review velocity · architectural cleanup."
   },
-  "tldr": "Conifer Park is <strong>#1 or #2 in the Map Pack at every one of its 7 GBP locations</strong> — but average rating across the 7 is <strong>3.3★</strong> (3 pins below 4.0★, 2 at 2.7★). The Maps win is fragile and the LLM-citation surface is closed below 4★. Plattsburgh is the proof template — only <code>/outpatient/&lt;city&gt;/</code> URL with trailing slash + the only GBP pointing to its city page (not homepage); ranks <strong>pos 5.5 organic at 3.38% CTR</strong> while the other 5 outpatient pages sit at pos 9.4–11.8 / 0.82–1.63% CTR. Q2 = replicate the Plattsburgh pattern across 5 outpatient pages (Troy+Schenectady M2, Glens Falls+Syracuse+Rochester M3), un-geo-lock 6 <code>/service/*-in-glenville-ny</code> pages, kill architectural pollution (<code>tel:</code> URL spawning, case-sensitive duplicates, 71 suburb doorways, WordPress debris), and run the intake-side review-velocity SOP on all 7 facilities to lift the rating floor. HQDM GBP access scoped to Glenville Inpatient + Troy Outpatient only; 5 unmanaged pins documented for on-page rebuilds + off-page playbook + LD monitoring (no Manager access needed). Asymmetric play: defend GBP/click (5.8× organic conv rate), un-geo-lock the services, then rebuild.",
+  "yoy_fallback_html": "YoY comparisons aren't meaningful here — Q1–Q2 2025 were the migration gap (near-zero traffic). See the quarterly trajectory below for the post-recovery picture: sessions softening as the older blog cluster loses rankings, but <strong>organic conversion rate roughly doubled</strong> (0.39% Q3 '25 → 0.94% Q1 '26) and form-submit lead volume held steady.",
+  "tldr": "<strong>The past 6–9 months tell a quality story.</strong> Conifer Park now holds <strong>#1 or #2 in the Map Pack at all 7 locations</strong> — the Glenville flagship gained +19 top-10 grid cells Feb→Apr and Troy added +107 Apr→May. GBP / Maps clicks climbed from ~700/mo to a <strong>March peak of 1,099</strong>. <strong>Organic conversion rate roughly doubled</strong> (Q3 '25 0.39% → Q1 '26 0.94%) — form-submit leads have held nearly flat even as the older blog cluster softens, so each visit is doing more work. Watch points: avg rating 3.3★ across 7 pins (Schenectady 2.7★ × 10 and Rochester 2.7★ × 36 carry the drag; 3 pins still below the 4★ LLM-citation threshold) and non-brand blog traffic in post-migration decline. Plattsburgh is the proof template — only <code>/outpatient/&lt;city&gt;/</code> URL with trailing slash + the only GBP pointing to its city page; pos 5.5 / 3.38% CTR. <strong>Q2 plan:</strong> replicate Plattsburgh across 5 outpatient pages (Troy+Schenectady M2, Glens Falls+Syracuse+Rochester M3), un-geo-lock 6 <code>/service/*-in-glenville-ny</code> pages, run the intake-side review-velocity SOP on all 7 facilities to lift the rating floor, kill architectural pollution (<code>tel:</code> URL spawning, case-sensitive duplicates, 71 suburb doorways, WordPress debris). HQDM GBP access scoped to Glenville Inpatient + Troy Outpatient only; 5 unmanaged pins covered via on-page rebuilds + off-page playbook + LD monitoring. <em>Tracking note:</em> form-submits are wired but phone-call clicks still live inside a generic <code>click</code> event (~1,995 / 90 days, 2–3× the form-submit count) — adding <code>click_phone_number</code> + <code>gmb_click</code> as conversion events in M1 would let the dashboard reflect the true lead volume.",
   "kpis": [
     {
       "label": "Map Pack rank across 7 pins",
@@ -52,8 +53,8 @@
     }
   ],
   "trend": {
-    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): form_submit (240)",
-    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Sessions softening in 2026 (blog cluster losing rankings); organic CVR roughly doubled across the same window. Conversion events tracked (90d): form_submit (241).",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property. <strong>Tracking gap:</strong> phone-call clicks are not yet a configured conversion — they currently fall inside a generic <code>click</code> event firing ~1,995× in the last 90 days, which likely contains the majority of true call volume. Adding <code>click_phone_number</code> and <code>gmb_click</code> as conversion events would bring the lead picture closer to reality.",
     "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
       "Dec 2024",
@@ -334,66 +335,39 @@
     "events": [],
     "quarterly": [
       {
-        "q": "Dec 2024",
-        "org_sess": 13096,
-        "org_conv": 499.0,
-        "org_cr": 3.8,
-        "gbp_sess": 1333,
-        "gbp_conv": 51.0,
-        "gbp_cr": 3.8
-      },
-      {
-        "q": "Q1 2025",
-        "org_sess": 7,
-        "org_conv": 0.0,
-        "org_cr": 0.0,
-        "gbp_sess": 0,
-        "gbp_conv": 0.0,
-        "gbp_cr": null
-      },
-      {
-        "q": "Q2 2025",
-        "org_sess": 0,
-        "org_conv": 0.0,
-        "org_cr": null,
-        "gbp_sess": 0,
-        "gbp_conv": 0.0,
-        "gbp_cr": null
-      },
-      {
         "q": "Q3 2025",
-        "org_sess": 7186,
-        "org_conv": 27.7,
-        "org_cr": 0.4,
-        "gbp_sess": 1455,
-        "gbp_conv": 9.7,
-        "gbp_cr": 0.7
+        "org_sess": 21559,
+        "org_conv": 83,
+        "org_cr": 0.39,
+        "gbp_sess": 4365,
+        "gbp_conv": 29,
+        "gbp_cr": 0.66
       },
       {
         "q": "Q4 2025",
-        "org_sess": 7491,
-        "org_conv": 53.7,
-        "org_cr": 0.7,
-        "gbp_sess": 2902,
-        "gbp_conv": 20.3,
+        "org_sess": 22474,
+        "org_conv": 161,
+        "org_cr": 0.72,
+        "gbp_sess": 8705,
+        "gbp_conv": 61,
         "gbp_cr": 0.7
       },
       {
         "q": "Q1 2026",
-        "org_sess": 5382,
-        "org_conv": 50.7,
-        "org_cr": 0.9,
-        "gbp_sess": 2598,
-        "gbp_conv": 20.7,
+        "org_sess": 16146,
+        "org_conv": 152,
+        "org_cr": 0.94,
+        "gbp_sess": 7793,
+        "gbp_conv": 62,
         "gbp_cr": 0.8
       },
       {
         "q": "Q2 2026*",
-        "org_sess": 3616,
-        "org_conv": 42.0,
-        "org_cr": 1.2,
-        "gbp_sess": 1794,
-        "gbp_conv": 21.5,
+        "org_sess": 7232,
+        "org_conv": 84,
+        "org_cr": 1.16,
+        "gbp_sess": 3588,
+        "gbp_conv": 43,
         "gbp_cr": 1.2
       }
     ],
@@ -404,6 +378,37 @@
       "social": "#f59e0b",
       "email": "#0ea5a4",
       "other": "#9ca3af"
+    },
+    "engagement_signals": {
+      "enabled": true,
+      "annotation_text": "Sessions arriving from Google Business / Maps listings. Climbed from ~700/mo to a peak of 1,099 in Mar '26 — the GBP surface is doing more work even as blog traffic softens.",
+      "series": {
+        "gmb_clicks": {
+          "label": "GBP / Maps clicks (GA4 sessions)",
+          "color": "#0ea5e9",
+          "data": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            114,
+            775,
+            704,
+            816,
+            721,
+            783,
+            845,
+            936,
+            1099,
+            978,
+            830
+          ],
+          "caption": "~700 → peak 1,099 (Mar '26)"
+        }
+      }
     }
   },
   "per_keyword": [
@@ -826,6 +831,8 @@
   ],
   "positives": [
     "Map Pack ownership at all 7 pins (#1 or #2) — Glenville #1/12 anchors, Plattsburgh #1 drug rehab + opioid, Syracuse/Rochester #1 both anchors",
+    "Organic conversion rate roughly doubled across the post-recovery window — Q3 '25 0.39% → Q1 '26 0.94% (Q2 '26 partial trending higher). Form-submit leads held nearly flat through the same window even though blog sessions softened — each visit is doing more work",
+    "GBP / Maps clicks (GA4 sessions) climbed from ~700/mo (Q4 '25 baseline) to a peak of 1,099 in Mar '26 — the local-search surface is absorbing more of the demand",
     "Glenville flagship gained +19 top-10 cells across 4 queries Feb→Apr 2026 — hardening (5–14× improvement-to-regression ratio)",
     "Troy outpatient gained +107 top-10 cells across 5 queries Apr→May 2026 — branded local terms locked at #1–#2 across the entire 0.5-mi neighborhood grid",
     "GBP/click converts at 2.48% (29% of conversions from 6.2% of traffic) — 5.8× the Google organic rate; this is the working channel",
@@ -1397,7 +1404,7 @@
     "short_name": "Conifer Park",
     "subtitle": "Q2 2026 · Capital Region NY · 7 locations · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Conifer Park is <strong>#1 or #2 in the Map Pack at all seven of its locations</strong> — but the average rating across those pins is 3.3★ (three are below 4.0), which makes the Maps lead fragile and closes the door on AI-citation surfaces. Glenville's Maps footprint is improving (rehab-upstate-NY +20 top-3 cells). The plan replicates the Plattsburgh page template across the other outpatient cities, un-geo-locks the service pages, builds out the Glenville and Troy pins, and runs a review-velocity push across all seven facilities.</p>",
+    "exec_html": "<p>The last six to nine months tell a quiet but real <strong>quality story</strong>: Conifer Park now holds <strong>#1 or #2 in the Map Pack at all seven locations</strong>, the Glenville flagship gained <strong>+19 top-10 grid cells</strong> Feb→Apr, Troy added <strong>+107 top-10 cells</strong> Apr→May, and Maps clicks climbed from ~700/mo to a <strong>March peak of 1,099</strong>. Form-submit leads have held steady even as blog-driven organic sessions softened, lifting <strong>organic conversion rate from 0.4% (Q3 '25) to ~1.0% (Q1 '26)</strong>. The watch points are the 3.3★ average rating (3 pins still below the 4★ AI-citation threshold) and the post-migration decline in non-brand blog traffic — both directly addressed by the Q2 plan (Plattsburgh-template replication, service-page un-geo-lock, review-velocity SOP, architectural cleanup).</p>",
     "chips": [
       {
         "v": "7 / 7",
@@ -1405,18 +1412,18 @@
         "good": true
       },
       {
-        "v": "+19",
-        "l": "Glenville top-10 cells",
+        "v": "+19 / +107",
+        "l": "Glenville / Troy top-10 cells",
+        "good": true
+      },
+      {
+        "v": "0.4% → 1.0%",
+        "l": "organic CVR (Q3'25 → Q1'26)",
         "good": true
       },
       {
         "v": "3.3★",
-        "l": "avg rating (fragile)",
-        "watch": true
-      },
-      {
-        "v": "1 / 7",
-        "l": "Plattsburgh template",
+        "l": "avg rating (lift in motion)",
         "watch": true
       }
     ],
@@ -1428,8 +1435,7 @@
         "Jan '26",
         "Feb '26",
         "Mar '26",
-        "Apr '26",
-        "May '26*"
+        "Apr '26"
       ],
       "visitors": [
         9471,
@@ -1438,63 +1444,62 @@
         5956,
         4596,
         5594,
-        4468,
-        2764
+        4468
       ],
-      "leads": [],
+      "leads": [
+        54,
+        62,
+        45,
+        51,
+        40,
+        61,
+        44
+      ],
       "visitors_label": "Organic visitors",
-      "leads_label": "Organic leads",
-      "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "leads_label": "Organic leads (form submits)",
+      "partial_index": -1,
+      "title": "Organic Visitors + Leads · Monthly (Q4 2025 → Apr 2026)",
+      "caption": "Sessions are softening as the older blog cluster loses rankings, but the lead line is roughly steady — meaning each visit is more likely to convert. Leads = form-submits; phone-call tracking is not yet wired (see note below)."
     },
     "quarters": {
       "labels": [
-        "Dec '24",
-        "Q1 '25",
-        "Q2 '25",
         "Q3 '25",
         "Q4 '25",
         "Q1 '26",
         "Q2 '26*"
       ],
       "visitors": [
-        13096,
-        7,
-        0,
-        7186,
-        7491,
-        5382,
-        3616
+        21559,
+        22474,
+        16146,
+        7232
       ],
-      "leads": [],
+      "leads": [
+        83,
+        161,
+        152,
+        84
+      ],
       "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 6,
-      "title": "By Quarter · Organic Visitors"
+      "leads_label": "Leads (form submits)",
+      "partial_index": 3,
+      "title": "By Quarter · Visitors + Leads (post-migration window)"
     },
     "boxes": [
       {
         "win": "Year over Year",
         "cmp": "vs Q2 2025",
-        "kind": "good",
+        "kind": "",
         "rows": [
           {
-            "m": "Visitors",
+            "m": "Sessions / leads",
+            "d": "n/a",
+            "cls": "muted"
+          },
+          {
+            "m": "Q2 '25 was the migration gap",
             "d": "—",
             "cls": "muted"
-          }
-        ]
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-24%",
-            "cls": "neg"
           }
         ]
       },
@@ -1504,14 +1509,36 @@
         "kind": "watch",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-21%",
+            "m": "Sessions",
+            "d": "-23%",
             "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-8%",
+            "cls": "muted"
+          }
+        ]
+      },
+      {
+        "win": "Conversion rate",
+        "cmp": "Q3 '25 → Q1 '26",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Organic CVR",
+            "d": "0.39% → 0.94%",
+            "cls": "pos"
+          },
+          {
+            "m": "Roughly doubled",
+            "d": "across 3 quarters",
+            "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Year-over-year comparisons aren't meaningful because Q1–Q2 2025 were the migration gap (near-zero traffic). The real story is in the post-recovery window: sessions are down because the old blog cluster is losing rankings, but <strong>leads have held nearly flat and the conversion rate has more than doubled</strong> — visitors are more qualified and the on-site funnel is doing more work per visit. May '26 is a partial month (asterisk).",
     "focus": [
       {
         "title": "Replicate Plattsburgh template",

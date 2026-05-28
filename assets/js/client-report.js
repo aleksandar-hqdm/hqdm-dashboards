@@ -123,8 +123,10 @@
     const wrap = $('#yoy-tiles');
     if (!wrap) return;
     if (!yoy) {
+      const fallback = (DATA && DATA.yoy_fallback_html) ||
+        'YoY comparison unavailable (insufficient quarterly data).';
       wrap.innerHTML =
-        '<div class="text-sm text-slate-500 italic col-span-3">YoY comparison unavailable (insufficient quarterly data).</div>';
+        `<div class="text-sm text-slate-500 italic col-span-3">${fallback}</div>`;
       return;
     }
     const tile = (label, pct, sub, fmt) => {
