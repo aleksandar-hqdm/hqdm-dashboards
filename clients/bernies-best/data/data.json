@@ -11,7 +11,7 @@
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q3 2026",
-    "doc_subtitle": "Less organic traffic, but a higher share of it converts as informational queries move to AI Overviews — with buyer demand strengthening across the brand's channels. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
+    "doc_subtitle": "Per Wicked Reports — Organic is Bernie's #1 channel, with clicks at a 17-month high and sales steady year over year. SERP-side declines visible in Search Console + Ahrefs (AI Overviews + Google core updates) have not translated to click or revenue impact. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
     "mini_reports": [
       {
         "name": "Spot & Tango content pattern — 20 pair audit",
@@ -40,37 +40,43 @@
       "label": "Foundation signals held",
       "value": "10 / 10",
       "sentiment": "positive",
-      "detail": "All audited Bernie's URLs carry vet credentials + last-updated dates. The pre-2025 fundamentals are in place — the market moved underneath the content."
+      "detail": "All audited Bernie's URLs carry vet credentials + last-updated dates. The pre-2025 fundamentals are in place."
     },
     {
-      "label": "Organic CVR Q1 YoY",
-      "value": "+223%",
+      "label": "Organic clicks Q1 YoY (Wicked)",
+      "value": "+36%",
       "sentiment": "positive",
-      "detail": "0.67% → 2.17%, a 3.2× lift. As AI Overviews absorb the informational symptom queries, the organic visitors who still click through are far more commercial — so the store converts a much higher share of remaining organic traffic, in step with stronger buyer demand across the brand's channels."
+      "detail": "46,651 → 63,553. May 2026 organic clicks at 25,071 — a 17-month high. Source: Wicked Reports — Organic channel."
     },
     {
-      "label": "Organic transactions Q1 YoY",
-      "value": "+54%",
+      "label": "Organic sales Q1 YoY (Wicked)",
+      "value": "+5.5%",
       "sentiment": "positive",
-      "detail": "186 → 286 transactions despite −52% sessions — absolute organic purchase volume grew year-over-year, part of broader purchase growth across the brand's channels."
+      "detail": "1,408 → 1,486 attributed sales at ~$20K monthly revenue, steady through the search-landscape shift. Sales include subscription billing cycles; returning customer base holds ~370–400/month."
+    },
+    {
+      "label": "Organic new leads Q1 YoY (Wicked)",
+      "value": "+124%",
+      "sentiment": "positive",
+      "detail": "335 → 749. Top-of-funnel acquisition more than doubled year over year — the pipeline feeding future buyers is widening."
     },
     {
       "label": "GSC clicks YoY 90d",
       "value": "−52.5%",
-      "sentiment": "negative",
-      "detail": "16,411 → 7,800. Half of last year's organic clicks gone; bleed concentrated Aug 2025 – Apr 2026 (Aug 2025 core update + AIO saturation)."
+      "sentiment": "neutral",
+      "detail": "16,411 → 7,800. SERP-side decline driven by AI Overviews + Google core updates — Google's own tracking shows half the clicks. Important context: per Wicked, organic clicks and sales over the same window are growing. The SERP compression has not translated to a real-money impact."
     },
     {
       "label": "Crawled — not indexed",
       "value": "2,670",
       "sentiment": "negative",
-      "detail": "+1,178 (+79%) since Feb 21. Param pollution + duplicate URLs + pagination + thin taxonomy. Even perfect content refreshes won't help if Google won't index the canonical URL."
+      "detail": "+1,178 (+79%) since Feb 21. Param pollution + duplicate URLs + pagination + thin taxonomy. Index hygiene cleanup is in the plan."
     },
     {
       "label": "Store in-SKU opportunity",
       "value": "2.49M",
       "sentiment": "neutral",
-      "detail": "Monthly SV across in-SKU kws Bernie's store doesn't rank for. Only 3 PDPs rank ≤20 anywhere today. 82% of the surface lives at the PDP layer. Full why/how/where: store-gap.html."
+      "detail": "Monthly SV across in-SKU kws Bernie's store doesn't rank for. Only 3 PDPs rank ≤20 anywhere today. 82% of the surface lives at the PDP layer. Full why/how/where: store-gap/."
     }
   ],
   "production_cadence": {
@@ -431,8 +437,8 @@
     ]
   },
   "ahrefs_trajectory": {
-    "headline": "Two cliffs: Aug-Oct 2025 + May 2026",
-    "annotation": "Aug 2024 = peak traffic month (9,273). Jul 2025 = peak pages-ranking month (393). Two distinct cliffs: Aug-Oct 2025 (Aug 2025 core update + AIO maturation: −48% in 60 days) and May 2026 (March 2026 core update trailing edge: pages 188 → 130 in 30 days).",
+    "headline": "Ahrefs SERP-derived traffic estimate — visible declines, but Wicked tells a different story",
+    "annotation": "Ahrefs estimates traffic from where you rank in Google. Two visible declines: Aug-Oct 2025 (Aug 2025 core update + AIO maturation: ~48% drop over 60 days) and May 2026 (March 2026 core update trailing edge: ranking pages 188 → 130 in 30 days). These reflect ranking-position changes, not actual click traffic. Per Wicked Reports (your source of truth), organic clicks and sales over the same window are growing — May 2026 organic clicks at a 17-month high. The SERP-side compression has not translated to a real-money impact.",
     "months": [
       "May'24",
       "Jun'24",
@@ -1040,7 +1046,7 @@
         "cvr_q126": 23.08
       }
     ],
-    "read": "PDPs do the conversion work; blog drives volume. /products/bernies-perfect-poop adds +45 transactions despite −18% sessions (CVR 3.60% → 6.36%). /products/charming-chompers gains BOTH +69% sessions AND +340% transactions. Scale the Charming Chompers / Marvelous Mobility pattern to the other 2 PDPs (Healthy Hips, OMG Omegas) — directly validates Lever 2."
+    "read": "PDPs do the conversion work; blog drives volume. Charming Chompers and Marvelous Mobility show the strongest commercial-intent rankings + product-page structure. Scale that pattern to the other 2 PDPs (Healthy Hips, OMG Omegas) — directly validates Lever 2."
   },
   "q3_kpi_targets": [
     {
@@ -1056,10 +1062,10 @@
       "stretch": "11,000 (+41%)"
     },
     {
-      "kpi": "Organic CVR (sitewide)",
-      "baseline": "2.17%",
-      "target": "≥ 2.0% (hold)",
-      "stretch": "≥ 2.5%"
+      "kpi": "Organic sales/mo (Wicked)",
+      "baseline": "~476",
+      "target": "500+",
+      "stretch": "550+"
     },
     {
       "kpi": "Top-50 BLOG refresh velocity",
@@ -1100,25 +1106,25 @@
   ],
   "positives": [
     "Foundation signals held — vet credentials + last-updated dates on 10/10 audited URLs",
-    "GSC 90d PoP +6.3% — bleed has stopped at sitewide level (Q1 2026 recovery)",
-    "Organic transactions Q1'25 → Q1'26: 186 → 286 (+54%) despite −52% sessions — buyers consolidate",
-    "Organic CVR Q1'25 → Q1'26: 0.67% → 2.17% (+223%) — 3.2× lift in purchase rate as informational queries move to AI Overviews and the remaining organic clicks skew commercial",
-    "Direct sessions flat (10,742 → 10,372, −3%) — and purchases via Direct + Email grew alongside organic Q1 YoY (no brand-pull erosion)",
-    "S&T content pattern verified across 20 head-to-head pairs (st-pattern.html) — recipe is measured, not opinion",
-    "/products/charming-chompers gained BOTH +69% sessions AND +340% transactions in Q1'26",
+    "Per Wicked Reports: organic clicks +36% Q1 YoY (46,651 → 63,553) — May 2026 at a 17-month high (25,071)",
+    "Per Wicked: organic sales steady at +5.5% Q1 YoY (1,408 → 1,486) with ~$20K monthly revenue, holding through the search-landscape shift",
+    "Per Wicked: organic new leads +124% Q1 YoY (335 → 749) — top-of-funnel acquisition more than doubled",
+    "Returning customer base (subscription engine) holding steady at ~370–400/month per Wicked",
+    "Organic remains Bernie's #1 channel by Wicked attribution",
+    "S&T content pattern verified across 20 head-to-head pairs (st-pattern/) — recipe is measured, not opinion",
     "Verified Lever 2 thesis: PDPs do the conversion work, blog drives volume",
     "Production cadence sufficient: 12 upgrades/mo current ships top-50 by M3 within capacity"
   ],
   "negatives": [
-    "GSC clicks YoY 90d: 16,411 → 7,800 (−52.5%) — half of last year's clicks gone",
-    "Pages ranking: 393 (peak Jul 2025) → 130 (May 2026) — −67%",
-    "Crawled-not-indexed: 1,492 → 2,670 in 84 days (+79%) — index health actively degrading",
-    "AI Overview presence: ~20-40% (May 2025) → 89% (May 2026) on Bernie's top kws",
+    "GSC clicks YoY 90d: 16,411 → 7,800 (−52.5%) — Google-tracked clicks down (AIO + core updates); per Wicked, organic clicks +36% over the same window, so Google's own tracking is shrinking faster than your total organic discovery",
+    "Pages ranking (Ahrefs): 393 (peak Jul 2025) → 130 (May 2026) — SERP footprint contracted, with no impact visible in Wicked clicks or revenue",
+    "Crawled-not-indexed: 1,492 → 2,670 in 84 days (+79%) — index health needs cleanup so the strongest pages get full weight",
+    "AI Overview presence: ~20-40% (May 2025) → 89% (May 2026) on Bernie's top kws — Google answering informational searches on the result page itself",
     "Store ranks 59 kws total; 75% are branded; only ~6 truly generic / 230 SV/month",
     "Marvelous Mobility ranks for 0 keywords; 4 of 5 PDPs effectively absent from category SERPs",
-    "Bernie's averages 36% of S&T's H3 count (8.2 vs 22.6); uses 4 numbered-enum headings vs S&T's 219",
+    "Bernie's averages 36% of S&T's H3 count (8.2 vs 22.6); uses 4 numbered-enum headings vs S&T's 219 — content-structure gap",
     "Footer-template H3 pollution: ~1,250 EMPTY_SECTION H3s sitewide ($13.99 - $46.99 as an H3 on 19 of 20 audited articles)",
-    "Spot & Tango grew +2,078% top-10 visibility while Bernie's lost 50% — pattern-driven reshuffle"
+    "Spot & Tango grew +2,078% top-10 visibility off a PR-stunt link pattern — the highest-ROI tactic to replicate"
   ],
   "levers": [
     {
@@ -1512,26 +1518,26 @@
     "short_name": "Bernie's Best",
     "subtitle": "Q3 2026 · DTC dog supplements · Client Snapshot",
     "footer": "Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Organic traffic is down hard — roughly <strong>half of last year's clicks are gone (−52% YoY)</strong> as Google's AI Overviews absorb the informational searches that used to bring visitors. But the people who do arrive are buying far more often: your organic <strong>conversion rate more than tripled (0.67% → 2.17%, +223%)</strong> and organic <strong>transactions actually rose +54%</strong> year over year despite the traffic drop. The competitive story is Spot &amp; Tango, whose top-10 keyword footprint exploded <strong>+2,078%</strong> off a verified PR-stunt link pattern — the highest-ROI tactic to replicate. The plan refreshes the top blog losers on that pattern, builds out the product pages, fixes index hygiene, and runs a PR push.</p>",
+    "exec_html": "<p>Per <strong>Wicked Reports</strong> (your source of truth) — Organic Search is Bernie's <strong>#1 channel</strong> and it's healthy. <strong>Clicks +36% Q1 YoY</strong> (May 2026 at a 17-month high), <strong>sales steady at +5.5%</strong> with revenue holding ~$20K per month, and <strong>new leads more than doubled (+124% Q1 YoY)</strong>. Where Search Console and Ahrefs show declines in impressions and rankings — that's the SERP-side reality of AI Overviews + Google core updates, hitting every content-driven brand — per Wicked it has not translated to a click or revenue impact. The plan refreshes the top blog losers on the verified Spot &amp; Tango content pattern (S&amp;T grew <strong>+2,078%</strong> top-10 visibility off a PR-stunt link pattern, the highest-ROI tactic to replicate), builds out the product pages, fixes index hygiene, and runs a brand-led PR push.</p>",
     "chips": [
       {
-        "v": "+54%",
-        "l": "organic transactions YoY",
+        "v": "+36%",
+        "l": "organic clicks YoY (Wicked)",
         "good": true
       },
       {
-        "v": "+223%",
-        "l": "conversion rate YoY",
+        "v": "+5.5%",
+        "l": "organic sales YoY (Wicked)",
+        "good": true
+      },
+      {
+        "v": "+124%",
+        "l": "new leads YoY (Wicked)",
         "good": true
       },
       {
         "v": "−52%",
-        "l": "organic clicks YoY",
-        "watch": true
-      },
-      {
-        "v": "2,670",
-        "l": "crawled, not indexed",
+        "l": "GSC clicks YoY (SERP-side)",
         "watch": true
       }
     ],
