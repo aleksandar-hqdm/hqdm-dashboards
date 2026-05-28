@@ -344,10 +344,12 @@ CLIENTS = {
         'boxes_reading': ("Organic sessions stepped back in April–May (May is a partial month). Conversion tracking matured in "
                           "mid-2025, so the year-over-year lead comparison isn't meaningful and is shown as —."),
         'focus': [
-            {'title': 'Split the homepage', 'color': '#1d5b8a', 'body': 'Break the single overloaded homepage into dedicated pages for the nine commercial NYC searches it’s straining to rank for.'},
-            {'title': 'Borough organic hubs', 'color': '#10b981', 'body': 'Build borough-level hubs and fix the Queens Google Business signal to capture searches bleeding at page 5+.'},
-            {'title': 'MAT + dual-diagnosis hubs', 'color': '#6366f1', 'body': 'Stand up service hubs for MAT and dual-diagnosis with commercial pull-through from the blog.'},
-            {'title': 'Consolidate /suburb/ + GBP', 'color': '#f59e0b', 'body': 'Consolidate thin /suburb/ pages, deepen the Upper East Side page, and close the Google Business audit fixes.'},
+            {'title': 'June · Homepage split begins', 'color': '#1d5b8a',
+             'body': '1–2 service pages (new / revamp)<br>2 blog posts<br>1 suburb page (new / revamp)<br>On-page: redirects, internal links, GBP wiring — per need'},
+            {'title': 'July · Borough hubs + Queens GBP', 'color': '#10b981',
+             'body': '1–2 service pages (new / revamp)<br>2 blog posts<br>1 suburb page (new / revamp)<br>On-page: per need'},
+            {'title': 'August · MAT + dual-diagnosis hubs', 'color': '#6366f1',
+             'body': '1–2 service pages (new / revamp)<br>1 blog post<br>1 suburb page (new / revamp)<br>On-page: per need'},
         ],
     },
 
