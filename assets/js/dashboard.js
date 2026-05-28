@@ -416,6 +416,8 @@ function renderYoYChart(yoy) {
   const labels = yoy.metrics.map(m => m.label);
   const currentData = yoy.metrics.map(m => m.current_yoy_pct);
   const estimateData = yoy.metrics.map(m => m.estimate_yoy_pct);
+  // Only show the "Full-Q estimate" series when at least one metric provides one.
+  const hasEstimate = estimateData.some(v => v != null);
 
   // Color each bar by sign (red = down, green = up)
   const colorFor = (val, alpha) => {
@@ -427,35 +429,36 @@ function renderYoYChart(yoy) {
   const estimateBg = estimateData.map(v => colorFor(v, 0.30));
   const estimateBd = estimateData.map(v => colorFor(v, 0.9));
 
+  const datasets = [
+    {
+      label: yoy.current_label || 'Current (partial)',
+      data: currentData,
+      backgroundColor: currentBg,
+      borderColor: currentBd,
+      borderWidth: 1.5,
+      borderRadius: 4,
+      categoryPercentage: 0.72,
+      barPercentage: 0.92
+    }
+  ];
+  if (hasEstimate) {
+    datasets.push({
+      label: yoy.estimate_label || 'Full-Q estimate',
+      data: estimateData,
+      backgroundColor: estimateBg,
+      borderColor: estimateBd,
+      borderWidth: 1.5,
+      borderDash: [5, 4],
+      borderRadius: 4,
+      categoryPercentage: 0.72,
+      barPercentage: 0.92
+    });
+  }
+
   if (canvas._chart) canvas._chart.destroy();
   canvas._chart = new Chart(canvas.getContext('2d'), {
     type: 'bar',
-    data: {
-      labels,
-      datasets: [
-        {
-          label: yoy.current_label || 'Current (partial)',
-          data: currentData,
-          backgroundColor: currentBg,
-          borderColor: currentBd,
-          borderWidth: 1.5,
-          borderRadius: 4,
-          categoryPercentage: 0.72,
-          barPercentage: 0.92
-        },
-        {
-          label: yoy.estimate_label || 'Full-Q estimate',
-          data: estimateData,
-          backgroundColor: estimateBg,
-          borderColor: estimateBd,
-          borderWidth: 1.5,
-          borderDash: [5, 4],
-          borderRadius: 4,
-          categoryPercentage: 0.72,
-          barPercentage: 0.92
-        }
-      ]
-    },
+    data: { labels, datasets },
     options: {
       responsive: true,
       maintainAspectRatio: false,
@@ -463,7 +466,9 @@ function renderYoYChart(yoy) {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: {
-          display: true,
+          // Hide the legend when there's only one series -- the bar color
+          // (red = down, green = up) is already the only encoding.
+          display: hasEstimate,
           position: 'top',
           align: 'end',
           labels: { boxWidth: 14, font: { size: 11 }, color: '#4b5563' }
