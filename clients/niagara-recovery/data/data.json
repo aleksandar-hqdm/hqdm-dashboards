@@ -1576,11 +1576,7 @@
               { "u": "Kill '[phone number]' placeholder on alcohol-detox + Newfane dupe", "k": "fix", "n": "Replace with (716) 203-8000 · QA bug live since Webflow build" },
               { "u": "Fix Buffalo NAP fabrication (/locations/buffalo)", "k": "fix", "n": "Body claims 'facility in Buffalo, NY 14215' but the only facility is in Newfane · rewrite to 'serving Buffalo metro from Newfane'" },
               { "u": "301 the 5 -in-newfane-ny service-page dupes → 5 base /services URLs", "k": "redirect", "n": "10 service URLs collapse to 5 canonical · content-merge unique body sections under the base before redirect" },
-              { "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program", "k": "fix", "n": "Currently 0 schema on any service page · service-page entity floor" },
-              { "u": "GBP service-area swap — drop 11 redundant micros (7×14094 Lockport hoods + 2×14008 + 2×14172), add 9 anchor towns (Lockport / Clarence / Cambria / Pendleton / Sanborn / Wheatfield / Youngstown / Lewiston / N. Tonawanda)", "k": "fix", "n": "Zero-budget Maps move · declares the 9 WNY towns where Niagara is already top-3 in LD" },
-              { "u": "GBP photo blitz 6 → 25 with category mix (5 facility / 5 staff / 5 treatment / 5 outdoor / 5 Newfane)", "k": "fix", "n": "Current 6 photos = lowest of 12 WNY competitor GBPs scanned" },
-              { "u": "GBP Services tab — refine 10 service descriptions + add explicit Suboxone / MAT entries (62 GBP-search demand)", "k": "fix" },
-              { "u": "GBP Posts × 4 (brand-canonical · alcohol-detox · suboxone-MAT · Newfane facility tour)", "k": "fix", "n": "Restarts the Posts-recency Maps signal · current cadence is 1 post total" }
+              { "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program", "k": "fix", "n": "Currently 0 schema on any service page · service-page entity floor" }
             ],
             [
               { "u": "Redirect ~60 doorway URLs (/locations/best- · most-trusted- · dependable- · premium- · holistic-* etc.) → nearest anchor city page (small-level 301 per fill-not-kill policy)", "k": "redirect", "n": "9 new doorways shipped 2026-04-15 → 05-18 alone · template-pattern identical to Surfpoint + Arms Acres · per-URL anchor-city map in Cannibal_Cleanup_Plan.csv" },
