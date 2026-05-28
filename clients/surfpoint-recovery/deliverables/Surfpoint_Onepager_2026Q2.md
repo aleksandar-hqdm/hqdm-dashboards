@@ -8,7 +8,7 @@
 
 ## TL;DR
 
-This is **not** a Maps problem. SP **dominates** the Maps grid — 136 of 136 top-10 cells for `alcohol rehab brooklyn` (avg rank improving to 1.47), and **#1 at 4 of 7 strategic anchor coords** (Coney Island, Bath Beach, Bensonhurst, Brighton Beach) across both alcohol-rehab and drug-rehab queries. **GBP converts 8× organic.** The Maps moat is real and durable.
+This is **not** a Maps problem. SP **dominates** the Maps grid — 136 of 136 top-10 cells for `alcohol rehab brooklyn` (avg rank improving to 1.47), and **#1 at 4 of 7 strategic anchor coords** (Coney Island, Bath Beach, Bensonhurst, Brighton Beach) across both alcohol-rehab and drug-rehab queries. **GMB-tagged sessions convert at 2.53% vs 0.32% all-Organic (~8×).** The Maps moat is real and durable.
 
 The bleed is **organic**: −77% impressions in 90 days, page 2 for "drug rehab Brooklyn", **47 of 99 location pages not indexed**, and **147 of 208 blog posts in the bleeding cohort** (−50% to −85% trend / 90d). Four forces stacked, in order of explanatory weight:
 
@@ -40,7 +40,7 @@ Execution detail is in [Surfpoint_3Month_Plan_v2.md](Surfpoint_3Month_Plan_v2.md
 | Metric | Value | Note |
 |---|---|---|
 | Organic impressions Δ (90d vs prior 90d) | −77% | Primary signal |
-| GBP → conversion ratio | 8× organic | Maps moat |
+| GMB-tagged conv rate vs all-Organic | 2.53% vs 0.32% (~8×) | Maps moat (GA4 custom segment) |
 | Location pages indexed | 52 / 99 | 47 not indexed |
 | Location pages with schema | 0 / 99 | Homepage has LocalBusiness; nothing propagates |
 | Empty doorway pages (`<main>` ≤ 50 words) | 37 / 99 | 5 NJ + 6 Manhattan + 14 Queens + 1 Bronx + 2 SI + 9 Brooklyn |

@@ -33,7 +33,7 @@ The thesis across all four: **Surfpoint is overperforming its architecture.** Th
 | URLs flagged "not indexed" | **756** (562 specifically "Crawled — currently not indexed") | GSC Coverage |
 | Single-day crawl spike, March 16 | **524 requests** vs. 70–100 baseline | GSC Crawl Stats |
 | Service pages, 365-day total | **104 sessions / 0 conversions** | GA4 |
-| GBP conversion rate vs. all-Organic-Search | **2.53% vs. 0.32%** (~8×) | GA4 |
+| GMB-tagged sessions vs. all-Organic-Search conv rate | **2.53% vs. 0.32%** (~8×) | GA4 custom segment (`source=gmb`) vs. default channel grouping |
 | Tracked anchor `alcohol rehab brooklyn`, Coney Island grid | **rank 1.47 / 96% top-3** (was 1.88 / 87% in Oct 2025) | Local Dominator |
 | Review base, 16-day movement | **91 / 4.5★ → 120 / 4.8★** | DataForSEO Business Data |
 
@@ -59,7 +59,7 @@ The win is concentrated on the immediate neighborhood. Cluster-wide there are re
 |---|---:|---:|---:|
 | **Brand-driven** *(100% Direct + 19% Organic + share of Referral/Social)* | **~51%** | **~66%** | ~0.80% |
 | **Non-brand** *(mostly Organic Search blog)* | **~47%** | ~34% | **~0.45%** *(non-GBP non-brand: 0.15%)* |
-| GBP click (subset of Organic) | 7% of Organic | — | **2.53%** *(16× non-GBP non-brand)* |
+| GMB-tagged sessions *(GA4 custom segment, attributed to Direct in default grouping)* | 4.1% of all sessions | — | **2.53%** *(16× non-GBP non-brand)* |
 
 Non-brand visitors arrive at legacy content that doesn't connect to the conversion funnel. The opportunity is **converting more of the non-brand visitors Surfpoint already gets**, not generating more of them. That's the landing-page argument in two numbers.
 

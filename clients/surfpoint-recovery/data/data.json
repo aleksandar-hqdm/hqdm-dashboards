@@ -12,6 +12,34 @@
     "quarter": "Q2 2026",
     "doc_subtitle": "Map-pack dominant on the alcohol-rehab anchor (1.47 / 96% top-3) · service pages orphaned (104 sess / 0 conv / 365d) · 756 URLs not indexed · disavow + service-page rebuild + GBP depth fix + locations × services interlinking."
   },
+  "conversion_tracking": {
+    "events_counted": ["phone", "form_submit", "email"],
+    "totals_90d": { "phone": 116, "form_submit": 58, "email": 7, "composite": 181 },
+    "events_excluded": [
+      {
+        "event": "gmb_click",
+        "count_90d": 584,
+        "reason": "Tracked as event in GA4 but not flagged as conversion. Per the standard HQDM lead composite (form_submit + click_phone_number + gmb_click + contact_form_submit), this should be flagged. Pending GA4 admin change."
+      },
+      {
+        "event": "contact_form_submit",
+        "count_90d": 61,
+        "reason": "Fires on the site but not marked as conversion. Likely a real form variant whose submissions are not being counted. Pending GA4 admin change."
+      }
+    ],
+    "anomalies": [
+      "form_submit fires 237× / 90d but only 58 are flagged as conversion (~24%). Likely a config gap on one form variant or a conversion-flag toggle mid-window. Worth a GA4 admin audit before next quarterly review."
+    ],
+    "gbp_segment": {
+      "method": "GA4 custom segment filtered by sessionSource containing 'gmb'.",
+      "channel_attribution_note": "The GBP listing URL carries `?utm_source=gmb&utm_medium=click&utm_campaign=gmb_listing`. The `utm_medium=click` value is not in GA4's default channel-grouping rule set (which recognizes `organic`, `referral`, `cpc`/`ppc`, etc.) — so these sessions land in Direct or Unassigned by default. The 'subset of Organic Search' framing used in prior drafts referred to the custom segment, not the default channel; clarified here.",
+      "fix_needed": "Change `utm_medium=click` to `utm_medium=organic` on the GBP listing URL so the segment lands in Organic Search by default channel grouping. Vertical peers (LSA Recovery, Mountainside) use this pattern. Detail in Surfpoint_GBP_Audit_2026-05-12.md §3.5."
+    },
+    "sources": [
+      "data/ga4_trend.json — raw GA4 export (sessions, conversions, events by channel)",
+      "GA4 property properties/394841496"
+    ]
+  },
   "tldr": "Surfpoint is overperforming its architecture. The GBP listing is the strongest single asset (rank 1.47 / 96% top-3 on the tracked alcohol-rehab anchor, improving Oct 2025 → Apr 2026; rank 1 across 9 of 12 priority service anchors at Coney Island center; 4.8★ / 120 reviews / +29 in 16 days; converts at 2.53% — 8× the all-Organic-Search rate of 0.32%). Organically, the site is being actively de-indexed by Google: 756 URLs flagged Crawled/Discovered — not indexed across 87 days; daily impressions −79% peak-to-current; 47 of 99 location pages not indexed; service pages get <strong>104 sessions and 0 conversions in 365 days</strong> because the interlinking SOP routes equity to homepage + utility pages and bypasses services entirely. Backlinks carry a <strong>spam score of 43</strong> from PR placements to PBN-adjacent domains (national benchmarks sit at 16–24). Q2 move: <strong>disavow first</strong>, then ship homepage CRD + 28 location-page redirects + 9 location-page rebuilds + service-page rebuild starting with alcohol-detox + opioid-detox + MAT, refactor internal linking onto services, sequence GBP optimization beyond reviews into categories/attributes/photos/posts/Q&A/booking link, and run individual review on 555 legacy URLs the topical+backlinks overlay flagged as AUDIT. Pause new PR placement. Lean on GBP dominance as the resilience layer.",
   "kpis": [
     {
@@ -21,10 +49,10 @@
       "detail": "Avg rank 1.47 / 96% top-3 across the 136-cell LD grid at Coney Island center (Apr 2026). Improving 1.88 → 1.47 over 5 scans (Oct 2025 → Apr 2026). Rank #1 at 4 of 7 target anchor coords (Coney Island, Bath Beach, Bensonhurst, Brighton Beach) on both alcohol-rehab and drug-rehab queries."
     },
     {
-      "label": "GBP conversion rate vs all-organic",
+      "label": "GBP conversion rate vs Organic",
       "value": "2.53% / 0.32%",
       "sentiment": "positive",
-      "detail": "GBP-click subset of Organic Search converts at 2.53% (1,186 sessions, 30 conv / 90d) — 8× the all-Organic-Search average of 0.32% and 16× the non-GBP-organic rate (0.15%). Working channel; resilience layer."
+      "detail": "GMB-tagged sessions (`source=gmb`, isolated by custom segment in GA4) convert at 2.53% (1,186 sessions, 30 conv / 90d) vs all-Organic-Search at 0.32% (55 conv / 17,285 sess). Note: the GBP listing URL carries `utm_medium=click`, which GA4 default channel grouping doesn't recognize as Organic — these sessions land in <strong>Direct/Unassigned</strong>. The 2.53% is from a custom segment. Tracking caveats apply — see footer."
     },
     {
       "label": "Review base velocity",
@@ -52,8 +80,8 @@
     }
   ],
   "trend": {
-    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): phone (115) + form_submit (57) + email (7)",
-    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): phone (116) + form_submit (58) + email (7)",
+    "annotation_text": "GA4 default-channel-grouping. Conversions = phone + form_submit + email events flagged as conversion. Tracking gaps: `gmb_click` (584/90d) and `contact_form_submit` (61/90d) are tracked as events but NOT marked as conversions in GA4; `form_submit` fires 237×/90d but only 58 are flagged (~24%). Numbers below understate true lead volume — GA4 admin fixes pending.",
     "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
       "Dec 2024",
@@ -177,7 +205,7 @@
         93
       ]
     },
-    "form_submits": {
+    "conversions": {
       "organic": [
         89.0,
         71.0,
@@ -281,7 +309,7 @@
     },
     "series_labels": {
       "sessions": "GA4 Sessions",
-      "form_submits": "GA4 Conversions  (phone (115) + form_submit (57) + email (7))"
+      "conversions": "GA4 Conversions (phone + form_submit + email)"
     },
     "channel_labels": {
       "organic": "Organic Search",
@@ -297,65 +325,66 @@
         "org_sess": 2199,
         "org_conv": 89.0,
         "org_cr": 4.0,
-        "gbp_sess": 417,
-        "gbp_conv": 15.0,
-        "gbp_cr": 3.6
+        "gbp_sess": 386,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q1 2025",
         "org_sess": 2127,
         "org_conv": 71.7,
         "org_cr": 3.4,
-        "gbp_sess": 419,
-        "gbp_conv": 7.0,
-        "gbp_cr": 1.7
+        "gbp_sess": 443,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q2 2025",
         "org_sess": 2550,
         "org_conv": 79.7,
         "org_cr": 3.1,
-        "gbp_sess": 501,
-        "gbp_conv": 15.7,
-        "gbp_cr": 3.1
+        "gbp_sess": 465,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q3 2025",
         "org_sess": 2688,
         "org_conv": 56.0,
         "org_cr": 2.1,
-        "gbp_sess": 927,
-        "gbp_conv": 29.0,
-        "gbp_cr": 3.1
+        "gbp_sess": 464,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q4 2025",
         "org_sess": 3003,
         "org_conv": 12.3,
         "org_cr": 0.4,
-        "gbp_sess": 3206,
-        "gbp_conv": 26.3,
-        "gbp_cr": 0.8
+        "gbp_sess": 344,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q1 2026",
         "org_sess": 6675,
         "org_conv": 13.3,
         "org_cr": 0.2,
-        "gbp_sess": 4299,
-        "gbp_conv": 44.3,
-        "gbp_cr": 1.0
+        "gbp_sess": 412,
+        "gbp_conv": null,
+        "gbp_cr": null
       },
       {
         "q": "Q2 2026*",
         "org_sess": 2180,
         "org_conv": 18.5,
         "org_cr": 0.8,
-        "gbp_sess": 3041,
-        "gbp_conv": 36.0,
-        "gbp_cr": 1.2
+        "gbp_sess": 399,
+        "gbp_conv": 10.0,
+        "gbp_cr": 2.5
       }
     ],
+    "quarterly_notes": "gbp_sess = GMB-source-tagged sessions per month (source=gmb in GA4). gbp_conv only populated for the current quarter where we have the 90d KPI (30 conv / 1,186 sess / 2.53%). Historical GBP-attributed conversions aren't broken out in the underlying GA4 export.",
     "channel_colors": {
       "organic": "#1d5b8a",
       "direct": "#ef4444",
@@ -742,7 +771,7 @@
     "Maps anchor `alcohol rehab brooklyn` at rank 1.47 / 96% top-3 (Apr 2026 scan) — improving 1.88 → 1.47 across 5 scans Oct 2025 → Apr 2026",
     "Rank #1 across 9 of 12 priority service anchors at Coney Island center (alcohol detox/rehab, drug detox/rehab, opioid treatment, inpatient rehab, addiction treatment, detox umbrella)",
     "Rank #1 at 4 of 7 strategic anchor coords (Coney Island, Bath Beach, Bensonhurst, Brighton Beach) on both alcohol-rehab and drug-rehab queries",
-    "GBP conversion rate 2.53% — 8× the all-Organic-Search rate of 0.32%; 16× the non-GBP-organic rate (0.15%)",
+    "GMB-tagged sessions convert at 2.53% (30 conv / 1,186 sess / 90d) vs all-Organic at 0.32%; GMB-tagged sessions are GA4-attributed to Direct/Unassigned by default channel grouping (GBP URL uses `utm_medium=click`, not a default-recognized medium — see conversion_tracking notes)",
     "Review velocity 91/4.5★ → 120/4.8★ in 16 days (Apr 22 → May 8) — only Brooklyn listing combining 4.8★ with 100+ reviews; 5.2× the 90d velocity of next-nearest direct competitor",
     "#1 cited rehab provider domain across 18-prompt LLM audit (15 citations, more than Urban Recovery's 13) — strong on commercial-local Brooklyn prompts",
     "Brand-driven traffic (~51% of sessions) converts at ~1.0% — the homepage form is uncontested in the competitor set (Ascendant has 0, Mountainside has 0)",
@@ -1569,7 +1598,7 @@
       "leads_label": "Organic leads",
       "partial_index": 7,
       "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Conversion volume understated by known GA4 tracking gaps (gmb_click + contact_form_submit not flagged as conversions) — excluded from this snapshot view; corrected on the strategic dashboard with caveats."
     },
     "quarters": {
       "labels": [
@@ -1634,7 +1663,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Conversion volume is understated by known GA4 tracking gaps (`gmb_click` 584/90d + `contact_form_submit` 61/90d not flagged as conversions), so absolute conversion counts are excluded from these comparisons. The current month is partial.",
     "focus": [
       {
         "title": "Site architecture cleanup",

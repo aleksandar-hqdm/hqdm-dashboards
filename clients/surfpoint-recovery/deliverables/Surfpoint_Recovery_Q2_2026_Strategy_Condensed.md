@@ -10,7 +10,7 @@
 
 ## At a glance
 
-**What's working** — Maps + brand are the revenue engine. Surfpoint is rank 1 in the map pack at Coney Island center on 9 of 12 priority service anchors and rank 1.47 / 96% top-3 on the `alcohol rehab brooklyn` grid. GBP-tracked entries convert at **2.53%, ~8× the all-Organic-Search average of 0.32%**. Review velocity is strong (4.5★ / 91 → 4.8★ / 120 in 30 days). Surfpoint is already the **#1 cited rehab provider domain** across an 18-prompt LLM audit (15 citations, more than Urban Recovery).
+**What's working** — Maps + brand are the revenue engine. Surfpoint is rank 1 in the map pack at Coney Island center on 9 of 12 priority service anchors and rank 1.47 / 96% top-3 on the `alcohol rehab brooklyn` grid. GMB-tagged sessions (GA4 custom segment, `source=gmb`) convert at **2.53%, ~8× the all-Organic-Search average of 0.32%**. Review velocity is strong (4.5★ / 91 → 4.8★ / 120 in 30 days). Surfpoint is already the **#1 cited rehab provider domain** across an 18-prompt LLM audit (15 citations, more than Urban Recovery).
 
 **What's broken** — Service pages get **104 sessions and 0 conversions in 365 days** because the interlinking SOP routes equity to homepage + utility pages and bypasses services entirely. The legacy blog footprint is being **actively de-indexed by Google** (impressions −79% peak-to-current, 756 pages "Crawled — not indexed" or "Discovered — not indexed"). Backlinks profile carries a **spam score of 43** from PR placements to PBN-adjacent domains. GBP profile depth lags the competitive leader by 4 categories and 2 attributes.
 

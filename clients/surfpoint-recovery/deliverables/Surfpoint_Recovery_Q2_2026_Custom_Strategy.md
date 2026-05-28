@@ -80,25 +80,30 @@ Two views of the same funnel.
 | Location pages | 105 | 1,617 | 6 | 0.37% | 0.7% |
 | **Service pages** | 5 | **104** | **0** | **0.00%** | **0%** |
 
-**By channel (GA4 90d) — with GBP-click broken out as the converting subset of Organic Search:**
+**By channel (GA4 90d) — GMB-tagged sessions isolated as a custom segment:**
 
 | Channel | Sessions | Sess Share | Conv | Conv Share | Conv Rate | Estimated Branded Share | New User Conv Rate | Returning User Conv Rate |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| **Direct** | 11,585 | **40.0%** | **118** | **65.9%** | **1.02%** | ~85-95% (typed URL, bookmark, dark social, untracked referral) | 0.95% | **5.24%** |
-| **Organic Search — GBP / map click** *(subset)* | **1,186** | 4.1% | **30** | **16.8%** | **2.53%** | ~95% (clicked from GBP listing) | — | — |
-| Organic Search — non-GBP | 15,562 | 53.8% | 24 | 13.4% | 0.15% | ~10% (GSC-derived: 19% branded × non-GBP share) | 0.11% | 8.16% |
+| **Direct** *(includes GMB-tagged below)* | 11,585 | **40.0%** | **118** | **65.9%** | **1.02%** | ~85-95% (typed URL, bookmark, dark social, GMB-tagged) | 0.95% | **5.24%** |
+| **GMB-tagged** *(custom segment, `source=gmb`)* | **1,186** | 4.1% | **30** | **16.8%** | **2.53%** | ~95% (clicked from GBP listing) | — | — |
+| Organic Search | 16,748 | 57.9% | 54 | 30.2% | 0.32% | ~19% (GSC-derived branded share) | 0.11% | 8.16% |
 | Unassigned | 370 | 1.3% | 6 | 3.4% | 1.62% | ~50% | 2.01% | 0.88% |
 | Referral | 172 | 0.6% | 1 | 0.6% | 0.58% | ~20% | 0% | 10.00% |
 | Organic Social | 71 | 0.2% | 0 | 0% | 0% | ~80% | 0% | 0% |
 | *Total* | *28,946* | *100.0%* | *179* | *100.0%* | *0.62%* | — | — | — |
 
-**The GBP / map click subset is the highest-converting channel** (2.53% conv rate, ~8× the average Organic Search rate of 0.32%). GA4 doesn't break this out by default — it shows up as Organic Search with `sessionSourceMedium = gmb / click` (because that's the UTM Surfpoint's GBP listing carries) and was extracted by re-querying GA4 for that specific source/medium pair.
+**The GMB-tagged segment is the highest-converting cohort** (2.53% conv rate vs all-Organic 0.32% — roughly 8×). Note on attribution: Surfpoint's GBP listing URL carries `?utm_source=gmb&utm_medium=click&utm_campaign=gmb_listing`. The `utm_medium=click` value is not in GA4's default channel-grouping rule set, so by default these sessions land in **Direct/Unassigned**, not Organic Search. The segment above was isolated by filtering GA4 for `sessionSource contains 'gmb'`. Changing the listing URL's `utm_medium` from `click` to `organic` would route these sessions into Organic Search by default channel grouping (detail in `Surfpoint_GBP_Audit_2026-05-12.md` §3.5).
 
 **Reading the channel matrix:**
 
 - **~51% of total sessions are estimated brand-driven** (100% of Direct + 19% of Organic Search + share of Referral/Social/Unassigned). They convert at **~1.0%** combined (matches the Direct rate; brand-driven Organic-Search visits land on similar pages and convert similarly).
 - **~47% of sessions are non-brand-driven** (mostly Organic Search blog content). They convert at **~0.11–0.15%** (matches Organic Search new-user + bare-organic rates). Total non-brand conversions in 90d: ~15 of 179 (~8%).
-- **GBP / click is a subset of Organic Search** (~1,186 sessions = 7% of all Organic Search sessions) and converts at **2.53%** — **~8× the all-Organic-Search average rate of 0.32%** (54 conv on 16,754 total Organic Search sessions). Versus *non-GBP* Organic Search alone (0.15%), GBP converts at 16×. This is the working channel.
+- **GMB-tagged sessions** (1,186 / 90d = ~4.1% of total sessions) convert at **2.53%** — **~8× the all-Organic-Search average of 0.32%** (54 conv on 16,748 total Organic Search sessions). This is the working channel.
+
+**Conversion-tracking caveats** (apply to all conversion numbers in this doc):
+
+- `gmb_click` fires 584×/90d and `contact_form_submit` fires 61×/90d, but neither is flagged as a conversion event in GA4. The 179-conversion composite (phone + form_submit + email) understates true lead volume.
+- `form_submit` fires 237×/90d but only 58 are flagged as conversions (~24%). Likely a config gap on one form variant or a conversion-flag toggle mid-window. Pending GA4 admin audit.
 
 **Reading the page-type table:**
 
@@ -586,7 +591,7 @@ The actual sources currently delivering Brooklyn-area rehab traffic to Surfpoint
 | High-volume Brooklyn-area query | Current source | Current annual clicks to Surfpoint | Comment / opportunity |
 |---|---|---:|---|
 | Brand search (`surfpoint recovery` + variants) | GSC organic (mostly homepage, branded) | 3,894 | Healthy 17% CTR; protect, don't change |
-| GBP / map click *(catch-all from the GBP listing)* | GA4 source `gmb / click` | 1,186 sessions/90d → ~4,700/year | **Top-converting channel (2.53%); reinforce on-page** |
+| GMB-tagged sessions (catch-all from the GBP listing) | GA4 custom segment, `sessionSource contains 'gmb'` (GA4-attributed to Direct in default channel grouping) | 1,186 sessions/90d → ~4,700/year | **Top-converting cohort (2.53%); reinforce on-page** |
 | `drug rehab brooklyn` | GSC organic, position 5.8 | 21 | Could 3-5x at top-3 with title + page rebuild |
 | `inpatient drug rehab nyc` | GSC organic, position 21 | 6 | Service-page rebuild needed to break top-10 |
 | `recovery center brooklyn` | GSC organic, **position 3.7 / 0 clicks** | **0** *(pos 3.7, 10,512 imp)* | **Title + meta rewrite — 50+ clicks/mo on table at this position** |
@@ -806,7 +811,7 @@ Returning users convert at **13× the rate** of new users. 2.8% of sessions deli
 |---|---:|---:|---|
 | **Direct** | 0.95% | **5.24%** | Brand-aware new = decent; returning = excellent |
 | **Organic Search** | **0.11%** | 8.16% | The leak — 15,920 new from organic, 18 conversions |
-| Organic Search → GBP (subset) | — | — | **2.53% overall — ~8× the all-Organic-Search average of 0.32%** |
+| GMB-tagged segment *(GA4-attributed to Direct)* | — | — | **2.53% overall — ~8× the all-Organic-Search average of 0.32%** |
 | Referral | 0% | 10% | Tiny but converts on returning |
 | Organic Social | 0% | 0% | Dead |
 
@@ -814,7 +819,7 @@ The organic search "0.11% conversion on new users" is the leak. 15,920 new users
 
 Compare:
 - **Direct (mostly branded/known)**: brings new users at 0.95% conv — 9× better signal
-- **GBP / click**: 2.53% conv rate — best channel by far
+- **GMB-tagged sessions**: 2.53% conv rate — best cohort by far
 - **Organic search bare**: 0.11% on new users, but 8.16% on returning — huge gap; the architecture loses the new visitor before they understand the brand
 
 ### 5.4 LLM visibility baseline + live audit *(new — DataForSEO AI Optimization pull)*
