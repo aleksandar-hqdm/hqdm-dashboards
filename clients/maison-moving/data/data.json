@@ -16,8 +16,8 @@
     "h2": "Two pins, opposite directions — and a website that isn't wired to either",
     "lede": "Across 14 map keywords scanned six times since March, the Chino Hills pin dominates while the flagship Tustin pin is mid-pack and losing ground. The GBPs are reasonably complete, but the connective tissue to the site — schema, NAP, the Chino Hills landing target — is missing, which caps how high either pin can climb.",
     "tiles": [
-      {"label": "Tustin HQ · Maps", "value": "#4", "sub": "−31 top-3 cells since Mar · avg rank 8.8 · 856 reviews", "tone": "bad"},
-      {"label": "Chino Hills · Maps", "value": "#1", "sub": "736 top-3 cells (2× #2) · avg rank 3.3 · 121 reviews", "tone": "good"},
+      {"label": "Chino Hills · Maps", "value": "#1", "sub": "791 top-3 cells · avg rank 2.8 · 121 reviews", "tone": "good"},
+      {"label": "Tustin HQ · Maps", "value": "#4", "sub": "−87 top-3 cells (Apr→May) · avg rank 10.1 · 856 reviews", "tone": "bad"},
       {"label": "Site → GBP schema", "value": "Missing", "sub": "no LocalBusiness/MovingCompany markup; org name = '(Staging)'", "tone": "bad"},
       {"label": "Review velocity · HQ", "value": "Flat", "sub": "856 → 856 in 10 weeks while rivals at 1,000–1,530 keep gaining", "tone": "watch"}
     ]
@@ -127,12 +127,12 @@
   ],
 
   "kpi_targets": [
-    {"metric": "Tustin — top-3 map cells (6 queries)", "current": "133", "target": "165+ (recover Mar baseline)", "stretch": "190+"},
-    {"metric": "Tustin — avg map rank", "current": "8.8", "target": "7.0", "stretch": "6.0"},
+    {"metric": "Chino Hills — top-3 map cells (8 queries)", "current": "791", "target": "800+ (hold/extend)", "stretch": "850+"},
+    {"metric": "Chino Hills — reviews", "current": "121", "target": "150+", "stretch": "175+"},
+    {"metric": "Tustin — top-3 map cells (6 queries)", "current": "76", "target": "165+ (recover Apr baseline)", "stretch": "190+"},
+    {"metric": "Tustin — avg map rank", "current": "10.1", "target": "7.0", "stretch": "6.0"},
     {"metric": "Tustin — review velocity / quarter", "current": "~0", "target": "+30", "stretch": "+45"},
     {"metric": "Tustin — rating", "current": "4.6", "target": "4.7", "stretch": "4.8"},
-    {"metric": "Chino Hills — top-3 map cells (8 queries)", "current": "736", "target": "760+ (hold/extend)", "stretch": "800+"},
-    {"metric": "Chino Hills — reviews", "current": "121", "target": "150+", "stretch": "175+"},
     {"metric": "LocalBusiness schema live (per pin)", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
     {"metric": "Site phone matches GBP (per pin)", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
     {"metric": "Location pages w/ map + schema", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
