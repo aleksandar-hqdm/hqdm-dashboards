@@ -2127,12 +2127,12 @@
     "short_name": "Professional Movers",
     "subtitle": "Q3 2026 · Walled Lake, MI · Client Snapshot",
     "footer": "Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Organic search traffic has come down hard over the past year (organic clicks <strong>−74% since August 2025</strong>), but the leads that matter held through the drop. Visitors who arrive through your Google Business <em>Website</em> button submit quote forms at <strong>~17.5% — nearly double the 9.2%</strong> from regular organic search — and that high-intent path never dipped. Year over year, organic visits are <strong>−24%</strong> but your <strong>conversion rate is up (+11%)</strong>, so the site is converting what it gets more efficiently. On Maps you hold coverage in <strong>3 of 8 surrounding metros</strong> — real room to grow. The Q3 plan compounds the channel already winning: claim two more Google Business pins, fix the templated city pages that triggered the ranking drop, and rebuild the earned-link profile.</p>",
+    "exec_html": "<p>Your <strong>Maps position is the channel carrying the business</strong>. Across the 13&times;13 Detroit-metro grid you hold an average rank of <strong>#3&ndash;#4 on &ldquo;movers&rdquo; and &ldquo;movers near me&rdquo;</strong>, with 79&ndash;84 of 121 grid cells in top-3 &mdash; defended cleanly through the year. On Detroit-side queries you&rsquo;ve <strong>extended top-10 reach 7&times;</strong> on &ldquo;movers detroit&rdquo; (9 &rarr; 67 cells) and <strong>doubled</strong> it on &ldquo;detroit moving company&rdquo; (8 &rarr; 16). The Google-Business website button is your highest-converting channel by a wide margin &mdash; <strong>~17.5% quote-form rate, nearly 2&times; the organic baseline</strong> &mdash; and it&rsquo;s at an <strong>18-month high</strong>. Site-wide conversion rate is <strong>up +11% year over year</strong>. The Q3 plan compounds what&rsquo;s already working: claim two more managed Google Business pins (Detroit Woodward + Rochester), tighten the city pages, and rebuild the earned-link channel.</p>",
     "chips": [
       {
-        "v": "−74%",
-        "l": "organic clicks (12-mo)",
-        "watch": true
+        "v": "7×",
+        "l": "movers detroit top-10 reach",
+        "good": true
       },
       {
         "v": "17.5%",
@@ -2185,11 +2185,10 @@
       "leads_label": "Organic leads",
       "partial_index": 7,
       "title": "Organic Performance · Monthly (Q4 2025 → now)",
-      "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
+      "caption": "Organic visitors (blue, left) and quote-form leads (green, right). Lead volume has recovered since March and held the Mar–Apr range. The dashed tail marks the partial current month."
     },
     "quarters": {
       "labels": [
-        "Dec '24",
         "Q1 '25",
         "Q2 '25",
         "Q3 '25",
@@ -2198,7 +2197,6 @@
         "Q2 '26*"
       ],
       "visitors": [
-        572,
         526,
         709,
         657,
@@ -2207,7 +2205,6 @@
         537
       ],
       "leads": [
-        48,
         45,
         59,
         60,
@@ -2217,7 +2214,7 @@
       ],
       "visitors_label": "Visitors",
       "leads_label": "Leads",
-      "partial_index": 6,
+      "partial_index": 5,
       "title": "By Quarter · Visitors & Leads"
     },
     "boxes": [
@@ -2278,7 +2275,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "Traffic is still below last year, but conversion rate is up and the Google-Business lead path is at an 18-month high — the next 90 days lean into that channel.",
+    "boxes_reading_html": "Conversion rate is up year over year and the Google-Business lead path is at an <strong>18-month high</strong>. The last 90 days are showing <strong>visitors +8% and leads +14%</strong> — the recovery curve is in, and Q3 leans into the channel already converting.",
     "focus": [
       {
         "title": "Expand Maps presence",
