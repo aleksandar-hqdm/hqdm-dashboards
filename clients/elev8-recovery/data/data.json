@@ -52,8 +52,14 @@
     }
   ],
   "trend": {
-    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): gmb_click (1203) + form_submit (238)",
-    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "leads_definition": {
+      "using_form_submit_only": true,
+      "events_in_composite": ["form_submit"],
+      "events_tracked_separately": ["gmb_click", "phone"],
+      "note": "Elev8 has no contact_form_submit event (single form site-wide) and uses non-canonical `phone` event name instead of `click_phone_number`."
+    },
+    "headline": "GA4 — sessions + form-submit leads by channel, 18 months. GMB clicks and phone-link clicks tracked separately (Jul 2025 onward — GTM tagging for both events was deployed Jul 2025; pre-Jul values not captured).",
+    "annotation_text": "Leads = form_submit events (GA4 default-channel-grouping). GMB clicks and phone clicks are non-lead intent signals tracked from Jul 2025 onward.",
     "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
       "Dec 2024",
@@ -177,111 +183,11 @@
         6
       ]
     },
-    "form_submits": {
-      "organic": [
-        4.0,
-        8.0,
-        8.0,
-        9.0,
-        15.0,
-        13.0,
-        13.0,
-        70.0,
-        333.0,
-        375.0,
-        329.0,
-        267.0,
-        307.0,
-        409.0,
-        385.0,
-        456.0,
-        433.0,
-        251.0
-      ],
-      "direct": [
-        0.0,
-        0.0,
-        7.0,
-        1.0,
-        2.0,
-        2.0,
-        1.0,
-        2.0,
-        3.0,
-        5.0,
-        0.0,
-        99.0,
-        25.0,
-        45.0,
-        65.0,
-        111.0,
-        61.0,
-        29.0
-      ],
-      "referral": [
-        0.0,
-        0.0,
-        3.0,
-        1.0,
-        0.0,
-        1.0,
-        2.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "social": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "other": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        8.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0
-      ]
-    },
     "series_labels": {
       "sessions": "GA4 Sessions",
-      "form_submits": "GA4 Conversions  (gmb_click (1203) + form_submit (238))"
+      "leads": "Organic Leads (form_submit)",
+      "gmb_clicks": "GMB Clicks",
+      "phone_clicks": "Phone Clicks"
     },
     "channel_labels": {
       "organic": "Organic Search",
@@ -296,7 +202,7 @@
         "q": "Dec 2024",
         "org_sess": 3604,
         "org_conv": 4.0,
-        "org_cr": 0.1,
+        "org_cr": 0.11,
         "gbp_sess": 382,
         "gbp_conv": 0.0,
         "gbp_cr": 0.0
@@ -304,56 +210,56 @@
       {
         "q": "Q1 2025",
         "org_sess": 4801,
-        "org_conv": 8.3,
-        "org_cr": 0.2,
+        "org_conv": 8.0,
+        "org_cr": 0.17,
         "gbp_sess": 605,
         "gbp_conv": 2.7,
-        "gbp_cr": 0.4
+        "gbp_cr": 0.45
       },
       {
         "q": "Q2 2025",
         "org_sess": 6320,
         "org_conv": 13.7,
-        "org_cr": 0.2,
+        "org_cr": 0.22,
         "gbp_sess": 749,
         "gbp_conv": 1.7,
-        "gbp_cr": 0.2
+        "gbp_cr": 0.23
       },
       {
         "q": "Q3 2025",
         "org_sess": 5764,
-        "org_conv": 259.3,
-        "org_cr": 4.5,
+        "org_conv": 17.3,
+        "org_cr": 0.3,
         "gbp_sess": 859,
-        "gbp_conv": 3.3,
-        "gbp_cr": 0.4
+        "gbp_conv": 2.0,
+        "gbp_cr": 0.23
       },
       {
         "q": "Q4 2025",
         "org_sess": 5208,
-        "org_conv": 301.0,
-        "org_cr": 5.8,
+        "org_conv": 11.3,
+        "org_cr": 0.22,
         "gbp_sess": 2157,
-        "gbp_conv": 41.3,
-        "gbp_cr": 1.9
+        "gbp_conv": 40.0,
+        "gbp_cr": 1.85
       },
       {
         "q": "Q1 2026",
         "org_sess": 8124,
-        "org_conv": 416.7,
-        "org_cr": 5.1,
+        "org_conv": 12.0,
+        "org_cr": 0.15,
         "gbp_sess": 2726,
-        "gbp_conv": 73.7,
-        "gbp_cr": 2.7
+        "gbp_conv": 72.3,
+        "gbp_cr": 2.65
       },
       {
         "q": "Q2 2026*",
         "org_sess": 4100,
-        "org_conv": 342.0,
-        "org_cr": 8.3,
+        "org_conv": 8.0,
+        "org_cr": 0.2,
         "gbp_sess": 1760,
-        "gbp_conv": 45.0,
-        "gbp_cr": 2.6
+        "gbp_conv": 43.5,
+        "gbp_cr": 2.47
       }
     ],
     "channel_colors": {
@@ -362,6 +268,312 @@
       "referral": "#8b5cf6",
       "social": "#f59e0b",
       "other": "#9ca3af"
+    },
+    "leads": {
+      "organic": [
+        4,
+        7,
+        8,
+        9,
+        15,
+        13,
+        13,
+        17,
+        14,
+        21,
+        10,
+        17,
+        7,
+        10,
+        14,
+        12,
+        10,
+        6
+      ],
+      "direct": [
+        0,
+        0,
+        7,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        3,
+        0,
+        96,
+        24,
+        43,
+        65,
+        109,
+        58,
+        29
+      ],
+      "referral": [
+        0,
+        0,
+        3,
+        1,
+        0,
+        1,
+        2,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        2
+      ],
+      "social": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "other": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        7,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "gmb_clicks": {
+      "organic": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        53,
+        319,
+        354,
+        319,
+        250,
+        300,
+        399,
+        371,
+        444,
+        423,
+        333
+      ],
+      "direct": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        2,
+        2,
+        0,
+        3,
+        1,
+        2,
+        0,
+        2,
+        3,
+        2
+      ],
+      "referral": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "social": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "other": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    "phone_clicks": {
+      "organic": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        9,
+        33,
+        30,
+        35,
+        40,
+        35,
+        42,
+        46,
+        59,
+        36,
+        29
+      ],
+      "direct": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2,
+        11,
+        15,
+        11,
+        7,
+        9,
+        8,
+        5,
+        6,
+        11,
+        13
+      ],
+      "referral": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        4,
+        1,
+        3,
+        2,
+        0,
+        8,
+        1,
+        0,
+        3,
+        1
+      ],
+      "social": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "other": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        1,
+        0
+      ]
     }
   },
   "per_keyword": [
@@ -1217,12 +1429,21 @@
         4834,
         3366
       ],
-      "leads": [],
+      "leads": [
+        10,
+        17,
+        7,
+        10,
+        14,
+        12,
+        10,
+        6
+      ],
       "visitors_label": "Organic visitors",
-      "leads_label": "Organic leads",
+      "leads_label": "Form-submit leads",
       "partial_index": 7,
       "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "caption": "Monthly organic visitors + form-submit leads. A dashed tail marks the partial current month. GMB clicks and phone-link clicks are non-lead signals tracked separately in the strategic dashboard."
     },
     "quarters": {
       "labels": [
@@ -1243,51 +1464,74 @@
         8124,
         4100
       ],
-      "leads": [],
+      "leads": [
+        4.0,
+        8.0,
+        13.7,
+        17.3,
+        11.3,
+        12.0,
+        8.0
+      ],
       "visitors_label": "Visitors",
-      "leads_label": "Leads",
+      "leads_label": "Leads (monthly avg)",
       "partial_index": 6,
       "title": "By Quarter · Organic Visitors"
     },
     "boxes": [
       {
         "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-35%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
+        "cmp": "Q1 2026 vs Q1 2025",
         "kind": "good",
         "rows": [
           {
             "m": "Visitors",
-            "d": "+9%",
+            "d": "+69%",
+            "cls": "pos"
+          },
+          {
+            "m": "Leads",
+            "d": "+50%",
             "cls": "pos"
           }
         ]
       },
       {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo (complete months only)",
         "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+9%",
+            "cls": "pos"
+          },
+          {
+            "m": "Leads",
+            "d": "-20%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days (complete months only)",
+        "kind": "good",
         "rows": [
           {
             "m": "Visitors",
             "d": "-17%",
             "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "+6%",
+            "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Organic visitors, Maps visibility, and form-submit leads are the clean signals this quarter. GMB clicks and phone-link clicks are tracked separately (Jul 2025 onward) and shown in the strategic dashboard, not bundled into leads here. The current month is partial.",
     "focus": [
       {
         "title": "Split the homepage",

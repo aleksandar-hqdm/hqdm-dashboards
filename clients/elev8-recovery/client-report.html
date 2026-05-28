@@ -88,9 +88,9 @@
           <thead class="bg-slate-50">
             <tr>
               <th class="text-left py-2 px-3">Quarter</th>
-              <th class="text-right py-2 px-3">Sessions (qtr total)</th>
-              <th class="text-right py-2 px-3">Conversions (qtr total)</th>
-              <th class="text-right py-2 px-3">CVR</th>
+              <th class="text-right py-2 px-3">Sessions (monthly avg)</th>
+              <th class="text-right py-2 px-3">Leads (monthly avg)</th>
+              <th class="text-right py-2 px-3">Lead rate</th>
             </tr>
           </thead>
           <tbody id="qtable-body"></tbody>
@@ -104,10 +104,27 @@
 
     <!-- ============ MONTHLY TREND CHART ============ -->
     <section class="mb-6 trend-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — Traffic + Conversions</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — Traffic + Leads</h2>
       <div class="bg-white rounded-lg border border-slate-200 p-4">
         <div style="height: 280px;"><canvas id="trend-chart"></canvas></div>
         <p class="text-[10px] text-slate-500 mt-2 italic" id="trend-partial-note"></p>
+      </div>
+    </section>
+
+    <!-- ============ MINI CHARTS — GMB + PHONE CLICKS ============ -->
+    <section class="mb-6 mini-charts-wrap">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Other Intent Signals — Tracked Separately</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div class="bg-white rounded-lg border border-slate-200 p-4">
+          <div class="text-[12px] font-semibold text-slate-700 mb-1">GMB Clicks <span class="text-slate-400 font-normal">· Organic</span></div>
+          <div style="height: 180px;"><canvas id="gmb-chart"></canvas></div>
+          <p class="text-[10px] text-slate-500 mt-2 italic" id="gmb-note">Tracked from Jul 2025 (GTM tagging deployed).</p>
+        </div>
+        <div class="bg-white rounded-lg border border-slate-200 p-4">
+          <div class="text-[12px] font-semibold text-slate-700 mb-1">Phone-Link Clicks <span class="text-slate-400 font-normal">· Organic</span></div>
+          <div style="height: 180px;"><canvas id="phone-chart"></canvas></div>
+          <p class="text-[10px] text-slate-500 mt-2 italic" id="phone-note">Tracked from Jul 2025 (GTM tagging deployed).</p>
+        </div>
       </div>
     </section>
 
@@ -133,6 +150,6 @@
 
   </main>
 
-  <script src="../../assets/js/client-report.js"></script>
+  <script src="../../assets/js/client-report.js?v=20260528b"></script>
 </body>
 </html>
