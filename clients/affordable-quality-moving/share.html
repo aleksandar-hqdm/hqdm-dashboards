@@ -85,9 +85,9 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The Headline</h2>
       <div class="panel" style="background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
         <p class="text-[16px] sm:text-[17px] leading-relaxed text-slate-800 font-medium">
-          When we started in January, your website was in the middle of a steep drop — organic search traffic had just fallen from <strong>400 sessions in December to 75 in February</strong> (an 81% cliff). <strong>Over the four months since, we've turned that around</strong>. As of May, organic sessions are back at <strong>337/month — 4.5 times the February low</strong>, the last 90 days are up <strong>+34% in organic visitors</strong>, and your <strong>form submissions are up +70%</strong> over the same window (39 in April and 47 in the first 28 days of May — including 70 leads recovered from WordPress for the Apr 14 → May 28 tracking-gap window). Your Google Maps position never broke — still <strong>#1 in Santa Clarita</strong> on every search we track, and your review count crossed <strong>452 at a 4.9★ rating</strong>.
+          When we started in January, your website was in the middle of a steep drop — organic search traffic had just fallen from <strong>400 sessions in December to 75 in February</strong> (an 81% cliff). <strong>Over the four months since, we've turned that around</strong>. As of May, organic sessions are back at <strong>337/month — 4.5 times the February low</strong>, and the last 90 days are up <strong>+34% in organic visitors</strong>. <strong>Form submissions are recovering across the channel mix</strong> — 39 in April + 47 in the first 28 days of May = <strong>86 total</strong>, including 70 leads recovered from WordPress Flamingo for the Apr 14 → May 28 tracking-gap window. Your Google Maps position never broke — still <strong>#1 in Santa Clarita</strong> on every search we track, and your review count crossed <strong>452 at a 4.9★ rating</strong>.
         </p>
-        <p class="text-xs text-slate-500 mt-3 italic"><strong>Note on form-submission tracking:</strong> the post-submit redirect to <code>/contact/thank-you/</code> broke around <strong>Apr 14, 2026</strong> after a Contact Form 7 update silently disabled it — the form itself kept working but the analytics event stopped firing. Your inbox kept receiving leads throughout. AQMS's dev team identified the cause, deployed a WordPress-side fix, and <strong>recovered 70 form submissions from the Flamingo store</strong> for the gap window. Those numbers are now folded into the charts below. (5 vendor/SEO pitches were filtered out → 64 real customer enquiries / 61 unique customers.)</p>
+        <p class="text-xs text-slate-500 mt-3 italic"><strong>Note on form-submission tracking:</strong> the post-submit redirect to <code>/contact/thank-you/</code> broke around <strong>Apr 14, 2026</strong> after a Contact Form 7 update silently disabled it — the form kept working, but the analytics event stopped firing. Your inbox kept receiving leads throughout. AQMS's dev team identified the cause, deployed a WordPress-side fix, and <strong>recovered 70 form submissions from the Flamingo store</strong> for the gap window (5 vendor/SEO pitches filtered out → 64 real customer enquiries / 61 unique customers). The form charts below show <strong>organic-channel</strong> submissions only, for apples-to-apples lead-rate analysis against your organic visitors line. Most of the 70 backfilled events arrived with <code>(direct)</code> UTM source, so they route to your Direct channel in analytics — the organic-only view is therefore conservative. Per-channel breakdown is in the full strategic dashboard.</p>
       </div>
     </section>
 
@@ -96,7 +96,7 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Month-by-Month · Q4 2025 → May 2026</h2>
       <div class="panel">
         <p class="text-sm text-slate-700 mb-4 leading-relaxed">
-          Eight months of <strong>organic search visitors</strong> (left chart) and <strong>total form submissions across all channels</strong> (right chart) — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026), the stabilization (Mar), and the recovery (Apr–May). The form-submission line includes the dev-team backfill that recovered the Apr 14 → May 28 tracking gap.
+          Eight months of <strong>organic search</strong> performance — visitors (left chart) and form submissions (right chart, both filtered to Organic Search channel) — from the pre-cliff baseline (Oct–Dec 2025), through the cliff (Jan–Feb 2026), the stabilization (Mar), and the recovery (Apr–May).
         </p>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div>
@@ -104,12 +104,12 @@
             <div style="height: 320px;"><canvas id="trend-sessions"></canvas></div>
           </div>
           <div>
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Form Submissions / Month (all channels)</div>
+            <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Organic Form Submissions / Month</div>
             <div style="height: 320px;"><canvas id="trend-conversions"></canvas></div>
           </div>
         </div>
         <p class="text-[11px] text-slate-700 mt-3 font-semibold">Heads up — the "May 26 so far" data point is <span class="underline">partial</span>: it reflects only the first ~22 days of May, not the full month. Treat it as "where we are right now," not as a finished month. The dashed line on the chart signals this.</p>
-        <p class="text-[11px] text-slate-500 mt-1 italic">Form submissions include the Apr 14 → May 28 backfill (70 events recovered from WordPress Flamingo after CF7's <code>on_sent_ok</code> directive stopped firing). The 18-month view + all channels (Direct, Paid, Referral) is in the full strategic dashboard.</p>
+        <p class="text-[11px] text-slate-500 mt-1 italic">The 70-event WordPress Flamingo backfill (Apr 14 → May 28) arrived with <code>(direct)</code> UTM tags, so it routes to your Direct channel in GA4 — only the small organic-attributed share is visible on this chart. All-channel Apr + May total is 86 form submissions; per-channel split is in the strategic dashboard.</p>
       </div>
     </section>
 
@@ -137,8 +137,8 @@
           </div>
           <div class="timeline-event good">
             <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-700">April–May 2026 · Recovery</div>
-            <div class="font-bold text-slate-900 mt-1">Organic search + form submissions both come back</div>
-            <p class="text-sm text-slate-700 mt-1">Organic sessions in April jumped to <strong>320 (+193% vs March)</strong>, May is at 337 and counting — last 90 days are up <strong>+34%</strong>. Form submissions are recovering even faster: <strong>+70%</strong> over the last 90 days (39 in April + 47 in the first 28 days of May, including the dev-team backfill). Maps held #1 throughout and extended the lead (+46 top-3 placements since March).</p>
+            <div class="font-bold text-slate-900 mt-1">Organic search comes back hard; form submissions recover across channels</div>
+            <p class="text-sm text-slate-700 mt-1">Organic sessions in April jumped to <strong>320 (+193% vs March)</strong>, May is at 337 and counting — last 90 days are up <strong>+34%</strong>. Form submissions across all channels totalled <strong>86 over Apr + May</strong> (39 + 47, including the dev-team Flamingo backfill that recovered the Apr 14 → May 28 tracking gap). Maps held #1 throughout and extended the lead (+46 top-3 placements since March).</p>
           </div>
         </div>
 
@@ -152,10 +152,10 @@
             <div class="s">Apr+May 2026 vs Jan–Mar 2026</div>
           </div>
           <div class="recovery-tile">
-            <div class="l">Last 90 Days · Form Submissions</div>
-            <div class="pct">▲ +70%</div>
-            <div class="b">83 → 141 submissions (all channels)</div>
-            <div class="s">Mar–May 2026 vs Dec 2025 – Feb 2026 · incl. backfill</div>
+            <div class="l">Form Submissions · Apr + May 2026</div>
+            <div class="pct">86 total</div>
+            <div class="b">39 in April + 47 in May (first 28 days)</div>
+            <div class="s">all channels · incl. Flamingo backfill</div>
           </div>
           <div class="recovery-tile" style="border-left-color: #1d5b8a;">
             <div class="l" style="color: #1d5b8a;">Maps Position</div>
@@ -186,8 +186,9 @@
             <thead>
               <tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200">
                 <th class="py-2 pr-3">Quarter</th>
-                <th class="py-2 pr-3 text-right">Visitors (Organic)</th>
-                <th class="py-2 pr-3 text-right">Form Submissions (all channels)</th>
+                <th class="py-2 pr-3 text-right">Organic Visitors</th>
+                <th class="py-2 pr-3 text-right">Organic Forms</th>
+                <th class="py-2 pr-3 text-right">All-Channel Forms</th>
                 <th class="py-2 text-left">Context</th>
               </tr>
             </thead>
@@ -195,25 +196,28 @@
               <tr class="border-b border-slate-100">
                 <td class="py-2.5 pr-3 font-semibold text-slate-700">Q4 2025</td>
                 <td class="py-2.5 pr-3 text-right font-mono">1,460</td>
+                <td class="py-2.5 pr-3 text-right font-mono">24</td>
                 <td class="py-2.5 pr-3 text-right font-mono">59</td>
                 <td class="py-2.5 text-slate-600 text-xs">Pre-cliff baseline; Oct-Dec also had the suspicious Direct-traffic spike (third-party tool)</td>
               </tr>
               <tr class="border-b border-slate-100 bg-rose-50/30">
                 <td class="py-2.5 pr-3 font-semibold text-rose-700">Q1 2026</td>
                 <td class="py-2.5 pr-3 text-right font-mono text-rose-700">281</td>
+                <td class="py-2.5 pr-3 text-right font-mono">31</td>
                 <td class="py-2.5 pr-3 text-right font-mono">118</td>
                 <td class="py-2.5 text-slate-600 text-xs">The cliff for sessions; HQDM engaged Jan 1; Jan–Mar = stabilization period. Form submissions held up across the period.</td>
               </tr>
               <tr class="bg-emerald-50/40">
                 <td class="py-2.5 pr-3 font-bold text-emerald-700">Q2 2026 (Apr + May so far)</td>
                 <td class="py-2.5 pr-3 text-right font-mono font-bold text-emerald-700">657</td>
+                <td class="py-2.5 pr-3 text-right font-mono">7</td>
                 <td class="py-2.5 pr-3 text-right font-mono font-bold text-emerald-700">86</td>
-                <td class="py-2.5 text-slate-600 text-xs">Recovery breaks ground. <strong>+134% organic sessions vs Q1</strong>; form submissions on track for ~130/qtr full-quarter pace (Q2 25 was 125).</td>
+                <td class="py-2.5 text-slate-600 text-xs">Sessions recover hard (<strong>+134% vs Q1</strong>); all-channel forms on track for ~130/qtr (Q2 25 was 125). Organic-form column is conservative — Flamingo backfill routes to Direct in GA4.</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="text-[11px] text-slate-500 mt-3 italic">Q2 2026 is a partial quarter (April + first 22 days of May). Form-submission counts include the Apr 14 → May 28 backfill (70 events recovered from WordPress Flamingo + folded into Direct channel where they will land in GA4 via Measurement Protocol). Pre-2026 form-submission counts use the GA4 <code>form_submit</code> event; 2026 onward uses <code>contact_form_submit</code> (the canonical event after CF7 migration).</p>
+        <p class="text-[11px] text-slate-500 mt-3 italic">Q2 2026 is a partial quarter (April + first 22 days of May). The "Organic Forms" column is filtered to Organic Search channel for apples-to-apples lead-rate analysis against visitors; the "All-Channel Forms" column includes Direct, Referral, Paid, and Organic Social. The Apr 14 → May 28 Flamingo backfill (70 events) is in the all-channel total but mostly routes to Direct (UTM <code>(direct)/(none)</code>). Pre-2026 form counts use the GA4 <code>form_submit</code> event; 2026 onward uses <code>contact_form_submit</code> (the canonical event after CF7 migration).</p>
       </div>
     </section>
 
@@ -560,11 +564,11 @@
       const startIdx = Math.max(0, allMonths.length - WINDOW);
       const months = allMonths.slice(startIdx);
       const organicSessions = (t.sessions?.organic || []).slice(startIdx);
-      // Total form submissions per month = sum across all channels (organic + direct + paid + referral).
-      // Restored after dev team backfilled the Apr 14 -> May 28 gap from WordPress Flamingo.
-      const totalForms = allMonths.map((_, i) =>
-        Object.values(t.form_submits || {}).reduce((sum, arr) => sum + (arr[i] || 0), 0)
-      ).slice(startIdx);
+      // Organic-only form submissions, filtered to Organic Search channel for apples-to-apples
+      // lead-rate analysis against the visitors line. Backfill events with (direct) UTM route
+      // to the Direct channel and show under-attributed here; the all-channel total is in the
+      // quarterly table + the strategic dashboard.
+      const organicForms = (t.form_submits?.organic || []).slice(startIdx);
 
       const partialIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
       const splitSeries = (data) => {
@@ -574,7 +578,7 @@
         return { solid, dashed };
       };
       const ses = splitSeries(organicSessions);
-      const con = splitSeries(totalForms);
+      const con = splitSeries(organicForms);
 
       const buildDatasets = (split, color, label) => [
         {
@@ -622,10 +626,10 @@
         options: opts('monthly visitors'),
       });
       const conEl = document.getElementById('trend-conversions');
-      if (conEl && totalForms.length) new Chart(conEl, {
+      if (conEl && organicForms.length) new Chart(conEl, {
         type: 'line',
-        data: { labels: months, datasets: buildDatasets(con, '#10b981', 'Form Submissions (all channels)') },
-        options: opts('monthly form submissions'),
+        data: { labels: months, datasets: buildDatasets(con, '#10b981', 'Organic Form Submissions') },
+        options: opts('monthly organic forms'),
       });
     }
 
