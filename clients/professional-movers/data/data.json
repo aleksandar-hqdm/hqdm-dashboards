@@ -2156,6 +2156,15 @@
     ],
     "line": {
       "labels": [
+        "Jan '25",
+        "Feb '25",
+        "Mar '25",
+        "Apr '25",
+        "May '25",
+        "Jun '25",
+        "Jul '25",
+        "Aug '25",
+        "Sep '25",
         "Oct '25",
         "Nov '25",
         "Dec '25",
@@ -2166,6 +2175,15 @@
         "May '26*"
       ],
       "visitors": [
+        582,
+        503,
+        494,
+        659,
+        703,
+        765,
+        760,
+        618,
+        592,
         536,
         561,
         473,
@@ -2176,6 +2194,15 @@
         556
       ],
       "leads": [
+        44,
+        34,
+        56,
+        47,
+        65,
+        64,
+        64,
+        44,
+        71,
         63,
         57,
         58,
@@ -2187,39 +2214,9 @@
       ],
       "visitors_label": "Organic visitors",
       "leads_label": "Organic leads",
-      "partial_index": 7,
-      "title": "Organic Performance · Monthly (Q4 2025 → now)",
-      "caption": "Organic visitors (blue, left) and quote-form leads (green, right). Lead volume has recovered since March and held the Mar–Apr range. The dashed tail marks the partial current month."
-    },
-    "quarters": {
-      "labels": [
-        "Q1 '25",
-        "Q2 '25",
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        526,
-        709,
-        657,
-        523,
-        484,
-        537
-      ],
-      "leads": [
-        45,
-        59,
-        60,
-        59,
-        39,
-        50
-      ],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 5,
-      "title": "By Quarter · Visitors & Leads"
+      "partial_index": 16,
+      "title": "Organic Performance · Monthly (Jan 2025 → now)",
+      "caption": "Organic visitors (blue, left) and quote-form leads (green, right). 17-month view: peak through spring/summer 2025, then a soft window after the September algorithm update, with lead volume recovering through March 2026 and holding the Mar–Apr range. The dashed tail marks the partial current month."
     },
     "boxes": [
       {

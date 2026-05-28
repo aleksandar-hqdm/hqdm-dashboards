@@ -64,6 +64,11 @@
     const strategy  = (s.nav && 'strategy'  in s.nav) ? s.nav.strategy  : { href: './index.html',          label: 'Full strategy →'   };
     const condensedHTML = condensed ? `<a href="${condensed.href}" class="text-brand-500 font-semibold hover:underline">${condensed.label}</a>` : '';
     const strategyHTML  = strategy  ? `<a href="${strategy.href}"  class="text-slate-500 hover:text-slate-900 hidden sm:inline">${strategy.label}</a>` : '';
+    // Layout: when there's no quarters chart, line chart goes full width and
+    // boxes (Last 90 Days / YoY pills) drop into their own section below.
+    const hasQuarters = !!(s.quarters && Array.isArray(s.quarters.visitors) && s.quarters.visitors.length);
+    const hasBoxes = !!(s.boxes && s.boxes.length);
+    const boxCols = Math.min(s.boxes ? s.boxes.length : 0, 3);
     return `
     <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
       <div class="snap-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
@@ -92,6 +97,7 @@
         </div>
       </section>
 
+      ${hasQuarters ? `
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
         <div class="panel p-3.5">
           <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
@@ -99,12 +105,25 @@
           ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
         </div>
         <div class="panel p-3.5">
-          <div class="secthead mb-2">${(s.quarters && s.quarters.title) || 'By Quarter'}</div>
+          <div class="secthead mb-2">${s.quarters.title || 'By Quarter'}</div>
           <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
-          ${(s.boxes && s.boxes.length) ? `<div class="grid grid-cols-3 gap-2 mt-3">${s.boxes.map(boxEl).join('')}</div>` : ''}
+          ${hasBoxes ? `<div class="grid grid-cols-3 gap-2 mt-3">${s.boxes.map(boxEl).join('')}</div>` : ''}
           ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-2">${s.boxes_reading_html}</p>` : ''}
         </div>
+      </section>` : `
+      <section class="mb-3">
+        <div class="panel p-3.5">
+          <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
+          <div style="height: 300px;"><canvas id="line-chart"></canvas></div>
+          ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
+        </div>
       </section>
+      ${hasBoxes ? `<section class="mb-3">
+        <div class="panel p-3.5">
+          <div class="grid grid-cols-1 sm:grid-cols-${boxCols} gap-3">${s.boxes.map(boxEl).join('')}</div>
+          ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-3">${s.boxes_reading_html}</p>` : ''}
+        </div>
+      </section>` : ''}`}
 
       ${tablesOn ? `<section class="grid grid-cols-1 ${tablesGrid} gap-4 mb-3">${tablesHtml}</section>` : ''}
 
