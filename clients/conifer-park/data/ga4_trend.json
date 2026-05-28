@@ -45,7 +45,7 @@
         4596,
         5594,
         4468,
-        2764
+        3768
       ],
       "direct": [
         1333,
@@ -65,7 +65,7 @@
         2092,
         2679,
         2080,
-        1508
+        1968
       ],
       "referral": [
         103,
@@ -85,7 +85,7 @@
         135,
         178,
         215,
-        163
+        191
       ],
       "social": [
         82,
@@ -105,7 +105,7 @@
         33,
         30,
         28,
-        43
+        48
       ],
       "email": [
         0,
@@ -145,7 +145,7 @@
         51,
         49,
         29,
-        9
+        15
       ]
     },
     "conversions": {
@@ -167,7 +167,7 @@
         40.0,
         61.0,
         44.0,
-        40.0
+        51.0
       ],
       "direct": [
         51.0,
@@ -187,7 +187,7 @@
         10.0,
         30.0,
         34.0,
-        9.0
+        15.0
       ],
       "referral": [
         8.0,
@@ -269,6 +269,112 @@
         2.0,
         0.0
       ]
+    },
+    "events_by_channel": {
+      "form_submit": {
+        "organic": [
+          16,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          40,
+          41,
+          54,
+          62,
+          45,
+          51,
+          40,
+          61,
+          44,
+          51
+        ],
+        "direct": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          14,
+          13,
+          18,
+          22,
+          21,
+          22,
+          10,
+          30,
+          34,
+          15
+        ],
+        "other": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        "referral": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    "events_monthly": {
+      "form_submit": [
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        54,
+        54,
+        72,
+        84,
+        67,
+        75,
+        50,
+        91,
+        81,
+        68
+      ]
     }
   },
   "totals": {
@@ -290,7 +396,7 @@
       6909,
       8531,
       6820,
-      4487
+      5990
     ],
     "conversions_monthly": [
       563.0,
@@ -310,16 +416,133 @@
       50.0,
       91.0,
       81.0,
-      51.0
+      68.0
     ]
   },
   "conversion_events_90d": [
     {
       "event": "form_submit",
-      "conversions_90d": 240.0,
-      "count_90d": 240
+      "conversions_90d": 241.0,
+      "count_90d": 241
     }
   ],
+  "top_events_90d": [
+    {
+      "event": "page_view",
+      "conversions_90d": 0.0,
+      "count_90d": 38918
+    },
+    {
+      "event": "user_engagement",
+      "conversions_90d": 0.0,
+      "count_90d": 25767
+    },
+    {
+      "event": "session_start",
+      "conversions_90d": 0.0,
+      "count_90d": 21743
+    },
+    {
+      "event": "first_visit",
+      "conversions_90d": 0.0,
+      "count_90d": 15393
+    },
+    {
+      "event": "scroll",
+      "conversions_90d": 0.0,
+      "count_90d": 9662
+    },
+    {
+      "event": "click",
+      "conversions_90d": 0.0,
+      "count_90d": 1995
+    },
+    {
+      "event": "form_start",
+      "conversions_90d": 0.0,
+      "count_90d": 382
+    },
+    {
+      "event": "form_submit",
+      "conversions_90d": 241.0,
+      "count_90d": 241
+    },
+    {
+      "event": "file_download",
+      "conversions_90d": 0.0,
+      "count_90d": 198
+    },
+    {
+      "event": "view_search_results",
+      "conversions_90d": 0.0,
+      "count_90d": 2
+    }
+  ],
+  "resolved_event_names": {
+    "form_submit": "form_submit"
+  },
+  "gmb_sessions_monthly": [
+    304,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    114,
+    775,
+    704,
+    816,
+    721,
+    783,
+    845,
+    936,
+    1099,
+    978,
+    830
+  ],
+  "gmb_source_mix": {
+    "gmb": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      107,
+      767,
+      699,
+      807,
+      720,
+      731,
+      821,
+      883,
+      1099,
+      978,
+      830
+    ],
+    "GMB": [
+      304,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      7,
+      8,
+      5,
+      9,
+      1,
+      52,
+      24,
+      53,
+      0,
+      0,
+      0
+    ]
+  },
   "channels_present": [
     "organic",
     "direct",

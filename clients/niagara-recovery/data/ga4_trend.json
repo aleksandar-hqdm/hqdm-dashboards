@@ -45,7 +45,7 @@
         976,
         1166,
         985,
-        721
+        936
       ],
       "direct": [
         571,
@@ -65,7 +65,7 @@
         1256,
         1013,
         1096,
-        943
+        1330
       ],
       "referral": [
         123,
@@ -85,7 +85,7 @@
         136,
         113,
         173,
-        121
+        133
       ],
       "paid": [
         0,
@@ -145,7 +145,7 @@
         24,
         8,
         8,
-        4
+        5
       ]
     },
     "conversions": {
@@ -269,6 +269,92 @@
         0.0,
         0.0
       ]
+    },
+    "events_by_channel": {
+      "form_submit": {
+        "organic": [
+          3,
+          0,
+          0,
+          9,
+          7,
+          10,
+          12,
+          26,
+          12,
+          4,
+          4,
+          2,
+          0,
+          2,
+          4,
+          4,
+          1,
+          4
+        ],
+        "direct": [
+          5,
+          0,
+          0,
+          17,
+          2,
+          1,
+          5,
+          3,
+          2,
+          1,
+          2,
+          10,
+          13,
+          5,
+          15,
+          20,
+          14,
+          8
+        ],
+        "referral": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          2,
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          3,
+          1
+        ]
+      }
+    },
+    "events_monthly": {
+      "form_submit": [
+        8,
+        0,
+        0,
+        26,
+        10,
+        11,
+        17,
+        30,
+        16,
+        5,
+        9,
+        12,
+        15,
+        7,
+        20,
+        24,
+        18,
+        13
+      ]
     }
   },
   "totals": {
@@ -290,7 +376,7 @@
       2402,
       2331,
       2296,
-      1794
+      2409
     ],
     "conversions_monthly": [
       125.0,
@@ -320,6 +406,118 @@
       "count_90d": 61
     }
   ],
+  "top_events_90d": [
+    {
+      "event": "page_view",
+      "conversions_90d": 0.0,
+      "count_90d": 10561
+    },
+    {
+      "event": "session_start",
+      "conversions_90d": 0.0,
+      "count_90d": 7088
+    },
+    {
+      "event": "user_engagement",
+      "conversions_90d": 0.0,
+      "count_90d": 5779
+    },
+    {
+      "event": "first_visit",
+      "conversions_90d": 0.0,
+      "count_90d": 5610
+    },
+    {
+      "event": "scroll",
+      "conversions_90d": 0.0,
+      "count_90d": 2244
+    },
+    {
+      "event": "click",
+      "conversions_90d": 0.0,
+      "count_90d": 477
+    },
+    {
+      "event": "file_download",
+      "conversions_90d": 0.0,
+      "count_90d": 161
+    },
+    {
+      "event": "form_submit",
+      "conversions_90d": 61.0,
+      "count_90d": 61
+    },
+    {
+      "event": "form_start",
+      "conversions_90d": 0.0,
+      "count_90d": 52
+    }
+  ],
+  "resolved_event_names": {
+    "form_submit": "form_submit"
+  },
+  "gmb_sessions_monthly": [
+    149,
+    0,
+    79,
+    476,
+    506,
+    486,
+    417,
+    427,
+    465,
+    499,
+    485,
+    447,
+    478,
+    498,
+    473,
+    582,
+    520,
+    429
+  ],
+  "gmb_source_mix": {
+    "gmb": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      60,
+      460,
+      499,
+      483,
+      446,
+      478,
+      498,
+      473,
+      582,
+      520,
+      429
+    ],
+    "GMB": [
+      149,
+      0,
+      79,
+      476,
+      506,
+      486,
+      417,
+      367,
+      5,
+      0,
+      2,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
   "channels_present": [
     "organic",
     "direct",

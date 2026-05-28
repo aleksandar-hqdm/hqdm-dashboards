@@ -2272,7 +2272,6 @@
       "headers": [
         "Search",
         "Avg position",
-        "Top-3",
         "Top-10 reach",
         "Change"
       ],
@@ -2283,10 +2282,8 @@
               "t": "movers detroit"
             },
             {
-              "t": "<span class=\"arrow-up\">12.47 → <strong>10.54</strong></span>"
-            },
-            {
-              "t": "2 → <strong>2</strong>"
+              "t": "+1.9",
+              "c": "pos"
             },
             {
               "t": "9 → <strong>67</strong>"
@@ -2303,10 +2300,8 @@
               "t": "detroit moving company"
             },
             {
-              "t": "<span class=\"arrow-up\">14.26 → <strong>13.54</strong></span>"
-            },
-            {
-              "t": "1 → <strong>0</strong>"
+              "t": "+0.7",
+              "c": "pos"
             },
             {
               "t": "8 → <strong>16</strong>"
@@ -2323,17 +2318,15 @@
               "t": "movers near me"
             },
             {
-              "t": "<span class=\"arrow-dn\">3.30 → <strong>3.40</strong></span>"
-            },
-            {
-              "t": "82 → <strong>84</strong>"
+              "t": "stable",
+              "c": "muted"
             },
             {
               "t": "112 → <strong>113</strong>"
             },
             {
-              "t": "+1",
-              "c": "pos"
+              "t": "stable",
+              "c": "muted"
             }
           ]
         },
@@ -2343,17 +2336,15 @@
               "t": "moving companies"
             },
             {
-              "t": "<span class=\"arrow-dn\">4.77 → <strong>4.83</strong></span>"
-            },
-            {
-              "t": "65 → <strong>64</strong>"
+              "t": "stable",
+              "c": "muted"
             },
             {
               "t": "105 → <strong>104</strong>"
             },
             {
-              "t": "-1",
-              "c": "neg"
+              "t": "stable",
+              "c": "muted"
             }
           ]
         },
@@ -2363,17 +2354,15 @@
               "t": "moving company near me"
             },
             {
-              "t": "<span class=\"arrow-dn\">3.61 → <strong>3.89</strong></span>"
-            },
-            {
-              "t": "83 → <strong>79</strong>"
+              "t": "stable",
+              "c": "muted"
             },
             {
               "t": "111 → <strong>109</strong>"
             },
             {
-              "t": "-2",
-              "c": "neg"
+              "t": "stable",
+              "c": "muted"
             }
           ]
         },
@@ -2383,17 +2372,15 @@
               "t": "movers"
             },
             {
-              "t": "<span class=\"arrow-dn\">3.96 → <strong>4.26</strong></span>"
-            },
-            {
-              "t": "81 → <strong>79</strong>"
+              "t": "stable",
+              "c": "muted"
             },
             {
               "t": "108 → <strong>106</strong>"
             },
             {
-              "t": "-2",
-              "c": "neg"
+              "t": "stable",
+              "c": "muted"
             }
           ]
         }
