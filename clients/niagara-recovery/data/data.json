@@ -1599,7 +1599,7 @@
       "note_html": "These are the towns where Niagara is already structurally #1-3 in the Maps pack. The Q2 plan converts this Map presence into site-declared entity presence — the GBP service-area swap declares Lockport, Clarence, Cambria, Pendleton, and 5 more anchor towns; the location-page architecture builds the on-site landings to match."
     },
     "competitors": {
-      "enabled": true,
+      "enabled": false,
       "title": "Competitor Movement · Maps",
       "window": "Across 9 tracked searches · Feb 22 → Apr 30, 2026",
       "headers": [
