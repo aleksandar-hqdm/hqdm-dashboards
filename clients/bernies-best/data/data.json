@@ -67,12 +67,6 @@
       "detail": "16,411 → 7,800. SERP-side decline driven by AI Overviews + Google core updates — Google's own tracking shows half the clicks. Important context: per Wicked, organic clicks and sales over the same window are growing. The SERP compression has not translated to a real-money impact."
     },
     {
-      "label": "Crawled — not indexed",
-      "value": "2,670",
-      "sentiment": "negative",
-      "detail": "+1,178 (+79%) since Feb 21. Param pollution + duplicate URLs + pagination + thin taxonomy. Index hygiene cleanup is in the plan."
-    },
-    {
       "label": "Store in-SKU opportunity",
       "value": "2.49M",
       "sentiment": "neutral",
