@@ -2221,7 +2221,7 @@
     "boxes": [
       {
         "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
+        "cmp": "Mar–May 2026 vs Dec 2025–Feb 2026",
         "kind": "good",
         "rows": [
           {
@@ -2240,31 +2240,9 @@
           "d": "+6%",
           "cls": "pos"
         }
-      },
-      {
-        "win": "Year over Year",
-        "cmp": "Q1 '26 vs Q1 '25",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-8%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-13%",
-            "cls": "neg"
-          }
-        ],
-        "extra": {
-          "m": "Conv. rate",
-          "d": "-6%",
-          "cls": "neg"
-        }
       }
     ],
-    "boxes_reading_html": "The last 90 days are showing <strong>visitors +8%, leads +14%, and conversion rate +6%</strong> vs the prior 90 &mdash; the recovery curve is in. The Google-Business lead path is at an <strong>18-month high</strong>, and Q3 leans into the channel already converting.",
+    "boxes_reading_html": "<p class=\"mb-2\"><strong>The recovery is showing in all three metrics.</strong> Visitors are up moderately (+8%), conversion rate is up (+6%), and leads are up the most (+14%) &mdash; meaning the lift is part more traffic, part the site converting better per visitor, not just one or the other.</p><p class=\"mb-2\"><strong>Where the lift is coming from.</strong> The Google-Business &ldquo;Website&rdquo; button is the dominant lead channel: it converts at <strong>~17.5%</strong>, nearly double the <strong>~9.2%</strong> organic baseline, and its monthly form-submit volume hit an <strong>18-month high</strong> in May. Defended top-3 Maps coverage on the volume queries (&ldquo;movers near me&rdquo;, &ldquo;movers&rdquo;) is feeding higher-intent visitors into the same quote form.</p><p><strong>How Q3 compounds it.</strong> The next 90 days lean into the channel already converting: claim the two unmanaged Google Business pins on the eastern side of the metro (<strong>Detroit Woodward + Rochester</strong>), where the Walled Lake pin is already reaching cells in the Detroit-side queries (top-10 reach <strong>9 &rarr; 67 cells</strong> on &ldquo;movers detroit&rdquo;, <strong>8 &rarr; 16</strong> on &ldquo;detroit moving company&rdquo;). Each claimed pin roughly doubles the converting surface area at no incremental ad spend.</p>",
     "focus": [
       {
         "title": "Expand Maps presence",
