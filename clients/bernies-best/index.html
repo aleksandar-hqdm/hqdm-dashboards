@@ -109,21 +109,21 @@
       <div class="p-6 border-b border-slate-200">
         <div>
           <h2 class="text-2xl font-bold tracking-tight">Organic Search — monthly trend</h2>
-          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Less traffic, more buyers — sessions ▼-52%, transactions ▲+54%, CVR ▲+223% Q1 YoY</p>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Per Wicked Reports — Organic is your #1 channel: clicks at a 17-month high, sales steady, new customer acquisition up</p>
           <p class="text-xs text-ink-500 mt-2">May 2026 is partial through May 26 (26 of 31 days), shown as a single partial-month point (*).</p>
         </div>
       </div>
       <div class="p-6 space-y-8">
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Sessions</h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Clicks <span class="text-ink-400 font-medium normal-case">(Wicked)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Transactions <span class="text-ink-400 font-medium normal-case">(GA4 purchase events)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Sales <span class="text-ink-400 font-medium normal-case">(Wicked, multi-touch attributed)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
@@ -139,9 +139,9 @@
             <thead class="text-ink-500">
               <tr>
                 <th class="text-left font-semibold py-2 pr-4">Quarter</th>
-                <th class="text-right font-semibold py-2 pr-4">Sessions/mo (avg)</th>
-                <th class="text-right font-semibold py-2 pr-4">Transactions/mo (avg)</th>
-                <th class="text-right font-semibold py-2">CVR</th>
+                <th class="text-right font-semibold py-2 pr-4">Clicks/mo (avg)</th>
+                <th class="text-right font-semibold py-2 pr-4">Sales/mo (avg)</th>
+                <th class="text-right font-semibold py-2">Sales/Click</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200"></tbody>
@@ -164,10 +164,22 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
       <div class="mb-2">
         <h2 class="text-2xl font-bold tracking-tight" id="yoy-headline">Q1 2025 vs Q1 2026 — the headline inversion in one frame</h2>
-        <p class="text-sm text-ink-500 mt-1" id="yoy-subtitle">Organic only. Fewer visitors, more buyers, a higher share converting.</p>
+        <p class="text-sm text-ink-500 mt-1" id="yoy-subtitle">Organic only. Clicks growing, sales steady, new-lead intake more than doubled.</p>
       </div>
       <div id="yoy-panels" class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6"></div>
-      <p class="text-xs text-ink-500 italic mt-6">Q1 = Jan + Feb + Mar combined. Sessions and transactions are GA4 quarterly totals. CVR computed at the quarterly aggregate level (Q1 transactions ÷ Q1 sessions), not as an average of monthly CVRs.</p>
+      <p class="text-xs text-ink-500 italic mt-6">Q1 = Jan + Feb + Mar combined. Source: Wicked Reports — Organic channel totals. Sales include subscription billing cycles. Sales/click ratio computed at the quarterly aggregate level (Q1 sales ÷ Q1 clicks).</p>
+    </div>
+  </section>
+
+  <!-- ============== NEW vs RETURNING CUSTOMERS (Wicked) ============== -->
+  <section id="nvr" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
+      <div class="mb-4">
+        <h2 class="text-2xl font-bold tracking-tight">New vs Returning Customers — Organic (Wicked)</h2>
+        <p class="text-sm text-ink-500 mt-1">Monthly Organic-attributed customer composition: new (first-time buyers) and returning (repeat — your subscription engine). Returning = Sales − New Customers.</p>
+      </div>
+      <div class="h-80 sm:h-96"><canvas id="nvr-chart"></canvas></div>
+      <p class="text-xs text-ink-500 italic mt-4">May 2026 partial. Source: Wicked Reports — Organic channel.</p>
     </div>
   </section>
 
@@ -573,5 +585,61 @@
   </footer>
 
   <script src="../../assets/js/dashboard.js"></script>
+  <script>
+  // New vs Returning Customers — Bernie's-specific chart (Wicked Reports)
+  (async () => {
+    try {
+      const res = await fetch('data/data.json');
+      const data = await res.json();
+      const nvr = data && data.trend && data.trend.new_vs_returning_customers;
+      const el = document.getElementById('nvr-chart');
+      if (!nvr || !el || !window.Chart) return;
+      new Chart(el, {
+        type: 'bar',
+        data: {
+          labels: nvr.months,
+          datasets: [
+            {
+              label: 'Returning customers',
+              data: nvr.returning,
+              backgroundColor: '#94a3b8',
+              borderColor: '#64748b',
+              borderWidth: 1,
+              stack: 'customers'
+            },
+            {
+              label: 'New customers',
+              data: nvr['new'],
+              backgroundColor: '#0b1726',
+              borderColor: '#0b1726',
+              borderWidth: 1,
+              stack: 'customers'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 24, padding: 12 } },
+            tooltip: {
+              callbacks: {
+                footer: (items) => {
+                  const total = items.reduce((s, it) => s + (Number(it.raw) || 0), 0);
+                  return 'Total: ' + Math.round(total).toLocaleString();
+                }
+              }
+            }
+          },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { font: { size: 11 } } },
+            y: { stacked: true, beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 11 } } }
+          }
+        }
+      });
+    } catch (e) { console.error('NVR chart init failed', e); }
+  })();
+  </script>
 </body>
 </html>

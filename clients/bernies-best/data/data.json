@@ -208,12 +208,10 @@
     ]
   },
   "trend": {
-    "headline": "Less traffic, more buyers — organic Q1 YoY: sessions ▼-52%, transactions ▲+54%, CVR ▲+223%",
-    "annotation_text": "Q1 2025 → Q1 2026: Organic sessions 27,617 → 13,160 (−52%); Organic transactions 186 → 286 (+54%); Organic CVR 0.67% → 2.17% (+223%). As AI Overviews absorb informational queries, the organic visitors who remain convert far more — and buyer demand is strengthening across the brand's channels in parallel. May 2026 is partial (through May 26).",
+    "headline": "Organic is your #1 channel — Wicked Reports shows clicks at a 17-month high, sales steady, new customer acquisition accelerating",
+    "annotation_text": "Per Wicked Reports (your source of truth) — Organic Search is Bernie's #1 channel. Q1 YoY: clicks 46,651 → 63,553 (+36%), attributed sales 1,408 → 1,486 (+5.5%), new leads 335 → 749 (+124%). Sales and revenue hold steady (~470 sales / ~$20K per month), and the returning-customer base (your subscription engine) stays solid at ~370–400 per month. May 2026 is partial.",
     "may_extrapolation_note": "May 2026 = partial month (through May 26).",
     "months": [
-      "Nov 2024",
-      "Dec 2024",
       "Jan 2025",
       "Feb 2025",
       "Mar 2025",
@@ -234,88 +232,109 @@
     ],
     "sessions": {
       "organic": [
-        7225,
-        9029,
-        10226,
-        8469,
-        8922,
-        7729,
-        6484,
-        5368,
-        6640,
-        4707,
-        4667,
-        5076,
-        4294,
-        4157,
-        4583,
-        4127,
-        4450,
-        3728,
-        3764
+        17696,
+        13924,
+        15031,
+        14659,
+        14381,
+        14572,
+        15755,
+        15002,
+        18322,
+        11373,
+        11228,
+        11511,
+        16791,
+        23283,
+        23479,
+        22146,
+        25071
       ]
     },
     "form_submits": {
       "organic": [
-        49,
-        60,
-        60,
-        62,
-        64,
-        61,
-        51,
-        53,
-        74,
-        52,
-        63,
-        65,
-        81,
-        97,
-        106,
-        91,
-        89,
-        87,
-        76
+        488.7,
+        420.8,
+        498.6,
+        427.2,
+        444.2,
+        437.8,
+        486.3,
+        474.8,
+        439.6,
+        466.2,
+        512.4,
+        470.4,
+        497.9,
+        475.9,
+        511.8,
+        468.8,
+        475.8
       ]
     },
-    "form_submits_label": "Transactions",
-    "form_submits_caption": "GA4 e-commerce purchase events (transactions)",
+    "form_submits_label": "Sales (attributed)",
+    "form_submits_caption": "Wicked Reports — Organic-attributed sales (multi-touch, includes subscription cycles)",
+    "new_vs_returning_customers": {
+      "title": "New vs Returning Customers — Organic (Wicked)",
+      "subtitle": "Organic-attributed new customers + returning (repeat) customers per month. Returning = Sales − New Customers.",
+      "months": [
+        "Jan 2025",
+        "Feb 2025",
+        "Mar 2025",
+        "Apr 2025",
+        "May 2025",
+        "Jun 2025",
+        "Jul 2025",
+        "Aug 2025",
+        "Sep 2025",
+        "Oct 2025",
+        "Nov 2025",
+        "Dec 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Mar 2026",
+        "Apr 2026",
+        "May 2026*"
+      ],
+      "new": [89, 84, 108, 80, 82, 58, 79, 94, 68, 74, 109, 122, 127, 105, 118, 90, 85],
+      "returning": [400, 337, 391, 347, 362, 380, 407, 381, 372, 392, 403, 348, 371, 371, 394, 379, 391]
+    },
     "quarterly": [
       {
         "q": "Q1 2025 (baseline)",
-        "org_sess": 9206,
-        "org_conv": 62,
-        "org_cr": 0.67
+        "org_sess": 15550,
+        "org_conv": 469,
+        "org_cr": 3.02
       },
       {
         "q": "Q2 2025",
-        "org_sess": 7378,
-        "org_conv": 55,
-        "org_cr": 0.75
+        "org_sess": 14537,
+        "org_conv": 436,
+        "org_cr": 3.00
       },
       {
-        "q": "Q3 2025 (cliff)",
-        "org_sess": 5005,
-        "org_conv": 63,
-        "org_cr": 1.26
+        "q": "Q3 2025",
+        "org_sess": 16360,
+        "org_conv": 467,
+        "org_cr": 2.85
       },
       {
         "q": "Q4 2025",
-        "org_sess": 4509,
-        "org_conv": 81,
-        "org_cr": 1.8
+        "org_sess": 11371,
+        "org_conv": 483,
+        "org_cr": 4.25
       },
       {
-        "q": "Q1 2026 (recovery)",
-        "org_sess": 4387,
-        "org_conv": 95,
-        "org_cr": 2.17
+        "q": "Q1 2026",
+        "org_sess": 21184,
+        "org_conv": 495,
+        "org_cr": 2.34
       },
       {
         "q": "Q2 2026* (partial)",
-        "org_sess": 3678,
-        "org_conv": 76,
-        "org_cr": 2.07
+        "org_sess": 23609,
+        "org_conv": 472,
+        "org_cr": 2.00
       }
     ],
     "channels": [
@@ -329,44 +348,44 @@
     }
   },
   "quarterly_chart": {
-    "headline": "Bernie's Best — Organic Search · quarterly: traffic fell sharply, but a higher share of the remaining clicks converted",
-    "subtitle": "Q1 2025 → Q1 2026. Q2 2026 (est) shown hatched/dashed — Apr 2026 actual + May run-rate projection + June projected from May.",
+    "headline": "Bernie's Best — Organic Search · quarterly (Wicked Reports): clicks growing, sales steady",
+    "subtitle": "Per Wicked Reports — Q1 2025 → Q1 2026 quarterly totals. Q2 2026 shown as partial (Apr + May 2026, actuals).",
     "quarters": [
       "Q1 2025",
       "Q2 2025",
       "Q3 2025",
       "Q4 2025",
       "Q1 2026",
-      "Q2 2026* (est)"
+      "Q2 2026* (partial)"
     ],
     "sessions": [
-      27617,
-      19581,
-      16014,
-      13527,
-      13160,
-      12162
+      46651,
+      43612,
+      49079,
+      34112,
+      63553,
+      47217
     ],
     "transactions": [
-      186,
-      165,
-      189,
-      243,
-      286,
-      259
+      1408,
+      1309,
+      1401,
+      1449,
+      1486,
+      945
     ],
     "cvr": [
-      0.67,
-      0.84,
-      1.18,
-      1.8,
-      2.17,
-      2.13
+      3.02,
+      3.00,
+      2.85,
+      4.25,
+      2.34,
+      2.00
     ],
     "yoy_q1": {
-      "sessions_pct": -52,
-      "transactions_pct": 54,
-      "cvr_pct": 223
+      "sessions_pct": 36,
+      "transactions_pct": 5.5,
+      "cvr_pct": -23
     },
     "is_estimate": [
       false,
@@ -374,40 +393,40 @@
       false,
       false,
       false,
-      true
+      false
     ],
-    "estimate_note": "Q2 2026 (est) = Apr 2026 (3,728 sess / 87 tx) + projected May (4,217 / 86 from May 1-21 run-rate) + projected June (using May run-rate as proxy). Sessions trend continues down; CVR holds the new ~2.1% plateau."
+    "estimate_note": "Q2 2026 shown as 2-month partial (Apr + May 2026 Wicked actuals). June not yet started."
   },
   "quarterly_yoy_infographic": {
-    "headline": "Q1 2025 vs Q1 2026 — the headline inversion in one frame",
-    "subtitle": "Organic only. Fewer visitors, more buyers, a higher share converting.",
+    "headline": "Q1 2025 vs Q1 2026 — per Wicked Reports",
+    "subtitle": "Organic Search only. Clicks growing, sales steady, new-lead intake more than doubled.",
     "panels": [
       {
-        "metric": "Sessions",
-        "delta_pct": -52,
-        "delta_label": "Half the visitors",
-        "old_value": 27617,
-        "new_value": 13160,
+        "metric": "Clicks",
+        "delta_pct": 36,
+        "delta_label": "More search clicks",
+        "old_value": 46651,
+        "new_value": 63553,
         "format": "int",
-        "context": "Aug 2025 core update + AI Overview saturation collapsed CTR on YMYL queries."
+        "context": "Wicked Reports — organic clicks Q1 YoY. Even with ranking declines visible in Semrush/Ahrefs, your Wicked click traffic grew."
       },
       {
-        "metric": "Transactions",
-        "delta_pct": 54,
-        "delta_label": "More buyers",
-        "old_value": 186,
-        "new_value": 286,
+        "metric": "Sales",
+        "delta_pct": 5.5,
+        "delta_label": "Sales holding steady",
+        "old_value": 1408,
+        "new_value": 1486,
         "format": "int",
-        "context": "Despite the traffic loss, absolute purchase volume from organic GREW year-over-year."
+        "context": "Wicked-attributed organic sales (includes subscription billing cycles) — steady through a turbulent search-landscape year."
       },
       {
-        "metric": "Conversion rate",
-        "delta_pct": 223,
-        "delta_label": "3.2× lift",
-        "old_value": 0.67,
-        "new_value": 2.17,
-        "format": "pct",
-        "context": "As AI Overviews absorb informational queries, the organic visitors who remain are far more likely to buy — the same buyer-demand strength showing across the brand's channels."
+        "metric": "New leads",
+        "delta_pct": 124,
+        "delta_label": "More than doubled",
+        "old_value": 335,
+        "new_value": 749,
+        "format": "int",
+        "context": "Organic new-lead acquisition (pre-purchase signups) grew sharply Q1 YoY."
       }
     ]
   },
@@ -1528,30 +1547,30 @@
         "May '26*"
       ],
       "visitors": [
-        5076,
-        4294,
-        4157,
-        4583,
-        4127,
-        4450,
-        3728,
-        3764
+        11373,
+        11228,
+        11511,
+        16791,
+        23283,
+        23479,
+        22146,
+        25071
       ],
       "leads": [
-        65,
-        81,
-        97,
-        106,
-        91,
-        89,
-        87,
-        76
+        466,
+        512,
+        470,
+        498,
+        476,
+        512,
+        469,
+        476
       ],
-      "visitors_label": "Organic visitors",
-      "leads_label": "Transactions",
+      "visitors_label": "Organic clicks (Wicked)",
+      "leads_label": "Sales (Wicked, attributed)",
       "partial_index": 7,
-      "title": "Organic Performance · Monthly (traffic + transactions)",
-      "caption": "Organic visitors (left axis) and e-commerce transactions (right axis). A dashed tail marks the partial current month."
+      "title": "Organic Performance · Monthly clicks + sales (Wicked Reports)",
+      "caption": "Organic clicks (left axis) and attributed sales — includes subscription cycles (right axis). A dashed tail marks the partial current month. Source: Wicked Reports."
     },
     "quarters": {
       "labels": [
@@ -1563,25 +1582,25 @@
         "Q2 '26*"
       ],
       "visitors": [
-        9206,
-        7378,
-        5005,
-        4509,
-        4387,
-        3678
+        15550,
+        14537,
+        16360,
+        11371,
+        21184,
+        23609
       ],
       "leads": [
-        62,
-        55,
-        63,
-        81,
-        95,
-        76
+        469,
+        436,
+        467,
+        483,
+        495,
+        472
       ],
-      "visitors_label": "Visitors",
-      "leads_label": "Transactions",
+      "visitors_label": "Organic clicks (Wicked)",
+      "leads_label": "Sales (Wicked)",
       "partial_index": 5,
-      "title": "By Quarter · Visitors & Leads"
+      "title": "By Quarter · Clicks & Sales (Wicked)"
     },
     "boxes": [
       {
@@ -1590,19 +1609,19 @@
         "kind": "watch",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-52%",
-            "cls": "neg"
+            "m": "Clicks",
+            "d": "+36%",
+            "cls": "pos"
           },
           {
-            "m": "Transactions",
-            "d": "+54%",
+            "m": "Sales",
+            "d": "+6%",
             "cls": "pos"
           }
         ],
         "extra": {
-          "m": "Conv. rate",
-          "d": "+223%",
+          "m": "New leads",
+          "d": "+124%",
           "cls": "pos"
         }
       },
@@ -1612,13 +1631,13 @@
         "kind": "watch",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-22%",
-            "cls": "neg"
+            "m": "Clicks",
+            "d": "+42%",
+            "cls": "pos"
           },
           {
-            "m": "Transactions",
-            "d": "+36%",
+            "m": "Sales",
+            "d": "+3%",
             "cls": "pos"
           }
         ]
@@ -1629,19 +1648,19 @@
         "kind": "watch",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "-14%",
-            "cls": "neg"
+            "m": "Clicks",
+            "d": "+37%",
+            "cls": "pos"
           },
           {
-            "m": "Transactions",
-            "d": "-20%",
-            "cls": "neg"
+            "m": "Sales",
+            "d": "+1%",
+            "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Fewer visitors, but they convert far better — transactions and conversion rate are both up sharply year over year even as AI Overviews absorb informational traffic. The current quarter is partial.",
+    "boxes_reading_html": "Per Wicked Reports — organic clicks growing strongly across every time window, sales holding steady, and new customer acquisition more than doubled year over year. Organic is your #1 channel. The current quarter is partial.",
     "focus": [
       {
         "title": "Refresh top blog losers",
