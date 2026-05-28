@@ -2304,82 +2304,15 @@
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
-      "window": "Feb → May 2026 · 6 tracked searches",
+      "window": "Feb → May 2026 · 6 tracked searches · 13×13 grid",
       "headers": [
         "Search",
         "Avg position",
-        "Top-3 map spots",
+        "Top-3",
+        "Top-10 reach",
         "Change"
       ],
       "rows": [
-        {
-          "cells": [
-            {
-              "t": "movers near me"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">3.30 → <strong>3.40</strong></span>"
-            },
-            {
-              "t": "82 → <strong>84</strong>"
-            },
-            {
-              "t": "+2",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "moving company near me"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">3.61 → <strong>3.89</strong></span>"
-            },
-            {
-              "t": "83 → <strong>79</strong>"
-            },
-            {
-              "t": "-4",
-              "c": "neg"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "movers"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">3.96 → <strong>4.26</strong></span>"
-            },
-            {
-              "t": "81 → <strong>79</strong>"
-            },
-            {
-              "t": "-2",
-              "c": "neg"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "moving companies"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">4.77 → <strong>4.83</strong></span>"
-            },
-            {
-              "t": "65 → <strong>64</strong>"
-            },
-            {
-              "t": "-1",
-              "c": "neg"
-            }
-          ]
-        },
         {
           "cells": [
             {
@@ -2392,7 +2325,10 @@
               "t": "2 → <strong>2</strong>"
             },
             {
-              "t": "0",
+              "t": "9 → <strong>67</strong>"
+            },
+            {
+              "t": "+58",
               "c": "pos"
             }
           ]
@@ -2409,13 +2345,96 @@
               "t": "1 → <strong>0</strong>"
             },
             {
+              "t": "8 → <strong>16</strong>"
+            },
+            {
+              "t": "+8",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "movers near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.30 → <strong>3.40</strong></span>"
+            },
+            {
+              "t": "82 → <strong>84</strong>"
+            },
+            {
+              "t": "112 → <strong>113</strong>"
+            },
+            {
+              "t": "+1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "moving companies"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">4.77 → <strong>4.83</strong></span>"
+            },
+            {
+              "t": "65 → <strong>64</strong>"
+            },
+            {
+              "t": "105 → <strong>104</strong>"
+            },
+            {
               "t": "-1",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "moving company near me"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.61 → <strong>3.89</strong></span>"
+            },
+            {
+              "t": "83 → <strong>79</strong>"
+            },
+            {
+              "t": "111 → <strong>109</strong>"
+            },
+            {
+              "t": "-2",
+              "c": "neg"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "movers"
+            },
+            {
+              "t": "<span class=\"arrow-dn\">3.96 → <strong>4.26</strong></span>"
+            },
+            {
+              "t": "81 → <strong>79</strong>"
+            },
+            {
+              "t": "108 → <strong>106</strong>"
+            },
+            {
+              "t": "-2",
               "c": "neg"
             }
           ]
         }
       ],
-      "note_html": "You hold strong top-3 coverage on the core “movers / moving company” searches; movement has softened slightly this period — defend and re-extend."
+      "note_html": "Top-3 defense held on the volume queries (64–84 of 121 cells across &ldquo;movers / movers near me / moving companies&rdquo;). The offense story is on Detroit-side queries — top-10 reach on &ldquo;movers detroit&rdquo; expanded 7&times; (9 &rarr; 67 cells) and &ldquo;detroit moving company&rdquo; doubled (8 &rarr; 16). Q3 plan converts that reach into top-3 via a managed Detroit Woodward pin."
     },
     "competitors": {
       "enabled": true,
