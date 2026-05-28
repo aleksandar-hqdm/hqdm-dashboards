@@ -7,19 +7,19 @@
     "prepared_by": "Aleksandar Spasevski",
     "date": "2026-05-27",
     "focus": "Google Business Profile + Maps · two pins (Tustin HQ + Chino Hills) · profile completeness + site connection",
-    "data_window": "Local Dominator geo-grid scans Mar 8 – May 18 2026 (133-cell grids) + GBP Manager + site crawl"
+    "data_window": "Local Dominator geo-grid scans Apr 3 – May 18 2026 (133-cell grids; per-pin windows) + GBP Manager + site crawl"
   },
 
-  "tldr": "Maison runs <strong>two Google Business Profiles with opposite trajectories</strong>. The Chino Hills satellite — only <strong>121 reviews</strong> — is <strong>#1</strong> across its Inland-Empire map grid (736 top-3 cells, avg rank 3.3). The Tustin HQ — <strong>856 reviews and 40+ years in business</strong> — sits at <strong>#4</strong> and has <strong>slipped 31 top-3 map cells since March</strong> in a brutal Orange County field. The profiles themselves are well-stocked (categories, services, products, posts), but they are <strong>barely connected to the website</strong>: there is no LocalBusiness/MovingCompany schema anywhere, <strong>neither profile's phone number appears correctly on the site</strong>, the Chino Hills profile points at the homepage instead of its own <code>/chino-hills/</code> page, and the site still calls itself \"Maison Moving (Staging)\". Repairing that profile↔site foundation is the single highest-leverage move for both pins — and the one most likely to reverse the Tustin slide.",
+  "tldr": "Chino Hills is the story this quarter. The satellite — only <strong>121 reviews</strong> — <strong>extended its Inland-Empire lead from 731 to 791 top-3 map cells between Apr 3 and May 3</strong>, holding <strong>#1</strong> on every tracked query at an avg rank of 2.8 and a 1.65× margin over Allied Van Lines. Tustin HQ took an early-May dip and has been <strong>recovering since</strong> (76 → 133 top-3 cells, May 3 → May 18). Both profiles are well-stocked, but they are <strong>barely connected to the website</strong>: no LocalBusiness/MovingCompany schema anywhere, <strong>neither profile's phone number appears correctly on the site</strong>, the Chino Hills profile points at the homepage instead of its own <code>/chino-hills/</code> page, and the site still calls itself \"Maison Moving (Staging)\". Repairing that profile↔site foundation is the single highest-leverage move for both pins.",
 
   "headline": {
-    "h2": "Two pins, opposite directions — and a website that isn't wired to either",
-    "lede": "Across 14 map keywords scanned six times since March, the Chino Hills pin dominates while the flagship Tustin pin is mid-pack and losing ground. The GBPs are reasonably complete, but the connective tissue to the site — schema, NAP, the Chino Hills landing target — is missing, which caps how high either pin can climb.",
+    "h2": "Chino Hills extends its lead while a fragile profile↔site link still caps both pins",
+    "lede": "Chino Hills gained ~60 top-3 map cells in April–May and tightened its grip on the Inland Empire against Allied Van Lines, Berger Allied and 2Man Moving. Tustin has begun bouncing back from an early-May dip. The GBPs themselves are reasonably complete, but the connective tissue to the site — schema, NAP, the Chino Hills landing target — is missing, which caps how high either pin can climb.",
     "tiles": [
-      {"label": "Chino Hills · Maps", "value": "#1", "sub": "791 top-3 cells · avg rank 2.8 · 121 reviews", "tone": "good"},
-      {"label": "Tustin HQ · Maps", "value": "#4", "sub": "−87 top-3 cells (Apr→May) · avg rank 10.1 · 856 reviews", "tone": "bad"},
+      {"label": "Chino Hills · Maps", "value": "#1", "sub": "+60 top-3 cells Apr 3 → May 3 (731 → 791) · avg rank 2.8 · 121 reviews", "tone": "good"},
+      {"label": "Tustin HQ · Maps", "value": "#4", "sub": "Recovering: +57 top-3 cells May 3 → May 18 (76 → 133) · avg rank 8.8 · 856 reviews", "tone": "watch"},
       {"label": "Site → GBP schema", "value": "Missing", "sub": "no LocalBusiness/MovingCompany markup; org name = '(Staging)'", "tone": "bad"},
-      {"label": "Review velocity · HQ", "value": "Flat", "sub": "856 → 856 in 10 weeks while rivals at 1,000–1,530 keep gaining", "tone": "watch"}
+      {"label": "Review velocity · HQ", "value": "Flat", "sub": "856 → 856 while rivals at 1,000–1,530 keep gaining", "tone": "watch"}
     ]
   },
 
@@ -31,8 +31,8 @@
       "rating": "4.6",
       "reviews": "856",
       "market_rank": "#4 of the local pack",
-      "trend": "declining",
-      "note": "Hyper-competitive Orange County market. Maison is behind Pro Movers, Universal Moving OC and Best Fit Movers, and has shed top-3 map coverage on five of six tracked queries since March. Only long-distance is gaining.",
+      "trend": "recovering from early-May dip",
+      "note": "Hyper-competitive Orange County market. After an early-May dip, Maison's top-3 coverage has been recovering (76 → 133 cells, May 3 → May 18). Pro Movers leads the May 18 leaderboard at 193 top-3 cells.",
       "grids_file": "ld_grids_tustin.json"
     },
     "chinohills": {
@@ -42,8 +42,8 @@
       "rating": "4.8",
       "reviews": "121",
       "market_rank": "#1 in market",
-      "trend": "dominant, holding",
-      "note": "Less-saturated Inland-Empire field (top rivals are national van-line agents — Allied, Berger Allied). Maison is in the top 3 on essentially every cell of every query. Reviews are rising and the rating is climbing — but several challengers are gaining fast.",
+      "trend": "dominant, extending",
+      "note": "Less-saturated Inland-Empire field (top rivals are national van-line agents — Allied, Berger Allied). Maison added 60 top-3 cells between Apr 3 and May 3 and now leads at a 1.65× margin over Allied. Reviews are rising and the rating is climbing.",
       "grids_file": "ld_grids_chinohills.json"
     }
   },
@@ -63,7 +63,7 @@
       {"area": "Social profiles", "tustin": {"s": "good", "t": "LinkedIn, X, Facebook, YouTube"}, "chino": {"s": "watch", "t": "Uses old twitter.com vs Tustin's x.com — minor mismatch"}},
       {"area": "Rating", "tustin": {"s": "watch", "t": "4.6 — trails the field (rivals 4.9–5.0)"}, "chino": {"s": "good", "t": "4.8 and climbing"}},
       {"area": "Reviews — count", "tustin": {"s": "good", "t": "856 — strong, but mid-field in OC"}, "chino": {"s": "watch", "t": "121 — thin, but #1 anyway"}},
-      {"area": "Review velocity (10 wk)", "tustin": {"s": "bad", "t": "Flat: 856 → 856"}, "chino": {"s": "good", "t": "Rising: 115 → 121"}},
+      {"area": "Review velocity", "tustin": {"s": "bad", "t": "Flat: 856 → 856"}, "chino": {"s": "good", "t": "Rising: 118 → 121"}},
       {"area": "Website link target", "tustin": {"s": "watch", "t": "→ homepage (acceptable for HQ)"}, "chino": {"s": "bad", "t": "→ homepage?utm — should point to /chino-hills/"}},
       {"area": "NAP matches the site", "tustin": {"s": "bad", "t": "Site shows 714-832-5950, not the GBP's 714-942-1061"}, "chino": {"s": "bad", "t": "Site shows 909-970-3518, not the GBP's 909-552-7228"}}
     ]
@@ -92,9 +92,9 @@
     {"id": "B", "title": "Repoint & upgrade the location landing pages", "priority": "High", "tone": "watch",
      "summary": "Point the Chino Hills GBP at /chino-hills/ (not the homepage), and make both /tustin/ and /chino-hills/ proper location pages: correct map embed, local phone, FAQ schema, and in-body links to the service pages. Resolve the /serving-all-of-…/ duplicates so each city has one clear page."},
     {"id": "C", "title": "Reverse the Tustin slide", "priority": "High", "tone": "bad",
-     "summary": "The HQ has lost 31 top-3 map cells since March and its review count hasn't moved while rivals with 1,000–1,530 reviews keep climbing. Unify the primary category to Mover, fill service options + attributes, lift the photo set, post 1–2×/week, and stand up a review-acquisition workflow to restart velocity and nudge the 4.6 upward. Watch the new entrants (CC Relocation, Costa Mesa Moving, MoverTron)."},
+     "summary": "Tustin is recovering from an early-May dip (76 → 133 top-3 cells May 3 → May 18) but its review count hasn't moved while rivals with 1,000–1,500 reviews keep climbing. Unify the primary category to Mover, fill service options + attributes, lift the photo set, post 1–2×/week, and stand up a review-acquisition workflow to restart velocity and nudge the 4.6 upward."},
     {"id": "D", "title": "Extend the Chino Hills lead", "priority": "Med", "tone": "good",
-     "summary": "Defend #1: keep the review cadence climbing past 121, set the service options the profile is missing, and build out Inland-Empire service-area coverage (Eastvale, Ontario, Rancho Cucamonga, Diamond Bar). Monitor the fast risers — Berger Allied, Two Men and a Truck and Nelson Westerberg all gained ground since March."},
+     "summary": "Defend #1: keep the review cadence climbing past 121, set the service options the profile is missing, and build out Inland-Empire service-area coverage (Eastvale, Ontario, Rancho Cucamonga, Diamond Bar). Monitor the fast risers — Allied Van Lines (+94), Amigos Moving (+72) and 2Man Moving (+61) all added top-3 cells Apr 3 → May 3."},
     {"id": "E", "title": "Unify NAP, categories & citations across both pins", "priority": "Med", "tone": "watch",
      "summary": "Align primary category, name, hours and — once the owner confirms it — the founding year across both profiles, the site, and the citation set (BBB, Yelp, chamber). Consistency across the two pins is itself a ranking and trust signal."}
   ],
@@ -129,8 +129,8 @@
   "kpi_targets": [
     {"metric": "Chino Hills — top-3 map cells (8 queries)", "current": "791", "target": "800+ (hold/extend)", "stretch": "850+"},
     {"metric": "Chino Hills — reviews", "current": "121", "target": "150+", "stretch": "175+"},
-    {"metric": "Tustin — top-3 map cells (6 queries)", "current": "76", "target": "165+ (recover Apr baseline)", "stretch": "190+"},
-    {"metric": "Tustin — avg map rank", "current": "10.1", "target": "7.0", "stretch": "6.0"},
+    {"metric": "Tustin — top-3 map cells (6 queries)", "current": "133", "target": "165+ (continue recovery)", "stretch": "190+"},
+    {"metric": "Tustin — avg map rank", "current": "8.8", "target": "7.0", "stretch": "6.0"},
     {"metric": "Tustin — review velocity / quarter", "current": "~0", "target": "+30", "stretch": "+45"},
     {"metric": "Tustin — rating", "current": "4.6", "target": "4.7", "stretch": "4.8"},
     {"metric": "LocalBusiness schema live (per pin)", "current": "0 / 2", "target": "2 / 2", "stretch": "2 / 2"},
@@ -144,7 +144,7 @@
     {"q": "GBP manager access for both profiles.", "why": "Most of the highest-leverage work (schema-linked NAP, service options, posts, photos, Q&A, service areas) needs write access to both the Tustin and Chino Hills listings."},
     {"q": "What is the correct public phone number for each location?", "why": "The website shows numbers that match neither GBP (714-832-5950 vs 714-942-1061 at Tustin; 909-970-3518 vs 909-552-7228 at Chino Hills). We need the real dispatch line per location before we unify NAP everywhere."},
     {"q": "What founding year should we use — 1984, 1992 or 1996?", "why": "The tagline says 1984, the Tustin profile says 1992, and Chino Hills says 1996. One consistent year strengthens the 'about', the schema and every citation."},
-    {"q": "What does review-acquisition look like today, especially at Tustin?", "why": "The HQ's review count has been flat for 10 weeks while competitors with 1,000–1,530 reviews keep gaining. Restarting velocity is the surest way to defend and recover the Tustin pin."},
+    {"q": "What does review-acquisition look like today, especially at Tustin?", "why": "The HQ's review count has been flat (856 → 856) while competitors with 1,000–1,530 reviews keep gaining. Restarting velocity is the surest way to defend and recover the Tustin pin."},
     {"q": "Are there any other Google Business Profiles or planned locations we should fold in?", "why": "We now manage two pins; if more exist (or are coming), we want them on the same schema, NAP, review and posting cadence from day one."}
   ],
 

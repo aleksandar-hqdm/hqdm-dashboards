@@ -46,7 +46,7 @@
     <section class="mb-6">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The two pins</h2>
       <div class="panel overflow-x-auto"><table class="w-full text-sm">
-        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Pin</th><th>Maps</th><th class="num">Top-3 cells (Apr→May)</th><th class="num">Avg rank</th><th class="num">Rating / Reviews</th><th>Velocity</th></tr></thead>
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500"><th>Pin</th><th>Maps</th><th class="num">Top-3 cells (first → last)</th><th class="num">Avg rank</th><th class="num">Rating / Reviews</th><th>Velocity</th></tr></thead>
         <tbody id="pin-rows"></tbody></table></div>
       <p class="text-xs text-slate-500 mt-2" id="pin-note"></p>
     </section>
@@ -103,7 +103,7 @@
     $('tldr').innerHTML=DATA.tldr;
     $('tiles').innerHTML=DATA.headline.tiles.map(t=>`<div class="tile ${t.tone}"><div class="l">${t.label}</div><div class="v">${t.value}</div><div class="s">${t.sub}</div></div>`).join('');
     const P=SUM.pins;
-    const row=(p,name,good)=>`<tr><td class="font-semibold">${name}</td><td><span class="pill ${good?'good':'bad'}">${good?'#1':'#4'}</span></td>
+    const row=(p,name,good)=>`<tr><td class="font-semibold">${name}<div class="text-[10px] font-normal text-slate-500">${p.dates[0]} → ${p.dates[p.dates.length-1]}</div></td><td><span class="pill ${good?'good':'bad'}">${good?'#1':'#4'}</span></td>
       <td class="num">${p.agg_top3_first} → <strong>${p.agg_top3_last}</strong></td><td class="num">${p.agg_avg_last}</td>
       <td class="num">${p.rating} / ${p.reviews}</td><td>${p.velocity[0].reviews} → ${p.velocity[p.velocity.length-1].reviews} reviews</td></tr>`;
     $('pin-rows').innerHTML=row(P.chinohills,'Chino Hills',true)+row(P.tustin,'Tustin (HQ)',false);

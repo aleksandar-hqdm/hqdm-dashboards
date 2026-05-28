@@ -8,217 +8,339 @@
       "rating": 4.6,
       "reviews": 856.0,
       "market_rank": 4,
-      "agg_top3_last": 76,
-      "agg_top3_first": 163,
-      "agg_avg_last": 10.08,
+      "agg_top3_last": 133,
+      "agg_top3_first": 76,
+      "agg_avg_last": 8.8,
       "n_keywords": 6,
       "n_cells": 133,
       "dates": [
-        "Apr 3",
-        "May 3"
+        "May 3",
+        "May 12",
+        "May 18"
       ],
       "movement": [
         {
           "keyword": "moving companies",
-          "first_avg": 7.91,
-          "last_avg": 8.47,
-          "first_top3": 42,
-          "last_top3": 23,
-          "first_reach": 117,
-          "last_reach": 105,
-          "d_top3": -19,
-          "d_avg": 0.56,
+          "first_avg": 8.47,
+          "last_avg": 8.09,
+          "first_top3": 23,
+          "last_top3": 35,
+          "first_reach": 105,
+          "last_reach": 110,
+          "d_top3": 12,
+          "d_avg": -0.38,
           "series": [
-            {
-              "date": "Apr 3",
-              "avg": 7.91,
-              "top3": 42,
-              "reach": 117
-            },
             {
               "date": "May 3",
               "avg": 8.47,
               "top3": 23,
               "reach": 105
+            },
+            {
+              "date": "May 12",
+              "avg": 8.21,
+              "top3": 38,
+              "reach": 116
+            },
+            {
+              "date": "May 18",
+              "avg": 8.09,
+              "top3": 35,
+              "reach": 110
             }
           ]
         },
         {
           "keyword": "movers",
-          "first_avg": 7.81,
-          "last_avg": 9.23,
-          "first_top3": 28,
-          "last_top3": 16,
-          "first_reach": 94,
-          "last_reach": 87,
-          "d_top3": -12,
-          "d_avg": 1.42,
+          "first_avg": 9.23,
+          "last_avg": 8.73,
+          "first_top3": 16,
+          "last_top3": 24,
+          "first_reach": 87,
+          "last_reach": 94,
+          "d_top3": 8,
+          "d_avg": -0.5,
           "series": [
-            {
-              "date": "Apr 3",
-              "avg": 7.81,
-              "top3": 28,
-              "reach": 94
-            },
             {
               "date": "May 3",
               "avg": 9.23,
               "top3": 16,
               "reach": 87
-            }
-          ]
-        },
-        {
-          "keyword": "local moving",
-          "first_avg": 9.18,
-          "last_avg": 10.2,
-          "first_top3": 19,
-          "last_top3": 10,
-          "first_reach": 78,
-          "last_reach": 59,
-          "d_top3": -9,
-          "d_avg": 1.02,
-          "series": [
-            {
-              "date": "Apr 3",
-              "avg": 9.18,
-              "top3": 19,
-              "reach": 78
             },
             {
-              "date": "May 3",
-              "avg": 10.2,
-              "top3": 10,
-              "reach": 59
-            }
-          ]
-        },
-        {
-          "keyword": "moving service near me",
-          "first_avg": 7.75,
-          "last_avg": 10.2,
-          "first_top3": 24,
-          "last_top3": 11,
-          "first_reach": 120,
-          "last_reach": 100,
-          "d_top3": -13,
-          "d_avg": 2.45,
-          "series": [
+              "date": "May 12",
+              "avg": 8.59,
+              "top3": 26,
+              "reach": 94
+            },
             {
-              "date": "Apr 3",
-              "avg": 7.75,
+              "date": "May 18",
+              "avg": 8.73,
               "top3": 24,
-              "reach": 120
-            },
-            {
-              "date": "May 3",
-              "avg": 10.2,
-              "top3": 11,
-              "reach": 100
+              "reach": 94
             }
           ]
         },
         {
           "keyword": "packing and storage near me",
-          "first_avg": 6.35,
-          "last_avg": 10.17,
-          "first_top3": 36,
-          "last_top3": 12,
-          "first_reach": 91,
-          "last_reach": 72,
-          "d_top3": -24,
-          "d_avg": 3.82,
+          "first_avg": 10.17,
+          "last_avg": 7.41,
+          "first_top3": 12,
+          "last_top3": 23,
+          "first_reach": 72,
+          "last_reach": 78,
+          "d_top3": 11,
+          "d_avg": -2.76,
           "series": [
-            {
-              "date": "Apr 3",
-              "avg": 6.35,
-              "top3": 36,
-              "reach": 91
-            },
             {
               "date": "May 3",
               "avg": 10.17,
               "top3": 12,
               "reach": 72
+            },
+            {
+              "date": "May 12",
+              "avg": 8.15,
+              "top3": 20,
+              "reach": 74
+            },
+            {
+              "date": "May 18",
+              "avg": 7.41,
+              "top3": 23,
+              "reach": 78
+            }
+          ]
+        },
+        {
+          "keyword": "moving service near me",
+          "first_avg": 10.2,
+          "last_avg": 8.5,
+          "first_top3": 11,
+          "last_top3": 18,
+          "first_reach": 100,
+          "last_reach": 112,
+          "d_top3": 7,
+          "d_avg": -1.7,
+          "series": [
+            {
+              "date": "May 3",
+              "avg": 10.2,
+              "top3": 11,
+              "reach": 100
+            },
+            {
+              "date": "May 12",
+              "avg": 8.82,
+              "top3": 19,
+              "reach": 115
+            },
+            {
+              "date": "May 18",
+              "avg": 8.5,
+              "top3": 18,
+              "reach": 112
             }
           ]
         },
         {
           "keyword": "long distance moving near me",
-          "first_avg": 10.79,
-          "last_avg": 12.88,
-          "first_top3": 14,
-          "last_top3": 4,
-          "first_reach": 112,
-          "last_reach": 77,
-          "d_top3": -10,
-          "d_avg": 2.09,
+          "first_avg": 12.88,
+          "last_avg": 10.59,
+          "first_top3": 4,
+          "last_top3": 17,
+          "first_reach": 77,
+          "last_reach": 105,
+          "d_top3": 13,
+          "d_avg": -2.29,
           "series": [
-            {
-              "date": "Apr 3",
-              "avg": 10.79,
-              "top3": 14,
-              "reach": 112
-            },
             {
               "date": "May 3",
               "avg": 12.88,
               "top3": 4,
               "reach": 77
+            },
+            {
+              "date": "May 12",
+              "avg": 10.62,
+              "top3": 17,
+              "reach": 103
+            },
+            {
+              "date": "May 18",
+              "avg": 10.59,
+              "top3": 17,
+              "reach": 105
+            }
+          ]
+        },
+        {
+          "keyword": "local moving",
+          "first_avg": 10.2,
+          "last_avg": 9.39,
+          "first_top3": 10,
+          "last_top3": 16,
+          "first_reach": 59,
+          "last_reach": 69,
+          "d_top3": 6,
+          "d_avg": -0.81,
+          "series": [
+            {
+              "date": "May 3",
+              "avg": 10.2,
+              "top3": 10,
+              "reach": 59
+            },
+            {
+              "date": "May 12",
+              "avg": 9.55,
+              "top3": 16,
+              "reach": 71
+            },
+            {
+              "date": "May 18",
+              "avg": 9.39,
+              "top3": 16,
+              "reach": 69
             }
           ]
         }
       ],
       "leaderboard": [
         {
-          "name": "Best Fit Movers Orange County",
-          "avg": 7.43,
-          "top3": 197,
-          "reach": 522,
-          "rating": 4.9,
-          "reviews": 1530,
-          "d_top3": 30,
+          "name": "Pro Movers",
+          "avg": 7.52,
+          "top3": 193,
+          "reach": 575,
+          "rating": 4.6,
+          "reviews": 1000,
+          "d_top3": 68,
           "is_maison": false
         },
         {
           "name": "Universal Moving OC",
-          "avg": 6.81,
-          "top3": 173,
-          "reach": 418,
+          "avg": 7.19,
+          "top3": 137,
+          "reach": 368,
           "rating": 5.0,
           "reviews": 333,
-          "d_top3": 18,
+          "d_top3": -36,
           "is_maison": false
         },
         {
-          "name": "Pro Movers",
-          "avg": 9.07,
-          "top3": 125,
-          "reach": 521,
+          "name": "Best Fit Movers Orange County",
+          "avg": 8.46,
+          "top3": 137,
+          "reach": 454,
+          "rating": 4.9,
+          "reviews": 1530,
+          "d_top3": -60,
+          "is_maison": false
+        },
+        {
+          "name": "Maison Moving and Storage",
+          "avg": 8.8,
+          "top3": 133,
+          "reach": 568,
           "rating": 4.6,
-          "reviews": 1000,
-          "d_top3": -33,
+          "reviews": 856,
+          "d_top3": 57,
+          "is_maison": true
+        },
+        {
+          "name": "AFD MOVERS",
+          "avg": 6.75,
+          "top3": 129,
+          "reach": 354,
+          "rating": 4.9,
+          "reviews": 1139,
+          "d_top3": 46,
           "is_maison": false
         },
         {
-          "name": "Maison Moving & Storage",
+          "name": "Royal Moving & Storage Orange County",
+          "avg": 6.54,
+          "top3": 128,
+          "reach": 338,
+          "rating": 5.0,
+          "reviews": 206,
+          "d_top3": -56,
+          "is_maison": false
+        },
+        {
+          "name": "Local",
           "avg": 10.08,
-          "top3": 76,
-          "reach": 500,
-          "rating": null,
-          "reviews": null,
-          "d_top3": -87,
-          "is_maison": true
+          "top3": 112,
+          "reach": 521,
+          "rating": 5.0,
+          "reviews": 613,
+          "d_top3": 36,
+          "is_maison": false
+        },
+        {
+          "name": "Movers Best",
+          "avg": 9.08,
+          "top3": 104,
+          "reach": 417,
+          "rating": 4.9,
+          "reviews": 524,
+          "d_top3": 35,
+          "is_maison": false
+        },
+        {
+          "name": "CC Relocation Inc.",
+          "avg": 6.51,
+          "top3": 96,
+          "reach": 206,
+          "rating": 4.4,
+          "reviews": 61,
+          "d_top3": 28,
+          "is_maison": false
+        },
+        {
+          "name": "Best California Movers - Irvine, Orange County, Santa Ana Moving & Storage Company",
+          "avg": 7.97,
+          "top3": 85,
+          "reach": 274,
+          "rating": 5.0,
+          "reviews": 235,
+          "d_top3": -9,
+          "is_maison": false
+        },
+        {
+          "name": "Orange County Moving Services",
+          "avg": 8.5,
+          "top3": 63,
+          "reach": 308,
+          "rating": 4.9,
+          "reviews": 1297,
+          "d_top3": -49,
+          "is_maison": false
+        },
+        {
+          "name": "Costa Mesa Moving Co",
+          "avg": 10.45,
+          "top3": 62,
+          "reach": 622,
+          "rating": 4.7,
+          "reviews": 336,
+          "d_top3": 32,
+          "is_maison": false
         }
       ],
       "velocity": [
         {
-          "date": "Apr 3",
+          "date": "May 3",
+          "rating": 4.6,
+          "reviews": 856
+        },
+        {
+          "date": "May 12",
           "rating": 4.6,
           "reviews": 855
         },
         {
-          "date": "May 3",
+          "date": "May 18",
           "rating": 4.6,
           "reviews": 856
         }
@@ -229,7 +351,7 @@
       "name": "Maison Moving and Storage",
       "address": "15271 Fairfield Ranch Rd ste 160, Chino Hills, CA 91709",
       "rating": 4.8,
-      "reviews": 121.0,
+      "reviews": 121,
       "market_rank": 1,
       "agg_top3_last": 791,
       "agg_top3_first": 731,
@@ -242,68 +364,6 @@
         "May 3"
       ],
       "movement": [
-        {
-          "keyword": "moving company near me",
-          "first_avg": 3.02,
-          "last_avg": 2.59,
-          "first_top3": 92,
-          "last_top3": 97,
-          "first_reach": 133,
-          "last_reach": 133,
-          "d_top3": 5,
-          "d_avg": -0.43,
-          "series": [
-            {
-              "date": "Apr 3",
-              "avg": 3.02,
-              "top3": 92,
-              "reach": 133
-            },
-            {
-              "date": "Apr 14",
-              "avg": 3.11,
-              "top3": 91,
-              "reach": 133
-            },
-            {
-              "date": "May 3",
-              "avg": 2.59,
-              "top3": 97,
-              "reach": 133
-            }
-          ]
-        },
-        {
-          "keyword": "movers near me",
-          "first_avg": 3.37,
-          "last_avg": 2.71,
-          "first_top3": 93,
-          "last_top3": 99,
-          "first_reach": 133,
-          "last_reach": 133,
-          "d_top3": 6,
-          "d_avg": -0.66,
-          "series": [
-            {
-              "date": "Apr 3",
-              "avg": 3.37,
-              "top3": 93,
-              "reach": 133
-            },
-            {
-              "date": "Apr 14",
-              "avg": 3.68,
-              "top3": 87,
-              "reach": 133
-            },
-            {
-              "date": "May 3",
-              "avg": 2.71,
-              "top3": 99,
-              "reach": 133
-            }
-          ]
-        },
         {
           "keyword": "local movers",
           "first_avg": 3.47,
@@ -362,6 +422,37 @@
               "date": "May 3",
               "avg": 2.89,
               "top3": 103,
+              "reach": 133
+            }
+          ]
+        },
+        {
+          "keyword": "movers near me",
+          "first_avg": 3.37,
+          "last_avg": 2.71,
+          "first_top3": 93,
+          "last_top3": 99,
+          "first_reach": 133,
+          "last_reach": 133,
+          "d_top3": 6,
+          "d_avg": -0.66,
+          "series": [
+            {
+              "date": "Apr 3",
+              "avg": 3.37,
+              "top3": 93,
+              "reach": 133
+            },
+            {
+              "date": "Apr 14",
+              "avg": 3.68,
+              "top3": 87,
+              "reach": 133
+            },
+            {
+              "date": "May 3",
+              "avg": 2.71,
+              "top3": 99,
               "reach": 133
             }
           ]
@@ -429,37 +520,6 @@
           ]
         },
         {
-          "keyword": "local moving near me",
-          "first_avg": 3.27,
-          "last_avg": 2.86,
-          "first_top3": 94,
-          "last_top3": 95,
-          "first_reach": 133,
-          "last_reach": 133,
-          "d_top3": 1,
-          "d_avg": -0.41,
-          "series": [
-            {
-              "date": "Apr 3",
-              "avg": 3.27,
-              "top3": 94,
-              "reach": 133
-            },
-            {
-              "date": "Apr 14",
-              "avg": 3.54,
-              "top3": 92,
-              "reach": 133
-            },
-            {
-              "date": "May 3",
-              "avg": 2.86,
-              "top3": 95,
-              "reach": 133
-            }
-          ]
-        },
-        {
           "keyword": "moving services near me",
           "first_avg": 3.47,
           "last_avg": 2.79,
@@ -489,16 +549,78 @@
               "reach": 133
             }
           ]
+        },
+        {
+          "keyword": "moving company near me",
+          "first_avg": 3.02,
+          "last_avg": 2.59,
+          "first_top3": 92,
+          "last_top3": 97,
+          "first_reach": 133,
+          "last_reach": 133,
+          "d_top3": 5,
+          "d_avg": -0.43,
+          "series": [
+            {
+              "date": "Apr 3",
+              "avg": 3.02,
+              "top3": 92,
+              "reach": 133
+            },
+            {
+              "date": "Apr 14",
+              "avg": 3.11,
+              "top3": 91,
+              "reach": 133
+            },
+            {
+              "date": "May 3",
+              "avg": 2.59,
+              "top3": 97,
+              "reach": 133
+            }
+          ]
+        },
+        {
+          "keyword": "local moving near me",
+          "first_avg": 3.27,
+          "last_avg": 2.86,
+          "first_top3": 94,
+          "last_top3": 95,
+          "first_reach": 133,
+          "last_reach": 133,
+          "d_top3": 1,
+          "d_avg": -0.41,
+          "series": [
+            {
+              "date": "Apr 3",
+              "avg": 3.27,
+              "top3": 94,
+              "reach": 133
+            },
+            {
+              "date": "Apr 14",
+              "avg": 3.54,
+              "top3": 92,
+              "reach": 133
+            },
+            {
+              "date": "May 3",
+              "avg": 2.86,
+              "top3": 95,
+              "reach": 133
+            }
+          ]
         }
       ],
       "leaderboard": [
         {
-          "name": "Maison Moving & Storage",
+          "name": "Maison Moving and Storage",
           "avg": 2.78,
           "top3": 791,
           "reach": 1064,
-          "rating": null,
-          "reviews": null,
+          "rating": 4.8,
+          "reviews": 121,
           "d_top3": 60,
           "is_maison": true
         },
@@ -508,8 +630,18 @@
           "top3": 478,
           "reach": 975,
           "rating": 4.9,
-          "reviews": 1220,
+          "reviews": 1214,
           "d_top3": 94,
+          "is_maison": false
+        },
+        {
+          "name": "2Man Moving Services",
+          "avg": 7.25,
+          "top3": 242,
+          "reach": 906,
+          "rating": 4.8,
+          "reviews": 85,
+          "d_top3": 61,
           "is_maison": false
         },
         {
@@ -518,18 +650,88 @@
           "top3": 228,
           "reach": 735,
           "rating": 4.9,
-          "reviews": 1195,
+          "reviews": 1188,
           "d_top3": -54,
           "is_maison": false
         },
         {
+          "name": "Amigos Moving",
+          "avg": 8.7,
+          "top3": 154,
+          "reach": 840,
+          "rating": 5.0,
+          "reviews": 46,
+          "d_top3": 72,
+          "is_maison": false
+        },
+        {
+          "name": "Titan Relocation Services",
+          "avg": 9.31,
+          "top3": 130,
+          "reach": 761,
+          "rating": 5.0,
+          "reviews": 121,
+          "d_top3": -7,
+          "is_maison": false
+        },
+        {
+          "name": "Big Time Movers",
+          "avg": 9.56,
+          "top3": 112,
+          "reach": 544,
+          "rating": 5.0,
+          "reviews": 19,
+          "d_top3": 20,
+          "is_maison": false
+        },
+        {
           "name": "Nelson Westerberg California",
-          "avg": 8.64,
+          "avg": 8.65,
           "top3": 104,
           "reach": 648,
           "rating": 3.8,
           "reviews": 19,
           "d_top3": -103,
+          "is_maison": false
+        },
+        {
+          "name": "Diamond Bar Movers",
+          "avg": 8.19,
+          "top3": 96,
+          "reach": 349,
+          "rating": 4.0,
+          "reviews": 1,
+          "d_top3": 17,
+          "is_maison": false
+        },
+        {
+          "name": "Merit Moving Systems",
+          "avg": 9.32,
+          "top3": 76,
+          "reach": 350,
+          "rating": 4.9,
+          "reviews": 176,
+          "d_top3": -27,
+          "is_maison": false
+        },
+        {
+          "name": "Antonio\u2019s Moving Services",
+          "avg": 10.23,
+          "top3": 69,
+          "reach": 548,
+          "rating": 5.0,
+          "reviews": 188,
+          "d_top3": -30,
+          "is_maison": false
+        },
+        {
+          "name": "Fastruck Moving Company",
+          "avg": 10.9,
+          "top3": 67,
+          "reach": 871,
+          "rating": 5.0,
+          "reviews": 121,
+          "d_top3": 38,
           "is_maison": false
         }
       ],
@@ -548,6 +750,11 @@
           "date": "May 3",
           "rating": 4.7,
           "reviews": 118
+        },
+        {
+          "date": "May 18",
+          "rating": 4.8,
+          "reviews": 121
         }
       ]
     }
