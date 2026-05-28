@@ -88,13 +88,13 @@
       </div>
       <div class="panel mt-2.5 p-3.5" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
         <p class="text-[15px] leading-relaxed text-slate-800">
-          We began working with AQMS in <strong>January 2026</strong> — the same month a third-party traffic-tool unwound and a Google update knocked organic search off a cliff (<strong>400 visits in December to 75 in February</strong>). Across the five months since, we've rebuilt it: organic traffic is back to <strong>337/month — 4.5× the February low</strong>, and the last 90 days are up <strong>+34% in organic visitors</strong>. On Google Maps the position never broke — <strong>still #1 in Santa Clarita on all six priority searches</strong>, where you gained top-3 placements on every one, and your review count crossed <strong>452 at a 4.9★ rating</strong>. <span class="text-slate-600 text-[13px]"><em>Lead-tracking update: 70 form submissions for Apr 14 → May 28 have been recovered from your WordPress Flamingo store (the form never broke — the GA4 trigger did). Combined ~<strong>40 leads in April and ~47 in May (first 28 days)</strong>; full chart will return once the dev team's GTM fix lands.</em></span>
+          We began working with AQMS in <strong>January 2026</strong> — the same month a third-party traffic-tool unwound and a Google update knocked organic search off a cliff (<strong>400 visits in December to 75 in February</strong>). Across the five months since, we've rebuilt it: organic traffic is back to <strong>337/month — 4.5× the February low</strong>, and the last 90 days are up <strong>+34% in organic visitors</strong>. <strong>Form submissions are coming back too</strong> — <strong>39 in April and 47 in the first 28 days of May</strong> (including 70 leads recovered from WordPress Flamingo for the Apr 14 → May 28 tracking-gap window). On Google Maps the position never broke — <strong>still #1 in Santa Clarita on all six priority searches</strong>, with your review count crossing <strong>452 at a 4.9★ rating</strong>.
         </p>
         <div class="flex flex-wrap gap-2 mt-3">
           <span class="chip good"><span class="v">75 → 337</span><span class="l">organic visits/mo</span></span>
           <span class="chip good"><span class="v">+34%</span><span class="l">organic visitors · last 90 days</span></span>
+          <span class="chip good"><span class="v">+70%</span><span class="l">form submissions · last 90 days</span></span>
           <span class="chip good"><span class="v">#1</span><span class="l">on Maps · 557 top-3 spots</span></span>
-          <span class="chip good"><span class="v">+46</span><span class="l">top-3 placements since Mar</span></span>
           <span class="chip"><span class="v">452 · 4.9★</span><span class="l">reviews</span></span>
         </div>
       </div>
@@ -104,13 +104,13 @@
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
       <!-- Monthly line -->
       <div class="panel p-3.5">
-        <div class="secthead mb-2">Organic Visitors · Monthly (Q4 2025 → now)</div>
+        <div class="secthead mb-2">Organic Visitors &amp; Total Form Submissions · Monthly</div>
         <div style="height: 184px;"><canvas id="line-chart"></canvas></div>
-        <p class="text-[11px] text-slate-500 mt-2">Monthly organic visitors. The dashed tail is <strong>May (first 22 days)</strong> — a partial month, not a finished one. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from these charts.</p>
+        <p class="text-[11px] text-slate-500 mt-2">Visitors (left axis, organic search only) and form submissions (right axis, all channels combined). The dashed tail is <strong>May (first 22 days)</strong> — a partial month. May 2026 includes 47 form submissions (1 GA4-tracked + 46 recovered from the WordPress backfill); April includes 39 (16 tracked + 23 backfilled).</p>
       </div>
       <!-- Quarterly + boxes -->
       <div class="panel p-3.5">
-        <div class="secthead mb-2">By Quarter · Organic Visitors</div>
+        <div class="secthead mb-2">By Quarter · Visitors &amp; Form Submissions</div>
         <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
         <div class="grid grid-cols-3 gap-2 mt-3" id="movement-boxes"></div>
         <p class="text-[11px] text-slate-500 mt-2" id="boxes-reading"></p>
@@ -179,11 +179,15 @@
     renderBoxes(DATA);
     if (MOVE) { renderKeywords(MOVE); renderCompetitors(MOVE); }
 
-    // ---------- Monthly line chart (organic visitors only, last 8 months) ----------
+    // ---------- Monthly line chart (organic visitors + total form submissions, last 8 months) ----------
     function renderLineChart(d) {
       const t = d.trend; const W = 8;
       const months = t.months.slice(-W);
       const sess = t.sessions.organic.slice(-W);
+      // Total form submissions = sum across all channels (form_submits is an object with one array per channel)
+      const totalLeads = t.months.map((_, i) => {
+        return Object.values(t.form_submits).reduce((sum, arr) => sum + (arr[i] || 0), 0);
+      }).slice(-W);
       const pIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
       const split = data => {
         if (pIdx < 0) return { solid: data, dashed: data.map(() => null) };
@@ -200,7 +204,7 @@
       ]);
       new Chart(document.getElementById('line-chart'), {
         type: 'line',
-        data: { labels: months, datasets: ds(split(sess), '#1d5b8a', 'Organic visitors', 'y') },
+        data: { labels: months, datasets: [...ds(split(sess), '#1d5b8a', 'Organic visitors', 'y'), ...ds(split(totalLeads), '#10b981', 'Form submissions (all channels)', 'y1')] },
         options: {
           responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
           plugins: {
@@ -210,17 +214,46 @@
           scales: {
             x: { grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: false } },
             y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: 'visitors', font: { size: 9, weight: '600' }, color: '#1d5b8a' } },
+            y1: { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } }, title: { display: true, text: 'form submissions', font: { size: 9, weight: '600' }, color: '#10b981' } },
           },
         },
       });
     }
 
-    // ---------- Quarterly chart (sessions bars only) ----------
+    // ---------- Quarterly chart (organic visitor bars + total form-submission line) ----------
     function renderQuarterChart(d) {
       const q = d.trend.quarterly || [];
       const lab = s => { const m = s.match(/Q(\d)\s*(\d{4})/); return m ? `Q${m[1]} '${m[2].slice(2)}` + (s.includes('*') ? '*' : '') : s; };
       const labels = q.map(x => lab(x.q));
       const sess = q.map(x => x.org_sess);
+      // Quarterly total form submissions = sum across ALL channels for the months in each quarter.
+      // q.org_conv only covers Organic Search; we need to add Direct + Paid + Referral too.
+      // Map each quarter to the indexes of its months in d.trend.months.
+      const monthsArr = d.trend.months || [];
+      const quarterToIdx = mo => {
+        // mo is like "Mar 26", "Apr 26", "May 26 so far". Convert to (year, quarter).
+        const m = mo.match(/^([A-Za-z]+)\s+(\d{2})/);
+        if (!m) return null;
+        const monIdx = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'].indexOf(m[1]);
+        if (monIdx < 0) return null;
+        return { yr: 2000 + parseInt(m[2]), qn: Math.floor(monIdx / 3) + 1 };
+      };
+      const monthsByQ = {};
+      monthsArr.forEach((mo, i) => {
+        const k = quarterToIdx(mo);
+        if (!k) return;
+        const key = `Q${k.qn} ${k.yr}`;
+        (monthsByQ[key] = monthsByQ[key] || []).push(i);
+      });
+      const totalLeads = q.map(x => {
+        const m = x.q.match(/Q(\d)\s*(\d{4})/);
+        if (!m) return null;
+        const key = `Q${m[1]} ${m[2]}`;
+        const idxs = monthsByQ[key] || [];
+        return idxs.reduce((sum, i) => {
+          return sum + Object.values(d.trend.form_submits).reduce((s, arr) => s + (arr[i] || 0), 0);
+        }, 0);
+      });
       const partial = q.map(x => x.kind === 'current' || /\*/.test(x.q));
       new Chart(document.getElementById('quarter-chart'), {
         type: 'bar',
@@ -229,6 +262,8 @@
           datasets: [
             { type: 'bar', label: 'Organic visitors', data: sess, yAxisID: 'y', order: 2,
               backgroundColor: partial.map(p => p ? '#9ec5e0' : '#1d5b8a'), borderRadius: 3, barPercentage: 0.78, categoryPercentage: 0.8 },
+            { type: 'line', label: 'Form submissions (all chs)', data: totalLeads, yAxisID: 'y1', order: 1,
+              borderColor: '#10b981', backgroundColor: '#10b981', borderWidth: 2.5, tension: 0.25, pointRadius: 2.5, pointHoverRadius: 6 },
           ],
         },
         options: {
@@ -237,35 +272,41 @@
           scales: {
             x: { grid: { display: false }, ticks: { font: { size: 9 } } },
             y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } } },
+            y1: { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } } },
           },
         },
       });
     }
 
-    // ---------- 3 movement boxes (YoY / 6-mo / 90-day) — visitors only ----------
+    // ---------- 3 movement boxes (YoY / 6-mo / 90-day) — visitors + total form submissions ----------
     function renderBoxes(d) {
       const org = d.trend.sessions.organic;
+      // Total form submissions per month = sum across all channels
+      const led = d.trend.months.map((_, i) =>
+        Object.values(d.trend.form_submits).reduce((s, arr) => s + (arr[i] || 0), 0)
+      );
       const sum = (a, i, j) => a.slice(i, j + 1).reduce((x, y) => x + (y || 0), 0);
       const pct = (cur, prev) => prev ? Math.round((cur - prev) / prev * 100) : null;
-      // YoY = monthly avg Q2'25 (idx 4-6, 3mo) vs Q2'26* (idx 16-17, 2mo)
       const yoyS = pct(sum(org, 16, 17) / 2, sum(org, 4, 6) / 3);
-      // 6 months: idx 12-17 vs 6-11
+      const yoyL = pct(sum(led, 16, 17) / 2, sum(led, 4, 6) / 3);
       const sixS = pct(sum(org, 12, 17), sum(org, 6, 11));
-      // 90 days: idx 15-17 vs 12-14
+      const sixL = pct(sum(led, 12, 17), sum(led, 6, 11));
       const ninS = pct(sum(org, 15, 17), sum(org, 12, 14));
+      const ninL = pct(sum(led, 15, 17), sum(led, 12, 14));
       const fmt = v => (v > 0 ? '+' : '') + v + '%';
       const cls = v => v >= 0 ? 'pos' : 'neg';
-      const box = (kind, win, cmp, s) => `
+      const box = (kind, win, cmp, s, l) => `
         <div class="mbox ${kind}">
           <div class="win">${win}</div><div class="cmp">${cmp}</div>
           <div class="row"><span class="m">Organic visitors</span><span class="d ${cls(s)}">${fmt(s)}</span></div>
+          <div class="row"><span class="m">Form submissions</span><span class="d ${cls(l)}">${fmt(l)}</span></div>
         </div>`;
       document.getElementById('movement-boxes').innerHTML =
-        box('watch', 'Year over Year', 'vs Q2 2025', yoyS) +
-        box('watch', 'Last 6 Months', 'vs prior 6 mo', sixS) +
-        box('good', 'Last 90 Days', 'vs prior 90 days', ninS);
+        box('watch', 'Year over Year', 'vs Q2 2025', yoyS, yoyL) +
+        box('watch', 'Last 6 Months', 'vs prior 6 mo', sixS, sixL) +
+        box('good', 'Last 90 Days', 'vs prior 90 days', ninS, ninL);
       document.getElementById('boxes-reading').innerHTML =
-        `The year-over-year and six-month windows still span the January cliff, so they read negative. The clean recovery window — the <strong>last 90 days</strong> — is up sharply. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from this view.`;
+        `Year-over-year and six-month windows still span the January cliff, so they read negative on visitors. The clean recovery window — the <strong>last 90 days</strong> — is up sharply. Form submissions include the Apr 14 → May 28 backfill recovered by the dev team from WordPress Flamingo.`;
     }
 
     // ---------- Maps movement per keyword ----------

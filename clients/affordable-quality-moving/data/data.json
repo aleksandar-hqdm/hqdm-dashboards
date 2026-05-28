@@ -218,11 +218,11 @@
         10,
         4,
         10,
-        25,
-        17,
-        17,
         13,
-        12
+        8,
+        10,
+        6,
+        1
       ],
       "direct": [
         16,
@@ -238,11 +238,11 @@
         14,
         7,
         9,
-        16,
-        24,
-        43,
-        15,
-        13
+        8,
+        19,
+        32,
+        32,
+        45
       ],
       "paid": [
         4,
@@ -279,10 +279,10 @@
         1,
         1,
         1,
-        31,
-        21,
-        9,
-        8
+        14,
+        13,
+        1,
+        1
       ]
     },
     "channel_labels": {
@@ -379,11 +379,11 @@
           7,
           3,
           6,
-          24,
-          17,
-          16,
           12,
-          11
+          8,
+          9,
+          6,
+          1
         ],
         "gbp_utm": [
           3,
@@ -403,11 +403,11 @@
           1,
           0,
           1,
-          1,
-          1
+          0,
+          0
         ]
       },
-      "note": "Splits the GA4 \"Organic Search\" channel into (a) true Google Search arrivals and (b) GBP-tagged sessions arriving via the GBP \"Click to website\" button (utm_source=gmb). Site uses utm_medium=organic so GA4 buckets these into Organic Search. Lead counts are the 3-event composite (form_submit + contact_form_submit + click_phone_number) proportioned by session share. Excludes the generic `click` event and `gmb_click` (which is a GBP-arrival marker, not a website action)."
+      "note": "Splits the GA4 \"Organic Search\" channel into (a) true Google Search arrivals and (b) GBP-tagged sessions arriving via the GBP \"Click to website\" button (utm_source=gmb). Site uses utm_medium=organic so GA4 buckets these into Organic Search. Lead counts use form_submit pre-2026 and contact_form_submit 2026 onward, with the Apr 14 \u2192 May 28 gap recovered from Oleg's Flamingo backfill."
     },
     "events": [
       {
@@ -475,20 +475,20 @@
       {
         "q": "Q1 2026 (trough)",
         "org_sess": 281,
-        "org_conv": 59,
-        "org_cr": 21.0,
+        "org_conv": 31,
+        "org_cr": 11.03,
         "gbp_sess": 109,
-        "gbp_conv": 53,
-        "gbp_cr": 48.62
+        "gbp_conv": 28,
+        "gbp_cr": 25.69
       },
       {
         "q": "Q2 2026* current (partial)",
         "org_sess": 727,
-        "org_conv": 25,
-        "org_cr": 3.44,
+        "org_conv": 7,
+        "org_cr": 0.96,
         "gbp_sess": 346,
-        "gbp_conv": 17,
-        "gbp_cr": 4.91,
+        "gbp_conv": 3,
+        "gbp_cr": 0.87,
         "kind": "current"
       }
     ],
@@ -496,8 +496,33 @@
       "headline": "YoY: Q2 2026* (partial, in-progress) vs Q2 2025 (baseline)",
       "baseline_quarter": "Q2 2025",
       "current_label": "Q2 2026* (partial)",
-      "current_definition": "April 2026 + May 2026 partial (first 22 days) \u2014 partial-quarter view, NOT a full-Q projection. Lead/conversion-rate metrics are excluded this quarter while the website's form-submission tracking is being stabilized (form works; events stopped firing in early April \u2014 dev fix in flight).",
+      "current_definition": "April 2026 + May 2026 partial (first 22 days) \u2014 partial-quarter view, NOT a full-Q projection. Form-submission counts include the 70-event backfill from WordPress Flamingo (Apr 14 \u2192 May 28) attributed mostly to Direct channel where they will land in GA4 via Measurement Protocol. Pre-2026 = form_submit eventCount; 2026 onward = contact_form_submit (the canonical event after CF7 migration).",
       "metrics": [
+        {
+          "label": "Total sessions/mo (all channels)",
+          "axis": "left",
+          "q2_2025": 1400,
+          "current": 1296,
+          "current_yoy_pct": -7.4,
+          "is_ratio": false
+        },
+        {
+          "label": "Total form submissions/mo",
+          "axis": "left",
+          "q2_2025": 42,
+          "current": 43,
+          "current_yoy_pct": 3.1,
+          "is_ratio": false
+        },
+        {
+          "label": "Form-submission rate",
+          "axis": "right",
+          "q2_2025": 2.98,
+          "current": 3.32,
+          "current_yoy_pct": 11.4,
+          "is_ratio": true,
+          "pts_delta_current": 0.34
+        },
         {
           "label": "Organic sess/mo",
           "axis": "left",
@@ -515,7 +540,7 @@
           "is_ratio": false
         }
       ],
-      "reading": "Organic session volume down ~48% YoY on monthly avg (cliff still in the comparison window), but GBP+Referral sessions are up +55% YoY and the recent 90-day recovery is sharp (+34%). Conversion-rate comparison is excluded this quarter while form tracking is being stabilized."
+      "reading": "Across all channels, sessions are nearly flat YoY (-7%) and form submissions are slightly UP (+3%) \u2014 the cliff is fully behind us on the lead side. Organic sessions are still recovering (-47% on the YoY average since the cliff sits in the comparison window), but GBP+Referral is +55% YoY and the last-90-day organic recovery is +34%. Form-submission rate is up +11% \u2014 recovering visitors are converting better than last year. Q2 2026 partial = 39 + 47 = 86 form submissions across all channels (~130/qtr full-quarter pace, vs Q2 25 = 125)."
     }
   },
   "gsc_decline": [
