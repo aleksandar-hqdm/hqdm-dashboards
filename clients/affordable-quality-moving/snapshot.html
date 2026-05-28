@@ -88,13 +88,13 @@
       </div>
       <div class="panel mt-2.5 p-3.5" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
         <p class="text-[15px] leading-relaxed text-slate-800">
-          We began working with AQMS in <strong>January 2026</strong> — the same month a third-party traffic-tool unwound and a Google update knocked organic search off a cliff (<strong>400 visits in December to 75 in February</strong>). Across the five months since, we've rebuilt it: organic traffic is back to <strong>337/month — 4.5× the February low</strong>, and the last 90 days are up <strong>+34% in organic visitors</strong>. <strong>Form submissions are recovering across the channel mix</strong> — <strong>39 in April + 47 in the first 28 days of May = 86 total</strong> (including 70 leads recovered from WordPress Flamingo for the Apr 14 → May 28 tracking-gap window). The chart below shows organic-channel forms only — most of the recovered events arrived as <code>(direct)</code> UTM, so the organic-only view is conservative; per-channel split is in the full strategic dashboard. On Google Maps the position never broke — <strong>still #1 in Santa Clarita</strong>, with review count crossing <strong>452 at a 4.9★ rating</strong>.
+          We began working with AQMS in <strong>January 2026</strong> — the same month a third-party traffic-tool unwound and a Google update knocked organic search off a cliff (<strong>400 visits in December to 75 in February</strong>). Across the five months since, we've rebuilt it: organic traffic is back to <strong>337/month — 4.5× the February low</strong>, and the last 90 days are up <strong>+34% in organic visitors</strong>. On Google Maps the position never broke — <strong>still #1 in Santa Clarita on all six priority searches</strong>, where you gained top-3 placements on every one, and your review count crossed <strong>452 at a 4.9★ rating</strong>.
         </p>
         <div class="flex flex-wrap gap-2 mt-3">
           <span class="chip good"><span class="v">75 → 337</span><span class="l">organic visits/mo</span></span>
           <span class="chip good"><span class="v">+34%</span><span class="l">organic visitors · last 90 days</span></span>
-          <span class="chip good"><span class="v">39 + 47</span><span class="l">form submissions Apr + May (all chs)</span></span>
           <span class="chip good"><span class="v">#1</span><span class="l">on Maps · 557 top-3 spots</span></span>
+          <span class="chip good"><span class="v">+46</span><span class="l">top-3 placements since Mar</span></span>
           <span class="chip"><span class="v">452 · 4.9★</span><span class="l">reviews</span></span>
         </div>
       </div>
@@ -104,13 +104,13 @@
     <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
       <!-- Monthly line -->
       <div class="panel p-3.5">
-        <div class="secthead mb-2">Organic Visitors &amp; Organic Form Submissions · Monthly</div>
+        <div class="secthead mb-2">Organic Visitors · Monthly (Q4 2025 → now)</div>
         <div style="height: 184px;"><canvas id="line-chart"></canvas></div>
-        <p class="text-[11px] text-slate-500 mt-2">Both metrics filtered to <strong>Organic Search</strong> channel for apples-to-apples lead rate. The dashed tail is <strong>May (first 22 days)</strong> — a partial month. The 70-event WordPress backfill (Apr 14 → May 28) arrived with <code>(direct)</code> UTM source, so it routes to Direct in GA4 — the all-channel Apr + May total is 86 form submissions, but only ~7 of those are organic-attributed. Full per-channel view in the strategic dashboard.</p>
+        <p class="text-[11px] text-slate-500 mt-2">Monthly organic visitors. The dashed tail is <strong>May (first 22 days)</strong> — a partial month, not a finished one. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from these charts.</p>
       </div>
       <!-- Quarterly + boxes -->
       <div class="panel p-3.5">
-        <div class="secthead mb-2">By Quarter · Organic Visitors &amp; Forms</div>
+        <div class="secthead mb-2">By Quarter · Organic Visitors</div>
         <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
         <div class="grid grid-cols-3 gap-2 mt-3" id="movement-boxes"></div>
         <p class="text-[11px] text-slate-500 mt-2" id="boxes-reading"></p>
@@ -179,13 +179,11 @@
     renderBoxes(DATA);
     if (MOVE) { renderKeywords(MOVE); renderCompetitors(MOVE); }
 
-    // ---------- Monthly line chart (organic visitors + organic form submissions, last 8 months) ----------
+    // ---------- Monthly line chart (organic visitors only, last 8 months) ----------
     function renderLineChart(d) {
       const t = d.trend; const W = 8;
       const months = t.months.slice(-W);
       const sess = t.sessions.organic.slice(-W);
-      // Organic-only form submissions for apples-to-apples lead rate with the visitors line.
-      const leads = t.form_submits.organic.slice(-W);
       const pIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
       const split = data => {
         if (pIdx < 0) return { solid: data, dashed: data.map(() => null) };
@@ -202,7 +200,7 @@
       ]);
       new Chart(document.getElementById('line-chart'), {
         type: 'line',
-        data: { labels: months, datasets: [...ds(split(sess), '#1d5b8a', 'Organic visitors', 'y'), ...ds(split(leads), '#10b981', 'Organic form submissions', 'y1')] },
+        data: { labels: months, datasets: ds(split(sess), '#1d5b8a', 'Organic visitors', 'y') },
         options: {
           responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
           plugins: {
@@ -212,20 +210,17 @@
           scales: {
             x: { grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: false } },
             y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: 'visitors', font: { size: 9, weight: '600' }, color: '#1d5b8a' } },
-            y1: { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } }, title: { display: true, text: 'organic forms', font: { size: 9, weight: '600' }, color: '#10b981' } },
           },
         },
       });
     }
 
-    // ---------- Quarterly chart (organic visitor bars + organic form-submission line) ----------
+    // ---------- Quarterly chart (sessions bars only) ----------
     function renderQuarterChart(d) {
       const q = d.trend.quarterly || [];
       const lab = s => { const m = s.match(/Q(\d)\s*(\d{4})/); return m ? `Q${m[1]} '${m[2].slice(2)}` + (s.includes('*') ? '*' : '') : s; };
       const labels = q.map(x => lab(x.q));
       const sess = q.map(x => x.org_sess);
-      // Organic-only conversions for apples-to-apples lead rate with the visitor bars.
-      const conv = q.map(x => x.org_conv);
       const partial = q.map(x => x.kind === 'current' || /\*/.test(x.q));
       new Chart(document.getElementById('quarter-chart'), {
         type: 'bar',
@@ -234,8 +229,6 @@
           datasets: [
             { type: 'bar', label: 'Organic visitors', data: sess, yAxisID: 'y', order: 2,
               backgroundColor: partial.map(p => p ? '#9ec5e0' : '#1d5b8a'), borderRadius: 3, barPercentage: 0.78, categoryPercentage: 0.8 },
-            { type: 'line', label: 'Organic form submissions', data: conv, yAxisID: 'y1', order: 1,
-              borderColor: '#10b981', backgroundColor: '#10b981', borderWidth: 2.5, tension: 0.25, pointRadius: 2.5, pointHoverRadius: 6 },
           ],
         },
         options: {
@@ -244,39 +237,35 @@
           scales: {
             x: { grid: { display: false }, ticks: { font: { size: 9 } } },
             y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } } },
-            y1: { position: 'right', beginAtZero: true, grid: { drawOnChartArea: false }, ticks: { font: { size: 9 } } },
           },
         },
       });
     }
 
-    // ---------- 3 movement boxes (YoY / 6-mo / 90-day) — organic visitors + organic forms ----------
+    // ---------- 3 movement boxes (YoY / 6-mo / 90-day) — visitors only ----------
     function renderBoxes(d) {
       const org = d.trend.sessions.organic;
-      // Organic-only form submissions to match the visitors line.
-      const led = d.trend.form_submits.organic;
       const sum = (a, i, j) => a.slice(i, j + 1).reduce((x, y) => x + (y || 0), 0);
       const pct = (cur, prev) => prev ? Math.round((cur - prev) / prev * 100) : null;
+      // YoY = monthly avg Q2'25 (idx 4-6, 3mo) vs Q2'26* (idx 16-17, 2mo)
       const yoyS = pct(sum(org, 16, 17) / 2, sum(org, 4, 6) / 3);
-      const yoyL = pct(sum(led, 16, 17) / 2, sum(led, 4, 6) / 3);
+      // 6 months: idx 12-17 vs 6-11
       const sixS = pct(sum(org, 12, 17), sum(org, 6, 11));
-      const sixL = pct(sum(led, 12, 17), sum(led, 6, 11));
+      // 90 days: idx 15-17 vs 12-14
       const ninS = pct(sum(org, 15, 17), sum(org, 12, 14));
-      const ninL = pct(sum(led, 15, 17), sum(led, 12, 14));
       const fmt = v => (v > 0 ? '+' : '') + v + '%';
       const cls = v => v >= 0 ? 'pos' : 'neg';
-      const box = (kind, win, cmp, s, l) => `
+      const box = (kind, win, cmp, s) => `
         <div class="mbox ${kind}">
           <div class="win">${win}</div><div class="cmp">${cmp}</div>
           <div class="row"><span class="m">Organic visitors</span><span class="d ${cls(s)}">${fmt(s)}</span></div>
-          <div class="row"><span class="m">Organic forms</span><span class="d ${cls(l)}">${fmt(l)}</span></div>
         </div>`;
       document.getElementById('movement-boxes').innerHTML =
-        box('watch', 'Year over Year', 'vs Q2 2025', yoyS, yoyL) +
-        box('watch', 'Last 6 Months', 'vs prior 6 mo', sixS, sixL) +
-        box('good', 'Last 90 Days', 'vs prior 90 days', ninS, ninL);
+        box('watch', 'Year over Year', 'vs Q2 2025', yoyS) +
+        box('watch', 'Last 6 Months', 'vs prior 6 mo', sixS) +
+        box('good', 'Last 90 Days', 'vs prior 90 days', ninS);
       document.getElementById('boxes-reading').innerHTML =
-        `Year-over-year and six-month windows still span the January cliff, so visitors read negative. The clean recovery window — the <strong>last 90 days</strong> — is +34% on visitors. Organic-channel form submissions read low across all windows because the 70-event WordPress backfill (Apr 14 → May 28) arrived with <code>(direct)</code> UTM tags and routes to Direct in GA4, not Organic; all-channel Apr + May total is 86 form submissions.`;
+        `The year-over-year and six-month windows still span the January cliff, so they read negative. The clean recovery window — the <strong>last 90 days</strong> — is up sharply. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from this view.`;
     }
 
     // ---------- Maps movement per keyword ----------
