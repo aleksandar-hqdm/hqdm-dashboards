@@ -124,10 +124,11 @@ def patch_data_json(slug, conv_label):
         'annotation_text': 'Intent signals, not confirmed conversions. Counts include clicks that may not result in a call or visit.',
         'months': months,
         'series': {
-            'phone_clicks': {'data': phone_monthly, 'label': 'Phone CTA clicks', 'color': '#ef4444'},
             'gmb': {'data': gmb_series, 'label': gmb_label, 'color': '#10b981', 'caption': gmb_caption},
         },
     }
+    if sum(phone_monthly) > 0:
+        engagement['series']['phone_clicks'] = {'data': phone_monthly, 'label': 'Phone CTA clicks', 'color': '#ef4444'}
     if sum(email_monthly) > 0:
         engagement['series']['email_clicks'] = {'data': email_monthly, 'label': 'Email CTA clicks', 'color': '#0ea5a4'}
 
