@@ -163,9 +163,9 @@
   <section id="snapshot" class="max-w-7xl mx-auto px-4 sm:px-6 py-8">
     <div class="flex items-end justify-between mb-4">
       <h2 class="text-2xl font-bold tracking-tight">Health Snapshot</h2>
-      <span class="text-xs text-ink-500">6 KPIs · click for detail</span>
+      <span class="text-xs text-ink-500">5 KPIs · click for detail</span>
     </div>
-    <div id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <div id="kpi-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3"></div>
   </section>
 
   <!-- ============== TREND — GA4 (PM-style) ============== -->
@@ -633,13 +633,13 @@
       data.kpis.forEach(k => {
         const sent = k.sentiment;
         const div = document.createElement('div');
-        div.className = `kpi-tile sent-${sent} bg-white rounded-xl border-2 p-5 shadow-sm`;
+        div.className = `kpi-tile sent-${sent} bg-white rounded-xl border-2 p-3 shadow-sm`;
         div.innerHTML = `
-          <div class="flex items-start gap-2">
-            <span class="sent-dot ${sent} mt-1.5"></span>
+          <div class="flex items-start gap-1.5">
+            <span class="sent-dot ${sent} mt-1"></span>
             <div class="flex-1 min-w-0">
-              <div class="text-xs font-semibold uppercase tracking-wider text-ink-500 leading-tight">${k.label}</div>
-              <div class="text-2xl sm:text-3xl font-extrabold text-ink-900 mt-2 leading-none">${k.value}</div>
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-ink-500 leading-tight">${k.label}</div>
+              <div class="text-lg sm:text-xl font-extrabold text-ink-900 mt-1.5 leading-tight">${k.value}</div>
               <div class="kpi-detail text-xs text-ink-600 leading-relaxed">${k.detail}</div>
             </div>
           </div>`;
@@ -1168,7 +1168,7 @@
 
     }).catch(err => {
       console.error('Failed to load data.json', err);
-      document.getElementById('kpi-grid').innerHTML = '<div class="text-sm text-accent-red col-span-3">Failed to load dashboard data. Check console.</div>';
+      document.getElementById('kpi-grid').innerHTML = '<div class="text-sm text-accent-red col-span-5">Failed to load dashboard data. Check console.</div>';
     });
   </script>
 </body>
