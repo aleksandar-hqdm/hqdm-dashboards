@@ -52,8 +52,8 @@
     }
   ],
   "trend": {
-    "headline": "GA4 — sessions + conversions by channel, 18 months. Conversion events (90d): Phone CTA (293) + form_submit (136) + Email CTA (49)",
-    "annotation_text": "GA4 default-channel-grouping. Conversions = sum of all events flagged as conversion in this property.",
+    "headline": "GA4 — sessions + leads + engagement, 18 months. Leads = form_submit (organic last 90d: 22). Phone / Email / GMB clicks shown separately as intent signals.",
+    "annotation_text": "GA4 default-channel-grouping. Leads counted as form_submit events only. Phone/Email CTA clicks and GMB→site sessions are intent signals — shown in the Engagement panel below.",
     "may_extrapolation_note": "May 2026 partial — first ~20 days of the month at trailing daily rate.",
     "months": [
       "Dec 2024",
@@ -94,7 +94,7 @@
         2861,
         3149,
         4424,
-        4568
+        5942
       ],
       "direct": [
         939,
@@ -114,7 +114,7 @@
         2075,
         2130,
         2312,
-        1920
+        2528
       ],
       "referral": [
         88,
@@ -134,7 +134,7 @@
         155,
         130,
         128,
-        84
+        114
       ],
       "paid": [
         1,
@@ -174,7 +174,7 @@
         5,
         19,
         10,
-        8
+        12
       ],
       "email": [
         0,
@@ -214,10 +214,152 @@
         55,
         40,
         17,
-        22
+        24
       ]
     },
     "form_submits": {
+      "organic": [
+        1,
+        14,
+        12,
+        10,
+        8,
+        26,
+        18,
+        11,
+        6,
+        9,
+        11,
+        5,
+        6,
+        9,
+        2,
+        3,
+        10,
+        9
+      ],
+      "direct": [
+        3,
+        6,
+        5,
+        1,
+        3,
+        2,
+        6,
+        8,
+        3,
+        7,
+        6,
+        15,
+        9,
+        16,
+        14,
+        44,
+        34,
+        35
+      ],
+      "referral": [
+        1,
+        1,
+        1,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "paid": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "social": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "email": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "other": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "all_conversions": {
       "organic": [
         69.0,
         14.0,
@@ -236,7 +378,7 @@
         45.0,
         69.0,
         100.0,
-        79.0
+        104.0
       ],
       "direct": [
         18.0,
@@ -256,7 +398,7 @@
         37.0,
         79.0,
         63.0,
-        54.0
+        60.0
       ],
       "referral": [
         4.0,
@@ -361,7 +503,17 @@
     },
     "series_labels": {
       "sessions": "GA4 Sessions",
-      "form_submits": "GA4 Conversions  (Phone CTA (293) + form_submit (136) + Email CTA (49))"
+      "form_submits": "Organic Leads (form_submit)"
+    },
+    "form_submits_label": "Leads (form_submit)",
+    "channel_palette": {
+      "organic": "#1d5b8a",
+      "direct": "#ef4444",
+      "referral": "#8b5cf6",
+      "paid": "#10b981",
+      "social": "#f59e0b",
+      "email": "#0ea5a4",
+      "other": "#9ca3af"
     },
     "channel_labels": {
       "organic": "Organic Search",
@@ -377,75 +529,175 @@
       {
         "q": "Dec 2024",
         "org_sess": 9469,
-        "org_conv": 69.0,
-        "org_cr": 0.7,
+        "org_conv": 1,
+        "org_cr": 0.01,
         "gbp_sess": 939,
-        "gbp_conv": 18.0,
-        "gbp_cr": 1.9
+        "gbp_conv": 3,
+        "gbp_cr": 0.32
       },
       {
         "q": "Q1 2025",
-        "org_sess": 15203,
-        "org_conv": 12.0,
-        "org_cr": 0.1,
-        "gbp_sess": 1459,
-        "gbp_conv": 4.0,
-        "gbp_cr": 0.3
+        "org_sess": 45609,
+        "org_conv": 36,
+        "org_cr": 0.08,
+        "gbp_sess": 4379,
+        "gbp_conv": 12,
+        "gbp_cr": 0.27
       },
       {
         "q": "Q2 2025",
-        "org_sess": 10003,
-        "org_conv": 17.3,
-        "org_cr": 0.2,
-        "gbp_sess": 1374,
-        "gbp_conv": 3.7,
-        "gbp_cr": 0.3
+        "org_sess": 30010,
+        "org_conv": 52,
+        "org_cr": 0.17,
+        "gbp_sess": 4123,
+        "gbp_conv": 11,
+        "gbp_cr": 0.27
       },
       {
         "q": "Q3 2025",
-        "org_sess": 7641,
-        "org_conv": 83.3,
-        "org_cr": 1.1,
-        "gbp_sess": 1382,
-        "gbp_conv": 20.7,
-        "gbp_cr": 1.5
+        "org_sess": 22925,
+        "org_conv": 26,
+        "org_cr": 0.11,
+        "gbp_sess": 4146,
+        "gbp_conv": 18,
+        "gbp_cr": 0.43
       },
       {
         "q": "Q4 2025",
-        "org_sess": 5267,
-        "org_conv": 90.0,
-        "org_cr": 1.7,
-        "gbp_sess": 2669,
-        "gbp_conv": 37.0,
-        "gbp_cr": 1.4
+        "org_sess": 15802,
+        "org_conv": 22,
+        "org_cr": 0.14,
+        "gbp_sess": 8008,
+        "gbp_conv": 30,
+        "gbp_cr": 0.37
       },
       {
         "q": "Q1 2026",
-        "org_sess": 3291,
-        "org_conv": 64.0,
-        "org_cr": 1.9,
-        "gbp_sess": 2169,
-        "gbp_conv": 49.0,
-        "gbp_cr": 2.3
+        "org_sess": 9873,
+        "org_conv": 14,
+        "org_cr": 0.14,
+        "gbp_sess": 6507,
+        "gbp_conv": 74,
+        "gbp_cr": 1.14
       },
       {
         "q": "Q2 2026*",
-        "org_sess": 4496,
-        "org_conv": 89.5,
-        "org_cr": 2.0,
-        "gbp_sess": 2116,
-        "gbp_conv": 58.5,
-        "gbp_cr": 2.8
+        "org_sess": 10366,
+        "org_conv": 19,
+        "org_cr": 0.18,
+        "gbp_sess": 4840,
+        "gbp_conv": 69,
+        "gbp_cr": 1.43
       }
     ],
-    "channel_colors": {
-      "organic": "#1d5b8a",
-      "direct": "#ef4444",
-      "referral": "#8b5cf6",
-      "paid": "#10b981",
-      "social": "#f59e0b",
-      "email": "#0ea5a4",
-      "other": "#9ca3af"
+    "engagement_signals": {
+      "enabled": true,
+      "headline": "Engagement intent signals (clicks + Maps→site)",
+      "annotation_text": "Intent signals, not confirmed conversions. Counts include clicks that may not result in a call or visit.",
+      "months": [
+        "Dec 2024",
+        "Jan 2025",
+        "Feb 2025",
+        "Mar 2025",
+        "Apr 2025",
+        "May 2025",
+        "Jun 2025",
+        "Jul 2025",
+        "Aug 2025",
+        "Sep 2025",
+        "Oct 2025",
+        "Nov 2025",
+        "Dec 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Mar 2026",
+        "Apr 2026",
+        "May 2026*"
+      ],
+      "series": {
+        "phone_clicks": {
+          "data": [
+            76,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            14,
+            137,
+            108,
+            129,
+            97,
+            67,
+            77,
+            61,
+            91,
+            95,
+            111
+          ],
+          "label": "Phone CTA clicks",
+          "color": "#ef4444"
+        },
+        "gmb": {
+          "data": [
+            351,
+            458,
+            746,
+            728,
+            661,
+            796,
+            633,
+            592,
+            534,
+            456,
+            586,
+            493,
+            469,
+            525,
+            528,
+            608,
+            530,
+            451
+          ],
+          "label": "GMB → site sessions",
+          "color": "#10b981",
+          "caption": "Sessions tagged ?utm_source=gmb — the live Maps→site path."
+        },
+        "email_clicks": {
+          "data": [
+            11,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            15,
+            11,
+            11,
+            19,
+            14,
+            9,
+            6,
+            12,
+            26,
+            11
+          ],
+          "label": "Email CTA clicks",
+          "color": "#0ea5a4"
+        }
+      }
+    },
+    "leads_definition": {
+      "using_form_submit_only": true,
+      "resolved_event_names": {
+        "form_submit": "form_submit",
+        "phone_click": "Phone CTA",
+        "email_click": "Email CTA"
+      },
+      "caption": "Leads = form_submit event only. Phone / Email / GMB clicks are intent signals, shown separately."
     }
   },
   "per_keyword": [
@@ -1456,14 +1708,23 @@
         2861,
         3149,
         4424,
-        4568
+        5942
       ],
-      "leads": [],
+      "leads": [
+        11,
+        5,
+        6,
+        9,
+        2,
+        3,
+        10,
+        9
+      ],
       "visitors_label": "Organic visitors",
-      "leads_label": "Organic leads",
+      "leads_label": "Organic leads (form_submit)",
       "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "title": "Organic Performance · Monthly (Q4 2025 → now)",
+      "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
     },
     "quarters": {
       "labels": [
@@ -1477,18 +1738,26 @@
       ],
       "visitors": [
         9469,
-        15203,
-        10003,
-        7641,
-        5267,
-        3291,
-        4496
+        45609,
+        30010,
+        22925,
+        15802,
+        9873,
+        10366
       ],
-      "leads": [],
+      "leads": [
+        1,
+        36,
+        52,
+        26,
+        22,
+        14,
+        19
+      ],
       "visitors_label": "Visitors",
       "leads_label": "Leads",
       "partial_index": 6,
-      "title": "By Quarter · Organic Visitors"
+      "title": "By Quarter · Visitors & Leads"
     },
     "boxes": [
       {
@@ -1498,7 +1767,12 @@
         "rows": [
           {
             "m": "Visitors",
-            "d": "-55%",
+            "d": "-48%",
+            "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-45%",
             "cls": "neg"
           }
         ]
@@ -1510,7 +1784,12 @@
         "rows": [
           {
             "m": "Visitors",
-            "d": "-45%",
+            "d": "-42%",
+            "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-35%",
             "cls": "neg"
           }
         ]
@@ -1522,13 +1801,18 @@
         "rows": [
           {
             "m": "Visitors",
-            "d": "+8%",
+            "d": "+20%",
+            "cls": "pos"
+          },
+          {
+            "m": "Leads",
+            "d": "+29%",
             "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Leads = form_submit events only (Phone &amp; Email CTA clicks shown separately as intent signals). Organic-channel form submits tracked the organic-session drop; the GBP→Direct path picked up the lead slack with Q1 2026 direct-channel leads up ~4x vs Q3 2025. May is a partial month.",
     "focus": [
       {
         "title": "GBP depth surge",

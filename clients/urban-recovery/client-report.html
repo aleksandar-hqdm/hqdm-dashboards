@@ -89,14 +89,14 @@
             <tr>
               <th class="text-left py-2 px-3">Quarter</th>
               <th class="text-right py-2 px-3">Sessions (qtr total)</th>
-              <th class="text-right py-2 px-3">Conversions (qtr total)</th>
+              <th class="text-right py-2 px-3" id="qtable-leads-th">Leads (qtr total)</th>
               <th class="text-right py-2 px-3">CVR</th>
             </tr>
           </thead>
           <tbody id="qtable-body"></tbody>
         </table>
       </div>
-      <p class="text-[10px] text-slate-400 mt-1.5">Quarter totals from GA4 (Organic Search). Most recent quarter highlighted; partial quarters carry an asterisk in the label.</p>
+      <p class="text-[10px] text-slate-400 mt-1.5" id="qtable-caption">Quarter totals from GA4 (Organic Search). Leads = form_submit events only. Most recent quarter highlighted; partial quarters carry an asterisk in the label.</p>
     </section>
 
     <!-- ============ PAGE BREAK (print only) ============ -->
@@ -104,10 +104,22 @@
 
     <!-- ============ MONTHLY TREND CHART ============ -->
     <section class="mb-6 trend-wrap">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — Traffic + Conversions</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Monthly Trend — Traffic + Leads</h2>
       <div class="bg-white rounded-lg border border-slate-200 p-4">
         <div style="height: 280px;"><canvas id="trend-chart"></canvas></div>
         <p class="text-[10px] text-slate-500 mt-2 italic" id="trend-partial-note"></p>
+      </div>
+    </section>
+
+    <!-- ============ ENGAGEMENT INTENT SIGNALS CHART ============ -->
+    <section class="mb-6" id="engagement-section">
+      <div class="flex items-end justify-between mb-2">
+        <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Engagement Signals — GMB &amp; Phone Clicks</h2>
+        <span class="text-[10px] text-slate-400">intent signals · not confirmed conversions</span>
+      </div>
+      <div class="bg-white rounded-lg border border-slate-200 p-4">
+        <div style="height: 220px;"><canvas id="engagement-chart"></canvas></div>
+        <p class="text-[10px] text-slate-500 mt-2 italic" id="engagement-caption"></p>
       </div>
     </section>
 
@@ -133,6 +145,6 @@
 
   </main>
 
-  <script src="../../assets/js/client-report.js"></script>
+  <script src="../../assets/js/client-report.js?v=2026-05-28-form-submit-leads"></script>
 </body>
 </html>

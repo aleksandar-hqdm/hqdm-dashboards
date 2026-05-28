@@ -17,7 +17,7 @@
 */
 (async function () {
   const root = document.getElementById('snap-root');
-  const DATA = await fetch('./data/data.json').then(r => r.json()).catch(() => null);
+  const DATA = await fetch('./data/data.json?v=' + Date.now()).then(r => r.json()).catch(() => null);
   if (!DATA || !DATA.snapshot) {
     root.innerHTML = '<div style="max-width:680px;margin:3rem auto;padding:1.5rem;border:1px solid #fde68a;background:#fffbeb;border-radius:.5rem;color:#92400e;font-family:Inter,sans-serif">This client’s snapshot data hasn’t been generated yet. Run <code>_build_snapshots.py</code>.</div>';
     return;
@@ -25,9 +25,13 @@
   const s = DATA.snapshot;
   if (s.title) document.title = s.title + ' · Client Snapshot';
 
-  root.innerHTML = buildHTML(s);
+  const eng = DATA && DATA.trend && DATA.trend.engagement_signals;
+  root.innerHTML = buildHTML(s, eng);
   if (s.line) renderLine(s.line);
   if (s.quarters) renderQuarter(s.quarters);
+  if (eng && eng.enabled && document.getElementById('snap-engagement-chart')) {
+    renderEngagement(eng, (DATA.trend && DATA.trend.months) || eng.months || []);
+  }
 
   // ---------------- DOM ----------------
   function chip(c) {
@@ -52,10 +56,21 @@
     return `<div class="focus-card" style="border-left-color:${f.color || '#1d5b8a'};"><div class="ft">${f.title}</div><div class="fb">${f.body}</div></div>`;
   }
 
-  function buildHTML(s) {
+  function buildHTML(s, eng) {
     const tablesOn = [s.maps && s.maps.enabled, s.competitors && s.competitors.enabled].filter(Boolean).length;
     const tablesGrid = tablesOn === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
     const tablesHtml = [s.maps, s.competitors].filter(t => t && t.enabled).map(tablePanel).join('');
+    const engagementHtml = (eng && eng.enabled) ? `
+      <section class="mb-3">
+        <div class="panel p-3.5">
+          <div class="flex items-end justify-between mb-1 flex-wrap gap-2">
+            <div class="secthead">Engagement Signals · GMB &amp; Phone Clicks</div>
+            <span class="text-[10px] text-slate-400">monthly · intent signals, not confirmed conversions</span>
+          </div>
+          <div style="height: 140px;"><canvas id="snap-engagement-chart"></canvas></div>
+          <p class="text-[11px] text-slate-500 mt-2" id="snap-engagement-caption"></p>
+        </div>
+      </section>` : '';
     const focusCols = Math.min(Math.max((s.focus || []).length, 1), 4);
     // Header nav can be overridden per-client via s.nav (so a client whose snapshot
     // lives at client-report.html doesn't get a self-referential "Condensed" link).
@@ -127,6 +142,8 @@
 
       ${tablesOn ? `<section class="grid grid-cols-1 ${tablesGrid} gap-4 mb-3">${tablesHtml}</section>` : ''}
 
+      ${engagementHtml}
+
       ${(s.focus && s.focus.length) ? `<section class="mb-2">
         <div class="secthead mb-2">Our Focus · Next 90 Days</div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${focusCols} gap-3">${s.focus.map(focusCard).join('')}</div>
@@ -192,5 +209,39 @@
         scales,
       },
     });
+  }
+  function renderEngagement(eng, months) {
+    const ctx = document.getElementById('snap-engagement-chart');
+    if (!ctx) return;
+    const partialIdx = months.findIndex(m => /\*/.test(m));
+    const datasets = [];
+    const caps = [];
+    for (const key of Object.keys(eng.series)) {
+      const sObj = eng.series[key];
+      const solid = sObj.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
+      const dashed = sObj.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
+      datasets.push({ label: sObj.label, data: solid, borderColor: sObj.color, backgroundColor: sObj.color + '18',
+        tension: 0.25, borderWidth: 2.5, pointRadius: 1.5, pointHoverRadius: 4, spanGaps: false, fill: false });
+      datasets.push({ label: sObj.label + ' (partial)', data: dashed, borderColor: sObj.color, borderDash: [5, 4],
+        tension: 0.25, borderWidth: 2, pointRadius: 1.5, spanGaps: false, fill: false });
+      if (sObj.caption) caps.push(`${sObj.label}: ${sObj.caption}`);
+    }
+    new Chart(ctx, {
+      type: 'line',
+      data: { labels: months, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { font: { size: 9 }, boxWidth: 10, filter: i => !/partial/.test(i.text) } },
+          tooltip: { backgroundColor: '#0b1220', padding: 9, callbacks: { label: c => `${c.dataset.label.replace(' (partial)', '')}: ${c.raw != null ? c.raw.toLocaleString() : '—'}` } },
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 8 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 10 } },
+          y: { beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } } },
+        },
+      },
+    });
+    const capEl = document.getElementById('snap-engagement-caption');
+    if (capEl) capEl.textContent = (eng.annotation_text || '') + (caps.length ? ' · ' + caps.join(' · ') : '');
   }
 })();

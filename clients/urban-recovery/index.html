@@ -101,7 +101,7 @@
       <div class="p-6 border-b border-slate-200">
         <div>
           <h2 class="text-2xl font-bold tracking-tight">GA4 Channel Performance — 18 Months</h2>
-          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Sessions + conversions by GA4 default channel grouping, 18-month window (Dec 2024 → May 2026)</p>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Sessions + leads (form_submit only) by GA4 default channel grouping, 18-month window (Dec 2024 → May 2026)</p>
         </div>
         <div class="flex flex-wrap gap-3 mt-4" id="trend-series-toggles">
           <label class="inline-flex items-center gap-2 text-xs cursor-pointer">
@@ -151,13 +151,24 @@
         </div>
         <div>
           <div class="flex items-center justify-between mb-2">
-            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">GA4 Conversions <span class="text-ink-400 font-medium normal-case">(Phone CTA + form_submit + Email CTA)</span></h3>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Organic Leads <span class="text-ink-400 font-medium normal-case">(form_submit only)</span></h3>
             <span class="text-xs text-ink-500 font-mono">monthly</span>
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
         </div>
         <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
       </div>
+    </div>
+
+    <!-- Engagement intent signals — GMB & Phone (auto-rendered if data.trend.engagement_signals) -->
+    <div class="mt-6 bg-white rounded-xl shadow-sm border border-slate-200 p-6" id="engagement-card">
+      <div class="flex items-end justify-between mb-1 flex-wrap gap-2">
+        <h3 class="text-lg font-bold">Engagement Intent Signals — GMB &amp; Phone Clicks</h3>
+        <span class="text-xs text-ink-500 font-mono">monthly · 18mo</span>
+      </div>
+      <p class="text-xs text-ink-500 mt-1" id="engagement-annotation">Intent signals, not confirmed conversions. Counted separately from form_submit leads above.</p>
+      <div class="h-64 mt-4"><canvas id="engagement-chart"></canvas></div>
+      <p class="text-[11px] text-ink-500 italic mt-2" id="engagement-caption"></p>
     </div>
 
     <!-- GSC decline chart (auto-rendered if data.gsc_decline) -->
@@ -401,7 +412,7 @@
     </div>
   </footer>
 
-  <script src="../../assets/js/dashboard.js"></script>
+  <script src="../../assets/js/dashboard.js?v=2026-05-28-form-submit-leads"></script>
 
   <!-- Recovery-template inline renderers: tldr, kpi_targets, owner_asks, deliverables -->
   <script>

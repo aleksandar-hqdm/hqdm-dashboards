@@ -67,6 +67,14 @@
   // === LD time series (PM only) ===
   if (DATA.ld_timeseries && document.querySelector('#ld-ts-top10')) renderLDTimeSeries(DATA.ld_timeseries);
 
+  // === Engagement intent signals (GMB + Phone clicks) ===
+  if (DATA.trend && DATA.trend.engagement_signals && DATA.trend.engagement_signals.enabled && document.getElementById('engagement-chart')) {
+    renderEngagementChart(DATA.trend.engagement_signals, DATA.trend.months);
+  } else if (document.getElementById('engagement-card') && !(DATA.trend && DATA.trend.engagement_signals && DATA.trend.engagement_signals.enabled)) {
+    // Hide the card if no engagement data
+    document.getElementById('engagement-card').style.display = 'none';
+  }
+
   // === GSC decline + URL class (PM) ===
   if (DATA.gsc_decline && document.querySelector('#gsc-chart')) renderGSCChart(DATA.gsc_decline);
   if (DATA.url_class && document.querySelector('#urlclass-chart')) renderURLClassChart(DATA.url_class);
@@ -167,6 +175,10 @@ function renderKPIs(kpis) {
 // Trend charts — stacked Sessions + Conversions, shared series toggles
 // ============================================================
 function renderStackedTrendCharts(trend) {
+  // Backwards-compat: prefer trend.conversions (current naming) but fall back to
+  // trend.form_submits (older clients still on the legacy field name).
+  if (!trend.form_submits && trend.conversions) trend.form_submits = trend.conversions;
+
   // Channel colors / labels — overridable from data.json
   const defaultColors = { organic: '#1d5b8a', gbp: '#f59e0b', direct: '#ef4444', llm: '#8b5cf6' };
   const defaultLabels = { organic: 'Organic', gbp: 'GBP', direct: 'Direct', llm: 'LLM' };
@@ -613,6 +625,55 @@ function renderKeywordTable(rows) {
       <td class="py-3 px-4 text-right">${fmtNum(r.may_top3)}</td>
     </tr>
   `).join('');
+}
+
+// ============================================================
+// Engagement intent signals chart — phone clicks + GMB sessions
+// Renders below the GA4 channel-performance section. Series come from
+// data.trend.engagement_signals.series (each entry: {data, label, color, caption?}).
+// ============================================================
+function renderEngagementChart(engagement, months) {
+  const ctx = document.getElementById('engagement-chart');
+  if (!ctx) return;
+  const labels = months || engagement.months || [];
+  const partialIdx = labels.findIndex(m => /\*/.test(m));
+
+  const datasets = [];
+  const captions = [];
+  for (const key of Object.keys(engagement.series)) {
+    const s = engagement.series[key];
+    const solid = s.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
+    const dashed = s.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
+    datasets.push({
+      label: s.label, data: solid, borderColor: s.color, backgroundColor: s.color + '20',
+      tension: 0.3, borderWidth: 2.5, pointRadius: 2.5, pointHoverRadius: 5, spanGaps: false, fill: false,
+    });
+    datasets.push({
+      label: s.label + ' (partial)', data: dashed, borderColor: s.color, borderDash: [5, 4],
+      tension: 0.3, borderWidth: 2, pointRadius: 2, spanGaps: false, fill: false,
+    });
+    if (s.caption) captions.push(`${s.label}: ${s.caption}`);
+  }
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, filter: i => !/partial/.test(i.text) } },
+        tooltip: { callbacks: { label: c => `${c.dataset.label.replace(' (partial)', '')}: ${(c.parsed.y != null ? c.parsed.y.toLocaleString() : '—')}` } },
+      },
+      scales: {
+        x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 }, grid: { display: false } },
+        y: { beginAtZero: true, ticks: { font: { size: 10 }, callback: v => v.toLocaleString() }, grid: { color: 'rgba(0,0,0,0.05)' } },
+      },
+    },
+  });
+  const capEl = document.getElementById('engagement-caption');
+  if (capEl && captions.length) capEl.textContent = captions.join(' · ');
+  const annEl = document.getElementById('engagement-annotation');
+  if (annEl && engagement.annotation_text) annEl.textContent = engagement.annotation_text;
 }
 
 // ============================================================

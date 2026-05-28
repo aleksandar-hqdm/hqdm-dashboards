@@ -355,8 +355,10 @@ CLIENTS = {
         'comp_window': 'Across 8 tracked searches · Jan 27 → Apr 22, 2026',
         'comp_note': ("Detox &amp; Drug/Alcohol Recovery edges you on raw footprint (1,217 vs 1,113 top-3 cells), but you're the only "
                       "Brooklyn pin that gained net coverage this period (+21). Lower avg rank is better."),
-        'boxes_reading': ("May is a partial month. Conversion tracking matured in 2025, so the year-over-year lead comparison isn't "
-                          "meaningful and is shown as —."),
+        'leads_label': 'Organic leads (form_submit)', 'q_leads_label': 'Leads', 'box_lead_word': 'Leads',
+        'boxes_reading': ("Leads = form_submit events only (Phone &amp; Email CTA clicks shown separately as intent signals). "
+                          "Organic-channel form submits tracked the organic-session drop; the GBP→Direct path picked up the lead slack "
+                          "with Q1 2026 direct-channel leads up ~4x vs Q3 2025. May is a partial month."),
         'focus': [
             {'title': 'GBP depth surge', 'color': '#10b981', 'body': 'Defend Red Hook and diffuse outward with a Google Business depth push — posts, photos, services, Q&A.'},
             {'title': 'Service-page rebuild', 'color': '#1d5b8a', 'body': 'Rebuild the high-intent service pages that rank but don’t convert, and fix the homepage business-info mismatch.'},
@@ -555,7 +557,10 @@ def build_snapshot(slug, cfg):
     # leads/CR from charts + boxes). RECOVERY = recovery-vertical clients still
     # stabilizing GA4 events. AQMS added 2026-05-28: website form_submit + thank-you
     # redirect broke in early April; tracking-fix in flight with the AQMS dev team.
-    RECOVERY = {'elev8-recovery', 'urban-recovery', 'niagara-recovery', 'surfpoint-recovery', 'arms-acres', 'conifer-park', 'affordable-quality-moving'}
+    # urban-recovery moved out 2026-05-28: form_submit isolated as the canonical leads
+    # metric (Phone/Email CTA clicks removed from conversion bucket; tracked separately
+    # as engagement intent signals).
+    RECOVERY = {'elev8-recovery', 'niagara-recovery', 'surfpoint-recovery', 'arms-acres', 'conifer-park', 'affordable-quality-moving'}
     reliable = cfg.get('conversions_reliable', slug not in RECOVERY)
 
     lead_label = cfg.get('leads_label', 'Organic leads')
