@@ -1572,34 +1572,6 @@
         "watch": true
       }
     ],
-    "line": {
-      "labels": [
-        "Oct '25",
-        "Nov '25",
-        "Dec '25",
-        "Jan '26",
-        "Feb '26",
-        "Mar '26",
-        "Apr '26",
-        "May '26*"
-      ],
-      "visitors": [
-        2841,
-        2685,
-        3483,
-        5285,
-        7548,
-        7193,
-        2544,
-        1816
-      ],
-      "leads": [],
-      "visitors_label": "Organic visitors",
-      "leads_label": "Organic leads",
-      "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Conversion volume understated by known GA4 tracking gaps (gmb_click + contact_form_submit not flagged as conversions) — excluded from this snapshot view; corrected on the strategic dashboard with caveats."
-    },
     "quarters": {
       "labels": [
         "Dec '24",
@@ -1628,13 +1600,13 @@
     "boxes": [
       {
         "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
+        "cmp": "Q1 2026 vs Q1 2025",
+        "kind": "good",
         "rows": [
           {
             "m": "Visitors",
-            "d": "-15%",
-            "cls": "neg"
+            "d": "+214%",
+            "cls": "pos"
           }
         ]
       },
@@ -1649,21 +1621,9 @@
             "cls": "pos"
           }
         ]
-      },
-      {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-29%",
-            "cls": "neg"
-          }
-        ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Conversion volume is understated by known GA4 tracking gaps (`gmb_click` 584/90d + `contact_form_submit` 61/90d not flagged as conversions), so absolute conversion counts are excluded from these comparisons. The current month is partial.",
+    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. YoY compares the most recent complete quarter (Q1 2026) against the same quarter prior year — the current Q2 is partial. Conversion volume is understated by known GA4 tracking gaps (`gmb_click` 584/90d + `contact_form_submit` 61/90d not flagged as conversions), so absolute conversion counts are excluded from these comparisons.",
     "focus": [
       {
         "title": "Site architecture cleanup",
