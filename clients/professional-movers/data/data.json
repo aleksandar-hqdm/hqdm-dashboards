@@ -25,8 +25,8 @@
       },
       {
         "label": "GBP→site form_submit/mo (Q1 → Q2 2026*)",
-        "value": "+47%",
-        "sub": "20 (Q1 2026) → 26 (Q2 2026* partial est.) — 18-mo high",
+        "value": "+30%",
+        "sub": "20/mo (Q1 2026 avg) → 26/mo (Q2 2026* — May full-month projection from 28-day partial). 18-mo high on a monthly basis.",
         "sentiment": "positive"
       },
       {
@@ -37,15 +37,15 @@
       },
       {
         "label": "On-site lead events/mo (all channels)",
-        "value": "~190",
-        "sub": "GA4 form_submit firing at ~190/mo across channels. Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add to mirror the AQMS event stack.",
+        "value": "~130",
+        "sub": "GA4 form_submit firing at ~130/mo across channels (Mar–Apr 2026 run rate, down from ~180/mo in mid-2025 — see Jan–Feb tracking-anomaly callout). Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add to mirror the AQMS event stack.",
         "sentiment": "neutral"
       }
     ],
     "callout_strip": [
       {
         "label": "What 'leads' counts here",
-        "detail": "GA4 form_submit events on the website (~190/mo across channels). Mirrors the AQMS lead-counting pattern except PM's GA4 only has form_submit firing today — adding click_phone_number + gmb_click events captures the rest of the on-site lead-intent signals. Off-site GBP actions (calls/directions from the listing itself) are out of scope for this measurement layer."
+        "detail": "GA4 form_submit events on the website (~130/mo across channels at current Mar–Apr 2026 run rate). Mirrors the AQMS lead-counting pattern except PM's GA4 only has form_submit firing today — adding click_phone_number + gmb_click events captures the rest of the on-site lead-intent signals. Off-site GBP actions (calls/directions from the listing itself) are out of scope for this measurement layer."
       },
       {
         "label": "Where the leads live now",
@@ -58,6 +58,10 @@
       {
         "label": "Why Lever A compounds",
         "detail": "GBP→site click-throughs convert at ~2× organic. PM operates 1 of 3 available pins — claiming Detroit Woodward + Rochester GBPs roughly doubles the converting surface area at no incremental ad spend."
+      },
+      {
+        "label": "Jan–Feb 2026 form_submit anomaly — investigating",
+        "detail": "Organic + Direct CVR both dropped 40–50% Dec 2025 → Feb 2026 while GBP CVR held steady (~14%). Cross-channel pattern is tracking-signature, not demand: an algorithm or seasonality story would hit organic only; real traffic-mix shifts would hit GBP too. Recovery began March 2026. Likely a GTM/CMS/thank-you-page change in the Dec 20 2025 – Feb 1 2026 window broke form_submit firing for non-GBP-tagged paths. Adds a diagnostic line to the P0 measurement work: pull GTM container history + check form selector / TYP-URL changes in that window. Until confirmed, Q1 YoY CVR (-6%) and 6-month CVR comparisons are partly artifact, not real demand loss."
       }
     ],
     "mini_report_url": "headline-traffic-vs-conversions/"
@@ -95,9 +99,9 @@
     },
     {
       "label": "Backlinks · form_submit/mo",
-      "value": "990 · ~190/mo",
+      "value": "990 · ~130/mo",
       "sentiment": "neutral",
-      "detail": "DFS Backlinks: 990 total, 247 ref domains, 17 Telegram-spam anchors. GA4 form_submit fires ~190/mo across channels. Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add."
+      "detail": "DFS Backlinks: 990 total, 247 ref domains, 17 Telegram-spam anchors. GA4 form_submit fires ~130/mo across channels (Mar–Apr 2026; was ~180/mo mid-2025 — see Jan–Feb anomaly). Phone-link + GBP-link click events not yet deployed — small GTM/GA4 add."
     }
   ],
   "trend": {
@@ -2127,7 +2131,7 @@
     "short_name": "Professional Movers",
     "subtitle": "Q3 2026 · Walled Lake, MI · Client Snapshot",
     "footer": "Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Your <strong>Maps position is the channel carrying the business</strong>. Across the 13&times;13 Detroit-metro grid you hold an average rank of <strong>#3&ndash;#4 on &ldquo;movers&rdquo; and &ldquo;movers near me&rdquo;</strong>, with 79&ndash;84 of 121 grid cells in top-3 &mdash; defended cleanly through the year. On Detroit-side queries you&rsquo;ve <strong>extended top-10 reach 7&times;</strong> on &ldquo;movers detroit&rdquo; (9 &rarr; 67 cells) and <strong>doubled</strong> it on &ldquo;detroit moving company&rdquo; (8 &rarr; 16). The Google-Business website button is your highest-converting channel by a wide margin &mdash; <strong>~17.5% quote-form rate, nearly 2&times; the organic baseline</strong> &mdash; and it&rsquo;s at an <strong>18-month high</strong>. Site-wide conversion rate is <strong>up +11% year over year</strong>. The Q3 plan compounds what&rsquo;s already working: claim two more managed Google Business pins (Detroit Woodward + Rochester), tighten the city pages, and rebuild the earned-link channel.</p>",
+    "exec_html": "<p>Your <strong>Maps position is the channel carrying the business</strong>. Across the 13&times;13 Detroit-metro grid you hold an average rank of <strong>#3&ndash;#4 on &ldquo;movers&rdquo; and &ldquo;movers near me&rdquo;</strong>, with 79&ndash;84 of 121 grid cells in top-3 &mdash; defended cleanly through the year. On Detroit-side queries you&rsquo;ve <strong>extended top-10 reach 7&times;</strong> on &ldquo;movers detroit&rdquo; (9 &rarr; 67 cells) and <strong>doubled</strong> it on &ldquo;detroit moving company&rdquo; (8 &rarr; 16). The Google-Business website button is your highest-converting channel by a wide margin &mdash; <strong>~17.5% quote-form rate, nearly 2&times; the organic baseline</strong> &mdash; and it&rsquo;s at an <strong>18-month high</strong>. Site-wide conversion rate is <strong>up +6% over the last 90 days</strong> vs the prior 90 &mdash; the recovery curve is in. The Q3 plan compounds what&rsquo;s already working: claim two more managed Google Business pins (Detroit Woodward + Rochester), tighten the city pages, and rebuild the earned-link channel.</p>",
     "chips": [
       {
         "v": "7×",
@@ -2140,8 +2144,8 @@
         "good": true
       },
       {
-        "v": "+11%",
-        "l": "conversion rate YoY",
+        "v": "+6%",
+        "l": "conv. rate · last 90 days",
         "good": true
       },
       {
@@ -2263,7 +2267,7 @@
         }
       }
     ],
-    "boxes_reading_html": "Conversion rate is up year over year and the Google-Business lead path is at an <strong>18-month high</strong>. The last 90 days are showing <strong>visitors +8% and leads +14%</strong> — the recovery curve is in, and Q3 leans into the channel already converting.",
+    "boxes_reading_html": "The last 90 days are showing <strong>visitors +8%, leads +14%, and conversion rate +6%</strong> vs the prior 90 &mdash; the recovery curve is in. The Google-Business lead path is at an <strong>18-month high</strong>, and Q3 leans into the channel already converting.",
     "focus": [
       {
         "title": "Expand Maps presence",
