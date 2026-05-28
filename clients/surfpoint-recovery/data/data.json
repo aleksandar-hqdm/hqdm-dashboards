@@ -1565,11 +1565,6 @@
         "v": "4.8★ / 120",
         "l": "reviews (+29 in 16d)",
         "good": true
-      },
-      {
-        "v": "−79%",
-        "l": "search impressions",
-        "watch": true
       }
     ],
     "quarters": {
@@ -1589,11 +1584,18 @@
         3003,
         6675
       ],
-      "leads": [],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
+      "leads": [
+        386,
+        443,
+        465,
+        464,
+        344,
+        412
+      ],
+      "visitors_label": "Organic visitors",
+      "leads_label": "GBP clicks → site",
       "partial_index": null,
-      "title": "By Quarter · Organic Visitors"
+      "title": "By Quarter · Organic visitors + GBP clicks"
     },
     "boxes": [
       {
@@ -1704,40 +1706,31 @@
           "cap": "per need",
           "cells": [
             [
-              {"u": "Homepage CRD deploy (24 items)", "k": "revamp", "n": "Drafted Mar 2026 · 60-day delay · meta + H1 + 5 service H2 + MedicalBusiness @graph schema"},
-              {"u": "/treatments hub upgrade (15 items)", "k": "revamp", "n": "Anchor IDs (hard dependency for homepage internal-links) + Service+ItemList+FAQPage schema"},
-              {"u": "23 KEEP-page title+meta rewrite", "k": "refresh", "n": "`recovery center brooklyn` 10k imp / pos 3.7 / 0% CTR anchor batch — CTR optimization"},
-              {"u": "28 location-page redirects → /areas-served", "k": "redirect", "n": "5 NJ out-of-state + 23 NY-area boilerplate doorway URLs"},
-              {"u": "5 × /services/* → /treatments/* 301", "k": "redirect", "n": "After Wave 1 sub-pages ship (alcohol-detox / dual-diagnosis pairings only this month)"},
-              {"u": "/about, /contact, /contact-us.com 404 fix", "k": "fix", "n": "Revenue-surface URLs returning errors"},
-              {"u": "NOINDEX 128 URLs batch", "k": "fix", "n": "Wrong-audience cohort — alcohol-breath / viagra / rapper / phobia (7 high-imp URLs in batch)"},
-              {"u": "Disavow file upload (183 + 42)", "k": "fix", "n": "GSC; spam score 43 → target <30; 2–4 wk processing"},
-              {"u": "GBP description + categories + Q&A", "k": "fix", "n": "OASAS/CARF/MAT rewrite · +4 categories · 4 unanswered Q&A backfill · book-online URL"}
+              {"u": "Homepage CRD deploy", "k": "revamp", "n": "Drafted Mar 2026 · ship the existing brief (meta + H1 + service H2s + MedicalBusiness schema)"},
+              {"u": "/treatments hub upgrade", "k": "revamp", "n": "Anchor IDs (hard dependency for homepage internal-links) + Service / ItemList schema"},
+              {"u": "/services/alcohol-detox → /treatments/alcohol-detox 301", "k": "redirect", "n": "Land legacy URL onto the new Wave 1 sub-page"},
+              {"u": "Internal links → Wave 1 sub-pages", "k": "fix", "n": "Homepage + /treatments + this month's blog refreshes link to /treatments/alcohol-detox + /treatments/dual-diagnosis"},
+              {"u": "/about, /contact, /contact-us.com 404 fix", "k": "fix", "n": "Revenue-surface URLs returning errors today"},
+              {"u": "GBP description + categories alignment", "k": "fix", "n": "OASAS / CARF / MAT in the description · +4 categories (one-time alignment)"}
             ],
             [
-              {"u": "/admissions rebuild", "k": "revamp", "n": "Bottom-of-funnel · form integration + 5 H2 + ContactPage+FAQPage schema"},
-              {"u": "/about-us expansion", "k": "revamp", "n": "Named clinical team (E-E-A-T) + accreditation badges + Person schema canonical"},
-              {"u": "/faq consolidation", "k": "revamp", "n": "Canonical FAQPage with @id cross-refs (dedup rich snippets across 6 source pages)"},
-              {"u": "Locations × services interlinking matrix", "k": "fix", "n": "'Services Available in [Neighborhood]' block on 10+ retained location pages"},
-              {"u": "DELETE 99 thin/orphan blogs (410)", "k": "redirect", "n": "AUDIT triage Round 1 · topical overlay preserved 124 core-topical from auto-delete"},
-              {"u": "AUDIT triage R2 — 75 of 555 URLs", "k": "refresh", "n": "Core-topical blogs · rewrite + internal-link to services OR NOINDEX/REDIRECT"},
-              {"u": "Indexation re-run — 47 location URLs", "k": "fix", "n": "Request Indexing for 9 LP-01 upgrades + 38 not-indexed location pages"},
-              {"u": "GBP Posts 2/week cadence", "k": "fix", "n": "≥2 link to /treatments/alcohol-detox, ≥1 to /treatments/drug-detox · weekly review reply"}
+              {"u": "/services/opioid-detox-mat → /treatments/opioid-detox-mat 301", "k": "redirect", "n": "Land legacy URL onto Wave 2 sub-page"},
+              {"u": "/services/comprehensive-short-term → /treatments/short-term-rehab 301", "k": "redirect", "n": "Land legacy URL onto Wave 2 sub-page"},
+              {"u": "Internal links → Wave 2 sub-pages", "k": "fix", "n": "M1 sub-pages + this month's blog refreshes + suburb pages link to /treatments/opioid-detox-mat + /treatments/short-term-rehab"},
+              {"u": "23 KEEP-page title + meta rewrite", "k": "refresh", "n": "CTR optimization batch · `recovery center brooklyn` anchor — 10k imp / pos 3.7 / 0% CTR"},
+              {"u": "Schema sweep on Wave 1 + 2 sub-pages", "k": "fix", "n": "MedicalProcedure + Service + BreadcrumbList on each"}
             ],
             [
-              {"u": "/contact-us consolidation", "k": "revamp", "n": "Single canonical URL · 3 variants 301 · NAP role-labeling (intake + facility phones)"},
-              {"u": "/insurance/{medicaid,aetna,cigna,bcbs}", "k": "new", "n": "4 carrier landing pages · uncontested carrier-modifier query surface · ~3–4 h/page on validated template"},
-              {"u": "/areas-served rebuild", "k": "revamp", "n": "Destination for 28 M1 redirects · neighborhood × service matrix + CollectionPage+ItemList schema"},
-              {"u": "AUDIT triage R3 — ~480 URLs", "k": "refresh", "n": "Core-topical + unclassified-w/-traffic + framework-ambiguous remainder"},
-              {"u": "Disavow re-pull + re-upload", "k": "fix", "n": "Diff vs M1 disavow · add new spam clusters surfaced post-deploy"},
-              {"u": "Sitewide schema audit + gap fix", "k": "fix", "n": "Service on each /treatments/*, Article on top 20 blogs, BreadcrumbList sitewide"},
-              {"u": "GBP photo blitz — 25+ photos", "k": "fix", "n": "9 → 30+ photos (Mountainside benchmark); cover photo first; mix of exterior/interior/staff"},
-              {"u": "Quarterly content review · KEEP pages", "k": "refresh", "n": "Re-bucket NOINDEXed URLs with recovered ranking · feed Q3 strategy framework"}
+              {"u": "/services/drug-detox → /treatments/drug-detox 301", "k": "redirect", "n": "Land legacy URL onto Wave 3 sub-page"},
+              {"u": "/services/benzodiazepine-detox → /treatments/benzodiazepine-detox 301", "k": "redirect", "n": "Land legacy URL onto Wave 3 sub-page (captures 1,925 imp/365d orphan)"},
+              {"u": "Internal links → Wave 3 sub-pages", "k": "fix", "n": "Existing sub-pages + this month's blog refreshes + suburb pages link to /treatments/drug-detox + /treatments/benzodiazepine-detox"},
+              {"u": "/areas-served light update", "k": "revamp", "n": "Link to the 9 new suburb pages + all 6 sub-pages (matrix connection, no full rebuild)"},
+              {"u": "Schema sweep on Wave 3 sub-pages", "k": "fix", "n": "MedicalProcedure + Service + BreadcrumbList on each"}
             ]
           ]
         }
       ],
-      "note_html": "Tag legend — <span class='tag new'>NEW</span> brand-new URL · <span class='tag revamp'>REVAMP</span> existing page rebuilt · <span class='tag refresh'>REFRESH</span> light rewrite per HQDM Blog/Page Refresh SOP · <span class='tag redirect'>REDIRECT</span> 301 / 410 / disavow action · <span class='tag fix'>FIX</span> tactical on-page or GBP action. Source sheets: <code>Surfpoint_Pages_Plan_Month1-3.xlsx</code> · <code>Surfpoint_Treatments_SubPages_BuildPlan.md</code> · <code>Surfpoint_Suburb_Pages_3Month.xlsx</code> · <code>Surfpoint_Blog_Refresh_3Month.xlsx</code> + GSC top-bleeder backfill (M1 P4–P5, M2 P4–P5, M3 P4–P5 are the 2-per-month additions over the prior 3-per-month refresh plan)."
+      "note_html": "Tag legend — <span class='tag new'>NEW</span> brand-new URL · <span class='tag revamp'>REVAMP</span> existing page rebuilt · <span class='tag refresh'>REFRESH</span> light rewrite per HQDM Blog / Page Refresh SOP · <span class='tag redirect'>REDIRECT</span> 301 / 410 · <span class='tag fix'>FIX</span> tactical on-page action. Source sheets: <code>Surfpoint_Pages_Plan_Month1-3.xlsx</code> · <code>Surfpoint_Treatments_SubPages_BuildPlan.md</code> · <code>Surfpoint_Suburb_Pages_3Month.xlsx</code> · <code>Surfpoint_Blog_Refresh_3Month.xlsx</code>. Blog row backfilled to 5/month from the GSC pages_last_90d export (on-topic addiction / medical queries, imp ≥ 50k, pos 4–15)."
     },
     "maps": {
       "enabled": true,
