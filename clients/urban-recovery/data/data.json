@@ -591,7 +591,7 @@
       }
     ],
     "engagement_signals": {
-      "enabled": true,
+      "enabled": false,
       "headline": "Engagement intent signals (clicks + Maps→site)",
       "annotation_text": "Intent signals, not confirmed conversions. Counts include clicks that may not result in a call or visit.",
       "months": [
@@ -1765,74 +1765,6 @@
         {
           "cells": [
             {
-              "t": "alcohol rehab brooklyn"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">2.11 → <strong>2.16</strong></span>"
-            },
-            {
-              "t": "168 → <strong>168</strong>"
-            },
-            {
-              "t": "0",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "drug rehab brooklyn"
-            },
-            {
-              "t": "<span class=\"arrow-up\">2.07 → <strong>2.04</strong></span>"
-            },
-            {
-              "t": "168 → <strong>168</strong>"
-            },
-            {
-              "t": "0",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "rehabs in new york"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">3.25 → <strong>3.39</strong></span>"
-            },
-            {
-              "t": "132 → <strong>128</strong>"
-            },
-            {
-              "t": "-4",
-              "c": "neg"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "drug rehab new york"
-            },
-            {
-              "t": "<span class=\"arrow-up\">4.14 → <strong>4.12</strong></span>"
-            },
-            {
-              "t": "95 → <strong>98</strong>"
-            },
-            {
-              "t": "+3",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
               "t": "alcohol rehab"
             },
             {
@@ -1860,6 +1792,40 @@
             },
             {
               "t": "+24",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab new york"
+            },
+            {
+              "t": "<span class=\"arrow-up\">4.14 → <strong>4.12</strong></span>"
+            },
+            {
+              "t": "95 → <strong>98</strong>"
+            },
+            {
+              "t": "+3",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "drug rehab brooklyn"
+            },
+            {
+              "t": "<span class=\"arrow-up\">2.07 → <strong>2.04</strong></span>"
+            },
+            {
+              "t": "168 → <strong>168</strong>"
+            },
+            {
+              "t": "0",
               "c": "pos"
             }
           ]
@@ -1985,9 +1951,81 @@
               "c": "neg"
             }
           ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Wellbridge Drug & Alcohol Rehab NYC Outreach"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "229"
+            },
+            {
+              "t": "−39",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "LSA Recovery – Crown Heights"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "146"
+            },
+            {
+              "t": "−38",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Dynamite Youth Center (Bensonhurst)"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "243"
+            },
+            {
+              "t": "−37",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Addiction Treatment Brooklyn (delisted)"
+            },
+            {
+              "t": "—"
+            },
+            {
+              "t": "0"
+            },
+            {
+              "t": "−138",
+              "c": "pos"
+            }
+          ]
         }
       ],
-      "note_html": "Detox &amp; Drug/Alcohol Recovery edges you on raw footprint (1,217 vs 1,113 top-3 cells), but you're the only Brooklyn pin that gained net coverage this period (+21). Lower avg rank is better."
+      "note_html": "You're the only Brooklyn addiction-treatment pin to gain net coverage this period (+21). Several Brooklyn pins lost ground in the same window — Addiction Treatment Brooklyn dropped off the grid; Wellbridge, LSA Recovery (Crown Heights), and Dynamite Youth Center each shed ~37–39 cells. Lower avg rank is better."
     }
   }
 }
