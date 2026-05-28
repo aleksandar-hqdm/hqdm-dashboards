@@ -1457,23 +1457,6 @@
         ]
       },
       {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo (complete months only)",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "+9%",
-            "cls": "pos"
-          },
-          {
-            "m": "Leads",
-            "d": "-20%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
         "win": "Last 90 Days",
         "cmp": "vs prior 90 days (complete months only)",
         "kind": "good",

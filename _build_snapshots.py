@@ -96,8 +96,11 @@ def build_quarters(quarterly, leads_label='Leads', vis_label='Visitors', title='
             'leads_label': leads_label, 'partial_index': pidx, 'title': title}
 
 
-def build_boxes(months, vis, leads, yoy=None, reading=None, lead_word='Leads', visitors_only=False):
-    """3 boxes: YoY (override via `yoy` dict), last 6mo vs prior 6mo, last 90d vs prior 90d."""
+def build_boxes(months, vis, leads, yoy=None, reading=None, lead_word='Leads', visitors_only=False, skip_boxes=None):
+    """3 boxes: YoY (override via `yoy` dict), last 6mo vs prior 6mo, last 90d vs prior 90d.
+    skip_boxes: iterable of 'yoy' | '6mo' | '90d' to omit specific pills (e.g. for clients
+    where a window is misleading or absent)."""
+    skip = set(skip_boxes or ())
     n = len(months)
     box90 = {'win': 'Last 90 Days', 'cmp': 'vs prior 90 days',
              'v': pct(win_sum(vis, n - 3, n), win_sum(vis, n - 6, n - 3)),
@@ -139,7 +142,8 @@ def build_boxes(months, vis, leads, yoy=None, reading=None, lead_word='Leads', v
             out['extra'] = b['extra']
         return out
 
-    return [mk(boxYoY), mk(box6), mk(box90)], reading
+    order = [('yoy', boxYoY), ('6mo', box6), ('90d', box90)]
+    return [mk(b) for key, b in order if key not in skip], reading
 
 
 def arrow(delta_avg):
@@ -329,6 +333,7 @@ CLIENTS = {
         'chips': [{'v': '+787', 'l': 'grid positions gained', 'good': True}, {'v': '3 / 8', 'l': 'Maps searches owned', 'good': True},
                   {'v': '#1', 'l': 'NYC pin on Maps', 'good': True}, {'v': 'pos 1.2–2.1', 'l': 'Harlem organic', 'good': True}],
         'q_drop_partial': True,
+        'skip_boxes': ['6mo'],
         'maps_window': 'Jan 27 → Apr 22, 2026 · 8 tracked searches',
         'comp_window': 'Across 8 tracked searches · Jan 27 → Apr 22, 2026',
         'comp_note': ("You're <strong>#1 on Maps</strong> across these searches (425 top-3 cells, +105) and gained more than any "
@@ -596,7 +601,8 @@ def build_snapshot(slug, cfg):
     boxes, reading = build_boxes(months, vis, leads, yoy=yoy,
                                  reading=cfg.get('boxes_reading'),
                                  lead_word=cfg.get('box_lead_word', 'Leads'),
-                                 visitors_only=not reliable)
+                                 visitors_only=not reliable,
+                                 skip_boxes=cfg.get('skip_boxes'))
     reading_html = cfg.get('boxes_reading')
     if not reliable:
         reading_html = ('Organic traffic and Maps visibility are the clean signals this quarter. '
