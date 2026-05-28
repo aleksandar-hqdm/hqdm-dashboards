@@ -474,7 +474,7 @@
       }
     ],
     "engagement_signals": {
-      "enabled": true,
+      "enabled": false,
       "headline": "Engagement intent signals (clicks + Maps→site)",
       "annotation_text": "Intent signals, not confirmed conversions. Counts include clicks that may not result in a call or visit.",
       "months": [
@@ -1668,57 +1668,6 @@
         "Change"
       ],
       "rows": [
-        {
-          "cells": [
-            {
-              "t": "carmel methadone clinic"
-            },
-            {
-              "t": "<span class=\"\">1.20 → <strong>1.20</strong></span>"
-            },
-            {
-              "t": "169 → <strong>169</strong>"
-            },
-            {
-              "t": "0",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "carmel recovery"
-            },
-            {
-              "t": "<span class=\"arrow-dn\">1.00 → <strong>1.01</strong></span>"
-            },
-            {
-              "t": "169 → <strong>169</strong>"
-            },
-            {
-              "t": "0",
-              "c": "pos"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "carmel new york rehab"
-            },
-            {
-              "t": "<span class=\"\">1.00 → <strong>1.00</strong></span>"
-            },
-            {
-              "t": "169 → <strong>169</strong>"
-            },
-            {
-              "t": "0",
-              "c": "pos"
-            }
-          ]
-        },
         {
           "cells": [
             {

@@ -152,10 +152,13 @@ def arrow(delta_avg):
     return 'arrow-up' if delta_avg > 0 else 'arrow-dn'
 
 
-def build_kw_table(per_keyword, window, first='feb', last='may', title='Maps Movement · Top Keywords', limit=6, note_html=None):
+def build_kw_table(per_keyword, window, first='feb', last='may', title='Maps Movement · Top Keywords', limit=6, note_html=None, exclude=None):
     rows = []
     items = []
+    excl = {k.lower() for k in (exclude or [])}
     for k in per_keyword:
+        if k['keyword'].lower() in excl:
+            continue
         fa, la = k.get(f'{first}_avg'), k.get(f'{last}_avg')
         ft, lt = k.get(f'{first}_top3'), k.get(f'{last}_top3')
         if la is None:
@@ -437,6 +440,7 @@ CLIENTS = {
         'chips': [{'v': '100%', 'l': 'top-20 Maps coverage', 'good': True}, {'v': '+17', 'l': 'top-3 cells (Carmel pin)', 'good': True},
                   {'v': '24K→0', 'l': 'service-page conv', 'watch': True}, {'v': '1 / 4', 'l': 'GBP pins managed', 'watch': True}],
         'maps_window': 'Feb → May 2026 · 8 tracked searches',
+        'maps_kw_exclude': ['carmel methadone clinic', 'carmel recovery', 'carmel new york rehab'],
         'comp_window': 'Across 8 tracked searches · Feb → May 2026',
         'comp_note': ("You're #1 in the market (692 top-3 cells, +17). Your own Carmel Outpatient pin co-ranks just behind it; the nearest "
                       "outside competitor (Cornerstone) sits well back. Lower avg rank is better."),
@@ -629,7 +633,7 @@ def build_snapshot(slug, cfg):
     if ms == 'per_keyword' and d.get('per_keyword'):
         snap['maps'] = build_kw_table(d['per_keyword'], cfg.get('maps_window', ''),
                                       first=cfg.get('maps_first', 'feb'), last=cfg.get('maps_last', 'may'),
-                                      note_html=cfg.get('maps_note'))
+                                      note_html=cfg.get('maps_note'), exclude=cfg.get('maps_kw_exclude'))
     elif ms == 'ld_apples' and d.get('ld_apples'):
         snap['maps'] = build_kw_table_apples(d['ld_apples'], cfg.get('maps_window', ''), note_html=cfg.get('maps_note'))
     else:
