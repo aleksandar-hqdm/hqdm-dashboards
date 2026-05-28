@@ -8,7 +8,7 @@
   const $ = (sel) => document.querySelector(sel);
   let DATA;
   try {
-    DATA = await fetch('./data/data.json').then((r) => r.json());
+    DATA = await fetch('./data/data.json?v=' + Date.now()).then((r) => r.json());
   } catch (e) {
     console.error('client-report: failed to load data.json', e);
     $('#report-root').innerHTML =
@@ -22,6 +22,8 @@
   renderYoyTiles(yoy);
   renderQuarterlyTable(DATA, yoy);
   renderTrendChart(DATA);
+  renderClicksCharts(DATA);
+  renderEngagementChart(DATA);
   renderStrategicFocus(DATA);
   renderFooter(DATA);
 
@@ -138,13 +140,23 @@
       `;
     };
 
+    const usingFsOnly = DATA.trend && DATA.trend.leads_definition && DATA.trend.leads_definition.using_form_submit_only;
+    const convLabel = usingFsOnly ? 'Organic leads YoY' : 'Organic conversions YoY';
+    const crLabel = usingFsOnly ? 'Lead rate YoY' : 'Conversion rate YoY';
     const tiles = [
       tile('Organic sessions YoY', yoy.sessions, `${yoy.priorLabel} → ${yoy.latestLabel}`),
-      tile('Organic conversions YoY', yoy.conversions, `${yoy.priorLabel} → ${yoy.latestLabel}`),
     ];
-    // Per-client opt-out: hide the CVR YoY tile when the data turns off the conversion-rate metric.
-    if (!DATA.client_report_hide_cvr_tile) {
-      tiles.push(tile('Conversion rate YoY', yoy.cvr, `${fmtNum(yoy.prior.org_cr, 2)}% → ${fmtNum(yoy.latest.org_cr, 2)}%`));
+    // Per-client opt-out: hide all conversion tiles (sessions-only view) when the
+    // data file turns off conversion reporting entirely.
+    if (!DATA.hide_conversions) {
+      tiles.push(tile(convLabel, yoy.conversions, `${yoy.priorLabel} → ${yoy.latestLabel}`));
+      // Per-client opt-out: hide the CVR YoY tile when the data turns off the conversion-rate metric.
+      if (!DATA.client_report_hide_cvr_tile) {
+        tiles.push(tile(crLabel, yoy.cvr, `${fmtNum(yoy.prior.org_cr, 2)}% → ${fmtNum(yoy.latest.org_cr, 2)}%`));
+      }
+    } else {
+      // Single-tile layout: collapse the 3-col grid down to 1 col so the lone tile reads cleanly.
+      wrap.className = 'grid grid-cols-1 gap-3';
     }
     wrap.innerHTML = tiles.join('');
 
@@ -163,8 +175,10 @@
     const quarters = (t.quarterly || []).filter((q) => q && q.kind !== 'estimate');
     const tbody = $('#qtable-body');
     if (!tbody) return;
+    const hideConv = !!data.hide_conversions;
+    const colCount = hideConv ? 2 : 4;
     if (!quarters.length) {
-      tbody.innerHTML = '<tr><td colspan="4" class="p-4 text-slate-500 italic">Quarterly trend data not available.</td></tr>';
+      tbody.innerHTML = `<tr><td colspan="${colCount}" class="p-4 text-slate-500 italic">Quarterly trend data not available.</td></tr>`;
       return;
     }
     // Show up to the last 7 quarters for compactness
@@ -173,6 +187,14 @@
     tbody.innerHTML = rows
       .map((q) => {
         const isLatest = q.q === latestQ;
+        if (hideConv) {
+          return `
+            <tr class="${isLatest ? 'latest' : ''} border-t border-slate-100">
+              <td class="py-2 pr-4 text-slate-800">${q.q}</td>
+              <td class="py-2 text-right">${fmtNum(q.org_sess, 0)}</td>
+            </tr>
+          `;
+        }
         return `
           <tr class="${isLatest ? 'latest' : ''} border-t border-slate-100">
             <td class="py-2 pr-4 text-slate-800">${q.q}</td>
@@ -190,82 +212,108 @@
     const t = data.trend || {};
     const months = t.months || [];
     const sessOrg = (t.sessions && t.sessions.organic) || [];
+    const usingFsOnly = t.leads_definition && t.leads_definition.using_form_submit_only;
     const conv =
+      (t.leads && t.leads.organic) ||
       (t.conversions && t.conversions.organic) ||
       (t.form_submits && t.form_submits.organic) ||
       [];
-    const convLabel = (t.form_submits_label || (t.conversions ? 'Conversions' : 'Form submits / transactions'));
+    const convLabel = usingFsOnly
+      ? 'Leads'
+      : (t.form_submits_label || (t.conversions ? 'Conversions' : 'Form submits / transactions'));
     const ctx = document.getElementById('trend-chart');
     if (!ctx || !months.length) return;
+    const hideConv = !!data.hide_conversions;
 
     // Detect partial-month index
     const partialIdx = months.findIndex((m) => /\*/.test(m));
 
-    // Build two datasets — sessions (left axis), conversions (right axis)
+    // Build datasets — sessions (left axis) always; conversions (right axis) only when not hidden
     const sessSolid = sessOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
     const sessDash = sessOrg.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
-    const convSolid = conv.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
-    const convDash = conv.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
+    const datasets = [
+      {
+        label: 'Organic Sessions',
+        data: sessSolid,
+        borderColor: '#1d5b8a',
+        backgroundColor: 'rgba(29,91,138,0.10)',
+        yAxisID: 'y',
+        borderWidth: 2.5,
+        tension: 0.3,
+        pointRadius: 2.5,
+        pointHoverRadius: 5,
+        spanGaps: false,
+      },
+      {
+        label: 'Organic Sessions (partial)',
+        data: sessDash,
+        borderColor: '#1d5b8a',
+        borderDash: [5, 4],
+        yAxisID: 'y',
+        borderWidth: 2,
+        tension: 0.3,
+        pointRadius: 2,
+        spanGaps: false,
+      },
+    ];
+    if (!hideConv) {
+      const convSolid = conv.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
+      const convDash = conv.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
+      datasets.push(
+        {
+          label: `Organic ${convLabel}`,
+          data: convSolid,
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16,185,129,0.10)',
+          yAxisID: 'y1',
+          borderWidth: 2.5,
+          tension: 0.3,
+          pointRadius: 2.5,
+          pointHoverRadius: 5,
+          spanGaps: false,
+        },
+        {
+          label: `Organic ${convLabel} (partial)`,
+          data: convDash,
+          borderColor: '#10b981',
+          borderDash: [5, 4],
+          yAxisID: 'y1',
+          borderWidth: 2,
+          tension: 0.3,
+          pointRadius: 2,
+          spanGaps: false,
+        }
+      );
+    }
+
+    const scales = {
+      x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 }, grid: { display: false } },
+      y: {
+        position: 'left',
+        title: { display: true, text: 'Sessions', font: { size: 11 } },
+        ticks: { font: { size: 10 }, callback: (v) => fmtNum(v, 0) },
+        grid: { color: 'rgba(0,0,0,0.05)' },
+      },
+    };
+    if (!hideConv) {
+      scales.y1 = {
+        position: 'right',
+        title: { display: true, text: convLabel, font: { size: 11 } },
+        ticks: { font: { size: 10 }, callback: (v) => fmtNum(v, 0) },
+        grid: { display: false },
+      };
+    }
 
     new Chart(ctx, {
       type: 'line',
-      data: {
-        labels: months,
-        datasets: [
-          {
-            label: 'Organic Sessions',
-            data: sessSolid,
-            borderColor: '#1d5b8a',
-            backgroundColor: 'rgba(29,91,138,0.10)',
-            yAxisID: 'y',
-            borderWidth: 2.5,
-            tension: 0.3,
-            pointRadius: 2.5,
-            pointHoverRadius: 5,
-            spanGaps: false,
-          },
-          {
-            label: 'Organic Sessions (partial)',
-            data: sessDash,
-            borderColor: '#1d5b8a',
-            borderDash: [5, 4],
-            yAxisID: 'y',
-            borderWidth: 2,
-            tension: 0.3,
-            pointRadius: 2,
-            spanGaps: false,
-          },
-          {
-            label: `Organic ${convLabel}`,
-            data: convSolid,
-            borderColor: '#10b981',
-            backgroundColor: 'rgba(16,185,129,0.10)',
-            yAxisID: 'y1',
-            borderWidth: 2.5,
-            tension: 0.3,
-            pointRadius: 2.5,
-            pointHoverRadius: 5,
-            spanGaps: false,
-          },
-          {
-            label: `Organic ${convLabel} (partial)`,
-            data: convDash,
-            borderColor: '#10b981',
-            borderDash: [5, 4],
-            yAxisID: 'y1',
-            borderWidth: 2,
-            tension: 0.3,
-            pointRadius: 2,
-            spanGaps: false,
-          },
-        ],
-      },
+      data: { labels: months, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: {
           legend: {
+            display: !hideConv,
             position: 'bottom',
             labels: {
               filter: (item) => !/partial/.test(item.text),
@@ -281,21 +329,7 @@
             },
           },
         },
-        scales: {
-          x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 }, grid: { display: false } },
-          y: {
-            position: 'left',
-            title: { display: true, text: 'Sessions', font: { size: 11 } },
-            ticks: { font: { size: 10 }, callback: (v) => fmtNum(v, 0) },
-            grid: { color: 'rgba(0,0,0,0.05)' },
-          },
-          y1: {
-            position: 'right',
-            title: { display: true, text: convLabel, font: { size: 11 } },
-            ticks: { font: { size: 10 }, callback: (v) => fmtNum(v, 0) },
-            grid: { display: false },
-          },
-        },
+        scales,
       },
     });
 
@@ -305,6 +339,133 @@
       const annot = t.may_extrapolation_note || t.annotation_text || '';
       partialNote.textContent = annot;
     }
+  }
+
+  // ---------- Side-by-side mini charts: GMB clicks + Phone clicks ----------
+  // These render as separate small charts (one per canvas) under the main trend
+  // chart. Each reads from trend.<series>.organic and uses null gaps for months
+  // before the event started firing — so the chart shows a clean gap rather
+  // than a fake zero floor.
+  function renderClicksCharts(data) {
+    const t = data.trend || {};
+    const months = t.months || [];
+    if (!months.length) return;
+    const partialIdx = months.findIndex((m) => /\*/.test(m));
+
+    const drawMini = (canvasId, series, color, title) => {
+      const ctx = document.getElementById(canvasId);
+      if (!ctx || !series) return false;
+      const solid = series.map((v, i) => {
+        if (v == null) return null;
+        return partialIdx >= 0 && i >= partialIdx ? null : v;
+      });
+      const dashed = series.map((v, i) => {
+        if (v == null) return null;
+        return partialIdx >= 0 && i >= partialIdx - 1 ? v : null;
+      });
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: months,
+          datasets: [
+            {
+              label: title,
+              data: solid,
+              borderColor: color,
+              backgroundColor: color + '20',
+              borderWidth: 2,
+              tension: 0.3,
+              pointRadius: 1.5,
+              pointHoverRadius: 4,
+              spanGaps: false,
+              fill: true,
+            },
+            {
+              label: title + ' (partial)',
+              data: dashed,
+              borderColor: color,
+              borderDash: [4, 3],
+              borderWidth: 1.5,
+              tension: 0.3,
+              pointRadius: 1.5,
+              spanGaps: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: (c) => c.parsed.y == null ? 'no data' : `${c.dataset.label.replace(' (partial)', '')}: ${fmtNum(c.parsed.y, 0)}`,
+              },
+            },
+          },
+          scales: {
+            x: { ticks: { font: { size: 9 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 8 }, grid: { display: false } },
+            y: { beginAtZero: true, ticks: { font: { size: 9 }, callback: (v) => fmtNum(v, 0) }, grid: { color: 'rgba(0,0,0,0.05)' } },
+          },
+        },
+      });
+      return true;
+    };
+
+    const gmb = t.gmb_clicks && t.gmb_clicks.organic;
+    const phone = t.phone_clicks && t.phone_clicks.organic;
+    const wrap = document.querySelector('.mini-charts-wrap');
+    const drewGmb = drawMini('gmb-chart', gmb, '#0ea5e9', 'GMB Clicks');
+    const drewPhone = drawMini('phone-chart', phone, '#f59e0b', 'Phone Clicks');
+    // Hide the whole section if neither series is available (other clients)
+    if (wrap && !drewGmb && !drewPhone) wrap.style.display = 'none';
+  }
+
+  // ---------- Engagement intent signals (phone clicks + GMB sessions) ----------
+  function renderEngagementChart(data) {
+    const eng = data.trend && data.trend.engagement_signals;
+    const section = document.getElementById('engagement-section');
+    if (!eng || !eng.enabled || !document.getElementById('engagement-chart')) {
+      if (section) section.style.display = 'none';
+      return;
+    }
+    const months = data.trend.months || eng.months || [];
+    const partialIdx = months.findIndex((m) => /\*/.test(m));
+    const datasets = [];
+    const caps = [];
+    for (const key of Object.keys(eng.series)) {
+      const s = eng.series[key];
+      const solid = s.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx ? null : v));
+      const dashed = s.data.map((v, i) => (partialIdx >= 0 && i >= partialIdx - 1 ? v : null));
+      datasets.push({
+        label: s.label, data: solid, borderColor: s.color, backgroundColor: s.color + '20',
+        tension: 0.3, borderWidth: 2.5, pointRadius: 2, pointHoverRadius: 5, spanGaps: false, fill: false,
+      });
+      datasets.push({
+        label: s.label + ' (partial)', data: dashed, borderColor: s.color, borderDash: [5, 4],
+        tension: 0.3, borderWidth: 2, pointRadius: 2, spanGaps: false, fill: false,
+      });
+      if (s.caption) caps.push(`${s.label}: ${s.caption}`);
+    }
+    new Chart(document.getElementById('engagement-chart'), {
+      type: 'line',
+      data: { labels: months, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, filter: i => !/partial/.test(i.text) } },
+          tooltip: { callbacks: { label: c => `${c.dataset.label.replace(' (partial)', '')}: ${fmtNum(c.parsed.y, 0)}` } },
+        },
+        scales: {
+          x: { ticks: { font: { size: 10 }, maxRotation: 0, autoSkip: true, maxTicksLimit: 12 }, grid: { display: false } },
+          y: { beginAtZero: true, ticks: { font: { size: 10 }, callback: v => fmtNum(v, 0) }, grid: { color: 'rgba(0,0,0,0.05)' } },
+        },
+      },
+    });
+    const capEl = $('#engagement-caption');
+    if (capEl) capEl.textContent = (eng.annotation_text || '') + (caps.length ? ' · ' + caps.join(' · ') : '');
   }
 
   // ---------- Strategic focus ----------
