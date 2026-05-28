@@ -2219,6 +2219,40 @@
     },
     "boxes": [
       {
+        "win": "Last 90 Days",
+        "cmp": "vs prior 90 days",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "+8%",
+            "cls": "pos"
+          },
+          {
+            "m": "Leads",
+            "d": "+14%",
+            "cls": "pos"
+          }
+        ]
+      },
+      {
+        "win": "Last 6 Months",
+        "cmp": "vs prior 6 mo",
+        "kind": "watch",
+        "rows": [
+          {
+            "m": "Visitors",
+            "d": "-22%",
+            "cls": "neg"
+          },
+          {
+            "m": "Leads",
+            "d": "-26%",
+            "cls": "neg"
+          }
+        ]
+      },
+      {
         "win": "Year over Year",
         "cmp": "vs Q2 2025",
         "kind": "watch",
@@ -2239,40 +2273,6 @@
           "d": "+11%",
           "cls": "pos"
         }
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-22%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-26%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "good",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "+8%",
-            "cls": "pos"
-          },
-          {
-            "m": "Leads",
-            "d": "+14%",
-            "cls": "pos"
-          }
-        ]
       }
     ],
     "boxes_reading_html": "Conversion rate is up year over year and the Google-Business lead path is at an <strong>18-month high</strong>. The last 90 days are showing <strong>visitors +8% and leads +14%</strong> — the recovery curve is in, and Q3 leans into the channel already converting.",
