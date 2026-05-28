@@ -374,18 +374,9 @@
       1486,
       945
     ],
-    "cvr": [
-      3.02,
-      3.00,
-      2.85,
-      4.25,
-      2.34,
-      2.00
-    ],
     "yoy_q1": {
       "sessions_pct": 36,
-      "transactions_pct": 5.5,
-      "cvr_pct": -23
+      "transactions_pct": 5.5
     },
     "is_estimate": [
       false,

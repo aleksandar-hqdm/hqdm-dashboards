@@ -1672,9 +1672,14 @@ function renderQuarterlyChart(qc) {
     }
   ];
 
+  // Per-client opt-out: a panel is rendered only if its data array is present
+  // and non-empty. Lets a client (e.g. Bernie's on Wicked) suppress CVR without
+  // touching the shared renderer.
+  const activePanels = panels.filter(p => Array.isArray(p.data) && p.data.length > 0);
+
   // Render skeleton (one card per panel) — each contains a canvas + an
   // absolutely-positioned YoY chip in the top-right.
-  wrap.innerHTML = panels.map((p, i) => {
+  wrap.innerHTML = activePanels.map((p, i) => {
     const arrow = p.yoyPct > 0 ? '▲' : '▼';
     const positive = (p.key === 'sessions' ? p.yoyPct > 0 : p.yoyPct > 0);
     const chipColor = positive ? 'rgb(21, 128, 61)' : 'rgb(185, 28, 28)';
@@ -1695,7 +1700,7 @@ function renderQuarterlyChart(qc) {
   }).join('');
 
   // Now instantiate each chart
-  panels.forEach((p) => {
+  activePanels.forEach((p) => {
     const ctx = document.getElementById('qc-canvas-' + p.key);
     if (!ctx) return;
 
