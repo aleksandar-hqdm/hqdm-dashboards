@@ -1461,30 +1461,6 @@
       "title": "Organic Visitors + Leads · Monthly (Q4 2025 → Apr 2026)",
       "caption": "Sessions are softening as the older blog cluster loses rankings, but the lead line is roughly steady — meaning each visit is more likely to convert. Leads = form-submits; phone-call tracking is not yet wired (see note below)."
     },
-    "quarters": {
-      "labels": [
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        21559,
-        22474,
-        16146,
-        7232
-      ],
-      "leads": [
-        83,
-        161,
-        152,
-        84
-      ],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads (form submits)",
-      "partial_index": 3,
-      "title": "By Quarter · Visitors + Leads (post-migration window)"
-    },
     "boxes": [
       {
         "win": "Year over Year",
