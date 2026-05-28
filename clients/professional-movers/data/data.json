@@ -2241,7 +2241,7 @@
         }
       },
       {
-        "win": "YoY · Q1",
+        "win": "Year over Year",
         "cmp": "Q1 '26 vs Q1 '25",
         "kind": "watch",
         "rows": [
@@ -2260,28 +2260,6 @@
           "m": "Conv. rate",
           "d": "-6%",
           "cls": "neg"
-        }
-      },
-      {
-        "win": "YoY · Q2*",
-        "cmp": "Q2 '26* vs Q2 '25",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-24%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-15%",
-            "cls": "neg"
-          }
-        ],
-        "extra": {
-          "m": "Conv. rate",
-          "d": "+11%",
-          "cls": "pos"
         }
       }
     ],
