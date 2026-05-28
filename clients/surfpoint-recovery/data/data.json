@@ -1622,28 +1622,123 @@
       }
     ],
     "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. YoY compares the most recent complete quarter (Q1 2026) against the same quarter prior year — the current Q2 is partial. Conversion volume is understated by known GA4 tracking gaps (`gmb_click` 584/90d + `contact_form_submit` 61/90d not flagged as conversions), so absolute conversion counts are excluded from these comparisons.",
-    "focus": [
-      {
-        "title": "Site architecture cleanup",
-        "color": "#1d5b8a",
-        "body": "Fix the structural issues dragging search impressions — the execution layer comes first."
-      },
-      {
-        "title": "Homepage + service rebuild",
-        "color": "#10b981",
-        "body": "Rebuild the homepage and service pages and refactor interlinking so the site matches the Google Business strength."
-      },
-      {
-        "title": "GBP optimization",
-        "color": "#6366f1",
-        "body": "Take the Google Business profile beyond reviews — depth, attributes, and closing audit-risk items."
-      },
-      {
-        "title": "Citations + disavow",
-        "color": "#f59e0b",
-        "body": "Disavow first, then build citations and earned links on a clean foundation."
-      }
-    ],
+    "focus": [],
+    "calendar": {
+      "enabled": true,
+      "title": "3-Month Delivery Calendar",
+      "subtitle": "Jun → Aug 2026 · exact pages + on-page actions per month. Cadence per HQDM scope: 1–2 services + 5 blogs + 3 suburbs / month, plus on-page per need (redirects, internal links, GBP wiring). Page selection sourced from Pages_Plan_M1-3 + Treatments_SubPages_BuildPlan + Suburb_Pages_3Month CSVs; additional blog refresh targets pulled from GSC pages_last_90d (on-topic addiction/medical queries, imp ≥ 50k, pos 4–15).",
+      "months": [
+        "Jun 2026",
+        "Jul 2026",
+        "Aug 2026"
+      ],
+      "rows": [
+        {
+          "label": "Services",
+          "cap": "1–2 / month",
+          "cells": [
+            [
+              {"u": "/treatments/alcohol-detox", "k": "new", "n": "Wave 1 · 4,583 mo search vol · map-pack 1.47 / 96% top-3 already won · /services/alcohol-detox-services 301 lands here"},
+              {"u": "/treatments/dual-diagnosis", "k": "new", "n": "Wave 1 · KD 2.9 (lowest in entire kw universe) · closes LLM citation gap on dual-diagnosis-brooklyn"}
+            ],
+            [
+              {"u": "/treatments/opioid-detox-mat", "k": "new", "n": "Wave 2 · MAT cluster KD 3.3 effective geo-only · top-3 SERP is all OUTPATIENT — uncontested inpatient surface"},
+              {"u": "/treatments/short-term-rehab", "k": "new", "n": "Wave 2 · only Urban Recovery ranks in top-12 · 60-day top-15 target validates universal template"}
+            ],
+            [
+              {"u": "/treatments/drug-detox", "k": "new", "n": "Wave 3 · 6,130 mo search vol · KD 46.9 hardest cluster — built last for internal-link backing from 4 prior sub-pages"},
+              {"u": "/treatments/benzodiazepine-detox", "k": "new", "n": "Wave 3 · 1,925 imp/365d orphan capture from /services/benzodiazepine-detox-services 301"}
+            ]
+          ]
+        },
+        {
+          "label": "Suburbs",
+          "cap": "3 / month",
+          "cells": [
+            [
+              {"u": "/locations/bay-ridge-shore-road-brooklyn", "k": "new", "n": "Bay Ridge map-grid gap (matrix §5b) · universal template + map embed + LocalBusiness schema"},
+              {"u": "/locations/sunset-park-industry-city-brooklyn", "k": "new", "n": "Sunset Park map-grid gap (matrix §5b)"},
+              {"u": "/locations/coney-island-stillwell-avenue-brooklyn", "k": "new", "n": "Primary pin reinforcement; links to /comprehensive-rehab-center-in-coney-island-ny"}
+            ],
+            [
+              {"u": "/locations/bay-ridge-3rd-avenue-brooklyn", "k": "new", "n": "Bay Ridge corridor cont'd; links to /treatments/alcohol-detox"},
+              {"u": "/locations/sunset-park-5th-avenue-brooklyn", "k": "new", "n": "Sunset Park corridor cont'd; links to /treatments/drug-detox"},
+              {"u": "/locations/bensonhurst-86th-street-brooklyn", "k": "new", "n": "Bensonhurst dominance reinforcement (rank #1 already at that anchor)"}
+            ],
+            [
+              {"u": "/locations/sunset-park-greenwood-heights-brooklyn", "k": "new", "n": "Sunset Park outer; links to /treatments/opioid-detox-mat"},
+              {"u": "/locations/sheepshead-bay-emmons-avenue-brooklyn", "k": "new", "n": "Outer-ring catchment; links to /treatments/dual-diagnosis or benzodiazepine-detox"},
+              {"u": "/locations/marine-park-avenue-u-brooklyn", "k": "new", "n": "Outer-ring South Brooklyn coverage extension"}
+            ]
+          ]
+        },
+        {
+          "label": "Blog refresh",
+          "cap": "5 / month",
+          "cells": [
+            [
+              {"u": "/blog/does-alcohol-affect-the-gallbladder", "k": "refresh", "n": "121k imp / pos 4.8 / 0.23% CTR · biggest on-topic bleeder"},
+              {"u": "/blog/how-long-does-it-take-for-weed-to-leave-your-system", "k": "refresh", "n": "107k imp / pos 7.5 / −81.1% 90d · link to /treatments/drug-detox"},
+              {"u": "/blog/whiskey-and-acid-reflux", "k": "refresh", "n": "71k imp / pos 7.5 / −52.6% 90d"},
+              {"u": "/blog/lamictal-and-alcohol", "k": "refresh", "n": "60k imp / pos 5.1 / psych-med interaction core"},
+              {"u": "/blog/can-alcohol-cause-blood-in-urine", "k": "refresh", "n": "57k imp / pos 3.0 / 1.03% CTR — best upside ceiling"}
+            ],
+            [
+              {"u": "/blog/mixing-alcohol-and-mucinex", "k": "refresh", "n": "105k imp / pos 7.4 / −77.2% · OTC-alcohol-mix core"},
+              {"u": "/blog/mixing-alcohol-and-zyrtec", "k": "refresh", "n": "85k imp / pos 5.0 / antihistamine cluster"},
+              {"u": "/blog/how-does-alcohol-affect-muscles", "k": "refresh", "n": "83k imp / pos 5.7 / −77.9% · link to /treatments/alcohol-detox"},
+              {"u": "/blog/can-alcohol-cause-hives", "k": "refresh", "n": "77k imp / pos 9.6 / −75.1% trend"},
+              {"u": "/blog/dangers-of-mixing-alcohol-and-buspar", "k": "refresh", "n": "51k imp / pos 5.9 / 0.65% CTR psych-med cluster"}
+            ],
+            [
+              {"u": "/blog/does-alcohol-cause-gerd", "k": "refresh", "n": "93k imp / pos 15.2 · biggest upside ceiling — pos 15→8 = ~3× clicks"},
+              {"u": "/blog/is-rubbing-alcohol-and-drinking-alcohol-the-same", "k": "refresh", "n": "85k imp / pos 10.7 / −70.1% trend"},
+              {"u": "/blog/what-drugs-can-cause-dilated-pupils", "k": "refresh", "n": "83k imp / pos 10.5 / −69.8% · link to /treatments/drug-detox"},
+              {"u": "/blog/dangers-of-mixing-claritin-alcohol", "k": "refresh", "n": "68k imp / pos 4.6 · antihistamine + alcohol cluster"},
+              {"u": "/blog/dangers-of-mixing-alcohol-and-nyquil", "k": "refresh", "n": "56k imp / pos 7.5 · OTC + alcohol core"}
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "per need",
+          "cells": [
+            [
+              {"u": "Homepage CRD deploy (24 items)", "k": "revamp", "n": "Drafted Mar 2026 · 60-day delay · meta + H1 + 5 service H2 + MedicalBusiness @graph schema"},
+              {"u": "/treatments hub upgrade (15 items)", "k": "revamp", "n": "Anchor IDs (hard dependency for homepage internal-links) + Service+ItemList+FAQPage schema"},
+              {"u": "23 KEEP-page title+meta rewrite", "k": "refresh", "n": "`recovery center brooklyn` 10k imp / pos 3.7 / 0% CTR anchor batch — CTR optimization"},
+              {"u": "28 location-page redirects → /areas-served", "k": "redirect", "n": "5 NJ out-of-state + 23 NY-area boilerplate doorway URLs"},
+              {"u": "5 × /services/* → /treatments/* 301", "k": "redirect", "n": "After Wave 1 sub-pages ship (alcohol-detox / dual-diagnosis pairings only this month)"},
+              {"u": "/about, /contact, /contact-us.com 404 fix", "k": "fix", "n": "Revenue-surface URLs returning errors"},
+              {"u": "NOINDEX 128 URLs batch", "k": "fix", "n": "Wrong-audience cohort — alcohol-breath / viagra / rapper / phobia (7 high-imp URLs in batch)"},
+              {"u": "Disavow file upload (183 + 42)", "k": "fix", "n": "GSC; spam score 43 → target <30; 2–4 wk processing"},
+              {"u": "GBP description + categories + Q&A", "k": "fix", "n": "OASAS/CARF/MAT rewrite · +4 categories · 4 unanswered Q&A backfill · book-online URL"}
+            ],
+            [
+              {"u": "/admissions rebuild", "k": "revamp", "n": "Bottom-of-funnel · form integration + 5 H2 + ContactPage+FAQPage schema"},
+              {"u": "/about-us expansion", "k": "revamp", "n": "Named clinical team (E-E-A-T) + accreditation badges + Person schema canonical"},
+              {"u": "/faq consolidation", "k": "revamp", "n": "Canonical FAQPage with @id cross-refs (dedup rich snippets across 6 source pages)"},
+              {"u": "Locations × services interlinking matrix", "k": "fix", "n": "'Services Available in [Neighborhood]' block on 10+ retained location pages"},
+              {"u": "DELETE 99 thin/orphan blogs (410)", "k": "redirect", "n": "AUDIT triage Round 1 · topical overlay preserved 124 core-topical from auto-delete"},
+              {"u": "AUDIT triage R2 — 75 of 555 URLs", "k": "refresh", "n": "Core-topical blogs · rewrite + internal-link to services OR NOINDEX/REDIRECT"},
+              {"u": "Indexation re-run — 47 location URLs", "k": "fix", "n": "Request Indexing for 9 LP-01 upgrades + 38 not-indexed location pages"},
+              {"u": "GBP Posts 2/week cadence", "k": "fix", "n": "≥2 link to /treatments/alcohol-detox, ≥1 to /treatments/drug-detox · weekly review reply"}
+            ],
+            [
+              {"u": "/contact-us consolidation", "k": "revamp", "n": "Single canonical URL · 3 variants 301 · NAP role-labeling (intake + facility phones)"},
+              {"u": "/insurance/{medicaid,aetna,cigna,bcbs}", "k": "new", "n": "4 carrier landing pages · uncontested carrier-modifier query surface · ~3–4 h/page on validated template"},
+              {"u": "/areas-served rebuild", "k": "revamp", "n": "Destination for 28 M1 redirects · neighborhood × service matrix + CollectionPage+ItemList schema"},
+              {"u": "AUDIT triage R3 — ~480 URLs", "k": "refresh", "n": "Core-topical + unclassified-w/-traffic + framework-ambiguous remainder"},
+              {"u": "Disavow re-pull + re-upload", "k": "fix", "n": "Diff vs M1 disavow · add new spam clusters surfaced post-deploy"},
+              {"u": "Sitewide schema audit + gap fix", "k": "fix", "n": "Service on each /treatments/*, Article on top 20 blogs, BreadcrumbList sitewide"},
+              {"u": "GBP photo blitz — 25+ photos", "k": "fix", "n": "9 → 30+ photos (Mountainside benchmark); cover photo first; mix of exterior/interior/staff"},
+              {"u": "Quarterly content review · KEEP pages", "k": "refresh", "n": "Re-bucket NOINDEXed URLs with recovered ranking · feed Q3 strategy framework"}
+            ]
+          ]
+        }
+      ],
+      "note_html": "Tag legend — <span class='tag new'>NEW</span> brand-new URL · <span class='tag revamp'>REVAMP</span> existing page rebuilt · <span class='tag refresh'>REFRESH</span> light rewrite per HQDM Blog/Page Refresh SOP · <span class='tag redirect'>REDIRECT</span> 301 / 410 / disavow action · <span class='tag fix'>FIX</span> tactical on-page or GBP action. Source sheets: <code>Surfpoint_Pages_Plan_Month1-3.xlsx</code> · <code>Surfpoint_Treatments_SubPages_BuildPlan.md</code> · <code>Surfpoint_Suburb_Pages_3Month.xlsx</code> · <code>Surfpoint_Blog_Refresh_3Month.xlsx</code> + GSC top-bleeder backfill (M1 P4–P5, M2 P4–P5, M3 P4–P5 are the 2-per-month additions over the prior 3-per-month refresh plan)."
+    },
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
