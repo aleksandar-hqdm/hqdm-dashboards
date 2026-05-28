@@ -283,7 +283,7 @@ function renderStackedTrendCharts(trend) {
 
   const sessionsCtx = document.getElementById('trend-chart-sessions');
   const convCtx = document.getElementById('trend-chart-conversions');
-  if (!sessionsCtx || !convCtx) return null;
+  if (!sessionsCtx) return null;
 
   const labelsForChart = trend._labels_with_proj || trend.months;
   const sessionsChart = new Chart(sessionsCtx.getContext('2d'), {
@@ -292,18 +292,23 @@ function renderStackedTrendCharts(trend) {
     options: baseOptions
   });
 
-  const convChart = new Chart(convCtx.getContext('2d'), {
+  // Conversions canvas is optional -- per-client opt-out (e.g. AQMS while form
+  // tracking is being stabilized) replaces it with an inline note instead of
+  // rendering a chart.
+  const convChart = convCtx ? new Chart(convCtx.getContext('2d'), {
     type: 'line',
     data: { labels: labelsForChart, datasets: buildDatasets(trend.form_submits, 'tx') },
     options: baseOptions
-  });
+  }) : null;
 
   const charts = { sessions: sessionsChart, conversions: convChart, visible };
   charts._rebuild = () => {
     sessionsChart.data.datasets = buildDatasets(trend.sessions, 'sessions');
-    convChart.data.datasets = buildDatasets(trend.form_submits, 'tx');
     sessionsChart.update();
-    convChart.update();
+    if (convChart) {
+      convChart.data.datasets = buildDatasets(trend.form_submits, 'tx');
+      convChart.update();
+    }
   };
   return charts;
 }
