@@ -1529,7 +1529,7 @@
     "short_name": "Arms Acres",
     "subtitle": "Q2 2026 · Carmel NY + NYC-metro · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Arms Acres' Inpatient Carmel pin <strong>dominates Putnam County</strong> — 100% top-20 coverage across the high-intent searches and still improving scan over scan (drug-rehab +10 cells, alcohol-rehab-near-me +8). The gaps are mechanical: roughly 24,000 service-page sessions a year convert at zero, and HQDM has manager access to only one of four Google Business pins. The plan fixes the service-page conversion path, lifts insurance and payor content, and optimizes the managed Carmel pin.</p>",
+    "exec_html": "<p>Arms Acres' Inpatient Carmel pin <strong>dominates Putnam County</strong> — 100% top-20 coverage across the high-intent searches and still improving scan over scan (drug-rehab +10 cells, alcohol-rehab-near-me +8). The gap is mechanical: HQDM has manager access to only one of four Google Business pins. The plan fixes the service-page conversion path, lifts insurance and payor content, and optimizes the managed Carmel pin.</p>",
     "chips": [
       {
         "v": "100%",
@@ -1540,11 +1540,6 @@
         "v": "+17",
         "l": "top-3 cells (Carmel pin)",
         "good": true
-      },
-      {
-        "v": "24K→0",
-        "l": "service-page conv",
-        "watch": true
       },
       {
         "v": "1 / 4",
@@ -1560,8 +1555,7 @@
         "Jan '26",
         "Feb '26",
         "Mar '26",
-        "Apr '26",
-        "May '26*"
+        "Apr '26"
       ],
       "visitors": [
         4972,
@@ -1570,19 +1564,17 @@
         7598,
         8803,
         8812,
-        9200,
-        7215
+        9200
       ],
       "leads": [],
       "visitors_label": "Organic visitors",
       "leads_label": "Organic leads",
-      "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "partial_index": -1,
+      "title": "Organic Visitors · Monthly (Q4 2025 → Apr 2026)",
+      "caption": "Monthly organic visitors. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
     },
     "quarters": {
       "labels": [
-        "Dec '24",
         "Q1 '25",
         "Q2 '25",
         "Q3 '25",
@@ -1591,7 +1583,6 @@
         "Q2 '26*"
       ],
       "visitors": [
-        6954,
         4156,
         9876,
         6761,
@@ -1602,19 +1593,19 @@
       "leads": [],
       "visitors_label": "Visitors",
       "leads_label": "Leads",
-      "partial_index": 6,
+      "partial_index": 5,
       "title": "By Quarter · Organic Visitors"
     },
     "boxes": [
       {
         "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
+        "cmp": "Q1 '26 vs Q1 '25",
+        "kind": "good",
         "rows": [
           {
             "m": "Visitors",
-            "d": "-17%",
-            "cls": "neg"
+            "d": "+102%",
+            "cls": "pos"
           }
         ]
       },
