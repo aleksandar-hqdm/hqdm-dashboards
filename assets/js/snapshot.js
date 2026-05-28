@@ -57,6 +57,13 @@
     const tablesGrid = tablesOn === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
     const tablesHtml = [s.maps, s.competitors].filter(t => t && t.enabled).map(tablePanel).join('');
     const focusCols = Math.min(Math.max((s.focus || []).length, 1), 4);
+    // Header nav can be overridden per-client via s.nav (so a client whose snapshot
+    // lives at client-report.html doesn't get a self-referential "Condensed" link).
+    // Set s.nav.condensed = false or s.nav.strategy = false to hide that link.
+    const condensed = (s.nav && 'condensed' in s.nav) ? s.nav.condensed : { href: './client-report.html', label: 'Condensed report →' };
+    const strategy  = (s.nav && 'strategy'  in s.nav) ? s.nav.strategy  : { href: './index.html',          label: 'Full strategy →'   };
+    const condensedHTML = condensed ? `<a href="${condensed.href}" class="text-brand-500 font-semibold hover:underline">${condensed.label}</a>` : '';
+    const strategyHTML  = strategy  ? `<a href="${strategy.href}"  class="text-slate-500 hover:text-slate-900 hidden sm:inline">${strategy.label}</a>` : '';
     return `
     <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
       <div class="snap-shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
@@ -65,8 +72,8 @@
           <span class="text-slate-400 hidden sm:inline">· ${s.subtitle || 'Client Snapshot'}</span>
         </div>
         <div class="flex items-center gap-3">
-          <a href="./client-report.html" class="text-brand-500 font-semibold hover:underline">Condensed report →</a>
-          <a href="./index.html" class="text-slate-500 hover:text-slate-900 hidden sm:inline">Full strategy →</a>
+          ${condensedHTML}
+          ${strategyHTML}
           <button onclick="window.print()" class="px-2.5 py-1 rounded border border-slate-300 text-slate-600 hover:bg-slate-50">Print / PDF</button>
         </div>
       </div>
