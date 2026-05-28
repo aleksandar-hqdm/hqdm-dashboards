@@ -1438,31 +1438,6 @@
       "title": "Organic Visitors · Monthly (Q4 2025 → now)",
       "caption": "Monthly organic visitors. A dashed tail marks the partial current month. The site-traffic floor is what the Q2 brand-canonical / GBP / service-page / location-page pushes compound back from — the Maps engine + brand engine above are already winning more than the site captures."
     },
-    "quarters": {
-      "labels": [
-        "Dec '24",
-        "Q1 '25*",
-        "Q2 '25",
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        4713,
-        6490,
-        16318,
-        10408,
-        5038,
-        3405,
-        1706
-      ],
-      "leads": [],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 6,
-      "title": "By Quarter · Organic Visitors (qtr total)"
-    },
     "boxes": [
       {
         "win": "Top-3 Maps cells",
