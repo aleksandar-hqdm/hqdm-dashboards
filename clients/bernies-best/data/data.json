@@ -1,4 +1,5 @@
 {
+  "client_report_hide_cvr_tile": true,
   "meta": {
     "client": "Bernie's Best",
     "domain": "bernies.com",
@@ -1678,7 +1679,7 @@
       "enabled": false
     },
     "competitors": {
-      "enabled": true,
+      "enabled": false,
       "title": "Competitor Movement · Organic (top-10 keywords)",
       "window": "Top-10 keyword footprint · May 2025 → May 2026",
       "headers": [

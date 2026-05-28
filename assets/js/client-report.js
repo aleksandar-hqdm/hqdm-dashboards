@@ -138,11 +138,15 @@
       `;
     };
 
-    wrap.innerHTML = [
+    const tiles = [
       tile('Organic sessions YoY', yoy.sessions, `${yoy.priorLabel} → ${yoy.latestLabel}`),
       tile('Organic conversions YoY', yoy.conversions, `${yoy.priorLabel} → ${yoy.latestLabel}`),
-      tile('Conversion rate YoY', yoy.cvr, `${fmtNum(yoy.prior.org_cr, 2)}% → ${fmtNum(yoy.latest.org_cr, 2)}%`),
-    ].join('');
+    ];
+    // Per-client opt-out: hide the CVR YoY tile when the data turns off the conversion-rate metric.
+    if (!DATA.client_report_hide_cvr_tile) {
+      tiles.push(tile('Conversion rate YoY', yoy.cvr, `${fmtNum(yoy.prior.org_cr, 2)}% → ${fmtNum(yoy.latest.org_cr, 2)}%`));
+    }
+    wrap.innerHTML = tiles.join('');
 
     const note = $('#yoy-note');
     if (note) {
