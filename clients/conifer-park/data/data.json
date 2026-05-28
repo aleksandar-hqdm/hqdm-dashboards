@@ -1639,12 +1639,12 @@
     },
     "competitors": {
       "enabled": true,
-      "title": "Competitor Movement · Maps",
-      "window": "Across 9 tracked searches · Feb → Apr 2026",
+      "title": "Ground Vacated · Declining Competitors",
+      "window": "Glenville grid · Feb 21 → Apr 27, 2026 (9.4 weeks)",
       "headers": [
         "Business",
         "Avg rank",
-        "Top-3 spots",
+        "Map cells",
         "Change"
       ],
       "rows": [
@@ -1670,17 +1670,17 @@
           "me": false,
           "cells": [
             {
-              "t": "Every1 Center (Inpatient Detox & Rehab)"
+              "t": "Sunnyview Rehabilitation Hospital"
             },
             {
-              "t": "4.2"
+              "t": "7.1"
             },
             {
-              "t": "527"
+              "t": "252"
             },
             {
-              "t": "+64",
-              "c": "neg"
+              "t": "-112",
+              "c": "muted"
             }
           ]
         },
@@ -1688,17 +1688,17 @@
           "me": false,
           "cells": [
             {
-              "t": "Hospitality House TC (Troy grid)"
+              "t": "New Choices"
             },
             {
-              "t": "4.8"
+              "t": "6.9"
             },
             {
-              "t": "411"
+              "t": "215"
             },
             {
-              "t": "+258",
-              "c": "neg"
+              "t": "-86",
+              "c": "muted"
             }
           ]
         },
@@ -1706,17 +1706,17 @@
           "me": false,
           "cells": [
             {
-              "t": "St. Peter's Addiction Recovery"
+              "t": "St Marys Healthcare Outpatient (Amsterdam)"
             },
             {
-              "t": "5.1"
+              "t": "7.8"
             },
             {
-              "t": "311"
+              "t": "118"
             },
             {
-              "t": "+132",
-              "c": "neg"
+              "t": "-84",
+              "c": "muted"
             }
           ]
         },
@@ -1724,17 +1724,17 @@
           "me": false,
           "cells": [
             {
-              "t": "Whitney M Young Rehab Clinic (Troy grid)"
+              "t": "Addictions Care Center of Albany"
             },
             {
-              "t": "5.4"
+              "t": "11.2"
             },
             {
-              "t": "301"
+              "t": "46"
             },
             {
-              "t": "+155",
-              "c": "neg"
+              "t": "-125",
+              "c": "muted"
             }
           ]
         },
@@ -1742,22 +1742,22 @@
           "me": false,
           "cells": [
             {
-              "t": "Healing Springs Recovery Community Center"
+              "t": "Capital District Recovery Center"
             },
             {
-              "t": "6.4"
+              "t": "12.5"
             },
             {
-              "t": "299"
+              "t": "42"
             },
             {
-              "t": "-132",
+              "t": "-197",
               "c": "muted"
             }
           ]
         }
       ],
-      "note_html": "Your Glenville inpatient pin leads the reference set (584 top-3 cells, +19), but several competitors are gaining fast — Hospitality House (+258) and Every1 Center (+64). Lower avg rank is better."
+      "note_html": "Across the 4 Glenville Map Pack queries (rehab upstate NY, drug rehab near me, alcohol rehab, rehab near me), five mid-tier competitors lost meaningful map ground in the Feb–Apr window — and none holds high Map Pack exposure today. The cells they vacated are real freed-up SERP space, and Conifer Park has already absorbed some (+19). Lower avg rank is better."
     }
   }
 }
