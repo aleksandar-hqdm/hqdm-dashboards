@@ -55,6 +55,27 @@
   function focusCard(f) {
     return `<div class="focus-card" style="border-left-color:${f.color || '#1d5b8a'};"><div class="ft">${f.title}</div><div class="fb">${f.body}</div></div>`;
   }
+  function calendarHTML(c) {
+    if (!c || !c.enabled) return '';
+    const months = (c.months || []).map(m => `<th class="month">${m}</th>`).join('');
+    const itemHTML = it => {
+      const tag = `<span class="tag ${it.k || 'fix'}">${it.k || ''}</span>`;
+      const note = it.n ? ` <span class="n">— ${it.n}</span>` : '';
+      return `<div class="item">${tag}<div><span class="u">${it.u}</span>${note}</div></div>`;
+    };
+    const rows = (c.rows || []).map(r => {
+      const cells = (r.cells || []).map(items => `<td>${(items || []).map(itemHTML).join('')}</td>`).join('');
+      return `<tr><td class="row-label">${r.label}<span class="cap">${r.cap || ''}</span></td>${cells}</tr>`;
+    }).join('');
+    return `<section class="mb-3">
+      <div class="panel p-3.5">
+        <div class="secthead mb-1">${c.title || 'Build Calendar · Next 90 Days'}</div>
+        ${c.subtitle ? `<p class="text-[11px] text-slate-500 mb-2">${c.subtitle}</p>` : ''}
+        <div class="overflow-x-auto"><table class="cal"><thead><tr><th></th>${months}</tr></thead><tbody>${rows}</tbody></table></div>
+        ${c.note_html ? `<p class="text-[11px] text-slate-500 mt-3">${c.note_html}</p>` : ''}
+      </div>
+    </section>`;
+  }
 
   function buildHTML(s, eng) {
     // Three optional table panels: maps / anchor_towns_table / competitors.
@@ -158,10 +179,12 @@
 
       ${engagementHtml}
 
-      ${(s.focus && s.focus.length) ? `<section class="mb-2">
-        <div class="secthead mb-2">Our Focus · Next 90 Days</div>
+      ${(s.focus && s.focus.length) ? `<section class="mb-3">
+        <div class="secthead mb-2">${s.focus_heading || 'Our Focus · Next 90 Days'}</div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${focusCols} gap-3">${s.focus.map(focusCard).join('')}</div>
       </section>` : ''}
+
+      ${calendarHTML(s.calendar)}
 
       <footer class="mt-4 pt-3 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap items-center justify-between gap-2">
         <div><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · ${s.footer || 'Client snapshot'}</div>
