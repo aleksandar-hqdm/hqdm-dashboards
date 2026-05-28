@@ -1418,8 +1418,7 @@
         "Jan '26",
         "Feb '26",
         "Mar '26",
-        "Apr '26",
-        "May '26*"
+        "Apr '26"
       ],
       "visitors": [
         242,
@@ -1428,15 +1427,14 @@
         189,
         181,
         273,
-        196,
-        79
+        196
       ],
       "leads": [],
       "visitors_label": "Brand-search clicks",
       "leads_label": "",
-      "partial_index": 7,
-      "title": "Maps Engine · Brand-Search Clicks · Monthly (Q4 2025 → now)",
-      "caption": "Brand-search clicks are the on-site signal of the Google Business / Maps engine — people who see the Newfane profile (11,019 GBP profile views Dec→May 2026, 90% from Google Search panels + 10% from the Maps app) come back to search the brand. The line has held in the ~200/mo range across Q4 2025 → Q1 2026, stable while the rest of the site's organic discovery was retreating. GMB-tagged sessions in GA4 reinforce it: GMB drove 45.8% of all organic sessions in the last 30 days, up from 21.1% trailing 365 days. May 2026 is partial through May 12."
+      "partial_index": -1,
+      "title": "Maps Engine · Brand-Search Clicks · Monthly (Q4 2025 → Apr 2026)",
+      "caption": "Brand-search clicks are the on-site signal of the Google Business / Maps engine — people who see the Newfane profile (11,019 GBP profile views Dec→May 2026, 90% from Google Search panels + 10% from the Maps app) come back to search the brand. The line has held in the ~200/mo range across Q4 2025 → Q1 2026, stable while the rest of the site's organic discovery was retreating. GMB-tagged sessions in GA4 reinforce it: GMB drove 45.8% of all organic sessions in the last 30 days, up from 21.1% trailing 365 days."
     },
     "boxes": [
       {
