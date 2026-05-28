@@ -1637,24 +1637,19 @@
     "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. The current month is partial.",
     "focus": [
       {
-        "title": "Service-page conversion",
+        "title": "Month 1 · June 2026",
         "color": "#10b981",
-        "body": "Fix the service-page conversion mechanism (24K sessions/yr at zero conversions) and improve the Tier-1 pages."
+        "body": "<ul style=\"margin:0;padding-left:1rem;line-height:1.45;\"><li>1-2 service pages (new + revamp)</li><li>5 blogs</li><li>3 suburb pages (new + revamp)</li><li>On-page as needed — redirects, internal links, GBP alignment</li></ul>"
       },
       {
-        "title": "Insurance / payor content",
+        "title": "Month 2 · July 2026",
         "color": "#1d5b8a",
-        "body": "Build an insurance and payor article cluster to lift click-through on high-intent queries."
+        "body": "<ul style=\"margin:0;padding-left:1rem;line-height:1.45;\"><li>1-2 service pages (new + revamp)</li><li>5 blogs</li><li>3 suburb pages (new + revamp)</li><li>On-page as needed — redirects, internal links, GBP alignment</li></ul>"
       },
       {
-        "title": "GBP base optimization",
+        "title": "Month 3 · August 2026",
         "color": "#6366f1",
-        "body": "Defend and extend the managed Inpatient Carmel pin with a full Google Business optimization pass."
-      },
-      {
-        "title": "Architecture + measurement",
-        "color": "#f59e0b",
-        "body": "Clean up site architecture, stand up the Bronx Maps grid, and lock in measurement."
+        "body": "<ul style=\"margin:0;padding-left:1rem;line-height:1.45;\"><li>1-2 service pages (new + revamp)</li><li>5 blogs</li><li>3 suburb pages (new + revamp)</li><li>On-page as needed — redirects, internal links, GBP alignment</li></ul>"
       }
     ],
     "maps": {
