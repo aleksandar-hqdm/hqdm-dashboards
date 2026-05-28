@@ -79,15 +79,18 @@ def build_line(months, vis, leads, leads_label, vis_label='Organic visitors', ti
     }
 
 
-def build_quarters(quarterly, leads_label='Leads', vis_label='Visitors', title='By Quarter · Visitors & Leads'):
+def build_quarters(quarterly, leads_label='Leads', vis_label='Visitors', title='By Quarter · Visitors & Leads', drop_partial=False):
+    def is_partial(q):
+        return '*' in q.get('q', '') or q.get('kind') == 'current' or 'partial' in q.get('q', '').lower()
     kept = [q for q in quarterly if 'est' not in q.get('q', '').lower()]
+    if drop_partial:
+        kept = [q for q in kept if not is_partial(q)]
     labels = [short_q(q.get('q', '')) for q in kept]
     vis = [q.get('org_sess') for q in kept]
     leads = [q.get('org_conv') for q in kept]
     pidx = -1
     for i, q in enumerate(kept):
-        lbl = q.get('q', '')
-        if '*' in lbl or q.get('kind') == 'current' or 'partial' in lbl.lower():
+        if is_partial(q):
             pidx = i
     return {'labels': labels, 'visitors': vis, 'leads': leads, 'visitors_label': vis_label,
             'leads_label': leads_label, 'partial_index': pidx, 'title': title}
@@ -320,12 +323,12 @@ CLIENTS = {
         'footer': 'Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski',
         'exec_html': ("<p>Your Harlem pin is the <strong>only NYC addiction-treatment provider that gained ground on all eight "
                       "tracked Maps searches</strong> last quarter — <strong>+787 grid positions with zero losses</strong> — and you own the "
-                      "Harlem-neighborhood searches outright (positions 1–2). Organic sessions stepped back in April–May after a strong "
-                      "winter, but the Maps position is durable. The next leg is structural: your homepage is trying to rank for nine "
+                      "Harlem-neighborhood searches outright (positions 1–2). The next leg is structural: your homepage is trying to rank for nine "
                       "different commercial searches at once. Splitting it into dedicated pages, building borough hubs, and adding "
                       "MAT and dual-diagnosis service hubs unlocks page-one candidates you don't have today.</p>"),
         'chips': [{'v': '+787', 'l': 'grid positions gained', 'good': True}, {'v': '3 / 8', 'l': 'Maps searches owned', 'good': True},
                   {'v': '#1', 'l': 'NYC pin on Maps', 'good': True}, {'v': 'pos 1.2–2.1', 'l': 'Harlem organic', 'good': True}],
+        'q_drop_partial': True,
         'maps_window': 'Jan 27 → Apr 22, 2026 · 8 tracked searches',
         'comp_window': 'Across 8 tracked searches · Jan 27 → Apr 22, 2026',
         'comp_note': ("You're <strong>#1 on Maps</strong> across these searches (425 top-3 cells, +105) and gained more than any "
@@ -572,7 +575,8 @@ def build_snapshot(slug, cfg):
                       caption=cfg.get('line_caption', default_cap))
     quarters = build_quarters(t.get('quarterly', []),
                               leads_label=cfg.get('q_leads_label', 'Leads'),
-                              title=cfg.get('q_title', 'By Quarter · Visitors & Leads' if reliable else 'By Quarter · Organic Visitors'))
+                              title=cfg.get('q_title', 'By Quarter · Visitors & Leads' if reliable else 'By Quarter · Organic Visitors'),
+                              drop_partial=cfg.get('q_drop_partial', False))
     if not reliable:
         line['leads'] = []
         quarters['leads'] = []

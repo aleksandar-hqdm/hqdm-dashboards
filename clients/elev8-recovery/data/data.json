@@ -1385,7 +1385,7 @@
     "short_name": "Elev8 Centers",
     "subtitle": "Q2 2026 · NYC · Harlem pin · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Your Harlem pin is the <strong>only NYC addiction-treatment provider that gained ground on all eight tracked Maps searches</strong> last quarter — <strong>+787 grid positions with zero losses</strong> — and you own the Harlem-neighborhood searches outright (positions 1–2). Organic sessions stepped back in April–May after a strong winter, but the Maps position is durable. The next leg is structural: your homepage is trying to rank for nine different commercial searches at once. Splitting it into dedicated pages, building borough hubs, and adding MAT and dual-diagnosis service hubs unlocks page-one candidates you don't have today.</p>",
+    "exec_html": "<p>Your Harlem pin is the <strong>only NYC addiction-treatment provider that gained ground on all eight tracked Maps searches</strong> last quarter — <strong>+787 grid positions with zero losses</strong> — and you own the Harlem-neighborhood searches outright (positions 1–2). The next leg is structural: your homepage is trying to rank for nine different commercial searches at once. Splitting it into dedicated pages, building borough hubs, and adding MAT and dual-diagnosis service hubs unlocks page-one candidates you don't have today.</p>",
     "chips": [
       {
         "v": "+787",
@@ -1415,8 +1415,7 @@
         "Q2 '25",
         "Q3 '25",
         "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
+        "Q1 '26"
       ],
       "visitors": [
         3604,
@@ -1424,8 +1423,7 @@
         6320,
         5764,
         5208,
-        8124,
-        4100
+        8124
       ],
       "leads": [
         4.0,
@@ -1433,12 +1431,11 @@
         13.7,
         17.3,
         11.3,
-        12.0,
-        8.0
+        12.0
       ],
       "visitors_label": "Visitors",
       "leads_label": "Leads (monthly avg)",
-      "partial_index": 6,
+      "partial_index": -1,
       "title": "By Quarter · Organic Visitors"
     },
     "boxes": [
