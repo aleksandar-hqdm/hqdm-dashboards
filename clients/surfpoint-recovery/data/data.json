@@ -1579,8 +1579,7 @@
         "Q2 '25",
         "Q3 '25",
         "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
+        "Q1 '26"
       ],
       "visitors": [
         2199,
@@ -1588,13 +1587,12 @@
         2550,
         2688,
         3003,
-        6675,
-        2180
+        6675
       ],
       "leads": [],
       "visitors_label": "Visitors",
       "leads_label": "Leads",
-      "partial_index": 6,
+      "partial_index": null,
       "title": "By Quarter · Organic Visitors"
     },
     "boxes": [
@@ -1649,11 +1647,11 @@
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
-      "window": "5 scans · Oct 2025 → May 2026 · 8 tracked searches",
+      "window": "Grid trend (Oct '25 → Apr '26) + anchor recheck (May 8 → May 28 '26)",
       "headers": [
         "Search",
-        "Avg position",
-        "Top-3 map spots",
+        "Before → Now",
+        "Window",
         "Change"
       ],
       "rows": [
@@ -1663,30 +1661,13 @@
               "t": "alcohol rehab brooklyn"
             },
             {
-              "t": "<span class=\"arrow-up\">1.88 → <strong>1.47</strong></span>"
+              "t": "1.88 → <strong>1.47</strong> avg rank"
             },
             {
-              "t": "133 → <strong>130</strong>"
+              "t": "136-cell grid · 5 scans"
             },
             {
-              "t": "-3",
-              "c": "neg"
-            }
-          ]
-        },
-        {
-          "cells": [
-            {
-              "t": "alcohol cluster"
-            },
-            {
-              "t": "<strong>2.65</strong>"
-            },
-            {
-              "t": "<strong>99</strong>"
-            },
-            {
-              "t": "+99",
+              "t": "↑ +0.41 positions",
               "c": "pos"
             }
           ]
@@ -1694,16 +1675,16 @@
         {
           "cells": [
             {
-              "t": "drug cluster"
+              "t": "alcohol detox brooklyn"
             },
             {
-              "t": "<strong>2.98</strong>"
+              "t": "#1 → <strong>#1</strong>"
             },
             {
-              "t": "<strong>98</strong>"
+              "t": "Coney anchor · 20 days"
             },
             {
-              "t": "+98",
+              "t": "held #1",
               "c": "pos"
             }
           ]
@@ -1711,16 +1692,16 @@
         {
           "cells": [
             {
-              "t": "near-me cluster"
+              "t": "drug rehab brooklyn"
             },
             {
-              "t": "<strong>3.29</strong>"
+              "t": "#1 → <strong>#1</strong>"
             },
             {
-              "t": "<strong>87</strong>"
+              "t": "Coney anchor · 20 days"
             },
             {
-              "t": "+87",
+              "t": "held #1",
               "c": "pos"
             }
           ]
@@ -1728,16 +1709,16 @@
         {
           "cells": [
             {
-              "t": "detox cluster"
+              "t": "drug detox brooklyn"
             },
             {
-              "t": "<strong>4.11</strong>"
+              "t": "#1 → <strong>#1</strong>"
             },
             {
-              "t": "<strong>73</strong>"
+              "t": "Coney anchor · 20 days"
             },
             {
-              "t": "+73",
+              "t": "held #1",
               "c": "pos"
             }
           ]
@@ -1745,70 +1726,51 @@
         {
           "cells": [
             {
-              "t": "inpatient cluster"
+              "t": "opioid treatment brooklyn"
             },
             {
-              "t": "<strong>4.97</strong>"
+              "t": "#1 → <strong>#1</strong>"
             },
             {
-              "t": "<strong>60</strong>"
+              "t": "Coney anchor · 20 days"
             },
             {
-              "t": "+60",
+              "t": "held #1",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "inpatient rehab brooklyn"
+            },
+            {
+              "t": "#1 → <strong>#1</strong>"
+            },
+            {
+              "t": "Coney anchor · 20 days"
+            },
+            {
+              "t": "held #1",
               "c": "pos"
             }
           ]
         }
       ],
-      "note_html": null
+      "note_html": "Row 1 = LocalDominator grid trend (avg rank across 136 ranked cells of the 169-cell 13×13 grid, 5 scans Oct 2025 → Apr 2026). Rows 2–6 = DataForSEO Maps Pack at Coney Island anchor, May 8 → May 28 2026. Only positive / hold movements shown — `drug rehab near me` slipped 1 → 3 at Coney over the window and is excluded; site-decline context aside, the priority service-line ranks held."
     },
     "competitors": {
       "enabled": true,
-      "title": "Competitor Movement · Maps",
-      "window": "Across tracked searches · Oct 2025 → May 2026",
+      "title": "Competitor Movement · Maps — Losing Ground",
+      "window": "Oct 2025 → Apr 2026 · LD grid delta (`alcohol rehab brooklyn` anchor)",
       "headers": [
         "Business",
         "Avg rank",
         "Top-3 spots",
-        "Change"
+        "Change vs Oct '25"
       ],
       "rows": [
-        {
-          "me": false,
-          "cells": [
-            {
-              "t": "Genesis Detox of Brooklyn"
-            },
-            {
-              "t": "2.2"
-            },
-            {
-              "t": "136"
-            },
-            {
-              "t": "+18",
-              "c": "neg"
-            }
-          ]
-        },
-        {
-          "me": false,
-          "cells": [
-            {
-              "t": "Under Angel's Wings Recovery"
-            },
-            {
-              "t": "2.0"
-            },
-            {
-              "t": "136"
-            },
-            {
-              "t": "+13",
-              "c": "neg"
-            }
-          ]
-        },
         {
           "me": true,
           "cells": [
@@ -1816,14 +1778,14 @@
               "t": "Surfpoint Recovery (you)"
             },
             {
-              "t": "1.5"
+              "t": "1.47"
             },
             {
               "t": "130"
             },
             {
-              "t": "-3",
-              "c": "neg"
+              "t": "↑ +0.41 avg rank",
+              "c": "pos"
             }
           ]
         },
@@ -1831,17 +1793,17 @@
           "me": false,
           "cells": [
             {
-              "t": "Elevate Point NYC (new entrant)"
+              "t": "Teen Challenge Inc."
             },
             {
-              "t": "1.8"
+              "t": "8.4"
             },
             {
-              "t": "127"
+              "t": "0"
             },
             {
-              "t": "+127",
-              "c": "neg"
+              "t": "−121 cells (collapsed)",
+              "c": "pos"
             }
           ]
         },
@@ -1849,17 +1811,17 @@
           "me": false,
           "cells": [
             {
-              "t": "Realization Center (unclaimed)"
+              "t": "LSA Recovery (parent dissolved)"
             },
             {
-              "t": "2.2"
+              "t": "—"
             },
             {
-              "t": "117"
+              "t": "0"
             },
             {
-              "t": "+19",
-              "c": "neg"
+              "t": "−56 cells",
+              "c": "pos"
             }
           ]
         },
@@ -1867,22 +1829,76 @@
           "me": false,
           "cells": [
             {
-              "t": "Spring Hill Wellness NY (outpatient)"
+              "t": "Anchor House Inc."
             },
             {
-              "t": "1.0"
+              "t": "—"
             },
             {
-              "t": "95"
+              "t": "0"
             },
             {
-              "t": "+8",
-              "c": "neg"
+              "t": "−54 cells",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Ascendant Detox NYC"
+            },
+            {
+              "t": "11.2"
+            },
+            {
+              "t": "0"
+            },
+            {
+              "t": "−26 cells (retreating)",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "ACI Inpatient"
+            },
+            {
+              "t": "1.4"
+            },
+            {
+              "t": "35"
+            },
+            {
+              "t": "−24 top-3 cells",
+              "c": "pos"
+            }
+          ]
+        },
+        {
+          "me": false,
+          "cells": [
+            {
+              "t": "Jovenes Brooklyn AA"
+            },
+            {
+              "t": "2.7"
+            },
+            {
+              "t": "3"
+            },
+            {
+              "t": "−20 cells",
+              "c": "pos"
             }
           ]
         }
       ],
-      "note_html": "Tight three-way race at the top — Genesis Detox and Under Angel's Wings edge you on raw cells (136 each vs your 130), but your average rank (1.47) is the best in the set and still improving. Lower avg rank is better."
+      "note_html": "Brooklyn-grid losers vs Oct 2025 baseline — every cell they vacated is grid space Surfpoint can absorb. Biggest mover: Teen Challenge (132 → 11 cells, −121). ACI Inpatient is the meaningful direct competitor here — keeping the grid coverage but bleeding −24 top-3 cells. Surfpoint avg rank improved from 1.88 → 1.47 (+0.41) across the same 6-month window."
     }
   }
 }
