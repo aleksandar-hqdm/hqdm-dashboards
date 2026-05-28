@@ -344,12 +344,49 @@ CLIENTS = {
         'boxes_reading': ("Organic sessions stepped back in April–May (May is a partial month). Conversion tracking matured in "
                           "mid-2025, so the year-over-year lead comparison isn't meaningful and is shown as —."),
         'focus': [
-            {'title': 'June · Homepage split begins', 'color': '#1d5b8a',
-             'body': '1–2 service pages (new / revamp)<br>2 blog posts<br>1 suburb page (new / revamp)<br>On-page: redirects, internal links, GBP wiring — per need'},
-            {'title': 'July · Borough hubs + Queens GBP', 'color': '#10b981',
-             'body': '1–2 service pages (new / revamp)<br>2 blog posts<br>1 suburb page (new / revamp)<br>On-page: per need'},
-            {'title': 'August · MAT + dual-diagnosis hubs', 'color': '#6366f1',
-             'body': '1–2 service pages (new / revamp)<br>1 blog post<br>1 suburb page (new / revamp)<br>On-page: per need'},
+            {'title': 'June · Homepage split + Harlem cleanup', 'color': '#1d5b8a',
+             'body': (
+                '<span class="lbl">New pages</span>'
+                '<code>/drug-rehab-new-york-city</code> (7.2K vol, pos 12 → 8) · '
+                '<code>/alcohol-treatment-new-york-city</code> (1.8K vol, pos 11–24 → 6) · '
+                '<code>/services/medication-assisted-treatment</code> (MAT hub) · '
+                '<code>/locations/brooklyn</code> (borough hub, 552 imp/90d at pos 45–65)'
+                '<span class="lbl">Revamp</span>'
+                '<code>/suburb/upper-east-side</code> — depth lift 1087 → 2200 words (13.2K vol, pos 24 → 10–15)'
+                '<span class="lbl">On-page</span>'
+                '4 × 301: <code>/suburb/{west,east}-harlem-ny</code> → <code>/suburb/central-harlem-ny</code>; '
+                'Hamilton Heights + Morningside Heights cannibals → kw-stuffed winners. '
+                'Internal links wired to new hubs (IL-01 → IL-18). '
+                'GBP wiring: fix “Astoria, OR” service-area typo; add MAT + dual-diagnosis to Services list.'
+             )},
+            {'title': 'July · Commercial NYC + Queens + blog routing', 'color': '#10b981',
+             'body': (
+                '<span class="lbl">New pages</span>'
+                '<code>/drug-treatment-nyc</code> (10.8K vol, pos 21–54 → 8) · '
+                '<code>/rehab-centers-nyc</code> (7.6K vol, pos 16–59 → 8) · '
+                '<code>/locations/queens</code> (573 imp, biggest borough gain) · '
+                '<code>/services/dual-diagnosis</code> (Maps #1.98 → organic capture, currently pos 19.9)'
+                '<span class="lbl">Revamp · blog routing</span>'
+                '<code>/blog/suboxone-strips-vs-suboxone-pills</code> (15.3K vol pos 16–22 → MAT hub) · '
+                '<code>/blog/alcohol-detox-drink</code> (2K vol pos 11 → alcohol detox) · '
+                '<code>/blog/what-are-the-signs-that-my-body-is-detoxing</code> (1.9K vol pos 13 → detox services)'
+                '<span class="lbl">On-page</span>'
+                '2 × 301: Riverside cannibals → <code>/suburb/upper-west-side</code>. '
+                'Internal links to Queens hub + dual-diagnosis + MAT (IL-19 → IL-53). '
+                'GBP wiring: 30+ photos across 6 categories; populate 8 empty “From the Business” attributes.'
+             )},
+            {'title': 'August · Bronx hub + homepage refocus', 'color': '#6366f1',
+             'body': (
+                '<span class="lbl">Upgrade</span>'
+                '<code>/locations/bronx</code> — existing pos 81 → top 10 (133 imp/90d; 11 inbound links from existing Bronx suburb network)'
+                '<span class="lbl">Rewrite</span>'
+                '<code>/</code> homepage — refocus on brand + clinical philosophy after commercial queries offload to June/July landing pages (brand pos 5.8 → 3)'
+                '<span class="lbl">Revamp · blog routing</span>'
+                '<code>/blog/what-is-rehab</code> (2.4K vol pos 19 → new NYC commercial landings)'
+                '<span class="lbl">On-page</span>'
+                '2 × 301: Mount Eden cannibals → <code>/locations/bronx</code>. '
+                'Internal links finalized across Bronx network (IL-26 → IL-36, IL-48–49).'
+             )},
         ],
     },
 

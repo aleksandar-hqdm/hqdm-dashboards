@@ -37,7 +37,10 @@ table.mv tr.me td:first-child { font-weight: 800; }
 
 .focus-card { border: 1px solid #e2e8f0; border-left: 4px solid #1d5b8a; border-radius: 0.5rem; padding: 0.75rem 0.85rem; background: #fff; }
 .focus-card .ft { font-weight: 700; font-size: 0.875rem; color: #0f172a; margin-bottom: 0.25rem; }
-.focus-card .fb { font-size: 0.75rem; color: #475569; line-height: 1.35; }
+.focus-card .fb { font-size: 0.75rem; color: #475569; line-height: 1.4; }
+.focus-card .fb .lbl { display: block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: #64748b; margin-top: 0.55rem; margin-bottom: 0.1rem; }
+.focus-card .fb .lbl:first-child { margin-top: 0; }
+.focus-card .fb code { font-family: 'Inter', system-ui, sans-serif; font-size: 0.72rem; color: #1f2937; background: #f1f5f9; padding: 0 0.2rem; border-radius: 0.2rem; }
 
 @media print {
   .no-print { display: none !important; }
