@@ -1686,30 +1686,18 @@
     ],
     "line": {
       "labels": [
-        "Oct '25",
-        "Nov '25",
-        "Dec '25",
-        "Jan '26",
         "Feb '26",
         "Mar '26",
         "Apr '26",
         "May '26*"
       ],
       "visitors": [
-        5992,
-        5277,
-        4533,
-        3863,
         2861,
         3149,
         4424,
         5942
       ],
       "leads": [
-        11,
-        5,
-        6,
-        9,
         2,
         3,
         10,
@@ -1717,97 +1705,30 @@
       ],
       "visitors_label": "Organic visitors",
       "leads_label": "Organic leads (form_submit)",
-      "partial_index": 7,
-      "title": "Organic Performance · Monthly (Q4 2025 → now)",
+      "partial_index": 3,
+      "title": "Organic Performance · Monthly (Feb → May 2026)",
       "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
-    },
-    "quarters": {
-      "labels": [
-        "Dec '24",
-        "Q1 '25",
-        "Q2 '25",
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        9469,
-        45609,
-        30010,
-        22925,
-        15802,
-        9873,
-        10366
-      ],
-      "leads": [
-        1,
-        36,
-        52,
-        26,
-        22,
-        14,
-        19
-      ],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 6,
-      "title": "By Quarter · Visitors & Leads"
     },
     "boxes": [
       {
-        "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-48%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-45%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-42%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-35%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
+        "win": "Last 2 Months",
+        "cmp": "vs prior 2 mo",
         "kind": "good",
         "rows": [
           {
             "m": "Visitors",
-            "d": "+20%",
+            "d": "+72%",
             "cls": "pos"
           },
           {
             "m": "Leads",
-            "d": "+29%",
+            "d": "+280%",
             "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Leads = form_submit events only (Phone &amp; Email CTA clicks shown separately as intent signals). Organic-channel form submits tracked the organic-session drop; the GBP→Direct path picked up the lead slack with Q1 2026 direct-channel leads up ~4x vs Q3 2025. May is a partial month.",
+    "boxes_reading_html": "",
     "focus": [
       {
         "title": "GBP depth surge",
