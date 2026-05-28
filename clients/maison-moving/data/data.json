@@ -106,7 +106,7 @@
     {"id": "A4", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "P0", "title": "Replace 'Maison Moving (Staging)' in WP site title, og:site_name and schema name"},
     {"id": "A5", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "Med", "title": "Fix Google review links (drop gl=rs locale; add Chino Hills review link); reset author off info@hqdm.io"},
     {"id": "A6", "lever": "A", "dept": "Web Dev", "loc": "Both", "priority": "Low", "title": "Surface CPUC CAL MTR# 0190726 in schema; add USDOT/MC if interstate"},
-    {"id": "A7", "lever": "A", "dept": "Analytics", "loc": "Both", "priority": "P0", "title": "Configure GA4 lead events as conversions (form_submit, click_phone_number, gmb_click, click_email) — only 4 native conversions tracked ever; leads invisible in GA4 today"},
+    {"id": "A7", "lever": "A", "dept": "Analytics", "loc": "Both", "priority": "P0", "title": "Flag form_submit, click_phone_number and click_email as key events (conversions) in GA4; audit gmb_click trigger and treat it as interest, not a completed lead; drop the dead contact_form_submit event"},
     {"id": "B1", "lever": "B", "dept": "GMB Ops", "loc": "Chino Hills", "priority": "High", "title": "Repoint Chino Hills GBP website link to /chino-hills/"},
     {"id": "B2", "lever": "B", "dept": "Web Dev", "loc": "Both", "priority": "High", "title": "Embed the correct Google Map pin on /tustin/ and /chino-hills/"},
     {"id": "B3", "lever": "B", "dept": "Content", "loc": "Both", "priority": "High", "title": "Add local phone + in-body links to service pages on /tustin/ and /chino-hills/"},

@@ -1,7 +1,7 @@
 {
   "property": "properties/518766417",
   "gsc_property": "sc-domain:maisonmoving.com",
-  "pulled": "2026-05-27",
+  "pulled": "2026-05-28",
   "ga4_history_months": 5,
   "ga4_from": "2026-01",
   "conversion_tracking": {
@@ -11,10 +11,45 @@
       "form_submit": 7,
       "contact_form_submit": 0,
       "click_phone_number": 26,
-      "gmb_click": 98,
-      "click_email": 6
+      "click_email": 6,
+      "gmb_click": 98
     },
-    "note": "GA4 native conversions are effectively unconfigured: lead events (form_submit, click_phone_number, gmb_click, click_email) fire but are not flagged as key events/conversions, so GA4 reports ~0 conversions. The 'leads' line is a composite of those lead-action events. Configuring them as conversions is a P0 (same gap seen on Professional Movers)."
+    "event_totals_split": {
+      "gbp_clicks_total": 98,
+      "generated_leads_total": 39
+    },
+    "event_by_month": {
+      "form_submit": {
+        "2026-01": 2,
+        "2026-02": 2,
+        "2026-03": 2,
+        "2026-04": 1
+      },
+      "contact_form_submit": {},
+      "click_phone_number": {
+        "2026-05": 15,
+        "2026-04": 11
+      },
+      "click_email": {
+        "2026-04": 5,
+        "2026-03": 1
+      },
+      "gmb_click": {
+        "2026-04": 55,
+        "2026-05": 37,
+        "2026-03": 6
+      }
+    },
+    "gbp_events": [
+      "gmb_click"
+    ],
+    "lead_events": [
+      "form_submit",
+      "contact_form_submit",
+      "click_phone_number",
+      "click_email"
+    ],
+    "note": "GA4 native conversions are effectively unconfigured: lead events (form_submit, click_phone_number, click_email) and the gmb_click event fire but are not flagged as key events/conversions, so GA4 reports ~0 conversions. The dashboards now split these into two series: Generated leads (form_submit + click_phone_number + click_email + contact_form_submit) and GBP clicks (gmb_click), since GBP clicks measure interest in the listing rather than completed leads. click_phone_number and click_email tagging only went live in April 2026, so a portion of the Q1->Q2 jump is instrumentation, not demand. Configuring the lead events as key events in GA4 is a P0 (same gap seen on Professional Movers)."
   },
   "trend": {
     "months": [
@@ -56,7 +91,7 @@
       "2026-05"
     ],
     "organic_clicks": [
-      68,
+      64,
       109,
       134,
       132,
@@ -72,10 +107,10 @@
       111,
       139,
       116,
-      113
+      117
     ],
     "organic_impressions": [
-      6110,
+      5869,
       9556,
       15385,
       12920,
@@ -91,9 +126,9 @@
       18898,
       34609,
       58079,
-      108720
+      109680
     ],
-    "lead_actions": [
+    "generated_leads": [
       null,
       null,
       null,
@@ -108,9 +143,28 @@
       null,
       2,
       2,
-      9,
-      72,
-      52
+      3,
+      17,
+      15
+    ],
+    "gbp_clicks": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      0,
+      6,
+      55,
+      37
     ],
     "organic_sessions_ga4": [
       null,
@@ -129,16 +183,37 @@
       170,
       207,
       223,
-      183
+      194
     ],
     "partial_last": true,
-    "ga4_from": "2026-01"
+    "ga4_from": "2026-01",
+    "lead_actions": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      2,
+      2,
+      9,
+      72,
+      52
+    ]
   },
   "quarterly": [
     {
       "q": "Q1 2025",
-      "clicks": 311,
+      "clicks": 307,
       "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
       "leads": null,
       "partial": false
     },
@@ -146,6 +221,8 @@
       "q": "Q2 2025",
       "clicks": 362,
       "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
       "leads": null,
       "partial": false
     },
@@ -153,6 +230,8 @@
       "q": "Q3 2025",
       "clicks": 321,
       "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
       "leads": null,
       "partial": false
     },
@@ -160,6 +239,8 @@
       "q": "Q4 2025",
       "clicks": 291,
       "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
       "leads": null,
       "partial": false
     },
@@ -167,13 +248,17 @@
       "q": "Q1 2026",
       "clicks": 354,
       "months": 3,
+      "generated_leads": 7,
+      "gbp_clicks": 6,
       "leads": 13,
       "partial": false
     },
     {
       "q": "Q2 2026",
-      "clicks": 229,
+      "clicks": 233,
       "months": 2,
+      "generated_leads": 32,
+      "gbp_clicks": 92,
       "leads": 124,
       "partial": true
     }
@@ -183,16 +268,16 @@
       "q": "Q1 2026",
       "prior": "Q1 2025",
       "clicks_cur": 354,
-      "clicks_prior": 311,
-      "pct": 13.8,
+      "clicks_prior": 307,
+      "pct": 15.3,
       "partial": false
     },
     {
       "q": "Q2 2026",
       "prior": "Q2 2025",
-      "clicks_cur": 229,
+      "clicks_cur": 233,
       "clicks_prior": 248,
-      "pct": -7.7,
+      "pct": -6.0,
       "partial": true
     }
   ]

@@ -52,7 +52,7 @@
     </section>
 
     <section class="mb-6">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Organic search &amp; conversions</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Organic search · GBP clicks · generated leads</h2>
       <div class="panel">
         <div style="height:240px"><canvas id="cd-ga4-trend"></canvas></div>
         <p class="text-[11px] text-slate-500 mt-2" id="cd-organic-note"></p>
@@ -127,17 +127,19 @@
     if (GA4 && GA4.trend){
       const t=GA4.trend;
       new Chart($('cd-ga4-trend'),{data:{labels:t.months,datasets:[
-        {type:'line',label:'Organic clicks',data:t.organic_clicks,borderColor:'#1d5b8a',backgroundColor:'rgba(29,91,138,.12)',borderWidth:2.5,tension:.25,pointRadius:1.5,yAxisID:'y',fill:true,spanGaps:false},
-        {type:'line',label:'Lead actions',data:t.lead_actions,borderColor:'#10b981',borderWidth:2,tension:.25,pointRadius:1.5,yAxisID:'y1',spanGaps:false}]},
+        {type:'line',label:'Organic clicks',  data:t.organic_clicks,   borderColor:'#1d5b8a', backgroundColor:'rgba(29,91,138,.12)', borderWidth:2.5, tension:.25, pointRadius:1.5, yAxisID:'y',  fill:true,  spanGaps:false},
+        {type:'line',label:'GBP clicks',      data:t.gbp_clicks,       borderColor:'#7c3aed', borderWidth:2,  tension:.25, pointRadius:1.5, yAxisID:'y1', spanGaps:false, borderDash:[6,3]},
+        {type:'line',label:'Generated leads', data:t.generated_leads, borderColor:'#10b981', borderWidth:2,  tension:.25, pointRadius:1.5, yAxisID:'y1', spanGaps:false}]},
         options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
           plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:12,usePointStyle:true}}},
           scales:{x:{grid:{display:false},ticks:{font:{size:9},maxRotation:0,autoSkip:true,maxTicksLimit:10}},
             y:{position:'left',beginAtZero:true,grid:{color:'rgba(0,0,0,.05)'}},y1:{position:'right',beginAtZero:true,grid:{display:false}}}}});
-      $('cd-organic-note').textContent=`Organic clicks = Google Search Console (17 mo). Lead actions tracked from Jan 2026.${t.partial_last?' Last month partial.':''} Native GA4 conversions are not configured (P0).`;
+      $('cd-organic-note').textContent=`Organic clicks = GSC (17 mo). GBP clicks (gmb_click) and Generated leads (form + phone + email) from Jan 2026; phone+email tagging started Apr 2026.${t.partial_last?' Last month partial.':''} GA4 native conversions not configured (P0).`;
       const q1=(GA4.yoy_clicks||[]).find(y=>/^Q1 2026/.test(y.q)); const lq1=GA4.quarterly.find(q=>q.q==='Q1 2026'),lq2=GA4.quarterly.find(q=>q.partial);
       let tiles='';
       if(q1) tiles+=`<div class="tile ${q1.pct>=0?'good':'bad'}"><div class="l">Organic clicks · Q1 YoY</div><div class="v">${q1.pct>=0?'+':''}${q1.pct}%</div><div class="s">${q1.clicks_prior}→${q1.clicks_cur}</div></div>`;
-      if(lq1&&lq2&&lq2.leads!=null) tiles+=`<div class="tile good"><div class="l">Lead actions Q1→Q2</div><div class="v">${lq1.leads}→${lq2.leads}</div><div class="s">calls+GBP+forms · Q2 partial</div></div>`;
+      if(lq1&&lq2&&lq2.gbp_clicks!=null) tiles+=`<div class="tile watch"><div class="l">GBP clicks Q1→Q2</div><div class="v">${lq1.gbp_clicks}→${lq2.gbp_clicks}</div><div class="s">gmb_click · Q2 partial</div></div>`;
+      if(lq1&&lq2&&lq2.generated_leads!=null) tiles+=`<div class="tile good"><div class="l">Generated leads Q1→Q2</div><div class="v">${lq1.generated_leads}→${lq2.generated_leads}</div><div class="s">calls+forms+email · Q2 partial · partly instrumentation</div></div>`;
       tiles+=`<div class="tile bad"><div class="l">GA4 conversions</div><div class="v">~0</div><div class="s">lead events not flagged — configure (P0)</div></div>`;
       $('cd-ga4-tiles').innerHTML=tiles;
     }
