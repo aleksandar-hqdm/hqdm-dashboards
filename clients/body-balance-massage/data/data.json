@@ -5273,23 +5273,6 @@
             "cls": "neg"
           }
         ]
-      },
-      {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "−10%",
-            "cls": "neg"
-          },
-          {
-            "m": "Bookings",
-            "d": "−3%",
-            "cls": "neg"
-          }
-        ]
       }
     ],
     "boxes_reading_html": null,
