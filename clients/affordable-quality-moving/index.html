@@ -155,9 +155,23 @@
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-sessions"></canvas></div>
         </div>
-        <div class="bg-amber-50/60 border border-amber-200 rounded-lg p-4">
-          <h3 class="text-sm font-bold uppercase tracking-wider text-amber-800 mb-1">GA4 Conversions chart excluded this quarter</h3>
-          <p class="text-xs text-ink-600 leading-relaxed">Form-submission tracking on the website broke in early April 2026 (root-caused to the removal of the post-submit redirect to <code>/contact/thank-you/</code>, which is what the GA4 conversion trigger was wired to). Form submissions are still arriving — they're just not being recorded. A fix has been handed to the dev team. Until tracking is verified, leads and conversion-rate metrics are excluded from this dashboard. Sessions data is unaffected.</p>
+        <div class="bg-emerald-50/60 border border-emerald-200 rounded-lg p-4">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-emerald-800 mb-1">Form-Submission Tracking — Recovery in Progress</h3>
+          <p class="text-xs text-ink-700 leading-relaxed mb-2"><strong>Root cause confirmed (May 28):</strong> Contact Form 7 v6.1.5 silently dropped support for the deprecated <code>on_sent_ok</code> redirect directive, so the post-submit redirect to <code>/contact/thank-you/</code> stopped firing around <strong>Apr 14, 2026</strong>. The GA4 conversion trigger was wired to that page-view, so it went silent. The form itself never broke — submissions kept arriving in the AQMS inbox + WordPress Flamingo store.</p>
+          <p class="text-xs text-ink-700 leading-relaxed mb-2"><strong>Backfill recovered from Flamingo:</strong> 70 form submissions for the Apr 14 → May 28 gap window (5 vendor/SEO pitches filtered out → <strong>~64 real customer enquiries</strong>). Combined with the events that did track before the break:</p>
+          <div class="grid grid-cols-2 gap-3 my-2">
+            <div class="bg-white border border-emerald-200 rounded p-2.5">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">April 2026</div>
+              <div class="text-xl font-extrabold text-emerald-700">40 form submissions</div>
+              <div class="text-[11px] text-ink-600">16 tracked (Apr 1-13) + 24 backfilled (Apr 14-30)</div>
+            </div>
+            <div class="bg-white border border-emerald-200 rounded p-2.5">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">May 2026 (first 28 days)</div>
+              <div class="text-xl font-extrabold text-emerald-700">47 form submissions</div>
+              <div class="text-[11px] text-ink-600">1 tracked + 46 backfilled · ~50/mo run rate</div>
+            </div>
+          </div>
+          <p class="text-xs text-ink-700 leading-relaxed"><strong>What's next:</strong> The WordPress-side <code>wpcf7mailsent</code> dataLayer listener is live (deployed by AQMS dev team via WPCode Lite). The GTM Custom-Event trigger + GA4 Event tag are queued for publication in container <code>GTM-WXJ28RZR</code>. Once that lands, the 70 backfilled events will be sent to GA4 via Measurement Protocol, the chart above will be repopulated, and conversion-rate metrics will return to all AQMS reports.</p>
         </div>
         <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
       </div>
