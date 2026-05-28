@@ -1579,16 +1579,15 @@
               { "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program", "k": "fix", "n": "Currently 0 schema on any service page · service-page entity floor" }
             ],
             [
-              { "u": "Redirect ~60 doorway URLs (/locations/best- · most-trusted- · dependable- · premium- · holistic-* etc.) → nearest anchor city page (small-level 301 per fill-not-kill policy)", "k": "redirect", "n": "9 new doorways shipped 2026-04-15 → 05-18 alone · template-pattern identical to Surfpoint + Arms Acres · per-URL anchor-city map in Cannibal_Cleanup_Plan.csv" },
-              { "u": "NOINDEX or 410 the ~300 off-vertical high-impression blogs (porn-addiction 350K imp · vape-by-country · social-media addiction · generic-mental-health)", "k": "redirect", "n": "670-post blog at 96% of impressions diluting topical authority off the addiction-treatment vertical · ~250 NOINDEX + ~50 410 split per Cannibal_Cleanup_Plan scoring" },
-              { "u": "GBP Posts × 4 (drug-detox · benzo-detox · payor topics · insurance) + 4 driving-direction pins (Tonawanda · Cheektowaga · Kenmore · Lockport east → Newfane)", "k": "fix" },
-              { "u": "Tier 2 citations × 15 (industry directories + local-NY directories)", "k": "fix" }
+              { "u": "Redirect doorway-template /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest anchor city page", "k": "redirect" },
+              { "u": "NOINDEX off-vertical high-impression blog cohort (porn-addiction · vape-by-country · social-media addiction · generic-mental-health)", "k": "fix" },
+              { "u": "Internal-link M1 refreshed blogs → /services/* hub + /admissions", "k": "fix" },
+              { "u": "GBP → site UTM consistency · ?utm_source=gmb on all GBP CTAs", "k": "fix", "n": "defend the GBP-tagged organic share (45.8% of all organic sessions in last 30d)" }
             ],
             [
-              { "u": "Sitewide internal-linking pass on ~370 surviving KEEP blogs · 1-2 internal links each to /services/* + /locations/<anchor>", "k": "fix", "n": "Consolidates topical-authority hubs after CC-01 NOINDEX/410 reduces inventory · ~700 link-edits per Internal_Linking_Map.csv" },
-              { "u": "GBP Posts × 4 (short-term residential · DBT · WNY break-out · brand-canonical reinforce) + 4 driving-direction pins (Niagara Falls · Lewiston · Youngstown · Clarence → Newfane)", "k": "fix" },
-              { "u": "Tier 3 citations × 20 + WNY editorial pitch (Buffalo News health vertical · WGRZ · WNY Refresh — 1-2 mentions)", "k": "fix" },
-              { "u": "M3 close-out scorecard — cross-source rank + Maps + GSC + cannibal + GA4-conversion in one document", "k": "fix", "n": "Drives next quarterly strategy refresh (Q3 2026 plan)" }
+              { "u": "Schema audit · MedicalBusiness + Service on M1/M2 revamped /services/* · LocalBusiness on upgraded /locations/*", "k": "fix" },
+              { "u": "Internal-link audit · /admissions hub → service ladder + WNY anchor location pages", "k": "fix" },
+              { "u": "Page-level schema refactor · core pages (homepage + /about-us + /admissions + /contact-us + /treatments)", "k": "fix", "n": "swap any global @graph debris for page-specific MedicalBusiness / BreadcrumbList / FAQPage" }
             ]
           ]
         }
