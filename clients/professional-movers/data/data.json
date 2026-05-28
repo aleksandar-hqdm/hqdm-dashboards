@@ -2236,23 +2236,6 @@
         ]
       },
       {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-22%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-26%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
         "win": "Year over Year",
         "cmp": "vs Q2 2025",
         "kind": "watch",
