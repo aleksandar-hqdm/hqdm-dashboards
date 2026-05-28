@@ -1404,7 +1404,7 @@
     "short_name": "Conifer Park",
     "subtitle": "Q2 2026 · Capital Region NY · 7 locations · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>The last six to nine months tell a quiet but real <strong>quality story</strong>: Conifer Park now holds <strong>#1 or #2 in the Map Pack at all seven locations</strong>, the Glenville flagship gained <strong>+19 top-10 grid cells</strong> Feb→Apr, Troy added <strong>+107 top-10 cells</strong> Apr→May, and Maps clicks climbed from ~700/mo to a <strong>March peak of 1,099</strong>. Form-submit leads have held steady even as blog-driven organic sessions softened, lifting <strong>organic conversion rate from 0.4% (Q3 '25) to ~1.0% (Q1 '26)</strong>. The watch points are the 3.3★ average rating (3 pins still below the 4★ AI-citation threshold) and the post-migration decline in non-brand blog traffic — both directly addressed by the Q2 plan (Plattsburgh-template replication, service-page un-geo-lock, review-velocity SOP, architectural cleanup).</p>",
+    "exec_html": "<p>The last six to nine months tell a quiet but real <strong>quality story</strong>: Conifer Park now holds <strong>#1 or #2 in the Map Pack at all seven locations</strong>, the Glenville flagship gained <strong>+19 top-10 grid cells</strong> Feb→Apr, Troy added <strong>+107 top-10 cells</strong> Apr→May, and Maps clicks climbed from ~700/mo to a <strong>March peak of 1,099</strong>. Form-submit leads have held steady even as blog-driven organic sessions softened, lifting <strong>organic conversion rate from 0.4% (Q3 '25) to ~1.0% (Q1 '26)</strong>. The watch point is the post-migration decline in non-brand blog traffic, which the Q2 plan directly addresses through Plattsburgh-template replication, service-page un-geo-lock, and architectural cleanup.</p>",
     "chips": [
       {
         "v": "7 / 7",
@@ -1420,11 +1420,6 @@
         "v": "0.4% → 1.0%",
         "l": "organic CVR (Q3'25 → Q1'26)",
         "good": true
-      },
-      {
-        "v": "3.3★",
-        "l": "avg rating (lift in motion)",
-        "watch": true
       }
     ],
     "line": {
@@ -1530,11 +1525,6 @@
         "title": "Glenville + Troy GBP build-out",
         "color": "#6366f1",
         "body": "Build out the HQDM-scoped Glenville and Troy Google Business pins."
-      },
-      {
-        "title": "Review-velocity SOP",
-        "color": "#f59e0b",
-        "body": "Run a review-velocity SOP across all seven facilities to lift ratings above the 4★ AI-citation threshold."
       }
     ],
     "maps": {
@@ -1773,7 +1763,7 @@
           ]
         }
       ],
-      "note_html": "Your Glenville inpatient pin leads the reference set (584 top-3 cells, +19), but several competitors are gaining fast — Hospitality House (+258) and Every1 Center (+64). Review velocity is the lever to defend. Lower avg rank is better."
+      "note_html": "Your Glenville inpatient pin leads the reference set (584 top-3 cells, +19), but several competitors are gaining fast — Hospitality House (+258) and Every1 Center (+64). Lower avg rank is better."
     }
   }
 }
