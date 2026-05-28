@@ -1408,43 +1408,6 @@
         "good": true
       }
     ],
-    "line": {
-      "labels": [
-        "Oct '25",
-        "Nov '25",
-        "Dec '25",
-        "Jan '26",
-        "Feb '26",
-        "Mar '26",
-        "Apr '26",
-        "May '26*"
-      ],
-      "visitors": [
-        5224,
-        4689,
-        5713,
-        6893,
-        8347,
-        9133,
-        4834,
-        3366
-      ],
-      "leads": [
-        10,
-        17,
-        7,
-        10,
-        14,
-        12,
-        10,
-        6
-      ],
-      "visitors_label": "Organic visitors",
-      "leads_label": "Form-submit leads",
-      "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors + form-submit leads. A dashed tail marks the partial current month. GMB clicks and phone-link clicks are non-lead signals tracked separately in the strategic dashboard."
-    },
     "quarters": {
       "labels": [
         "Dec '24",

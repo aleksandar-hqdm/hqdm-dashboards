@@ -57,9 +57,14 @@
   }
 
   function buildHTML(s, eng) {
-    const tablesOn = [s.maps && s.maps.enabled, s.competitors && s.competitors.enabled].filter(Boolean).length;
-    const tablesGrid = tablesOn === 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
-    const tablesHtml = [s.maps, s.competitors].filter(t => t && t.enabled).map(tablePanel).join('');
+    // Three optional table panels: maps / anchor_towns_table / competitors.
+    // Each is rendered only when present + enabled. anchor_towns_table is the
+    // newer "where the brand structurally already wins" view; layout scales
+    // 1/2/3-up so the grid stays balanced no matter which subset is present.
+    const tablesList = [s.maps, s.anchor_towns_table, s.competitors].filter(t => t && t.enabled);
+    const tablesOn = tablesList.length;
+    const tablesGrid = tablesOn >= 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+    const tablesHtml = tablesList.map(tablePanel).join('');
     const engagementHtml = (eng && eng.enabled) ? `
       <section class="mb-3">
         <div class="panel p-3.5">
@@ -82,6 +87,7 @@
     // Layout: when there's no quarters chart, line chart goes full width and
     // boxes (Last 90 Days / YoY pills) drop into their own section below.
     const hasQuarters = !!(s.quarters && Array.isArray(s.quarters.visitors) && s.quarters.visitors.length);
+    const hasLine = !!(s.line && Array.isArray(s.line.visitors) && s.line.visitors.length);
     const hasBoxes = !!(s.boxes && s.boxes.length);
     const boxCols = Math.min(s.boxes ? s.boxes.length : 0, 3);
     return `
@@ -112,7 +118,7 @@
         </div>
       </section>
 
-      ${hasQuarters ? `
+      ${(hasLine && hasQuarters) ? `
       <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
         <div class="panel p-3.5">
           <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
@@ -124,6 +130,14 @@
           <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
           ${hasBoxes ? `<div class="grid grid-cols-3 gap-2 mt-3">${s.boxes.map(boxEl).join('')}</div>` : ''}
           ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-2">${s.boxes_reading_html}</p>` : ''}
+        </div>
+      </section>` : hasQuarters ? `
+      <section class="mb-3">
+        <div class="panel p-3.5">
+          <div class="secthead mb-2">${s.quarters.title || 'By Quarter'}</div>
+          <div style="height: 220px;"><canvas id="quarter-chart"></canvas></div>
+          ${hasBoxes ? `<div class="grid grid-cols-1 sm:grid-cols-${boxCols} gap-3 mt-3">${s.boxes.map(boxEl).join('')}</div>` : ''}
+          ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-3">${s.boxes_reading_html}</p>` : ''}
         </div>
       </section>` : `
       <section class="mb-3">
