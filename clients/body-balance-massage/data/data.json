@@ -5172,8 +5172,7 @@
         "Jan '26",
         "Feb '26",
         "Mar '26",
-        "Apr '26",
-        "May '26*"
+        "Apr '26"
       ],
       "visitors": [
         1815,
@@ -5182,8 +5181,7 @@
         3461,
         3577,
         3410,
-        2601,
-        2469
+        2601
       ],
       "leads": [
         62.0,
@@ -5192,14 +5190,13 @@
         64.0,
         47.0,
         53.0,
-        59.0,
-        53.0
+        59.0
       ],
       "visitors_label": "Organic visitors",
       "leads_label": "Bookings & leads",
-      "partial_index": 7,
+      "partial_index": -1,
       "title": "Organic Performance · Monthly (Q4 2025 → now)",
-      "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
+      "caption": "Visitors (left axis) and leads (right axis) from organic search."
     },
     "quarters": {
       "labels": [
@@ -5208,8 +5205,7 @@
         "Q2 '25",
         "Q3 '25",
         "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
+        "Q1 '26"
       ],
       "visitors": [
         3055,
@@ -5217,8 +5213,7 @@
         8077,
         5974,
         5952,
-        10448,
-        5070
+        10448
       ],
       "leads": [
         45,
@@ -5226,12 +5221,11 @@
         184,
         169,
         171,
-        164,
-        112
+        164
       ],
       "visitors_label": "Visitors",
       "leads_label": "Bookings",
-      "partial_index": 6,
+      "partial_index": -1,
       "title": "By Quarter · Visitors & Leads"
     },
     "boxes": [
