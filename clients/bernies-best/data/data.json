@@ -1780,6 +1780,115 @@
         }
       ],
       "note_html": "Spot &amp; Tango (★) is the story — a <strong>+2,078%</strong> jump in top-10 keywords off a verified PR-stunt backlink pattern. That's the highest-ROI tactic to replicate. ★ marks the verified pattern."
+    },
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · June → August 2026",
+      "subtitle": "Per-track cadence: 5 refresh blogs / 1–2 PDP rebuilds / sitewide template + index hygiene / off-page push. Codes reference the full strategy levers (BLOG-, PDP-, SCHEMA-, TPL-, IDX-, OFF-).",
+      "months": [
+        "M1 · June 2026",
+        "M2 · July 2026",
+        "M3 · August 2026"
+      ],
+      "rows": [
+        {
+          "label": "Blogs",
+          "cap": "5 / mo · refresh on S&T pattern",
+          "cells": [
+            [
+              { "k": "refresh", "u": "/blogs/bernies-blog/dog-has-diarrhea-at-night", "n": "14.8K SV · pos 94 · −1,446 clicks YoY · solve cannibalization + redirect" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/help-why-is-my-dog-throwing-up-undigested-food", "n": "5.4K SV · pos 71 · −983 · S&T 2.6× depth gap" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/enzymatic-toothpaste-for-dogs-what-are-they", "n": "6.6K SV · pos 32 · −683 · pivot to comparative listicle" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/what-to-feed-a-dog-with-inflammatory-bowel-disease", "n": "1.9K SV · pos 61 · −681 · upgrade + Perfect Poop PDP link (TPL-04)" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/its-potty-time-how-long-after-a-dog-eats-do-they-poop", "n": "8.1K SV · pos 64 · −523 · full sitemap action stack" }
+            ],
+            [
+              { "k": "refresh", "u": "/blogs/bernies-blog/signs-my-dog-needs-fiber", "n": "12.1K SV · pos 68 · −494 · upgrade + DVM byline (TPL-08)" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/black-dog-poop-causes-treatments", "n": "12.1K SV · pos 27 · −450 · S&T pair-1 winner template (3,974w target)" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/common-health-problems-for-bernese-mountain-dogs", "n": "720 SV · pos 15 · −435 · breed-health framing" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/how-long-can-dogs-hold-their-poop", "n": "2.9K SV · pos 20 · −372 · redirect + consolidate" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/how-do-i-make-my-dogs-poop-smell-better", "n": "1.6K SV · pos 73 · −290 · full action stack + Perfect Poop link" }
+            ],
+            [
+              { "k": "refresh", "u": "/blogs/bernies-blog/help-my-dog-is-throwing-up-white-foam", "n": "22.2K SV · 303 ranked kws — biggest surface in the top-50" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/help-my-dog-is-throwing-up-clear-liquid", "n": "2.9K SV · pos 14 → target 8 · S&T 2.8× depth gap" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/doggy-detox-how-to-flush-a-dog-s-digestive-system", "n": "pos 71 · cluster-mapped to /detox-nyc-style hub via TPL-03" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/my-dog-just-yakked-what-to-feed-dogs-after-vomiting", "n": "vomiting cluster · S&T pattern (yellow bile pair = 3.19× gap)" },
+              { "k": "refresh", "u": "/blogs/bernies-blog/intestinal-malabsorption-in-dogs", "n": "Perfect Poop cluster · DVM body-citation (TPL-08 differentiator vs S&T)" }
+            ]
+          ]
+        },
+        {
+          "label": "Product pages",
+          "cap": "1–2 / mo · PDP rebuild + schema",
+          "cells": [
+            [
+              { "k": "revamp", "u": "store.bernies.com/products/bernies-perfect-poop", "n": "PDP-01 · 1.38M SV / 1,011 PURE_OPP kws · H2s = category kws (probiotic, digestive, gut health)" },
+              { "k": "revamp", "u": "store.bernies.com/products/healthy-hips", "n": "PDP-02 · 444K SV / 1,001 PURE_OPP · currently 0 non-brand rankings · glucosamine/chondroitin/MSM in indexable structure" },
+              { "k": "new", "u": "Product + Review + FAQ schema on both PDPs", "n": "SCHEMA-01 + SCHEMA-02 · permission-blocked gap vs Native Pet" },
+              { "k": "fix", "u": "Sitewide Organization + BreadcrumbList JSON-LD template", "n": "SCHEMA-06 · prerequisite for PDP-level schema to inherit cleanly" }
+            ],
+            [
+              { "k": "revamp", "u": "store.bernies.com/products/omg-omegas", "n": "PDP-03 · 426K SV / 622 PURE_OPP · surface omega-3 / EPA-DHA / fish-oil in H1/H2/body" },
+              { "k": "revamp", "u": "store.bernies.com/products/charming-chompers", "n": "PDP-04 · 244K SV / 678 PURE_OPP · 'alternative to Greenies' positioning" },
+              { "k": "new", "u": "Product + Review + FAQ schema on both PDPs", "n": "SCHEMA-03 + SCHEMA-04" },
+              { "k": "new", "u": "store.bernies.com/collections/digestive · /collections/joint-mobility", "n": "comparative-SERP capture (18% of opportunity universe lives here, not on PDPs)" }
+            ],
+            [
+              { "k": "revamp", "u": "store.bernies.com/products/marvelous-mobility", "n": "PDP-05 · composite with Hips (26 PURE_OPP standalone)" },
+              { "k": "new", "u": "Schema on Marvelous Mobility PDP", "n": "SCHEMA-05 · closes the 5-SKU PDP schema set" },
+              { "k": "fix", "u": "PDP-INTERLINK · 15 WRONG_URL fixes — add PDP links from ranking blog/KB URLs", "n": "TPL-04 close-out · funnels existing blog authority into store-gap capture" }
+            ]
+          ]
+        },
+        {
+          "label": "Index hygiene",
+          "cap": "restore 2,670 not-indexed · sitewide template",
+          "cells": [
+            [
+              { "k": "fix", "u": "Canonical tags for parameter pollution", "n": "IDX-01 · <code>?_gl, ?utm, ?_pos, ?_sid, ?reviews-page, ?srsltid</code> on store + www" },
+              { "k": "redirect", "u": "Duplicate URL paths (root → /blogs/bernies-blog/<slug>/)", "n": "IDX-02 · canonical signal consolidation" },
+              { "k": "redirect", "u": "5 × Learn More pages (www.bernies.com/<sku>/<subtopic>/) → store PDP", "n": "the 5×5 cannibalization fix · 12 of 15 mapped top-50 losers carry this action" },
+              { "k": "fix", "u": "TPL-01 visible 'Updated' date · TPL-05 demote footer H3s · TPL-06 FAQPage schema", "n": "Divi Theme Builder · sitewide blog template lift (~1,250 pollution H3s removed)" },
+              { "k": "fix", "u": "TPL-02 cluster-aware Featured Blogs widget · TPL-08 DVM byline", "n": "concentrates PageRank within Perfect Poop / Hips / Omegas / Chompers / Mobility clusters" }
+            ],
+            [
+              { "k": "fix", "u": "Review-pagination URLs → rel=canonical to /perfect-poop/reviews/", "n": "IDX-03" },
+              { "k": "fix", "u": "Blog-pagination loops → rel=canonical to clean URL", "n": "IDX-04" },
+              { "k": "redirect", "u": "Top-50 loser redirect-chain cleanup (15 mapped redirect actions)", "n": "from Ideal Sitemap analysis · S&T pair-15 redirect-chain pattern" },
+              { "k": "fix", "u": "TPL-07 BreadcrumbList JSON-LD · TPL-09 Blog ↔ Knowledge Base cross-link", "n": "schema-visible-data parity · KB authority funneled into clusters" }
+            ],
+            [
+              { "k": "fix", "u": "Thin-taxonomy audit · /university/<dim>/<value>/ → KEEP / CONSOLIDATE / NOINDEX", "n": "IDX-05 · removes the last not-indexed bucket" },
+              { "k": "fix", "u": "GSC Coverage re-check · target −800 not-indexed pages vs M1 baseline", "n": "IDX-06 weekly monitor close-out" },
+              { "k": "redirect", "u": "TPL-10 URL-path consolidation kickoff (3-segment → 2-segment)", "n": "M3+ phased 250+ URL 301 plan · S&T parity on click-depth" }
+            ]
+          ]
+        },
+        {
+          "label": "Off-page",
+          "cap": "PR stunt + citations + affiliate",
+          "cells": [
+            [
+              { "k": "new", "u": "PR stunt · quirky-job-posting via Businesswire, tied to new SKU launch", "n": "OFF-07 · $350–$2K spend · S&T April-2026 stunt produced 111 real-auth RDs (DR avg 66)" },
+              { "k": "new", "u": "Claim BBB.org · Glassdoor · RocketReach · LeadIQ · Owler", "n": "OFF-08 · 5 standard-business citations all peers have, Bernie's is missing" },
+              { "k": "new", "u": "Affiliate program activation — Refersion / Impact / ShareASale + coupon networks", "n": "OFF-09 · sustained brand-coupon SERP surface (DR 60–74 affiliate RDs)" },
+              { "k": "new", "u": "Tier 1 PR batch · 10–15 pitches to DR 70+ pet & lifestyle publishers", "n": "OFF-01 + OFF-02 · audit-driven targets" },
+              { "k": "fix", "u": "HARO / Qwoted / Featured / Connectively daily monitor", "n": "OFF-10 · 2–3 placements/quarter at DR 85+ if cadence holds" }
+            ],
+            [
+              { "k": "new", "u": "Pet-industry publication outreach · 15–20 pitches", "n": "OFF-03 · DR 50–75 niche · category-relevant link surface" },
+              { "k": "fix", "u": "Brand-mention reclamation · convert unlinked mentions to links", "n": "OFF-04 · audit Ahrefs unlinked-mention export · email outreach batch" },
+              { "k": "new", "u": "M1 stunt amplification · syndication chase + tier-2 follow-up pitches", "n": "PR-stunt long tail · S&T stunt rebounded for 60+ days post-Businesswire" }
+            ],
+            [
+              { "k": "new", "u": "Tier 3 niche outreach + M1/M2 follow-up sequence", "n": "OFF-05 · close referring-domain gaps vs S&T cohort" },
+              { "k": "fix", "u": "Q3 close-out · refdomain gain vs S&T baseline · cohort delta report", "n": "OFF-06 · feeds Q4 planning" }
+            ]
+          ]
+        }
+      ],
+      "note_html": "Sourced from the Q3 Strategic Diagnosis (2026-05-19), the S&T 20-pair pattern audit, the store-gap mini-report, top-50-losers + Ideal Sitemap join, site-level-upgrades spec, and the backlink-pattern study (S&T = +2,078% top-10 kws, highest-ROI tactic in the 5-peer cohort). Codes (BLOG-, PDP-, SCHEMA-, TPL-, IDX-, OFF-) are clickable in the full strategy view."
     }
   }
 }
