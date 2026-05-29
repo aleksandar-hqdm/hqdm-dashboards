@@ -2243,28 +2243,109 @@
       }
     ],
     "boxes_reading_html": "<p class=\"mb-2\"><strong>The recovery is showing in all three metrics.</strong> Visitors are up moderately (+8%), conversion rate is up (+6%), and leads are up the most (+14%) &mdash; meaning the lift is part more traffic, part the site converting better per visitor, not just one or the other.</p><p class=\"mb-2\"><strong>Where the lift is coming from.</strong> The Google-Business &ldquo;Website&rdquo; button is the dominant lead channel: it converts at <strong>~17.5%</strong>, nearly double the <strong>~9.2%</strong> organic baseline, and its monthly form-submit volume hit an <strong>18-month high</strong> in May. Defended top-3 Maps coverage on the volume queries (&ldquo;movers near me&rdquo;, &ldquo;movers&rdquo;) is feeding higher-intent visitors into the same quote form.</p><p><strong>How Q3 compounds it.</strong> The next 90 days lean into the channel already converting: claim the two unmanaged Google Business pins on the eastern side of the metro (<strong>Detroit Woodward + Rochester</strong>), where the Walled Lake pin is already reaching cells in the Detroit-side queries (top-10 reach <strong>9 &rarr; 67 cells</strong> on &ldquo;movers detroit&rdquo;, <strong>8 &rarr; 16</strong> on &ldquo;detroit moving company&rdquo;). Each claimed pin roughly doubles the converting surface area at no incremental ad spend.</p>",
-    "focus": [
-      {
-        "title": "Expand Maps presence",
-        "color": "#10b981",
-        "body": "Claim + manage the Detroit Woodward and Rochester Google Business pins and add Driving-Direction pins to close the metros a single Walled Lake pin can’t reach."
-      },
-      {
-        "title": "Page surgery on city pages",
-        "color": "#1d5b8a",
-        "body": "Clean up the templated suburb pages that triggered the ranking demotion, consolidate thin pages, and rebuild the ones worth keeping with real depth."
-      },
-      {
-        "title": "Rebuild the earned-link profile",
-        "color": "#6366f1",
-        "body": "Replace the hollowed-out automated link stack with local PR, citations, and genuine local links to restore authority."
-      },
-      {
-        "title": "Content + conversion tracking",
-        "color": "#f59e0b",
-        "body": "Lock down conversion tracking, refresh top blog posts, and add commercial-intent articles that feed the quote form."
-      }
-    ],
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · June → August 2026",
+      "subtitle": "Per-page actions for the next 90 days · sourced from GSC pages_180d + DFS Labs Ranked Keywords + Professional_Movers_Pages_Action_List.csv",
+      "months": [
+        "M1 · June 2026",
+        "M2 · July 2026",
+        "M3 · August 2026"
+      ],
+      "rows": [
+        {
+          "label": "Services",
+          "cap": "1–2 / month · revamp",
+          "cells": [
+            [
+              { "u": "/residential/hot-tub-moving-services/", "k": "revamp", "n": "SP-01 · 173K imp/365d · pos 14.7 · spa-brand table (Bullfrog, Sundance, Caldera) + insurance + route protection" },
+              { "u": "/residential/piano-moving-services/", "k": "revamp", "n": "SP-02 · 125K imp · pos 19.7 · piano-type table + insurance + music-school partnerships" }
+            ],
+            [
+              { "u": "/artwork-moving/", "k": "revamp", "n": "SP-03 · 76K imp · pos 21.9 · custom crating + museum case studies + climate control" },
+              { "u": "/senior-moving/", "k": "revamp", "n": "SP-04 · 59K imp · pos 17.0 · downsizing concierge + NASMM/SMM-A certifications" }
+            ],
+            [
+              { "u": "/office/furniture-installation-services/", "k": "revamp", "n": "SP-06 · 29K imp · pos 40.7 · biggest rank-lift target · FF&amp;E reinstall + IT moves + OSHA compliance" },
+              { "u": "/residential/local-moving-services/", "k": "revamp", "n": "SP-05 · 52K imp · pos 21.7 · Detroit-metro FAQ + 3-office cross-links" }
+            ]
+          ]
+        },
+        {
+          "label": "Blogs",
+          "cap": "5 / month · refresh + new",
+          "cells": [
+            [
+              { "u": "/blog/how-to-pack-dishes-for-moving", "k": "refresh", "n": "BLG-01 · 4,884 imp/30d, 1 click · add /packing/ commercial link + Detroit context" },
+              { "u": "/blog/how-to-move-a-pool-table", "k": "refresh", "n": "BLG-02 · 2,561 imp/30d · piano cross-link · AIO pattern-match (Allied + Two Men cited)" },
+              { "u": "/blog/how-to-move-a-refrigerator", "k": "refresh", "n": "BLG-03 · 1,779 imp/30d · /residential/local-moving-services/ cross-link" },
+              { "u": "/blog/flat-screen-tv-moving-cost", "k": "refresh", "n": "1.36% CTR niche-cost exemplar · re-link to service hubs + 2026 stats" },
+              { "u": "Top-5 GSC pages_180d title rescues", "k": "refresh", "n": "low-CTR titles on high-imp ranking posts · title + FAQ schema (slugs per current GSC export)" }
+            ],
+            [
+              { "u": "/blog/moving-cost-detroit-mi-2026", "k": "new", "n": "BLG-04 · AIO triggers on this query · per-service price-range table + calculator + vs national average" },
+              { "u": "/blog/best-moving-company-detroit-reviews", "k": "new", "n": "BLG-05 · PM #9 organic today · push to top-5 with USDOT credential signaling" },
+              { "u": "/blog/how-much-to-tip-movers-detroit", "k": "new", "n": "BLG-06 · AIO triggers (Reddit + Cool Hand cited) · PM-specific tipping + Detroit rates" },
+              { "u": "/blog/office-moving-cost-detroit", "k": "new", "n": "supports SP-06 (highest rank-lift target) · commercial price range + RFP framework" },
+              { "u": "/blog/moving-companies-michigan-guide", "k": "new", "n": "editorial hub for HP-04 · links into /locations/[city]/ stubs" }
+            ],
+            [
+              { "u": "/blog/piano-moving-cost", "k": "new", "n": "niche-cost exemplar (flat-screen pattern) · supports SP-02 piano page" },
+              { "u": "/blog/hot-tub-moving-cost", "k": "new", "n": "niche-cost exemplar · supports SP-01 hot-tub page" },
+              { "u": "/blog/artwork-moving-cost", "k": "new", "n": "museum case-study citation potential · supports SP-03 artwork page" },
+              { "u": "/blog/senior-moving-cost", "k": "new", "n": "supports SP-04 · downsizing-cost framework + NASMM data" },
+              { "u": "/blog/local-moving-cost-walled-lake", "k": "new", "n": "WL/HQ-pin level cost guide · feeds /locations/walled-lake/ hub" }
+            ]
+          ]
+        },
+        {
+          "label": "Suburbs",
+          "cap": "3 / month · revamp + new",
+          "cells": [
+            [
+              { "u": "/movers-novi-mi/", "k": "revamp", "n": "PA-23 · highest-imp keep-audit · templated → real location page · USDOT credentials + unique copy" },
+              { "u": "PA-24 surviving burb", "k": "revamp", "n": "per Pages_Action_List.csv · same template (real copy + service summary + USDOT)" },
+              { "u": "PA-25 surviving burb", "k": "revamp", "n": "per Pages_Action_List.csv · same template" }
+            ],
+            [
+              { "u": "/movers-detroit-mi/", "k": "new", "n": "HP-01 · national-mover-grade depth · Wayne County + Woodward + downtown · LocalBusiness + Service schema" },
+              { "u": "/moving-companies-detroit-mi/", "k": "new", "n": "HP-02 · intent-split (companies vs movers) · comparison table vs national-mover competitors" },
+              { "u": "/movers-walled-lake-mi/", "k": "new", "n": "HP-03 · AIO-citation-optimized · defends 5,756 imp pos 4.6 (currently 0 clicks · AIO suppression)" }
+            ],
+            [
+              { "u": "/moving-companies-michigan/", "k": "new", "n": "HP-04 · statewide cluster · hub-and-spoke into /locations/[city]/" },
+              { "u": "/locations/walled-lake/", "k": "new", "n": "areas-served hub · links to surviving burbs (PA-23..26) + WL service summary" },
+              { "u": "/locations/detroit-woodward/", "k": "new", "n": "location stub · paired with HP-01 Detroit page · primes the eastern-metro geo cluster" }
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "per need · redirects · schema · internal links",
+          "cells": [
+            [
+              { "u": "DELETE + 301 · 26 burb pages → topical hubs", "k": "redirect", "n": "PA-02..22 · burbs with backlinks/referral routed to /[service]/ or /locations/walled-lake/ (1.3% of 30d imp from 70+ polluting URLs)" },
+              { "u": "410 + sitemap removal · 22 burb pages", "k": "fix", "n": "zero-backlink / zero-referral / zero-imp cohort · cleanest site-quality lift" },
+              { "u": "GBP ↔ site NAP + description sync · 3 PM pins", "k": "fix", "n": "BBB, Yelp, USDOT registry, Yellow Pages, citation directories · USDOT 266582 + MCICC 178368 + CVED L19032" },
+              { "u": "Internal links IL-001..020", "k": "fix", "n": "footer adds HP-01..04 sitewide + service-page cross-cluster (hot-tub ↔ piano ↔ artwork) + nav adds Detroit + MI" }
+            ],
+            [
+              { "u": "Schema deploy · HP-01..03 + SP-01..04 + M1 refreshes", "k": "fix", "n": "LocalBusiness on HP pages · Service on SP pages · FAQPage on refreshed blogs (matches AIO citation pattern)" },
+              { "u": "BreadcrumbList schema · sitewide rollout", "k": "fix", "n": "0% → 100% · SERP-feature acquisition" },
+              { "u": "Internal links IL-021..040", "k": "fix", "n": "blog → commercial pull-through (pack-dishes → /packing/, pool-table → /piano/) + service-cluster 'Also offered' block" },
+              { "u": "PAA-FAQ structure · top-imp pages", "k": "fix", "n": "20/20 monitored queries have PAA · easier SERP feature than AIO" }
+            ],
+            [
+              { "u": "/ homepage refocus on brand", "k": "revamp", "n": "HP-05 · drop commercial-query load (absorbed by HP-01..04) · brand + 3-office overview (brand-pull = 54% clicks from 12% imp today)" },
+              { "u": "Internal links IL-041..050", "k": "fix", "n": "areas-served hub-to-spoke · /locations/walled-lake/ → surviving burbs + /locations/detroit-woodward/" },
+              { "u": "Schema deploy · HP-04 + SP-05/06 + M2 blogs", "k": "fix", "n": "LocalBusiness + Service schema on new pages · FAQPage on M2 commercial blogs" },
+              { "u": "Halt queued burb drafts", "k": "fix", "n": "Asana queue: Wolverine Lake, Addington Corners, Old Pine Way, Walled Lake Villa · do not publish (templated pattern triggered the demotion)" }
+            ]
+          ]
+        }
+      ],
+      "note_html": "Sources: <code>Professional_Movers_Pages_Action_List.csv</code> (per-URL actions), GSC pages_last_180d, DFS Labs Ranked Keywords, <code>Internal_Linking_Map.csv</code> (FROM→TO changes). Out of scope per current engagement: GBP reviews / Q&amp;A / photos cadence, off-page link building. Tags: <span class=\"tag revamp\">revamp</span> existing-page rebuild · <span class=\"tag new\">new</span> net-new page · <span class=\"tag refresh\">refresh</span> blog title + intro + FAQ schema + 2026 stats · <span class=\"tag redirect\">redirect</span> 301 / 410 / canonical · <span class=\"tag fix\">fix</span> technical on-page (schema, internal links, NAP)."
+    },
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
