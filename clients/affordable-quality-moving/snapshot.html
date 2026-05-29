@@ -104,9 +104,11 @@
     <section class="mb-3">
       <div class="panel p-3.5">
         <div class="secthead mb-2">Organic Visitors · Monthly (Jan 2026 → now)</div>
-        <div style="height: 260px;"><canvas id="line-chart"></canvas></div>
+        <div class="relative" style="height: 260px;">
+          <canvas id="line-chart"></canvas>
+          <div id="movement-pill" class="absolute right-2" style="top:48px; pointer-events:none;"></div>
+        </div>
         <p class="text-[11px] text-slate-500 mt-2">Monthly organic visitors. The dashed tail is <strong>May (first 22 days)</strong> — a partial month, not a finished one. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from these charts.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3" id="movement-boxes"></div>
       </div>
     </section>
 
@@ -209,22 +211,16 @@
       });
     }
 
-    // ---------- Last 90 Days KPI (visitors only) ----------
+    // ---------- Last 90 Days pill (overlaid on chart) ----------
     function renderBoxes(d) {
       const org = d.trend.sessions.organic;
       const sum = (a, i, j) => a.slice(i, j + 1).reduce((x, y) => x + (y || 0), 0);
       const pct = (cur, prev) => prev ? Math.round((cur - prev) / prev * 100) : null;
       // 90 days: idx 15-17 vs 12-14
       const ninS = pct(sum(org, 15, 17), sum(org, 12, 14));
-      const fmt = v => (v > 0 ? '+' : '') + v + '%';
-      const cls = v => v >= 0 ? 'pos' : 'neg';
-      const box = (kind, win, cmp, s) => `
-        <div class="mbox ${kind}">
-          <div class="win">${win}</div><div class="cmp">${cmp}</div>
-          <div class="row"><span class="m">Organic visitors</span><span class="d ${cls(s)}">${fmt(s)}</span></div>
-        </div>`;
-      document.getElementById('movement-boxes').innerHTML =
-        box('good', 'Last 90 Days', 'vs prior 90 days', ninS);
+      const sign = ninS > 0 ? '+' : '';
+      document.getElementById('movement-pill').innerHTML =
+        `<span class="chip good"><span class="v">${sign}${ninS}%</span><span class="l">organic · last 90 days</span></span>`;
     }
 
     // ---------- Maps movement per keyword ----------
