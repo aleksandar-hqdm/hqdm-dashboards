@@ -824,6 +824,107 @@
         "color": "#f59e0b",
         "body": "Flag form_submit, click_phone_number and click_email as conversions in GA4, audit the gmb_click trigger and treat GBP clicks as interest rather than a completed lead."
       }
-    ]
+    ],
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · June → August 2026",
+      "subtitle": "Jun → Aug 2026 · scope per month: 1–2 service / location pages · 5 blogs · 3 suburb pages · on-page as needed",
+      "months": [
+        "M1 · June 2026",
+        "M2 · July 2026",
+        "M3 · August 2026"
+      ],
+      "rows": [
+        {
+          "label": "Services",
+          "cap": "1–2 / mo · NEW + REVAMP",
+          "cells": [
+            [
+              { "k": "revamp", "u": "/chino-hills/", "n": "re-type from BlogPosting to MovingCompany + LocalBusiness · embed Chino Hills GBP pin · add 909-552-7228 · in-body links to /localmoving/ + /storage/ + /office-movers/" },
+              { "k": "revamp", "u": "/tustin/", "n": "re-type to service/location page · embed Tustin GBP pin · add 714-942-1061 · in-body service links + FAQ schema" }
+            ],
+            [
+              { "k": "revamp", "u": "/localmoving/", "n": "refocus around OC + IE coverage · cross-link to /tustin/ + /chino-hills/ · FAQ schema" },
+              { "k": "revamp", "u": "/office-movers/", "n": "commercial-moving angle · link to both location hubs for OC + IE office moves" }
+            ],
+            [
+              { "k": "revamp", "u": "/storage/", "n": "both-locations angle · storage-near-me framing · cross-link to /tustin/ + /chino-hills/" },
+              { "k": "new", "u": "/long-distance-moving/", "n": "fills the long-distance gap surfaced in the GBP services list · interstate framing" }
+            ]
+          ]
+        },
+        {
+          "label": "Blogs",
+          "cap": "5 / mo · REFRESH · TITLE REWRITE + FAQ SCHEMA + COMMERCIAL ROUTING",
+          "cells": [
+            [
+              { "k": "refresh", "u": "/blog/moving-checklist", "n": "internal links to /tustin/ + /chino-hills/" },
+              { "k": "refresh", "u": "/blog/cost-of-moving", "n": "commercial pull-through to /localmoving/" },
+              { "k": "refresh", "u": "/blog/packing-tips", "n": "link to /localmoving/ + new location hubs" },
+              { "k": "refresh", "u": "/blog/long-distance-moving-tips", "n": "route to /localmoving/ (becomes /long-distance-moving/ in M3)" },
+              { "k": "refresh", "u": "/blog/storage-during-a-move", "n": "link to /storage/ + city pages" }
+            ],
+            [
+              { "k": "refresh", "u": "/blog/office-move-checklist", "n": "route to /office-movers/" },
+              { "k": "refresh", "u": "/blog/moving-with-pets", "n": "internal link to /localmoving/" },
+              { "k": "refresh", "u": "/blog/best-time-of-year-to-move", "n": "commercial pull to both location pages" },
+              { "k": "refresh", "u": "/blog/diy-vs-professional-movers", "n": "route to /tustin/ + /chino-hills/" },
+              { "k": "new", "u": "/blog/moving-to-orange-county", "n": "Tustin demand-capture · routes to /tustin/" }
+            ],
+            [
+              { "k": "refresh", "u": "/blog/storage-tips", "n": "route to /storage/" },
+              { "k": "refresh", "u": "/blog/moving-services-overview", "n": "route to /localmoving/ + /office-movers/ + /storage/" },
+              { "k": "refresh", "u": "/blog/moving-companies-orange-county", "n": "route to /tustin/" },
+              { "k": "new", "u": "/blog/moving-to-the-inland-empire", "n": "Chino Hills demand-capture · routes to /chino-hills/" },
+              { "k": "new", "u": "/blog/long-distance-moving-from-california", "n": "routes to new /long-distance-moving/" }
+            ]
+          ]
+        },
+        {
+          "label": "Suburbs",
+          "cap": "3 / mo · NEW + INTERNAL LINKS",
+          "cells": [
+            [
+              { "k": "new", "u": "/suburb/eastvale-ca", "n": "IE feeder · adjacent to Chino Hills · feeds /chino-hills/ hub" },
+              { "k": "new", "u": "/suburb/ontario-ca", "n": "IE feeder · feeds /chino-hills/ hub" },
+              { "k": "new", "u": "/suburb/irvine-ca", "n": "OC feeder · feeds /tustin/ hub" }
+            ],
+            [
+              { "k": "new", "u": "/suburb/rancho-cucamonga-ca", "n": "IE service-area depth for Chino Hills grid" },
+              { "k": "new", "u": "/suburb/diamond-bar-ca", "n": "IE service-area depth for Chino Hills grid" },
+              { "k": "new", "u": "/suburb/santa-ana-ca", "n": "OC feeder · feeds /tustin/ hub" }
+            ],
+            [
+              { "k": "new", "u": "/suburb/corona-ca", "n": "IE expansion · widens Chino Hills service area" },
+              { "k": "new", "u": "/suburb/orange-ca", "n": "OC feeder · feeds /tustin/ hub" },
+              { "k": "new", "u": "/suburb/costa-mesa-ca", "n": "OC feeder · feeds /tustin/ hub" }
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "per need · 301s · INTERNAL LINKS · GBP SYNC",
+          "cells": [
+            [
+              { "k": "fix", "u": "Schema foundation", "n": "deploy MovingCompany + per-location LocalBusiness with correct NAP, geo, areaServed, sameAs to both GBP Maps URLs + socials, aggregateRating" },
+              { "k": "fix", "u": "Site NAP reconciliation", "n": "site phones → GBP primaries (Tustin 714-942-1061, Chino Hills 909-552-7228) · fix malformed tel: hrefs" },
+              { "k": "fix", "u": "Brand name + footer + /locations hub", "n": "replace 'Maison Moving (Staging)' in WP title + og:site_name + schema name · show both NAPs in footer + new /locations hub" },
+              { "k": "fix", "u": "GBP URL repoint", "n": "Chino Hills GBP website link → /chino-hills/ (currently → homepage)" }
+            ],
+            [
+              { "k": "redirect", "u": "2 × 301", "n": "/serving-all-of-tustin-ca/ → /tustin/ · /serving-all-of-chino-hills-ca/ → /chino-hills/" },
+              { "k": "fix", "u": "GA4 conversion tracking", "n": "flag form_submit + click_phone_number + click_email as key events · audit gmb_click trigger · drop dead contact_form_submit event" },
+              { "k": "fix", "u": "Review-link + author cleanup", "n": "drop gl=rs locale on Google review link · add Chino Hills review link · reset page author off info@hqdm.io" }
+            ],
+            [
+              { "k": "fix", "u": "Schema audit", "n": "verify aggregateRating live across both location pages · Service + FAQPage schema across upgraded /services/* pages" },
+              { "k": "fix", "u": "License + compliance display", "n": "surface CPUC CAL MTR# 0190726 in footer + schema · add USDOT/MC if running interstate" },
+              { "k": "fix", "u": "Internal-link finalization", "n": "locations ↔ suburbs ↔ services link graph closed across both pins · canonical city pages confirmed" }
+            ]
+          ]
+        }
+      ],
+      "note_html": "M1 builds the profile↔site foundation (schema, NAP, brand name, GBP URL repoint) plus rebuilds both location pages as proper service/location pages — the highest-ROI work in the engagement. M2 resolves the /serving-all-of-*-ca/ duplicates, wires up GA4 conversion tracking, and extends service depth around /localmoving/ + /office-movers/. M3 closes the link graph, surfaces licensing in schema, and fills the long-distance gap. Suburb cadence prioritizes Inland-Empire depth (Eastvale, Ontario, Rancho Cucamonga, Diamond Bar) that the research flagged for Chino Hills extension, balanced with OC feeders for Tustin recovery."
+    }
   }
 }
