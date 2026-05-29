@@ -2303,9 +2303,9 @@
           "cap": "3 / month · revamp + new",
           "cells": [
             [
-              { "u": "/movers-novi-mi/", "k": "revamp", "n": "PA-23 · highest-imp keep-audit · templated → real location page · USDOT credentials + unique copy" },
-              { "u": "PA-24 surviving burb", "k": "revamp", "n": "per Pages_Action_List.csv · same template (real copy + service summary + USDOT)" },
-              { "u": "PA-25 surviving burb", "k": "revamp", "n": "per Pages_Action_List.csv · same template" }
+              { "u": "/professional-moving-company-in-wixom-mi/", "k": "revamp", "n": "PA-065 · KEEP-AUDIT-UPGRADE · 4,837 imp/365d · pos 35.9 · 18 clicks · highest-imp burb survivor · real copy + USDOT credentials + Wixom service summary" },
+              { "u": "/top-rated-moving-companyy-in-auburn-hills-mi/", "k": "revamp", "n": "PA-301 · 1,920 imp/365d · pos 14.9 · 0 clicks · URL typo (\"companyy\") blocks CTR · 301 to clean slug + real copy + Auburn Hills service summary" },
+              { "u": "/top-movers-in-commerce-mi/", "k": "revamp", "n": "PA-300 (canonical, pos 3.0) · consolidate PA-268 /quality-moving-services-in-westacres-mi/ 301 in · Commerce-area service summary" }
             ],
             [
               { "u": "/movers-detroit-mi/", "k": "new", "n": "HP-01 · national-mover-grade depth · Wayne County + Woodward + downtown · LocalBusiness + Service schema" },
@@ -2314,8 +2314,29 @@
             ],
             [
               { "u": "/moving-companies-michigan/", "k": "new", "n": "HP-04 · statewide cluster · hub-and-spoke into /locations/[city]/" },
-              { "u": "/locations/walled-lake/", "k": "new", "n": "areas-served hub · links to surviving burbs (PA-23..26) + WL service summary" },
-              { "u": "/locations/detroit-woodward/", "k": "new", "n": "location stub · paired with HP-01 Detroit page · primes the eastern-metro geo cluster" }
+              { "u": "/locations/walled-lake/", "k": "revamp", "n": "PA-029 · 27,093 imp/365d · pos 20.3 · areas-served hub linking to surviving burbs (PA-065 Wixom, PA-301 Auburn Hills, PA-300 Commerce)" },
+              { "u": "/locations/detroit/", "k": "revamp", "n": "PA-056 · 9,874 imp/365d · pos 59.6 · biggest CTR rescue opportunity · downtown depth + Wayne County service summary" }
+            ]
+          ]
+        },
+        {
+          "label": "Maps",
+          "cap": "claim · ring-pin · defend",
+          "cells": [
+            [
+              { "u": "Claim + manage Detroit Woodward GBP", "k": "new", "n": "GBP-01 · unmanaged downtown pin currently #2.7 from PM pin-bleed (Affordable Muscle, Bellhop competing) · USDOT 266582 + MCICC 178368 + CVED L19032 + Woodward geo tokens · paired w/ /locations/detroit-woodward/ stub for GBP→site URL routing" },
+              { "u": "Claim + manage Rochester GBP", "k": "new", "n": "GBP-02 · 419 Golf View Ln physical office · 0/6 top-3 reach today (even non-movers Auto Hauler Exchange + Delia Group outrank) · paired w/ /locations/rochester/ stub" },
+              { "u": "DD-01 · Royal Oak driving-direction pin", "k": "new", "n": "18mi E · 0/6 top-3 today · O'Sullivan, College Hunks, New Beginnings, Wondermove competing" }
+            ],
+            [
+              { "u": "DD-02 · Birmingham driving-direction pin", "k": "new", "n": "12mi E · 0/6 today · Kenway, Modern Moving MI, Schea Van Lines, Stevens competing" },
+              { "u": "DD-03 · Farmington Hills driving-direction pin", "k": "new", "n": "7mi SE · 0/6 today · EZ Storage + Penguin Junk Removal outrank PM (non-movers dominating)" },
+              { "u": "DD-04 · Plymouth driving-direction pin", "k": "new", "n": "10mi S · 0/6 today · Stow and Go, Dakota Lines, Expedited Freightways (non-movers) competing" }
+            ],
+            [
+              { "u": "DD-05 · Bloomfield Hills driving-direction pin", "k": "new", "n": "8mi E · pending baseline · completes the ring around the WL pin" },
+              { "u": "GBP-03 · description token sync · 3 PM pins", "k": "fix", "n": "Walled Lake + Detroit Woodward + Rochester · USDOT + MCICC + CVED + \"3 offices\" + Walled Lake + Detroit + Rochester geo tokens" },
+              { "u": "GBP-04 + GBP-06 · WL Products + Attributes", "k": "fix", "n": "Products geo-diversification (currently homogeneous) + attributes (women-led, accessibility, online estimates, payment methods)" }
             ]
           ]
         },
@@ -2324,7 +2345,7 @@
           "cap": "per need · redirects · schema · internal links",
           "cells": [
             [
-              { "u": "DELETE + 301 · 26 burb pages → topical hubs", "k": "redirect", "n": "PA-02..22 · burbs with backlinks/referral routed to /[service]/ or /locations/walled-lake/ (1.3% of 30d imp from 70+ polluting URLs)" },
+              { "u": "DELETE + 301 · 26 burb pages → topical hubs", "k": "redirect", "n": "PA-002..PA-027 · burbs with backlinks/referral routed to /[service]/ or /locations/walled-lake/ (1.3% of 30d imp from 70+ polluting URLs) · 3 high-imp 301s separately: PA-041 Beverly Hills (5.7K imp), PA-044 Commerce Twp (4.9K), PA-050 Novi (4.7K)" },
               { "u": "410 + sitemap removal · 22 burb pages", "k": "fix", "n": "zero-backlink / zero-referral / zero-imp cohort · cleanest site-quality lift" },
               { "u": "GBP ↔ site NAP + description sync · 3 PM pins", "k": "fix", "n": "BBB, Yelp, USDOT registry, Yellow Pages, citation directories · USDOT 266582 + MCICC 178368 + CVED L19032" },
               { "u": "Internal links IL-001..020", "k": "fix", "n": "footer adds HP-01..04 sitewide + service-page cross-cluster (hot-tub ↔ piano ↔ artwork) + nav adds Detroit + MI" }
