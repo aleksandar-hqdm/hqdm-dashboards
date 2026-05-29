@@ -101,19 +101,12 @@
     </section>
 
     <!-- CHARTS ROW -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-3">
-      <!-- Monthly line -->
+    <section class="mb-3">
       <div class="panel p-3.5">
-        <div class="secthead mb-2">Organic Visitors · Monthly (Q4 2025 → now)</div>
-        <div style="height: 184px;"><canvas id="line-chart"></canvas></div>
+        <div class="secthead mb-2">Organic Visitors · Monthly (Jan 2026 → now)</div>
+        <div style="height: 260px;"><canvas id="line-chart"></canvas></div>
         <p class="text-[11px] text-slate-500 mt-2">Monthly organic visitors. The dashed tail is <strong>May (first 22 days)</strong> — a partial month, not a finished one. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from these charts.</p>
-      </div>
-      <!-- Quarterly + boxes -->
-      <div class="panel p-3.5">
-        <div class="secthead mb-2">By Quarter · Organic Visitors</div>
-        <div style="height: 132px;"><canvas id="quarter-chart"></canvas></div>
-        <div class="grid grid-cols-3 gap-2 mt-3" id="movement-boxes"></div>
-        <p class="text-[11px] text-slate-500 mt-2" id="boxes-reading"></p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-3" id="movement-boxes"></div>
       </div>
     </section>
 
@@ -175,15 +168,16 @@
     ]);
     if (!DATA) return;
     renderLineChart(DATA);
-    renderQuarterChart(DATA);
     renderBoxes(DATA);
     if (MOVE) { renderKeywords(MOVE); renderCompetitors(MOVE); }
 
-    // ---------- Monthly line chart (organic visitors only, last 8 months) ----------
+    // ---------- Monthly line chart (organic visitors only, Jan 2026 onward) ----------
     function renderLineChart(d) {
-      const t = d.trend; const W = 8;
-      const months = t.months.slice(-W);
-      const sess = t.sessions.organic.slice(-W);
+      const t = d.trend;
+      const janIdx = t.months.findIndex(m => /^Jan\s*26/i.test(m));
+      const start = janIdx >= 0 ? janIdx : Math.max(0, t.months.length - 5);
+      const months = t.months.slice(start);
+      const sess = t.sessions.organic.slice(start);
       const pIdx = months.findIndex(m => /\*|\bso far\b|\bpartial\b/i.test(m));
       const split = data => {
         if (pIdx < 0) return { solid: data, dashed: data.map(() => null) };
@@ -215,42 +209,11 @@
       });
     }
 
-    // ---------- Quarterly chart (sessions bars only) ----------
-    function renderQuarterChart(d) {
-      const q = d.trend.quarterly || [];
-      const lab = s => { const m = s.match(/Q(\d)\s*(\d{4})/); return m ? `Q${m[1]} '${m[2].slice(2)}` + (s.includes('*') ? '*' : '') : s; };
-      const labels = q.map(x => lab(x.q));
-      const sess = q.map(x => x.org_sess);
-      const partial = q.map(x => x.kind === 'current' || /\*/.test(x.q));
-      new Chart(document.getElementById('quarter-chart'), {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [
-            { type: 'bar', label: 'Organic visitors', data: sess, yAxisID: 'y', order: 2,
-              backgroundColor: partial.map(p => p ? '#9ec5e0' : '#1d5b8a'), borderRadius: 3, barPercentage: 0.78, categoryPercentage: 0.8 },
-          ],
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-          plugins: { legend: { position: 'bottom', labels: { font: { size: 10 }, boxWidth: 12 } }, tooltip: { backgroundColor: '#0b1220', padding: 9 } },
-          scales: {
-            x: { grid: { display: false }, ticks: { font: { size: 9 } } },
-            y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,0.05)' }, ticks: { font: { size: 9 } } },
-          },
-        },
-      });
-    }
-
-    // ---------- 3 movement boxes (YoY / 6-mo / 90-day) — visitors only ----------
+    // ---------- Last 90 Days KPI (visitors only) ----------
     function renderBoxes(d) {
       const org = d.trend.sessions.organic;
       const sum = (a, i, j) => a.slice(i, j + 1).reduce((x, y) => x + (y || 0), 0);
       const pct = (cur, prev) => prev ? Math.round((cur - prev) / prev * 100) : null;
-      // YoY = monthly avg Q2'25 (idx 4-6, 3mo) vs Q2'26* (idx 16-17, 2mo)
-      const yoyS = pct(sum(org, 16, 17) / 2, sum(org, 4, 6) / 3);
-      // 6 months: idx 12-17 vs 6-11
-      const sixS = pct(sum(org, 12, 17), sum(org, 6, 11));
       // 90 days: idx 15-17 vs 12-14
       const ninS = pct(sum(org, 15, 17), sum(org, 12, 14));
       const fmt = v => (v > 0 ? '+' : '') + v + '%';
@@ -261,11 +224,7 @@
           <div class="row"><span class="m">Organic visitors</span><span class="d ${cls(s)}">${fmt(s)}</span></div>
         </div>`;
       document.getElementById('movement-boxes').innerHTML =
-        box('watch', 'Year over Year', 'vs Q2 2025', yoyS) +
-        box('watch', 'Last 6 Months', 'vs prior 6 mo', sixS) +
         box('good', 'Last 90 Days', 'vs prior 90 days', ninS);
-      document.getElementById('boxes-reading').innerHTML =
-        `The year-over-year and six-month windows still span the January cliff, so they read negative. The clean recovery window — the <strong>last 90 days</strong> — is up sharply. Lead-conversion tracking on the website is being stabilized this quarter, so it's excluded from this view.`;
     }
 
     // ---------- Maps movement per keyword ----------
