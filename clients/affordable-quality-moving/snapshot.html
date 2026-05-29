@@ -53,6 +53,25 @@
     .arrow-up::before { content: '\25B2 '; color: #047857; font-size: 0.6rem; }
     .arrow-dn::before { content: '\25BC '; color: #b45309; font-size: 0.6rem; }
     .focus-card { border: 1px solid #e2e8f0; border-left: 4px solid #1d5b8a; border-radius: 0.5rem; padding: 0.75rem 0.85rem; background: #fff; }
+    /* 3-month build calendar */
+    table.cal { width: 100%; border-collapse: separate; border-spacing: 0; }
+    table.cal th { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #64748b; padding: 0.4rem 0.65rem 0.5rem; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: bottom; }
+    table.cal th.month { color: #0b1220; font-size: 0.72rem; letter-spacing: 0.04em; }
+    table.cal td { padding: 0.55rem 0.65rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; font-size: 0.72rem; line-height: 1.4; }
+    table.cal td.row-label { font-weight: 700; color: #1f2937; background: #f8fafc; min-width: 7.5rem; font-size: 0.78rem; border-right: 1px solid #e2e8f0; }
+    table.cal td.row-label .cap { display: block; font-size: 0.58rem; font-weight: 500; color: #94a3b8; margin-top: 0.15rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    table.cal tr:last-child td { border-bottom: 0; }
+    .cal .item { display: flex; gap: 0.4rem; align-items: baseline; margin: 0.22rem 0; }
+    .cal .item:first-child { margin-top: 0; }
+    .cal .item:last-child { margin-bottom: 0; }
+    .cal .tag { flex-shrink: 0; display: inline-block; font-size: 0.54rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.12rem 0.4rem; border-radius: 0.25rem; line-height: 1.25; min-width: 3.7rem; text-align: center; }
+    .cal .tag.revamp   { background: #dbeafe; color: #1d4ed8; }
+    .cal .tag.new      { background: #d1fae5; color: #047857; }
+    .cal .tag.refresh  { background: #fef3c7; color: #b45309; }
+    .cal .tag.redirect { background: #e2e8f0; color: #475569; }
+    .cal .tag.fix      { background: #e0e7ff; color: #4338ca; }
+    .cal .u { color: #0b1220; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.7rem; word-break: break-word; }
+    .cal .n { color: #64748b; font-size: 0.66rem; font-family: 'Inter', system-ui, sans-serif; }
     @media print {
       .no-print { display: none !important; }
       body { background: #fff !important; }
@@ -153,6 +172,103 @@
           <div class="font-bold text-sm text-slate-900 mb-1">Packing/storage + AI Overviews</div>
           <p class="text-[12px] text-slate-600 leading-snug">Dedicated storage &amp; packing pages to extend your fastest-gaining search, plus content built to earn Google AI Overview citations.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- BUILD CALENDAR -->
+    <section class="mb-3">
+      <div class="panel p-3.5">
+        <div class="secthead mb-1">Build Calendar · June → August 2026</div>
+        <p class="text-[11px] text-slate-500 mb-2">Production rolls forward on a steady cadence; on-page work is per-need. Schema (LocalBusiness, Service, FAQ, HowTo) lands progressively across M1-M3.</p>
+        <div class="overflow-x-auto">
+          <table class="cal">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="month" style="color:#047857;">M1 · June 2026</th>
+                <th class="month" style="color:#1d4ed8;">M2 · July 2026</th>
+                <th class="month" style="color:#6366f1;">M3 · August 2026</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="row-label">Services<span class="cap">1-2 / month · revamp + new · depth + schema</span></td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/storage-units-santa-clarita/</span> <span class="n">— full pricing + unit-size matrix + climate features · Storage Facility GBP category already live</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/packing-services-santa-clarita/</span> <span class="n">— packing-tier matrix + supplies list · packing+storage is the only query AQMS is gaining on (+5 top-3, avg 4.7 → 3.8)</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/moving-services/out-of-state-moves/</span> <span class="n">— 17.6K imp 90d · pos 35 · biggest impression bleed in the service inventory</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/moving-services/office-moves/</span> <span class="n">— 10.5K imp 90d · pos 35 · 1 click · depth + Service schema</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/moving-services/long-distance-moves/</span> <span class="n">— 10.3K imp 90d · pos 23 · depth + Service schema</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/moving-services/furniture-moves/</span> <span class="n">— pos 37 · service-page CTR lift cohort</span></div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-label">Blogs<span class="cap">3-5 / month · refresh + new · AIO citation pattern · FAQ + HowTo schema · commercial routing</span></td>
+                <td>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/blog/2021/sept/how-to-choose-the-right-moving-company/</span> <span class="n">— AIO citation pattern: FAQ schema + expert quote + video embed</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/blog/2022/04/moving-to-california-a-checklist/</span> <span class="n">— 8.4K imp 90d · pos 7.1 · 97 clicks · add commercial pull-through to /santa-clarita/</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/blog/2021/12/how-to-change-your-address/</span> <span class="n">— 14K imp 90d · pos 7.6 · 26 clicks · title rewrite + FAQ schema</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/moving-cost-santa-clarita-2026/</span> <span class="n">— direct AIO citation target · mid-funnel commercial query</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/how-much-do-movers-cost-in-california-2026/</span> <span class="n">— direct AIO citation target · state-level commercial</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/how-much-storage-do-you-need-santa-clarita/</span> <span class="n">— unit-size utility · routes to /storage-units-santa-clarita/</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/full-vs-partial-packing-santa-clarita/</span> <span class="n">— commercial · routes to /packing-services-santa-clarita/</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/blog/.../pack-odd-shapes/</span> <span class="n">— commercial pull-through to /moving-services/furniture-moves/</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/how-to-pack-for-a-move-santa-clarita/</span> <span class="n">— AIO citation target · routes to /packing-services-santa-clarita/</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/long-distance-moving-checklist-2026/</span> <span class="n">— supports M3 /long-distance-moves/ revamp</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/blog/best-time-to-move-in-southern-california/</span> <span class="n">— seasonal + AIO citation target · brand-pull lift</span></div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-label">Locations<span class="cap">3-4 / month · depth lift + new at outer-ring SA gaps</span></td>
+                <td>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/santa-clarita/</span> <span class="n">— 52.8K imp 90d · pos 20 → target 10 · depth + LocalBusiness + Service schema</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/san-diego/</span> <span class="n">— 21.6K imp 90d · pos 15 → 10 · full pricing + neighborhoods + SD landmarks</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/san-diego/packing-unpacking-services/</span> <span class="n">— 8.7K imp 90d · pos 41 → 20 · rebuild from current shell</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/burbank/</span> <span class="n">— 8.3K imp 90d · pos 11 → 5 · depth rebuild</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/castaic/</span> <span class="n">— outer-ring SA gap · "movers castaic" target</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/simi-valley/</span> <span class="n">— outer-ring SA gap · "movers simi valley" target</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/encinitas-movers/</span> <span class="n">— depth rebuild to reach top-10</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/san-fernando/</span> <span class="n">— outer-ring SA gap</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/moorpark/</span> <span class="n">— outer-ring SA gap</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/agua-dulce/</span> <span class="n">— outer-ring SA gap · pin doesn't reach</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/la-jolla-movers/ + /temecula/</span> <span class="n">— depth rebuilds · finish the SoCal page network</span></div></div>
+                </td>
+              </tr>
+              <tr>
+                <td class="row-label">On-page<span class="cap">per need · schema · internal links · audits</span></td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">GA4 events verification</span> <span class="n">— confirm form_submit + click_phone_number + gmb_click + contact_form_submit firing cleanly</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">May GSC impression-cliff diagnosis</span> <span class="n">— 10× drop vs April · AIO encroachment vs indexing vs data lag</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">backlink audit + disavow</span> <span class="n">— quantify spam-flagged + halt prior-vendor link stack (Direct Q4 2025 signature)</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">local citation hygiene</span> <span class="n">— BBB / Yelp / Yellow Pages / Foursquare + 10 CA directories</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">LocalBusiness schema · all location pages</span> <span class="n">— rolled out across Burbank + Encinitas + new SA cities</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">FAQ + HowTo schema · M2 blogs</span> <span class="n">— sets up AIO citation pattern across cost + storage + packing posts</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">internal-linking pass · IL-001 → IL-020</span> <span class="n">— homepage + service hubs route equity to location pages with priority anchor text</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">FAQ + HowTo schema · M3 blogs</span> <span class="n">— completes citation-pattern coverage across cost + how-to cohort</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">internal-link finalization</span> <span class="n">— refreshed service pages → location + storage/packing hubs</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">schema + indexation regression check</span> <span class="n">— sweep all rebuilt pages, confirm GSC re-discovery</span></div></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3">Cadence reflects in-scope production: service + suburb pages, blog refresh + new commercial/AIO targets, with on-page fixes wired in as the hubs land. GBP posts, photos, reviews, and Q&amp;A sit outside this program scope.</p>
       </div>
     </section>
 
