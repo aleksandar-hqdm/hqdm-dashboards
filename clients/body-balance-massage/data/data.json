@@ -5292,6 +5292,102 @@
         "body": "Keep the review velocity and a photo blitz going to convert your review lead into Maps rank."
       }
     ],
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · June → August 2026",
+      "subtitle": "Production rolls forward on a steady cadence; on-page is per-need. Schema rollout (Service, LocalBusiness, FAQ, BreadcrumbList, BlogPosting) lands across M2 and M3.",
+      "months": ["M1 · June 2026", "M2 · July 2026", "M3 · August 2026"],
+      "rows": [
+        {
+          "label": "Services",
+          "cap": "1-2 / month · revamp + new + schema",
+          "cells": [
+            [
+              {"k":"revamp","u":"/modalities-techniques/trigger-point-therapy/","n":"owner-flagged content rewrite · weak shell → full method + intake"},
+              {"k":"redirect","u":"/modalities-techniques/cupping/","n":"404 → /modalities-techniques/ · 260 UT vol orphan (BB #1 untracked)"}
+            ],
+            [
+              {"k":"revamp","u":"/modalities-techniques/swedish-massage/","n":"add Service + LocalBusiness + FAQ schema · 17,994 imp cluster"},
+              {"k":"new","u":"/modalities-techniques/myofascial-release/","n":"590 UT vol · BB #1 at AF pin without a page"}
+            ],
+            [
+              {"k":"revamp","u":"/modalities-techniques/float-therapy/","n":"schema stack + content depth · 720 UT vol cluster"},
+              {"k":"revamp","u":"/modalities-techniques/cranial-sacral-therapy/","n":"schema stack + intake clarity"}
+            ]
+          ]
+        },
+        {
+          "label": "Blogs",
+          "cap": "5 / month · refresh · title rewrite + FAQ schema + commercial routing",
+          "cells": [
+            [
+              {"k":"refresh","u":"/how-long-will-i-feel-sick-after-a-massage/","n":"200K imp pos 5.1 → 6.5 slipping · title + FAQ schema"},
+              {"k":"refresh","u":"/massage-and-tinnitus-specific-techniques-often-used/","n":"50K imp pos 5 → 6.9 slipping · title + FAQ"},
+              {"k":"refresh","u":"/wellness-clinic-vs-spa-what-sets-them-apart/","n":"39K imp pos 5 · CTR 0.1% → title rewrite"},
+              {"k":"refresh","u":"/post-massage-considerations-ice-water-no-caffeine/","n":"37K imp pos 5.5 · CTR 0.3% → title + FAQ"},
+              {"k":"refresh","u":"/why-lehi-massage-and-alcohol-dont-mix/","n":"32K imp pos 5.6 · CTR 0.03% → title rewrite + route to /modalities-techniques/"}
+            ],
+            [
+              {"k":"refresh","u":"/what-is-a-spa-membership-how-it-works-and-why-its-worth-it/","n":"30K imp pos 4.8 · CTR 0.26% → title + FAQ + route to /pricing-and-membership/"},
+              {"k":"refresh","u":"/how-much-magnesium-do-you-absorb-in-a-float-tank/","n":"6.4K imp · route to /modalities-techniques/magnesium-massage-utah/"},
+              {"k":"refresh","u":"/pain-and-numbness-down-arms-and-how-massage-will-help/","n":"15K imp pos 6.7 → 6.9 · title + FAQ"},
+              {"k":"refresh","u":"/why-its-critical-to-include-recovery-time-in-a-workout-program/","n":"1.4K imp pos 5 · CTR 0 → title rewrite + route to athletic-recovery cluster"},
+              {"k":"new","u":"/how-often-should-you-get-a-deep-tissue-massage/","n":"Q-format LLM target · routes to /modalities-techniques/deep-tissue-massage/"}
+            ],
+            [
+              {"k":"refresh","u":"/positive-mental-health-impact-of-float-therapy/","n":"float-cluster supporter · route to /modalities-techniques/float-therapy/"},
+              {"k":"refresh","u":"/habits-to-supplement-massage-or-float-therapy/","n":"float-cluster supporter · internal links to float + Swedish hubs"},
+              {"k":"refresh","u":"/post-massage-considerations-fuel-epsom-salt-rest/","n":"title + FAQ schema · companion to ice-water post"},
+              {"k":"refresh","u":"/massage-therapys-value-for-injury-rehabilitation/","n":"athletic-recovery cluster · title + FAQ"},
+              {"k":"new","u":"/benefits-of-float-therapy-for-postpartum-recovery/","n":"on-topic wellness · postpartum-mom hook + internal link to /modalities-techniques/float-therapy/"}
+            ]
+          ]
+        },
+        {
+          "label": "Suburbs",
+          "cap": "3 / month · depth lift + new at matrix gaps",
+          "cells": [
+            [
+              {"k":"revamp","u":"/float-therapy-services-in-pleasant-grove/","n":"25K imp pos 6.6 → 3 · depth lift + internal links to /modalities-techniques/"},
+              {"k":"new","u":"/deep-tissue-massage-cedar-hills-ut/","n":"matrix gap · Cedar Hills 5 top-3 / 8 close on DT"},
+              {"k":"new","u":"/swedish-massage-lehi-ut/","n":"matrix gap · Lehi cluster underserved at center pin"}
+            ],
+            [
+              {"k":"revamp","u":"/float-therapy-services-in-lehi-ut/","n":"18K imp pos 2 · cluster lift + internal links"},
+              {"k":"new","u":"/cupping-therapy-pleasant-grove-ut/","n":"matrix gap · PG × cupping · 260 UT vol (BB #1 untracked)"},
+              {"k":"new","u":"/sports-massage-highland-ut/","n":"matrix gap · Highland 0 top-3 / 11 cells"}
+            ],
+            [
+              {"k":"new","u":"/prenatal-massage-american-fork-ut/","n":"BB #1 untracked · 40 vol AF · 720 vol UT cluster"},
+              {"k":"new","u":"/massage-therapy-lindon-ut/","n":"Lindon mostly out-of-grid · service-area entry"},
+              {"k":"new","u":"/float-therapy-services-in-highland-ut/","n":"Highland gap · feeds float cluster"}
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "per need · NAP · schema · 301 · titles",
+          "cells": [
+            [
+              {"k":"fix","u":"sitewide phone NAP","n":"chat number → Google Business line · one-shift find-replace, stops leaking calls"},
+              {"k":"fix","u":"titles + metas · 12 URLs","n":"bleeding-CTR cohort · /about/ 0.04%, /pricing-and-membership/ 0.10%, /upgrades/ 0% (1,462 imp)"},
+              {"k":"fix","u":"internal links · cluster wiring","n":"refreshed blogs → /modalities-techniques/ hubs + new June suburbs"}
+            ],
+            [
+              {"k":"fix","u":"Service + LocalBusiness + FAQ schema","n":"sitewide rollout across M2 service revamps + new myofascial hub"},
+              {"k":"redirect","u":"84 × 301 cannibal batch","n":"small-level duplicates → MAIN canonical + repurpose 19 off-topic posts"},
+              {"k":"fix","u":"internal links to July hubs","n":"wire refreshed blogs into Swedish + myofascial + Lehi cluster"}
+            ],
+            [
+              {"k":"fix","u":"BlogPosting + BreadcrumbList schema","n":"top 10 blogs + sitewide breadcrumbs"},
+              {"k":"fix","u":"titles + metas · next 10 URLs","n":"second bleeding-CTR cohort sweep"},
+              {"k":"redirect","u":"14 × 301 final","n":"remaining cannibal review + typo fixes + final refresh pass"}
+            ]
+          ]
+        }
+      ],
+      "note_html": "Cadence reflects in-scope production: service + blog + suburb pages with on-page fixes wired in as the hubs land. Outreach, GBP photos, GBP reviews, and Q&A are out of program scope."
+    },
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
