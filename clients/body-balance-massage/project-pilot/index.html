@@ -69,9 +69,35 @@
     table.tasks th { background: #f8fafc; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #475569; border-bottom: 1px solid #e2e8f0; }
     table.tasks tr { border-bottom: 1px solid #f1f5f9; }
     table.tasks tr:hover { background: #f8fafc; }
-    table.tasks td.id { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; color: #6b7280; width: 50px; }
-    table.tasks td.title { font-weight: 600; color: #0b1220; }
-    table.tasks td.note { font-size: 11px; color: #6b7280; font-style: italic; }
+    table.tasks td.id { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; color: #6b7280; width: 60px; vertical-align: top; padding-top: 12px; }
+    table.tasks td.title { font-weight: 600; color: #0b1220; vertical-align: top; }
+    table.tasks td.why { font-size: 12px; color: #475569; line-height: 1.45; max-width: 320px; vertical-align: top; padding-top: 12px; }
+    table.tasks td.note { font-size: 11px; color: #6b7280; font-style: italic; vertical-align: top; }
+    table.tasks td.team { font-size: 12px; color: #374151; vertical-align: top; padding-top: 12px; white-space: nowrap; }
+    table.tasks td.status-cell { vertical-align: top; padding-top: 12px; }
+    table.tasks td.asana { vertical-align: top; padding-top: 10px; text-align: center; width: 70px; }
+    table.tasks td.asana a { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 11px; font-weight: 600; color: #475569; text-decoration: none; transition: all 120ms; }
+    table.tasks td.asana a:hover { background: #0b1220; color: white; border-color: #0b1220; }
+
+    /* Anchored task rows */
+    tr.task-row { scroll-margin-top: 80px; }
+    tr.task-row:target { background: #fef9c3; animation: targetFlash 1500ms ease-out; }
+    @keyframes targetFlash {
+      0%   { background: #fde047; }
+      100% { background: #fef9c3; }
+    }
+
+    /* Category + Priority chips */
+    .cat-chip { display: inline-block; padding: 1px 6px; font-size: 9px; font-weight: 700; border-radius: 3px; color: white; text-transform: uppercase; letter-spacing: 0.04em; }
+    .prio-chip { display: inline-block; padding: 1px 6px; font-size: 9px; font-weight: 700; border-radius: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .prio-P0 { background: #fee2e2; color: #991b1b; }
+    .prio-P1 { background: #fef3c7; color: #92400e; }
+    .prio-P2 { background: #dbeafe; color: #1e40af; }
+    .prio-P3 { background: #f1f5f9; color: #475569; }
+
+    /* Clickable linked-task chips in Crucial Areas */
+    .crucial-card a.linked-task-chip { color: white; text-decoration: none; cursor: pointer; transition: background 120ms; }
+    .crucial-card a.linked-task-chip:hover { background: #3b82f6 !important; }
 
     /* Month divider rows */
     tr.month-divider td { background: #0b1220; color: white; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 12px; }
@@ -229,10 +255,11 @@
               <tr>
                 <th>ID</th>
                 <th>Ask</th>
-                <th>Why</th>
+                <th>Why this matters</th>
                 <th>Due by</th>
                 <th>Status</th>
                 <th>Result</th>
+                <th>Asana</th>
               </tr>
             </thead>
             <tbody id="asks-body"></tbody>
@@ -265,16 +292,17 @@
               <tr>
                 <th>ID</th>
                 <th>Task</th>
+                <th>Why this matters</th>
                 <th>Team</th>
                 <th>Status</th>
-                <th>This-week note</th>
+                <th>Asana</th>
               </tr>
             </thead>
             <tbody id="tasks-body"></tbody>
           </table>
         </div>
         <p class="text-xs text-ink-500 italic mt-4 leading-relaxed">
-          <strong>Semantic refresh policy:</strong> task statuses are pulled from the linked Asana board on Mondays and rolled into this view. The "this-week note" reflects the latest in-flight context — blockers, awaiting-asks, draft-staged, etc. If a status hasn't moved in two consecutive weeks and isn't blocked, it surfaces as <span class="pill at_risk">At risk</span>.
+          <strong>Semantic refresh policy:</strong> task statuses are pulled from the linked Asana board on Mondays and rolled into this view. The "this-week note" reflects the latest in-flight context — blockers, awaiting-asks, draft-staged, etc. If a status hasn't moved in two consecutive weeks and isn't blocked, it surfaces as <span class="pill at_risk">At risk</span>. <strong>Clickable task ID chips in the Crucial Focus Areas section above jump to the matching task row here.</strong>
         </p>
       </div>
     </div>
@@ -351,7 +379,7 @@
       data.crucial_areas.forEach(c => {
         const div = document.createElement('div');
         div.className = 'crucial-card';
-        const linked = (c.tasks_linked || []).map(id => `<span class="font-mono text-[10px] bg-ink-900 text-white px-1.5 py-0.5 rounded">${id}</span>`).join(' ');
+        const linked = (c.tasks_linked || []).map(id => `<a href="#task-${id.replace('.', '-')}" class="linked-task-chip font-mono text-[10px] bg-ink-900 text-white px-1.5 py-0.5 rounded">${id}</a>`).join(' ');
         div.innerHTML = `<div class="flex items-start gap-2">
                           <span class="rank">${c.rank}</span>
                           <div class="flex-1">
@@ -371,21 +399,32 @@
       const askBody = document.getElementById('asks-body');
       data.asks.forEach(a => {
         const tr = document.createElement('tr');
+        tr.id = 'task-' + (a.id || '');
+        tr.className = 'task-row';
         const statusClass = (a.status || 'not yet sent').replace(/ /g, '_');
         const due = a.due_by || '—';
         const result = a.result || '<span class="text-ink-400">—</span>';
+        const prioChip = a.importance ? `<span class="prio-chip prio-${a.importance}">${a.importance}</span>` : '';
+        const cat = (data.categories || {})[a.category] || {label: a.category || '', color: '#475569'};
+        const catChip = a.category ? `<span class="cat-chip" style="background:${cat.color}">${cat.label}</span>` : '';
+        const chips = (catChip || prioChip) ? `<div class="mt-1 flex flex-wrap gap-1">${catChip}${prioChip}</div>` : '';
+        const asanaCell = a.asana_gid
+          ? `<td class="asana"><a href="${data.meta.asana_task_base}${a.asana_gid}" target="_blank" rel="noopener">Open <span>&rarr;</span></a></td>`
+          : '<td class="asana"><span class="text-[10px] text-ink-400">—</span></td>';
         tr.innerHTML = `<td class="id">${a.id}</td>
-                        <td class="title">${a.title}</td>
-                        <td class="text-xs text-ink-600">${a.why}</td>
+                        <td class="title">${a.title}${chips}</td>
+                        <td class="why">${a.why}</td>
                         <td class="text-xs font-mono">${due}</td>
-                        <td><span class="ask-pill ${statusClass}">${a.status}</span></td>
-                        <td class="text-xs text-ink-600">${result}</td>`;
+                        <td class="status-cell"><span class="ask-pill ${statusClass}">${a.status}</span></td>
+                        <td class="text-xs text-ink-600">${result}</td>
+                        ${asanaCell}`;
         askBody.appendChild(tr);
       });
 
       // ============ Tasks ============
       const tBody = document.getElementById('tasks-body');
       let lastMonth = 0;
+      const cats = data.categories || {};
       data.tasks.forEach(t => {
         if (t.month !== lastMonth) {
           const divider = document.createElement('tr');
@@ -393,17 +432,30 @@
           const monthLabels = {1: 'Month 1 — June 2026 · Foundations, Tracking Buildout, Quick Wins',
                                 2: 'Month 2 — July 2026 · Service Rebuilds + Cleanup + Mid-Quarter Check',
                                 3: 'Month 3 — August 2026 · Remaining Service Pages + Q2 Close-Out'};
-          divider.innerHTML = `<td colspan="5">${monthLabels[t.month] || ('Month ' + t.month)}</td>`;
+          divider.innerHTML = `<td colspan="6">${monthLabels[t.month] || ('Month ' + t.month)}</td>`;
           tBody.appendChild(divider);
           lastMonth = t.month;
         }
         const tr = document.createElement('tr');
+        tr.id = 'task-' + (t.id || '').replace('.', '-');
+        tr.className = 'task-row';
         const statusClass = (t.status || 'pending').replace(/ /g, '_');
+        const cat = cats[t.category] || {label: t.category || '', color: '#475569'};
+        const catChip = t.category ? `<span class="cat-chip" style="background:${cat.color}">${cat.label}</span>` : '';
+        const prioChip = t.importance ? `<span class="prio-chip prio-${t.importance}">${t.importance}</span>` : '';
+        const chips = (catChip || prioChip) ? `<div class="mt-1 flex flex-wrap gap-1">${catChip}${prioChip}</div>` : '';
+        const asanaCell = t.asana_gid
+          ? `<td class="asana"><a href="${data.meta.asana_task_base}${t.asana_gid}" target="_blank" rel="noopener">Open <span>&rarr;</span></a></td>`
+          : `<td class="asana"><span class="text-[10px] text-ink-400">M${t.month} pending</span></td>`;
+        const depsLine = (t.depends_on && t.depends_on.length)
+          ? `<div class="text-[10px] text-ink-500 mt-1"><span class="font-bold">Depends on:</span> ${t.depends_on.map(d => `<a href="#task-${d.replace('.', '-')}" class="font-mono text-ink-700 underline decoration-dotted">${d}</a>`).join(', ')}</div>`
+          : '';
         tr.innerHTML = `<td class="id">${t.id}</td>
-                        <td class="title">${t.title}</td>
-                        <td class="text-xs text-ink-600">${t.team}</td>
-                        <td><span class="pill ${statusClass}">${t.status.replace(/_/g, ' ')}</span></td>
-                        <td class="note">${t.week_status_note || ''}</td>`;
+                        <td class="title">${t.title}${chips}${depsLine}</td>
+                        <td class="why">${t.why || '<span class="text-ink-400">—</span>'}</td>
+                        <td class="team">${t.team}</td>
+                        <td class="status-cell"><span class="pill ${statusClass}">${t.status.replace(/_/g, ' ')}</span><div class="note mt-1">${t.week_status_note || ''}</div></td>
+                        ${asanaCell}`;
         tBody.appendChild(tr);
       });
     }).catch(err => {
