@@ -99,6 +99,28 @@
     .crucial-card a.linked-task-chip { color: white; text-decoration: none; cursor: pointer; transition: background 120ms; }
     .crucial-card a.linked-task-chip:hover { background: #3b82f6 !important; }
 
+    /* Filter bar */
+    .filter-bar { position: sticky; top: 57px; z-index: 30; background: rgba(248, 250, 252, 0.96); backdrop-filter: blur(8px); border-bottom: 1px solid #e2e8f0; padding: 10px 0; }
+    .filter-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .filter-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #6b7280; margin-right: 4px; }
+    .filter-pill { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; font-size: 11px; font-weight: 600; border-radius: 999px; cursor: pointer; background: white; border: 1px solid #e2e8f0; color: #475569; transition: all 120ms; user-select: none; }
+    .filter-pill:hover { border-color: #94a3b8; background: #f8fafc; }
+    .filter-pill .pill-count { font-size: 10px; font-weight: 500; opacity: 0.7; font-variant-numeric: tabular-nums; }
+    .filter-pill.active { background: var(--pill-color, #0b1220); border-color: transparent; color: white; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+    .filter-pill.active .pill-count { opacity: 0.85; color: white; }
+    .filter-prio-P0 { --pill-color: #ef4444; }
+    .filter-prio-P1 { --pill-color: #f59e0b; }
+    .filter-prio-P2 { --pill-color: #3b82f6; }
+    .filter-prio-P3 { --pill-color: #6b7280; }
+    .filter-clear { font-size: 11px; font-weight: 600; color: #6b7280; padding: 4px 10px; border-radius: 999px; cursor: pointer; transition: all 120ms; background: transparent; border: 1px dashed #cbd5e1; }
+    .filter-clear:hover { color: #0b1220; border-color: #94a3b8; background: white; }
+    .filter-count { font-size: 11px; font-weight: 600; color: #6b7280; font-variant-numeric: tabular-nums; padding-left: 8px; border-left: 1px solid #e2e8f0; margin-left: 4px; }
+    .filter-count strong { color: #0b1220; }
+
+    /* Hidden rows + month dividers */
+    tr.task-row.filtered-out { display: none; }
+    tr.month-divider.empty-month { display: none; }
+
     /* Month divider rows */
     tr.month-divider td { background: #0b1220; color: white; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 12px; }
 
@@ -149,6 +171,18 @@
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Next review</span> <span class="font-mono" id="hero-review">—</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">AM</span> <span id="hero-am">—</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Strategist</span> <span id="hero-strat">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FILTER BAR ============== -->
+  <section class="filter-bar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-2">
+      <div class="filter-group" id="filter-categories-row">
+        <span class="filter-label">Category</span>
+      </div>
+      <div class="filter-group" id="filter-importance-row">
+        <span class="filter-label">Priority</span>
       </div>
     </div>
   </section>
@@ -458,6 +492,129 @@
                         ${asanaCell}`;
         tBody.appendChild(tr);
       });
+      // ============ Filter bar ============
+      const filterState = { categories: new Set(), importance: new Set() };
+
+      // Count rows per category and per importance (combined asks + tasks)
+      const allRows = [...data.asks, ...data.tasks];
+      const catCounts = {};
+      const prioCounts = {};
+      allRows.forEach(r => {
+        if (r.category) catCounts[r.category] = (catCounts[r.category] || 0) + 1;
+        if (r.importance) prioCounts[r.importance] = (prioCounts[r.importance] || 0) + 1;
+      });
+
+      // Build category pills (in the order they appear in data.categories)
+      const catRow = document.getElementById('filter-categories-row');
+      Object.keys(cats).forEach(catKey => {
+        const c = cats[catKey];
+        const count = catCounts[catKey] || 0;
+        if (!count) return;
+        const pill = document.createElement('button');
+        pill.className = 'filter-pill';
+        pill.style.setProperty('--pill-color', c.color);
+        pill.dataset.filterType = 'category';
+        pill.dataset.filterValue = catKey;
+        pill.innerHTML = `${c.label} <span class="pill-count">${count}</span>`;
+        pill.addEventListener('click', () => toggleFilter('categories', catKey, pill));
+        catRow.appendChild(pill);
+      });
+
+      // Build importance pills (P0 > P1 > P2)
+      const prioRow = document.getElementById('filter-importance-row');
+      ['P0', 'P1', 'P2', 'P3'].forEach(prio => {
+        const count = prioCounts[prio] || 0;
+        if (!count) return;
+        const labels = {P0: 'P0 — Critical', P1: 'P1 — High', P2: 'P2 — Standard', P3: 'P3 — Background'};
+        const pill = document.createElement('button');
+        pill.className = `filter-pill filter-prio-${prio}`;
+        pill.dataset.filterType = 'importance';
+        pill.dataset.filterValue = prio;
+        pill.innerHTML = `${labels[prio]} <span class="pill-count">${count}</span>`;
+        pill.addEventListener('click', () => toggleFilter('importance', prio, pill));
+        prioRow.appendChild(pill);
+      });
+
+      // Add Clear button + visible count to importance row
+      const clearBtn = document.createElement('button');
+      clearBtn.className = 'filter-clear';
+      clearBtn.textContent = 'Clear filters';
+      clearBtn.addEventListener('click', () => {
+        filterState.categories.clear();
+        filterState.importance.clear();
+        document.querySelectorAll('.filter-pill.active').forEach(p => p.classList.remove('active'));
+        applyFilters();
+      });
+      prioRow.appendChild(clearBtn);
+
+      const countLabel = document.createElement('span');
+      countLabel.className = 'filter-count';
+      countLabel.id = 'filter-visible-count';
+      prioRow.appendChild(countLabel);
+
+      function toggleFilter(type, value, pillEl) {
+        if (filterState[type].has(value)) {
+          filterState[type].delete(value);
+          pillEl.classList.remove('active');
+        } else {
+          filterState[type].add(value);
+          pillEl.classList.add('active');
+        }
+        applyFilters();
+      }
+
+      function rowMatchesFilters(rowData) {
+        if (filterState.categories.size && !filterState.categories.has(rowData.category)) return false;
+        if (filterState.importance.size && !filterState.importance.has(rowData.importance)) return false;
+        return true;
+      }
+
+      function applyFilters() {
+        // Asks
+        let asksVisible = 0;
+        data.asks.forEach(a => {
+          const tr = document.getElementById('task-' + a.id);
+          if (!tr) return;
+          if (rowMatchesFilters(a)) { tr.classList.remove('filtered-out'); asksVisible++; }
+          else tr.classList.add('filtered-out');
+        });
+
+        // Tasks
+        let tasksVisible = 0;
+        const monthVisibleCount = {1: 0, 2: 0, 3: 0};
+        data.tasks.forEach(t => {
+          const tr = document.getElementById('task-' + (t.id || '').replace('.', '-'));
+          if (!tr) return;
+          if (rowMatchesFilters(t)) {
+            tr.classList.remove('filtered-out');
+            tasksVisible++;
+            monthVisibleCount[t.month] = (monthVisibleCount[t.month] || 0) + 1;
+          } else tr.classList.add('filtered-out');
+        });
+
+        // Hide month dividers with no visible tasks
+        document.querySelectorAll('tr.month-divider').forEach(div => {
+          const txt = (div.textContent || '');
+          const monthMatch = txt.match(/Month\s+(\d)/i);
+          if (!monthMatch) return;
+          const m = parseInt(monthMatch[1]);
+          if ((monthVisibleCount[m] || 0) === 0) div.classList.add('empty-month');
+          else div.classList.remove('empty-month');
+        });
+
+        // Update count label
+        const totalAsks = data.asks.length;
+        const totalTasks = data.tasks.length;
+        const anyFilter = filterState.categories.size + filterState.importance.size > 0;
+        const cl = document.getElementById('filter-visible-count');
+        if (cl) {
+          if (anyFilter) cl.innerHTML = `Showing <strong>${asksVisible}</strong> of ${totalAsks} asks · <strong>${tasksVisible}</strong> of ${totalTasks} tasks`;
+          else cl.innerHTML = `<strong>${totalAsks}</strong> asks · <strong>${totalTasks}</strong> tasks`;
+        }
+      }
+
+      applyFilters();
+
     }).catch(err => {
       console.error('Failed to load project pilot data', err);
       document.body.insertAdjacentHTML('beforeend', '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-6"><div class="card card-b text-red-700">Failed to load <code>data.json</code>. Check console.</div></div>');
