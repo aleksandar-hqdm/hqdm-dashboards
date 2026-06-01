@@ -1,0 +1,230 @@
+{
+ "volumes_miami_dma": [
+  {
+   "keyword": "360 photo booth rental",
+   "volume": 9900,
+   "cpc": 4.64,
+   "competition": "MEDIUM",
+   "competition_index": 39,
+   "location": "United States"
+  },
+  {
+   "keyword": "photo booth rental near me",
+   "volume": 9900,
+   "cpc": 6.46,
+   "competition": "MEDIUM",
+   "competition_index": 64,
+   "location": "United States"
+  },
+  {
+   "keyword": "wedding photo booth rental",
+   "volume": 8100,
+   "cpc": 6.36,
+   "competition": "LOW",
+   "competition_index": 30,
+   "location": "United States"
+  },
+  {
+   "keyword": "party photo booth rental",
+   "volume": 1900,
+   "cpc": 6.79,
+   "competition": "HIGH",
+   "competition_index": 73,
+   "location": "United States"
+  },
+  {
+   "keyword": "360 photo booth rental",
+   "volume": 880,
+   "cpc": 6.21,
+   "competition": "MEDIUM",
+   "competition_index": 49,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "photo booth miami",
+   "volume": 720,
+   "cpc": 8.17,
+   "competition": "MEDIUM",
+   "competition_index": 54,
+   "location": "United States"
+  },
+  {
+   "keyword": "miami photo booth",
+   "volume": 720,
+   "cpc": 8.17,
+   "competition": "MEDIUM",
+   "competition_index": 54,
+   "location": "United States"
+  },
+  {
+   "keyword": "photo booth rental near me",
+   "volume": 720,
+   "cpc": 6.82,
+   "competition": "MEDIUM",
+   "competition_index": 58,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "wedding photo booth rental",
+   "volume": 480,
+   "cpc": 7.22,
+   "competition": "LOW",
+   "competition_index": 25,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "photo booth miami",
+   "volume": 480,
+   "cpc": 8.03,
+   "competition": "MEDIUM",
+   "competition_index": 64,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "miami photo booth",
+   "volume": 480,
+   "cpc": 8.03,
+   "competition": "MEDIUM",
+   "competition_index": 64,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "photo booth company near me",
+   "volume": 320,
+   "cpc": 7.3,
+   "competition": "HIGH",
+   "competition_index": 80,
+   "location": "United States"
+  },
+  {
+   "keyword": "party photo booth rental",
+   "volume": 210,
+   "cpc": 7.82,
+   "competition": "MEDIUM",
+   "competition_index": 48,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "miami photo booth rental",
+   "volume": 90,
+   "cpc": 9.5,
+   "competition": "HIGH",
+   "competition_index": 75,
+   "location": "United States"
+  },
+  {
+   "keyword": "photo booth rentals in miami",
+   "volume": 90,
+   "cpc": 9.5,
+   "competition": "HIGH",
+   "competition_index": 75,
+   "location": "United States"
+  },
+  {
+   "keyword": "miami photo booth rental",
+   "volume": 50,
+   "cpc": 9.36,
+   "competition": "HIGH",
+   "competition_index": 86,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "photo booth rentals in miami",
+   "volume": 50,
+   "cpc": 9.36,
+   "competition": "HIGH",
+   "competition_index": 86,
+   "location": "Florida,United States"
+  },
+  {
+   "keyword": "photo booth company near me",
+   "volume": 20,
+   "cpc": 5.09,
+   "competition": "HIGH",
+   "competition_index": 71,
+   "location": "Florida,United States"
+  }
+ ],
+ "backlinks": [
+  {
+   "domain": "miaphotobooth.net",
+   "rank": 140,
+   "backlinks": 124,
+   "referring_domains": 87,
+   "referring_main_domains": 76,
+   "referring_pages": 118,
+   "broken_backlinks": 0,
+   "crawled_pages": 97
+  },
+  {
+   "domain": "glamshotsmiami.com",
+   "rank": 87,
+   "backlinks": 43,
+   "referring_domains": 38,
+   "referring_main_domains": 36,
+   "referring_pages": 41,
+   "broken_backlinks": 0,
+   "crawled_pages": 21
+  },
+  {
+   "domain": "capturedfun.com",
+   "rank": 82,
+   "backlinks": 66,
+   "referring_domains": 51,
+   "referring_main_domains": 50,
+   "referring_pages": 57,
+   "broken_backlinks": 0,
+   "crawled_pages": 8
+  },
+  {
+   "domain": "luxebooth.com",
+   "rank": 240,
+   "backlinks": 2537,
+   "referring_domains": 452,
+   "referring_main_domains": 417,
+   "referring_pages": 2184,
+   "broken_backlinks": 1196,
+   "crawled_pages": 455
+  },
+  {
+   "domain": "360photoboothmiamirental.com",
+   "rank": 54,
+   "backlinks": 38,
+   "referring_domains": 32,
+   "referring_main_domains": 30,
+   "referring_pages": 36,
+   "broken_backlinks": 2,
+   "crawled_pages": 12
+  },
+  {
+   "domain": "vippartyphotobooth.com",
+   "rank": 86,
+   "backlinks": 57,
+   "referring_domains": 45,
+   "referring_main_domains": 43,
+   "referring_pages": 51,
+   "broken_backlinks": 0,
+   "crawled_pages": 11
+  },
+  {
+   "domain": "miamieventphotobooth.com",
+   "rank": 309,
+   "backlinks": 8473,
+   "referring_domains": 249,
+   "referring_main_domains": 223,
+   "referring_pages": 7386,
+   "broken_backlinks": 11,
+   "crawled_pages": 317
+  },
+  {
+   "domain": "capturepod.com",
+   "rank": 169,
+   "backlinks": 543,
+   "referring_domains": 276,
+   "referring_main_domains": 265,
+   "referring_pages": 476,
+   "broken_backlinks": 0,
+   "crawled_pages": 33
+  }
+ ]
+}
