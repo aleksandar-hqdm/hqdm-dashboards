@@ -414,6 +414,12 @@
         const div = document.createElement('div');
         div.className = 'crucial-card';
         const linked = (c.tasks_linked || []).map(id => `<a href="#task-${id.replace('.', '-')}" class="linked-task-chip font-mono text-[10px] bg-ink-900 text-white px-1.5 py-0.5 rounded">${id}</a>`).join(' ');
+        const sources = (c.data_sources || []).map(s =>
+          `<div class="bg-white border border-slate-200 rounded p-2"><div class="text-[10px] font-bold uppercase tracking-wider text-ink-900">${s.source}</div><div class="text-[11px] text-ink-600 mt-0.5 leading-snug">${s.what}</div></div>`
+        ).join('');
+        const sourcesBlock = sources
+          ? `<div class="mt-3 pt-3 border-t border-amber-200/60"><div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 mb-1.5">Data sources feeding this</div><div class="grid grid-cols-1 sm:grid-cols-3 gap-2">${sources}</div></div>`
+          : '';
         div.innerHTML = `<div class="flex items-start gap-2">
                           <span class="rank">${c.rank}</span>
                           <div class="flex-1">
@@ -424,6 +430,7 @@
                               <span class="mx-1 text-ink-300">·</span>
                               <span class="font-bold uppercase tracking-wider">Linked tasks:</span> ${linked}
                             </div>
+                            ${sourcesBlock}
                           </div>
                         </div>`;
         cGrid.appendChild(div);
