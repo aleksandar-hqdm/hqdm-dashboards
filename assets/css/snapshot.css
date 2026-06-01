@@ -59,6 +59,8 @@ table.cal tr:last-child td { border-bottom: 0; }
 .cal .tag.refresh  { background: #fef3c7; color: #b45309; }
 .cal .tag.redirect { background: #e2e8f0; color: #475569; }
 .cal .tag.fix      { background: #e0e7ff; color: #4338ca; }
+.cal .tag.build    { background: #d1fae5; color: #047857; }
+.cal .tag.monitor  { background: #f1f5f9; color: #475569; }
 .cal .u { color: #0b1220; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.7rem; word-break: break-word; }
 .cal .n { color: #64748b; font-size: 0.66rem; font-family: 'Inter', system-ui, sans-serif; }
 

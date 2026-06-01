@@ -1203,6 +1203,263 @@
     "body": "JSON-LD in the theme head, sameAs pointing to the GBP Maps CID + the 6 social profiles already in the GBP. Validate in GSC URL Inspection."
    }
   ],
-  "footer": "Maps recovery diagnosis \u00b7 2026-06-01"
+  "footer": "Maps recovery diagnosis \u00b7 2026-06-01",
+  "line": {
+   "title": "Maps coverage trend \u00b7 6 LD scans \u00b7 Feb 6 \u2192 May 6 2026",
+   "labels": [
+    "Feb 6",
+    "Mar 3",
+    "Mar 31",
+    "Apr 3",
+    "May 3",
+    "May 6"
+   ],
+   "visitors": [
+    723,
+    716,
+    762,
+    705,
+    663,
+    712
+   ],
+   "visitors_label": "Cells reached (top-20)",
+   "leads": [
+    48,
+    57,
+    51,
+    48,
+    43,
+    46
+   ],
+   "leads_label": "Top-3 cells (booking-grade)",
+   "partial_index": null,
+   "caption": "Aggregated across all 8 tracked queries. <strong>Reach</strong> = grid cells where MIA appears in the top 20; <strong>Top-3</strong> = cells ranking 1-3 (the only positions that earn real local-pack clicks). The pattern is flat-to-down \u2014 the platform is wide (700+ cells reached) but the conversion-grade band is stuck at ~45-55."
+  },
+  "calendar": {
+   "enabled": true,
+   "title": "Actionable 90-day plan \u00b7 what we do, week-by-week",
+   "subtitle": "Six workstreams stacked across three months. The two red P0 fixes (Weeks 1-2) gate everything below them \u2014 they have to ship first for the rest to compound.",
+   "months": [
+    "Month 1 \u00b7 June 2026",
+    "Month 2 \u00b7 July 2026",
+    "Month 3 \u00b7 August 2026"
+   ],
+   "rows": [
+    {
+     "label": "GBP \u00b7 Lever A",
+     "cap": "this week",
+     "cells": [
+      [
+       {
+        "k": "fix",
+        "u": "Switch primary category Photography service \u2192 Photo booth",
+        "n": "5-min change in GBP Manager"
+       },
+       {
+        "k": "fix",
+        "u": "Drop secondaries: Photo lab, Photography shop, Photo agency, Photographer, Photography studio",
+        "n": "they pull toward film-developing intent"
+       },
+       {
+        "k": "fix",
+        "u": "Add secondaries: Wedding photographer, Event planner (keep Party equipment rental service)"
+       },
+       {
+        "k": "monitor",
+        "u": "Watch the Mar / Apr / May LD baseline against the first post-change scan"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Validate first signal in scan #1 post-change (target: 7-14 days)"
+       },
+       {
+        "k": "build",
+        "u": "Restart weekly GBP posts cadence \u2014 event highlights, booth-type spotlights"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Validate sustained re-ranking in scan #2-3 (target: top-3 on \"party photo booth rental\" doubles)"
+       },
+       {
+        "k": "build",
+        "u": "Weekly GBP posts continue \u00b7 publish 1 per week minimum"
+       }
+      ]
+     ]
+    },
+    {
+     "label": "Site phone & NAP \u00b7 Lever B",
+     "cap": "this week",
+     "cells": [
+      [
+       {
+        "k": "fix",
+        "u": "Global replace (786) 973-9973 \u2192 (786) 833-7645 across header, footer, contact form, every page"
+       },
+       {
+        "k": "fix",
+        "u": "Update all tel: links in HTML + schema + CTAs"
+       },
+       {
+        "k": "fix",
+        "u": "Keep (786) 973-9973 only on a labelled \"Text us\" button using sms: protocol"
+       },
+       {
+        "k": "build",
+        "u": "Push corrected NAP to BrightLocal / Whitespark / Moz Local"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Verify citation propagation across top-50 directories"
+       },
+       {
+        "k": "fix",
+        "u": "Hand-correct any citation that didn't auto-update via the aggregators"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Final citation audit \u2014 should be 100% on the GBP primary by month-end"
+       }
+      ]
+     ]
+    },
+    {
+     "label": "URL structure \u00b7 Lever C",
+     "cap": "30-60 days",
+     "cells": [
+      [
+       {
+        "k": "build",
+        "u": "Pick 15 priority cities \u00b7 GBP service area + revenue validation from owner"
+       },
+       {
+        "k": "build",
+        "u": "Define the new pattern: /photo-booth-rental/[city]/ + URL slug audit"
+       }
+      ],
+      [
+       {
+        "k": "build",
+        "u": "Write 15 new /photo-booth-rental/[city]/ pages \u00b7 ~400 words each \u00b7 3 unique anchors per page"
+       },
+       {
+        "k": "fix",
+        "u": "301 redirect every legacy area-page slug to its matching new URL"
+       },
+       {
+        "k": "build",
+        "u": "Update sitemap.xml + resubmit to GSC"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Indexation check in GSC for all 15 new URLs"
+       },
+       {
+        "k": "monitor",
+        "u": "Track top-3 cell movement on \"photo booth rental near me\" + suburb queries"
+       }
+      ]
+     ]
+    },
+    {
+     "label": "Service \u00d7 city matrix \u00b7 Lever D",
+     "cap": "90 days",
+     "cells": [
+      [
+       {
+        "k": "build",
+        "u": "Build matrix template: variable swap-out for booth \u00d7 city + per-cell testimonial + GBP embed"
+       },
+       {
+        "k": "build",
+        "u": "Month 1: 30 cells \u00b7 360 + Glam \u00d7 15 cities \u00b7 highest-priority booth types first"
+       }
+      ],
+      [
+       {
+        "k": "build",
+        "u": "Month 2: 30 cells \u00b7 Studio + Social \u00d7 15 cities"
+       }
+      ],
+      [
+       {
+        "k": "build",
+        "u": "Month 3: 30 cells \u00b7 Roamer + Audio Guestbook \u00d7 15 cities"
+       },
+       {
+        "k": "fix",
+        "u": "Cross-link audit \u00b7 each cell links to parent service + parent city + 3 adjacent cells"
+       }
+      ]
+     ]
+    },
+    {
+     "label": "Schema \u00b7 Lever E",
+     "cap": "30 days",
+     "cells": [
+      [
+       {
+        "k": "build",
+        "u": "Add LocalBusiness JSON-LD in theme head \u2014 telephone, areaServed (15), sameAs (8 social/GBP profiles)"
+       },
+       {
+        "k": "build",
+        "u": "Add Service schema on each of the 6 booth-type pages (provider \u2192 LocalBusiness @id)"
+       }
+      ],
+      [
+       {
+        "k": "build",
+        "u": "Add FAQPage schema on /frequently-asked-questions"
+       },
+       {
+        "k": "monitor",
+        "u": "Validate every schema page in Search Console URL Inspection"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Confirm Rich Results coverage in GSC (LocalBusiness + Service + FAQPage all returning)"
+       }
+      ]
+     ]
+    },
+    {
+     "label": "Internal linking & posts \u00b7 Lever F",
+     "cap": "60-90 days",
+     "cells": [
+      [],
+      [
+       {
+        "k": "build",
+        "u": "Add \"Booth types in [city]\" block on every area page \u00b7 6 internal links each"
+       },
+       {
+        "k": "build",
+        "u": "Add \"Most-requested neighborhoods\" block on every service page \u00b7 5-7 links each"
+       }
+      ],
+      [
+       {
+        "k": "monitor",
+        "u": "Internal-link audit \u00b7 target \u226530 inbound links per service page, \u22656 per city page"
+       }
+      ]
+     ]
+    }
+   ],
+   "note_html": "<strong>Legend:</strong> <span class='tag fix'>fix</span> = corrective change \u00b7 <span class='tag build'>build</span> = new asset \u00b7 <span class='tag monitor'>monitor</span> = check + report. Sequencing rule: nothing in Levers C, D, E waits on the others \u2014 they run in parallel once Levers A and B (Weeks 1-2) are deployed."
+  }
  }
 }
