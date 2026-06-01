@@ -9,6 +9,7 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -83,7 +84,7 @@
     <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
       <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR — organic is healthy, SERP-side decline isn't hitting revenue</div>
       <p class="text-sm sm:text-base text-ink-700 leading-relaxed">
-        Per <strong>Wicked Reports</strong> (your source of truth), <strong>Organic Search is Bernie's #1 channel and it's healthy</strong> — clicks <strong>+36% Q1 YoY</strong> (May 2026 at a 17-month high, 25,071), attributed sales <strong>steady at +5.5%</strong> (~$20K monthly revenue), new leads <strong>+124%</strong> (335 → 749), and the returning-customer base holding firm at ~370–400/month. What Search Console and Ahrefs show is the real <strong>SERP-side decline every content brand is seeing</strong> — GSC clicks YoY 90d <strong>−52.5%</strong> (16,411 → 7,800) and AI Overview presence <strong>~89%</strong> on top non-brand kws, driven by AI Overviews + Aug 2025 + March 2026 core updates — but <strong>per Wicked it has not translated to a click or revenue impact</strong>. Parallel issue: <strong>GSC Coverage 'Crawled - not indexed' grew 1,492 → 2,670 (+79% in 84 days)</strong> from URL parameter pollution + duplicate paths + thin taxonomy. The reshuffle had clear winners — <strong>S&amp;T +2,078% top-10 visibility</strong> off a PR-stunt pattern verified across <strong>20 head-to-head article pairs</strong> (<a href="st-pattern/" class="underline text-brand-500 hover:text-brand-700">st-pattern/</a>). Q3 plan: 6 levers + ~50 task rows including <strong>10 site-level template upgrades</strong> (<a href="site-level-upgrades/" class="underline text-brand-500 hover:text-brand-700">site-level-upgrades/</a>), <strong>top-50 BLOG refresh</strong> connected to the Ideal Sitemap workflow (<a href="top-50-losers/" class="underline text-brand-500 hover:text-brand-700">top-50-losers/</a>), and capturing the <strong>2.49M-SV store gap</strong> (<a href="store-gap/" class="underline text-brand-500 hover:text-brand-700">store-gap/</a>).
+        Per <strong>Wicked Reports</strong> (your source of truth), <strong>Organic Search is Bernie's #1 channel and it's healthy</strong> — clicks <strong>+37% Q1 YoY</strong> (46,051 → 63,159 — strongest opening quarter in the 17-month series), attributed sales <strong>steady at +5.5%</strong> (~$20K monthly revenue), new leads <strong>+124%</strong> (335 → 749), and the returning-customer base holding firm at ~360–420/month. What Search Console and Ahrefs show is the real <strong>SERP-side decline every content brand is seeing</strong> — GSC clicks YoY 90d <strong>−52.5%</strong> (16,411 → 7,800) and AI Overview presence <strong>~89%</strong> on top non-brand kws, driven by AI Overviews + Aug 2025 + March 2026 core updates — but <strong>per Wicked it has not translated to a click or revenue impact</strong>. Parallel issue: <strong>GSC Coverage 'Crawled - not indexed' grew 1,492 → 2,670 (+79% in 84 days)</strong> from URL parameter pollution + duplicate paths + thin taxonomy. The reshuffle had clear winners — <strong>S&amp;T +2,078% top-10 visibility</strong> off a PR-stunt pattern verified across <strong>20 head-to-head article pairs</strong> (<a href="st-pattern/" class="underline text-brand-500 hover:text-brand-700">st-pattern/</a>). Q3 plan: 6 levers + ~50 task rows including <strong>10 site-level template upgrades</strong> (<a href="site-level-upgrades/" class="underline text-brand-500 hover:text-brand-700">site-level-upgrades/</a>), <strong>top-50 BLOG refresh</strong> connected to the Ideal Sitemap workflow (<a href="top-50-losers/" class="underline text-brand-500 hover:text-brand-700">top-50-losers/</a>), and capturing the <strong>2.49M-SV store gap</strong> (<a href="store-gap/" class="underline text-brand-500 hover:text-brand-700">store-gap/</a>).
       </p>
     </div>
   </section>
@@ -109,7 +110,7 @@
       <div class="p-6 border-b border-slate-200">
         <div>
           <h2 class="text-2xl font-bold tracking-tight">Organic Search — monthly trend</h2>
-          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Per Wicked Reports — Organic is your #1 channel: clicks at a 17-month high, sales steady, new customer acquisition up</p>
+          <p class="text-sm text-ink-500 mt-1" id="trend-headline">Per Wicked Reports — Organic is your #1 channel: clicks +37% Q1 YoY, sales steady, new customer acquisition up</p>
           <p class="text-xs text-ink-500 mt-2">May 2026 is partial through May 26 (26 of 31 days), shown as a single partial-month point (*).</p>
         </div>
       </div>
@@ -128,7 +129,60 @@
           </div>
           <div class="h-72 sm:h-80"><canvas id="trend-chart-conversions"></canvas></div>
         </div>
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <h3 class="text-sm font-bold uppercase tracking-wider text-ink-600">Revenue <span class="text-ink-400 font-medium normal-case">(Wicked, multi-touch attributed)</span></h3>
+            <span class="text-xs text-ink-500 font-mono">monthly</span>
+          </div>
+          <div class="h-72 sm:h-80"><canvas id="trend-chart-revenue"></canvas></div>
+        </div>
         <p class="text-xs text-ink-500 italic" id="trend-annotation"></p>
+
+        <!-- Q4 2025 ALERT — Wicked click tracking appears compromised -->
+        <div role="alert" class="rounded-lg border-l-4 border-amber-500 bg-amber-50 p-5">
+          <div class="flex items-start gap-3">
+            <div class="shrink-0 mt-0.5 w-5 h-5 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center">!</div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-1 flex-wrap gap-2">
+                <h3 class="text-sm font-bold uppercase tracking-wider text-amber-900">Data caveat — Q4 2025 Wicked click tracking appears compromised</h3>
+                <span class="text-[10px] text-amber-800 font-mono">Q3 → Q4 2025 · Wicked organic</span>
+              </div>
+              <p class="text-sm text-amber-900 leading-relaxed">Oct–Dec 2025 organic clicks sit on a flat ~11.3K shelf (a one-month <strong>−38%</strong> drop from Sep, then identical readings 3 months running). Over the same window, every other Wicked metric continued tracking and <em>grew</em>: sales <strong>+3.5%</strong>, revenue <strong>+8.7%</strong>, new customers <strong>+8.7%</strong>, AOV <strong>+5.1%</strong>. Sales-per-click jumped from <strong>2.85% → 4.25%</strong> (+49%) — the diagnostic signature of click under-counting: real sales divided by an under-reported click number inflates the ratio mechanically. The Wicked-to-GA4 click ratio also collapsed from 3.93× (Sep) to 2.2–2.8× across Q4, then rebounded to 5×+ from Feb 2026. <strong>Sales and revenue numbers for Q4 are unaffected;</strong> the click numbers for Oct–Dec 2025 should be read as a floor, not a true measurement.</p>
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mt-4">
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">Clicks <span class="text-amber-600">(suspect)</span></div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">49,119 → 34,112</div>
+                  <div class="text-xs font-bold text-amber-700">−30.5%</div>
+                </div>
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">Sales</div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">1,401 → 1,449</div>
+                  <div class="text-xs font-bold text-emerald-700">+3.5%</div>
+                </div>
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">Revenue</div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">$57,677 → $62,697</div>
+                  <div class="text-xs font-bold text-emerald-700">+8.7%</div>
+                </div>
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">New customers</div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">242 → 263</div>
+                  <div class="text-xs font-bold text-emerald-700">+8.7%</div>
+                </div>
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">AOV</div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">$41.18 → $43.27</div>
+                  <div class="text-xs font-bold text-emerald-700">+5.1%</div>
+                </div>
+                <div class="rounded-md bg-white border border-amber-200 p-2.5">
+                  <div class="text-[9px] uppercase tracking-wider text-amber-900 font-bold">Sales / click <span class="text-amber-600">(mech.)</span></div>
+                  <div class="text-sm font-bold text-ink-900 mt-1">2.85% → 4.25%</div>
+                  <div class="text-xs font-bold text-amber-700">+49%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Quarterly summary -->
@@ -209,7 +263,7 @@
       </div>
       <div class="mt-6 p-5 rounded-lg border border-emerald-200 bg-emerald-50">
         <div class="text-sm font-bold text-emerald-900">Per Wicked Reports — none of this has hit your sales or conversions.</div>
-        <p class="text-sm text-emerald-900 mt-2">Over the same window: Wicked organic clicks <strong>+36% Q1 YoY</strong> (May 2026 at a 17-month high), attributed sales <strong>steady at +5.5%</strong>, new leads <strong>up +124%</strong>, and the returning-customer base holding firm at ~370–400/month. The SERP-side compression in Search Console / Ahrefs / Semrush reflects ranking-position changes; your real-money picture (per Wicked) is growing.</p>
+        <p class="text-sm text-emerald-900 mt-2">Over the same window: Wicked organic clicks <strong>+37% Q1 YoY</strong> (46,051 → 63,159), attributed sales <strong>steady at +5.5%</strong>, new leads <strong>up +124%</strong>, and the returning-customer base holding firm at ~360–420/month. The SERP-side compression in Search Console / Ahrefs / Semrush reflects ranking-position changes; your real-money picture (per Wicked) is growing. <strong>Q4 2025 is the cleanest proof of this:</strong> the Aug 2025 core update + AI Overview saturation cut Q3 → Q4 organic clicks <strong>−30%</strong>, yet Q4 organic revenue <strong>grew +8.7%</strong> ($57,677 → $62,697) and new customers <strong>grew +8.7%</strong>. The remaining traffic was higher-converting commercial intent, and the subscription engine carried the rest.</p>
       </div>
       <p class="text-xs text-ink-500 italic mt-4">Why the two views diverge: Wicked captures organic visits and revenue across the full picture (including subscription billing cycles, AI assistants, and other search engines), while Search Console tracks only Google's own surface. As search fragments and AI Overviews absorb informational queries inside Google, the GSC-only view narrows — even as your total organic discovery and revenue continue to grow.</p>
     </div>
@@ -603,5 +657,119 @@
   </footer>
 
   <script src="../../assets/js/dashboard.js"></script>
+  <script>
+    // Bernie's-specific: render Revenue trendline + annotate Q4 2025 suspect-region.
+    (function () {
+      function makeQ4Annotation(q4Start, q4End) {
+        if (q4Start < 0 || q4End < 0) return {};
+        return {
+          annotations: {
+            q4Box: {
+              type: 'box',
+              xMin: q4Start - 0.5,
+              xMax: q4End + 0.5,
+              backgroundColor: 'rgba(245, 158, 11, 0.12)',
+              borderColor: 'rgba(245, 158, 11, 0.55)',
+              borderWidth: 1,
+              borderDash: [4, 4],
+              label: {
+                display: true,
+                content: 'Q4 2025 — click tracking suspect',
+                position: 'start',
+                color: '#92400e',
+                font: { size: 10, weight: 'bold' },
+                backgroundColor: 'rgba(255,255,255,0.85)',
+                padding: 4
+              }
+            }
+          }
+        };
+      }
+
+      function init() {
+        if (typeof Chart === 'undefined') return setTimeout(init, 60);
+        fetch('data/data.json').then(r => r.json()).then(d => {
+          const trend = d.trend || {};
+          const months = trend.months || [];
+          const revenue = (trend.revenue && trend.revenue.organic) || [];
+          if (!revenue.length || !months.length) return;
+          const partialIdx = months.findIndex(m => /\*/.test(m));
+          const q4Start = months.findIndex(m => /Oct 2025/i.test(m));
+          const q4End = months.findIndex(m => /Dec 2025/i.test(m));
+
+          // Render the Revenue chart with Q4 annotation
+          const revCanvas = document.getElementById('trend-chart-revenue');
+          if (revCanvas) {
+            const datasets = [{
+              label: 'Organic Search',
+              data: revenue.map((v, i) => (partialIdx >= 0 && i >= partialIdx) ? null : v),
+              borderColor: '#15803d',
+              backgroundColor: 'rgba(21, 128, 61, 0.10)',
+              fill: true,
+              tension: 0.30,
+              pointRadius: 3,
+              pointHoverRadius: 5,
+              borderWidth: 2
+            }];
+            if (partialIdx >= 0) {
+              datasets.push({
+                label: 'Organic Search (partial)',
+                data: revenue.map((v, i) => (i === partialIdx - 1 || i === partialIdx) ? v : null),
+                borderColor: '#15803d',
+                backgroundColor: 'transparent',
+                borderDash: [6, 4],
+                fill: false,
+                tension: 0,
+                pointRadius: 3,
+                pointHoverRadius: 5,
+                borderWidth: 2
+              });
+            }
+            new Chart(revCanvas.getContext('2d'), {
+              type: 'line',
+              data: { labels: months, datasets },
+              options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'index', intersect: false },
+                plugins: {
+                  legend: { display: false },
+                  tooltip: { callbacks: { label: (ctx) => 'Revenue: $' + Number(ctx.parsed.y).toLocaleString() } },
+                  annotation: makeQ4Annotation(q4Start, q4End)
+                },
+                scales: {
+                  x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+                  y: {
+                    grid: { color: 'rgba(0,0,0,0.05)' },
+                    beginAtZero: false,
+                    ticks: { font: { size: 11 }, callback: (v) => '$' + Math.round(v / 1000) + 'k' }
+                  }
+                }
+              }
+            });
+          }
+
+          // Annotate the existing CLICKS chart by destroying + recreating it
+          // with the annotation baked in (mutating the live options proxy hits
+          // a Chart.js 4 stack overflow).
+          const sessChart = Object.values(Chart.instances || {}).find(c => c.canvas && c.canvas.id === 'trend-chart-sessions');
+          if (sessChart && q4Start >= 0 && q4End >= 0) {
+            const cfg = {
+              type: sessChart.config.type,
+              data: { labels: sessChart.data.labels.slice(), datasets: sessChart.data.datasets.map(ds => Object.assign({}, ds, { data: ds.data.slice() })) },
+              options: JSON.parse(JSON.stringify(sessChart.options || {}))
+            };
+            cfg.options.plugins = cfg.options.plugins || {};
+            cfg.options.plugins.annotation = makeQ4Annotation(q4Start, q4End);
+            const canvas = sessChart.canvas;
+            sessChart.destroy();
+            new Chart(canvas.getContext('2d'), cfg);
+          }
+        });
+      }
+      // Run after dashboard.js has rendered its charts.
+      window.addEventListener('load', () => setTimeout(init, 150));
+    })();
+  </script>
 </body>
 </html>

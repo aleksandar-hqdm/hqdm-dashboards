@@ -145,6 +145,7 @@
           <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
           <div style="height: 184px;"><canvas id="line-chart"></canvas></div>
           ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
+          ${(s.line && s.line.alert) ? `<div class="mt-2 rounded border-l-2 border-amber-500 bg-amber-50 px-2.5 py-1.5 text-[11px] text-amber-900 leading-snug"><strong class="font-bold">Data caveat:</strong> ${s.line.alert}</div>` : ''}
         </div>
         <div class="panel p-3.5">
           <div class="secthead mb-2">${s.quarters.title || 'By Quarter'}</div>
@@ -166,6 +167,7 @@
           <div class="secthead mb-2">${(s.line && s.line.title) || 'Organic Performance · Monthly'}</div>
           <div style="height: 300px;"><canvas id="line-chart"></canvas></div>
           ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
+          ${(s.line && s.line.alert) ? `<div class="mt-2 rounded border-l-2 border-amber-500 bg-amber-50 px-2.5 py-1.5 text-[11px] text-amber-900 leading-snug"><strong class="font-bold">Data caveat:</strong> ${s.line.alert}</div>` : ''}
         </div>
       </section>
       ${hasBoxes ? `<section class="mb-3">
