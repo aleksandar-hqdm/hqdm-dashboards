@@ -1,0 +1,245 @@
+{
+  "meta": {
+    "client": "Construction Management & Design",
+    "short_name": "CM&D",
+    "domain": "cmdesigns.net",
+    "tagline": "Portland general contractor since 1996 · save-the-client diagnosis",
+    "tier": "Tier 3",
+    "vertical": "General Contractor · service-area business",
+    "prepared_by": "Aleksandar Spasevski",
+    "date": "2026-06-01",
+    "focus": "Maps grid recovery + on-page rebuild · service pages, schema, suburb-URL repair, tracking",
+    "data_window": "Local Dominator scans Mar 5 – May 31 2026 (169-cell grid · 7 queries · 34 files) + live site crawl 2026-06-01"
+  },
+  "tldr": "On the two queries CM&D used to rank on — <strong>construction management</strong> and <strong>construction design</strong> — top-3 grid coverage has collapsed: <strong>157 → 2</strong> cells and <strong>103 → 24</strong> cells respectively between March 5 and May 31. On the four service-intent queries we track — <strong>bathroom remodel · bathroom remodeling near me · walk-in shower conversion · kitchen repair</strong> — and on <strong>contractor near me</strong>, CM&D does not appear in the top 20 in a single one of 169 grid cells. Not once. The site has <strong>one service page</strong> (/kitchen-remodeling), nine generic suburb pages with spam-pattern URLs (/dependable-..., /efficient-..., /trusted-...), <strong>zero schema markup</strong> on any page we inspected, and <strong>no GA4/GTM/Clarity tracking installed</strong>. The /bathrooms page is a 65-word portfolio gallery with no H1. There is no bathroom-remodeling, no walk-in-shower-conversion, no kitchen-repair page — yet those are the GBP services that should be driving Maps relevance. Recovery is a service-page rebuild + schema + matrix repair, in that order.",
+  "headline": {
+    "h2": "Two brand-name queries collapsing · five service-intent queries at zero · the site cannot back the GBP",
+    "lede": "The two Maps queries CM&D used to rank on are both falling fast (-155 top-3 cells on \"construction management,\" -79 on \"construction design\" in 12 weeks). The four service-intent queries the GBP is configured for (bathroom remodel, walk-in shower, kitchen repair, contractor-near-me) have always been at zero — because the site has no service pages to back them. Schema is absent everywhere. Tracking is uninstalled. The recovery path is on-page + technical, fully within 90 days, with no review or PR-link spend.",
+    "tiles": [
+      {"label": "construction management · top-3 cells", "value": "157 → 2", "sub": "Mar 5 → May 31 · -155 cells · avg rank 3.09 → 6.68", "tone": "bad"},
+      {"label": "construction design · top-3 cells", "value": "103 → 24", "sub": "Mar 5 → May 31 · -79 · coverage 98% → 68%", "tone": "bad"},
+      {"label": "service-intent queries · cells in top-20", "value": "0", "sub": "bathroom remodel · walk-in shower · kitchen repair · contractor near me · 0/169 across all scans", "tone": "bad"},
+      {"label": "Site supports GBP services", "value": "1 of 8", "sub": "Only /kitchen-remodeling/ exists · no bathroom-remodeling, walk-in-shower, kitchen-repair page", "tone": "bad"}
+    ]
+  },
+  "root_cause": {
+    "intro": "Five structural gaps. A1 and A2 are why CM&D is not ranking. A3 is why the gap is widening fast. A4 is why we can't see the impact. A5 is context (out of scope but worth flagging).",
+    "items": [
+      {
+        "id": "A1",
+        "title": "The site does not back the GBP",
+        "body": "The GBP lists 27 service items across 6 categories (Construction company · Home builder · Kitchen Renovator · Bathroom Renovator · General Contractor · Custom home builder). The site backs one of them: /kitchen-remodeling. For every other claim, when Google looks for confirming relevance signals on the site, it finds either a portfolio gallery (/bathrooms is 65 words with no H1) or nothing.",
+        "severity": "P0"
+      },
+      {
+        "id": "A2",
+        "title": "Suburb pages signal \"generated content\"",
+        "body": "The nine suburb pages on the site use one of eight rotating modifiers in the URL — dependable / efficient / trusted / fast / quality (×2) / premium / local / skilled — in front of a generic service stem (\"-general-contractor\" or \"-general-contracting-services\") with \"-or\" suffix. The content itself is not thin (the Marylhurst page is ~950 words with specific landmarks), but the URL pattern reads as algorithmically generated, which is a known suppression trigger.",
+        "severity": "P0"
+      },
+      {
+        "id": "A3",
+        "title": "Zero schema markup anywhere",
+        "body": "Homepage, the one service page, suburb pages, hub page — none carry LocalBusiness / GeneralContractor / Service / AreaServed JSON-LD. The Wix theme is not emitting schema and no custom code is injected. Competitors with 1-2 reviews (TS Construction, Northwest Construction, T&M Design) out-rank CM&D on the brand-name queries largely because their site/profile coupling is cleaner.",
+        "severity": "P0"
+      },
+      {
+        "id": "A4",
+        "title": "No conversion tracking installed",
+        "body": "No Google Tag Manager, no GA4, no Microsoft Clarity, no Meta Pixel detected on the homepage. The GBP website link is correctly UTM-tagged (utm_source=google&utm_medium=organic&utm_campaign=gbp), so a gmb_click event would fire if GA4 were listening — nothing is listening. Anything we recover on rankings cannot be measured in leads, calls, or revenue until tracking is installed.",
+        "severity": "P1"
+      },
+      {
+        "id": "A5",
+        "title": "Review profile below the floor of the local pack",
+        "body": "CM&D holds 6 reviews at 5.0★. Across the top-10 competitors on these queries, the median is 26 reviews and the leader (NW Tub & Shower) carries 841. Review work is outside HQDM scope — flagging as context so the client understands where the velocity gap is. At 6 reviews CM&D is below the threshold where review count starts contributing positively to ranking weight.",
+        "severity": "context"
+      }
+    ]
+  },
+  "grid": {
+    "intro": "13×13 grid (169 cells, 1-mile spacing) centered at (45.3642, -122.6484) — Milwaukie/Oak Grove, anchoring south Portland metro through Lake Oswego, West Linn, Oregon City and Tigard. This is exactly CM&D's GBP service area.",
+    "scans": {
+      "construction management": [
+        {"date": "Mar 5",  "top3": 157, "top10": 169, "top20": 169, "avg_present": 3.09},
+        {"date": "Mar 9",  "top3": 164, "top10": 169, "top20": 169, "avg_present": 2.99},
+        {"date": "Mar 11", "top3": 160, "top10": 169, "top20": 169, "avg_present": 3.05},
+        {"date": "Mar 13", "top3": 148, "top10": 169, "top20": 169, "avg_present": 3.19},
+        {"date": "Mar 31", "top3":  93, "top10": 164, "top20": 164, "avg_present": 3.47},
+        {"date": "May 5",  "top3": 116, "top10": 169, "top20": 169, "avg_present": 3.34},
+        {"date": "May 21", "top3":  41, "top10": 109, "top20": 147, "avg_present": 7.41},
+        {"date": "May 31", "top3":   2, "top10": 157, "top20": 168, "avg_present": 6.68}
+      ],
+      "construction design": [
+        {"date": "Mar 5",  "top3": 103, "top10": 161, "top20": 165, "avg_present": 3.67},
+        {"date": "Mar 9",  "top3": 113, "top10": 162, "top20": 166, "avg_present": 3.42},
+        {"date": "Mar 11", "top3": 110, "top10": 160, "top20": 165, "avg_present": 3.52},
+        {"date": "Mar 13", "top3":  36, "top10": 151, "top20": 166, "avg_present": 5.50},
+        {"date": "Mar 31", "top3": 103, "top10": 155, "top20": 157, "avg_present": 3.44},
+        {"date": "May 5",  "top3":  97, "top10": 159, "top20": 165, "avg_present": 4.06},
+        {"date": "May 21", "top3":   4, "top10":  47, "top20":  73, "avg_present": 9.82},
+        {"date": "May 31", "top3":  24, "top10":  65, "top20": 115, "avg_present": 9.27}
+      ],
+      "bathroom remodel":            [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
+      "bathroom remodeling near me": [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
+      "walk in shower conversion":   [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
+      "kitchen repair":              [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
+      "contractor near me":          [{"date":"Mar 13","top3":0,"top10":0,"top20":0},{"date":"Mar 31","top3":0,"top10":0,"top20":0},{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}]
+    },
+    "weak_quadrant": "Cells where CM&D falls fastest cluster in the northwest quadrant of the grid — the Beaverton / Tigard / Lake Oswego corridor (lat 45.38-45.45, lng -122.77 to -122.67). These are the highest-population cells; they pull more competitive results from established names. CM&D's centroid strength holds in the South Milwaukie / Oak Grove ring closer to the geocoded service area, then decays sharply toward population centers — the classic prominence/proximity signature of a profile with authority gaps."
+  },
+  "competitors": {
+    "intro": "Top-10 by total top-3 cells held across the 7 tracked queries during the data window.",
+    "leaderboard": [
+      {"rank":  1, "name": "NW Tub & Shower",                     "primary_category": "Bathroom remodeler",      "reviews": 841, "rating": 5.0, "top3_cells": 3590, "domain": "nwtubandshower.com (likely)"},
+      {"rank":  2, "name": "TS Construction Management",          "primary_category": "Construction company",    "reviews":   2, "rating": 5.0, "top3_cells":  836, "domain": "tsconstructionmanagement.com"},
+      {"rank":  3, "name": "Northwest Construction Management",   "primary_category": "General contractor",      "reviews":   1, "rating": 5.0, "top3_cells":  835, "domain": "nwconstructionmgmt.com"},
+      {"rank":  4, "name": "T & M Design Solutions LLC",          "primary_category": "Construction company",    "reviews":   1, "rating": 5.0, "top3_cells":  763, "domain": null},
+      {"rank":  5, "name": "BnK Construction",                    "primary_category": "General contractor",      "reviews": 281, "rating": 4.9, "top3_cells":  404, "domain": "bnkconstruction.com"},
+      {"rank":  6, "name": "Tuscan Design Build LLC",             "primary_category": "Architectural designer",  "reviews":  27, "rating": 5.0, "top3_cells":  287, "domain": "tuscandesign.org"},
+      {"rank":  7, "name": "L. Evans Design Group, Inc.",         "primary_category": "Remodeler",                "reviews":  25, "rating": 4.8, "top3_cells":  274, "domain": "levansdesigngroup.com"},
+      {"rank":  8, "name": "Avila Construction & Design",         "primary_category": "General contractor",      "reviews":  15, "rating": 5.0, "top3_cells":  252, "domain": "avilaconstructs.com"},
+      {"rank":  9, "name": "KLM Construction Co",                 "primary_category": "Construction company",    "reviews":  28, "rating": 5.0, "top3_cells":  170, "domain": "klmconstructionco.com"},
+      {"rank": 10, "name": "Fir Construction, LLC.",              "primary_category": "Construction company",    "reviews":  33, "rating": 5.0, "top3_cells":  132, "domain": "firconstruction.com"}
+    ],
+    "two_groups": [
+      {
+        "label": "Name-match competitors (CM&D's mirror image)",
+        "names": ["TS Construction Management", "Northwest Construction Management", "T & M Design Solutions"],
+        "story": "1-2 reviews each. They hold ground on the brand-name queries by literal string match — same mechanism CM&D used to. They are fragile in the same way and not the long-term threat. We beat them with the site/profile coupling they also lack."
+      },
+      {
+        "label": "Service-specialist competitors (long-term threat)",
+        "names": ["NW Tub & Shower", "BnK Construction", "Tuscan Design Build", "L. Evans Design Group", "Avila Construction & Design", "KLM Construction Co", "Fir Construction"],
+        "story": "Categorize specifically (Bathroom remodeler · Architectural designer · Remodeler · General contractor) and have built review counts of 15-841. They own the service-intent grid entirely. NW Tub & Shower alone holds 3,590 top-3 cells. We don't displace NW Tub & Shower this quarter — we claim our share of Lake Oswego / West Linn / Oregon City sub-cells."
+      }
+    ],
+    "review_gap": {
+      "cmd_reviews": 6,
+      "leaderboard_median": 26,
+      "leaderboard_max": 841,
+      "context_note": "Review work is outside HQDM scope. Surfaced as context so the AM team and client understand the velocity gap they own."
+    }
+  },
+  "gbp_audit": {
+    "intro": "The GBP itself is strong and not the bottleneck. The single change we'd consider is a primary-category test once site work has settled.",
+    "rows": [
+      {"area": "Claimed & verified", "status": "good", "detail": "Claimed since 1996; active management."},
+      {"area": "Primary category", "status": "watch", "detail": "\"Construction company.\" Service-intent queries are dominated by competitors with \"Bathroom remodeler\" / \"Remodeler\" primaries. CM&D's secondary list already includes Bathroom Renovator + Kitchen Renovator. Consider a single 30-day primary-category test in August once new service pages have settled into index."},
+      {"area": "Secondary categories", "status": "good", "detail": "Home builder · Kitchen Renovator · Bathroom Renovator · General Contractor · Custom home builder. Mix is appropriate for the multi-service offering."},
+      {"area": "Service items", "status": "good", "detail": "27+ items across 6 categories. Tight. After service-page builds ship, link each item to its corresponding new site page via \"Learn more.\""},
+      {"area": "Business description", "status": "good", "detail": "Mentions CCB #112648, 30 years, the 8 suburbs. No change needed."},
+      {"area": "Service area", "status": "good", "detail": "20 micro-neighborhoods listed. Matches site's suburb pages."},
+      {"area": "Hours", "status": "good", "detail": "Mon-Thu 08:00-17:00, Fri 08:00-14:00. Set."},
+      {"area": "Website link", "status": "good", "detail": "Tagged ?utm_source=google&utm_medium=organic&utm_campaign=gbp — correct, but the gmb_click event has no listener (no GA4 installed)."},
+      {"area": "Reviews / rating", "status": "context", "detail": "6 reviews · 5.0★. Below the local-pack floor (median 26). Out of HQDM scope; client-owned action."}
+    ]
+  },
+  "site_audit": {
+    "intro": "Crawl performed 2026-06-01 via WebFetch. CMS = Wix. 22 total URLs in the public sitemap.",
+    "url_inventory": [
+      {"category": "Homepage", "urls": ["/"]},
+      {"category": "Service page (1)", "urls": ["/kitchen-remodeling"]},
+      {"category": "Portfolio galleries", "urls": ["/portfolio", "/kitchens", "/bathrooms", "/living-room-fireplaces", "/outdoor-spaces", "/miscellaneous"]},
+      {"category": "Hub page", "urls": ["/serving-all-of-portland-or"]},
+      {"category": "Suburb pages (9 · spam-pattern URLs)", "urls": [
+        "/dependable-general-contractor-in-willamette-or",
+        "/efficient-general-contractor-in-barclay-hills-or",
+        "/trusted-general-contractor-in-clackamas-heights-or",
+        "/fast-general-contracting-services-in-hidden-springs-or",
+        "/quality-general-contracting-services-in-tanner-basin-or",
+        "/premium-general-contracting-services-in-robinwood-or",
+        "/local-general-contractor-in-skyline-ridge-or",
+        "/quality-general-contractor-in-marylhurst-or",
+        "/skilled-general-contractor-in-parkplace-or"
+      ]},
+      {"category": "About / Contact / Blog", "urls": ["/about-1", "/about-1-1", "/contact", "/blog"]}
+    ],
+    "red_flags": [
+      "Only ONE service page (/kitchen-remodeling). No /bathroom-remodeling/, no /walk-in-shower-conversion/, no /kitchen-repair/, no /general-contractor/.",
+      "Nine suburb URLs use spam-pattern modifier prefixes (dependable / efficient / trusted / fast / quality ×2 / premium / local / skilled). The underlying copy is not thin but the URL cluster reads as generated.",
+      "Zero schema markup on every page sampled (homepage, /kitchen-remodeling, /quality-general-contractor-in-marylhurst-or, /serving-all-of-portland-or).",
+      "No GTM / GA4 / Clarity / Meta Pixel detected. Conversion tracking is uninstalled.",
+      "/bathrooms is a 65-word portfolio gallery with no H1.",
+      "Duplicate /about-1 and /about-1-1 (Wix duplication artifact)."
+    ],
+    "salvageable": [
+      "Marylhurst suburb page is ~950 words with specific local references (Arbor and Robinwood Creeks, Highway 43, Marylhurst Heights Park, 1950s housing stock, West Linn permits). Other suburb pages likely similar. Content survives the URL migration.",
+      "/serving-all-of-portland-or hub is ~3,200 words with neighborhood/zip/school detail. Keep as a hub.",
+      "/kitchen-remodeling is ~1,850 words. Add schema + FAQ + service-area block, otherwise leave.",
+      "GBP service items are well-structured and one-to-one match the site pages we need to build."
+    ]
+  },
+  "plan": {
+    "intro": "Five workstreams. D1 and D2 unlock the rest.",
+    "workstreams": [
+      {
+        "id": "D1",
+        "title": "Service-page rebuild — the core fix",
+        "body": "Build the service pages the GBP claims and the site does not back. Order: P0 = /bathroom-remodeling/ + /walk-in-shower-conversion/ + /kitchen-repair/. P1 = /kitchen-remodeling/ rebuild + /general-contractor/. P2 = /fireplace-builder/, /outdoor-living-spaces/, /insurance-rebuild/, /home-addition/. Page spec: 1,200-1,500 words, Service + AreaServed schema, suburbs-served block linking to suburb pages, FAQ (5-7 Qs), click-to-call CTA above the fold, email CTA at the end. Mirror the Marylhurst page voice — landmarks + permits — it works.",
+        "cadence": "1-2/month. June: bathroom-remodeling + walk-in-shower-conversion. July: kitchen-repair + kitchen-remodeling rebuild. August: general-contractor + one P2.",
+        "owner": "HQDM on-page (Alexa / Shen) + Nina content"
+      },
+      {
+        "id": "D2",
+        "title": "Schema — LocalBusiness + Service + AreaServed",
+        "body": "Inject JSON-LD via Wix custom code (Settings → Custom Code → Head). GeneralContractor (LocalBusiness subtype) on every page with name, phone, URL, CCB #112648, WA #CONSTMD742DF, geoCircle service area + areaServed list of the 8 anchor cities. Service schema per service page, linking provider to the GeneralContractor entity. BreadcrumbList on every non-home page. Validate via validator.schema.org and Rich Results Test.",
+        "cadence": "Single rollout · target M1 (June).",
+        "owner": "HQDM dev (Milan)"
+      },
+      {
+        "id": "D3",
+        "title": "Suburb-page repair — keep content, fix URLs",
+        "body": "Rename each suburb URL from /modifier-general-contractor-in-suburb-or to /suburb/ (e.g. /marylhurst/, /west-linn/, /willamette/, /lake-oswego/, /oregon-city/, /tigard/, /milwaukie/, /beaverton/). 301 redirects from old URLs. Refresh title tag + H1 to drop the junk modifier. Keep body copy. Once D1 ships, add service-suffix children: /marylhurst/bathroom-remodeling/, /west-linn/kitchen-remodeling/, etc. — the service × suburb matrix.",
+        "cadence": "Month 1: URL migration + 301s. Months 2-3: 3 suburb refreshes/month + matrix children as their parent service pages land.",
+        "owner": "HQDM on-page + dev"
+      },
+      {
+        "id": "D4",
+        "title": "Tracking + measurement install",
+        "body": "Install GTM container site-wide via Wix Marketing Tools. Deploy GA4 base tag + the four-event model: form_submit (forwards once contact form is added), contact_form_submit, click_phone_number (tel: clicks), gmb_click (utm_campaign=gbp landings). Fire Microsoft Clarity for session replay. Validate in GA4 DebugView before going live.",
+        "cadence": "Single rollout · target M1 (June).",
+        "owner": "HQDM dev"
+      },
+      {
+        "id": "D5",
+        "title": "GBP — tight surface, no review/photo/Q&A work",
+        "body": "Reviews, Q&A, photos are out of HQDM scope. Inside what we control: (a) link each GBP service item to its new site page via per-item \"Learn more\" once D1 lands. (b) Primary-category test in August (one 30-day swap to Home builder or Kitchen Renovator) after schema and pages have settled into index — don't move it sooner. (c) Service items + description + secondary categories are already strong; no change.",
+        "cadence": "M1: items linked through. M3: primary-category test.",
+        "owner": "HQDM AM team (Matt / Andrew / Racquel)"
+      }
+    ]
+  },
+  "windows": {
+    "quick_wins_june": [
+      "Schema deployment (JSON-LD via Wix head injection) · D2",
+      "GTM/GA4/Clarity install + 4-event model · D4",
+      "P0 service pages: /bathroom-remodeling/ + /walk-in-shower-conversion/ · D1",
+      "9 suburb URLs migrated to clean /suburb/ slugs + 301s in place · D3",
+      "Collapse duplicate /about-1 + /about-1-1 to single /about/ with 301"
+    ],
+    "midterm_jul_aug": [
+      "Remaining service pages (/kitchen-repair/, /kitchen-remodeling/ rebuild, /general-contractor/) · D1",
+      "Suburb refresh cadence (3/month) + matrix children on P0 services · D3",
+      "GBP service items linked to new site pages · D5",
+      "Blog program kicks off (5/month) — informational queries supporting the new services (\"walk-in shower conversion cost Portland\", etc.)",
+      "GBP primary-category test (30 days, August) · D5"
+    ],
+    "longer_term_q4": [
+      "Full service × suburb matrix completion (P0 services × 8 anchor suburbs)",
+      "Platform-migration evaluation (Wix → Webflow/Astro) — quote out before year-end. Wix is functional but caps future schema + speed work."
+    ]
+  },
+  "outcome_targets": {
+    "intro": "Realistic targets if D1-D4 ship on cadence.",
+    "tiles": [
+      {"label": "construction management · top-3", "target": "60-100 cells by Aug 31", "from": "2 cells (May 31)", "tone": "watch"},
+      {"label": "construction design · top-3", "target": "60-100 cells by Aug 31", "from": "24 cells (May 31)", "tone": "watch"},
+      {"label": "bathroom remodel · top-10", "target": "10-25 cells by Aug 31", "from": "0 cells", "tone": "good"},
+      {"label": "kitchen repair · top-10", "target": "5-15 cells by Aug 31", "from": "0 cells", "tone": "good"},
+      {"label": "contractor near me · top-10", "target": "any presence by Sep 30", "from": "0 cells", "tone": "good"},
+      {"label": "walk-in shower conversion", "target": "modest · NW Tub & Shower hard to displace inside their core", "from": "0 cells", "tone": "watch"}
+    ],
+    "footnote": "Brand-name recovery is partial by design — the literal-string-match advantage CM&D used to enjoy is structurally gone. The recovered position is durable because it's signal-backed, not string-matched."
+  }
+}

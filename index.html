@@ -502,6 +502,67 @@ Full strategic dashboard, condensed brief, and the single-screen client snapshot
 
       <div class="block bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition p-5 flex flex-col">
         <div class="flex items-center gap-2 mb-3">
+          <span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-rose-100 text-rose-800">TIER 3 · AT RISK</span>
+          <span class="text-xs text-slate-500">General Contractor · Portland, OR</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">Construction Management &amp; Design</h3>
+        <p class="text-sm text-slate-600 mt-2">Save-the-client Maps + on-page diagnosis. Brand-name queries collapsing (−155 top-3 cells on "construction management" / −79 on "construction design" since March). Five service-intent queries (bathroom remodel, walk-in shower conversion, kitchen repair, contractor-near-me, bathroom remodeling near me) at <strong>zero / 169 cells</strong> — because the site has 1 service page and 0 schema. Recovery is on-page: 5 workstreams, 90 days, no review/PR/photo work.</p>
+        <div class="mt-auto pt-4 text-xs text-slate-500">Prepared 2026-06-01</div>
+        <div class="mt-3 grid grid-cols-2 gap-2 items-stretch">
+          <div class="flex flex-col gap-1">
+            <a href="clients/construction-management-design/index.html" class="text-center px-3 py-2 rounded border border-brand-500 text-brand-500 font-semibold hover:bg-brand-500 hover:text-white transition text-xs">Strategy</a>
+            <button type="button" onclick="openCondensed('construction-management-design')" class="text-center px-2 py-1 rounded-md text-[10px] font-medium tracking-tight text-brand-500/60 hover:text-brand-500 hover:bg-brand-500/5 transition-all duration-200 self-center w-fit mx-auto scale-95 hover:scale-105 hover:tracking-normal">Condensed</button>
+          </div>
+          <a href="clients/construction-management-design/snapshot.html" class="flex items-center justify-center text-center px-3 py-2 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700 transition text-xs">Client</a>
+        </div>
+        <details class="mt-2">
+          <summary class="cursor-pointer text-xs font-semibold text-brand-500 hover:text-brand-700 select-none flex items-center justify-between px-3 py-2 rounded border border-brand-500/40 hover:bg-brand-500/5 list-none [&amp;::-webkit-details-marker]:hidden [&amp;::marker]:hidden">
+            <span>Email draft for client</span>
+            <span class="text-[10px] text-slate-400">show / hide</span>
+          </summary>
+          <div class="mt-2 space-y-2">
+            <textarea data-slug="construction-management-design" class="w-full h-80 text-[11px] font-mono text-slate-700 bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-brand-300">Subject: What the Maps grid is telling us &mdash; and the on-page fix that turns it around
+
+Hey Miles,
+
+Wanted to put the Maps picture in writing before our next call so the time on the call goes to questions, not background.
+
+We&apos;ve pulled the Google Maps grid across seven searches over the last 12 weeks (eight scans between March 5 and May 31). The short version is this: on the two searches CM&amp;D has historically ranked on &mdash; &quot;construction management&quot; and &quot;construction design&quot; &mdash; the visible top-3 positions have collapsed. &quot;Construction management&quot; went from 157 top-3 grid cells to 2 in 12 weeks. &quot;Construction design&quot; went from 103 to 24, and the share of the grid where CM&amp;D appears at all dropped from 98% to 68%. Both of those searches match your literal business name, and Google&apos;s local algorithm has shifted weight away from that kind of literal-string match.
+
+The bigger thing the data shows: on the four searches that describe the work CM&amp;D actually does &mdash; bathroom remodel, bathroom remodeling near me, walk-in shower conversion, kitchen repair &mdash; and on &quot;contractor near me,&quot; CM&amp;D has not appeared in the top 20 in a single one of 169 grid cells, in any scan, throughout the spring. Not once. Zero across the board.
+
+The cause is on the website, and it&apos;s mechanical. Your Google Business Profile lists 27 services across 6 categories (Construction company, Home builder, Kitchen Renovator, Bathroom Renovator, General Contractor, Custom home builder). Your website has one matching service page &mdash; /kitchen-remodeling. There is no /bathroom-remodeling/, no /walk-in-shower-conversion/, no /kitchen-repair/ page, and the /bathrooms URL is a 65-word photo gallery. So when Google looks at the GBP and checks the site for relevance signals on the queries the profile claims to cover, it finds nothing to confirm with. On top of that, there is no structured-data (schema) markup anywhere on the site &mdash; not on the homepage, not on /kitchen-remodeling, not on the nine suburb pages &mdash; and the conversion tracking (Google Analytics 4 / Google Tag Manager) is not installed, so we can&apos;t even measure lead movement when rankings shift.
+
+So the work this quarter is on-page and technical. Five things, in order:
+
+1) Build the missing service pages &mdash; bathroom-remodeling, walk-in-shower-conversion, kitchen-repair, then a rebuild of kitchen-remodeling and a new general-contractor page. These are the pages Google needs in order to attribute the GBP service claims to your site. 1-2 per month through August.
+
+2) Deploy schema (LocalBusiness + Service + AreaServed JSON-LD) site-wide. This is the single highest-leverage technical fix. Single rollout, June.
+
+3) Rename the nine suburb URLs. Right now they read &quot;/dependable-general-contractor-in-willamette-or/&quot;, &quot;/efficient-general-contractor-in-barclay-hills-or/&quot;, &quot;/trusted-general-contractor-in-clackamas-heights-or/&quot;, and so on &mdash; eight rotating junk modifiers across nine URLs. The content under them is salvageable (the Marylhurst page is actually quite specific and well-written), but the URL pattern reads to Google as auto-generated. We rename to /west-linn/, /marylhurst/, /willamette/, /lake-oswego/, etc., set 301 redirects from the old ones, and keep the body copy.
+
+4) Install GA4 + Google Tag Manager + Microsoft Clarity, with the four-event lead model (form submits, contact form submits, phone clicks, GBP click-throughs). Once installed we can actually measure what&apos;s moving.
+
+5) On the GBP itself: tight surface. The profile is in good shape already &mdash; 27 service items, 6 categories, full description with the CCB number, eight suburbs in the bio. We&apos;d run a single 30-day primary-category test in August (swap &quot;Construction company&quot; to &quot;Home builder&quot; or &quot;Kitchen Renovator&quot;) after the schema and pages have settled into Google&apos;s index.
+
+The honest part: review work, photo posting, and Q&amp;A on the GBP are outside the scope of what HQDM works on, so those stay on your side. As context for the call &mdash; you currently sit at 6 reviews against a leaderboard median of 26 across these competitors. Reviews aren&apos;t the diagnosis driving this decline (the name-match competitors winning ahead of you have 1-2 reviews themselves), but they&apos;re a real ceiling on the long-term ranking position once everything else is fixed.
+
+Realistic targets by end of August: on construction management and construction design we&apos;re aiming for 60-100 top-3 cells (partial recovery &mdash; the literal-name advantage isn&apos;t coming back), and on bathroom remodel and kitchen repair we&apos;re aiming for 10-25 top-10 cells from a starting point of zero. The walk-in-shower-conversion query is harder &mdash; NW Tub &amp; Shower (841 reviews) owns it &mdash; so the gain there will be modest.
+
+Full strategic diagnosis, condensed brief for the team, and a single-screen snapshot you can show your wife or anyone else without scrolling are all linked in the dashboard. Happy to walk through the heatmaps on the call. Two things we&apos;d want from you before we kick off: (1) Google Analytics + Search Console access for next pass, and (2) a quick read on which three of the eight cities (Portland / Beaverton / Lake Oswego / Tigard / West Linn / Milwaukie / Gresham / Oregon City) actually drive the most jobs, so the service-x-suburb matrix builds in the right order.
+
+&mdash; Matt</textarea>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="copyEmail(this)" class="text-xs px-3 py-1.5 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700 transition">Copy email</button>
+              <span class="text-[10px] text-slate-400">Edit [Name] before sending</span>
+            </div>
+            <div class="mt-3 pt-3 border-t border-slate-200" data-customize-panel></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="block bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition p-5 flex flex-col">
+        <div class="flex items-center gap-2 mb-3">
           <span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-sky-100 text-sky-800">TIER 2 · MULTI-LOCATION</span>
           <span class="text-xs text-slate-500">Moving + Storage · Tustin + Chino Hills, CA</span>
         </div>
@@ -780,6 +841,44 @@ Dashboard and grid views are all in there. We&apos;ll walk through it on the cal
             { label: "Top 5 revenue cities — owner sign-off on the matrix sequencing", explanation: "The proposed 15-city pattern is GBP-area-driven. We want the owner's read on the 5 cities that drive the most actual bookings, so the matrix starts where revenue is." },
             { label: "Phone-routing confirmation on (786) 833-7645", explanation: "Before we push the global swap on the site, confirm 833-7645 routes to a human and tracks the way 973-9973 does today. Don't break the lead flow." },
             { label: "GA4 + GSC access request", explanation: "This pass is Maps-only. With GA4 + GSC connected, the next pass can put an organic-clicks-and-leads recovery curve next to the Maps curve — the way we do for AQMS and Maison." }
+          ]}
+        ]
+      },
+      "construction-management-design": {
+        label: "Construction Management & Design · Portland, OR",
+        url: "clients/construction-management-design/condensed.html",
+        sections: [
+          { heading: "Opening", items: [
+            { label: "Frame: the diagnosis is on-page and mechanical — not a reputation problem", explanation: "Reviews are 6 but the name-match competitors winning ahead of CM&D have 1-2 reviews themselves. Don't let the call become a 'we need more reviews' conversation — the unlock is the site backing the GBP." },
+            { label: "Two queries CM&D ranks on are collapsing; five service-intent queries have always been at zero", explanation: "Lead with the contrast. The brand-name decline is the visible pain; the service-intent zero is the underlying cause and the bigger upside." },
+            { label: "Industry context: literal-name match is being de-weighted by Google's current local algo", explanation: "Helps the owner understand why a 30-year business is suddenly losing ground. Not their fault — the rules moved." }
+          ]},
+          { heading: "Walk through the data", items: [
+            { label: "\"construction management\" top-3 cells: 157 → 2 between Mar 5 and May 31 (8 scans)", explanation: "The visceral number. Top-10 footprint still mostly holds (157/169 cells) — CM&D is still on the grid, just pushed to positions 4-20 where end-users don't see them." },
+            { label: "\"construction design\" top-3 cells: 103 → 24; coverage 98% → 68%", explanation: "Confirms the same pattern. May 21 was the bottom (top-3 = 4, coverage = 43%), May 31 a partial bounce." },
+            { label: "Five service-intent queries: 0 / 169 cells across every scan, every month", explanation: "bathroom remodel · bathroom remodeling near me · walk-in shower conversion · kitchen repair · contractor near me. Make the point that this isn't a slip — it's never been there, because the site has nothing to back it." },
+            { label: "Site has 1 service page (/kitchen-remodeling) for 8 GBP services", explanation: "The smoking gun. /bathrooms is 65 words with no H1. There is no /bathroom-remodeling/, no /walk-in-shower-conversion/, no /kitchen-repair/. Show the URL inventory on screen." },
+            { label: "Nine suburb URLs use 8 rotating junk modifiers (dependable / efficient / trusted / fast / quality ×2 / premium / local / skilled)", explanation: "URL screenshot side-by-side. The Marylhurst page content is actually 950 words with specific landmarks — the copy is fine, the URL is the problem." },
+            { label: "Zero schema markup anywhere on the site; no GA4 / GTM / Clarity installed", explanation: "Both go in the same breath. Schema is why competitors with 1-2 reviews out-rank CM&D. Tracking is why we can't measure recovery." }
+          ]},
+          { heading: "Pivots this quarter", items: [
+            { label: "D1 · Service-page rebuild — June bathroom + walk-in-shower; July kitchen-repair + kitchen-remodeling rebuild; August general-contractor + 1 P2", explanation: "The core fix. Each page: 1,200-1,500 words, Service + AreaServed schema, suburbs-served block, FAQ, click-to-call CTA. Mirror the Marylhurst page voice — landmarks + permits — it works." },
+            { label: "D2 · LocalBusiness + Service + AreaServed schema site-wide via Wix custom code, single rollout June", explanation: "GeneralContractor on every page with CCB #112648, WA #CONSTMD742DF, geoCircle service area + 8-city areaServed. Validate via Rich Results Test. Highest-leverage technical fix." },
+            { label: "D3 · Suburb-URL repair — rename to /west-linn/, /marylhurst/, /willamette/, /lake-oswego/, /oregon-city/, /tigard/, /milwaukie/, /beaverton/ + 301s", explanation: "Keep the body copy. Drop junk modifier from title + H1. Once D1 ships, add matrix children: /marylhurst/bathroom-remodeling/ etc." },
+            { label: "D4 · GTM + GA4 + Clarity install with the 4-event lead model — single rollout June", explanation: "form_submit · contact_form_submit · click_phone_number · gmb_click. Validate in GA4 DebugView before pushing live." },
+            { label: "D5 · GBP — link service items to new site pages (M1); single 30-day primary-category test in August", explanation: "Swap 'Construction company' to 'Home builder' or 'Kitchen Renovator' AFTER schema + pages have settled. Don't move sooner — confounds the signal we're reading. Reviews, photos, Q&A stay out of scope." }
+          ]},
+          { heading: "Anticipated pushback", items: [
+            { label: "\"Why is a 30-year licensed contractor losing to companies with 2 reviews?\" → Name-match was carrying it; the algo no longer weights that as heavily", explanation: "Set this clearly. CM&D used to win because 'Construction Management & Design' literally matched the query. Google now wants entity strength (schema, site coupling, service-page depth). The mirror-image competitors will also fall when the rules shift further." },
+            { label: "\"Don't we need more reviews?\" → Reviews are a long-term ceiling, but not the cause of the decline — and not in HQDM's scope", explanation: "Be honest: at 6 reviews CM&D is below the local-pack floor (median 26). But the 1-2-review competitors ranking above show that reviews aren't the binding constraint right now. Site/profile coupling is. Reviews are on the client side." },
+            { label: "\"Will the Wix platform be enough?\" → Yes for this quarter — JSON-LD via custom code, GTM via Marketing Tools. Migration is a Q4 evaluation", explanation: "Don't make this about platform change in June. Wix can do everything we need this quarter. Migration is a separate Q4 conversation once the basics are working." },
+            { label: "\"How long until we see Maps recovery?\" → Schema and tracking impact in 2-4 weeks; service-page impact 4-8 weeks per page; brand-name partial recovery by end of August", explanation: "Set expectations on timeline. The technical fixes show up fast in scan data; the page-based work compounds slower. The literal-name advantage isn't fully coming back — partial recovery is the realistic target." }
+          ]},
+          { heading: "Confirm before hanging up", items: [
+            { label: "Wix admin access for the dev team — Custom Code (Settings → Custom Code → Head) + Marketing Tools (GTM)", explanation: "Without this the P0 schema + tracking rollout stalls before it starts. Confirm the path on the call." },
+            { label: "Top 3 cities by actual job revenue — to sequence the service × suburb matrix", explanation: "GBP service area lists 20 micro-neighborhoods. We want the owner's read on which of the 8 anchor cities (Portland / Beaverton / Lake Oswego / Tigard / West Linn / Milwaukie / Gresham / Oregon City) actually drive the most jobs. Matrix builds revenue-first." },
+            { label: "GA4 + Search Console access for the next pass", explanation: "This pass is Maps-only. Once GA4 + GSC are connected, the next pass can put an organic-and-leads recovery curve next to the Maps curve — the way we do for AQMS and Maison." },
+            { label: "Sign-off on URL migration (9 suburb URLs renamed with 301s)", explanation: "Confirm the owner is comfortable with the slug change and the 301 redirect plan. We're not removing content; we're cleaning the URL pattern. Get explicit yes before scheduling deploy." }
           ]}
         ]
       },

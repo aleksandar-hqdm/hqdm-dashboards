@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Construction Management &amp; Design · Maps &amp; On-Page Diagnosis · HQDM</title>
+  <meta name="description" content="Save-the-client Maps grid recovery + on-page rebuild plan for Construction Management &amp; Design (Portland, OR). HQDM Search Intelligence." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = { theme: { extend: {
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'], mono: ['"JetBrains Mono"','ui-monospace','monospace'] },
+      colors: {
+        ink: { 900:'#0b1220',800:'#111827',700:'#1f2937',600:'#374151',500:'#6b7280',400:'#9ca3af',300:'#d1d5db' },
+        brand: { 900:'#0b2545',700:'#13315c',500:'#1d5b8a',400:'#3b82f6',300:'#8ecae6' }
+      } } } }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}body{font-feature-settings:"cv02","cv03","cv04","cv11"}
+    .panel{background:#fff;border:1px solid #e2e8f0;border-radius:.75rem;padding:1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .tile{background:#fff;border-radius:.5rem;padding:1rem 1.25rem;border-left:4px solid #1d5b8a;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+    .tile.good{border-left-color:#10b981}.tile.watch{border-left-color:#f59e0b}.tile.bad{border-left-color:#ef4444}
+    .tile .v{font-size:1.7rem;font-weight:800;line-height:1.1;color:#0b1220}.tile .l{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:.35rem}.tile .s{font-size:.72rem;color:#6b7280;margin-top:.4rem;line-height:1.35}
+    .pill{display:inline-block;padding:.15rem .5rem;border-radius:.375rem;font-size:.6rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+    .pill.good{background:#d1fae5;color:#065f46}.pill.watch{background:#fef3c7;color:#92400e}.pill.bad{background:#fee2e2;color:#991b1b}.pill.context{background:#e0e7ff;color:#3730a3}
+    th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:'JetBrains Mono',monospace}
+    .ttable td,.ttable th{padding:.5rem .6rem;border-bottom:1px solid #f1f5f9}
+    .lever{border:1px solid #e2e8f0;border-radius:.6rem;background:#fff;padding:1rem 1.1rem;border-left:4px solid #1d5b8a}
+    .lever.p0{border-left-color:#ef4444}.lever.p1{border-left-color:#f59e0b}.lever.p2{border-left-color:#10b981}
+    code{background:#f1f5f9;padding:.05rem .35rem;border-radius:.25rem;font-size:.85em;color:#1f2937}
+    @media print{.no-print{display:none!important}body{background:#fff!important}.panel,.tile,.lever{box-shadow:none!important}}
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200 no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+      <div class="min-w-0">
+        <div class="font-semibold text-sm sm:text-base truncate">Construction Management &amp; Design</div>
+        <div class="text-xs text-ink-500 truncate">Maps &amp; On-Page Diagnosis · Tier 3 · Portland general contractor</div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
+        <a href="#root-cause" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Root cause</a>
+        <a href="#grid" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Grid</a>
+        <a href="#competitors" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Competitors</a>
+        <a href="#gbp" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GBP</a>
+        <a href="#site" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Site</a>
+        <a href="#plan" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Plan</a>
+        <a href="#outcomes" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Targets</a>
+      </nav>
+      <div class="flex items-center gap-2 text-xs">
+        <a href="condensed.html" class="px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 font-semibold">Condensed</a>
+        <a href="snapshot.html" class="px-2.5 py-1.5 rounded bg-brand-500 text-white hover:bg-brand-700 font-semibold">Client snapshot</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-14 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span>Tier 3 · General Contractor</span><span class="text-brand-300/50">·</span><span>HQDM Search Intelligence</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Construction Management &amp; Design</h1>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Portland general contractor since 1996 · save-the-client Maps + on-page diagnosis</p>
+      <p class="text-base mt-5 max-w-3xl text-white/85">Two brand-name queries collapsing fast. Five service-intent queries at zero. The site cannot back the GBP. Recovery is a service-page rebuild + schema + matrix repair — 90 days, fully on-page, no review or PR spend.</p>
+      <div class="mt-7 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono">2026-06-01</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">cmdesigns.net</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Maps data</span> <span class="font-mono">Mar 5 – May 31 2026</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <div class="border-l-4 border-brand-500 bg-white rounded-r-lg shadow-sm p-6">
+      <div class="text-xs font-bold uppercase tracking-widest text-brand-500 mb-2">TL;DR</div>
+      <p class="text-sm sm:text-base text-ink-700 leading-relaxed" id="tldr-text"></p>
+    </div>
+  </section>
+
+  <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-rose-50 shadow-sm overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-rose-600">THE HEADLINE</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1" id="headline-h2">—</h2>
+        <p class="text-sm sm:text-base text-ink-700 leading-relaxed mt-3 max-w-4xl" id="headline-lede">—</p>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-tiles"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="root-cause" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Root cause — why CM&amp;D is not ranking</h2>
+    <p class="text-sm text-ink-500 mb-4" id="root-intro"></p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="root-items"></div>
+  </section>
+
+  <section id="grid" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Grid evidence — what actually moved</h2>
+    <p class="text-sm text-ink-500 mb-4" id="grid-intro"></p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction management" · 8 scans · Mar 5 → May 31</div>
+        <div style="height:260px"><canvas id="cm-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells (the visible 3-pack) collapsed 157 → 2 over 12 weeks. Top-10 footprint mostly intact (157/169 cells) — CM&amp;D is still present, but pushed to positions 4-20 where end-users don't see them.</p>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction design" · 8 scans · Mar 5 → May 31</div>
+        <div style="height:260px"><canvas id="cd-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells 103 → 24 and overall coverage 98% → 68%. May 21 was the worst reading (top-3=4, coverage=43%); May 31 shows a partial bounce.</p>
+      </div>
+    </div>
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Five service-intent queries · zero presence across the entire data window</div>
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th><th class="num">Cells top-20 (May 31)</th><th class="num">Cells top-10</th><th class="num">Cells top-3</th><th>Notes</th>
+        </tr></thead>
+        <tbody id="zero-table"></tbody>
+      </table>
+      <p class="text-[11px] text-slate-500 mt-2">These five queries are precisely what the GBP service items target (Walk in Shower Conversion, Bathroom Remodeling, Kitchen Repair, Bathroom Renovator + Kitchen Renovator secondary categories, and the GeneralContractor primary). The site has zero pages backing four of them.</p>
+    </div>
+    <div class="panel" style="background:#fffbeb;border-color:#fde68a">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-amber-700 mb-1">Weak quadrant</div>
+      <p class="text-sm text-slate-700" id="weak-quad"></p>
+    </div>
+  </section>
+
+  <section id="competitors" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Competitor leaderboard</h2>
+    <p class="text-sm text-ink-500 mb-4" id="comp-intro"></p>
+    <div class="panel overflow-x-auto mb-4">
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>#</th><th>Business</th><th>Primary category</th><th class="num">Reviews</th><th class="num">Rating</th><th class="num">Top-3 cells held</th>
+        </tr></thead>
+        <tbody id="comp-table"></tbody>
+      </table>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="comp-groups"></div>
+    <div class="panel mt-4" style="background:#eff6ff;border-color:#bfdbfe">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-brand-500 mb-1">Review gap · context only</div>
+      <p class="text-sm text-slate-700" id="review-gap"></p>
+    </div>
+  </section>
+
+  <section id="gbp" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">GBP audit</h2>
+    <p class="text-sm text-ink-500 mb-4" id="gbp-intro"></p>
+    <div class="panel overflow-x-auto">
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Area</th><th>Status</th><th>Detail</th>
+        </tr></thead>
+        <tbody id="gbp-table"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="site" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Site audit</h2>
+    <p class="text-sm text-ink-500 mb-4" id="site-intro"></p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">URL inventory · 22 indexable URLs</div>
+        <div id="site-urls" class="text-sm space-y-3"></div>
+      </div>
+      <div class="space-y-3">
+        <div class="panel" style="background:#fef2f2;border-color:#fecaca">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-rose-700 mb-1">Red flags</div>
+          <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="site-red"></ul>
+        </div>
+        <div class="panel" style="background:#f0fdf4;border-color:#bbf7d0">
+          <div class="text-[11px] font-bold uppercase tracking-widest text-emerald-700 mb-1">Salvageable</div>
+          <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="site-salvage"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">The 90-day plan</h2>
+    <p class="text-sm text-ink-500 mb-4" id="plan-intro"></p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3" id="plan-levers"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-6">
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-emerald-700 mb-2">Quick wins · June</div>
+        <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="win-june"></ul>
+      </div>
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-blue-700 mb-2">Mid-term · July-August</div>
+        <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="win-mid"></ul>
+      </div>
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-indigo-700 mb-2">Longer-term · Q4</div>
+        <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="win-q4"></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="outcomes" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Outcome targets · end-of-August</h2>
+    <p class="text-sm text-ink-500 mb-4" id="outcome-intro"></p>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="outcome-tiles"></div>
+    <p class="text-xs text-slate-500 mt-4" id="outcome-foot"></p>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-8 mt-6 border-t border-slate-200 text-xs text-slate-500">
+    <div class="flex flex-wrap justify-between gap-3">
+      <div><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Prepared 2026-06-01 by Aleksandar Spasevski</div>
+      <div class="text-slate-400">Confidential · for CM&amp;D internal + HQDM team use</div>
+    </div>
+  </footer>
+
+<script>
+(async function(){
+  const D = await fetch('./data/data.json').then(r=>r.json());
+
+  const $ = id => document.getElementById(id);
+  const setHTML = (id, html) => { const el=$(id); if (el) el.innerHTML = html; };
+  const escapeHTML = s => String(s||'').replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // TL;DR + headline
+  setHTML('tldr-text', D.tldr);
+  setHTML('headline-h2', D.headline.h2);
+  setHTML('headline-lede', D.headline.lede);
+  setHTML('headline-tiles', D.headline.tiles.map(t => `
+    <div class="tile ${t.tone}">
+      <div class="l">${escapeHTML(t.label)}</div>
+      <div class="v">${t.value}</div>
+      <div class="s">${escapeHTML(t.sub)}</div>
+    </div>
+  `).join(''));
+
+  // Root cause
+  setHTML('root-intro', D.root_cause.intro);
+  setHTML('root-items', D.root_cause.items.map(it => `
+    <div class="lever ${ {P0:'p0',P1:'p1',context:'p2'}[it.severity] || '' }">
+      <div class="flex items-center justify-between mb-1">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">${it.id} · ${escapeHTML(it.title)}</div>
+        <span class="pill ${ {P0:'bad',P1:'watch',context:'context'}[it.severity] || '' }">${it.severity}</span>
+      </div>
+      <p class="text-sm text-slate-700 leading-relaxed">${escapeHTML(it.body)}</p>
+    </div>
+  `).join(''));
+
+  // Grid - charts
+  setHTML('grid-intro', D.grid.intro);
+  const mkChart = (canvasId, scans) => {
+    const labels = scans.map(s=>s.date);
+    const top3 = scans.map(s=>s.top3);
+    const top10 = scans.map(s=>s.top10);
+    new Chart(document.getElementById(canvasId), {
+      type:'line',
+      data:{labels, datasets:[
+        {label:'Top-3 cells', data:top3, borderColor:'#ef4444', backgroundColor:'#ef444418', borderWidth:3, tension:0.25, fill:true, pointRadius:3},
+        {label:'Top-10 cells', data:top10, borderColor:'#1d5b8a', backgroundColor:'transparent', borderWidth:2, tension:0.25, fill:false, pointRadius:3, borderDash:[5,4]},
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{position:'bottom',labels:{font:{size:10},boxWidth:12}},tooltip:{backgroundColor:'#0b1220',padding:9}},
+        scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{beginAtZero:true,suggestedMax:169,grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:10}}}}
+      }
+    });
+  };
+  mkChart('cm-chart', D.grid.scans['construction management']);
+  mkChart('cd-chart', D.grid.scans['construction design']);
+
+  // Zero table
+  const zeroQueries = [
+    {name:'bathroom remodel', note:'No /bathroom-remodeling/ page on site.'},
+    {name:'bathroom remodeling near me', note:'Same: no service page · /bathrooms is a 65-word portfolio gallery.'},
+    {name:'walk in shower conversion', note:'No service page · NW Tub & Shower owns this query (841 reviews · 3,590 top-3 cells).'},
+    {name:'kitchen repair', note:'No /kitchen-repair/ page · /kitchen-remodeling exists but targets a different intent.'},
+    {name:'contractor near me', note:'No generic /general-contractor/ page on site.'}
+  ];
+  setHTML('zero-table', zeroQueries.map(q => {
+    const latest = D.grid.scans[q.name].slice(-1)[0];
+    return `<tr><td>${escapeHTML(q.name)}</td><td class="num">${latest.top20}</td><td class="num">${latest.top10}</td><td class="num">${latest.top3}</td><td class="text-slate-600 text-[13px]">${escapeHTML(q.note)}</td></tr>`;
+  }).join(''));
+  setHTML('weak-quad', D.grid.weak_quadrant);
+
+  // Competitors
+  setHTML('comp-intro', D.competitors.intro);
+  setHTML('comp-table', D.competitors.leaderboard.map(c => `
+    <tr>
+      <td class="num">${c.rank}</td>
+      <td><strong>${escapeHTML(c.name)}</strong>${c.domain ? `<br><span class="text-[11px] text-slate-500 font-mono">${escapeHTML(c.domain)}</span>` : ''}</td>
+      <td>${escapeHTML(c.primary_category)}</td>
+      <td class="num">${c.reviews}</td>
+      <td class="num">${c.rating}</td>
+      <td class="num"><strong>${c.top3_cells.toLocaleString()}</strong></td>
+    </tr>
+  `).join(''));
+  setHTML('comp-groups', D.competitors.two_groups.map(g => `
+    <div class="panel">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-slate-600 mb-1">${escapeHTML(g.label)}</div>
+      <div class="text-[11px] font-semibold text-slate-500 mb-2">${g.names.map(escapeHTML).join(' · ')}</div>
+      <p class="text-sm text-slate-700 leading-relaxed">${escapeHTML(g.story)}</p>
+    </div>
+  `).join(''));
+  const rg = D.competitors.review_gap;
+  setHTML('review-gap', `CM&D holds <strong>${rg.cmd_reviews} reviews</strong> at 5.0★. The leaderboard median is <strong>${rg.leaderboard_median}</strong> and the leader (NW Tub & Shower) carries <strong>${rg.leaderboard_max}</strong>. ${escapeHTML(rg.context_note)}`);
+
+  // GBP audit
+  setHTML('gbp-intro', D.gbp_audit.intro);
+  setHTML('gbp-table', D.gbp_audit.rows.map(r => `
+    <tr>
+      <td><strong>${escapeHTML(r.area)}</strong></td>
+      <td><span class="pill ${r.status}">${r.status}</span></td>
+      <td class="text-slate-700">${escapeHTML(r.detail)}</td>
+    </tr>
+  `).join(''));
+
+  // Site audit
+  setHTML('site-intro', D.site_audit.intro);
+  setHTML('site-urls', D.site_audit.url_inventory.map(c => `
+    <div>
+      <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">${escapeHTML(c.category)}</div>
+      <div class="text-xs font-mono text-slate-700 leading-relaxed">${c.urls.map(u => `<div>${escapeHTML(u)}</div>`).join('')}</div>
+    </div>
+  `).join(''));
+  setHTML('site-red', D.site_audit.red_flags.map(f => `<li>${escapeHTML(f)}</li>`).join(''));
+  setHTML('site-salvage', D.site_audit.salvageable.map(f => `<li>${escapeHTML(f)}</li>`).join(''));
+
+  // Plan
+  setHTML('plan-intro', D.plan.intro);
+  const sevClass = w => ({D1:'p0', D2:'p0', D3:'p1', D4:'p1', D5:'p2'}[w.id] || '');
+  setHTML('plan-levers', D.plan.workstreams.map(w => `
+    <div class="lever ${sevClass(w)}">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">${w.id}</div>
+      <h3 class="font-bold text-slate-900 mt-1">${escapeHTML(w.title)}</h3>
+      <p class="text-sm text-slate-700 leading-relaxed mt-2">${escapeHTML(w.body)}</p>
+      <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-200 text-[11px]">
+        <div><span class="font-bold uppercase tracking-wider text-slate-500">Cadence</span><br><span class="text-slate-700">${escapeHTML(w.cadence)}</span></div>
+        <div><span class="font-bold uppercase tracking-wider text-slate-500">Owner</span><br><span class="text-slate-700">${escapeHTML(w.owner)}</span></div>
+      </div>
+    </div>
+  `).join(''));
+  setHTML('win-june', D.windows.quick_wins_june.map(w => `<li>${escapeHTML(w)}</li>`).join(''));
+  setHTML('win-mid', D.windows.midterm_jul_aug.map(w => `<li>${escapeHTML(w)}</li>`).join(''));
+  setHTML('win-q4', D.windows.longer_term_q4.map(w => `<li>${escapeHTML(w)}</li>`).join(''));
+
+  // Outcome targets
+  setHTML('outcome-intro', D.outcome_targets.intro);
+  setHTML('outcome-tiles', D.outcome_targets.tiles.map(t => `
+    <div class="tile ${t.tone}">
+      <div class="l">${escapeHTML(t.label)}</div>
+      <div class="v" style="font-size:1.05rem;line-height:1.3">${escapeHTML(t.target)}</div>
+      <div class="s">from ${escapeHTML(t.from)}</div>
+    </div>
+  `).join(''));
+  setHTML('outcome-foot', D.outcome_targets.footnote);
+})();
+</script>
+</body>
+</html>
