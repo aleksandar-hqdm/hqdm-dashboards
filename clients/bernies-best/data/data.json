@@ -12,7 +12,7 @@
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q3 2026",
-    "doc_subtitle": "Per Wicked Reports — Organic is Bernie's #1 channel, with clicks growing strongly Q1 YoY (+37%) and sales steady year over year. SERP-side declines visible in Search Console + Ahrefs (AI Overviews + Google core updates) have not translated to click or revenue impact. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
+    "doc_subtitle": "Per Wicked Reports — Organic is Bernie's #1 channel, with clicks growing strongly Q1 YoY (+37%) and May 2026 at a 17-month high (24,116). SERP-side declines visible in Search Console + Ahrefs (AI Overviews + Google core updates) have not translated to click or revenue impact. Modernize the existing foundation via site-level template upgrades + per-URL refreshes, restore index hygiene, close the 2.49M-SV store-gap surface.",
     "mini_reports": [
       {
         "name": "Spot & Tango content pattern — 20 pair audit",
@@ -47,7 +47,7 @@
       "label": "Organic clicks Q1 YoY (Wicked)",
       "value": "+37%",
       "sentiment": "positive",
-      "detail": "46,051 → 63,159. Q1 2026 is the strongest opening quarter in the 17-month series. Source: Wicked Reports — Organic channel."
+      "detail": "46,051 → 63,159. May 2026 organic clicks at 24,116 — a 17-month high. Source: Wicked Reports — Organic channel."
     },
     {
       "label": "Organic sales Q1 YoY (Wicked)",
@@ -209,9 +209,9 @@
     ]
   },
   "trend": {
-    "headline": "Organic is your #1 channel — Wicked Reports shows clicks +37% Q1 YoY, sales steady, new customer acquisition accelerating",
-    "annotation_text": "Per Wicked Reports (your source of truth) — Organic Search is Bernie's #1 channel. Q1 YoY: clicks 46,051 → 63,159 (+37%), attributed sales 1,408 → 1,486 (+5.5%), new leads 335 → 749 (+124%). Sales and revenue hold steady (~470 sales / ~$20K per month), and the returning-customer base (your subscription engine) stays solid at ~360–420 per month. May 2026 is partial. Q4 2025 click counts are flagged — see alert below (every other Wicked metric for Oct–Dec 2025 continued tracking normally).",
-    "may_extrapolation_note": "May 2026 = partial month (through May 26).",
+    "headline": "Organic is your #1 channel — Wicked Reports shows clicks at a 17-month high (May 2026 = 24,116), sales steady, new customer acquisition accelerating",
+    "annotation_text": "Per Wicked Reports (your source of truth) — Organic Search is Bernie's #1 channel. Q1 YoY: clicks 46,051 → 63,159 (+37%), attributed sales 1,408 → 1,486 (+5.5%), new leads 335 → 749 (+124%). May 2026 organic clicks at 24,116 — a 17-month high. Sales and revenue hold steady (~470 sales / ~$20K per month), and the returning-customer base (your subscription engine) holds at ~360–450 per month. Q4 2025 click counts are flagged — see alert below (every other Wicked metric for Oct–Dec 2025 continued tracking normally).",
+    "may_extrapolation_note": "May 2026 marked with * — Wicked multi-touch attribution may still refine for the most recent month.",
     "q4_2025_alert": {
       "kind": "warning",
       "headline": "Q4 2025 — Wicked click tracking appears compromised",
@@ -262,7 +262,7 @@
         23283,
         23479,
         22146,
-        20071
+        24116
       ]
     },
     "form_submits": {
@@ -283,7 +283,7 @@
         475.9,
         511.8,
         468.8,
-        475.8
+        557.2
       ]
     },
     "form_submits_label": "Sales (attributed)",
@@ -306,7 +306,7 @@
         20197,
         22005,
         20369,
-        20238
+        23772
       ]
     },
     "revenue_label": "Revenue (attributed)",
@@ -333,8 +333,8 @@
         "Apr 2026",
         "May 2026*"
       ],
-      "new": [89, 65, 87, 52, 68, 58, 79, 94, 68, 74, 92, 97, 127, 105, 112, 86, 89],
-      "returning": [400, 356, 412, 375, 376, 380, 407, 381, 372, 392, 420, 373, 371, 371, 400, 383, 387]
+      "new": [89, 65, 87, 52, 68, 58, 79, 94, 68, 74, 92, 97, 127, 105, 112, 86, 110],
+      "returning": [400, 356, 412, 375, 376, 380, 407, 381, 372, 392, 420, 373, 371, 371, 400, 383, 447]
     },
     "quarterly": [
       {
@@ -369,9 +369,9 @@
       },
       {
         "q": "Q2 2026* (partial)",
-        "org_sess": 21109,
-        "org_conv": 472,
-        "org_cr": 2.24
+        "org_sess": 23131,
+        "org_conv": 513,
+        "org_cr": 2.22
       }
     ],
     "channels": [
@@ -401,7 +401,7 @@
       49119,
       34112,
       63159,
-      42217
+      46262
     ],
     "transactions": [
       1408,
@@ -409,7 +409,7 @@
       1401,
       1449,
       1486,
-      945
+      1026
     ],
     "yoy_q1": {
       "sessions_pct": 37,
@@ -460,7 +460,7 @@
   },
   "ahrefs_trajectory": {
     "headline": "Ahrefs SERP-derived traffic estimate — visible declines, but Wicked tells a different story",
-    "annotation": "Ahrefs estimates traffic from where you rank in Google. Two visible declines: Aug-Oct 2025 (Aug 2025 core update + AIO maturation: ~48% drop over 60 days) and May 2026 (March 2026 core update trailing edge: ranking pages 188 → 130 in 30 days). These reflect ranking-position changes, not actual click traffic. Per Wicked Reports (your source of truth), organic clicks and sales over the same window are growing — Q1 2026 organic clicks +37% YoY. The SERP-side compression has not translated to a real-money impact.",
+    "annotation": "Ahrefs estimates traffic from where you rank in Google. Two visible declines: Aug-Oct 2025 (Aug 2025 core update + AIO maturation: ~48% drop over 60 days) and May 2026 (March 2026 core update trailing edge: ranking pages 188 → 130 in 30 days). These reflect ranking-position changes, not actual click traffic. Per Wicked Reports (your source of truth), organic clicks and sales over the same window are growing — May 2026 organic clicks at a 17-month high (24,116). The SERP-side compression has not translated to a real-money impact.",
     "months": [
       "May'24",
       "Jun'24",
@@ -1085,9 +1085,9 @@
     },
     {
       "kpi": "Organic sales/mo (Wicked)",
-      "baseline": "~476",
-      "target": "500+",
-      "stretch": "550+"
+      "baseline": "~497 (last 6 mo)",
+      "target": "550+",
+      "stretch": "600+"
     },
     {
       "kpi": "Top-50 BLOG refresh velocity",
@@ -1128,11 +1128,11 @@
   ],
   "positives": [
     "Foundation signals held — vet credentials + last-updated dates on 10/10 audited URLs",
-    "Per Wicked Reports: organic clicks +37% Q1 YoY (46,051 → 63,159) — strongest opening quarter in the 17-month series",
-    "Per Wicked: organic sales steady at +5.5% Q1 YoY (1,408 → 1,486) with ~$20K monthly revenue, holding through the search-landscape shift",
+    "Per Wicked Reports: organic clicks +37% Q1 YoY (46,051 → 63,159) — May 2026 at a 17-month high (24,116)",
+    "Per Wicked: organic sales steady at +5.5% Q1 YoY (1,408 → 1,486); May 2026 at 557 sales / $23,772 revenue, also a strong month",
     "Q4 2025 click counts flagged for a likely Wicked tracking issue (Oct–Dec flat shelf at ~11.3K, sales-per-click jumped mechanically); over the same quarter every other organic metric grew normally — revenue $57,677 → $62,697 (+8.7%), new customers 242 → 263 (+8.7%)",
     "Per Wicked: organic new leads +124% Q1 YoY (335 → 749) — top-of-funnel acquisition more than doubled",
-    "Returning customer base (subscription engine) holding steady at ~360–420/month per Wicked",
+    "Returning customer base (subscription engine) holding steady at ~360–450/month per Wicked",
     "Organic remains Bernie's #1 channel by Wicked attribution",
     "S&T content pattern verified across 20 head-to-head pairs (st-pattern/) — recipe is measured, not opinion",
     "Verified Lever 2 thesis: PDPs do the conversion work, blog drives volume",
@@ -1541,7 +1541,7 @@
     "short_name": "Bernie's Best",
     "subtitle": "Q3 2026 · DTC dog supplements · Client Snapshot",
     "footer": "Client snapshot · Q3 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Per <strong>Wicked Reports</strong> (your source of truth) — Organic Search is Bernie's <strong>#1 channel</strong> and it's healthy. <strong>Clicks +37% Q1 YoY</strong>, <strong>sales steady at +5.5%</strong> with revenue holding ~$20K per month, and <strong>new leads more than doubled (+124% Q1 YoY)</strong>. Where Search Console and Ahrefs show declines in impressions and rankings — that's the SERP-side reality of AI Overviews + Google core updates, hitting every content-driven brand — per Wicked it has not translated to a click or revenue impact. <em>One data caveat:</em> Q4 2025 Wicked click counts appear under-reported (flat 3-month shelf, sales-per-click jumped mechanically); revenue, sales, and new-customer numbers for those months are unaffected and grew normally. The plan refreshes the top blog losers on the verified Spot &amp; Tango content pattern (S&amp;T grew <strong>+2,078%</strong> top-10 visibility off a PR-stunt link pattern, the highest-ROI tactic to replicate), builds out the product pages, fixes index hygiene, and runs a brand-led PR push.</p>",
+    "exec_html": "<p>Per <strong>Wicked Reports</strong> (your source of truth) — Organic Search is Bernie's <strong>#1 channel</strong> and it's healthy. <strong>Clicks +37% Q1 YoY</strong>, <strong>May 2026 at a 17-month high (24,116)</strong>, <strong>sales steady at +5.5%</strong> with revenue holding ~$20K per month, and <strong>new leads more than doubled (+124% Q1 YoY)</strong>. Where Search Console and Ahrefs show declines in impressions and rankings — that's the SERP-side reality of AI Overviews + Google core updates, hitting every content-driven brand — per Wicked it has not translated to a click or revenue impact. <em>One data caveat:</em> Q4 2025 Wicked click counts appear under-reported (flat 3-month shelf, sales-per-click jumped mechanically); revenue, sales, and new-customer numbers for those months are unaffected and grew normally. The plan refreshes the top blog losers on the verified Spot &amp; Tango content pattern (S&amp;T grew <strong>+2,078%</strong> top-10 visibility off a PR-stunt link pattern, the highest-ROI tactic to replicate), builds out the product pages, fixes index hygiene, and runs a brand-led PR push.</p>",
     "chips": [
       {
         "v": "+37%",
@@ -1583,7 +1583,7 @@
         23283,
         23479,
         22146,
-        20071
+        24116
       ],
       "leads": [
         466,
@@ -1593,7 +1593,7 @@
         476,
         512,
         469,
-        476
+        557
       ],
       "visitors_label": "Organic clicks (Wicked)",
       "leads_label": "Sales (Wicked, attributed)",
@@ -1617,7 +1617,7 @@
         16373,
         11371,
         21053,
-        21109
+        23131
       ],
       "leads": [
         469,
@@ -1625,7 +1625,7 @@
         467,
         483,
         495,
-        472
+        513
       ],
       "visitors_label": "Organic clicks (Wicked)",
       "leads_label": "Sales (Wicked)",
@@ -1662,12 +1662,12 @@
         "rows": [
           {
             "m": "Clicks",
-            "d": "+35%",
+            "d": "+40%",
             "cls": "pos"
           },
           {
             "m": "Sales",
-            "d": "+3%",
+            "d": "+6%",
             "cls": "pos"
           }
         ]
@@ -1679,12 +1679,12 @@
         "rows": [
           {
             "m": "Clicks",
-            "d": "+28%",
+            "d": "+36%",
             "cls": "pos"
           },
           {
             "m": "Sales",
-            "d": "+1%",
+            "d": "+6%",
             "cls": "pos"
           }
         ]
