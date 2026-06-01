@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Project Pilot · Body Balance Massage &amp; Float · HQDM</title>
+  <meta name="description" content="90-day project pilot view for Body Balance Massage & Float — client expectations, crucial team focus areas, owner asks, and full task list with weekly status." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+          },
+          colors: {
+            ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+            brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 400: '#3b82f6', 300: '#8ecae6' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Completion meter */
+    .meter-wrap { position: relative; width: 100%; max-width: 720px; }
+    .meter-track { position: relative; height: 28px; background: #f1f5f9; border-radius: 999px; overflow: hidden; border: 1px solid #e2e8f0; }
+    .meter-bar-time { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, #93c5fd, #3b82f6); border-radius: 999px; transition: width 600ms ease; }
+    .meter-bar-tasks { position: absolute; left: 0; top: 0; bottom: 0; background: linear-gradient(90deg, #34d399, #059669); border-radius: 999px; transition: width 600ms ease; opacity: 0.85; }
+    .meter-marker { position: absolute; top: -6px; bottom: -6px; width: 2px; background: #0b1220; }
+    .meter-marker-label { position: absolute; top: -24px; transform: translateX(-50%); font-size: 10px; font-weight: 700; color: #0b1220; white-space: nowrap; }
+
+    /* Status pills */
+    .pill { display: inline-block; padding: 2px 9px; font-size: 11px; font-weight: 700; border-radius: 999px; letter-spacing: 0.01em; }
+    .pill.pending { background: #f1f5f9; color: #475569; }
+    .pill.in_progress { background: #dbeafe; color: #1e40af; }
+    .pill.blocked { background: #fef3c7; color: #92400e; }
+    .pill.completed { background: #d1fae5; color: #065f46; }
+    .pill.at_risk { background: #fee2e2; color: #991b1b; }
+
+    .ask-pill { display: inline-block; padding: 2px 8px; font-size: 10px; font-weight: 700; border-radius: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .ask-pill.not_yet_sent { background: #f1f5f9; color: #475569; }
+    .ask-pill.sent { background: #dbeafe; color: #1e40af; }
+    .ask-pill.answered { background: #d1fae5; color: #065f46; }
+    .ask-pill.overdue { background: #fee2e2; color: #991b1b; }
+
+    /* Section cards */
+    .card { background: white; border: 1px solid #e2e8f0; border-radius: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.03); }
+    .card-h { padding: 18px 22px; border-bottom: 1px solid #e2e8f0; }
+    .card-b { padding: 18px 22px; }
+
+    /* Crucial area cards */
+    .crucial-card { background: linear-gradient(135deg, #fff, #fefce8); border: 1px solid #fde68a; border-radius: 10px; padding: 14px 16px; }
+    .crucial-card .rank { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #f59e0b; color: white; border-radius: 999px; font-size: 12px; font-weight: 700; margin-right: 8px; }
+
+    .exp-card { background: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; }
+
+    /* Task table */
+    table.tasks { width: 100%; border-collapse: collapse; }
+    table.tasks th, table.tasks td { padding: 10px 12px; text-align: left; font-size: 13px; }
+    table.tasks th { background: #f8fafc; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #475569; border-bottom: 1px solid #e2e8f0; }
+    table.tasks tr { border-bottom: 1px solid #f1f5f9; }
+    table.tasks tr:hover { background: #f8fafc; }
+    table.tasks td.id { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 12px; color: #6b7280; width: 50px; }
+    table.tasks td.title { font-weight: 600; color: #0b1220; }
+    table.tasks td.note { font-size: 11px; color: #6b7280; font-style: italic; }
+
+    /* Month divider rows */
+    tr.month-divider td { background: #0b1220; color: white; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 12px; }
+
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary .arrow { transform: rotate(90deg); }
+    .arrow { display: inline-block; transition: transform 150ms; }
+  </style>
+</head>
+<body class="bg-slate-50 text-ink-800 font-sans antialiased">
+
+  <!-- ============== STICKY HEADER ============== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <a href="../index.html" class="text-xs text-ink-500 hover:text-ink-800">← Dashboard</a>
+        <span class="text-ink-300">/</span>
+        <div class="min-w-0">
+          <div class="font-semibold text-sm sm:text-base truncate">Project Pilot</div>
+          <div class="text-xs text-ink-500 truncate" id="hdr-period">—</div>
+        </div>
+      </div>
+      <nav class="hidden lg:flex gap-1 text-xs font-medium">
+        <a href="#meter" class="px-3 py-1.5 rounded hover:bg-slate-100">Completion</a>
+        <a href="#expectations" class="px-3 py-1.5 rounded hover:bg-slate-100">Expectations</a>
+        <a href="#crucial" class="px-3 py-1.5 rounded hover:bg-slate-100">Focus areas</a>
+        <a href="#asks" class="px-3 py-1.5 rounded hover:bg-slate-100">Asks</a>
+        <a href="#tasks" class="px-3 py-1.5 rounded hover:bg-slate-100">Tasks</a>
+        <a id="hdr-asana" href="#" target="_blank" class="px-3 py-1.5 rounded bg-ink-900 text-white hover:bg-ink-700">Open in Asana →</a>
+      </nav>
+      <div class="text-xs text-ink-500 font-mono hidden md:block" id="hdr-refreshed">—</div>
+    </div>
+  </header>
+
+  <!-- ============== HERO ============== -->
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-700 to-brand-500 text-white">
+    <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 50%), radial-gradient(circle at 80% 70%, rgba(142,202,230,0.3), transparent 40%);"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 relative">
+      <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-300 mb-3">
+        <span>Project Pilot</span>
+        <span class="text-brand-300/50">·</span>
+        <span id="hero-tier">—</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight" id="hero-client">—</h1>
+      <p class="text-base sm:text-lg mt-4 max-w-3xl text-white/85" id="hero-subtitle">—</p>
+      <div class="mt-6 flex flex-wrap gap-3 text-xs">
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Period</span> <span class="font-mono" id="hero-period">—</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Next review</span> <span class="font-mono" id="hero-review">—</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">AM</span> <span id="hero-am">—</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Strategist</span> <span id="hero-strat">—</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== COMPLETION METER ============== -->
+  <section id="meter" class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+    <div class="card">
+      <div class="card-h">
+        <h2 class="text-xl font-bold tracking-tight">90-Day Completion Meter</h2>
+        <p class="text-sm text-ink-500 mt-1">Task completion vs time elapsed against the next big review date. If green is ahead of blue, we're ahead of schedule.</p>
+      </div>
+      <div class="card-b">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div class="md:col-span-2 space-y-6">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <div class="text-xs font-bold uppercase tracking-widest text-ink-500">Time elapsed</div>
+                <div class="text-xs font-mono text-ink-600"><span id="meter-time-pct">—</span>%</div>
+              </div>
+              <div class="meter-wrap">
+                <div class="meter-track">
+                  <div class="meter-bar-time" id="meter-time-bar" style="width:0%"></div>
+                </div>
+                <div class="text-xs text-ink-500 mt-1 flex justify-between">
+                  <span id="meter-time-label-start">—</span>
+                  <span id="meter-time-label-end">—</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <div class="text-xs font-bold uppercase tracking-widest text-ink-500">Tasks completed</div>
+                <div class="text-xs font-mono text-ink-600"><span id="meter-tasks-pct">—</span>%</div>
+              </div>
+              <div class="meter-wrap">
+                <div class="meter-track">
+                  <div class="meter-bar-tasks" id="meter-tasks-bar" style="width:0%"></div>
+                </div>
+                <div class="text-xs text-ink-500 mt-1 flex justify-between">
+                  <span><span id="meter-tasks-done">—</span> done</span>
+                  <span>of <span id="meter-tasks-total">—</span> total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-4">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 mb-1">Pacing</div>
+            <div class="text-2xl font-extrabold" id="meter-pacing">—</div>
+            <div class="text-xs text-ink-600 mt-1" id="meter-pacing-detail">—</div>
+            <hr class="my-3 border-slate-200">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-ink-500 mb-1">Days remaining</div>
+            <div class="text-xl font-extrabold text-brand-700" id="meter-days-remaining">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CLIENT EXPECTATIONS ============== -->
+  <section id="expectations" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="card">
+      <div class="card-h">
+        <h2 class="text-xl font-bold tracking-tight">Client Expectations — Upcoming Period</h2>
+        <p class="text-sm text-ink-500 mt-1">What Paul agreed to and expects from this 90-day phase.</p>
+      </div>
+      <div class="card-b">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="expectations-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CRUCIAL AREAS ============== -->
+  <section id="crucial" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="card">
+      <div class="card-h">
+        <h2 class="text-xl font-bold tracking-tight">Crucial Focus Areas — Next Period</h2>
+        <p class="text-sm text-ink-500 mt-1">Where the team's attention sits this quarter, ranked.</p>
+      </div>
+      <div class="card-b">
+        <div class="space-y-3" id="crucial-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ASKS ============== -->
+  <section id="asks" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <div class="card">
+      <div class="card-h flex items-end justify-between gap-3 flex-wrap">
+        <div>
+          <h2 class="text-xl font-bold tracking-tight">Asks from Client</h2>
+          <p class="text-sm text-ink-500 mt-1">What we need from Paul to keep the plan moving. Status updated weekly.</p>
+        </div>
+        <div class="text-xs text-ink-500 flex gap-3 flex-wrap">
+          <span><span class="ask-pill not_yet_sent">Not yet sent</span></span>
+          <span><span class="ask-pill sent">Sent</span></span>
+          <span><span class="ask-pill answered">Answered</span></span>
+          <span><span class="ask-pill overdue">Overdue</span></span>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="overflow-x-auto">
+          <table class="tasks">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Ask</th>
+                <th>Why</th>
+                <th>Due by</th>
+                <th>Status</th>
+                <th>Result</th>
+              </tr>
+            </thead>
+            <tbody id="asks-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TASKS ============== -->
+  <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-6 pb-16">
+    <div class="card">
+      <div class="card-h flex items-end justify-between gap-3 flex-wrap">
+        <div>
+          <h2 class="text-xl font-bold tracking-tight">Full Task List — Months 1-3</h2>
+          <p class="text-sm text-ink-500 mt-1">Every task on the 90-day plan. Status refreshed Mondays from Asana.</p>
+        </div>
+        <div class="text-xs text-ink-500 flex gap-3 flex-wrap">
+          <span><span class="pill pending">Pending</span></span>
+          <span><span class="pill in_progress">In progress</span></span>
+          <span><span class="pill blocked">Blocked</span></span>
+          <span><span class="pill completed">Completed</span></span>
+          <span><span class="pill at_risk">At risk</span></span>
+        </div>
+      </div>
+      <div class="card-b">
+        <div class="overflow-x-auto">
+          <table class="tasks">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Task</th>
+                <th>Team</th>
+                <th>Status</th>
+                <th>This-week note</th>
+              </tr>
+            </thead>
+            <tbody id="tasks-body"></tbody>
+          </table>
+        </div>
+        <p class="text-xs text-ink-500 italic mt-4 leading-relaxed">
+          <strong>Semantic refresh policy:</strong> task statuses are pulled from the linked Asana board on Mondays and rolled into this view. The "this-week note" reflects the latest in-flight context — blockers, awaiting-asks, draft-staged, etc. If a status hasn't moved in two consecutive weeks and isn't blocked, it surfaces as <span class="pill at_risk">At risk</span>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-7xl mx-auto px-4 sm:px-6 pb-8 text-xs text-ink-500 flex items-center justify-between flex-wrap gap-2">
+    <div>HQDM Search Intelligence · Project Pilot view</div>
+    <div class="font-mono">Last refreshed: <span id="footer-refreshed">—</span></div>
+  </footer>
+
+  <script>
+    fetch('data.json').then(r => r.json()).then(data => {
+      // ============ Meta ============
+      const m = data.meta;
+      document.getElementById('hdr-period').textContent = m.period_label;
+      document.getElementById('hdr-refreshed').textContent = 'Refreshed ' + m.last_refreshed;
+      document.getElementById('hdr-asana').href = m.asana_project_url;
+      document.getElementById('hero-tier').textContent = m.tier;
+      document.getElementById('hero-client').textContent = m.client;
+      document.getElementById('hero-subtitle').textContent = m.doc_subtitle;
+      document.getElementById('hero-period').textContent = m.period_start + ' → ' + m.period_end;
+      document.getElementById('hero-review').textContent = m.next_review_date;
+      document.getElementById('hero-am').textContent = m.hqdm_am;
+      document.getElementById('hero-strat').textContent = m.hqdm_owner;
+      document.getElementById('footer-refreshed').textContent = m.last_refreshed;
+
+      // ============ Completion meter ============
+      const start = new Date(m.period_start);
+      const end = new Date(m.period_end);
+      const now = new Date(m.current_date);
+      const totalMs = end - start;
+      const elapsedMs = Math.max(0, Math.min(totalMs, now - start));
+      const timePct = Math.round((elapsedMs / totalMs) * 100);
+      const daysRemaining = Math.max(0, Math.ceil((end - now) / (1000 * 60 * 60 * 24)));
+
+      const tasksTotal = data.tasks.length;
+      const tasksDone = data.tasks.filter(t => t.status === 'completed').length;
+      const tasksPct = tasksTotal ? Math.round((tasksDone / tasksTotal) * 100) : 0;
+
+      document.getElementById('meter-time-bar').style.width = timePct + '%';
+      document.getElementById('meter-time-pct').textContent = timePct;
+      document.getElementById('meter-time-label-start').textContent = m.period_start;
+      document.getElementById('meter-time-label-end').textContent = m.period_end;
+      document.getElementById('meter-tasks-bar').style.width = tasksPct + '%';
+      document.getElementById('meter-tasks-pct').textContent = tasksPct;
+      document.getElementById('meter-tasks-done').textContent = tasksDone;
+      document.getElementById('meter-tasks-total').textContent = tasksTotal;
+      document.getElementById('meter-days-remaining').textContent = daysRemaining + ' days';
+
+      const delta = tasksPct - timePct;
+      let pacingLabel = 'On pace';
+      let pacingDetail = 'Task completion is tracking the timeline.';
+      let pacingClass = 'text-brand-700';
+      if (delta >= 10) { pacingLabel = 'Ahead of schedule'; pacingDetail = `Tasks running ${delta} pts ahead of time elapsed.`; pacingClass = 'text-emerald-700'; }
+      else if (delta <= -15) { pacingLabel = 'Falling behind'; pacingDetail = `Tasks running ${Math.abs(delta)} pts behind time elapsed — check blockers.`; pacingClass = 'text-red-700'; }
+      else if (delta <= -5) { pacingLabel = 'Slightly behind'; pacingDetail = `Tasks running ${Math.abs(delta)} pts behind time elapsed.`; pacingClass = 'text-amber-700'; }
+      const pEl = document.getElementById('meter-pacing');
+      pEl.textContent = pacingLabel;
+      pEl.className = 'text-2xl font-extrabold ' + pacingClass;
+      document.getElementById('meter-pacing-detail').textContent = pacingDetail;
+
+      // ============ Client expectations ============
+      const expGrid = document.getElementById('expectations-grid');
+      data.client_expectations.forEach(e => {
+        const div = document.createElement('div');
+        div.className = 'exp-card';
+        div.innerHTML = `<div class="font-semibold text-sm text-ink-900 mb-1">${e.label}</div>
+                        <div class="text-xs text-ink-600 leading-relaxed">${e.detail}</div>`;
+        expGrid.appendChild(div);
+      });
+
+      // ============ Crucial areas ============
+      const cGrid = document.getElementById('crucial-grid');
+      data.crucial_areas.forEach(c => {
+        const div = document.createElement('div');
+        div.className = 'crucial-card';
+        const linked = (c.tasks_linked || []).map(id => `<span class="font-mono text-[10px] bg-ink-900 text-white px-1.5 py-0.5 rounded">${id}</span>`).join(' ');
+        div.innerHTML = `<div class="flex items-start gap-2">
+                          <span class="rank">${c.rank}</span>
+                          <div class="flex-1">
+                            <div class="font-semibold text-sm text-ink-900">${c.label}</div>
+                            <div class="text-xs text-ink-600 mt-1 leading-relaxed">${c.detail}</div>
+                            <div class="text-[10px] text-ink-500 mt-2 flex flex-wrap items-center gap-1.5">
+                              <span class="font-bold uppercase tracking-wider">Team:</span> <span class="text-ink-700">${c.owner_team}</span>
+                              <span class="mx-1 text-ink-300">·</span>
+                              <span class="font-bold uppercase tracking-wider">Linked tasks:</span> ${linked}
+                            </div>
+                          </div>
+                        </div>`;
+        cGrid.appendChild(div);
+      });
+
+      // ============ Asks ============
+      const askBody = document.getElementById('asks-body');
+      data.asks.forEach(a => {
+        const tr = document.createElement('tr');
+        const statusClass = (a.status || 'not yet sent').replace(/ /g, '_');
+        const due = a.due_by || '—';
+        const result = a.result || '<span class="text-ink-400">—</span>';
+        tr.innerHTML = `<td class="id">${a.id}</td>
+                        <td class="title">${a.title}</td>
+                        <td class="text-xs text-ink-600">${a.why}</td>
+                        <td class="text-xs font-mono">${due}</td>
+                        <td><span class="ask-pill ${statusClass}">${a.status}</span></td>
+                        <td class="text-xs text-ink-600">${result}</td>`;
+        askBody.appendChild(tr);
+      });
+
+      // ============ Tasks ============
+      const tBody = document.getElementById('tasks-body');
+      let lastMonth = 0;
+      data.tasks.forEach(t => {
+        if (t.month !== lastMonth) {
+          const divider = document.createElement('tr');
+          divider.className = 'month-divider';
+          const monthLabels = {1: 'Month 1 — June 2026 · Foundations, Tracking Buildout, Quick Wins',
+                                2: 'Month 2 — July 2026 · Service Rebuilds + Cleanup + Mid-Quarter Check',
+                                3: 'Month 3 — August 2026 · Remaining Service Pages + Q2 Close-Out'};
+          divider.innerHTML = `<td colspan="5">${monthLabels[t.month] || ('Month ' + t.month)}</td>`;
+          tBody.appendChild(divider);
+          lastMonth = t.month;
+        }
+        const tr = document.createElement('tr');
+        const statusClass = (t.status || 'pending').replace(/ /g, '_');
+        tr.innerHTML = `<td class="id">${t.id}</td>
+                        <td class="title">${t.title}</td>
+                        <td class="text-xs text-ink-600">${t.team}</td>
+                        <td><span class="pill ${statusClass}">${t.status.replace(/_/g, ' ')}</span></td>
+                        <td class="note">${t.week_status_note || ''}</td>`;
+        tBody.appendChild(tr);
+      });
+    }).catch(err => {
+      console.error('Failed to load project pilot data', err);
+      document.body.insertAdjacentHTML('beforeend', '<div class="max-w-7xl mx-auto px-4 sm:px-6 py-6"><div class="card card-b text-red-700">Failed to load <code>data.json</code>. Check console.</div></div>');
+    });
+  </script>
+</body>
+</html>

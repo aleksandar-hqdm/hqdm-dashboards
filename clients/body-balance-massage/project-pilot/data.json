@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "client": "Body Balance Massage & Float",
+    "domain": "bbmassageandfloat.com",
+    "tier": "Tier 3 · Local Services",
+    "hqdm_am": "Matt Olderman",
+    "hqdm_owner": "Aleksandar Spasevski",
+    "period_label": "Q2 2026 · 90-Day Project Pilot",
+    "period_start": "2026-06-01",
+    "period_end": "2026-08-30",
+    "next_review_date": "2026-08-30",
+    "current_date": "2026-06-01",
+    "last_refreshed": "2026-06-01",
+    "asana_project_url": "https://app.asana.com/1/1117624026208066/project/1214966021111163",
+    "doc_subtitle": "Live project view — what we owe Paul over the next 90 days, where the team's attention sits, the asks we're waiting on, and the full task list with weekly status. Refreshes Mondays."
+  },
+  "client_expectations": [
+    {
+      "label": "Hold spend, judge by scorecard",
+      "detail": "Paul agreed to hold current budget for 90 days. Decision at day-90 review on whether the aggressive level is justified by booking-side movement, not just rankings."
+    },
+    {
+      "label": "Convert the visibility already won",
+      "detail": "Maps share is strong (float 92%, near-me cluster all top-3). Plateau lives in on-site CTR + booking conversion. Plan emphasis is conversion lift, not more visibility."
+    },
+    {
+      "label": "Track bookings, not just rankings",
+      "detail": "Scorecard now adds online bookings, website-sourced leads, and per-page conversion alongside calls and visibility. Paul explicitly named these as the metrics that matter."
+    },
+    {
+      "label": "Reverse float utilization slide",
+      "detail": "Paul revealed float bookings have been declining despite Maps visibility holding. Float is now its own workstream — diagnostic + page rebuild pulled forward + float-specific scorecard lines."
+    },
+    {
+      "label": "Same accuracy standard as trigger point",
+      "detail": "Every rebuilt service page is grounded in what BB's therapists actually perform — no medical-procedure overreach. Owner previews trigger point + lymphatic drainage pages before launch."
+    }
+  ],
+  "crucial_areas": [
+    {
+      "rank": 1,
+      "label": "Tracking buildout — bookings + per-page attribution",
+      "detail": "Without online-booking tracking and per-page lead/booking attribution, the day-90 scorecard can't answer Paul's question. This is the gate on the entire 90-day verdict.",
+      "owner_team": "DevOps + Reporting + AM",
+      "tasks_linked": ["1.1", "1.2", "1.3", "1.4", "1.5", "1.6", "1.7", "1.8", "1.9"]
+    },
+    {
+      "rank": 2,
+      "label": "Float-specific workstream — diagnostic + rebuild forward",
+      "detail": "Float is the owner's named concern. Month 1 diagnoses why utilization is sliding; Month 2 rebuilds the page (pulled forward from Month 3) and applies whatever interventions the diagnostic surfaces.",
+      "owner_team": "Strategy + Content + Reporting",
+      "tasks_linked": ["1.10", "2.1", "2.2"]
+    },
+    {
+      "rank": 3,
+      "label": "Trigger point page accuracy fix",
+      "detail": "Owner-flagged scope mismatch on /trigger-point-therapy/ (live page references medical injection + dry needling). Rewrite ships Week 1-2 with owner preview before launch.",
+      "owner_team": "Strategy + Content + DevOps",
+      "tasks_linked": ["1.12", "1.13"]
+    },
+    {
+      "rank": 4,
+      "label": "Service-page rebuild sequence in Paul's priority order",
+      "detail": "Trigger point M1; deep tissue + float + sports + prenatal M2; cranial sacral + reflexology + gua sha + Swedish + lymphatic drainage M3. Float moved from M3 to M2 per Paul's concern.",
+      "owner_team": "Strategy + Content + DevOps",
+      "tasks_linked": ["1.12", "2.1", "2.3", "3.1", "3.2"]
+    },
+    {
+      "rank": 5,
+      "label": "Q2 close-out + budget verdict",
+      "detail": "Day-90 marker. Full scorecard delivered to Paul with a clean hold-or-pull-back recommendation against the agreed metrics.",
+      "owner_team": "AM + Strategy + Reporting",
+      "tasks_linked": ["3.9", "3.10"]
+    }
+  ],
+  "asks": [
+    {
+      "id": "ASK-1",
+      "title": "Confirm online-booking platform (Mindbody / Vagaro / Booker / Acuity / other)",
+      "owner_side": "Paul",
+      "why": "Gates the entire booking-tracking buildout — can't wire attribution until we know the platform",
+      "asked_on": null,
+      "due_by": "2026-06-07",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-2",
+      "title": "Admin/export access to the booking platform (or a contact who can pull reports)",
+      "owner_side": "Paul",
+      "why": "Pull 3-6 months of booking baseline data for the scorecard",
+      "asked_on": null,
+      "due_by": "2026-06-07",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-3",
+      "title": "Confirm primary phone number — 801-734-9798 (GBP) vs 801-855-5834 (chat)",
+      "owner_side": "Paul",
+      "why": "Sweep one consistent number across site, schema, and CallRail",
+      "asked_on": null,
+      "due_by": "2026-06-07",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-4",
+      "title": "Float context conversation (15-30 min call)",
+      "owner_side": "Paul",
+      "why": "Owner read on why float utilization is sliding — pricing/package/staffing/competitive context the data alone won't surface",
+      "asked_on": null,
+      "due_by": "2026-06-10",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-5",
+      "title": "Service-page + blog photo assets",
+      "owner_side": "Paul",
+      "why": "Real imagery for rebuilt service pages, lymphatic drainage page, blog posts",
+      "asked_on": null,
+      "due_by": "2026-06-14",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-6",
+      "title": "Permission to add CallRail dynamic numbers per rebuilt service page",
+      "owner_side": "Paul",
+      "why": "Each service page shows a different tracking number — calls still ring the same. Heads-up before users see it",
+      "asked_on": null,
+      "due_by": "2026-06-07",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-7",
+      "title": "Trigger point page rewrite preview before launch",
+      "owner_side": "Paul",
+      "why": "Owner explicitly requested — 'no surprises'. Send draft for review before deploying",
+      "asked_on": null,
+      "due_by": "2026-06-14",
+      "status": "not yet sent",
+      "result": null
+    },
+    {
+      "id": "ASK-8",
+      "title": "Confirm cupping is still an offered service",
+      "owner_side": "Paul",
+      "why": "Need confirmation before 301-ing /cupping-massage/ to canonical URL",
+      "asked_on": null,
+      "due_by": "2026-06-07",
+      "status": "not yet sent",
+      "result": null
+    }
+  ],
+  "tasks": [
+    {"id": "1.1", "month": 1, "title": "Confirm BB's online-booking platform", "team": "AM + Strategy", "status": "pending", "week_status_note": "Awaiting upfront ask response", "guidance": "Ask Paul directly or check what loads when clicking Book Now on the site. Gates everything booking-related."},
+    {"id": "1.2", "month": 1, "title": "Map platform's booking-event options (thanks-page redirect vs widget event vs CSV fallback)", "team": "DevOps + Reporting", "status": "pending", "week_status_note": "Blocked on 1.1", "guidance": "Once platform known, identify best tracking method. Output a 1-pager with chosen method (thanks-page event > widget callback > CSV import fallback)."},
+    {"id": "1.3", "month": 1, "title": "Pull 3-6 mo of booking baseline data", "team": "Reporting + AM", "status": "pending", "week_status_note": "Blocked on 1.1 + access", "guidance": "Once access is granted, pull last 3-6 months of completed bookings. This becomes the scorecard baseline."},
+    {"id": "1.4", "month": 1, "title": "Stand up booking-event tracking in GTM/GA4", "team": "DevOps", "status": "pending", "week_status_note": "Blocked on 1.2", "guidance": "Whichever method 1.2 picks, implement. If CSV fallback, build monthly import flow into the scorecard data pipeline."},
+    {"id": "1.5", "month": 1, "title": "Enable CallRail dynamic number insertion per rebuilt service page", "team": "DevOps + AM", "status": "pending", "week_status_note": "Awaiting Paul's permission (ASK-6)", "guidance": "Open CallRail support ticket to enable DNI on each rebuilt page slug. GTM swap deploys the page-specific numbers."},
+    {"id": "1.6", "month": 1, "title": "Tag 'Book Now' buttons with ?source=<page-slug> URL parameter", "team": "Dev + DevOps", "status": "pending", "week_status_note": "Specced; awaiting service-page rebuild start", "guidance": "Every Book Now button on a rebuilt service page appends ?source=<slug>. Parameter carries through booking flow so we can attribute bookings to source pages."},
+    {"id": "1.7", "month": 1, "title": "Audit form_submit event fires with page URL parameter", "team": "DevOps", "status": "pending", "week_status_note": "Open", "guidance": "Verify existing GA4 form_submit + contact_form_submit events fire with page_location parameter. Probably already configured — verify before per-page report build."},
+    {"id": "1.8", "month": 1, "title": "Build per-page conversion row in scorecard (sessions / calls / form leads / bookings)", "team": "Reporting", "status": "pending", "week_status_note": "Blocked on 1.4 + 1.5 + 1.7", "guidance": "New scorecard section: each rebuilt page gets a row showing monthly sessions, calls (via CallRail DNI), form leads (via form_submit), bookings (via 1.4 wiring)."},
+    {"id": "1.9", "month": 1, "title": "Add float-specific scorecard lines (page sessions, bookings, % of total)", "team": "Reporting", "status": "pending", "week_status_note": "Open", "guidance": "Direct Paul ask. Add 3 lines to the scorecard: /float-therapy/ page sessions, float-attributed bookings, float share of total bookings."},
+    {"id": "1.10", "month": 1, "title": "Run float demand diagnostic", "team": "Strategy + Reporting", "status": "pending", "week_status_note": "Awaiting Paul's float context (ASK-4)", "guidance": "1-page memo covering: search-trend check on float terms, on-page behavior on /float-therapy/, booking-flow drop-off, competitor pricing/packaging shifts. Output informs M2 interventions."},
+    {"id": "1.11", "month": 1, "title": "Sitewide phone NAP fix — replace 801-855-5834 with 801-734-9798 GBP primary", "team": "DevOps + Dev", "status": "pending", "week_status_note": "Awaiting Paul's confirm (ASK-3)", "guidance": "1-shot fix. Sweep entire site + LocalBusiness JSON-LD telephone field. Request re-crawl in GSC. Gates GBP signal work."},
+    {"id": "1.12", "month": 1, "title": "Trigger point page rewrite — remove injection + dry-needling refs, add Service + FAQ schema", "team": "Strategy + Content + DevOps", "status": "pending", "week_status_note": "Draft starting; Paul previews before launch (ASK-7)", "guidance": "Owner-flagged P0. Same URL + booking flow. Every injection/dry-needling reference gone. Short labeled section distinguishing manual trigger point from those procedures. Service + FAQ schema."},
+    {"id": "1.13", "month": 1, "title": "Resolve duplicate /trigger-point-therapy/ canonical via small-level 301", "team": "Dev", "status": "pending", "week_status_note": "Sequence after 1.12", "guidance": "After SP-01 ships, 301 the deprecated /trigger-point-therapy/ URL to /modalities-techniques/trigger-point-therapy/ canonical. Verify no internal links to deprecated. Request re-crawl."},
+    {"id": "1.14", "month": 1, "title": "Fix /cupping-massage/ 404 — 301 to canonical, update internal links", "team": "Dev + Content", "status": "pending", "week_status_note": "Awaiting cupping confirm (ASK-8)", "guidance": "/cupping-massage/ is currently 404. Once Paul confirms cupping is still offered, 301 to /modalities-techniques/cupping/ canonical. Update ~10 orphaned blog post internal links."},
+    {"id": "1.15", "month": 1, "title": "Ship new location pages per subscription scope — catchment × service gap targeting", "team": "Content + Strategy", "status": "pending", "week_status_note": "Open", "guidance": "Pages target real catchment-town × service gaps (Cedar Hills × deep tissue, PG × cupping, Lehi × Swedish, etc.). Each page Service + FAQ schema + intake CTA + canonical phone."},
+    {"id": "1.16", "month": 1, "title": "Ship blog deliverables per subscription scope — Q-format + refresh + cluster mix", "team": "Content", "status": "pending", "week_status_note": "Open", "guidance": "Includes 1 Q-format LLM-targeted post (example: 'Is float therapy safe during pregnancy?'), refresh-cohort posts on existing strong content, and on-topic cluster builds."},
+    {"id": "1.17", "month": 1, "title": "Ship on-topic geo pages per subscription scope — wellness / athletic recovery / postpartum angles", "team": "Content + Strategy", "status": "pending", "week_status_note": "Open", "guidance": "On-topic geo pages, not doorway. Examples: Wellness Resources Cedar Hills, Athletic Recovery Utah Valley, Postpartum Wellness Utah Valley. Each deep-links to service hubs."},
+    {"id": "1.18", "month": 1, "title": "Tier-1 manual citations — AMTA + ABMP + Utah MTA + Utah County Chamber + PG Chamber", "team": "OffPage", "status": "pending", "week_status_note": "Open", "guidance": "Replaces the halted SEO Neo stack. Professional bodies + local institutions first. Each submission logged in tracker."},
+    {"id": "1.19", "month": 1, "title": "LD scan baseline + GSC + GA4 Q2 baseline exports", "team": "Reporting", "status": "pending", "week_status_note": "Open", "guidance": "Lock the Q2 baseline. LD scans on 32 queries (existing 18 + 14 new untracked services). GSC + GA4 Dec 2024-May 2026 baseline exports. Filed to clients/bodybalancemassage/exports/."},
+
+    {"id": "2.1", "month": 2, "title": "Service-page rebuild batch — Deep Tissue + Sports + Prenatal + Float (moved up from M3)", "team": "Strategy + Content + DevOps", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Universal-template upgrade with Service + LocalBusiness + FAQ schema, intake CTA above fold. Float is the new add — pulled forward per Paul's priority signal."},
+    {"id": "2.2", "month": 2, "title": "Float-specific off-search interventions from 1.10 diagnostic", "team": "Strategy + Content + Dev", "status": "pending", "week_status_note": "Scope set by 1.10 output", "guidance": "Whatever the diagnostic memo surfaces — pricing block, package CTA, booking-flow fix, etc. Some items may need Paul sign-off (pricing/packages)."},
+    {"id": "2.3", "month": 2, "title": "Build /myofascial-release/ page — 590 UT vol; BB #1 at AF pin without dedicated page", "team": "Strategy + Content + DevOps", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Missing-page capture. BB already ranks #1 at AF pin for myofascial release without a dedicated page — building one captures the surface."},
+    {"id": "2.4", "month": 2, "title": "Small-level 301-to-MAIN cleanup batch on 84 redundant URLs", "team": "Dev + Content + Strategy", "status": "pending", "week_status_note": "Per Cannibal_Cleanup_Plan", "guidance": "NEVER bulk NOINDEX. Per-URL canonical target documented + curl-verified. Per the Cannibal_Cleanup_Plan workbook decisions."},
+    {"id": "2.5", "month": 2, "title": "Repurpose 19 off-topic geo URLs with on-topic wellness/athletic angle", "team": "Content + Strategy", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Keep the URL, swap the content. Deep-link to service hubs. Restores topical relevance."},
+    {"id": "2.6", "month": 2, "title": "Ship new location pages M2 per subscription scope — PG cross-suburb angle", "team": "Content + Strategy", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Pleasant Grove cross-suburb angle — that's the field that moved most last quarter."},
+    {"id": "2.7", "month": 2, "title": "Ship blog deliverables M2 per subscription scope", "team": "Content", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Includes 1 Q-format (example: 'Trigger point therapy vs dry needling') + refresh + cluster mix."},
+    {"id": "2.8", "month": 2, "title": "Ship on-topic geo pages M2 per subscription scope", "team": "Content + Strategy", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "PG-focused cohort."},
+    {"id": "2.9", "month": 2, "title": "Tier-2 manual citations (local mom + wellness directories)", "team": "OffPage", "status": "pending", "week_status_note": "Scheduled M2", "guidance": "Continues earned-authority rebuild post-halt."},
+    {"id": "2.10", "month": 2, "title": "Mid-quarter delta report — indexation on refresh URLs, SP-01 + TPL-01 30-day CTR delta", "team": "Reporting", "status": "pending", "week_status_note": "Scheduled M2 W4", "guidance": "First marginal-value read. Indexation rate on refreshed URLs + CTR delta on the M1 fixes (trigger point + cupping)."},
+    {"id": "2.11", "month": 2, "title": "First per-page conversion read on M1 rebuilds (trigger point, cupping fix)", "team": "Reporting", "status": "pending", "week_status_note": "Blocked on 1.4-1.8 standup + M2 W4", "guidance": "Proves whether attribution wiring works. If trigger point page conversion moved post-rebuild, that's the proof point for the day-90 verdict."},
+    {"id": "2.12", "month": 2, "title": "Updated scorecard delivery to Paul — now includes booking, float, per-page lines", "team": "AM + Reporting", "status": "pending", "week_status_note": "Scheduled M2 W4", "guidance": "Mid-quarter checkpoint. Paul reviews scorecard; flags anything mistracking before the day-90 verdict."},
+
+    {"id": "3.1", "month": 3, "title": "Service-page rebuild batch — Cranial Sacral + Reflexology + Gua Sha + Swedish", "team": "Strategy + Content + DevOps", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Modality-differentiator round. Swedish moved from M2 when float moved up. Full schema + intake CTA + canonical phone."},
+    {"id": "3.2", "month": 3, "title": "Build /lymphatic-drainage-massage/ — un-gated post Paul's confirm; same accuracy guardrail as trigger point", "team": "Strategy + Content + DevOps", "status": "pending", "week_status_note": "Paul confirmed manual LD; build proceeds", "guidance": "Manual-only claims, no medical-procedure framing. Paul reviews outline before launch (same as trigger point). 3,600 UT monthly searches at #2 rank without a dedicated page today."},
+    {"id": "3.3", "month": 3, "title": "Sitewide schema audit + BlogPosting on top blog posts + BreadcrumbList sitewide", "team": "OnPage + DevOps", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Closes schema gaps. Top 10 blog posts get BlogPosting schema. BreadcrumbList rolled out sitewide. Full audit report filed."},
+    {"id": "3.4", "month": 3, "title": "Final cleanup pass — REVIEW cohort case-by-case + typo URL fix + final REFRESH batch", "team": "Content + Strategy + Dev", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Closes cleanup tail. 14 REVIEW-cohort URLs decisioned case-by-case. Typo URL fix. Final refresh batch (3-4 URLs)."},
+    {"id": "3.5", "month": 3, "title": "Ship new location pages M3 per subscription scope", "team": "Content + Strategy", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Remaining matrix gaps."},
+    {"id": "3.6", "month": 3, "title": "Ship blog deliverables M3 per subscription scope", "team": "Content", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Includes 1 Q-format (example: 'Cupping for athletic recovery in Utah') + refresh + cluster mix."},
+    {"id": "3.7", "month": 3, "title": "Ship on-topic geo pages M3 per subscription scope", "team": "Content + Strategy", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Final geo cohort."},
+    {"id": "3.8", "month": 3, "title": "Tier-3 manual citations (athletic / float / recovery directories)", "team": "OffPage", "status": "pending", "week_status_note": "Scheduled M3", "guidance": "Final citation tier — matches float vertical."},
+    {"id": "3.9", "month": 3, "title": "Q2 close-out report — planned → executed → impact correlation against full scorecard", "team": "Reporting + Strategy + AM", "status": "pending", "week_status_note": "Scheduled M3 W4", "guidance": "Marginal-value verdict. Every task row has Result/Notes + Evidence. KPI scorecard updated against M3 actuals."},
+    {"id": "3.10", "month": 3, "title": "Q2 close-out + budget verdict delivered to Paul", "team": "AM", "status": "pending", "week_status_note": "Scheduled M3 W4", "guidance": "Hold-or-pull-back call against the agreed scorecard. Endpoint of the 90-day deal."}
+  ]
+}

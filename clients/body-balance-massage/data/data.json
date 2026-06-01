@@ -24,6 +24,11 @@
   "mini_report_base": "./",
   "mini_reports": [
     {
+      "name": "Project Pilot · Q2 2026 90-day plan",
+      "slug": "project-pilot/",
+      "summary": "Live project view — client expectations, crucial focus areas, asks status, full M1-M3 task list with weekly status. Refreshes Mondays from Asana."
+    },
+    {
       "name": "LD Maps per-keyword deep dive",
       "slug": "ld-maps-deep-dive/",
       "summary": "6-keyword apples-to-apples scoreboard with per-competitor rank movement, cells gained/lost, town-band heatmap"
