@@ -1,0 +1,1208 @@
+{
+ "meta": {
+  "client": "MIA Photo Booth",
+  "domain": "miaphotobooth.net",
+  "prepared": "2026-06-01",
+  "preparer": "Aleksandar Spasevski",
+  "scope": "Maps recovery diagnosis \u2014 GBP and on-page first. Eight tracked queries across Feb 6 \u2192 May 6 2026, plus competitive read.",
+  "focus": "A Maps-only diagnosis. We did not analyze GSC or GA4 in this pass \u2014 pull both before the next monthly review so the recovery curve has matching traffic + lead data attached.",
+  "ld_window": "Feb 6 \u2192 May 6 2026 (6 scans)"
+ },
+ "tldr": "The Maps gap is structural, not effort. MIA's Google Business profile primary category is <strong>Photography service</strong>; five of the eight top-3 dominators citywide run <strong>Photo booth</strong> as primary (Glam Shots wins 419 top-3 cells with only 15 reviews \u2014 the category match is doing the lifting). On top of that, the site footer phone is <strong>786-973-9973</strong> \u2014 the GBP's <em>chat/SMS</em> number \u2014 while the GBP <em>primary</em> phone is <strong>786-833-7645</strong>; that NAP mismatch suppresses the trust signal Google uses to associate the site with the profile. Fix those two before anything else and we expect a measurable lift inside one scan cycle. The 27 templated area pages on the site (random adjective per slug \u2014 <code>leading-</code>, <code>famous-</code>, <code>premier-</code>) look programmatic and almost certainly are not earning the trust they need to support the GBP. We're recommending a clean rebuild of the location and service grid with a proper service&times;suburb matrix \u2014 the architecture this market rewards.",
+ "headline": {
+  "h2": "Root cause is two GBP-level fixes \u2014 not site depth",
+  "lede": "Across 6 Local Dominator scans Feb 6 \u2192 May 6, MIA's average rank sits at 10.69 (weighted across 8 tracked queries) with 46 top-3 cells out of 712 reached. The two highest-intent terms \u2014 \"wedding photo booth rental\" and \"360 photo booth rental\" \u2014 show zero top-3 cells across every scan. Meanwhile, four competitors with materially weaker review profiles (Glam Shots: 15 reviews; Luxe Booth: 11; Captured Fun: 35) all sit at 300+ top-3 cells citywide. Their distinguishing feature is the GBP primary category.",
+  "tiles": [
+   {
+    "label": "Avg Maps rank (8 kws)",
+    "value": "10.69",
+    "sub": "weighted by reach \u00b7 10.42 on Feb 6",
+    "tone": "bad"
+   },
+   {
+    "label": "Top-3 cells (May 6)",
+    "value": "46",
+    "sub": "of 712 cells reached \u00b7 48 on Feb 6",
+    "tone": "bad"
+   },
+   {
+    "label": "GBP primary category",
+    "value": "Photography service",
+    "sub": "5 of 8 top dominators use Photo booth",
+    "tone": "bad"
+   },
+   {
+    "label": "Site phone vs GBP primary",
+    "value": "Mismatched",
+    "sub": "site shows the chat/SMS number, not GBP primary",
+    "tone": "bad"
+   }
+  ]
+ },
+ "pin": {
+  "label": "MIA Photo Booth",
+  "service_area_pins": "20 declared service-area cities (Doral, Miami, Hialeah, Kendall, Coral Gables, etc.)",
+  "rating": "5.0",
+  "reviews": "103",
+  "primary": "Photography service",
+  "secondary": "Photo lab \u00b7 Photography shop \u00b7 Photo agency \u00b7 Photographer \u00b7 Photography studio \u00b7 Party equipment rental service",
+  "gbp_phone": "(786) 833-7645",
+  "site_phone": "(786) 973-9973",
+  "address": "Service area only (no storefront)",
+  "open_since": "January 2020",
+  "website": "https://www.miaphotobooth.net/"
+ },
+ "kw_table": [
+  {
+   "kw": "wedding photo booth rental",
+   "feb6_top3": 0,
+   "may6_top3": 0,
+   "feb6_cells": 39,
+   "may6_cells": 31,
+   "feb6_avg": 11.59,
+   "may6_avg": 11.32
+  },
+  {
+   "kw": "party photo booth rental",
+   "feb6_top3": 2,
+   "may6_top3": 3,
+   "feb6_cells": 42,
+   "may6_cells": 45,
+   "feb6_avg": 10.21,
+   "may6_avg": 10.02
+  },
+  {
+   "kw": "360 photo booth rental",
+   "feb6_top3": 0,
+   "may6_top3": 0,
+   "feb6_cells": 42,
+   "may6_cells": 45,
+   "feb6_avg": 9.74,
+   "may6_avg": 9.89
+  },
+  {
+   "kw": "photo booth rental near me",
+   "feb6_top3": 5,
+   "may6_top3": 7,
+   "feb6_cells": 69,
+   "may6_cells": 74,
+   "feb6_avg": 11.39,
+   "may6_avg": 10.92
+  },
+  {
+   "kw": "photo booth miami",
+   "feb6_top3": 8,
+   "may6_top3": 7,
+   "feb6_cells": 114,
+   "may6_cells": 112,
+   "feb6_avg": 10.69,
+   "may6_avg": 11.27
+  },
+  {
+   "kw": "miami photo booth rental",
+   "feb6_top3": 10,
+   "may6_top3": 8,
+   "feb6_cells": 126,
+   "may6_cells": 121,
+   "feb6_avg": 10.33,
+   "may6_avg": 11.07
+  },
+  {
+   "kw": "miami photo booth",
+   "feb6_top3": 14,
+   "may6_top3": 11,
+   "feb6_cells": 130,
+   "may6_cells": 126,
+   "feb6_avg": 9.48,
+   "may6_avg": 9.21
+  },
+  {
+   "kw": "photo booth rentals in miami",
+   "feb6_top3": 9,
+   "may6_top3": 10,
+   "feb6_cells": 161,
+   "may6_cells": 158,
+   "feb6_avg": 10.59,
+   "may6_avg": 11.36
+  }
+ ],
+ "competitors": [
+  {
+   "business": "Glam Shots Miami Photo Booths",
+   "is_client": false,
+   "may6_top3": 419,
+   "may6_cells": 1143,
+   "feb6_top3": 367,
+   "feb6_cells": 1085,
+   "d_top3": 52,
+   "d_cells": 58,
+   "rating": 5.0,
+   "reviews": 15,
+   "primary_category": "Photo booth",
+   "secondary_categories": "Children's party service, Event planner, Party equipment rental service, Wedding service",
+   "website": "https://glamshotsmiami.com/",
+   "address": "W Flagler St, Miami, FL 33147"
+  },
+  {
+   "business": "Captured Fun Photo Booth Rental",
+   "is_client": false,
+   "may6_top3": 403,
+   "may6_cells": 1128,
+   "feb6_top3": 351,
+   "feb6_cells": 1110,
+   "d_top3": 52,
+   "d_cells": 18,
+   "rating": 5.0,
+   "reviews": 35,
+   "primary_category": "Party equipment rental service",
+   "secondary_categories": "Photographer",
+   "website": "http://www.capturedfun.com/",
+   "address": "534 NE 23rd St 201, Miami, FL 33137"
+  },
+  {
+   "business": "Luxe Booth",
+   "is_client": false,
+   "may6_top3": 319,
+   "may6_cells": 1109,
+   "feb6_top3": 302,
+   "feb6_cells": 1109,
+   "d_top3": 17,
+   "d_cells": 0,
+   "rating": 5.0,
+   "reviews": 11,
+   "primary_category": "Party equipment rental service",
+   "secondary_categories": "Photo booth, Photography service",
+   "website": "https://www.luxebooth.com/photo-booth-rental-miami/",
+   "address": "1951 NW 7th Ave 270, Miami, FL 33136"
+  },
+  {
+   "business": "360 Photo Booth Miami Rental",
+   "is_client": false,
+   "may6_top3": 319,
+   "may6_cells": 1063,
+   "feb6_top3": 341,
+   "feb6_cells": 1045,
+   "d_top3": -22,
+   "d_cells": 18,
+   "rating": 5.0,
+   "reviews": 32,
+   "primary_category": "Photo booth",
+   "secondary_categories": "",
+   "website": "https://www.360photoboothmiamirental.com/",
+   "address": "8300 NW 36th St, Doral, FL 33166"
+  },
+  {
+   "business": "VIP Party Photo Booth LLC.",
+   "is_client": false,
+   "may6_top3": 310,
+   "may6_cells": 1123,
+   "feb6_top3": 383,
+   "feb6_cells": 1180,
+   "d_top3": -73,
+   "d_cells": -57,
+   "rating": 5.0,
+   "reviews": 318,
+   "primary_category": "Party equipment rental service",
+   "secondary_categories": "",
+   "website": "http://vippartyphotobooth.com/",
+   "address": "1001 SW 67th Ave, Miami, FL 33144"
+  },
+  {
+   "business": "Miami Event Photo Booth Rental",
+   "is_client": false,
+   "may6_top3": 289,
+   "may6_cells": 1103,
+   "feb6_top3": 283,
+   "feb6_cells": 1088,
+   "d_top3": 6,
+   "d_cells": 15,
+   "rating": 4.8,
+   "reviews": 92,
+   "primary_category": "Photo booth",
+   "secondary_categories": "Commercial photographer, Event planner, Party equipment rental service, Party planner, Photographer, Photography service, Tent rental service, Wedding photographer, Wedding planner",
+   "website": "http://www.miamieventphotobooth.com/",
+   "address": "2324 W 79th St, Hialeah, FL 33016"
+  },
+  {
+   "business": "Capture Pod Photo Booth Rental Miami",
+   "is_client": false,
+   "may6_top3": 274,
+   "may6_cells": 1157,
+   "feb6_top3": 181,
+   "feb6_cells": 1026,
+   "d_top3": 93,
+   "d_cells": 131,
+   "rating": 4.8,
+   "reviews": 45,
+   "primary_category": "Photo booth",
+   "secondary_categories": "Event technology service, Photography service, Video production service",
+   "website": "http://www.capturepod.com/",
+   "address": "328 NE 80th Terrace, Miami, FL 33138"
+  },
+  {
+   "business": "Ortiz Rental Photobooth",
+   "is_client": false,
+   "may6_top3": 204,
+   "may6_cells": 793,
+   "feb6_top3": 210,
+   "feb6_cells": 773,
+   "d_top3": -6,
+   "d_cells": 20,
+   "rating": 5.0,
+   "reviews": 5,
+   "primary_category": "Photography service",
+   "secondary_categories": "Photo booth, Photo agency",
+   "website": "",
+   "address": "2130 NW 86th St, Miami, FL 33147"
+  }
+ ],
+ "gbp_audit": {
+  "intro": "Twelve elements scored against the eight top-3 Maps dominators in the same market. The two red rows below are the unlock \u2014 every other element on the profile is already healthy.",
+  "rows": [
+   {
+    "area": "Primary category",
+    "status": "bad",
+    "current": "Photography service",
+    "should_be": "Photo booth \u2014 used as primary by 5 of the 8 top-3 dominators (Glam Shots, 360 Photo Booth Miami Rental, Miami Event Photo Booth, Capture Pod, The Photobomb Booths). Google's category model rewards a literal match to the user query; \"photo booth rental\" maps to Photo booth, not Photography service.",
+    "evidence": "Glam Shots Miami (15 reviews, 5.0\u2605) outranks MIA (103 reviews, 5.0\u2605) in 419 grid cells vs MIA's 46 \u2014 the variable that explains the gap is category, not reviews."
+   },
+   {
+    "area": "Secondary categories",
+    "status": "bad",
+    "current": "Photo lab \u00b7 Photography shop \u00b7 Photo agency \u00b7 Photographer \u00b7 Photography studio \u00b7 Party equipment rental service",
+    "should_be": "Replace the stacked photography-only secondaries with: Photo booth (if not used as primary), Wedding photographer, Event planner, Party planner. Photo lab and Photography shop hurt category clarity \u2014 they pull the listing toward film-developing intent.",
+    "evidence": "VIP Party Photo Booth (318 reviews, Party equipment rental service primary) holds 310 top-3 cells \u2014 the right vertical stack beats reviews-as-volume."
+   },
+   {
+    "area": "Business name",
+    "status": "good",
+    "current": "MIA Photo Booth - No.1 Photo Booth Rental",
+    "should_be": "Keep. Includes the head term twice. The descriptor \"No.1 Photo Booth Rental\" walks the GBP-naming line but isn't a violation under current guidelines (no city, no superlative-with-modifier).",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Description",
+    "status": "good",
+    "current": "210-word description, includes 360 / Glam / Black-and-White / Roamer keywords + Miami + weddings/corporate/private parties. Covers since 2020.",
+    "should_be": "Keep. One small upgrade: add the phrase \"photo booth rental\" twice (currently used once); add the secondary-target phrase \"wedding photo booth\" explicitly.",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Services list",
+    "status": "good",
+    "current": "Roamer \u00b7 Black and White \u00b7 Glam \u00b7 Social \u00b7 Studio \u00b7 360 \u00b7 plus the umbrella \"Photo Booth Rental in Miami\" service",
+    "should_be": "Keep all seven. Add wedding-specific service (\"Wedding Photo Booth in Miami\") and corporate-specific (\"Corporate Event Photo Booth in Miami\") so the services list cleanly addresses the two highest-intent query buckets.",
+    "evidence": "Both query buckets are tracked: \"wedding photo booth rental\" (0 top-3 cells), \"party photo booth rental\" (3 top-3 cells on May 6)."
+   },
+   {
+    "area": "From-the-business attributes",
+    "status": "good",
+    "current": "Women-owned \u00b7 Latino-owned \u00b7 LGBTQ+ friendly \u00b7 English \u00b7 Spanish",
+    "should_be": "Keep all five. Add \"Online appointments\" and \"Online estimates\" attributes if available \u2014 both are surfaced in the local pack UI for service-area businesses.",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Service-area scope",
+    "status": "watch",
+    "current": "20 cities declared \u2014 Doral, Miami, Hialeah, Kendall, Opa-locka, Miami Beach, Miami Lakes, North Miami, Westchester, Coral Gables, Surfside, Hialeah Gardens, Pinecrest, Bal Harbour, Key Biscayne, Little Havana, Dadeland, Miami Design District, North Beach, South Beach.",
+    "should_be": "Keep \u2014 broad service-area declarations don't suppress Maps for service-area businesses. <strong>But</strong>: the website should mirror the same cities in dedicated, indexable pages with consistent NAP. Today's site lists 27 area pages \u2014 overlap is partial, slugs are random.",
+    "evidence": "Site URLs use a different city set (Town Park Estates, Granada, Spring Garden, Gladeview, Coral Groves) than the GBP service area \u2014 the two layers don't reinforce each other."
+   },
+   {
+    "area": "Hours",
+    "status": "good",
+    "current": "Open 24 hours, 7 days",
+    "should_be": "Keep. 24/7 is normal for service-area / event businesses and signals responsiveness to Google.",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Photos",
+    "status": "blacklisted",
+    "current": "\u2014",
+    "should_be": "Out of scope per the client agreement. No action required on our side; if the team adds photos internally, lean toward 360-booth videos and wedding-event shots (the two undersupplied query buckets above).",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Q&A",
+    "status": "blacklisted",
+    "current": "\u2014",
+    "should_be": "Out of scope per the client agreement. Same note as photos \u2014 internal-only.",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Reviews",
+    "status": "good",
+    "current": "103 reviews \u00b7 5.0\u2605",
+    "should_be": "Keep cadence. The leader (Glam Shots) has 15 reviews \u2014 MIA already wins this dimension. Note that VIP Party Photo Booth (318 reviews) is still slipping (-73 top-3 cells in 3 months), so review-volume alone is not the moat.",
+    "evidence": "\u2014"
+   },
+   {
+    "area": "Posts / updates",
+    "status": "watch",
+    "current": "Not audited in this pass \u2014 pull last 90 days of GBP posts before the next review.",
+    "should_be": "Target weekly cadence (event highlights, booth-type spotlights). Posts feed the Updates tab and have a small but consistent ranking effect when paired with category alignment.",
+    "evidence": "\u2014"
+   }
+  ]
+ },
+ "connection": {
+  "intro": "Five elements of the website&harr;GBP handshake. The site is built \u2014 27 area pages, 6 service pages, 60 blog posts \u2014 but the bones aren't connected. The most consequential break is the phone number; the rest compound it.",
+  "verdict": "The website doesn't currently reinforce the GBP. Until the phone number, schema and URL structure match, every link Google follows from the GBP into the site reads as a weak association \u2014 and weak associations don't survive a proximity-tied local pack.",
+  "rows": [
+   {
+    "issue": "NAP \u2014 sitewide phone mismatch",
+    "sev": "high",
+    "detail": "The GBP primary phone is <strong>(786) 833-7645</strong>. The site footer and every service/area page show <strong>(786) 973-9973</strong> \u2014 which is actually the GBP's <em>chat/SMS</em> number. Google uses on-site phone-number consistency to confirm a site\u2194listing pairing; today the strongest match is to a number Google catalogs as \"Chat\".",
+    "fix": "One global replace across the WordPress/Wix theme: swap (786) 973-9973 for (786) 833-7645 in the header, footer, schema, contact form, and structured-data tel: links. Keep the SMS number only on a dedicated \"Text us\" button (use the sms: protocol, not the tel: one). Re-submit the GBP after deploy and watch the next scan."
+   },
+   {
+    "issue": "Schema \u2014 no LocalBusiness markup",
+    "sev": "high",
+    "detail": "The homepage and area pages return no JSON-LD LocalBusiness or Service schema (verified via on-page inspection). The richest signal MIA could send Google \u2014 name, telephone, areaServed, sameAs (the GBP URL + social profiles), priceRange, openingHours \u2014 is currently missing entirely.",
+    "fix": "Add LocalBusiness schema sitewide (in the theme's <head>), with sameAs pointing to the Google Maps CID URL + the six social profiles already in the GBP. Add Service schema on each of the 6 service pages, with provider linking to the LocalBusiness @id. FAQPage schema on the /frequently-asked-questions page. Expected effort: dev half-day."
+   },
+   {
+    "issue": "URL structure \u2014 27 location pages with random adjective slugs",
+    "sev": "high",
+    "detail": "The 27 area pages use a different adjective per slug: <code>/leading-photo-booth-rental-in-coral-gables-fl</code>, <code>/famous-photo-booth-rental-in-douglas-fl</code>, <code>/premier-photo-booth-rental-in-midtown-miami-fl</code>, <code>/highly-rated-photo-booth-rental-in-little-haiti-fl</code>, etc. This is the fingerprint of programmatic-template content; Google's spam systems have explicitly downgraded this pattern across 2024-25.",
+    "fix": "Consolidate to a clean <code>/photo-booth-rental/[city]/</code> structure with 301 redirects from the old slugs. Same on services: <code>/[service]/</code> stays, and add the matrix below."
+   },
+   {
+    "issue": "No service&times;location matrix",
+    "sev": "medium",
+    "detail": "Today the site has a service axis (6 booth-type pages) and a location axis (27 area pages) but no cell-level pages combining the two. \"360 photo booth coral gables\", \"wedding photo booth wynwood\", \"glam booth miami beach\" \u2014 none of these have a dedicated landing page, despite the GBP's primary service area covering all of them.",
+    "fix": "Build a 6&times;15 matrix (6 services &times; 15 highest-priority cities = 90 pages) over 90 days. Each page = ~400 words of unique copy (venue mentions, neighborhood callouts, one local testimonial, embedded GBP map). Internal linking: each cell links to its parent service + parent city + 3 adjacent cells. This is the architecture Maps actually rewards for service-area businesses with category-aligned GBPs."
+   },
+   {
+    "issue": "Internal linking \u2014 area pages don't link to service pages",
+    "sev": "medium",
+    "detail": "Sampled three area pages (Coral Gables, Wynwood, Midtown Miami): each links only back to the homepage and to the sibling area pages \u2014 no in-body links to the 360 / Glam / Roamer / Social / Studio / Audio-Guestbook service pages. The site loses 27 chances per page to flow authority into its commercial money pages.",
+    "fix": "Add a 3-paragraph \"Booth types we bring to [city]\" block to every area page with inline links to each of the 6 service pages. Add a reverse block on each service page (\"Most-requested neighborhoods\"). Implementation: ~1 hour for a CMS template; cumulative ~50 internal links per page."
+   }
+  ]
+ },
+ "levers": [
+  {
+   "id": "A",
+   "priority": "P0 \u00b7 Quick win \u00b7 this week",
+   "tone": "bad",
+   "title": "Switch GBP primary to Photo booth + clean up secondaries",
+   "summary": "Five-minute change from inside the GBP Manager. New primary: <strong>Photo booth</strong>. Secondary stack: <strong>Party equipment rental service</strong> (keep), <strong>Wedding photographer</strong>, <strong>Event planner</strong>, <strong>Photography service</strong> (demote from primary to secondary). Drop Photo lab, Photography shop, Photo agency, Photographer, Photography studio \u2014 those pull the listing toward film/print intent and don't add ranking value for booth-rental queries. Expected lift: first signal within one scan cycle (7-14 days); meaningful re-ranking within two cycles."
+  },
+  {
+   "id": "B",
+   "priority": "P0 \u00b7 Quick win \u00b7 this week",
+   "tone": "bad",
+   "title": "Unify the phone number \u2014 site, schema, social, citations",
+   "summary": "Replace <code>(786) 973-9973</code> with <code>(786) 833-7645</code> across miaphotobooth.net (header, footer, contact form, schema, all 27 area pages, all 6 service pages, the homepage hero CTA), then submit to BrightLocal / Whitespark / Moz Local citation pushes. Keep 973-9973 as a labelled \"Text us\" button only (using <code>sms:</code> protocol). Without this, every other signal on the site is being attributed to a number Google classifies as secondary."
+  },
+  {
+   "id": "C",
+   "priority": "P1 \u00b7 Mid-term \u00b7 30-60 days",
+   "tone": "watch",
+   "title": "Rebuild the location grid on a clean URL + content pattern",
+   "summary": "Kill the 27 random-adjective area slugs. New structure: <code>/photo-booth-rental/[city]/</code> for 15 priority cities (the GBP's declared service area + the 3-4 highest-revenue suburbs the team can validate). Each page = ~400 words of unique copy with at least three city-specific anchors (venues, neighborhoods, landmarks), one city-tagged testimonial, embedded GBP map, NAP block in the GBP-primary format. 301 every legacy slug to the matching new URL. Reduce the page count, raise the per-page authority."
+  },
+  {
+   "id": "D",
+   "priority": "P1 \u00b7 Mid-term \u00b7 30-90 days",
+   "tone": "watch",
+   "title": "Add the service&times;city matrix (~90 cell pages)",
+   "summary": "Six booth types &times; 15 priority cities = 90 cell pages. Each follows the same 400-word template, swap-out variables (booth, neighborhood, sample venue, testimonial). The grid is the architecture that out-ranks the citywide competitors who only have one Miami page (Captured Fun, VIP Party Photo Booth). Sequencing: 360 + Glam &times; the 5 highest-priority cities first (the two highest-revenue booth types &times; the cities the GBP already ranks in)."
+  },
+  {
+   "id": "E",
+   "priority": "P1 \u00b7 Schema + technical \u00b7 30 days",
+   "tone": "watch",
+   "title": "LocalBusiness + Service + FAQPage schema sitewide",
+   "summary": "Add JSON-LD LocalBusiness to the theme &lt;head&gt; (telephone = corrected number; areaServed = the 15 cities; sameAs = Google Maps CID + Instagram + Facebook + YouTube + LinkedIn + Pinterest + Twitter \u2014 all already on the GBP). Add Service schema on each service page (provider = LocalBusiness @id). Add FAQPage schema on /frequently-asked-questions. Validate in Search Console &rarr; URL Inspection."
+  },
+  {
+   "id": "F",
+   "priority": "P2 \u00b7 60-90 days",
+   "tone": "good",
+   "title": "Internal linking + GBP posts cadence",
+   "summary": "Two unrelated low-cost moves bundled. (1) Add a 3-paragraph block to every area page with inline links to all 6 service pages; reverse block on each service page linking to top neighborhoods. (2) Restart weekly GBP posts (event highlights, booth-type spotlights) \u2014 small but consistent ranking effect when paired with the category fix in Lever A."
+  }
+ ],
+ "tasks": [
+  {
+   "id": "A-1",
+   "lever": "A",
+   "dept": "GBP",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Change GBP primary category from Photography service to Photo booth"
+  },
+  {
+   "id": "A-2",
+   "lever": "A",
+   "dept": "GBP",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Drop secondaries: Photo lab, Photography shop, Photo agency, Photographer, Photography studio"
+  },
+  {
+   "id": "A-3",
+   "lever": "A",
+   "dept": "GBP",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Add secondaries: Wedding photographer, Event planner (keep Party equipment rental service)"
+  },
+  {
+   "id": "B-1",
+   "lever": "B",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Global replace site phone (786) 973-9973 \u2192 (786) 833-7645 (header, footer, contact form, every page)"
+  },
+  {
+   "id": "B-2",
+   "lever": "B",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Update all tel: links in markup and CTAs to (786) 833-7645"
+  },
+  {
+   "id": "B-3",
+   "lever": "B",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "P0",
+   "title": "Keep (786) 973-9973 only as a labelled \"Text us\" button using sms: protocol"
+  },
+  {
+   "id": "B-4",
+   "lever": "B",
+   "dept": "Off-Page",
+   "loc": "All",
+   "priority": "High",
+   "title": "Push corrected NAP to BrightLocal / Whitespark / Moz Local citations"
+  },
+  {
+   "id": "C-1",
+   "lever": "C",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "High",
+   "title": "Pick 15 priority cities from GBP service area + revenue validation with client"
+  },
+  {
+   "id": "C-2",
+   "lever": "C",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "High",
+   "title": "Write 15 new /photo-booth-rental/[city]/ pages \u2014 ~400 words each, 3 unique anchors per page"
+  },
+  {
+   "id": "C-3",
+   "lever": "C",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "High",
+   "title": "301 redirect every legacy area-page slug to its matching new URL"
+  },
+  {
+   "id": "C-4",
+   "lever": "C",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "High",
+   "title": "Update sitemap.xml + resubmit to GSC"
+  },
+  {
+   "id": "D-1",
+   "lever": "D",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Build matrix template: variable swap-out for booth \u00d7 city + per-cell testimonial + GBP embed"
+  },
+  {
+   "id": "D-2",
+   "lever": "D",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Month 1: 30 cells (360 + Glam \u00d7 15 cities) \u2014 highest priority booth types first"
+  },
+  {
+   "id": "D-3",
+   "lever": "D",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Month 2: 30 cells (Studio + Social \u00d7 15 cities)"
+  },
+  {
+   "id": "D-4",
+   "lever": "D",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Month 3: 30 cells (Roamer + Audio Guestbook \u00d7 15 cities) + cross-link audit"
+  },
+  {
+   "id": "E-1",
+   "lever": "E",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "High",
+   "title": "Add LocalBusiness JSON-LD in theme head \u2014 telephone, areaServed (15), sameAs (8 profiles)"
+  },
+  {
+   "id": "E-2",
+   "lever": "E",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "High",
+   "title": "Add Service schema on each of the 6 booth-type pages (provider \u2192 LocalBusiness @id)"
+  },
+  {
+   "id": "E-3",
+   "lever": "E",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Add FAQPage schema on /frequently-asked-questions"
+  },
+  {
+   "id": "E-4",
+   "lever": "E",
+   "dept": "Dev",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Validate every schema page in Search Console URL Inspection"
+  },
+  {
+   "id": "F-1",
+   "lever": "F",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Low",
+   "title": "Add \"Booth types in [city]\" block on every area page with 6 internal links"
+  },
+  {
+   "id": "F-2",
+   "lever": "F",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Low",
+   "title": "Add \"Most-requested neighborhoods\" block on every service page with 5-7 internal links"
+  },
+  {
+   "id": "F-3",
+   "lever": "F",
+   "dept": "GBP",
+   "loc": "All",
+   "priority": "Low",
+   "title": "Restart weekly GBP posts cadence \u2014 event highlights, booth-type spotlights"
+  }
+ ],
+ "kpi_targets": [
+  {
+   "metric": "Weighted avg Maps rank (8 kws)",
+   "current": "10.69",
+   "target": "6.5",
+   "stretch": "5.0"
+  },
+  {
+   "metric": "Top-3 cells (May 6 = 46)",
+   "current": "46",
+   "target": "120",
+   "stretch": "180"
+  },
+  {
+   "metric": "Top-3 cells on \"wedding photo booth rental\"",
+   "current": "0",
+   "target": "8",
+   "stretch": "20"
+  },
+  {
+   "metric": "Top-3 cells on \"360 photo booth rental\"",
+   "current": "0",
+   "target": "8",
+   "stretch": "20"
+  },
+  {
+   "metric": "Indexable site phone matches GBP primary",
+   "current": "No (mismatch)",
+   "target": "Yes",
+   "stretch": "Yes + citations refreshed"
+  },
+  {
+   "metric": "GBP primary category = Photo booth",
+   "current": "Photography service",
+   "target": "Photo booth",
+   "stretch": "\u2014"
+  },
+  {
+   "metric": "Service&times;city matrix cells live",
+   "current": "0",
+   "target": "30",
+   "stretch": "90"
+  }
+ ],
+ "owner_asks": [
+  {
+   "q": "Top 5 revenue cities \u2014 can you confirm?",
+   "why": "We're proposing the new <code>/photo-booth-rental/[city]/</code> structure for 15 priority cities. We'd like the team's read on the 5 cities that drive the most actual bookings \u2014 so the first content sprint hits revenue-weighted, not just GBP-area-weighted."
+  },
+  {
+   "q": "Internal phone-routing on (786) 833-7645 \u2014 confirmed live and answered?",
+   "why": "Before we push the global phone swap on the site and citations, we want to make sure the GBP primary number routes to a human and tracks the way the chat number does today."
+  },
+  {
+   "q": "Capacity for the 90-page matrix build \u2014 internal copywriter or HQDM?",
+   "why": "We can write the 90 cells in-house or hand a template + city list to an internal writer. Confirming the path so we can sequence Month 1\u20133 accurately."
+  },
+  {
+   "q": "GA4 + GSC access \u2014 can we get added?",
+   "why": "This pass is Maps-only because we don't yet have GA4/GSC. With both connected we can put a real organic-clicks-and-leads recovery curve next to the Maps recovery, the same way we do for AQMS and Maison."
+  },
+  {
+   "q": "Any past algorithmic dip or manual action history we should know about?",
+   "why": "The 27 templated area pages have the fingerprint of programmatic content. Before consolidating we want to confirm nothing was already actioned (manual penalty, helpful-content reset) so we sequence the URL-structure change properly."
+  }
+ ],
+ "deliverables": [
+  {
+   "type": "Strategy",
+   "name": "Full strategic dashboard",
+   "desc": "This page \u2014 Maps diagnosis, GBP audit, site-GBP connection, 6 levers, full task list, KPIs.",
+   "href": "index.html"
+  },
+  {
+   "type": "Condensed",
+   "name": "Condensed brief",
+   "desc": "One-screen brief for the AM team \u2014 root cause, next-90-days, the two P0 fixes that unblock everything else.",
+   "href": "condensed.html"
+  },
+  {
+   "type": "Client",
+   "name": "Client snapshot",
+   "desc": "Single-screen client view \u2014 Maps headline, search-by-search breakdown, the two-fix plan in plain language.",
+   "href": "snapshot.html"
+  }
+ ],
+ "snapshot": {
+  "eyebrow": "HQDM Search Intelligence \u00b7 Maps recovery diagnosis",
+  "title": "MIA Photo Booth \u00b7 Maps Recovery Snapshot",
+  "subtitle": "Local Dominator scans Feb 6 \u2192 May 6 2026 \u00b7 8 tracked queries \u00b7 prepared 2026-06-01",
+  "short_name": "MIA Photo Booth",
+  "exec_html": "<p><strong>Headline:</strong> Maps performance is structurally capped by two GBP-level settings, not by effort or reviews. The fix is targeted, not heavy.</p><p class='mt-2'>Across 6 scans, MIA averages rank 10.69 on Maps (weighted across all 8 tracked queries) with 46 top-3 cells out of 712 reached. The two highest-intent queries \u2014 \"wedding photo booth rental\" and \"360 photo booth rental\" \u2014 show zero top-3 cells in every scan. Meanwhile, the four competitors who dominate Maps (Glam Shots: 419 top-3 cells with only 15 reviews; Captured Fun: 403 with 35; Luxe Booth: 319 with 11; 360 Photo Booth Miami Rental: 319 with 32) all share two things MIA doesn't: <strong>(1)</strong> a GBP primary category that literally matches the query \u2014 \"Photo booth\" or \"Party equipment rental service\" \u2014 vs MIA's \"Photography service\"; and <strong>(2)</strong> a website phone number that matches the GBP primary number. MIA's site shows <code>(786) 973-9973</code> sitewide \u2014 that's the GBP <em>chat/SMS</em> number, not the primary <code>(786) 833-7645</code>. Two changes (5 minutes inside the GBP + half-day dev on the site) should produce a measurable lift inside the next two scan cycles.</p>",
+  "chips": [
+   {
+    "v": "10.69",
+    "l": "avg rank \u00b7 weighted, 8 kws"
+   },
+   {
+    "v": "46 / 712",
+    "l": "top-3 / cells reached \u00b7 May 6"
+   },
+   {
+    "v": "0",
+    "l": "top-3 on wedding + 360",
+    "watch": true
+   },
+   {
+    "v": "Wrong",
+    "l": "GBP primary category",
+    "watch": true
+   },
+   {
+    "v": "Mismatch",
+    "l": "site phone vs GBP primary",
+    "watch": true
+   }
+  ],
+  "maps": {
+   "enabled": true,
+   "title": "Per-query Maps movement \u00b7 Feb 6 \u2192 May 6",
+   "window": "6 LD scans, 13&times;13 grid centered on the GBP service area",
+   "headers": [
+    "Query",
+    "Top-3 Feb&nbsp;6",
+    "Top-3 May&nbsp;6",
+    "\u0394",
+    "Avg rank Feb&nbsp;6 \u2192 May&nbsp;6"
+   ],
+   "rows": [
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "wedding photo booth rental",
+       "c": ""
+      },
+      {
+       "t": "0",
+       "c": ""
+      },
+      {
+       "t": "<strong>0</strong>",
+       "c": ""
+      },
+      {
+       "t": "0",
+       "c": ""
+      },
+      {
+       "t": "11.59 \u2192 11.32",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "party photo booth rental",
+       "c": ""
+      },
+      {
+       "t": "2",
+       "c": ""
+      },
+      {
+       "t": "<strong>3</strong>",
+       "c": ""
+      },
+      {
+       "t": "+1",
+       "c": "good"
+      },
+      {
+       "t": "10.21 \u2192 10.02",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "360 photo booth rental",
+       "c": ""
+      },
+      {
+       "t": "0",
+       "c": ""
+      },
+      {
+       "t": "<strong>0</strong>",
+       "c": ""
+      },
+      {
+       "t": "0",
+       "c": ""
+      },
+      {
+       "t": "9.74 \u2192 9.89",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "photo booth rental near me",
+       "c": ""
+      },
+      {
+       "t": "5",
+       "c": ""
+      },
+      {
+       "t": "<strong>7</strong>",
+       "c": ""
+      },
+      {
+       "t": "+2",
+       "c": "good"
+      },
+      {
+       "t": "11.39 \u2192 10.92",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "photo booth miami",
+       "c": ""
+      },
+      {
+       "t": "8",
+       "c": ""
+      },
+      {
+       "t": "<strong>7</strong>",
+       "c": ""
+      },
+      {
+       "t": "-1",
+       "c": "bad"
+      },
+      {
+       "t": "10.69 \u2192 11.27",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "miami photo booth rental",
+       "c": ""
+      },
+      {
+       "t": "10",
+       "c": ""
+      },
+      {
+       "t": "<strong>8</strong>",
+       "c": ""
+      },
+      {
+       "t": "-2",
+       "c": "bad"
+      },
+      {
+       "t": "10.33 \u2192 11.07",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "miami photo booth",
+       "c": ""
+      },
+      {
+       "t": "14",
+       "c": ""
+      },
+      {
+       "t": "<strong>11</strong>",
+       "c": ""
+      },
+      {
+       "t": "-3",
+       "c": "bad"
+      },
+      {
+       "t": "9.48 \u2192 9.21",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "photo booth rentals in miami",
+       "c": ""
+      },
+      {
+       "t": "9",
+       "c": ""
+      },
+      {
+       "t": "<strong>10</strong>",
+       "c": ""
+      },
+      {
+       "t": "+1",
+       "c": "good"
+      },
+      {
+       "t": "10.59 \u2192 11.36",
+       "c": ""
+      }
+     ]
+    }
+   ],
+   "note_html": "Two highest-intent queries (\"wedding photo booth rental\", \"360 photo booth rental\") sit at zero top-3 cells across every scan. These are the queries the category fix should unblock first."
+  },
+  "competitors": {
+   "enabled": true,
+   "title": "Citywide leaderboard \u00b7 who's winning Maps",
+   "window": "Aggregated top-3 cells across all 8 tracked queries \u00b7 May 6 scan",
+   "headers": [
+    "Business",
+    "Top-3 cells",
+    "\u0394 vs Feb",
+    "Reviews",
+    "GBP primary"
+   ],
+   "rows": [
+    {
+     "me": true,
+     "cells": [
+      {
+       "t": "MIA Photo Booth",
+       "c": ""
+      },
+      {
+       "t": "<strong>46</strong>",
+       "c": ""
+      },
+      {
+       "t": "-2",
+       "c": "bad"
+      },
+      {
+       "t": "103",
+       "c": ""
+      },
+      {
+       "t": "Photography service \u2190 issue",
+       "c": "bad"
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Glam Shots Miami Photo Booths",
+       "c": ""
+      },
+      {
+       "t": "<strong>419</strong>",
+       "c": ""
+      },
+      {
+       "t": "+52",
+       "c": "bad"
+      },
+      {
+       "t": "15",
+       "c": ""
+      },
+      {
+       "t": "Photo booth",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Captured Fun Photo Booth Rental",
+       "c": ""
+      },
+      {
+       "t": "<strong>403</strong>",
+       "c": ""
+      },
+      {
+       "t": "+52",
+       "c": "bad"
+      },
+      {
+       "t": "35",
+       "c": ""
+      },
+      {
+       "t": "Party equipment rental service",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Luxe Booth",
+       "c": ""
+      },
+      {
+       "t": "<strong>319</strong>",
+       "c": ""
+      },
+      {
+       "t": "+17",
+       "c": "bad"
+      },
+      {
+       "t": "11",
+       "c": ""
+      },
+      {
+       "t": "Party equipment rental service",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "360 Photo Booth Miami Rental",
+       "c": ""
+      },
+      {
+       "t": "<strong>319</strong>",
+       "c": ""
+      },
+      {
+       "t": "-22",
+       "c": "good"
+      },
+      {
+       "t": "32",
+       "c": ""
+      },
+      {
+       "t": "Photo booth",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "VIP Party Photo Booth LLC.",
+       "c": ""
+      },
+      {
+       "t": "<strong>310</strong>",
+       "c": ""
+      },
+      {
+       "t": "-73",
+       "c": "good"
+      },
+      {
+       "t": "318",
+       "c": ""
+      },
+      {
+       "t": "Party equipment rental service",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Miami Event Photo Booth Rental",
+       "c": ""
+      },
+      {
+       "t": "<strong>289</strong>",
+       "c": ""
+      },
+      {
+       "t": "+6",
+       "c": "bad"
+      },
+      {
+       "t": "92",
+       "c": ""
+      },
+      {
+       "t": "Photo booth",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Capture Pod Photo Booth Rental Miami",
+       "c": ""
+      },
+      {
+       "t": "<strong>274</strong>",
+       "c": ""
+      },
+      {
+       "t": "+93",
+       "c": "bad"
+      },
+      {
+       "t": "45",
+       "c": ""
+      },
+      {
+       "t": "Photo booth",
+       "c": ""
+      }
+     ]
+    },
+    {
+     "me": false,
+     "cells": [
+      {
+       "t": "Ortiz Rental Photobooth",
+       "c": ""
+      },
+      {
+       "t": "<strong>204</strong>",
+       "c": ""
+      },
+      {
+       "t": "-6",
+       "c": "good"
+      },
+      {
+       "t": "5",
+       "c": ""
+      },
+      {
+       "t": "Photography service",
+       "c": ""
+      }
+     ]
+    }
+   ],
+   "note_html": "Glam Shots wins 9&times; MIA's top-3 footprint with 15% the review count \u2014 the variable that explains the gap is GBP <em>category</em>, not reviews."
+  },
+  "focus_heading": "Our Focus \u00b7 Next 90 Days",
+  "focus": [
+   {
+    "title": "P0 \u00b7 Switch GBP primary category to Photo booth",
+    "color": "#ef4444",
+    "body": "5 minutes inside GBP Manager. Drop the photo-lab / photo-agency / photographer / photography-studio secondaries (they pull intent toward film-developing). Add Wedding photographer + Event planner. Expected first signal: 7-14 days."
+   },
+   {
+    "title": "P0 \u00b7 Unify the phone number sitewide",
+    "color": "#ef4444",
+    "body": "Replace (786) 973-9973 with (786) 833-7645 across header, footer, schema, all 33 pages. Keep the SMS number on a labelled Text-us button using the sms: protocol. Push corrected NAP to BrightLocal / Whitespark / Moz."
+   },
+   {
+    "title": "P1 \u00b7 Rebuild location grid on a clean URL pattern",
+    "color": "#f59e0b",
+    "body": "Consolidate the 27 random-adjective area slugs into /photo-booth-rental/[city]/ for 15 priority cities, ~400 words each with unique venue/landmark anchors. 301 every legacy slug."
+   },
+   {
+    "title": "P1 \u00b7 Service \u00d7 city matrix (90 cells over 90 days)",
+    "color": "#f59e0b",
+    "body": "6 booth types \u00d7 15 cities = 90 cell pages. Month 1: 360 + Glam \u00d7 15. Month 2: Studio + Social \u00d7 15. Month 3: Roamer + Audio \u00d7 15. Each cell links to its parent service + parent city + 3 adjacent cells."
+   },
+   {
+    "title": "P1 \u00b7 LocalBusiness + Service + FAQPage schema sitewide",
+    "color": "#f59e0b",
+    "body": "JSON-LD in the theme head, sameAs pointing to the GBP Maps CID + the 6 social profiles already in the GBP. Validate in GSC URL Inspection."
+   }
+  ],
+  "footer": "Maps recovery diagnosis \u00b7 2026-06-01"
+ }
+}

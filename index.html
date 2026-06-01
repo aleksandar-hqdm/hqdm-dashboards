@@ -449,6 +449,59 @@ Live numbers are in the dashboard. We&apos;ll walk through it on the call.
 
       <div class="block bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition p-5 flex flex-col">
         <div class="flex items-center gap-2 mb-3">
+          <span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800">CUSTOM · TIER 1</span>
+          <span class="text-xs text-slate-500">Photo-booth rental · Miami, FL</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900">MIA Photo Booth</h3>
+        <p class="text-sm text-slate-600 mt-2">Maps recovery diagnosis. Avg rank 10.7 across 8 tracked queries; zero top-3 cells on "wedding photo booth rental" + "360 photo booth rental". Two P0 GBP-level fixes (primary category Photography service &rarr; Photo booth; site phone mismatch with GBP primary) unlock the rest. 6 levers, 22 tasks.</p>
+        <div class="mt-auto pt-4 text-xs text-slate-500">Prepared 2026-06-01</div>
+        <div class="mt-3 grid grid-cols-2 gap-2 items-stretch">
+          <div class="flex flex-col gap-1">
+            <a href="clients/mia-photo-booth/index.html" class="text-center px-3 py-2 rounded border border-brand-500 text-brand-500 font-semibold hover:bg-brand-500 hover:text-white transition text-xs">Strategy</a>
+            <button type="button" onclick="openCondensed('mia-photo-booth')" class="text-center px-2 py-1 rounded-md text-[10px] font-medium tracking-tight text-brand-500/60 hover:text-brand-500 hover:bg-brand-500/5 transition-all duration-200 self-center w-fit mx-auto scale-95 hover:scale-105 hover:tracking-normal">Condensed</button>
+          </div>
+          <a href="clients/mia-photo-booth/snapshot.html" class="flex items-center justify-center text-center px-3 py-2 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700 transition text-xs">Client</a>
+        </div>
+        <details class="mt-2">
+          <summary class="cursor-pointer text-xs font-semibold text-brand-500 hover:text-brand-700 select-none flex items-center justify-between px-3 py-2 rounded border border-brand-500/40 hover:bg-brand-500/5 list-none [&amp;::-webkit-details-marker]:hidden [&amp;::marker]:hidden">
+            <span>Email draft for client</span>
+            <span class="text-[10px] text-slate-400">show / hide</span>
+          </summary>
+          <div class="mt-2 space-y-2">
+            <textarea data-slug="mia-photo-booth" class="w-full h-80 text-[11px] font-mono text-slate-700 bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-brand-300">Subject: Where the Maps gap is actually coming from &mdash; and the two fixes that unlock it
+
+Hey [Name],
+
+Wanted to put the Maps picture in writing before our next call so we can spend the time on the fixes, not the diagnosis.
+
+We&apos;ve been watching your Google Maps grid across 8 search terms for the last four months &mdash; six scans, Feb through May. The short version: average rank sits at 10.7 across the board, and on the two highest-intent searches (&quot;wedding photo booth rental&quot; and &quot;360 photo booth rental&quot;) you&apos;re showing zero top-3 results in every single scan. Meanwhile the competitors winning those queries citywide &mdash; Glam Shots, Captured Fun, Luxe Booth, 360 Photo Booth Miami Rental &mdash; have way fewer reviews than you do. Glam Shots has 15 reviews against your 103, and they&apos;re winning 419 top-3 spots to your 46. Reviews aren&apos;t the issue.
+
+The issue is two settings, both fixable inside a week:
+
+1) Your Google Business profile&apos;s primary category is &quot;Photography service&quot;. Five of the eight dominant competitors in Miami run &quot;Photo booth&quot; as their primary category. Google reads the search query &quot;photo booth rental&quot; and matches it literally to the category &mdash; Photography service simply doesn&apos;t earn that match. This is a 5-minute change inside your GBP. We also want to drop the photo-lab / photographer / photography-studio secondaries (they pull you toward film-developing intent) and add Wedding photographer + Event planner + keep Party equipment rental service.
+
+2) Your website footer shows the phone number (786) 973-9973 across every page. That&apos;s actually the SMS/chat number on your Google Business profile &mdash; the profile&apos;s primary phone is (786) 833-7645. Google uses on-site phone consistency to confirm a website matches a GBP. Right now every page on your site is signalling to the wrong number. One global replace, push to your dev team, ~half a day of work.
+
+Those two changes should produce a measurable Maps lift inside the next two scan cycles (~2-4 weeks).
+
+The bigger context: this is a Maps-first market. Photo-booth buyers don&apos;t comparison-shop blog content &mdash; they search, scan the local pack, click, and book. That&apos;s why getting the GBP foundations right outranks anything we could do on volume of content. Once those two unlock, we want to rebuild your 27 area pages on a cleaner URL structure and add a service-by-city matrix (90 pages over 90 days) &mdash; that&apos;s the architecture the citywide winners haven&apos;t built yet, and the next moat we can take.
+
+The honest part: nobody can guarantee where local SERPs land in 12 months &mdash; Google changes things constantly and AI is rewriting the rules in front of all of us. What I&apos;m confident in is that a category-aligned GBP wired correctly to its website is the foundation that holds up no matter what comes next. That&apos;s the part we fully control, and that&apos;s where Lever A and Lever B point.
+
+Full strategic dashboard, condensed brief, and the single-screen client snapshot are all in the link &mdash; we&apos;ll walk through the heatmaps on the call. Two quick things we&apos;ll want to confirm with you before we kick off: (1) the five cities that drive the most actual bookings (so the matrix sequencing hits revenue, not just GBP-declared area), and (2) GA4 + Search Console access so the next pass has organic-traffic and lead data sitting alongside the Maps recovery curve.
+
+&mdash; Matt</textarea>
+            <div class="flex items-center gap-2">
+              <button type="button" onclick="copyEmail(this)" class="text-xs px-3 py-1.5 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700 transition">Copy email</button>
+              <span class="text-[10px] text-slate-400">Edit [Name] before sending</span>
+            </div>
+            <div class="mt-3 pt-3 border-t border-slate-200" data-customize-panel></div>
+          </div>
+        </details>
+      </div>
+
+      <div class="block bg-white rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition p-5 flex flex-col">
+        <div class="flex items-center gap-2 mb-3">
           <span class="inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-sky-100 text-sky-800">TIER 2 · MULTI-LOCATION</span>
           <span class="text-xs text-slate-500">Moving + Storage · Tustin + Chino Hills, CA</span>
         </div>
@@ -691,6 +744,42 @@ Dashboard and grid views are all in there. We&apos;ll walk through it on the cal
             { label: "GBP category alignment (packing + storage explicitly added)", explanation: "GBP categories drive which queries surface the listing. Adding them is the prerequisite to ranking for those services." },
             { label: "Outer-city expansion scope sign-off (which cities, in what order)", explanation: "Need approval on city list and priority order. Land it before we start so the team isn't guessing." },
             { label: "Review-velocity target", explanation: "Reviews are GBP fuel. Lock in a monthly commitment so we can plan the rest of the strategy around it." }
+          ]}
+        ]
+      },
+      "mia-photo-booth": {
+        label: "MIA Photo Booth · Miami, FL",
+        url: "clients/mia-photo-booth/condensed.html",
+        sections: [
+          { heading: "Opening", items: [
+            { label: "Frame: Maps is the front door for photo-booth buyers — and that's where we have to win", explanation: "Photo-booth buyers don't comparison-shop content. They search, scan the local pack, click, book. Lead with this so the rest of the call lands as 'fix the front door' not 'write more content'." },
+            { label: "Two GBP-level fixes unlock the rest — diagnosis is clear, plan is clear", explanation: "Don't bury the lede. The diagnosis isn't complicated. Two settings, both fixable inside a week. Frame it as a relief, not a crisis." },
+            { label: "Industry context: this is a category-and-NAP market, not a content-volume market", explanation: "Reviews don't make up for the wrong category. Glam Shots has 15 reviews and wins 9× MIA's footprint. That fact reframes the whole conversation." }
+          ]},
+          { heading: "Walk through the data", items: [
+            { label: "Avg rank 10.7 weighted across 8 tracked queries · Feb 6 → May 6 · 6 scans", explanation: "Set the baseline. Six scans, eight queries, consistent picture. The data is not a one-off." },
+            { label: "Zero top-3 cells on \"wedding photo booth rental\" and \"360 photo booth rental\"", explanation: "The two highest-intent queries are fully blocked. This is the visceral number — it tells the owner exactly why bookings feel weaker than the review profile suggests." },
+            { label: "Competitor leaderboard — Glam Shots (15 reviews → 419 top-3) vs MIA (103 reviews → 46 top-3)", explanation: "The smoking gun. Reviews aren't the variable. Category is. Show the table." },
+            { label: "Site phone (786) 973-9973 vs GBP primary (786) 833-7645 — they don't match", explanation: "Specific, mechanical, fixable. Owners often don't realize this. Show them the exact line on their footer next to the GBP screenshot." }
+          ]},
+          { heading: "Pivots this quarter", items: [
+            { label: "Lever A · Switch GBP primary category to Photo booth", explanation: "5-minute change inside the GBP. Drop the photo-lab / photographer / photography-studio secondaries (they pull toward film-developing intent). This is the unlock everything else builds on." },
+            { label: "Lever B · Global phone-number replace sitewide + citations refresh", explanation: "Half-day of dev work. After deploy, push corrected NAP to BrightLocal / Whitespark / Moz. Schema and citations have to agree before Maps can attribute the site to the profile." },
+            { label: "Lever C · Rebuild location pages on /photo-booth-rental/[city]/ pattern", explanation: "The 27 random-adjective slugs read as programmatic to Google. Consolidate into a clean URL pattern with 301s, ~400 words per page, unique anchors. Reduce page count, raise per-page authority." },
+            { label: "Lever D · Service × city matrix (90 cells over 90 days)", explanation: "The architecture the citywide winners don't have yet. 6 booth types × 15 cities = 90 cell pages. Month-1: 360 + Glam × 15. This is the medium-term moat." },
+            { label: "Lever E · LocalBusiness + Service + FAQPage schema sitewide", explanation: "JSON-LD in the theme head. sameAs to the GBP Maps CID + the 6 social profiles already on the GBP. Validate in GSC. This is the trust-signal layer." }
+          ]},
+          { heading: "Anticipated pushback", items: [
+            { label: "\"We have 103 reviews and 5 stars — why aren't we ranking?\" → Reviews don't compensate for the wrong category", explanation: "Glam Shots wins 9× the footprint with 15 reviews. Have the leaderboard pulled up on screen and walk through it line by line — categories drive query match." },
+            { label: "\"Why change the GBP category? We're a photography service.\" → Google routes \"photo booth rental\" queries to Photo booth, not Photography service", explanation: "Photo booth is a specific category in Google's taxonomy. The query \"photo booth rental\" literally matches that string. Photography service is the wrong bucket for this intent." },
+            { label: "\"The 27 location pages took work — why kill them?\" → Random adjective slugs trip programmatic-content signals; consolidation makes the survivors stronger", explanation: "We're not removing the cities. We're replacing 27 thin pages with 15 strong pages on a clean URL pattern. The link equity gets concentrated, and the programmatic-template fingerprint goes away." },
+            { label: "\"How fast does the GBP category change show up?\" → First signal 7-14 days; meaningful rank shift inside 2-4 weeks", explanation: "Two scan cycles. Set expectations precisely so they don't bail mid-curve. The technical fix is fast; the rank response is one to two LD scans behind." }
+          ]},
+          { heading: "Confirm before hanging up", items: [
+            { label: "GBP Manager access — confirm we can make the category change directly", explanation: "If the team holds the GBP through Google Account A but we have access through Account B, the category change has to be coordinated. Confirm path before the call ends." },
+            { label: "Top 5 revenue cities — owner sign-off on the matrix sequencing", explanation: "The proposed 15-city pattern is GBP-area-driven. We want the owner's read on the 5 cities that drive the most actual bookings, so the matrix starts where revenue is." },
+            { label: "Phone-routing confirmation on (786) 833-7645", explanation: "Before we push the global swap on the site, confirm 833-7645 routes to a human and tracks the way 973-9973 does today. Don't break the lead flow." },
+            { label: "GA4 + GSC access request", explanation: "This pass is Maps-only. With GA4 + GSC connected, the next pass can put an organic-clicks-and-leads recovery curve next to the Maps curve — the way we do for AQMS and Maison." }
           ]}
         ]
       },
