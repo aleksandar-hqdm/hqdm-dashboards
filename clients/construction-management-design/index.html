@@ -45,13 +45,12 @@
       </div>
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
         <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
-        <a href="#root-cause" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Root cause</a>
+        <a href="#wins" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Wins</a>
+        <a href="#root-cause" class="px-2.5 py-1.5 rounded hover:bg-slate-100">What's left</a>
         <a href="#grid" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Grid</a>
         <a href="#competitors" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Competitors</a>
-        <a href="#gbp" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GBP</a>
-        <a href="#site" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Site</a>
+        <a href="#potential" class="px-2.5 py-1.5 rounded hover:bg-slate-100">6-mo case</a>
         <a href="#plan" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Plan</a>
-        <a href="#outcomes" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Targets</a>
       </nav>
       <div class="flex items-center gap-2 text-xs">
         <a href="condensed.html" class="px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 font-semibold">Condensed</a>
@@ -67,13 +66,14 @@
         <span>Tier 3 · General Contractor</span><span class="text-brand-300/50">·</span><span>HQDM Search Intelligence</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Construction Management &amp; Design</h1>
-      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Portland general contractor since 1996 · save-the-client Maps + on-page diagnosis</p>
-      <p class="text-base mt-5 max-w-3xl text-white/85">Two brand-name queries collapsing fast. Five service-intent queries at zero. The site cannot back the GBP. Recovery is a service-page rebuild + schema + matrix repair — 90 days, fully on-page, no review or PR spend.</p>
+      <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Portland general contractor since 1996 · 12 weeks in · results + the case for 6 more months</p>
+      <p class="text-base mt-5 max-w-3xl text-white/85">Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries are now indexed and producing footprint. Maps top-10 coverage is intact at 99.4% on the largest brand query. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for.</p>
       <div class="mt-7 flex flex-wrap gap-3 text-xs">
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono">2026-06-01</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Domain</span> <span class="font-mono">cmdesigns.net</span></span>
-        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Maps data</span> <span class="font-mono">Mar 5 – May 31 2026</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Maps data</span> <span class="font-mono">Feb 27 – May 31 2026</span></span>
+        <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Engagement start</span> <span class="font-mono">2026-03-12</span></span>
       </div>
     </div>
   </section>
@@ -86,12 +86,96 @@
   </section>
 
   <section id="headline" class="max-w-7xl mx-auto px-4 sm:px-6 py-4">
-    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-rose-50 shadow-sm overflow-hidden">
+    <div class="rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-emerald-50 shadow-sm overflow-hidden">
       <div class="p-6 sm:p-8">
-        <div class="text-[11px] font-bold uppercase tracking-widest text-rose-600">THE HEADLINE</div>
+        <div class="text-[11px] font-bold uppercase tracking-widest text-emerald-700">THE HEADLINE</div>
         <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mt-1" id="headline-h2">—</h2>
         <p class="text-sm sm:text-base text-ink-700 leading-relaxed mt-3 max-w-4xl" id="headline-lede">—</p>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-6" id="headline-tiles"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wins" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Wins — what shipped, what moved</h2>
+    <p class="text-sm text-ink-500 mb-4" id="wins-intro"></p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2" id="wins-gsc-title"></div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Metric</th><th class="num">Pre-engagement</th><th class="num">Engagement</th><th class="num">Delta</th>
+          </tr></thead>
+          <tbody id="wins-gsc-rows"></tbody>
+        </table>
+        <p class="text-[11px] text-slate-500 mt-2" id="wins-gsc-foot"></p>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2" id="wins-brand-title"></div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Keyword</th><th class="num">Pre</th><th class="num">Eng</th><th class="num">Clicks pre→eng</th><th>Note</th>
+          </tr></thead>
+          <tbody id="wins-brand-rows"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2" id="wins-info-title"></div>
+      <p class="text-sm text-slate-700 leading-relaxed mb-3" id="wins-info-intro"></p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Top pages during engagement</div>
+          <table class="w-full text-sm ttable">
+            <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+              <th>URL</th><th class="num">Imp</th><th class="num">Clk</th><th class="num">Pos</th>
+            </tr></thead>
+            <tbody id="wins-info-pages"></tbody>
+          </table>
+        </div>
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Informational themes — new since engagement start</div>
+          <div id="wins-info-themes" class="space-y-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2" id="wins-maps-title"></div>
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th><th>Metric</th><th class="num">Value</th><th class="num">%</th><th>Note</th>
+        </tr></thead>
+        <tbody id="wins-maps-rows"></tbody>
+      </table>
+    </div>
+
+    <div class="panel" style="background:#fffbeb;border-color:#fde68a">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-amber-700 mb-1">What we DON'T yet claim</div>
+      <p class="text-sm text-slate-700" id="wins-dont-claim"></p>
+    </div>
+  </section>
+
+  <section id="engagement-context" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Engagement context — the 12-week timeline</h2>
+    <p class="text-sm text-ink-500 mb-4" id="eng-intro"></p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="panel lg:col-span-2">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Timeline · Feb 27 → May 31</div>
+        <div id="eng-timeline" class="space-y-1.5 text-sm"></div>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Asana — CMD Tier 2 project</div>
+        <div class="grid grid-cols-3 gap-2 mb-3">
+          <div class="text-center"><div class="text-2xl font-extrabold text-slate-900" id="eng-tasks-total">—</div><div class="text-[10px] uppercase tracking-wider font-bold text-slate-500">total</div></div>
+          <div class="text-center"><div class="text-2xl font-extrabold text-emerald-700" id="eng-tasks-done">—</div><div class="text-[10px] uppercase tracking-wider font-bold text-slate-500">completed</div></div>
+          <div class="text-center"><div class="text-2xl font-extrabold text-amber-700" id="eng-tasks-open">—</div><div class="text-[10px] uppercase tracking-wider font-bold text-slate-500">in flight</div></div>
+        </div>
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1">Highlights completed</div>
+        <ul class="text-[13px] text-slate-700 space-y-1 list-disc pl-5" id="eng-highlights"></ul>
+        <p class="text-[11px] text-slate-500 mt-3" id="eng-pacing"></p>
       </div>
     </div>
   </section>
@@ -185,6 +269,46 @@
     </div>
   </section>
 
+  <section id="potential" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">The case for 6 more months · same budget</h2>
+    <p class="text-sm text-ink-500 mb-4" id="potential-intro"></p>
+
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Target keyword universe · monthly search volume (DataForSEO Google Ads, US national)</div>
+      <p class="text-[11px] text-slate-500 mb-3" id="potential-kw-intro"></p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Keyword</th><th class="num">Vol (US/mo)</th><th class="num">CPC</th><th>Intent</th><th>CM&amp;D status</th>
+          </tr></thead>
+          <tbody id="potential-kw-rows"></tbody>
+        </table>
+      </div>
+      <p class="text-[11px] text-slate-600 mt-3 font-semibold" id="potential-kw-total"></p>
+    </div>
+
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-3">Month-by-month plan · M4 → M9</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="potential-months"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">6-month outcome targets</div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Metric</th><th>From</th><th>By Aug</th><th>By Nov</th>
+          </tr></thead>
+          <tbody id="potential-targets"></tbody>
+        </table>
+      </div>
+      <div class="panel" style="background:#fef2f2;border-color:#fecaca">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-rose-700 mb-1">What breaks if we don't continue</div>
+        <p class="text-sm text-slate-700" id="potential-stop"></p>
+      </div>
+    </div>
+  </section>
+
   <section id="plan" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
     <h2 class="text-2xl font-bold tracking-tight mb-1">The 90-day plan</h2>
     <p class="text-sm text-ink-500 mb-4" id="plan-intro"></p>
@@ -203,13 +327,6 @@
         <ul class="text-sm text-slate-700 space-y-1.5 list-disc pl-5" id="win-q4"></ul>
       </div>
     </div>
-  </section>
-
-  <section id="outcomes" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
-    <h2 class="text-2xl font-bold tracking-tight mb-1">Outcome targets · end-of-August</h2>
-    <p class="text-sm text-ink-500 mb-4" id="outcome-intro"></p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="outcome-tiles"></div>
-    <p class="text-xs text-slate-500 mt-4" id="outcome-foot"></p>
   </section>
 
   <footer class="max-w-7xl mx-auto px-4 sm:px-6 py-8 mt-6 border-t border-slate-200 text-xs text-slate-500">
@@ -347,16 +464,96 @@
   setHTML('win-mid', D.windows.midterm_jul_aug.map(w => `<li>${escapeHTML(w)}</li>`).join(''));
   setHTML('win-q4', D.windows.longer_term_q4.map(w => `<li>${escapeHTML(w)}</li>`).join(''));
 
-  // Outcome targets
-  setHTML('outcome-intro', D.outcome_targets.intro);
-  setHTML('outcome-tiles', D.outcome_targets.tiles.map(t => `
-    <div class="tile ${t.tone}">
-      <div class="l">${escapeHTML(t.label)}</div>
-      <div class="v" style="font-size:1.05rem;line-height:1.3">${escapeHTML(t.target)}</div>
-      <div class="s">from ${escapeHTML(t.from)}</div>
+  // -------- WINS --------
+  const W = D.wins;
+  setHTML('wins-intro', W.intro);
+  setHTML('wins-gsc-title', W.organic_gsc.title);
+  setHTML('wins-gsc-rows', W.organic_gsc.rows.map(r => `
+    <tr><td><strong>${escapeHTML(r.metric)}</strong></td>
+        <td class="num">${escapeHTML(r.pre)}</td>
+        <td class="num">${escapeHTML(r.engagement)}</td>
+        <td class="num"><span class="pill ${r.tone}">${escapeHTML(r.delta)}</span></td></tr>
+  `).join(''));
+  setHTML('wins-gsc-foot', W.organic_gsc.footnote);
+
+  setHTML('wins-brand-title', W.brand_keyword_recovery.title);
+  setHTML('wins-brand-rows', W.brand_keyword_recovery.rows.map(r => `
+    <tr><td><strong>${escapeHTML(r.keyword)}</strong></td>
+        <td class="num">${r.pre_position == null ? '—' : r.pre_position}</td>
+        <td class="num">${r.engagement_position == null ? '—' : r.engagement_position}</td>
+        <td class="num">${r.pre_clicks} → ${r.engagement_clicks}</td>
+        <td class="text-slate-600 text-[12px]">${escapeHTML(r.note)}</td></tr>
+  `).join(''));
+
+  setHTML('wins-info-title', W.informational_cohort.title);
+  setHTML('wins-info-intro', W.informational_cohort.intro);
+  setHTML('wins-info-pages', W.informational_cohort.top_pages.map(p => `
+    <tr><td class="font-mono text-[11px]">${escapeHTML(p.url)}</td>
+        <td class="num">${p.imp}</td>
+        <td class="num">${p.clicks}</td>
+        <td class="num">${p.position}</td></tr>
+  `).join(''));
+  setHTML('wins-info-themes', W.informational_cohort.informational_themes.map(t => `
+    <div class="border-l-4 border-emerald-400 bg-emerald-50/50 rounded-r-md p-2.5">
+      <div class="text-[12px] font-bold text-slate-900">${escapeHTML(t.theme)}</div>
+      <div class="text-[11px] text-slate-500 mb-1">${t.queries_new_in_engagement} new queries · ${t.imp_new} new impressions</div>
+      <div class="text-[12px] text-slate-700 leading-relaxed">${escapeHTML(t.interpretation)}</div>
     </div>
   `).join(''));
-  setHTML('outcome-foot', D.outcome_targets.footnote);
+
+  setHTML('wins-maps-title', W.maps_resilience.title);
+  setHTML('wins-maps-rows', W.maps_resilience.rows.map(r => `
+    <tr><td><strong>${escapeHTML(r.query)}</strong></td>
+        <td class="text-slate-600">${escapeHTML(r.metric)}</td>
+        <td class="num">${escapeHTML(r.value)}</td>
+        <td class="num"><span class="pill good">${escapeHTML(r.pct)}</span></td>
+        <td class="text-slate-600 text-[12px]">${escapeHTML(r.note)}</td></tr>
+  `).join(''));
+  setHTML('wins-dont-claim', W.what_we_dont_yet_claim);
+
+  // -------- ENGAGEMENT CONTEXT --------
+  const E = D.engagement_context;
+  setHTML('eng-intro', E.intro);
+  setHTML('eng-timeline', E.timeline.map(t => `
+    <div class="flex gap-3 border-b border-slate-100 pb-1.5 last:border-b-0">
+      <div class="font-mono text-[11px] font-semibold text-brand-500 w-24 flex-shrink-0">${escapeHTML(t.date)}</div>
+      <div class="text-slate-700">${escapeHTML(t.event)}</div>
+    </div>
+  `).join(''));
+  $('eng-tasks-total').textContent = E.tasks_shipped.total_in_asana;
+  $('eng-tasks-done').textContent = E.tasks_shipped.completed;
+  $('eng-tasks-open').textContent = E.tasks_shipped.in_progress_or_open;
+  setHTML('eng-highlights', E.tasks_shipped.highlight_completed.map(h => `<li>${escapeHTML(h)}</li>`).join(''));
+  setHTML('eng-pacing', E.engagement_pacing);
+
+  // -------- POTENTIAL --------
+  const P = D.potential;
+  setHTML('potential-intro', P.intro);
+  setHTML('potential-kw-intro', P.kw_universe_intro);
+  setHTML('potential-kw-rows', P.kw_universe_top.map(k => `
+    <tr><td><strong>${escapeHTML(k.keyword)}</strong></td>
+        <td class="num">${k.volume_us.toLocaleString()}</td>
+        <td class="num">$${k.cpc.toFixed(2)}</td>
+        <td><span class="pill ${k.intent.includes('commercial') ? 'bad' : k.intent.includes('near-me') ? 'watch' : k.intent.includes('informational') ? 'low' : 'context'}">${escapeHTML(k.intent)}</span></td>
+        <td class="text-slate-600 text-[12px]">${escapeHTML(k.current_cmd_status)}</td></tr>
+  `).join(''));
+  setHTML('potential-kw-total', P.kw_universe_total_us_volume);
+  setHTML('potential-months', P.next_6_months_plan.map(m => `
+    <div class="lever ${m.month.startsWith('M4')||m.month.startsWith('M5')||m.month.startsWith('M6') ? 'p0' : 'p1'}">
+      <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">${escapeHTML(m.month)}</div>
+      <div class="font-bold text-slate-900 text-sm mt-0.5">${escapeHTML(m.focus)}</div>
+      <ul class="text-[12px] text-slate-700 leading-relaxed mt-2 space-y-1 list-disc pl-4">
+        ${m.deliverables.map(d => `<li>${escapeHTML(d)}</li>`).join('')}
+      </ul>
+    </div>
+  `).join(''));
+  setHTML('potential-targets', P.outcome_targets_6mo.map(t => `
+    <tr><td><strong>${escapeHTML(t.metric)}</strong></td>
+        <td class="text-slate-600 text-[12px]">${escapeHTML(t.from)}</td>
+        <td><span class="pill ${t.tone}">${escapeHTML(t.target_aug)}</span></td>
+        <td><span class="pill ${t.tone}">${escapeHTML(t.target_nov)}</span></td></tr>
+  `).join(''));
+  setHTML('potential-stop', P.what_breaks_if_we_dont_continue);
 })();
 </script>
 </body>
