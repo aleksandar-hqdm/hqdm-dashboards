@@ -32,14 +32,28 @@
     .chip.good .v { color: #065f46; }
     .month-card { background: #fff; border: 1px solid #e2e8f0; border-top: 5px solid var(--accent, #1d5b8a); border-radius: .75rem; padding: 1.25rem 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
     .month-card .badge { display: inline-block; font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .15rem .55rem; border-radius: .35rem; background: color-mix(in srgb, var(--accent) 15%, white); color: var(--accent, #1d5b8a); }
-    .task-row { display: grid; grid-template-columns: 5rem 3rem 4.5rem 1fr; gap: .65rem; align-items: start; padding: .45rem .25rem; border-bottom: 1px solid #f1f5f9; font-size: .78rem; }
-    .task-row .week { font-weight: 700; color: #1f2937; font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; }
-    .task-row .lever { font-family: ui-monospace, monospace; font-weight: 700; color: #1d5b8a; font-size: .72rem; }
-    .task-row .dept { font-size: .62rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #64748b; }
-    .checkbox { width: 1rem; height: 1rem; border: 1.5px solid #cbd5e1; border-radius: .25rem; flex-shrink: 0; margin-top: .15rem; display: inline-block; vertical-align: top; }
     table.mini th, table.mini td { font-size: .72rem; padding: .35rem .5rem; border-bottom: 1px solid #f1f5f9; }
     table.mini th { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .58rem; color: #64748b; background: #f8fafc; text-align: left; }
     table.mini td.num, table.mini th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; }
+    /* 3-month build calendar — matches assets/css/snapshot.css */
+    table.cal { width: 100%; border-collapse: separate; border-spacing: 0; }
+    table.cal th { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #64748b; padding: .4rem .65rem .5rem; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: bottom; }
+    table.cal th.month { color: #0b1220; font-size: .72rem; letter-spacing: .04em; }
+    table.cal td { padding: .55rem .65rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; font-size: .72rem; line-height: 1.4; }
+    table.cal td.row-label { font-weight: 700; color: #1f2937; background: #f8fafc; min-width: 7.5rem; font-size: .78rem; border-right: 1px solid #e2e8f0; }
+    table.cal td.row-label .cap { display: block; font-size: .58rem; font-weight: 500; color: #94a3b8; margin-top: .15rem; letter-spacing: .04em; text-transform: uppercase; }
+    table.cal tr:last-child td { border-bottom: 0; }
+    .cal .item { display: flex; gap: .4rem; align-items: baseline; margin: .22rem 0; }
+    .cal .item:first-child { margin-top: 0; }
+    .cal .item:last-child { margin-bottom: 0; }
+    .cal .tag { flex-shrink: 0; display: inline-block; font-size: .54rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: .12rem .4rem; border-radius: .25rem; line-height: 1.25; min-width: 3.7rem; text-align: center; }
+    .cal .tag.revamp   { background: #dbeafe; color: #1d4ed8; }
+    .cal .tag.new      { background: #d1fae5; color: #047857; }
+    .cal .tag.refresh  { background: #fef3c7; color: #b45309; }
+    .cal .tag.redirect { background: #e2e8f0; color: #475569; }
+    .cal .tag.fix      { background: #e0e7ff; color: #4338ca; }
+    .cal .u { color: #0b1220; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .7rem; word-break: break-word; }
+    .cal .n { color: #64748b; font-size: .66rem; font-family: 'Inter', system-ui, sans-serif; }
     @media print {
       .no-print { display: none !important; }
       body { background: #fff !important; }
@@ -167,12 +181,99 @@
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="focus-months"></div>
     </section>
 
-    <!-- TASK CHECKLIST -->
+    <!-- BUILD CALENDAR — AQMS format -->
     <section class="mb-4">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Task checklist · what we'll execute, week by week</h2>
+      <div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Build Calendar · June → August 2026</div>
       <div class="panel">
-        <p class="text-xs text-slate-500 mb-3" id="task-intro">—</p>
-        <div id="tasks"></div>
+        <p class="text-[11px] text-slate-500 mb-2">Production rolls forward on a steady cadence; on-page work is per-need. Schema (LocalBusiness, Service, FAQPage) lands progressively across M1–M3. GBP posts + reviews + photos sit outside this program scope.</p>
+        <div class="overflow-x-auto">
+          <table class="cal">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="month" style="color:#047857;">M1 · June 2026</th>
+                <th class="month" style="color:#1d4ed8;">M2 · July 2026</th>
+                <th class="month" style="color:#6366f1;">M3 · August 2026</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <td class="row-label">Services<span class="cap">1 base + 30+ matrix / month · new · depth + schema</span></td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/photo-booth-rental/[city]/ × 15</span> <span class="n">— clean URL pattern replacing 27 random-adjective legacy slugs · ~400 words each · unique anchors per city · template baseline for the matrix</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/360-photo-booth-rental-[city]/ × 15</span> <span class="n">— highest-margin booth · matrix begins · zero top-3 today (US SV 9,900/mo)</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/glam-booth-rental-[city]/ × 15</span> <span class="n">— Glam + Black-and-White combined messaging · 5,843 imp / 0 clicks today on "glam photo booth miami"</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/studio-booth-rental-[city]/ × 15</span> <span class="n">— premium portrait positioning · supports "miami photo booth" (720 SV FL)</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/social-booth-rental-[city]/ × 15</span> <span class="n">— 13,146 imp / 0 clicks today on "social photo booth rental miami" — pos 4.1 SERP unlock target</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/roamer-booth-rental-[city]/ × 15</span> <span class="n">— unique to MIA in market · differentiator messaging</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/audio-guestbook-[city]/ × 15</span> <span class="n">— wedding cross-sell · matrix complete at 90 cells</span></div></div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Blogs<span class="cap">3-4 / month · refresh + new · commercial routing · FAQ schema</span></td>
+                <td>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/post/what-size-are-photo-booth-pictures-...</span> <span class="n">— 1,556 clicks 90d · pos 3.2 · add in-body CTAs to /360-photo-booth + /glam-booth + FAQ schema</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/post/what-are-the-photo-booth-pictures-called...</span> <span class="n">— 106 clicks 90d · pos 3.4 · commercial pull-through to booth-type pages</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/post/how-to-make-photo-booth-props...</span> <span class="n">— 29 clicks · add "rent a Glam Booth instead" CTA + FAQ schema</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/post/photo-booth-rental-cost-miami-2026/</span> <span class="n">— mid-funnel commercial · direct AIO citation target · routes to /photo-booth-rental/</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/post/wedding-photo-booth-rental-miami-2026/</span> <span class="n">— supports "wedding photo booth rental" matrix (8,100 SV US · zero top-3 today)</span></div></div>
+                  <div class="item"><span class="tag refresh">refresh</span><div><span class="u">/post/how-can-i-create-a-polaroid-frame...</span> <span class="n">— 24 clicks · add commercial pull-through to /glam-booth</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/post/best-photo-booth-for-corporate-events-miami/</span> <span class="n">— corporate target · supports /studio + /social matrix</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/post/360-vs-glam-which-photo-booth-to-rent/</span> <span class="n">— comparison · supports M2 360+Glam matrix cells</span></div></div>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/post/photo-booth-rental-near-me-miami-guide/</span> <span class="n">— direct "near me" target (9,900 SV US) · routes to /photo-booth-rental/</span></div></div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="row-label">Locations<span class="cap">5 / month · revamp + new + redirect · priority cities</span></td>
+                <td>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/photo-booth-rental/doral/ + /coral-gables/ + /wynwood/ + /hialeah/ + /miami-beach/</span> <span class="n">— 5 revenue-priority cities · LocalBusiness + Service schema</span></div></div>
+                  <div class="item"><span class="tag redirect">redirect</span><div><span class="u">/leading-... /famous-... /premier-... × 27</span> <span class="n">— 301 every legacy adjective slug to its matching new URL · sitemap.xml resubmit</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/photo-booth-rental/kendall/ + /opa-locka/ + /miami-lakes/ + /north-miami/ + /surfside/</span> <span class="n">— 5 priority cities 6-10 from GBP service area</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">Top 3 M1 city pages</span> <span class="n">— add "Booth types we bring to [city]" block · 6 inbound links to service pages each</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag new">new</span><div><span class="u">/photo-booth-rental/key-biscayne/ + /bal-harbour/ + /pinecrest/ + /coconut-grove/ + /aventura/</span> <span class="n">— 5 final priority cities · matrix complete at 15</span></div></div>
+                  <div class="item"><span class="tag revamp">revamp</span><div><span class="u">/serving-all-of-miami-fl/</span> <span class="n">— rebuild as umbrella page with city directory + booth-type matrix routing</span></div></div>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="row-label">On-page<span class="cap">per need · gbp · schema · internal links · audits</span></td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">GBP primary category</span> <span class="n">— Photography service → Photo booth · drop photo-lab/photographer/photography-studio · add Wedding photographer + Event planner (5-min change)</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">Site phone NAP unify</span> <span class="n">— (786) 973-9973 → (786) 833-7645 across header, footer, schema, all 33 pages · sms: protocol for "Text us" button only</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">local citation hygiene</span> <span class="n">— BrightLocal + Whitespark + Moz Local NAP refresh · 24-48hr propagation</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">"social photo booth rental miami" SERP audit</span> <span class="n">— 13,146 imp / 0 clicks at pos 4.1 · diagnose local-pack vs AI Overview vs snippet issue</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">LocalBusiness JSON-LD sitewide</span> <span class="n">— theme &lt;head&gt; · telephone + areaServed (15 cities) + sameAs (8 social/GBP profiles)</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">Service schema · 6 booth-type pages</span> <span class="n">— provider → LocalBusiness @id · validates the site→GBP wiring in machine-readable terms</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">FAQPage schema · /frequently-asked-questions + M1 blogs</span> <span class="n">— sets up AIO citation pattern across the top-clicking blog cohort</span></div></div>
+                </td>
+                <td>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">internal-link finalization</span> <span class="n">— "Booth types in [city]" on every area page · "Most-requested neighborhoods" on every service page · cell links to parent + 3 adjacent</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">schema + indexation regression check</span> <span class="n">— sweep all rebuilt pages · confirm GSC re-discovery + Rich Results coverage</span></div></div>
+                  <div class="item"><span class="tag fix">fix</span><div><span class="u">end-of-quarter LD + GSC review</span> <span class="n">— measure top-3 cell gain across 8 tracked queries + organic-clicks delta vs Jan '26 peak</span></div></div>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3">Cadence reflects in-scope production: booth-type service pages, suburb pages on a clean URL pattern, blog refresh + new commercial-routing posts, with on-page fixes wired in as the hubs land. GBP posts, photos, reviews and Q&amp;A sit outside this program scope per the client agreement.</p>
       </div>
     </section>
 
@@ -337,24 +438,7 @@
       </div>`
     ).join('');
 
-    // -------- TASK CHECKLIST --------
-    $('task-intro').innerHTML = `<strong>${DATA.task_count}</strong> discrete tasks across the 90-day window, grouped by month and week. Print this page or tick boxes as items ship.`;
-    let html = '';
-    for (const [month, tasks] of Object.entries(DATA.tasks_by_month)) {
-      html += `<div class="mb-4">
-        <div class="text-sm font-extrabold text-slate-900 border-b-2 border-brand-500 pb-1 mb-1.5">${month} <span class="text-xs font-medium text-slate-500">· ${tasks.length} tasks</span></div>
-        <div class="task-row" style="background:#f8fafc; font-weight:700; font-size:.62rem; text-transform:uppercase; letter-spacing:.04em; color:#64748b; border-bottom:1px solid #e2e8f0;">
-          <div></div><div>Lever</div><div>Dept</div><div>Task</div>
-        </div>
-        ${tasks.map(t => `<div class="task-row">
-          <div><span class="checkbox"></span> <span class="week">${t.week}</span></div>
-          <div class="lever">${t.lever}</div>
-          <div class="dept">${t.dept}</div>
-          <div>${t.task}</div>
-        </div>`).join('')}
-      </div>`;
-    }
-    $('tasks').innerHTML = html;
+    // Calendar is hardcoded HTML above (AQMS-style — same convention)
   })();
   </script>
 </body>
