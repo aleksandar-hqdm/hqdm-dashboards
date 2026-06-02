@@ -751,6 +751,87 @@
   ],
   "methodology_html": "<strong>Volume</strong> = Google Ads monthly searches in the Miami metro (DataForSEO). <strong>Potential clicks</strong> = volume x target click-through if MIA reaches a realistic top-3 local + organic position (35% if ranked 1-3 today, 28% if 4-10, 18% if 11-30, 15% if not yet ranking). <strong>Potential leads</strong> = potential clicks x 2.0% lead rate \u2014 conservative: MIA's blog-diluted site-wide rate is 0.8% (GA4), commercial-rental pages typically run 3-5%. Leads count form_submit + contact_form_submit only; phone, email and GBP\u2192site clicks are tracked separately."
  },
+ "quarterly": {
+  "note": "Quarterly view of all three signals since tracking began (Aug 2025 \u2014 the engagement start; no source holds data earlier). Organic clicks and sessions are quarterly totals; Maps is the average top-3 cells per quarter (Q3 '25 includes the diagnosed one-off Sept scan dip). The current quarter is in progress (Apr\u2013May), shown dashed.",
+  "gsc": {
+   "labels": [
+    "Q3 '25",
+    "Q4 '25",
+    "Q1 '26",
+    "Q2 '26"
+   ],
+   "clicks": [
+    100,
+    1144,
+    2194,
+    1276
+   ],
+   "impressions": [
+    24212,
+    95105,
+    172982,
+    112817
+   ],
+   "partial": [
+    false,
+    false,
+    false,
+    true
+   ]
+  },
+  "ga4": {
+   "labels": [
+    "Q3 '25",
+    "Q4 '25",
+    "Q1 '26",
+    "Q2 '26"
+   ],
+   "sessions": [
+    659,
+    3530,
+    5431,
+    2816
+   ],
+   "leads": [
+    20,
+    44,
+    35,
+    24
+   ],
+   "partial": [
+    false,
+    false,
+    false,
+    true
+   ]
+  },
+  "maps": {
+   "labels": [
+    "Q3 '25",
+    "Q4 '25",
+    "Q1 '26",
+    "Q2 '26"
+   ],
+   "top3": [
+    34,
+    62,
+    53,
+    46
+   ],
+   "reach": [
+    704,
+    885,
+    728,
+    684
+   ],
+   "partial": [
+    false,
+    false,
+    false,
+    true
+   ]
+  }
+ },
  "ga4": {
   "labels": [
    "Aug '25",

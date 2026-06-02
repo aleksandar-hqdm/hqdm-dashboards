@@ -1,0 +1,77 @@
+{
+ "site": "https://www.miaphotobooth.net/",
+ "earliest": "2025-08",
+ "latest": "2026-05",
+ "monthly": [
+  {
+   "ym": "2025-08",
+   "clicks": 26,
+   "impressions": 11147,
+   "days_with_data": 19,
+   "partial": false
+  },
+  {
+   "ym": "2025-09",
+   "clicks": 74,
+   "impressions": 13065,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2025-10",
+   "clicks": 108,
+   "impressions": 16044,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2025-11",
+   "clicks": 412,
+   "impressions": 32352,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2025-12",
+   "clicks": 624,
+   "impressions": 46709,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-01",
+   "clicks": 768,
+   "impressions": 60030,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-02",
+   "clicks": 757,
+   "impressions": 60774,
+   "days_with_data": 28,
+   "partial": false
+  },
+  {
+   "ym": "2026-03",
+   "clicks": 669,
+   "impressions": 52178,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-04",
+   "clicks": 606,
+   "impressions": 50652,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2026-05",
+   "clicks": 670,
+   "impressions": 62165,
+   "days_with_data": 31,
+   "partial": false
+  }
+ ]
+}
