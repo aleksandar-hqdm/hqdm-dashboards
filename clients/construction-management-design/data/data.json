@@ -13,7 +13,7 @@
     "engagement_start": "2026-03-12",
     "engagement_age_weeks": 12
   },
-  "tldr": "<strong>Twelve weeks into the engagement</strong>, CM&D has shipped <strong>10 blog posts</strong> across the service-intent informational cohort (walk-in shower permits, ADA shower requirements, kitchen rebuild, insurance rebuild), the site has gone from 0 to <strong>3,650 organic impressions</strong> on Apr-May 2026 vs 0 the year prior, and GSC impressions over the engagement window are up <strong>+112% (1,940 → 4,116)</strong> with the brand keyword \"cm&d\" recovering from <strong>position 22.1 → 7.8</strong>. On Maps, the top-10 footprint on the primary brand query is preserved at <strong>99.4% of the 169-cell grid</strong> even through the May algorithm pressure, and \"construction design\" top-3 has just started recovering (<strong>4 → 24 cells, May 21 → May 31</strong>). What's still unresolved: top-3 visibility on \"construction management\" / \"construction design\" is sitting low, and the service-intent queries (bathroom remodel, walk-in shower, kitchen repair) are at zero presence — because the site still has only one matching service page. The case for the next six months is to convert the informational impression footprint we've built into commercial ranking by shipping the <strong>5 missing service pages</strong>, building the <strong>service × suburb matrix (40 pages)</strong>, deploying schema, and installing GA4 + GTM so we can finally measure leads. National search volume on the target queries totals <strong>~395,000 monthly</strong> (74K each on contractor near me / bathroom remodel near me / general contractor near me).",
+  "tldr": "<strong>Twelve weeks in, the foundation is proven and the brand is owned.</strong> cmdesigns.net now ranks <strong>#1 organically</strong> for its brand name and the content engine is demonstrably working: of the 10 blog posts shipped, <strong>three already rank on page 1 of Google</strong> (walk-in shower permits #7, insurance rebuilds #6, rebuild timeline #9), and the ADA walk-in-shower guide alone pulls a cluster of <strong>44 distinct search queries</strong>. GSC impressions over the engagement window are up <strong>+112% (1,940 → 4,116)</strong>, <strong>186 brand-new queries</strong> found the site this quarter, and the brand keyword \"cm&d\" recovered from <strong>position 22.1 → 7.8</strong>. On Maps, the top-10 footprint on the primary brand query held at <strong>99.4% of the 169-cell grid</strong> through May algorithm pressure, and \"construction design\" top-3 has begun recovering (<strong>4 → 24 cells</strong>). The honest gap — and the entire case for the next six months — is that <strong>CM&D ranks for zero commercial service terms in its top 20</strong>, because the site has never had the service pages those terms require. The Portland metro searches for this work <strong>~3,480 times a month</strong> at a blended <strong>$24 CPC</strong> (≈<strong>$84K/month</strong> in ad-equivalent value; \"bathroom remodel Portland OR\" alone commands a $51 CPC). The next six months at the same budget convert proven content capability + owned brand authority into booked jobs by building the <strong>5 missing service pages</strong>, the <strong>service × suburb matrix</strong>, site-wide schema, and GA4 + GTM so lead attribution finally goes from inferred to measured.",
   "headline": {
     "h2": "Twelve weeks of work · informational footprint up · the next six months convert it to commercial ranking",
     "lede": "Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries (walk-in shower, ADA, kitchen rebuild, insurance rebuild) are now indexed and producing impression footprint. Maps top-10 coverage is intact at 99.4% on the largest brand query even after May algo pressure. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for, at the same budget.",
@@ -21,11 +21,11 @@
       {"label": "GSC impressions · engagement window", "value": "+112%", "sub": "1,940 → 4,116 · Dec 12-Mar 11 vs Mar 12-Jun 9", "tone": "good"},
       {"label": "GSC avg position · recent 30d", "value": "12.08", "sub": "best of the data window · vs 15.0 pre-engagement", "tone": "good"},
       {"label": "Brand kw \"cm&d\" position", "value": "22.1 → 7.8", "sub": "page 3 → top of page 1 · +14 spots", "tone": "good"},
-      {"label": "Blog posts shipped", "value": "10", "sub": "Mar 30 – May 10 · walk-in shower / ADA / kitchen rebuild / insurance rebuild cohort", "tone": "good"},
+      {"label": "Blog posts shipped · already on page 1", "value": "10 · 3", "sub": "3 posts rank page 1 of Google (permits #7 · insurance rebuilds #6 · timeline #9)", "tone": "good"},
+      {"label": "Organic rank · brand name", "value": "#1", "sub": "\"construction management & design\" · brand authority owned outright", "tone": "good"},
       {"label": "Maps · construction mgmt · top-10 coverage", "value": "99.4%", "sub": "168 of 169 cells held through May algo pressure", "tone": "good"},
       {"label": "construction design · top-3 (last 10 days)", "value": "4 → 24", "sub": "May 21 → May 31 · +20 cells · recovery underway", "tone": "good"},
-      {"label": "Tasks completed in Asana", "value": "47 / 80", "sub": "59% through 18-month engagement plan", "tone": "good"},
-      {"label": "Target kw universe · monthly search volume", "value": "~395K", "sub": "service-intent + near-me cohort · DataForSEO 2026-06-01", "tone": "watch"}
+      {"label": "Portland-metro service demand · ad-equiv value", "value": "~$84K/mo", "sub": "~3,480 searches/mo · $24 blended CPC · the local prize M4-M9 targets", "tone": "good"}
     ]
   },
   "engagement_context": {
@@ -110,6 +110,74 @@
       ]
     },
     "what_we_dont_yet_claim": "GA4 lead data is not connected so we cannot show \"X leads driven\" yet. Avg-position recovery on the service-intent queries (bathroom remodel etc.) is still at zero on Maps — that's not a win, that's the next-6-months scope. Top-3 recovery on the brand queries is partial; full recovery is unlikely because the literal-name-match algorithmic advantage CM&D used to enjoy is structurally gone."
+  },
+  "deep_analysis": {
+    "intro": "In-depth read on the engagement, built from three independent data sources: Google Search Console (verified property, siteOwner access), DataForSEO Labs ranked-keywords + Google Ads search-volume (Portland-metro and national, pulled 2026-06-02), and the Local Dominator grid. The story it tells is consistent across all three: the content engine is proven and brand authority is real — and the commercial service layer that converts both into booked jobs is the part still waiting to be built.",
+    "organic_footprint": {
+      "title": "What CM&D actually ranks for today (the real organic footprint)",
+      "source": "DataForSEO Labs · ranked_keywords · cmdesigns.net · US · 2026-06-02",
+      "summary": "cmdesigns.net ranks organically for 44 keywords. The site owns its brand outright — #1 for \"construction management & design,\" #1 for \"construction management and design,\" #5 for \"cm&d.\" But of its five top-20 rankings, all five are brand-name variants. There is not a single commercial service term (bathroom remodel, kitchen remodel, general contractor, walk-in shower) in CM&D's top 20. That isn't a failure — it's the whole opportunity in one number: the site has never had the service pages those terms require, so it has never been eligible to rank for them. Build the pages and the eligibility follows.",
+      "stats": [
+        {"label": "Total keywords ranked (organic)", "value": "44", "tone": "neutral"},
+        {"label": "Brand-name terms in top 20", "value": "5 of 5", "tone": "good"},
+        {"label": "Commercial service terms in top 20", "value": "0", "tone": "watch"},
+        {"label": "Brand position · \"construction management & design\"", "value": "#1", "tone": "good"},
+        {"label": "Brand position · \"cm&d\"", "value": "#5", "tone": "good"}
+      ],
+      "interpretation": "Brand control is the asset most contractors never secure and CM&D already has it. The missing piece is the commercial layer — and because nothing currently competes for that real estate from CM&D's own site, every service page built in M4-M9 enters open ground rather than fighting an incumbent CM&D page."
+    },
+    "content_proof": {
+      "title": "The content engine is proven — not theoretical",
+      "source": "GSC · engagement window Mar 12 – Jun 9 2026 · page × query",
+      "summary": "Ten posts shipped in 12 weeks, and the data shows they work. Two are already on page one of Google: /post/walk-in-shower-permits-in-portland at position 7 and /post/insurance-rebuilds-in-portland at position 6. The /post/ada-walk-in-shower-requirements guide has become a genuine topical-authority asset — it ranks for a cluster of 44 distinct ADA-shower queries in GSC (accessible showers Portland, ADA shower requirements, ADA shower pan requirements, handicap shower requirements, and 40 more) and carries the largest single-page impression footprint on the site. Across the quarter, 186 brand-new search queries surfaced the site that produced zero impressions in the prior 90 days. The engine that finds and ranks content is running; what it lacks is a commercial destination to route that readership into.",
+      "blog_pages": [
+        {"url": "/post/walk-in-shower-permits-in-portland", "imp": 227, "position": 7.0, "note": "Page 1 of Google · commercial-adjacent intent"},
+        {"url": "/post/insurance-rebuilds-in-portland", "imp": 32, "position": 6.2, "note": "Page 1 of Google"},
+        {"url": "/post/how-long-does-it-take-for-insurance-rebuilds", "imp": 26, "position": 8.6, "note": "Page 1 of Google"},
+        {"url": "/post/ada-walk-in-shower-requirements", "imp": 510, "position": 18.7, "note": "Ranks for a 44-query ADA cluster · biggest impression footprint on the site"},
+        {"url": "/post/choose-the-best-materials-for-kitchen-rebuild", "imp": 45, "position": 20.0, "note": "Indexed · climbing"},
+        {"url": "/post/walk-in-shower-conversion-take-in-portland", "imp": 9, "position": 16.4, "note": "Local + service intent"}
+      ],
+      "proof_stats": [
+        {"label": "Blog posts ranking on page 1 of Google", "value": "3", "tone": "good"},
+        {"label": "Queries the ADA guide alone ranks for", "value": "44", "tone": "good"},
+        {"label": "Brand-new queries this quarter (0 prior impressions)", "value": "186", "tone": "good"},
+        {"label": "Blog posts indexed + producing impressions", "value": "7 of 10", "tone": "good"}
+      ]
+    },
+    "local_opportunity": {
+      "title": "The Portland-metro prize, sized honestly",
+      "source": "DataForSEO · Google Ads Search Volume · location = Portland, Oregon · 2026-06-02",
+      "summary": "The earlier ~395K figure is US-national and overstates what a Portland contractor can actually capture — so here is the honest local number. Across 24 tracked commercial service terms (general contractor, bathroom/kitchen remodel, walk-in shower, near-me and suburb variants), the Portland metro generates roughly 3,480 searches per month. What makes this cohort valuable isn't the volume — it's the intent: the blended cost-per-click is $24, and \"bathroom remodel Portland OR\" alone commands a $51 CPC. Put differently, the paid-search-equivalent value of fully ranking for this local demand is on the order of $84,000 per month — that's what advertisers pay to reach these searchers, and it's the value of owning the organic positions instead. CM&D captures essentially none of it today because it has no pages backing the terms.",
+      "stats": [
+        {"label": "Portland-metro monthly searches · commercial cohort", "value": "~3,480", "sub": "24 tracked service terms", "tone": "good"},
+        {"label": "Blended commercial CPC", "value": "$24", "sub": "paid value per click on this cohort", "tone": "good"},
+        {"label": "Ad-equivalent monthly value of the cohort", "value": "~$84K", "sub": "volume × CPC · what this demand is worth", "tone": "good"},
+        {"label": "Highest-intent term · \"bathroom remodel Portland OR\"", "value": "$51 CPC", "sub": "260 searches/mo · prime /bathroom-remodeling/ target", "tone": "good"}
+      ],
+      "top_terms": [
+        {"keyword": "general contractor", "volume_pdx": 590, "cpc": 25.59, "cmd_status": "no /general-contractor/ page yet"},
+        {"keyword": "general contractor portland", "volume_pdx": 390, "cpc": 10.87, "cmd_status": "no page"},
+        {"keyword": "bathroom remodeling", "volume_pdx": 390, "cpc": 21.74, "cmd_status": "no /bathroom-remodeling/ page yet"},
+        {"keyword": "bathroom remodel portland or", "volume_pdx": 260, "cpc": 51.31, "cmd_status": "highest commercial value in the set"},
+        {"keyword": "kitchen remodeling", "volume_pdx": 210, "cpc": 39.28, "cmd_status": "/kitchen-remodeling exists · needs depth + schema"},
+        {"keyword": "kitchen remodeling portland", "volume_pdx": 210, "cpc": 16.89, "cmd_status": "needs suburb suffixes"},
+        {"keyword": "bathroom remodel near me", "volume_pdx": 170, "cpc": 29.60, "cmd_status": "0 cells on Maps"},
+        {"keyword": "general contractor near me", "volume_pdx": 170, "cpc": 22.75, "cmd_status": "0 cells"},
+        {"keyword": "home remodeling portland", "volume_pdx": 140, "cpc": 27.79, "cmd_status": "no /home-remodeling/ page"}
+      ],
+      "national_context": "For category context, the same cohort at US-national scale totals ~395,000 monthly searches (74K each on contractor / bathroom remodel / general contractor near me). That national figure shows the category is enormous; the ~3,480 Portland number is the slice CM&D can realistically own — and it is the slice the M4-M9 build targets."
+    },
+    "competitor_footprint": {
+      "title": "How the footprint compares to established local competitors",
+      "source": "DataForSEO Labs · ranked_keywords · US · 2026-06-02",
+      "summary": "The gap is structural, not effort-based. An established local general contractor like BnK Construction (281 reviews) ranks for 384 keywords with 38 in the top 10; L. Evans Design Group ranks for 355. CM&D ranks for 44, of which roughly 40 are brand-name variants. The difference is almost entirely the presence of built-out, schema-backed service and project pages — exactly the asset M4-M9 produces. CM&D doesn't need to out-work these competitors; it needs the page inventory they already have.",
+      "rows": [
+        {"domain": "bnkconstruction.com", "label": "BnK Construction · 281 reviews", "total_keywords": 384, "top10": 38, "tone": "neutral"},
+        {"domain": "levansdesigngroup.com", "label": "L. Evans Design Group · 25 reviews", "total_keywords": 355, "top10": 6, "tone": "neutral"},
+        {"domain": "cmdesigns.net", "label": "CM&D · today (≈40 of 44 are brand)", "total_keywords": 44, "top10": 5, "tone": "watch"}
+      ]
+    }
   },
   "headline_panel_old": "(retained below as decline context — but the headline is now wins-first.)",
   "root_cause": {
@@ -285,7 +353,7 @@
   },
   "potential": {
     "intro": "The case for an additional 6 months at the same budget. The first 12 weeks built the informational footprint; the next 6 months convert that footprint into commercial ranking by completing the service-page rebuild + service × suburb matrix + schema + tracking.",
-    "kw_universe_intro": "DataForSEO Google Ads search volumes (US national) pulled 2026-06-01. Local Portland share is roughly 1.5-2% of US for most queries; national volume shown as a relative ranking signal.",
+    "kw_universe_intro": "The honest, capturable number is the Portland-metro one (see In-depth analysis → Portland prize): ~3,480 commercial searches/month at a $24 blended CPC, ≈$84K/month in ad-equivalent value. The US-national volumes below are shown only as a category-scale and relative-priority signal — a Portland contractor cannot capture national 'near me' demand, so we plan against the local figures.",
     "kw_universe_top": [
       {"keyword": "contractor near me",          "volume_us":  74000, "cpc": 8.35,  "intent": "service-intent · near-me", "current_cmd_status": "0 cells in top-20 on Maps; no /general-contractor/ page"},
       {"keyword": "bathroom remodel near me",    "volume_us":  74000, "cpc": 29.24, "intent": "service-intent · near-me", "current_cmd_status": "0 cells in top-20 on Maps; no /bathroom-remodeling/ page"},
@@ -305,7 +373,7 @@
       {"keyword": "walk in shower conversion cost", "volume_us":  390, "cpc": 26.58, "intent": "commercial",              "current_cmd_status": "0 cells; the /walk-in-shower-conversion/ page handles this"},
       {"keyword": "kitchen repair near me",      "volume_us":    260, "cpc":  7.03, "intent": "service-intent",           "current_cmd_status": "0 cells; needs /kitchen-repair/ page"}
     ],
-    "kw_universe_total_us_volume": "~395,000 monthly searches across the priority service-intent + near-me cohort",
+    "kw_universe_total_us_volume": "Portland metro: ~3,480 monthly searches across the priority commercial cohort (the capturable number). US-national category scale for context: ~395,000 monthly.",
     "next_6_months_plan": [
       {
         "month": "M4 · June 2026",

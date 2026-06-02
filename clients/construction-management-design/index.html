@@ -46,6 +46,7 @@
       <nav class="hidden lg:flex gap-1 text-xs font-medium">
         <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#wins" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Wins</a>
+        <a href="#deep" class="px-2.5 py-1.5 rounded hover:bg-slate-100">In-depth</a>
         <a href="#root-cause" class="px-2.5 py-1.5 rounded hover:bg-slate-100">What's left</a>
         <a href="#grid" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Grid</a>
         <a href="#competitors" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Competitors</a>
@@ -155,6 +156,63 @@
     <div class="panel" style="background:#fffbeb;border-color:#fde68a">
       <div class="text-[11px] font-bold uppercase tracking-widest text-amber-700 mb-1">What we DON'T yet claim</div>
       <p class="text-sm text-slate-700" id="wins-dont-claim"></p>
+    </div>
+  </section>
+
+  <section id="deep" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">In-depth analysis — three sources, one story</h2>
+    <p class="text-sm text-ink-500 mb-4 max-w-4xl" id="deep-intro"></p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" id="deep-foot-title"></div>
+        <div class="text-[11px] text-slate-400 font-mono mb-2" id="deep-foot-source"></div>
+        <p class="text-sm text-slate-700 leading-relaxed mb-3" id="deep-foot-summary"></p>
+        <div class="grid grid-cols-2 gap-2 mb-3" id="deep-foot-stats"></div>
+        <p class="text-[13px] text-slate-600 leading-relaxed border-t border-slate-100 pt-2" id="deep-foot-interp"></p>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" id="deep-content-title"></div>
+        <div class="text-[11px] text-slate-400 font-mono mb-2" id="deep-content-source"></div>
+        <p class="text-sm text-slate-700 leading-relaxed mb-3" id="deep-content-summary"></p>
+        <div class="grid grid-cols-2 gap-2 mb-3" id="deep-content-stats"></div>
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Pages doing the work (GSC engagement window)</div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>URL</th><th class="num">Imp</th><th class="num">Pos</th><th>Note</th>
+          </tr></thead>
+          <tbody id="deep-content-pages"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" id="deep-local-title"></div>
+        <div class="text-[11px] text-slate-400 font-mono mb-2" id="deep-local-source"></div>
+        <p class="text-sm text-slate-700 leading-relaxed mb-3" id="deep-local-summary"></p>
+        <div class="grid grid-cols-2 gap-2 mb-3" id="deep-local-stats"></div>
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Top commercial terms · Portland metro</div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Keyword</th><th class="num">Vol/mo</th><th class="num">CPC</th><th>CM&amp;D status</th>
+          </tr></thead>
+          <tbody id="deep-local-rows"></tbody>
+        </table>
+        <p class="text-[11px] text-slate-500 mt-2" id="deep-local-context"></p>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" id="deep-comp-title"></div>
+        <div class="text-[11px] text-slate-400 font-mono mb-2" id="deep-comp-source"></div>
+        <p class="text-sm text-slate-700 leading-relaxed mb-3" id="deep-comp-summary"></p>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Domain</th><th class="num">Keywords ranked</th><th class="num">In top 10</th>
+          </tr></thead>
+          <tbody id="deep-comp-rows"></tbody>
+        </table>
+        <p class="text-[11px] text-slate-500 mt-2">The difference is built-out, schema-backed service + project pages — exactly the page inventory the M4-M9 build produces.</p>
+      </div>
     </div>
   </section>
 
@@ -510,6 +568,64 @@
         <td class="text-slate-600 text-[12px]">${escapeHTML(r.note)}</td></tr>
   `).join(''));
   setHTML('wins-dont-claim', W.what_we_dont_yet_claim);
+
+  // -------- DEEP ANALYSIS --------
+  const DA = D.deep_analysis;
+  if (DA) {
+    const miniStat = s => `
+      <div class="tile ${s.tone||'neutral'}" style="padding:.6rem .75rem">
+        <div class="l" style="font-size:.55rem">${escapeHTML(s.label)}</div>
+        <div class="v" style="font-size:1.25rem">${escapeHTML(s.value)}</div>
+        ${s.sub ? `<div class="s" style="font-size:.62rem">${escapeHTML(s.sub)}</div>` : ''}
+      </div>`;
+    setHTML('deep-intro', DA.intro);
+
+    // Organic footprint
+    const OF = DA.organic_footprint;
+    setHTML('deep-foot-title', OF.title);
+    setHTML('deep-foot-source', OF.source);
+    setHTML('deep-foot-summary', OF.summary);
+    setHTML('deep-foot-stats', OF.stats.map(miniStat).join(''));
+    setHTML('deep-foot-interp', OF.interpretation);
+
+    // Content proof
+    const CP = DA.content_proof;
+    setHTML('deep-content-title', CP.title);
+    setHTML('deep-content-source', CP.source);
+    setHTML('deep-content-summary', CP.summary);
+    setHTML('deep-content-stats', CP.proof_stats.map(miniStat).join(''));
+    setHTML('deep-content-pages', CP.blog_pages.map(p => `
+      <tr><td class="font-mono text-[11px]">${escapeHTML(p.url)}</td>
+          <td class="num">${p.imp}</td>
+          <td class="num">${p.position}</td>
+          <td class="text-slate-600 text-[12px]">${escapeHTML(p.note)}</td></tr>
+    `).join(''));
+
+    // Local opportunity
+    const LO = DA.local_opportunity;
+    setHTML('deep-local-title', LO.title);
+    setHTML('deep-local-source', LO.source);
+    setHTML('deep-local-summary', LO.summary);
+    setHTML('deep-local-stats', LO.stats.map(miniStat).join(''));
+    setHTML('deep-local-rows', LO.top_terms.map(t => `
+      <tr><td><strong>${escapeHTML(t.keyword)}</strong></td>
+          <td class="num">${t.volume_pdx.toLocaleString()}</td>
+          <td class="num">$${t.cpc.toFixed(2)}</td>
+          <td class="text-slate-600 text-[12px]">${escapeHTML(t.cmd_status)}</td></tr>
+    `).join(''));
+    setHTML('deep-local-context', LO.national_context);
+
+    // Competitor footprint
+    const CF = DA.competitor_footprint;
+    setHTML('deep-comp-title', CF.title);
+    setHTML('deep-comp-source', CF.source);
+    setHTML('deep-comp-summary', CF.summary);
+    setHTML('deep-comp-rows', CF.rows.map(r => `
+      <tr><td><strong>${escapeHTML(r.label)}</strong><br><span class="text-[11px] text-slate-500 font-mono">${escapeHTML(r.domain)}</span></td>
+          <td class="num"><strong>${r.total_keywords.toLocaleString()}</strong></td>
+          <td class="num">${r.top10}</td></tr>
+    `).join(''));
+  }
 
   // -------- ENGAGEMENT CONTEXT --------
   const E = D.engagement_context;
