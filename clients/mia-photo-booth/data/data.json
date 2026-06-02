@@ -1,5 +1,5 @@
 {
- "trajectory": {
+ "trajectory_ld": {
   "labels": [
    "Aug '25",
    "Sep '25",
@@ -45,6 +45,312 @@
    "avg_reach_last6": 739
   }
  },
+ "trajectory_gsc": {
+  "labels": [
+   "Aug '25",
+   "Sep '25",
+   "Oct '25",
+   "Nov '25",
+   "Dec '25",
+   "Jan '26",
+   "Feb '26",
+   "Mar '26",
+   "Apr '26",
+   "May '26"
+  ],
+  "clicks": [
+   26,
+   74,
+   108,
+   413,
+   624,
+   768,
+   758,
+   669,
+   606,
+   651
+  ],
+  "impressions": [
+   14616,
+   15945,
+   18687,
+   35361,
+   49154,
+   64144,
+   64883,
+   57609,
+   55860,
+   69833
+  ],
+  "partial_index": -1,
+  "summary": {
+   "first_month": "Aug '25",
+   "first_clicks": 26,
+   "peak_month": "Jan '26",
+   "peak_clicks": 768,
+   "latest_month": "May '26",
+   "latest_clicks": 651,
+   "growth_factor": 29.5,
+   "total_clicks_window": 4697,
+   "total_impressions_window": 446092,
+   "delta_90d_clicks_pct": -11.8,
+   "delta_90d_impressions_pct": 11.2
+  }
+ },
+ "gsc_queries": [
+  {
+   "q": "photo strip size",
+   "clicks": 87,
+   "impressions": 2184,
+   "position": 1.8,
+   "ctr_pct": 3.98
+  },
+  {
+   "q": "photobooth size",
+   "clicks": 27,
+   "impressions": 1577,
+   "position": 2.6,
+   "ctr_pct": 1.71
+  },
+  {
+   "q": "photobooth strip size",
+   "clicks": 24,
+   "impressions": 2109,
+   "position": 2.3,
+   "ctr_pct": 1.14
+  },
+  {
+   "q": "photo booth photo size",
+   "clicks": 24,
+   "impressions": 286,
+   "position": 1.8,
+   "ctr_pct": 8.39
+  },
+  {
+   "q": "photo booth size",
+   "clicks": 20,
+   "impressions": 710,
+   "position": 2.7,
+   "ctr_pct": 2.82
+  },
+  {
+   "q": "photobooth photo size",
+   "clicks": 20,
+   "impressions": 272,
+   "position": 1.3,
+   "ctr_pct": 7.35
+  },
+  {
+   "q": "photo strip dimensions",
+   "clicks": 18,
+   "impressions": 460,
+   "position": 1.9,
+   "ctr_pct": 3.91
+  },
+  {
+   "q": "photobooth picture size",
+   "clicks": 16,
+   "impressions": 554,
+   "position": 1.8,
+   "ctr_pct": 2.89
+  },
+  {
+   "q": "photo booth strip size",
+   "clicks": 16,
+   "impressions": 592,
+   "position": 2.0,
+   "ctr_pct": 2.7
+  },
+  {
+   "q": "size photobooth",
+   "clicks": 15,
+   "impressions": 205,
+   "position": 1.0,
+   "ctr_pct": 7.32
+  },
+  {
+   "q": "photo booth picture size",
+   "clicks": 15,
+   "impressions": 317,
+   "position": 1.9,
+   "ctr_pct": 4.73
+  },
+  {
+   "q": "photo strips size",
+   "clicks": 13,
+   "impressions": 358,
+   "position": 1.9,
+   "ctr_pct": 3.63
+  },
+  {
+   "q": "photo booth rental miami",
+   "clicks": 13,
+   "impressions": 2029,
+   "position": 13.0,
+   "ctr_pct": 0.64
+  },
+  {
+   "q": "photobooth size picture",
+   "clicks": 13,
+   "impressions": 173,
+   "position": 1.2,
+   "ctr_pct": 7.51
+  },
+  {
+   "q": "what is the size of a photo booth strip",
+   "clicks": 12,
+   "impressions": 231,
+   "position": 1.6,
+   "ctr_pct": 5.2
+  },
+  {
+   "q": "photo booth print size",
+   "clicks": 12,
+   "impressions": 219,
+   "position": 1.5,
+   "ctr_pct": 5.48
+  },
+  {
+   "q": "photostrip size photobooth",
+   "clicks": 11,
+   "impressions": 564,
+   "position": 3.2,
+   "ctr_pct": 1.95
+  },
+  {
+   "q": "photobooth frame size",
+   "clicks": 10,
+   "impressions": 168,
+   "position": 1.5,
+   "ctr_pct": 5.95
+  },
+  {
+   "q": "photobooth paper size",
+   "clicks": 9,
+   "impressions": 208,
+   "position": 1.4,
+   "ctr_pct": 4.33
+  },
+  {
+   "q": "photo booth rental",
+   "clicks": 9,
+   "impressions": 821,
+   "position": 7.5,
+   "ctr_pct": 1.1
+  }
+ ],
+ "gsc_pages": [
+  {
+   "page": "/post/what-size-are-photo-booth-pictures-a-complete-breakdown",
+   "clicks": 1556,
+   "impressions": 80937,
+   "position": 3.2
+  },
+  {
+   "page": "/post/what-are-the-photo-booth-pictures-called-understanding-photo-booth-photos",
+   "clicks": 106,
+   "impressions": 35777,
+   "position": 3.4
+  },
+  {
+   "page": "/",
+   "clicks": 83,
+   "impressions": 24528,
+   "position": 12.4
+  },
+  {
+   "page": "/?utm_source=gmb&utm_medium=click&utm_campaign=gmb_listing",
+   "clicks": 30,
+   "impressions": 13089,
+   "position": 3.9
+  },
+  {
+   "page": "/post/how-to-make-photo-booth-props-fun-and-easy-diy-ideas",
+   "clicks": 29,
+   "impressions": 4676,
+   "position": 8.5
+  },
+  {
+   "page": "/post/how-can-i-create-a-polaroid-frame-for-my-photo-booth",
+   "clicks": 24,
+   "impressions": 1443,
+   "position": 9.6
+  },
+  {
+   "page": "/post/audio-guestbook-experience-miami",
+   "clicks": 12,
+   "impressions": 202,
+   "position": 9.8
+  },
+  {
+   "page": "/post/how-to-effectively-display-photo-booth-props",
+   "clicks": 9,
+   "impressions": 353,
+   "position": 7.0
+  },
+  {
+   "page": "/post/what-do-360-photo-booth-pictures-look-like",
+   "clicks": 5,
+   "impressions": 558,
+   "position": 12.8
+  },
+  {
+   "page": "/events-gallery",
+   "clicks": 4,
+   "impressions": 536,
+   "position": 10.4
+  },
+  {
+   "page": "/post/how-to-display-photo-booth-strips-tips-and-ideas",
+   "clicks": 4,
+   "impressions": 856,
+   "position": 9.3
+  },
+  {
+   "page": "/glam-booth",
+   "clicks": 3,
+   "impressions": 1262,
+   "position": 20.2
+  },
+  {
+   "page": "/audio-guestbook",
+   "clicks": 3,
+   "impressions": 69,
+   "position": 7.0
+  },
+  {
+   "page": "/360-photo-booth",
+   "clicks": 2,
+   "impressions": 708,
+   "position": 10.2
+  },
+  {
+   "page": "/post/roamer-photo-booth-rental-miami",
+   "clicks": 2,
+   "impressions": 528,
+   "position": 18.4
+  }
+ ],
+ "gsc_indexation_signal": {
+  "high_imp_no_clicks": [
+   {
+    "q": "social photo booth rental miami",
+    "imp": 13146,
+    "pos": 4.1
+   },
+   {
+    "q": "glam photo booth miami",
+    "imp": 5843,
+    "pos": 11.0
+   }
+  ]
+ },
+ "gsc_brand_split": {
+  "brand_clicks": 3,
+  "nonbrand_clicks": 756,
+  "brand_impressions": 52,
+  "nonbrand_impressions": 72597
+ },
  "foundation": {
   "reviews": 103,
   "review_rating": "5.0\u2605",
@@ -60,7 +366,11 @@
    "LGBTQ+ friendly"
   ],
   "social_profiles": 6,
-  "tenure_open_since": "January 2020"
+  "tenure_open_since": "January 2020",
+  "organic_clicks_year": 4697,
+  "organic_impressions_year": 446092,
+  "organic_growth_factor": 29.5,
+  "organic_peak_month": "Jan '26"
  },
  "market": {
   "movers_down": [
@@ -123,14 +433,16 @@
    "month": "Month 1 \u00b7 June 2026",
    "theme": "Unblock & accelerate",
    "color": "#10b981",
-   "summary": "Two GBP-level changes inside the first week clear the ceiling that's been blocking the foundation from translating into rank. Mid-month, the URL structure consolidates from 27 random-adjective slugs into 15 clean /photo-booth-rental/[city]/ pages \u2014 the architecture the dominant brands' wins are quietly built on.",
-   "by_end_of_month": "Foundations align. First LD scan post-category-change shows the first signal of upward movement on the Photo Booth queries that were previously zero.",
+   "summary": "Two GBP-level changes inside the first week clear the ceiling that's been blocking the foundation from translating into rank. Mid-month, the URL structure consolidates from 27 random-adjective slugs into 15 clean /photo-booth-rental/[city]/ pages \u2014 the architecture the dominant brands' wins are quietly built on. We also wire the existing blog winners (photo-strip-size posts driving 1,556 clicks/90d) to the booth-type service pages with in-body links + CTAs.",
+   "by_end_of_month": "Foundations align. First LD scan post-category-change shows the first signal of upward movement on the Photo Booth queries that were previously zero. Blog traffic begins funneling to commercial pages instead of dead-ending.",
    "deliverables": [
     "New GBP primary: Photo booth (secondary stack pruned + Wedding photographer / Event planner added)",
     "Site phone unified at (786) 833-7645 sitewide \u2014 header, footer, schema, CTAs, all 33 pages",
     "Citation NAP refreshed across BrightLocal / Whitespark / Moz",
     "15 new /photo-booth-rental/[city]/ pages live, ~400 words each, unique anchors per city",
     "All 27 legacy area-page slugs 301-redirected to the new structure",
+    "Top 5 blog posts wired with in-body links + CTAs to the matching booth-type service pages",
+    "Snippet audit on \"social photo booth rental miami\" (13K imp at pos 4.1, 0 clicks \u2014 likely SERP-pack/AI overview)",
     "Sitemap.xml resubmitted to GSC; weekly GBP posts cadence restarted"
    ]
   },
@@ -139,7 +451,7 @@
    "theme": "Capitalize on the opening",
    "color": "#1d5b8a",
    "summary": "Service \u00d7 city matrix begins \u2014 30 pages this month (360 Photo Booth + Glam Booth, the two highest-margin booth types, \u00d7 15 priority cities). LocalBusiness + Service + FAQPage schema deploys sitewide, validating the site-to-GBP wiring in machine-readable terms. By end of month, the page authority compounds and the second post-fix LD scan should show meaningful reranking.",
-   "by_end_of_month": "Site-to-GBP wiring is complete and machine-readable. Matrix is one-third built (30 of 90 cells live). Scan #2 post-Lever-A change shows sustained re-ranking on Photo Booth queries.",
+   "by_end_of_month": "Site-to-GBP wiring is complete and machine-readable. Matrix is one-third built (30 of 90 cells live). Scan #2 post-Lever-A change shows sustained re-ranking on Photo Booth queries. Organic clicks recover toward the Jan peak.",
    "deliverables": [
     "LocalBusiness JSON-LD live in theme head \u2014 telephone + areaServed (15) + sameAs (8 profiles)",
     "Service schema on all 6 booth-type pages, linked to LocalBusiness @id",
@@ -153,8 +465,8 @@
    "month": "Month 3 \u00b7 August 2026",
    "theme": "Expand & lock in",
    "color": "#7c3aed",
-   "summary": "The remaining 60 matrix cells launch \u2014 Studio + Social + Roamer + Audio Guestbook \u00d7 15 cities each. The internal-linking sprint then connects every cell to its parent service, parent city, and 3 nearest neighbors \u2014 the link graph that turns 90 individual pages into a coherent authority structure. End-of-quarter LD review measures the cumulative top-3 cell gain.",
-   "by_end_of_month": "Service \u00d7 city matrix complete: 90 cells live, fully cross-linked. End-of-quarter scan documents the rank shift the foundations enable.",
+   "summary": "The remaining 60 matrix cells launch \u2014 Studio + Social + Roamer + Audio Guestbook \u00d7 15 cities each. The internal-linking sprint then connects every cell to its parent service, parent city, and 3 nearest neighbors \u2014 the link graph that turns 90 individual pages into a coherent authority structure. End-of-quarter LD + GSC review measures the cumulative top-3 cell gain and organic-clicks delta.",
+   "by_end_of_month": "Service \u00d7 city matrix complete: 90 cells live, fully cross-linked. End-of-quarter scan documents the rank shift the foundations enable. Organic-clicks should be back at or above the Jan peak; top-3 cells trending up.",
    "deliverables": [
     "15 cells live: Studio Booth \u00d7 15 cities",
     "15 cells live: Social Booth \u00d7 15 cities",
@@ -162,7 +474,7 @@
     "15 cells live: Audio Guestbook \u00d7 15 cities (matrix complete at 90 pages)",
     "Internal-linking sprint: every cell links to parent service + parent city + 3 adjacent cells",
     "GSC Rich Results coverage confirmed on all schema types",
-    "End-of-quarter LD scan + report on cumulative top-3 cell gain across the 8 tracked queries"
+    "End-of-quarter LD scan + GSC report on cumulative top-3 cell gain + organic-clicks delta across 8 tracked queries"
    ]
   }
  ],
@@ -229,6 +541,12 @@
     "dept": "GBP"
    },
    {
+    "week": "Week 2",
+    "lever": "F",
+    "task": "Investigate \"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with 0 clicks (SERP layout + snippet audit)",
+    "dept": "Content"
+   },
+   {
     "week": "Week 3",
     "lever": "C",
     "task": "Write 15 new /photo-booth-rental/[city]/ pages \u2014 ~400 words each, 3 unique anchors per page",
@@ -239,6 +557,12 @@
     "lever": "C",
     "task": "301 redirect every legacy area-page slug to its matching new URL",
     "dept": "Dev"
+   },
+   {
+    "week": "Week 3",
+    "lever": "F",
+    "task": "Wire top blog posts (photo-strip-size etc \u2014 1,556 clicks/90d) to booth-type service pages via in-body internal links + CTAs",
+    "dept": "Content"
    },
    {
     "week": "Week 4",
@@ -361,31 +685,41 @@
    {
     "week": "Week 12",
     "lever": "All",
-    "task": "End-of-quarter LD scan review \u2014 measure top-3 cell gain across 8 tracked queries",
+    "task": "End-of-quarter LD scan + GSC review \u2014 measure top-3 cell gain across 8 tracked queries + organic-clicks delta",
     "dept": "Monitor"
    }
   ]
  },
- "task_count": 32,
+ "task_count": 34,
+ "attribution_rules": {
+  "leads_definition": "form_submit + contact_form_submit ONLY",
+  "gmb_clicks_separate": "gmb_click charted on its own \u2014 never bundled with leads",
+  "phone_clicks_separate": "click_phone_number charted on its own \u2014 never bundled with leads",
+  "email_clicks_separate": "click_email charted on its own \u2014 never bundled with leads",
+  "never_label_as": "Conversions (use 'Leads' for the form-only composite, label other engagement signals by their event name)",
+  "partial_period": "Current partial month shown as single * point, no run-rate projection on the main trend line",
+  "ga4_status": "GA4 property 501143766 (HQDM Clients Local Campaign \u00b7 MIA Photobooth) confirmed accessible but OAuth token currently lacks analytics.readonly scope \u2014 re-auth pending. GSC fully accessible."
+ },
  "meta": {
   "client": "MIA Photo Booth",
   "domain": "miaphotobooth.net",
   "prepared": "2026-06-01",
   "preparer": "Aleksandar Spasevski",
-  "scope": "Maps recovery diagnosis \u2014 GBP and on-page first. Eight tracked queries across 11 months of HQDM tenure (Aug 5 2025 \u2192 May 6 2026), plus competitive read.",
-  "focus": "A Maps-only diagnosis. We did not analyze GSC or GA4 in this pass \u2014 pull both before the next monthly review so the recovery curve has matching traffic + lead data attached.",
+  "scope": "Maps + organic recovery diagnosis. Eight tracked queries across 11 months of HQDM tenure (Aug 5 2025 \u2192 May 6 2026), enriched with GSC (446k impressions / 4,697 clicks / 16-month) and DataForSEO competitor backlink + search-volume reads.",
+  "focus": "Maps + GSC pass. GA4 access confirmed (property 501143766) but OAuth re-auth needed before lead/intent data can be layered in \u2014 flagged as owner ask. Next pass will add the GA4 layer with strict attribution rules (Leads = form+contact only; GMB/phone/email charted separately).",
   "ld_window": "2025-08 \u2192 2026-05",
+  "gsc_window": "2025-08 \u2192 2026-05",
   "engagement_start": "2025-07-08"
  },
- "tldr": "The Maps gap is structural, not effort. MIA's Google Business profile primary category is <strong>Photography service</strong>; five of the eight top-3 dominators citywide run <strong>Photo booth</strong> as primary (Glam Shots wins 419 top-3 cells with only 15 reviews \u2014 the category match is doing the lifting). On top of that, the site footer phone is <strong>(786) 973-9973</strong> \u2014 the GBP's <em>chat/SMS</em> number \u2014 while the GBP <em>primary</em> phone is <strong>(786) 833-7645</strong>; that NAP mismatch suppresses the trust signal Google uses to associate the site with the profile. Fix those two and the foundation (124 backlinks, 103 reviews, 739-cell average reach) is positioned to convert.",
+ "tldr": "The Maps gap is structural, not effort. MIA's Google Business profile primary category is <strong>Photography service</strong>; five of the eight top-3 dominators citywide run <strong>Photo booth</strong> as primary (Glam Shots wins 419 top-3 cells with only 15 reviews \u2014 the category match is doing the lifting). On top of that, the site footer phone is <strong>(786) 973-9973</strong> \u2014 the GBP's <em>chat/SMS</em> number \u2014 while the GBP <em>primary</em> phone is <strong>(786) 833-7645</strong>; that NAP mismatch suppresses the site\u2192GBP trust signal. Fix those two and the foundation (124 backlinks \u00b7 103 reviews \u00b7 739-cell average reach \u00b7 organic clicks 26 \u2192 768 in 5 months = a <strong>30\u00d7 HQDM-tenure climb</strong>) is positioned to convert.",
  "headline": {
   "h2": "Root cause is two GBP-level fixes \u2014 not site depth",
-  "lede": "Across 11 months of LD scans (Aug 5 2025 \u2192 May 6 2026), MIA's average rank sits at 10.69 on the latest scan (weighted across 8 tracked queries) with 43 top-3 cells out of 663 cells reached. The two highest-intent terms \u2014 \"wedding photo booth rental\" and \"360 photo booth rental\" \u2014 show zero top-3 cells in the latest scan. Meanwhile competitors with materially weaker review profiles (Glam Shots: 15 reviews; Luxe Booth: 11; Captured Fun: 35) all sit at 300+ top-3 cells citywide. The distinguishing feature is the GBP primary category.",
+  "lede": "Across 11 months of LD scans (Aug 5 2025 \u2192 May 6 2026), MIA's average rank sits at 10.69 on the latest scan (weighted across 8 tracked queries) with 43 top-3 cells out of 663 cells reached. Organic clicks have grown 30\u00d7 \u2014 from 26/mo at engagement start to a peak of 768 in Jan '26. The two highest-intent Maps terms (\"wedding photo booth rental\" and \"360 photo booth rental\") show zero top-3 cells in the latest scan, and the tracked queries are still mostly outside the local pack \u2014 the gap is where the GBP-category fix targets.",
   "tiles": [
    {
-    "label": "Latest avg rank (8 kws)",
-    "value": "10.69",
-    "sub": "weighted by reach \u00b7 stable around 10-11 since Oct '25",
+    "label": "Organic clicks \u00b7 last 90d",
+    "value": "759",
+    "sub": "vs 73K impressions \u00b7 -12% Q-over-Q",
     "tone": "watch"
    },
    {
@@ -433,7 +767,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 8100,
-   "fl_volume": 480
+   "fl_volume": 480,
+   "gsc_clicks_90d": 0,
+   "gsc_imp_90d": 17,
+   "gsc_position_90d": 8.7,
+   "gsc_ctr_pct_90d": 0.0
   },
   {
    "kw": "party photo booth rental",
@@ -446,7 +784,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 1900,
-   "fl_volume": 210
+   "fl_volume": 210,
+   "gsc_clicks_90d": 0,
+   "gsc_imp_90d": 141,
+   "gsc_position_90d": 1.2,
+   "gsc_ctr_pct_90d": 0.0
   },
   {
    "kw": "360 photo booth rental",
@@ -459,7 +801,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 9900,
-   "fl_volume": 880
+   "fl_volume": 880,
+   "gsc_clicks_90d": 0,
+   "gsc_imp_90d": 165,
+   "gsc_position_90d": 10.8,
+   "gsc_ctr_pct_90d": 0.0
   },
   {
    "kw": "photo booth rental near me",
@@ -472,7 +818,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 9900,
-   "fl_volume": 720
+   "fl_volume": 720,
+   "gsc_clicks_90d": 0,
+   "gsc_imp_90d": 213,
+   "gsc_position_90d": 5.0,
+   "gsc_ctr_pct_90d": 0.0
   },
   {
    "kw": "photo booth miami",
@@ -485,7 +835,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 720,
-   "fl_volume": 480
+   "fl_volume": 480,
+   "gsc_clicks_90d": 6,
+   "gsc_imp_90d": 482,
+   "gsc_position_90d": 11.6,
+   "gsc_ctr_pct_90d": 1.25
   },
   {
    "kw": "miami photo booth rental",
@@ -498,7 +852,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 90,
-   "fl_volume": 50
+   "fl_volume": 50,
+   "gsc_clicks_90d": 1,
+   "gsc_imp_90d": 488,
+   "gsc_position_90d": 13.6,
+   "gsc_ctr_pct_90d": 0.2
   },
   {
    "kw": "miami photo booth",
@@ -511,7 +869,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 720,
-   "fl_volume": 480
+   "fl_volume": 480,
+   "gsc_clicks_90d": 8,
+   "gsc_imp_90d": 237,
+   "gsc_position_90d": 5.7,
+   "gsc_ctr_pct_90d": 3.38
   },
   {
    "kw": "photo booth rentals in miami",
@@ -524,7 +886,11 @@
    "first_label": "Aug 5, 2025",
    "last_label": "May 6, 2026",
    "us_volume": 90,
-   "fl_volume": 50
+   "fl_volume": 50,
+   "gsc_clicks_90d": 0,
+   "gsc_imp_90d": 127,
+   "gsc_position_90d": 13.6,
+   "gsc_ctr_pct_90d": 0.0
   }
  ],
  "competitors": [
@@ -664,50 +1030,50 @@
     "area": "Primary category",
     "status": "bad",
     "current": "Photography service",
-    "should_be": "Photo booth \u2014 used as primary by 5 of the 8 top-3 dominators (Glam Shots, 360 Photo Booth Miami Rental, Miami Event Photo Booth, Capture Pod, The Photobomb Booths). Google's category model rewards a literal match to the user query; \"photo booth rental\" maps to Photo booth, not Photography service.",
+    "should_be": "Photo booth \u2014 used as primary by 5 of the 8 top-3 dominators (Glam Shots, 360 Photo Booth Miami Rental, Miami Event Photo Booth, Capture Pod, The Photobomb Booths). Google's category model rewards a literal match to the user query.",
     "evidence": "Glam Shots Miami (15 reviews, 5.0\u2605) outranks MIA (103 reviews, 5.0\u2605) in 419 grid cells vs MIA's latest 43 \u2014 the variable that explains the gap is category, not reviews."
    },
    {
     "area": "Secondary categories",
     "status": "bad",
     "current": "Photo lab \u00b7 Photography shop \u00b7 Photo agency \u00b7 Photographer \u00b7 Photography studio \u00b7 Party equipment rental service",
-    "should_be": "Replace the stacked photography-only secondaries with: Photo booth (if not used as primary), Wedding photographer, Event planner, Party planner. Photo lab and Photography shop hurt category clarity \u2014 they pull the listing toward film-developing intent.",
+    "should_be": "Replace stacked photography-only secondaries with: Photo booth (if not used as primary), Wedding photographer, Event planner, Party planner.",
     "evidence": "VIP Party Photo Booth (316 reviews, Party equipment rental service primary) still holds 310 top-3 cells \u2014 the right vertical stack beats reviews-as-volume."
    },
    {
     "area": "Business name",
     "status": "good",
     "current": "MIA Photo Booth - No.1 Photo Booth Rental",
-    "should_be": "Keep. Includes the head term twice. The descriptor \"No.1 Photo Booth Rental\" walks the GBP-naming line but isn't a violation under current guidelines.",
+    "should_be": "Keep.",
     "evidence": "\u2014"
    },
    {
     "area": "Description",
     "status": "good",
-    "current": "210-word description, includes 360 / Glam / Black-and-White / Roamer keywords + Miami + weddings/corporate/private parties. Open since 2020.",
-    "should_be": "Keep. Small upgrade: add \"photo booth rental\" twice (currently once); add the secondary-target phrase \"wedding photo booth\" explicitly.",
+    "current": "210-word description, includes booth keywords + Miami + weddings/corporate/private parties. Open since 2020.",
+    "should_be": "Keep. Small upgrade: add \"wedding photo booth\" explicitly.",
     "evidence": "\u2014"
    },
    {
     "area": "Services list",
     "status": "good",
-    "current": "Roamer \u00b7 Black and White \u00b7 Glam \u00b7 Social \u00b7 Studio \u00b7 360 \u00b7 plus umbrella \"Photo Booth Rental in Miami\"",
-    "should_be": "Keep all seven. Add a wedding-specific service (\"Wedding Photo Booth in Miami\") and corporate-specific (\"Corporate Event Photo Booth in Miami\") so the services list cleanly addresses the two highest-intent query buckets.",
+    "current": "Roamer \u00b7 Black and White \u00b7 Glam \u00b7 Social \u00b7 Studio \u00b7 360 \u00b7 umbrella \"Photo Booth Rental in Miami\"",
+    "should_be": "Keep all seven. Add \"Wedding Photo Booth in Miami\" + \"Corporate Event Photo Booth in Miami\".",
     "evidence": "\u2014"
    },
    {
     "area": "From-the-business attributes",
     "status": "good",
     "current": "Women-owned \u00b7 Latino-owned \u00b7 LGBTQ+ friendly \u00b7 English \u00b7 Spanish",
-    "should_be": "Keep all five. Add \"Online appointments\" and \"Online estimates\" attributes if available \u2014 both surface in the local pack UI for service-area businesses.",
+    "should_be": "Keep all five. Add \"Online appointments\" + \"Online estimates\".",
     "evidence": "\u2014"
    },
    {
     "area": "Service-area scope",
     "status": "watch",
-    "current": "20 cities declared \u2014 Doral, Miami, Hialeah, Kendall, Opa-locka, Miami Beach, etc.",
-    "should_be": "Keep \u2014 broad service-area declarations don't suppress Maps for service-area businesses. <strong>But</strong>: the website should mirror the same cities in dedicated, indexable pages with consistent NAP. Today's site lists 27 area pages \u2014 overlap is partial, slugs are random.",
-    "evidence": "Site URLs use a different city set (Town Park Estates, Granada, Spring Garden, Gladeview, Coral Groves) than the GBP service area \u2014 the two layers don't reinforce each other."
+    "current": "20 cities declared.",
+    "should_be": "Keep \u2014 but the website should mirror the same cities in dedicated indexable pages with consistent NAP.",
+    "evidence": "Site URLs use a different city set than the GBP service area \u2014 the two layers don't reinforce each other."
    },
    {
     "area": "Hours",
@@ -753,32 +1119,32 @@
    {
     "issue": "NAP \u2014 sitewide phone mismatch",
     "sev": "high",
-    "detail": "The GBP primary phone is <strong>(786) 833-7645</strong>. The site footer and every service/area page show <strong>(786) 973-9973</strong> \u2014 which is actually the GBP's <em>chat/SMS</em> number.",
-    "fix": "Global replace across the theme: swap (786) 973-9973 for (786) 833-7645 in header, footer, schema, contact form, structured-data tel: links. Keep the SMS number only on a dedicated \"Text us\" button (sms: protocol)."
+    "detail": "The GBP primary phone is <strong>(786) 833-7645</strong>. The site footer and every service/area page show <strong>(786) 973-9973</strong> \u2014 which is the GBP's <em>chat/SMS</em> number.",
+    "fix": "Global replace across the theme. Keep the SMS number only on a dedicated \"Text us\" button (sms: protocol)."
    },
    {
     "issue": "Schema \u2014 no LocalBusiness markup",
     "sev": "high",
-    "detail": "The homepage and area pages return no JSON-LD LocalBusiness or Service schema. The richest signal MIA could send Google is currently missing entirely.",
-    "fix": "Add LocalBusiness schema sitewide (theme head), with sameAs pointing to the Google Maps CID URL + the 6 social profiles already in the GBP. Add Service schema on the 6 service pages. FAQPage schema on /frequently-asked-questions."
+    "detail": "The homepage and area pages return no JSON-LD LocalBusiness or Service schema. The richest site\u2192GBP signal is missing entirely.",
+    "fix": "Add LocalBusiness schema sitewide with sameAs to the GBP Maps CID + the 6 social profiles. Service schema per booth-type page. FAQPage on /frequently-asked-questions."
    },
    {
     "issue": "URL structure \u2014 27 location pages with random adjective slugs",
     "sev": "high",
-    "detail": "The 27 area pages use a different adjective per slug: <code>/leading-photo-booth-rental-in-coral-gables-fl</code>, <code>/famous-...</code>, <code>/premier-...</code>, etc. This is the fingerprint of programmatic-template content.",
-    "fix": "Consolidate to a clean <code>/photo-booth-rental/[city]/</code> structure with 301 redirects from the old slugs."
+    "detail": "27 area pages use a different adjective per slug \u2014 fingerprint of programmatic-template content.",
+    "fix": "Consolidate to <code>/photo-booth-rental/[city]/</code> with 301 redirects from old slugs."
    },
    {
     "issue": "No service&times;location matrix",
     "sev": "medium",
-    "detail": "Today the site has a service axis (6 booth-type pages) and a location axis (27 area pages) but no cell-level pages combining the two.",
-    "fix": "Build a 6&times;15 matrix (6 services &times; 15 highest-priority cities = 90 pages) over 90 days. Each page ~400 words of unique copy."
+    "detail": "Service axis (6 booth-type pages) and location axis (27 area pages) but no cell-level pages combining the two.",
+    "fix": "Build a 6&times;15 matrix (90 cell pages) over 90 days. Each ~400 words of unique copy."
    },
    {
-    "issue": "Internal linking \u2014 area pages don't link to service pages",
+    "issue": "Internal linking \u2014 area pages don't link to service pages, and blog pages don't link to commercial pages",
     "sev": "medium",
-    "detail": "Sampled three area pages (Coral Gables, Wynwood, Midtown Miami): each links only to homepage and sibling area pages.",
-    "fix": "Add a 3-paragraph \"Booth types we bring to [city]\" block to every area page with inline links to each of the 6 service pages. Reverse block on each service page (\"Most-requested neighborhoods\")."
+    "detail": "Sampled three area pages: each links only to homepage and sibling area pages. Top blog post (photo-strip-size, 1,556 clicks/90d) doesn't link to /360-photo-booth or /glam-booth.",
+    "fix": "Add 3-paragraph \"Booth types we bring to [city]\" block on every area page + in-body CTAs on top blog posts pointing to booth-type service pages."
    }
   ]
  },
@@ -788,42 +1154,42 @@
    "priority": "P0 \u00b7 Quick win \u00b7 this week",
    "tone": "bad",
    "title": "Switch GBP primary to Photo booth + clean up secondaries",
-   "summary": "5-minute change from inside the GBP Manager. New primary: <strong>Photo booth</strong>. Add: Wedding photographer, Event planner. Drop: Photo lab, Photography shop, Photo agency, Photographer, Photography studio. Expected lift: first signal within one scan cycle (7-14 days); meaningful re-ranking within two cycles."
+   "summary": "5-minute change from inside the GBP Manager. Expected lift: first signal within one scan cycle (7-14 days)."
   },
   {
    "id": "B",
    "priority": "P0 \u00b7 Quick win \u00b7 this week",
    "tone": "bad",
    "title": "Unify the phone number \u2014 site, schema, social, citations",
-   "summary": "Replace <code>(786) 973-9973</code> with <code>(786) 833-7645</code> across miaphotobooth.net + push to BrightLocal / Whitespark / Moz Local. Keep 973-9973 as a labelled \"Text us\" button only."
+   "summary": "Replace (786) 973-9973 with (786) 833-7645 across the site + push to BrightLocal/Whitespark/Moz."
   },
   {
    "id": "C",
    "priority": "P1 \u00b7 Mid-term \u00b7 30-60 days",
    "tone": "watch",
    "title": "Rebuild the location grid on a clean URL + content pattern",
-   "summary": "Kill the 27 random-adjective area slugs. New structure: <code>/photo-booth-rental/[city]/</code> for 15 priority cities. ~400 words / unique anchors per page. 301 every legacy slug."
+   "summary": "Kill the 27 random-adjective area slugs. New: <code>/photo-booth-rental/[city]/</code> for 15 priority cities."
   },
   {
    "id": "D",
    "priority": "P1 \u00b7 Mid-term \u00b7 30-90 days",
    "tone": "watch",
    "title": "Add the service&times;city matrix (~90 cell pages)",
-   "summary": "Six booth types &times; 15 priority cities = 90 cell pages over 90 days. Month 1: 360 + Glam \u00d7 15. Month 2: Studio + Social \u00d7 15. Month 3: Roamer + Audio \u00d7 15."
+   "summary": "Six booth types &times; 15 priority cities = 90 cell pages over 90 days."
   },
   {
    "id": "E",
    "priority": "P1 \u00b7 Schema + technical \u00b7 30 days",
    "tone": "watch",
    "title": "LocalBusiness + Service + FAQPage schema sitewide",
-   "summary": "JSON-LD LocalBusiness in theme head with sameAs to the GBP Maps CID + 6 social profiles. Service schema per booth-type page. FAQPage schema on /frequently-asked-questions."
+   "summary": "JSON-LD in theme head, sameAs to the GBP Maps CID + 6 social profiles."
   },
   {
    "id": "F",
    "priority": "P2 \u00b7 60-90 days",
    "tone": "good",
-   "title": "Internal linking + GBP posts cadence",
-   "summary": "Add a \"Booth types in [city]\" block to every area page (6 inbound links each); reverse block on each service page. Restart weekly GBP posts."
+   "title": "Internal linking + GBP posts + blog\u2192commercial wiring",
+   "summary": "\"Booth types in [city]\" block on every area page; in-body CTAs on top blog posts pointing to booth-type service pages; restart weekly GBP posts."
   }
  ],
  "tasks": [
@@ -908,7 +1274,15 @@
    "title": "Restart weekly GBP posts cadence \u2014 event highlights, booth-type spotlights"
   },
   {
-   "id": "C-11",
+   "id": "F-11",
+   "lever": "F",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Investigate \"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with 0 clicks (SERP layout + snippet audit)"
+  },
+  {
+   "id": "C-12",
    "lever": "C",
    "dept": "Content",
    "loc": "All",
@@ -916,7 +1290,7 @@
    "title": "Write 15 new /photo-booth-rental/[city]/ pages \u2014 ~400 words each, 3 unique anchors per page"
   },
   {
-   "id": "C-12",
+   "id": "C-13",
    "lever": "C",
    "dept": "Dev",
    "loc": "All",
@@ -924,7 +1298,15 @@
    "title": "301 redirect every legacy area-page slug to its matching new URL"
   },
   {
-   "id": "C-13",
+   "id": "F-14",
+   "lever": "F",
+   "dept": "Content",
+   "loc": "All",
+   "priority": "Medium",
+   "title": "Wire top blog posts (photo-strip-size etc \u2014 1,556 clicks/90d) to booth-type service pages via in-body internal links + CTAs"
+  },
+  {
+   "id": "C-15",
    "lever": "C",
    "dept": "Dev",
    "loc": "All",
@@ -932,7 +1314,7 @@
    "title": "Update sitemap.xml + resubmit to Google Search Console"
   },
   {
-   "id": "A-14",
+   "id": "A-16",
    "lever": "A",
    "dept": "Monitor",
    "loc": "All",
@@ -940,7 +1322,7 @@
    "title": "Validate first LD scan post-category-change (expected lift on Photo Booth queries)"
   },
   {
-   "id": "E-15",
+   "id": "E-17",
    "lever": "E",
    "dept": "Dev",
    "loc": "All",
@@ -948,7 +1330,7 @@
    "title": "Add LocalBusiness JSON-LD in theme head \u2014 telephone, areaServed (15 cities), sameAs (8 social/GBP profiles)"
   },
   {
-   "id": "E-16",
+   "id": "E-18",
    "lever": "E",
    "dept": "Dev",
    "loc": "All",
@@ -956,7 +1338,7 @@
    "title": "Add Service schema on each of the 6 booth-type pages (provider \u2192 LocalBusiness @id)"
   },
   {
-   "id": "D-17",
+   "id": "D-19",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -964,7 +1346,7 @@
    "title": "Build matrix template \u2014 variable swap-out for booth \u00d7 city + per-cell testimonial + GBP embed"
   },
   {
-   "id": "D-18",
+   "id": "D-20",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -972,7 +1354,7 @@
    "title": "Publish 15 cells: 360 Photo Booth \u00d7 15 cities (highest-margin booth type first)"
   },
   {
-   "id": "D-19",
+   "id": "D-21",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -980,7 +1362,7 @@
    "title": "Publish 15 cells: Glam Booth \u00d7 15 cities"
   },
   {
-   "id": "E-20",
+   "id": "E-22",
    "lever": "E",
    "dept": "Dev",
    "loc": "All",
@@ -988,7 +1370,7 @@
    "title": "Add FAQPage schema on /frequently-asked-questions"
   },
   {
-   "id": "E-21",
+   "id": "E-23",
    "lever": "E",
    "dept": "Monitor",
    "loc": "All",
@@ -996,7 +1378,7 @@
    "title": "Validate every schema page in Search Console URL Inspection"
   },
   {
-   "id": "B-22",
+   "id": "B-24",
    "lever": "B",
    "dept": "Off-Page",
    "loc": "All",
@@ -1004,7 +1386,7 @@
    "title": "Hand-correct any citation that didn't auto-update through the aggregators"
   },
   {
-   "id": "F-23",
+   "id": "F-25",
    "lever": "F",
    "dept": "GBP",
    "loc": "All",
@@ -1012,7 +1394,7 @@
    "title": "Weekly GBP posts continue \u2014 minimum 1 per week, target 2"
   },
   {
-   "id": "D-24",
+   "id": "D-26",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -1020,7 +1402,7 @@
    "title": "Publish 15 cells: Studio Booth \u00d7 15 cities"
   },
   {
-   "id": "D-25",
+   "id": "D-27",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -1028,7 +1410,7 @@
    "title": "Publish 15 cells: Social Booth \u00d7 15 cities"
   },
   {
-   "id": "D-26",
+   "id": "D-28",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -1036,7 +1418,7 @@
    "title": "Publish 15 cells: Roamer Booth \u00d7 15 cities"
   },
   {
-   "id": "F-27",
+   "id": "F-29",
    "lever": "F",
    "dept": "Content",
    "loc": "All",
@@ -1044,7 +1426,7 @@
    "title": "Add \"Booth types in [city]\" block on every area page \u2014 6 internal links each"
   },
   {
-   "id": "D-28",
+   "id": "D-30",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -1052,7 +1434,7 @@
    "title": "Publish 15 cells: Audio Guestbook \u00d7 15 cities (matrix complete: 90 cell pages)"
   },
   {
-   "id": "F-29",
+   "id": "F-31",
    "lever": "F",
    "dept": "Content",
    "loc": "All",
@@ -1060,7 +1442,7 @@
    "title": "Add \"Most-requested neighborhoods\" block on every service page \u2014 5-7 internal links each"
   },
   {
-   "id": "D-30",
+   "id": "D-32",
    "lever": "D",
    "dept": "Content",
    "loc": "All",
@@ -1068,7 +1450,7 @@
    "title": "Cross-link audit \u2014 each cell links to parent service + parent city + 3 adjacent cells"
   },
   {
-   "id": "E-31",
+   "id": "E-33",
    "lever": "E",
    "dept": "Monitor",
    "loc": "All",
@@ -1076,12 +1458,12 @@
    "title": "Confirm Rich Results coverage in GSC (LocalBusiness + Service + FAQPage all returning)"
   },
   {
-   "id": "All-32",
+   "id": "All-34",
    "lever": "All",
    "dept": "Monitor",
    "loc": "All",
    "priority": "Medium",
-   "title": "End-of-quarter LD scan review \u2014 measure top-3 cell gain across 8 tracked queries"
+   "title": "End-of-quarter LD scan + GSC review \u2014 measure top-3 cell gain across 8 tracked queries + organic-clicks delta"
   }
  ],
  "kpi_targets": [
@@ -1092,7 +1474,7 @@
    "stretch": "5.0"
   },
   {
-   "metric": "Top-3 cells (latest scan = 43)",
+   "metric": "Top-3 cells (latest = 43)",
    "current": "43",
    "target": "120",
    "stretch": "180"
@@ -1110,7 +1492,13 @@
    "stretch": "20"
   },
   {
-   "metric": "Indexable site phone matches GBP primary",
+   "metric": "Organic clicks \u00b7 monthly",
+   "current": "651",
+   "target": "900",
+   "stretch": "1,200"
+  },
+  {
+   "metric": "Site phone matches GBP primary",
    "current": "No (mismatch)",
    "target": "Yes",
    "stretch": "Yes + citations refreshed"
@@ -1142,12 +1530,16 @@
    "why": "We can write the 90 cells in-house or hand a template + city list to an internal writer. Confirming the path so we can sequence Month 1-3 accurately."
   },
   {
-   "q": "GA4 + GSC access \u2014 can we get added?",
-   "why": "miaphotobooth.net is not yet in our authorized GSC properties. With both connected we can put a real organic-clicks-and-leads recovery curve next to the Maps recovery, the same way we do for AQMS and Maison."
+   "q": "GA4 re-auth needed (~2 min)",
+   "why": "GA4 property 501143766 (HQDM Clients Local Campaign \u00b7 MIA Photobooth) is confirmed accessible \u2014 but the existing OAuth token only has the GSC scope. Aleksandar to run <code>python C:/Users/User/Desktop/HQDM/Secrets/gsc_auth.py</code> to re-auth with analytics.readonly scope. Once done, the next pass adds Leads (form_submit + contact_form_submit), GMB clicks (gmb_click), phone clicks (click_phone_number) and email clicks (click_email) as separate trend lines \u2014 same attribution model we use for AQMS and Maison."
   },
   {
    "q": "What happened in Sept 2025?",
-   "why": "The LD scans show MIA dropped from 67 top-3 cells in Aug to 2 in Sept, then recovered to 74 in Oct. Worth knowing if there was a GBP issue, category swap, or temporary suspension we should factor into the recovery model."
+   "why": "LD scans show MIA dropped from 67 top-3 cells in Aug to 2 in Sept, then recovered to 74 in Oct. Worth knowing if there was a GBP issue, category swap, or temporary suspension we should factor in."
+  },
+  {
+   "q": "\"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with ZERO clicks (last 90d) \u2014 why?",
+   "why": "This is the strongest single-query opportunity in GSC. Position 4.1 should produce some clicks. Likely candidates: (1) SERP is dominated by local pack + AI Overview, so the organic position-4 result never gets seen, or (2) the snippet is unappealing. We'll do a SERP audit in Week 2 of Month 1."
   }
  ],
  "deliverables": [
@@ -1160,13 +1552,13 @@
   {
    "type": "Condensed",
    "name": "Condensed brief",
-   "desc": "One-screen brief for the AM team \u2014 root cause, next-90-days, the two P0 fixes that unblock everything else.",
+   "desc": "One-screen brief for the AM team.",
    "href": "condensed.html"
   },
   {
    "type": "Client",
    "name": "Client snapshot",
-   "desc": "Single-screen client view \u2014 positive frame, foundation strengths, 3-month focus, full task checklist.",
+   "desc": "Single-screen client view \u2014 positive frame, organic-clicks win, foundation, 3-month focus, full task checklist.",
    "href": "snapshot.html"
   }
  ]

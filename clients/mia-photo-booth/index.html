@@ -53,6 +53,7 @@
         <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#pin" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Pin</a>
         <a href="#maps" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Maps</a>
+        <a href="#organic" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GSC</a>
         <a href="#competition" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Competitors</a>
         <a href="#gbp" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GBP audit</a>
         <a href="#connection" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Site ↔ GBP</a>
@@ -143,6 +144,55 @@
         </tr></thead>
         <tbody id="kw-movement"></tbody>
       </table>
+    </div>
+  </section>
+
+  <section id="organic" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Organic search · GSC 16-month view</h2>
+    <p class="text-sm text-ink-500 mb-4">Google Search Console for <code>https://www.miaphotobooth.net/</code>. The site's organic-clicks foundation has grown <strong>29× over HQDM tenure</strong> — and impressions are still trending up, which means Google keeps showing the site to more people. The Maps recovery plan compounds on top of this.</p>
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Monthly · whole-site organic clicks + impressions</div>
+      <div style="height: 280px;"><canvas id="gsc-trend"></canvas></div>
+      <p class="text-[11px] text-slate-500 mt-2" id="gsc-trend-note"></p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Top 15 queries · last 90d</div>
+        <p class="text-xs text-slate-500 mb-2">The wins are on informational/blog queries about photo-strip sizing. Commercial queries (booth-type, city) get almost nothing — that's the gap the GBP-category fix closes.</p>
+        <div class="overflow-x-auto"><table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Query</th><th class="num">Clicks</th><th class="num">Imp</th><th class="num">Pos</th><th class="num">CTR</th>
+          </tr></thead>
+          <tbody id="gsc-top-queries"></tbody>
+        </table></div>
+      </div>
+      <div class="panel" style="border-left: 4px solid #f59e0b;">
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Hidden opportunity · high impressions, zero clicks</div>
+        <p class="text-xs text-slate-500 mb-2">Queries where MIA's page is shown but no one clicks. Likely cause: the local pack or AI Overview is consuming all the visible attention above the organic results. These are the queries Lever A unblocks first.</p>
+        <div class="overflow-x-auto"><table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Query</th><th class="num">Impressions</th><th class="num">Avg Pos</th><th>Diagnosis</th>
+          </tr></thead>
+          <tbody id="gsc-indexation"></tbody>
+        </table></div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-4">
+      <div class="stat-tile good">
+        <div class="l">Total clicks · 11mo window</div>
+        <div class="v" id="gsc-tile-clicks">—</div>
+        <div class="s" id="gsc-tile-clicks-sub">—</div>
+      </div>
+      <div class="stat-tile good">
+        <div class="l">Total impressions · 11mo</div>
+        <div class="v" id="gsc-tile-imp">—</div>
+        <div class="s" id="gsc-tile-imp-sub">—</div>
+      </div>
+      <div class="stat-tile" id="gsc-tile-q90">
+        <div class="l">Last 90d vs prior 90d</div>
+        <div class="v" id="gsc-tile-q90-v">—</div>
+        <div class="s" id="gsc-tile-q90-sub">—</div>
+      </div>
     </div>
   </section>
 
@@ -417,6 +467,58 @@
       btns[i++].onclick = () => { filt.dept = 'all'; renderFilters(); renderTasks(); }; depts.forEach(d => btns[i++].onclick = () => { filt.dept = d; renderFilters(); renderTasks(); });
     }
     renderFilters(); renderTasks();
+
+    // ============ GSC SECTION ============
+    if (DATA.trajectory_gsc) {
+      const tg = DATA.trajectory_gsc;
+      const pIdx = tg.partial_index;
+      function splitP(arr, pi) {
+        if (pi < 0) return { solid: arr, dashed: arr.map(() => null) };
+        return { solid: arr.map((v, i) => i <= pi - 1 ? v : null), dashed: arr.map((v, i) => i >= pi - 1 ? v : null) };
+      }
+      const cSplit = splitP(tg.clicks, pIdx);
+      const iSplit = splitP(tg.impressions, pIdx);
+      // Chart.js may not load instantly — defer
+      const gscEl = document.getElementById('gsc-trend');
+      if (gscEl && window.Chart) {
+        new Chart(gscEl, {
+          data: { labels: tg.labels, datasets: [
+            { type: 'line', label: 'Impressions', data: iSplit.solid, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.10)', borderWidth: 2.5, tension: .3, pointRadius: 3, yAxisID: 'y', fill: true, spanGaps: false },
+            { type: 'line', label: 'Impressions (partial)', data: iSplit.dashed, borderColor: '#1d5b8a', backgroundColor: 'transparent', borderWidth: 2, tension: .3, borderDash: [5,4], pointRadius: 3, yAxisID: 'y', fill: false, spanGaps: false },
+            { type: 'line', label: 'Clicks', data: cSplit.solid, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 3, yAxisID: 'y1', fill: false, spanGaps: false },
+            { type: 'line', label: 'Clicks (partial)', data: cSplit.dashed, borderColor: '#10b981', borderWidth: 2, tension: .3, borderDash: [5,4], pointRadius: 3, yAxisID: 'y1', fill: false, spanGaps: false },
+          ]},
+          options: { responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+            plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10, callbacks: { label: c => `${c.dataset.label.replace(' (partial)','')}: ${c.raw != null ? c.raw.toLocaleString() : '—'}` } } },
+            scales: {
+              x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+              y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: 'impressions / mo', font: { size: 10, weight: '600' }, color: '#1d5b8a' } },
+              y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } }, title: { display: true, text: 'clicks / mo', font: { size: 10, weight: '600' }, color: '#10b981' } },
+            }
+          }
+        });
+      }
+      document.getElementById('gsc-trend-note').innerHTML = `Whole-site data. * = partial month. <strong>${tg.summary.first_clicks} clicks in ${tg.summary.first_month}</strong> → peak <strong>${tg.summary.peak_clicks} in ${tg.summary.peak_month}</strong> (${tg.summary.growth_factor}× growth). Last-90-days clicks <strong>${tg.summary.delta_90d_clicks_pct >= 0 ? '+' : ''}${tg.summary.delta_90d_clicks_pct}%</strong> vs prior 90; impressions <strong>+${tg.summary.delta_90d_impressions_pct}%</strong>.`;
+
+      document.getElementById('gsc-top-queries').innerHTML = DATA.gsc_queries.slice(0, 15).map(q =>
+        `<tr><td>${q.q}</td><td class="num font-semibold">${q.clicks}</td><td class="num text-slate-500">${q.impressions.toLocaleString()}</td><td class="num text-slate-500">${q.position}</td><td class="num text-slate-500">${q.ctr_pct}%</td></tr>`
+      ).join('');
+
+      document.getElementById('gsc-indexation').innerHTML = DATA.gsc_indexation_signal.high_imp_no_clicks.map(q => {
+        const dx = q.pos < 5 ? 'SERP-pack/AI Overview suppression — Maps fix unlocks' : (q.pos < 11 ? 'Snippet/CTR issue — title+meta refresh' : 'Page-2 result — needs on-page lift');
+        return `<tr><td>${q.q}</td><td class="num font-semibold text-rose-700">${q.imp.toLocaleString()}</td><td class="num text-slate-500">${q.pos}</td><td class="text-xs text-slate-600">${dx}</td></tr>`;
+      }).join('');
+
+      document.getElementById('gsc-tile-clicks').textContent = tg.summary.total_clicks_window.toLocaleString();
+      document.getElementById('gsc-tile-clicks-sub').innerHTML = `${tg.summary.first_clicks} in ${tg.summary.first_month} → ${tg.summary.peak_clicks} peak (${tg.summary.growth_factor}× growth)`;
+      document.getElementById('gsc-tile-imp').textContent = (tg.summary.total_impressions_window/1000).toFixed(0) + 'K';
+      document.getElementById('gsc-tile-imp-sub').textContent = `Google is showing the site more month-over-month — the conversion gap is rank, not visibility`;
+      const dp = tg.summary.delta_90d_clicks_pct;
+      const tile = document.getElementById('gsc-tile-q90');
+      tile.classList.add(dp >= 0 ? 'good' : 'watch');
+      document.getElementById('gsc-tile-q90-v').innerHTML = `${dp >= 0 ? '+' : ''}${dp}% clicks · +${tg.summary.delta_90d_impressions_pct}% imp`;
+      document.getElementById('gsc-tile-q90-sub').textContent = `Impressions growing while clicks dipped — exactly the pattern the Maps fix corrects`;
+    }
 
     // ============ KPIs / asks / deliverables ============
     $('kpi-targets').innerHTML = DATA.kpi_targets.map(k => `<tr><td class="font-medium text-slate-700">${k.metric}</td><td class="num">${k.current}</td><td class="num font-semibold text-brand-700">${k.target}</td><td class="num text-slate-500">${k.stretch}</td></tr>`).join('');

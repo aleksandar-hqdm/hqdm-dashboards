@@ -1,0 +1,422 @@
+{
+ "site": "https://www.miaphotobooth.net/",
+ "window": {
+  "first_day": "2025-08-13",
+  "last_day": "2026-05-30"
+ },
+ "monthly": [
+  {
+   "ym": "2025-08",
+   "clicks": 26,
+   "impressions": 14616,
+   "days_with_data": 19,
+   "partial": false
+  },
+  {
+   "ym": "2025-09",
+   "clicks": 74,
+   "impressions": 15945,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2025-10",
+   "clicks": 108,
+   "impressions": 18687,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2025-11",
+   "clicks": 413,
+   "impressions": 35361,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2025-12",
+   "clicks": 624,
+   "impressions": 49154,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-01",
+   "clicks": 768,
+   "impressions": 64144,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-02",
+   "clicks": 758,
+   "impressions": 64883,
+   "days_with_data": 28,
+   "partial": false
+  },
+  {
+   "ym": "2026-03",
+   "clicks": 669,
+   "impressions": 57609,
+   "days_with_data": 31,
+   "partial": false
+  },
+  {
+   "ym": "2026-04",
+   "clicks": 606,
+   "impressions": 55860,
+   "days_with_data": 30,
+   "partial": false
+  },
+  {
+   "ym": "2026-05",
+   "clicks": 651,
+   "impressions": 69833,
+   "days_with_data": 30,
+   "partial": false
+  }
+ ],
+ "totals": {
+  "last_30d": {
+   "clicks": 631,
+   "impressions": 66513
+  },
+  "last_90d": {
+   "clicks": 759,
+   "impressions": 72649
+  },
+  "last_180d": {
+   "clicks": 4018,
+   "impressions": 358415
+  },
+  "last_365d": {
+   "clicks": 4697,
+   "impressions": 446092
+  }
+ },
+ "delta_90d_v_prior_90d": {
+  "clicks_pct": -11.8,
+  "impressions_pct": 11.2,
+  "clicks_last": 759,
+  "clicks_prior": 861
+ },
+ "top_queries_90d": [
+  {
+   "q": "photo strip size",
+   "clicks": 87,
+   "impressions": 2184,
+   "position": 1.8,
+   "ctr_pct": 3.98
+  },
+  {
+   "q": "photobooth size",
+   "clicks": 27,
+   "impressions": 1577,
+   "position": 2.6,
+   "ctr_pct": 1.71
+  },
+  {
+   "q": "photobooth strip size",
+   "clicks": 24,
+   "impressions": 2109,
+   "position": 2.3,
+   "ctr_pct": 1.14
+  },
+  {
+   "q": "photo booth photo size",
+   "clicks": 24,
+   "impressions": 286,
+   "position": 1.8,
+   "ctr_pct": 8.39
+  },
+  {
+   "q": "photo booth size",
+   "clicks": 20,
+   "impressions": 710,
+   "position": 2.7,
+   "ctr_pct": 2.82
+  },
+  {
+   "q": "photobooth photo size",
+   "clicks": 20,
+   "impressions": 272,
+   "position": 1.3,
+   "ctr_pct": 7.35
+  },
+  {
+   "q": "photo strip dimensions",
+   "clicks": 18,
+   "impressions": 460,
+   "position": 1.9,
+   "ctr_pct": 3.91
+  },
+  {
+   "q": "photobooth picture size",
+   "clicks": 16,
+   "impressions": 554,
+   "position": 1.8,
+   "ctr_pct": 2.89
+  },
+  {
+   "q": "photo booth strip size",
+   "clicks": 16,
+   "impressions": 592,
+   "position": 2.0,
+   "ctr_pct": 2.7
+  },
+  {
+   "q": "size photobooth",
+   "clicks": 15,
+   "impressions": 205,
+   "position": 1.0,
+   "ctr_pct": 7.32
+  },
+  {
+   "q": "photo booth picture size",
+   "clicks": 15,
+   "impressions": 317,
+   "position": 1.9,
+   "ctr_pct": 4.73
+  },
+  {
+   "q": "photo strips size",
+   "clicks": 13,
+   "impressions": 358,
+   "position": 1.9,
+   "ctr_pct": 3.63
+  },
+  {
+   "q": "photo booth rental miami",
+   "clicks": 13,
+   "impressions": 2029,
+   "position": 13.0,
+   "ctr_pct": 0.64
+  },
+  {
+   "q": "photobooth size picture",
+   "clicks": 13,
+   "impressions": 173,
+   "position": 1.2,
+   "ctr_pct": 7.51
+  },
+  {
+   "q": "what is the size of a photo booth strip",
+   "clicks": 12,
+   "impressions": 231,
+   "position": 1.6,
+   "ctr_pct": 5.2
+  },
+  {
+   "q": "photo booth print size",
+   "clicks": 12,
+   "impressions": 219,
+   "position": 1.5,
+   "ctr_pct": 5.48
+  },
+  {
+   "q": "photostrip size photobooth",
+   "clicks": 11,
+   "impressions": 564,
+   "position": 3.2,
+   "ctr_pct": 1.95
+  },
+  {
+   "q": "photobooth frame size",
+   "clicks": 10,
+   "impressions": 168,
+   "position": 1.5,
+   "ctr_pct": 5.95
+  },
+  {
+   "q": "photobooth paper size",
+   "clicks": 9,
+   "impressions": 208,
+   "position": 1.4,
+   "ctr_pct": 4.33
+  },
+  {
+   "q": "photo booth rental",
+   "clicks": 9,
+   "impressions": 821,
+   "position": 7.5,
+   "ctr_pct": 1.1
+  }
+ ],
+ "top_pages_90d": [
+  {
+   "page": "/post/what-size-are-photo-booth-pictures-a-complete-breakdown",
+   "clicks": 1556,
+   "impressions": 80937,
+   "position": 3.2
+  },
+  {
+   "page": "/post/what-are-the-photo-booth-pictures-called-understanding-photo-booth-photos",
+   "clicks": 106,
+   "impressions": 35777,
+   "position": 3.4
+  },
+  {
+   "page": "/",
+   "clicks": 83,
+   "impressions": 24528,
+   "position": 12.4
+  },
+  {
+   "page": "/?utm_source=gmb&utm_medium=click&utm_campaign=gmb_listing",
+   "clicks": 30,
+   "impressions": 13089,
+   "position": 3.9
+  },
+  {
+   "page": "/post/how-to-make-photo-booth-props-fun-and-easy-diy-ideas",
+   "clicks": 29,
+   "impressions": 4676,
+   "position": 8.5
+  },
+  {
+   "page": "/post/how-can-i-create-a-polaroid-frame-for-my-photo-booth",
+   "clicks": 24,
+   "impressions": 1443,
+   "position": 9.6
+  },
+  {
+   "page": "/post/audio-guestbook-experience-miami",
+   "clicks": 12,
+   "impressions": 202,
+   "position": 9.8
+  },
+  {
+   "page": "/post/how-to-effectively-display-photo-booth-props",
+   "clicks": 9,
+   "impressions": 353,
+   "position": 7.0
+  },
+  {
+   "page": "/post/what-do-360-photo-booth-pictures-look-like",
+   "clicks": 5,
+   "impressions": 558,
+   "position": 12.8
+  },
+  {
+   "page": "/events-gallery",
+   "clicks": 4,
+   "impressions": 536,
+   "position": 10.4
+  },
+  {
+   "page": "/post/how-to-display-photo-booth-strips-tips-and-ideas",
+   "clicks": 4,
+   "impressions": 856,
+   "position": 9.3
+  },
+  {
+   "page": "/glam-booth",
+   "clicks": 3,
+   "impressions": 1262,
+   "position": 20.2
+  },
+  {
+   "page": "/audio-guestbook",
+   "clicks": 3,
+   "impressions": 69,
+   "position": 7.0
+  },
+  {
+   "page": "/360-photo-booth",
+   "clicks": 2,
+   "impressions": 708,
+   "position": 10.2
+  },
+  {
+   "page": "/post/roamer-photo-booth-rental-miami",
+   "clicks": 2,
+   "impressions": 528,
+   "position": 18.4
+  }
+ ],
+ "tracked_kw_in_gsc": [
+  {
+   "kw": "wedding photo booth rental",
+   "clicks": 0,
+   "impressions": 17,
+   "position": 8.7,
+   "ctr_pct": 0.0
+  },
+  {
+   "kw": "party photo booth rental",
+   "clicks": 0,
+   "impressions": 141,
+   "position": 1.2,
+   "ctr_pct": 0.0
+  },
+  {
+   "kw": "360 photo booth rental",
+   "clicks": 0,
+   "impressions": 165,
+   "position": 10.8,
+   "ctr_pct": 0.0
+  },
+  {
+   "kw": "photo booth rental near me",
+   "clicks": 0,
+   "impressions": 213,
+   "position": 5.0,
+   "ctr_pct": 0.0
+  },
+  {
+   "kw": "photo booth miami",
+   "clicks": 6,
+   "impressions": 482,
+   "position": 11.6,
+   "ctr_pct": 1.25
+  },
+  {
+   "kw": "miami photo booth rental",
+   "clicks": 1,
+   "impressions": 488,
+   "position": 13.6,
+   "ctr_pct": 0.2
+  },
+  {
+   "kw": "miami photo booth",
+   "clicks": 8,
+   "impressions": 237,
+   "position": 5.7,
+   "ctr_pct": 3.38
+  },
+  {
+   "kw": "photo booth rentals in miami",
+   "clicks": 0,
+   "impressions": 127,
+   "position": 13.6,
+   "ctr_pct": 0.0
+  },
+  {
+   "kw": "photo booth company near me",
+   "clicks": 0,
+   "impressions": 0,
+   "position": null,
+   "ctr_pct": 0
+  }
+ ],
+ "brand_split_90d": {
+  "brand_clicks": 3,
+  "nonbrand_clicks": 756,
+  "brand_impressions": 52,
+  "nonbrand_impressions": 72597
+ },
+ "indexation_signal": {
+  "high_imp_no_clicks": [
+   {
+    "q": "social photo booth rental miami",
+    "imp": 13146,
+    "pos": 4.1
+   },
+   {
+    "q": "glam photo booth miami",
+    "imp": 5843,
+    "pos": 11.0
+   }
+  ]
+ }
+}

@@ -37,6 +37,9 @@
     .task-row .lever { font-family: ui-monospace, monospace; font-weight: 700; color: #1d5b8a; font-size: .72rem; }
     .task-row .dept { font-size: .62rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #64748b; }
     .checkbox { width: 1rem; height: 1rem; border: 1.5px solid #cbd5e1; border-radius: .25rem; flex-shrink: 0; margin-top: .15rem; display: inline-block; vertical-align: top; }
+    table.mini th, table.mini td { font-size: .72rem; padding: .35rem .5rem; border-bottom: 1px solid #f1f5f9; }
+    table.mini th { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .58rem; color: #64748b; background: #f8fafc; text-align: left; }
+    table.mini td.num, table.mini th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; }
     @media print {
       .no-print { display: none !important; }
       body { background: #fff !important; }
@@ -63,16 +66,16 @@
 
   <main class="shell mx-auto px-4 sm:px-6 py-4">
     <section class="mb-4">
-      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM Search Intelligence · Maps recovery</div>
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM Search Intelligence · 11-month review + 90-day plan</div>
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-1">
         <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">MIA Photo Booth · 90-Day Plan</h1>
-        <div class="text-sm text-slate-500">11-month LD trajectory · prepared <span class="font-mono">2026-06-01</span></div>
+        <div class="text-sm text-slate-500">LD + GSC review · prepared <span class="font-mono">2026-06-01</span></div>
       </div>
 
       <!-- POSITIVE EXEC -->
       <div class="panel mt-3" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
         <p class="text-[15px] leading-relaxed text-slate-800">
-          <strong>The foundation is stronger than the rank suggests — and the market is reshuffling.</strong>
+          <strong>The organic-search foundation has compounded 29× in 11 months — now we convert it into Maps rank.</strong>
         </p>
         <p class="text-[14px] leading-relaxed text-slate-700 mt-2.5" id="exec-1"></p>
         <p class="text-[14px] leading-relaxed text-slate-700 mt-2" id="exec-2"></p>
@@ -80,12 +83,30 @@
       </div>
     </section>
 
-    <!-- TRAJECTORY CHART -->
+    <!-- ORGANIC-CLICKS CHART (GSC) -->
     <section class="mb-4">
       <div class="panel">
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
-            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps trajectory · 11 months of HQDM tenure</div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Organic search · monthly clicks + impressions</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="gsc-window">—</div>
+          </div>
+          <div class="flex items-center gap-3 text-[10px] text-slate-500">
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Impressions</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Clicks</span>
+          </div>
+        </div>
+        <div style="height: 240px;"><canvas id="gsc-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="gsc-caption"></p>
+      </div>
+    </section>
+
+    <!-- LD TRAJECTORY CHART (smaller, secondary) -->
+    <section class="mb-4">
+      <div class="panel">
+        <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 11 months of HQDM tenure</div>
             <div class="text-xs text-slate-500 mt-0.5" id="traj-window">—</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
@@ -93,7 +114,7 @@
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Top-3 cells</span>
           </div>
         </div>
-        <div style="height: 220px;"><canvas id="traj-chart"></canvas></div>
+        <div style="height: 200px;"><canvas id="traj-chart"></canvas></div>
         <p class="text-[11px] text-slate-500 mt-2" id="traj-caption"></p>
       </div>
     </section>
@@ -120,6 +141,26 @@
       </div>
     </section>
 
+    <!-- TOP GSC QUERIES + INDEXATION OPPORTUNITY -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Top 10 queries · last 90d</div>
+        <p class="text-xs text-slate-500 mb-2">Blog content is driving 80% of clicks (informational queries about photo-strip sizing). The next phase wires these into the booth-type service pages so the traffic converts.</p>
+        <table class="mini w-full">
+          <thead><tr><th>Query</th><th class="num">Clicks</th><th class="num">Imp</th><th class="num">Pos</th></tr></thead>
+          <tbody id="top-queries"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Hidden opportunity · high impressions, zero clicks</div>
+        <p class="text-xs text-slate-500 mb-2">Queries where Google shows MIA's page but no one clicks — likely the local pack or AI Overview is eating the click. These are the queries Lever A + B should unlock first.</p>
+        <table class="mini w-full">
+          <thead><tr><th>Query</th><th class="num">Impressions</th><th class="num">Avg Pos</th></tr></thead>
+          <tbody id="indexation"></tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- 3-MONTH FOCUS — detailed -->
     <section class="mb-5">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The 90-day plan · detailed focus</h2>
@@ -139,6 +180,12 @@
       <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Client snapshot · Aleksandar Spasevski · 2026-06-01 · Engagement start 2025-07-08</span>
       <span class="text-slate-400">Confidential — for MIA Photo Booth.</span>
     </footer>
+    <p class="mt-2 text-[10px] text-slate-400 leading-relaxed">
+      Data sources: Local Dominator 13×13 geo-grid scans (Aug '25 → May '26, 8 tracked queries, ~96 scans);
+      Google Search Console (https://www.miaphotobooth.net/ URL-prefix, 16-month window, 446K impressions / 4,697 clicks);
+      DataForSEO competitor backlink summaries (8 domains) + US/FL search-volume reads (9 keywords).
+      GA4 property 501143766 access confirmed but OAuth re-auth pending — Leads (form_submit + contact_form_submit) and engagement signals (GBP / phone / email clicks, each charted separately) layer in next pass.
+    </p>
   </main>
 
   <script>
@@ -147,31 +194,76 @@
     const $ = id => document.getElementById(id);
 
     // -------- EXEC --------
-    const t = DATA.trajectory.summary;
+    const tl = DATA.trajectory_ld.summary;
+    const tg = DATA.trajectory_gsc.summary;
     const f = DATA.foundation;
-    $('exec-1').innerHTML = `Across the 11 months we've been working together, MIA's Google Maps presence has held a wide footprint citywide — averaging <strong>${f.avg_reach_last6.toLocaleString()} cells reached</strong> per scan across your 8 tracked queries, with a peak of <strong>${t.best_top3} top-3 cells in ${t.best_month}</strong>. You're currently at <strong>${t.latest_top3} top-3 cells</strong> — below the October peak, but on a foundation (reviews, backlinks, reach) that's stronger than every brand currently ranking above you.`;
 
-    $('exec-2').innerHTML = `The diagnosis is now clear and surgical: two settings on the Google Business Profile have been blocking the foundation from translating into rank. We're changing them this week. Combined with a market that's actively reshuffling in our favor — old leaders are slipping, new entrants are rising — the next 90 days are about converting what's already built into ranking gain.`;
+    $('exec-1').innerHTML = `Across the 11 months we've been working together, MIA's organic search has gone from <strong>${tg.first_clicks} clicks in ${tg.first_month}</strong> to a peak of <strong>${tg.peak_clicks} in ${tg.peak_month}</strong> — a <strong>${tg.growth_factor}× climb</strong>. The site now picks up <strong>${tg.total_clicks_window.toLocaleString()} clicks and ${(tg.total_impressions_window/1000).toFixed(0)}K impressions</strong> per year. Google knows your brand exists across the Miami metro service area.`;
+
+    $('exec-2').innerHTML = `Where the foundation hasn't translated yet is into the <em>Maps local pack</em> — average rank ${(10.7).toFixed(1)} across the 8 tracked queries, peak of <strong>${tl.best_top3} top-3 cells in ${tl.best_month}</strong> vs the current ${tl.latest_top3}. The diagnosis is precise: two GBP-level settings (primary category + site phone) are blocking the connection. We're changing them this week. Combined with a market that's actively reshuffling in our favor — old leaders are slipping, new entrants are rising — the next 90 days are about converting the foundation into ranking gain.`;
 
     // -------- CHIPS --------
     $('chips').innerHTML = [
+      { v: tg.total_clicks_window.toLocaleString() + ' clicks', l: '/ year · organic search', good: true },
+      { v: tg.growth_factor + '×', l: `growth · ${tg.first_month} → peak`, good: true },
       { v: f.reviews + ' reviews', l: f.review_rating, good: true },
       { v: f.backlinks + ' backlinks', l: 'beats ' + f.beat_competitors_on_backlinks, good: true },
-      { v: f.avg_reach_last6.toLocaleString() + ' cells', l: 'avg reach / scan · 6mo', good: true },
-      { v: '11', l: 'months of HQDM work · since Jul \'25' },
-      { v: '90', l: 'days to unlock the ceiling' },
+      { v: '90', l: 'days to unlock the local pack' },
     ].map(c => `<span class="chip ${c.good ? 'good' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
 
-    // -------- TRAJECTORY CHART --------
-    $('traj-window').textContent = `${DATA.trajectory.labels[0]} → ${DATA.trajectory.labels[DATA.trajectory.labels.length-1]} · monthly · 8 main queries aggregated`;
+    // -------- GSC CHART --------
+    $('gsc-window').textContent = DATA.trajectory_gsc.labels[0].replace(' *','') + ' → ' + DATA.trajectory_gsc.labels[DATA.trajectory_gsc.labels.length-1].replace(' *','') + ' · monthly · whole site · * = partial month';
+    const pIdx = DATA.trajectory_gsc.partial_index;
+    function splitPartial(arr, partialIdx) {
+      if (partialIdx < 0) return { solid: arr, dashed: arr.map(() => null) };
+      const solid = arr.map((v, i) => i <= partialIdx - 1 ? v : null);
+      const dashed = arr.map((v, i) => i >= partialIdx - 1 ? v : null);
+      return { solid, dashed };
+    }
+    const clicksSplit = splitPartial(DATA.trajectory_gsc.clicks, pIdx);
+    const impSplit = splitPartial(DATA.trajectory_gsc.impressions, pIdx);
+    new Chart($('gsc-chart'), {
+      data: {
+        labels: DATA.trajectory_gsc.labels,
+        datasets: [
+          { type: 'line', label: 'Impressions', data: impSplit.solid,
+            borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.10)', borderWidth: 2.5, tension: .3,
+            pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y', fill: true, spanGaps: false },
+          { type: 'line', label: 'Impressions (partial)', data: impSplit.dashed,
+            borderColor: '#1d5b8a', backgroundColor: 'transparent', borderWidth: 2, tension: .3, borderDash: [5,4],
+            pointRadius: 3, yAxisID: 'y', fill: false, spanGaps: false },
+          { type: 'line', label: 'Clicks', data: clicksSplit.solid,
+            borderColor: '#10b981', backgroundColor: 'transparent', borderWidth: 3, tension: .3,
+            pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y1', fill: false, spanGaps: false },
+          { type: 'line', label: 'Clicks (partial)', data: clicksSplit.dashed,
+            borderColor: '#10b981', backgroundColor: 'transparent', borderWidth: 2, tension: .3, borderDash: [5,4],
+            pointRadius: 3, yAxisID: 'y1', fill: false, spanGaps: false },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: false },
+          tooltip: { backgroundColor: '#0b1220', padding: 10,
+            callbacks: { label: c => `${c.dataset.label.replace(' (partial)','')}: ${c.raw != null ? c.raw.toLocaleString() : '—'}` } } },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: 'impressions / mo', font: { size: 9, weight: '600' }, color: '#1d5b8a' } },
+          y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } }, title: { display: true, text: 'clicks / mo', font: { size: 9, weight: '600' }, color: '#10b981' } },
+        }
+      }
+    });
+    $('gsc-caption').innerHTML = `Both series across the whole site (all queries), aggregated monthly. <strong>${tg.first_clicks} clicks in ${tg.first_month}</strong> → <strong>peak ${tg.peak_clicks} in ${tg.peak_month}</strong> (${tg.growth_factor}× growth). Last-90-days clicks <strong>${DATA.trajectory_gsc.summary.delta_90d_clicks_pct >= 0 ? '+' : ''}${DATA.trajectory_gsc.summary.delta_90d_clicks_pct}%</strong> vs prior 90; impressions <strong>+${DATA.trajectory_gsc.summary.delta_90d_impressions_pct}%</strong> — Google is showing the site more, the next pass closes the conversion to clicks.`;
+
+    // -------- LD TRAJECTORY --------
+    $('traj-window').textContent = `${DATA.trajectory_ld.labels[0]} → ${DATA.trajectory_ld.labels[DATA.trajectory_ld.labels.length-1]} · monthly · 8 main queries aggregated · first-scan-of-month`;
     new Chart($('traj-chart'), {
       data: {
-        labels: DATA.trajectory.labels,
+        labels: DATA.trajectory_ld.labels,
         datasets: [
-          { type: 'line', label: 'Cells reached (top-20)', data: DATA.trajectory.reach,
+          { type: 'line', label: 'Cells reached', data: DATA.trajectory_ld.reach,
             borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.10)', borderWidth: 2.5, tension: .3,
             pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y', fill: true },
-          { type: 'line', label: 'Top-3 cells', data: DATA.trajectory.top3,
+          { type: 'line', label: 'Top-3 cells', data: DATA.trajectory_ld.top3,
             borderColor: '#10b981', backgroundColor: 'transparent', borderWidth: 3, tension: .3,
             pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y1', fill: false },
         ]
@@ -186,16 +278,16 @@
         }
       }
     });
-    $('traj-caption').innerHTML = `Two series across all 8 tracked queries, aggregated per month (first scan of each month, no double-counting). Sep '25 dip is a brief delisting event (worth investigating). Peak <strong>${t.best_top3} top-3 in ${t.best_month}</strong>; latest <strong>${t.latest_top3}</strong>. The gap between peak and latest is precisely the gap the GBP-category fix (Week 1) should close.`;
+    $('traj-caption').innerHTML = `Both series across all 8 tracked queries, aggregated per month (first scan of each month, no double-counting). Sep '25 dip is a brief delisting event (worth investigating). Peak <strong>${tl.best_top3} top-3 in ${tl.best_month}</strong>; latest <strong>${tl.latest_top3}</strong>. The gap between peak and latest is precisely the gap the GBP-category fix (Week 1) should close.`;
 
     // -------- FOUNDATION --------
     $('foundation').innerHTML = [
-      `<strong>${f.reviews} reviews at ${f.review_rating}</strong> — more than every brand currently ranking above you on Maps (Glam Shots 15 · Captured Fun 35 · Luxe Booth 11 · 360 Photo Booth Miami 28). Review profile is grown ${f.review_growth.split(' (')[0]} since engagement start.`,
-      `<strong>${f.backlinks} backlinks from ${f.referring_domains} referring domains</strong> — beats <strong>${f.beat_competitors_on_backlinks}</strong> on raw backlinks and <strong>${f.beat_competitors_on_rd}</strong> on referring-domain breadth. The link foundation is already in place.`,
-      `<strong>${f.avg_reach_last6.toLocaleString()} grid cells of average reach per scan</strong> — Google knows your profile exists everywhere in the Miami metro service area. The job is moving those appearances from positions 4-20 into positions 1-3.`,
-      `<strong>${f.gbp_attributes.join(' · ')}</strong> attributes on the GBP — Google's local-pack ranking model gives diverse-business attributes a small but real boost in 2026.`,
-      `<strong>${f.social_profiles} social profiles</strong> linked in the GBP (Instagram · Facebook · YouTube · LinkedIn · Pinterest · Twitter) — every one is a sameAs signal we'll wire into the LocalBusiness schema in Month 2.`,
-      `<strong>Open since ${f.tenure_open_since}</strong> — 5+ years of operating history and content history that newer competitors don't have.`,
+      `<strong>Organic clicks ${tg.growth_factor}×</strong> in 11 months — ${tg.first_clicks} clicks/mo at engagement start → ${tg.peak_clicks} peak in ${tg.peak_month}. ${tg.total_clicks_window.toLocaleString()} clicks and ${(tg.total_impressions_window/1000).toFixed(0)}K impressions over the year.`,
+      `<strong>${f.reviews} reviews at ${f.review_rating}</strong> — more than every brand currently ranking above you on Maps (Glam Shots 15 · Captured Fun 35 · Luxe Booth 11 · 360 Photo Booth Miami 28). ${f.review_growth}.`,
+      `<strong>${f.backlinks} backlinks from ${f.referring_domains} referring domains</strong> — beats <strong>${f.beat_competitors_on_backlinks}</strong> on raw backlinks and <strong>${f.beat_competitors_on_rd}</strong> on referring-domain breadth.`,
+      `<strong>${f.avg_reach_last6.toLocaleString()} grid cells of average reach per scan</strong> on Maps — Google knows your profile exists everywhere in the Miami metro. The job is moving those appearances from positions 4-20 into positions 1-3.`,
+      `<strong>${f.gbp_attributes.join(' · ')}</strong> attributes on the GBP — Google gives diverse-business attributes a small but real boost in 2026.`,
+      `<strong>${f.social_profiles} social profiles</strong> linked in the GBP — every one is a sameAs signal we'll wire into the LocalBusiness schema in Month 2.`,
     ].map(li => `<li class="flex gap-2"><span class="text-emerald-500 font-bold mt-0.5">✓</span><span>${li}</span></li>`).join('');
 
     // -------- MARKET --------
@@ -209,6 +301,21 @@
       `<li><span class="font-semibold text-slate-700">${m.name.replace(' Photo Booth', '').replace(' Rental Miami', '')}</span>
         <span class="text-emerald-700 font-bold">+${m.delta}</span>
         <div class="text-[10px] text-slate-400">${m.current} top-3 today · ${m.reviews ?? '—'} reviews</div></li>`
+    ).join('');
+
+    // -------- TOP GSC QUERIES --------
+    $('top-queries').innerHTML = DATA.gsc_queries.slice(0, 10).map(q =>
+      `<tr><td>${q.q.length > 38 ? q.q.slice(0, 36) + '…' : q.q}</td>
+        <td class="num font-semibold">${q.clicks}</td>
+        <td class="num text-slate-500">${q.impressions.toLocaleString()}</td>
+        <td class="num text-slate-500">${q.position}</td></tr>`
+    ).join('');
+
+    // -------- INDEXATION OPPORTUNITY --------
+    $('indexation').innerHTML = DATA.gsc_indexation_signal.high_imp_no_clicks.map(q =>
+      `<tr><td>${q.q.length > 38 ? q.q.slice(0, 36) + '…' : q.q}</td>
+        <td class="num font-semibold text-rose-700">${q.imp.toLocaleString()}</td>
+        <td class="num text-slate-500">${q.pos}</td></tr>`
     ).join('');
 
     // -------- FOCUS MONTHS --------
@@ -231,7 +338,7 @@
     ).join('');
 
     // -------- TASK CHECKLIST --------
-    $('task-intro').textContent = `${DATA.task_count} discrete tasks across the 90-day window, grouped by month and week. Print this page or tick boxes as items ship.`;
+    $('task-intro').innerHTML = `<strong>${DATA.task_count}</strong> discrete tasks across the 90-day window, grouped by month and week. Print this page or tick boxes as items ship.`;
     let html = '';
     for (const [month, tasks] of Object.entries(DATA.tasks_by_month)) {
       html += `<div class="mb-4">

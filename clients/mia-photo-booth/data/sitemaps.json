@@ -1,0 +1,47 @@
+{
+  "sitemap": [
+    {
+      "path": "https://www.miaphotobooth.net/sitemap.xml",
+      "lastSubmitted": "2025-01-26T14:00:44.682Z",
+      "isPending": false,
+      "isSitemapsIndex": true,
+      "lastDownloaded": "2026-05-23T20:34:19.615Z",
+      "warnings": "2",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "105",
+          "indexed": "0"
+        },
+        {
+          "type": "image",
+          "submitted": "61",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://www.miaphotobooth.net/blog-posts-sitemap.xml",
+      "lastSubmitted": "2023-09-04T11:13:07.571Z",
+      "isPending": false,
+      "isSitemapsIndex": false,
+      "type": "sitemap",
+      "lastDownloaded": "2026-06-01T05:43:10.076Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "61",
+          "indexed": "0"
+        },
+        {
+          "type": "image",
+          "submitted": "61",
+          "indexed": "0"
+        }
+      ]
+    }
+  ]
+}
