@@ -189,11 +189,11 @@
         </table></div>
       </div>
       <div class="panel" style="border-left: 4px solid #f59e0b;">
-        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Hidden opportunity · high impressions, zero clicks</div>
-        <p class="text-xs text-slate-500 mb-2">Queries where MIA's page is shown but no one clicks. Likely cause: the local pack or AI Overview is consuming all the visible attention above the organic results. These are the queries Lever A unblocks first.</p>
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Already appearing — clicks leaking</div>
+        <p class="text-xs text-slate-500 mb-2">Commercial queries where Google already shows MIA across the Miami metro, but the local pack and higher organic results absorb the click before it reaches the site. They convert to near-zero today — the GBP-category fix (Lever A) + booth-type pages are what unlock them.</p>
         <div class="overflow-x-auto"><table class="w-full text-sm ttable">
           <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
-            <th>Query</th><th class="num">Impressions</th><th class="num">Avg Pos</th><th>Diagnosis</th>
+            <th>Query</th><th class="num">Imp · 90d</th><th class="num">Clicks</th><th class="num">Pos</th><th>What unlocks it</th>
           </tr></thead>
           <tbody id="gsc-indexation"></tbody>
         </table></div>
@@ -215,6 +215,23 @@
         <div class="v" id="gsc-tile-q90-v">—</div>
         <div class="s" id="gsc-tile-q90-sub">—</div>
       </div>
+    </div>
+  </section>
+
+  <section id="opportunity" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Miami search opportunity · volume → potential leads</h2>
+    <p class="text-sm text-ink-500 mb-4" id="opp-intro">—</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4" id="opp-tiles"></div>
+    <div class="panel">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Every tracked commercial query · modeled on real Miami-metro search volume</div>
+      <div class="overflow-x-auto"><table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th><th class="num">Miami SV/mo</th><th class="num">Rank now</th><th class="num">Target CTR</th><th class="num">Potential clicks/mo</th><th class="num">Potential leads/mo</th>
+        </tr></thead>
+        <tbody id="opp-rows-full"></tbody>
+        <tfoot id="opp-foot-full"></tfoot>
+      </table></div>
+      <p class="text-[11px] text-slate-500 mt-3 leading-relaxed" id="opp-method-full"></p>
     </div>
   </section>
 
@@ -550,9 +567,9 @@
         `<tr><td>${q.q}</td><td class="num font-semibold">${q.clicks}</td><td class="num text-slate-500">${q.impressions.toLocaleString()}</td><td class="num text-slate-500">${q.position}</td><td class="num text-slate-500">${q.ctr_pct}%</td></tr>`
       ).join('');
 
-      document.getElementById('gsc-indexation').innerHTML = DATA.gsc_indexation_signal.high_imp_no_clicks.map(q => {
-        const dx = q.pos < 5 ? 'SERP-pack/AI Overview suppression — Maps fix unlocks' : (q.pos < 11 ? 'Snippet/CTR issue — title+meta refresh' : 'Page-2 result — needs on-page lift');
-        return `<tr><td>${q.q}</td><td class="num font-semibold text-rose-700">${q.imp.toLocaleString()}</td><td class="num text-slate-500">${q.pos}</td><td class="text-xs text-slate-600">${dx}</td></tr>`;
+      document.getElementById('gsc-indexation').innerHTML = DATA.opportunity_model.gsc_buried.map(q => {
+        const dx = q.pos < 5 ? 'Local pack + organic above absorb the click — GBP-category fix lifts the listing' : (q.pos < 11 ? 'Just outside the pack — booth-type landing page + on-page lift' : 'Page-2 organic — dedicated Miami booth-type page needed');
+        return `<tr><td>${q.q}</td><td class="num font-semibold text-rose-700">${q.imp.toLocaleString()}</td><td class="num ${q.clicks ? 'text-slate-500' : 'text-rose-700 font-semibold'}">${q.clicks}</td><td class="num text-slate-500">${q.pos}</td><td class="text-xs text-slate-600">${dx}</td></tr>`;
       }).join('');
 
       document.getElementById('gsc-tile-clicks').textContent = tg.summary.total_clicks_window.toLocaleString();
@@ -564,6 +581,36 @@
       tile.classList.add(dp >= 0 ? 'good' : 'watch');
       document.getElementById('gsc-tile-q90-v').innerHTML = `${dp >= 0 ? '+' : ''}${dp}% clicks · +${tg.summary.delta_90d_impressions_pct}% imp`;
       document.getElementById('gsc-tile-q90-sub').textContent = `Impressions growing while clicks dipped — exactly the pattern the Maps fix corrects`;
+    }
+
+    // ============ MIAMI OPPORTUNITY MODEL ============
+    if (DATA.opportunity_model) {
+      const o = DATA.opportunity_model;
+      const rankCell = r => r.ranks ? `#${r.pos}` : `<span class="text-slate-400">not yet</span>`;
+      $('opp-intro').innerHTML = `A conservative model built on real Miami-metro Google Ads search volume — what these commercial queries could return once MIA reaches a realistic top-3 local + organic position. Today they convert to almost no clicks. <strong>${o.totals.n} queries · ${o.totals.sv.toLocaleString()} Miami searches/mo.</strong>`;
+      $('opp-rows-full').innerHTML = o.rows.map(r =>
+        `<tr><td>${r.q}</td>
+          <td class="num font-semibold">${r.sv.toLocaleString()}</td>
+          <td class="num">${rankCell(r)}</td>
+          <td class="num text-slate-500">${r.ctr}%</td>
+          <td class="num font-semibold text-brand-500">${r.pot_clicks.toLocaleString()}</td>
+          <td class="num font-semibold text-emerald-700">${r.pot_leads.toFixed(1)}</td></tr>`
+      ).join('');
+      $('opp-foot-full').innerHTML =
+        `<tr style="border-top:2px solid #e2e8f0;font-weight:800;background:#f8fafc;">
+          <td>All ${o.totals.n} queries</td>
+          <td class="num">${o.totals.sv.toLocaleString()}</td>
+          <td class="num text-slate-400">—</td>
+          <td class="num text-slate-400">—</td>
+          <td class="num text-brand-500">${o.totals.pot_clicks.toLocaleString()}</td>
+          <td class="num text-emerald-700">${o.totals.pot_leads.toFixed(1)}</td></tr>`;
+      $('opp-tiles').innerHTML = [
+        { l: 'Potential clicks · per month', v: o.totals.pot_clicks.toLocaleString(), s: 'high-intent commercial · ≈0 captured today' },
+        { l: 'Potential leads · per month', v: '~' + Math.round(o.totals.pot_leads) + '–' + Math.round(o.totals.pot_leads_high), s: 'at ' + o.lead_rate_pct + '–' + o.lead_rate_high_pct + '% lead rate · site-blended is ' + o.site_blended_lead_rate_pct + '%' },
+        { l: 'Potential leads · annualized', v: '~' + o.totals.pot_leads_annual, s: 'at ' + o.lead_rate_pct + '% · ' + o.totals.pot_clicks_annual.toLocaleString() + ' clicks/yr' },
+      ].map(t => `<div class="stat-tile good"><div class="l">${t.l}</div><div class="v">${t.v}</div><div class="s">${t.s}</div></div>`).join('');
+      $('opp-method-full').innerHTML = o.methodology_html + ` CTR curve by current rank: ` +
+        Object.entries(o.ctr_curve).map(([k, v]) => `${k} → ${v}%`).join(' · ') + `.`;
     }
 
     // ============ SEPT 2025 DIP ============

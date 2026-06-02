@@ -351,6 +351,406 @@
   "brand_impressions": 52,
   "nonbrand_impressions": 72597
  },
+ "opportunity_model": {
+  "lead_rate_pct": 2.0,
+  "lead_rate_high_pct": 3.0,
+  "ctr_curve": {
+   "rank 1-3": 35,
+   "rank 4-10": 28,
+   "rank 11-30": 18,
+   "not ranking / 30+": 15
+  },
+  "volume_basis": "DataForSEO Google Ads monthly search volume, Miami metro (Miami,Florida,United States)",
+  "site_blended_lead_rate_pct": 0.8,
+  "rows": [
+   {
+    "q": "photo booth rental",
+    "sv": 260,
+    "pos": 7.5,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 73,
+    "pot_leads": 1.5,
+    "gsc_imp_90d": 821,
+    "gsc_clicks_90d": 9,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "rent a photo booth",
+    "sv": 260,
+    "pos": 8.7,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 73,
+    "pot_leads": 1.5,
+    "gsc_imp_90d": 144,
+    "gsc_clicks_90d": 0,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "photo booth rentals",
+    "sv": 260,
+    "pos": 6.4,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 73,
+    "pot_leads": 1.5,
+    "gsc_imp_90d": 144,
+    "gsc_clicks_90d": 1,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "photo booth miami",
+    "sv": 260,
+    "pos": 11.6,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 47,
+    "pot_leads": 0.9,
+    "gsc_imp_90d": 482,
+    "gsc_clicks_90d": 6,
+    "competition": "HIGH"
+   },
+   {
+    "q": "photo booth rental miami",
+    "sv": 110,
+    "pos": 13.0,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 20,
+    "pot_leads": 0.4,
+    "gsc_imp_90d": 2029,
+    "gsc_clicks_90d": 13,
+    "competition": "HIGH"
+   },
+   {
+    "q": "miami photo booth rental",
+    "sv": 110,
+    "pos": 13.6,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 20,
+    "pot_leads": 0.4,
+    "gsc_imp_90d": 488,
+    "gsc_clicks_90d": 1,
+    "competition": "HIGH"
+   },
+   {
+    "q": "photo booth rental near me",
+    "sv": 50,
+    "pos": 5.0,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 14,
+    "pot_leads": 0.3,
+    "gsc_imp_90d": 213,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "wedding photo booth rental",
+    "sv": 50,
+    "pos": 8.7,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 14,
+    "pot_leads": 0.3,
+    "gsc_imp_90d": 17,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "party photo booth rental",
+    "sv": 40,
+    "pos": 1.2,
+    "ranks": true,
+    "ctr": 35,
+    "tier": "edge",
+    "pot_clicks": 14,
+    "pot_leads": 0.3,
+    "gsc_imp_90d": 141,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "360 photo booth rental",
+    "sv": 50,
+    "pos": 10.8,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 9,
+    "pot_leads": 0.2,
+    "gsc_imp_90d": 165,
+    "gsc_clicks_90d": 0,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "360 photo booth rental miami",
+    "sv": 30,
+    "pos": 15.0,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 5,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 368,
+    "gsc_clicks_90d": 0,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "photo booth rental fort lauderdale",
+    "sv": 20,
+    "pos": 60.2,
+    "ranks": true,
+    "ctr": 15,
+    "tier": "build",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 4,
+    "gsc_clicks_90d": 0,
+    "competition": "HIGH"
+   },
+   {
+    "q": "photo booth company",
+    "sv": 10,
+    "pos": 9.1,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 104,
+    "gsc_clicks_90d": 0,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "digital photo booth rental",
+    "sv": 10,
+    "pos": 9.0,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 28,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "corporate event photo booth",
+    "sv": 10,
+    "pos": 5.0,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 1,
+    "gsc_clicks_90d": 0,
+    "competition": "HIGH"
+   },
+   {
+    "q": "event photo booth rental",
+    "sv": 10,
+    "pos": 9.2,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 31,
+    "gsc_clicks_90d": 0,
+    "competition": null
+   },
+   {
+    "q": "audio guestbook rental",
+    "sv": 10,
+    "pos": 5.0,
+    "ranks": true,
+    "ctr": 28,
+    "tier": "close",
+    "pot_clicks": 3,
+    "pot_leads": 0.1,
+    "gsc_imp_90d": 2,
+    "gsc_clicks_90d": 0,
+    "competition": null
+   },
+   {
+    "q": "glam photo booth",
+    "sv": 10,
+    "pos": 19.7,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 34,
+    "gsc_clicks_90d": 0,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "glam photo booth rental",
+    "sv": 10,
+    "pos": 18.6,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 86,
+    "gsc_clicks_90d": 1,
+    "competition": "LOW"
+   },
+   {
+    "q": "social booth rental",
+    "sv": 10,
+    "pos": 10.2,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 120,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "roamer photo booth",
+    "sv": 10,
+    "pos": 24.3,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 154,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   },
+   {
+    "q": "black and white photo booth",
+    "sv": 10,
+    "pos": null,
+    "ranks": false,
+    "ctr": 15,
+    "tier": "build",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": null,
+    "gsc_clicks_90d": null,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "selfie photo booth rental",
+    "sv": 10,
+    "pos": 78.1,
+    "ranks": true,
+    "ctr": 15,
+    "tier": "build",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 26,
+    "gsc_clicks_90d": 0,
+    "competition": "HIGH"
+   },
+   {
+    "q": "mirror photo booth rental",
+    "sv": 10,
+    "pos": null,
+    "ranks": false,
+    "ctr": 15,
+    "tier": "build",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": null,
+    "gsc_clicks_90d": null,
+    "competition": "MEDIUM"
+   },
+   {
+    "q": "open air photo booth rental",
+    "sv": 10,
+    "pos": 19.5,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 2,
+    "gsc_clicks_90d": 0,
+    "competition": null
+   },
+   {
+    "q": "wedding photo booth miami",
+    "sv": 10,
+    "pos": 14.7,
+    "ranks": true,
+    "ctr": 18,
+    "tier": "push",
+    "pot_clicks": 2,
+    "pot_leads": 0.0,
+    "gsc_imp_90d": 75,
+    "gsc_clicks_90d": 0,
+    "competition": "LOW"
+   }
+  ],
+  "totals": {
+   "sv": 1640,
+   "pot_clicks": 398,
+   "pot_leads": 8.0,
+   "pot_leads_annual": 96,
+   "pot_leads_high": 11.9,
+   "pot_clicks_annual": 4776,
+   "n": 26
+  },
+  "gsc_buried": [
+   {
+    "q": "social photo booth rental miami",
+    "imp": 13146,
+    "clicks": 0,
+    "pos": 4.1
+   },
+   {
+    "q": "glam photo booth miami",
+    "imp": 5843,
+    "clicks": 0,
+    "pos": 11.0
+   },
+   {
+    "q": "photo booth rental miami",
+    "imp": 2029,
+    "clicks": 13,
+    "pos": 13.0
+   },
+   {
+    "q": "360 photo booth rental miami",
+    "imp": 368,
+    "clicks": 0,
+    "pos": 15.0
+   },
+   {
+    "q": "roamer photo booth miami",
+    "imp": 174,
+    "clicks": 0,
+    "pos": 8.3
+   },
+   {
+    "q": "black and white photo booth miami",
+    "imp": 104,
+    "clicks": 0,
+    "pos": 14.5
+   }
+  ],
+  "methodology_html": "<strong>Volume</strong> = Google Ads monthly searches in the Miami metro (DataForSEO). <strong>Potential clicks</strong> = volume x target click-through if MIA reaches a realistic top-3 local + organic position (35% if ranked 1-3 today, 28% if 4-10, 18% if 11-30, 15% if not yet ranking). <strong>Potential leads</strong> = potential clicks x 2.0% lead rate \u2014 conservative: MIA's blog-diluted site-wide rate is 0.8% (GA4), commercial-rental pages typically run 3-5%. Leads count form_submit + contact_form_submit only; phone, email and GBP\u2192site clicks are tracked separately."
+ },
  "ga4": {
   "labels": [
    "Aug '25",
@@ -362,8 +762,7 @@
    "Feb '26",
    "Mar '26",
    "Apr '26",
-   "May '26",
-   "Jun '26 *"
+   "May '26"
   ],
   "sessions": [
    212,
@@ -375,8 +774,7 @@
    1911,
    1570,
    1342,
-   1474,
-   88
+   1474
   ],
   "organic": [
    58,
@@ -388,8 +786,7 @@
    1434,
    1176,
    1013,
-   1135,
-   32
+   1135
   ],
   "leads": [
    9,
@@ -401,8 +798,7 @@
    9,
    10,
    14,
-   10,
-   1
+   10
   ],
   "phone_clicks": [
    1,
@@ -414,8 +810,7 @@
    5,
    5,
    2,
-   5,
-   0
+   5
   ],
   "email_clicks": [
    0,
@@ -427,7 +822,6 @@
    2,
    0,
    3,
-   0,
    0
   ],
   "gmb_clicks": [
@@ -440,10 +834,9 @@
    15,
    27,
    26,
-   9,
-   0
+   9
   ],
-  "partial_index": 10,
+  "partial_index": -1,
   "summary": {
    "first_month": "2025-08",
    "first_sessions": 212,
@@ -542,6 +935,29 @@
   "organic_peak_month": "Jan '26"
  },
  "market": {
+  "client_movement": {
+   "name": "MIA Photo Booth",
+   "current_top3": 46,
+   "start_top3": 67,
+   "d_top3": -21,
+   "current_reach": 712,
+   "start_reach": 1049,
+   "d_reach": -337,
+   "conv_pct": 6
+  },
+  "benchmark": {
+   "field_n": 29,
+   "field_median_top3": 83,
+   "field_mean_top3": 134,
+   "leaders_n": 8,
+   "leaders_mean_top3": 321,
+   "leaders_mean_reach": 1105,
+   "leaders_conv_pct": 29,
+   "leaders_max_top3": 419,
+   "client_top3": 46,
+   "client_reach": 712,
+   "client_conv_pct": 6
+  },
   "movers_down": [
    {
     "name": "VIP Party Photo Booth LLC.",
@@ -595,7 +1011,7 @@
     "reviews": 18
    }
   ],
-  "summary_html": "<strong>The Maps leaderboard is reshuffling.</strong> Across the same 11-month window we've been tracking, the prior leaders are losing ground \u2014 <strong>Glam Shots</strong> down 283 top-3 cells, <strong>VIP Party Photo Booth</strong> down 381 \u2014 while three brands rose from near-zero: <strong>Captured Fun</strong> (+358), <strong>Luxe Booth</strong> (+319), <strong>Capture Pod</strong> (+274). That's a moment of category-flux. Brands with strong foundations who align their GBP correctly can move up the leaderboard fast \u2014 that's the exact opportunity the 90-day plan below targets."
+  "summary_html": "<strong>The Maps leaderboard is reshuffling.</strong> Across the tracking window the prior leaders slid \u2014 <strong>Glam Shots</strong> down 283 top-3 cells, <strong>VIP Party Photo Booth</strong> down 381 \u2014 while three brands rose from near-zero: <strong>Captured Fun</strong> (+358), <strong>Luxe Booth</strong> (+319), <strong>Capture Pod</strong> (+274). That's category-flux \u2014 brands that align their GBP correctly climb fast. MIA's own movement and how it stacks against the field is below: the foundation is there, the top-3 conversion is what the 90-day plan unlocks."
  },
  "focus_months": [
   {

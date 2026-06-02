@@ -95,6 +95,9 @@
           <ul class="space-y-2.5 text-sm text-slate-700" id="findings-c"></ul>
         </div>
       </div>
+      <div class="panel mt-3" style="background:#ecfdf5;border-color:#a7f3d0">
+        <p class="text-sm text-slate-700 leading-relaxed" id="opp-line-c"></p>
+      </div>
     </section>
 
     <section class="mb-5">
@@ -193,6 +196,11 @@
     if (DATA.sept_dip) findings.push(`<strong>Sept 2025 reach dip — diagnosed.</strong> A one-month Maps-pack compression coinciding with a GBP name + category change; GSC and GA4 both stayed healthy through it (sessions actually rose). Fully recovered the next scan cycle — so we sequence GBP edits one at a time.`);
     if (DATA.serp_audit) findings.push(`<strong>"social photo booth rental miami" (13K imp / 0 clicks) — diagnosed.</strong> Live SERP capture shows local-pack + organic burial, no AI Overview. Fix = the GBP-category change (earns the pack) + a dedicated Social Booth page.`);
     $('findings-c').innerHTML = findings.map(f => `<li class="flex gap-2"><span class="text-emerald-600 font-bold mt-0.5">✓</span><span>${f}</span></li>`).join('');
+
+    if (DATA.opportunity_model) {
+      const o = DATA.opportunity_model;
+      $('opp-line-c').innerHTML = `<strong class="text-emerald-700">Miami-search upside.</strong> ${o.totals.n} commercial queries carry <strong>${o.totals.sv.toLocaleString()} searches/mo</strong> in the Miami metro. At a realistic top-3 local + organic position that's <strong>~${o.totals.pot_clicks.toLocaleString()} high-intent clicks/mo</strong> → <strong>~${Math.round(o.totals.pot_leads)}–${Math.round(o.totals.pot_leads_high)} leads/mo</strong> at a ${o.lead_rate_pct}–${o.lead_rate_high_pct}% lead rate — vs ≈0 captured today. <span class="text-slate-500">Full volume → leads table on the strategy page.</span>`;
+    }
 
     // Levers
     $('levers').innerHTML = DATA.levers.map(l => `<div class="panel" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">
