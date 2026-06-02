@@ -7,6 +7,7 @@
   <title>MIA Photo Booth · Client Snapshot · HQDM</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -440,31 +441,35 @@
     });
     $('gsc-caption').innerHTML = `Both series across the whole site (all queries), aggregated monthly. <strong>${tg.first_clicks} clicks in ${tg.first_month}</strong> → <strong>peak ${tg.peak_clicks} in ${tg.peak_month}</strong> (${tg.growth_factor}× growth). Last-90-days clicks <strong>${DATA.trajectory_gsc.summary.delta_90d_clicks_pct >= 0 ? '+' : ''}${DATA.trajectory_gsc.summary.delta_90d_clicks_pct}%</strong> vs prior 90; impressions <strong>+${DATA.trajectory_gsc.summary.delta_90d_impressions_pct}%</strong> — Google is showing the site more, the next pass closes the conversion to clicks.`;
 
-    // -------- LD TRAJECTORY --------
-    $('traj-window').textContent = `${DATA.trajectory_ld.labels[0]} → ${DATA.trajectory_ld.labels[DATA.trajectory_ld.labels.length-1]} · monthly · 8 main queries aggregated · first-scan-of-month`;
+    // -------- LD TRAJECTORY (denser — every scan reading on a true timeline) --------
+    const dz = DATA.trajectory_ld.dense;
+    const fmtD = iso => { const mo = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']; const [y, m] = iso.split('-'); return mo[+m - 1] + " '" + y.slice(2); };
+    const dzPeak = Math.max(...dz.top3), dzPeakDate = fmtD(dz.dates[dz.top3.indexOf(dzPeak)]), dzLatest = dz.top3[dz.top3.length - 1];
+    $('traj-window').textContent = `${dz.n_readings} scan readings from ${dz.n_scan_records} records · ${fmtD(dz.dates[0])} → ${fmtD(dz.dates[dz.dates.length - 1])} · true timeline · 8 main queries`;
     new Chart($('traj-chart'), {
       data: {
-        labels: DATA.trajectory_ld.labels,
         datasets: [
-          { type: 'line', label: 'Cells reached', data: DATA.trajectory_ld.reach,
+          { type: 'line', label: 'Cells reached', data: dz.dates.map((d, i) => ({ x: d, y: dz.reach[i] })),
             borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.10)', borderWidth: 2.5, tension: .3,
             pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y', fill: true },
-          { type: 'line', label: 'Top-3 cells', data: DATA.trajectory_ld.top3,
+          { type: 'line', label: 'Top-3 cells', data: dz.dates.map((d, i) => ({ x: d, y: dz.top3[i] })),
             borderColor: '#10b981', backgroundColor: 'transparent', borderWidth: 3, tension: .3,
             pointRadius: 3, pointHoverRadius: 6, yAxisID: 'y1', fill: false },
         ]
       },
       options: {
         responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+        plugins: { legend: { display: false },
+          tooltip: { backgroundColor: '#0b1220', padding: 10,
+            callbacks: { afterBody: items => { const k = dz.kws_per_reading[items[0].dataIndex]; return k < 8 ? `${k} of 8 keywords scanned` : ''; } } } },
         scales: {
-          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
           y: { position: 'left', beginAtZero: true, grid: { color: 'rgba(0,0,0,.05)' }, ticks: { font: { size: 9 } }, title: { display: true, text: 'cells reached (top-20)', font: { size: 9, weight: '600' }, color: '#1d5b8a' } },
           y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } }, title: { display: true, text: 'top-3 cells', font: { size: 9, weight: '600' }, color: '#10b981' } },
         }
       }
     });
-    $('traj-caption').innerHTML = `Both series across all 8 tracked queries, aggregated per month (first scan of each month, no double-counting). The Sep '25 one-month dip is diagnosed and already recovered — a Maps-pack reshuffle alongside a GBP name/category edit, not a delisting (GSC traffic and site sessions kept climbing straight through it). Peak <strong>${tl.best_top3} top-3 in ${tl.best_month}</strong>; latest <strong>${tl.latest_top3}</strong>. The gap between peak and latest is precisely the gap the GBP-category fix (Week 1) should close.`;
+    $('traj-caption').innerHTML = `Every full-coverage scan reading across the 8 tracked queries, plotted on a real timeline — the ${dz.n_scan_records} raw scans form <strong>${dz.n_readings} readings</strong> (early months were split across two dates for one wave each; the cadence tightened to roughly weekly from March, so the recent stretch has more resolution). The Sep '25 dip is the diagnosed one-off — a Maps-pack reshuffle alongside a GBP edit, recovered by the next reading (GSC traffic and sessions kept climbing through it). Peak <strong>${dzPeak} top-3 (${dzPeakDate})</strong>; latest <strong>${dzLatest}</strong> — closing that gap is the GBP-category fix (Week 1).`;
 
     // -------- GA4 — website behavior + leads --------
     (function () {
