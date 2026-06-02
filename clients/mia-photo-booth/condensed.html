@@ -197,9 +197,9 @@
     if (DATA.serp_audit) findings.push(`<strong>"social photo booth rental miami" (13K imp / 0 clicks) — diagnosed.</strong> Live SERP capture shows local-pack + organic burial, no AI Overview. Fix = the GBP-category change (earns the pack) + a dedicated Social Booth page.`);
     $('findings-c').innerHTML = findings.map(f => `<li class="flex gap-2"><span class="text-emerald-600 font-bold mt-0.5">✓</span><span>${f}</span></li>`).join('');
 
-    if (DATA.opportunity_model) {
+    if (DATA.opportunity_model && DATA.opportunity_model.clusters) {
       const o = DATA.opportunity_model;
-      $('opp-line-c').innerHTML = `<strong class="text-emerald-700">Miami-search upside.</strong> ${o.totals.n} commercial queries carry <strong>${o.totals.sv.toLocaleString()} searches/mo</strong> in the Miami metro. At a realistic top-3 local + organic position that's <strong>~${o.totals.pot_clicks.toLocaleString()} high-intent clicks/mo</strong> → <strong>~${Math.round(o.totals.pot_leads)}–${Math.round(o.totals.pot_leads_high)} leads/mo</strong> at a ${o.lead_rate_pct}–${o.lead_rate_high_pct}% lead rate — vs ≈0 captured today. <span class="text-slate-500">Full volume → leads table on the strategy page.</span>`;
+      $('opp-line-c').innerHTML = `<strong class="text-emerald-700">Miami-search upside.</strong> ${o.totals.n_keywords} keywords across <strong>${o.totals.n_clusters} clusters</strong> (near-duplicates counted once) carry <strong>${o.totals.volume.toLocaleString()} searches/mo</strong>. They earn <strong>${o.totals.cur_traffic} clicks/mo</strong> today; at a top-3 position that's <strong>+${o.totals.pot_gain.toLocaleString()} clicks/mo</strong> → <strong>~${Math.round(o.totals.new_leads)}–${Math.round(o.totals.new_leads_high)} leads/mo</strong> at a ${o.lead_rate_pct}–${o.lead_rate_high_pct}% lead rate. <span class="text-slate-500">Full cluster table on the strategy page.</span>`;
     }
 
     // Levers

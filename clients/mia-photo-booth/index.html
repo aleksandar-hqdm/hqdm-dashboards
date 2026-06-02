@@ -219,14 +219,14 @@
   </section>
 
   <section id="opportunity" class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-    <h2 class="text-2xl font-bold tracking-tight mb-1">Miami search opportunity · volume → potential leads</h2>
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Miami search opportunity · current → potential</h2>
     <p class="text-sm text-ink-500 mb-4" id="opp-intro">—</p>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4" id="opp-tiles"></div>
     <div class="panel">
-      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Every tracked commercial query · modeled on real Miami-metro search volume</div>
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Keyword clusters · what each earns today vs. at a top-3 position</div>
       <div class="overflow-x-auto"><table class="w-full text-sm ttable">
         <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
-          <th>Query</th><th class="num">Miami SV/mo</th><th class="num">Rank now</th><th class="num">Target CTR</th><th class="num">Potential clicks/mo</th><th class="num">Potential leads/mo</th>
+          <th>Keyword cluster</th><th class="num">Vol/mo</th><th class="num">Rank now → target</th><th class="num">Clicks now/mo</th><th class="num">Target CTR</th><th class="num">Potential traffic +gain/mo</th><th class="num">New leads/mo</th>
         </tr></thead>
         <tbody id="opp-rows-full"></tbody>
         <tfoot id="opp-foot-full"></tfoot>
@@ -583,34 +583,40 @@
       document.getElementById('gsc-tile-q90-sub').textContent = `Impressions growing while clicks dipped — exactly the pattern the Maps fix corrects`;
     }
 
-    // ============ MIAMI OPPORTUNITY MODEL ============
-    if (DATA.opportunity_model) {
+    // ============ MIAMI OPPORTUNITY MODEL (clusters) ============
+    if (DATA.opportunity_model && DATA.opportunity_model.clusters) {
       const o = DATA.opportunity_model;
-      const rankCell = r => r.ranks ? `#${r.pos}` : `<span class="text-slate-400">not yet</span>`;
-      $('opp-intro').innerHTML = `A conservative model built on real Miami-metro Google Ads search volume — what these commercial queries could return once MIA reaches a realistic top-3 local + organic position. Today they convert to almost no clicks. <strong>${o.totals.n} queries · ${o.totals.sv.toLocaleString()} Miami searches/mo.</strong>`;
-      $('opp-rows-full').innerHTML = o.rows.map(r =>
-        `<tr><td>${r.q}</td>
-          <td class="num font-semibold">${r.sv.toLocaleString()}</td>
-          <td class="num">${rankCell(r)}</td>
-          <td class="num text-slate-500">${r.ctr}%</td>
-          <td class="num font-semibold text-brand-500">${r.pot_clicks.toLocaleString()}</td>
-          <td class="num font-semibold text-emerald-700">${r.pot_leads.toFixed(1)}</td></tr>`
+      const rankCell = r => r.cur_rank != null
+        ? `#${r.cur_rank} <span class="text-slate-400">→ ${r.target_rank}</span>`
+        : `<span class="text-slate-400">not ranking → ${r.target_rank}</span>`;
+      const gainCell = r => r.pot_gain > 0
+        ? `<span class="text-emerald-700 font-semibold">+${r.pot_gain.toLocaleString()}</span>`
+        : `<span class="text-slate-400">held</span>`;
+      $('opp-intro').innerHTML = `Near-duplicate keywords are grouped into clusters so shared demand is counted once. Volume is real Miami search demand (metro + the explicit city searches we target). Each cluster's current clicks come from GSC; potential is what it earns at a top-3 local + organic position. <strong>${o.totals.n_clusters} clusters · ${o.totals.n_keywords} keywords · ${o.totals.volume.toLocaleString()} searches/mo.</strong>`;
+      $('opp-rows-full').innerHTML = o.clusters.map(r =>
+        `<tr><td>${r.cluster}</td>
+          <td class="num font-semibold">${r.volume.toLocaleString()}</td>
+          <td class="num whitespace-nowrap">${rankCell(r)}</td>
+          <td class="num text-slate-500">${r.cur_traffic}</td>
+          <td class="num text-slate-500">${r.target_ctr}%</td>
+          <td class="num">${gainCell(r)}</td>
+          <td class="num font-semibold text-emerald-700">${r.new_leads.toFixed(1)}</td></tr>`
       ).join('');
       $('opp-foot-full').innerHTML =
         `<tr style="border-top:2px solid #e2e8f0;font-weight:800;background:#f8fafc;">
-          <td>All ${o.totals.n} queries</td>
-          <td class="num">${o.totals.sv.toLocaleString()}</td>
+          <td>All ${o.totals.n_clusters} clusters · ${o.totals.n_keywords} keywords</td>
+          <td class="num">${o.totals.volume.toLocaleString()}</td>
+          <td class="num text-slate-400">→ ${o.target_label}</td>
+          <td class="num">${o.totals.cur_traffic}</td>
           <td class="num text-slate-400">—</td>
-          <td class="num text-slate-400">—</td>
-          <td class="num text-brand-500">${o.totals.pot_clicks.toLocaleString()}</td>
-          <td class="num text-emerald-700">${o.totals.pot_leads.toFixed(1)}</td></tr>`;
+          <td class="num text-emerald-700">+${o.totals.pot_gain.toLocaleString()}</td>
+          <td class="num text-emerald-700">${o.totals.new_leads.toFixed(1)}</td></tr>`;
       $('opp-tiles').innerHTML = [
-        { l: 'Potential clicks · per month', v: o.totals.pot_clicks.toLocaleString(), s: 'high-intent commercial · ≈0 captured today' },
-        { l: 'Potential leads · per month', v: '~' + Math.round(o.totals.pot_leads) + '–' + Math.round(o.totals.pot_leads_high), s: 'at ' + o.lead_rate_pct + '–' + o.lead_rate_high_pct + '% lead rate · site-blended is ' + o.site_blended_lead_rate_pct + '%' },
-        { l: 'Potential leads · annualized', v: '~' + o.totals.pot_leads_annual, s: 'at ' + o.lead_rate_pct + '% · ' + o.totals.pot_clicks_annual.toLocaleString() + ' clicks/yr' },
+        { l: 'Potential traffic gained · per month', v: '+' + o.totals.pot_gain.toLocaleString(), s: 'high-intent clicks · vs ' + o.totals.cur_traffic + ' captured today' },
+        { l: 'New leads · per month', v: '~' + Math.round(o.totals.new_leads) + '–' + Math.round(o.totals.new_leads_high), s: 'at ' + o.lead_rate_pct + '–' + o.lead_rate_high_pct + '% lead rate · site-blended is ' + o.site_blended_lead_rate_pct + '%' },
+        { l: 'New leads · annualized', v: '~' + o.totals.new_leads_annual, s: 'at ' + o.lead_rate_pct + '% · ' + o.totals.pot_gain_annual.toLocaleString() + ' added clicks/yr' },
       ].map(t => `<div class="stat-tile good"><div class="l">${t.l}</div><div class="v">${t.v}</div><div class="s">${t.s}</div></div>`).join('');
-      $('opp-method-full').innerHTML = o.methodology_html + ` CTR curve by current rank: ` +
-        Object.entries(o.ctr_curve).map(([k, v]) => `${k} → ${v}%`).join(' · ') + `.`;
+      $('opp-method-full').innerHTML = o.methodology_html;
     }
 
     // ============ SEPT 2025 DIP ============

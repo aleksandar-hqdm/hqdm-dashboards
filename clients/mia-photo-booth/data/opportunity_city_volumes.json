@@ -1,0 +1,112 @@
+{
+ "location": "Florida,United States",
+ "source": "DataForSEO Google Ads search_volume/live",
+ "scope_note": "Explicit city-named terms measured at FL-state scope (city is in the query string).",
+ "rows": [
+  {
+   "keyword": "photo booth rental doral",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental coral gables",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental hialeah",
+   "volume": 10,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental miami beach",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental aventura",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental kendall",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental opa-locka",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental miami lakes",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental north miami",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental surfside",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental key biscayne",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental bal harbour",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental pinecrest",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental coconut grove",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  },
+  {
+   "keyword": "photo booth rental wynwood",
+   "volume": null,
+   "cpc": null,
+   "competition": null,
+   "competition_index": null
+  }
+ ]
+}

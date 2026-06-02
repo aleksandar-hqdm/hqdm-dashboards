@@ -237,8 +237,8 @@
     <section class="mb-4">
       <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
         <div>
-          <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Miami search opportunity · volume → potential leads</h2>
-          <p class="text-xs text-slate-500 mt-0.5">A conservative model on real Miami-metro search volume — what these commercial queries could return once MIA ranks. Today they convert to almost no clicks.</p>
+          <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Miami search opportunity · current → potential</h2>
+          <p class="text-xs text-slate-500 mt-0.5">Keywords grouped into clusters (near-duplicates counted once) on real Miami search demand. What each cluster earns today vs. at a top-3 position — and the leads that gap is worth.</p>
         </div>
         <div class="flex flex-wrap gap-2" id="opp-chips"></div>
       </div>
@@ -246,12 +246,12 @@
         <div class="overflow-x-auto">
           <table class="mini w-full">
             <thead><tr>
-              <th>Query</th>
-              <th class="num">Miami SV/mo</th>
-              <th class="num">Rank now</th>
-              <th class="num">Target CTR</th>
-              <th class="num">Potential clicks/mo</th>
-              <th class="num">Potential leads/mo</th>
+              <th>Keyword cluster</th>
+              <th class="num">Vol/mo</th>
+              <th class="num">Rank now → target</th>
+              <th class="num">Clicks now/mo</th>
+              <th class="num">Potential traffic +gain/mo</th>
+              <th class="num">New leads/mo</th>
             </tr></thead>
             <tbody id="opp-rows"></tbody>
             <tfoot id="opp-foot"></tfoot>
@@ -616,34 +616,37 @@
         <td class="num text-slate-500">${q.pos}</td></tr>`
     ).join('');
 
-    // -------- MIAMI OPPORTUNITY MODEL — volume → potential leads --------
+    // -------- MIAMI OPPORTUNITY MODEL — clusters: current → potential --------
     (function () {
-      const o = DATA.opportunity_model; if (!o) return;
-      const SHOW = 12;
-      const rankCell = r => r.ranks ? `#${r.pos}` : `<span class="text-slate-400">not yet</span>`;
-      $('opp-rows').innerHTML = o.rows.slice(0, SHOW).map(r =>
-        `<tr><td>${r.q.length > 34 ? r.q.slice(0, 32) + '…' : r.q}</td>
-          <td class="num font-semibold">${r.sv.toLocaleString()}</td>
-          <td class="num">${rankCell(r)}</td>
-          <td class="num text-slate-500">${r.ctr}%</td>
-          <td class="num font-semibold text-brand-500">${r.pot_clicks.toLocaleString()}</td>
-          <td class="num font-semibold text-emerald-700">${r.pot_leads.toFixed(1)}</td></tr>`
+      const o = DATA.opportunity_model; if (!o || !o.clusters) return;
+      const clip = s => s.length > 40 ? s.slice(0, 38) + '…' : s;
+      const rankCell = r => r.cur_rank != null
+        ? `#${r.cur_rank} <span class="text-slate-400">→ ${r.target_rank}</span>`
+        : `<span class="text-slate-400">none → ${r.target_rank}</span>`;
+      const gainCell = r => r.pot_gain > 0
+        ? `<span class="text-emerald-700">+${r.pot_gain.toLocaleString()}</span>`
+        : `<span class="text-slate-400">held</span>`;
+      $('opp-rows').innerHTML = o.clusters.map(r =>
+        `<tr><td>${clip(r.cluster)}</td>
+          <td class="num font-semibold">${r.volume.toLocaleString()}</td>
+          <td class="num text-[10px] whitespace-nowrap">${rankCell(r)}</td>
+          <td class="num text-slate-500">${r.cur_traffic}</td>
+          <td class="num font-semibold">${gainCell(r)}</td>
+          <td class="num font-semibold text-emerald-700">${r.new_leads.toFixed(1)}</td></tr>`
       ).join('');
-      const more = o.rows.length - SHOW;
       $('opp-foot').innerHTML =
-        (more > 0 ? `<tr><td colspan="6" class="text-[10px] text-slate-400 pt-1">+ ${more} more long-tail Miami queries folded into the total below</td></tr>` : '') +
-        `<tr style="border-top:2px solid #e2e8f0;font-weight:800;"><td>All ${o.totals.n} queries</td>
-          <td class="num">${o.totals.sv.toLocaleString()}</td>
-          <td class="num text-slate-400">—</td>
-          <td class="num text-slate-400">—</td>
-          <td class="num text-brand-500">${o.totals.pot_clicks.toLocaleString()}</td>
-          <td class="num text-emerald-700">${o.totals.pot_leads.toFixed(1)}</td></tr>`;
+        `<tr style="border-top:2px solid #e2e8f0;font-weight:800;"><td>All ${o.totals.n_clusters} clusters · ${o.totals.n_keywords} keywords</td>
+          <td class="num">${o.totals.volume.toLocaleString()}</td>
+          <td class="num text-slate-400 text-[10px]">→ ${o.target_label}</td>
+          <td class="num">${o.totals.cur_traffic}</td>
+          <td class="num text-emerald-700">+${o.totals.pot_gain.toLocaleString()}</td>
+          <td class="num text-emerald-700">${o.totals.new_leads.toFixed(1)}</td></tr>`;
       $('opp-chips').innerHTML = [
-        { v: o.totals.pot_clicks.toLocaleString() + ' clicks/mo', l: 'high-intent · ~0 today' },
-        { v: '~' + Math.round(o.totals.pot_leads) + ' leads/mo', l: '≈' + o.totals.pot_leads_annual + '/yr · at ' + o.lead_rate_pct + '%' },
+        { v: '+' + o.totals.pot_gain.toLocaleString() + ' clicks/mo', l: 'high-intent · vs ' + o.totals.cur_traffic + ' today' },
+        { v: '~' + Math.round(o.totals.new_leads) + ' leads/mo', l: '≈' + o.totals.new_leads_annual + '/yr · at ' + o.lead_rate_pct + '%' },
       ].map(c => `<span class="chip good"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
       $('opp-method').innerHTML = o.methodology_html +
-        ` At the ${o.lead_rate_high_pct}% commercial benchmark the same clicks return ~${Math.round(o.totals.pot_leads_high)} leads/mo.`;
+        ` At the ${o.lead_rate_high_pct}% commercial benchmark the same gain returns ~${Math.round(o.totals.new_leads_high)} leads/mo.`;
     })();
 
     // -------- FOCUS MONTHS --------
