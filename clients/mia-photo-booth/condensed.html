@@ -83,6 +83,21 @@
     </section>
 
     <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Behavior signals + investigations</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="panel">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-emerald-700 mb-2">GA4 · the foundation is converting</div>
+          <div class="grid grid-cols-2 gap-3" id="ga4-tiles-c"></div>
+          <p class="text-[11px] text-slate-500 mt-2" id="ga4-note-c"></p>
+        </div>
+        <div class="panel">
+          <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-2">Two questions — investigated &amp; answered</div>
+          <ul class="space-y-2.5 text-sm text-slate-700" id="findings-c"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan · 6 levers</h2>
       <div class="space-y-2.5" id="levers"></div>
     </section>
@@ -161,6 +176,23 @@
     $('conn-verdict').textContent = DATA.connection.verdict;
     $('conn-items').innerHTML = DATA.connection.rows.map(r => `<li class="flex gap-2"><span class="pill ${r.sev} mt-0.5">${r.sev}</span>
       <span><strong>${r.issue}.</strong> ${r.fix}</span></li>`).join('');
+
+    // GA4 compact tiles
+    if (DATA.ga4) {
+      const gs = DATA.ga4.summary;
+      $('ga4-tiles-c').innerHTML = `
+        <div class="tile good"><div class="l">Sessions growth</div><div class="v">${gs.growth_factor}×</div><div class="s">peak ${gs.peak_sessions.toLocaleString()}/mo</div></div>
+        <div class="tile good"><div class="l">Organic share · 90d</div><div class="v">${gs.organic_pct_90d}%</div><div class="s">${gs.sessions_90d.toLocaleString()} sessions/90d</div></div>
+        <div class="tile good"><div class="l">Form leads · 90d</div><div class="v">${gs.leads_90d}</div><div class="s">form + contact only</div></div>
+        <div class="tile"><div class="l">Phone · email · GBP→site</div><div class="v" style="font-size:1.05rem">${gs.phone_clicks_90d} · ${gs.email_clicks_90d} · ${gs.gmb_clicks_90d}</div><div class="s">tracked separately</div></div>`;
+      $('ga4-note-c').textContent = 'Leads = form_submit + contact_form_submit only; phone, email and GBP→site clicks charted separately (never bundled in).';
+    }
+
+    // Investigated findings (Sept dip + SERP audit)
+    const findings = [];
+    if (DATA.sept_dip) findings.push(`<strong>Sept 2025 reach dip — diagnosed.</strong> A one-month Maps-pack compression coinciding with a GBP name + category change; GSC and GA4 both stayed healthy through it (sessions actually rose). Fully recovered the next scan cycle — so we sequence GBP edits one at a time.`);
+    if (DATA.serp_audit) findings.push(`<strong>"social photo booth rental miami" (13K imp / 0 clicks) — diagnosed.</strong> Live SERP capture shows local-pack + organic burial, no AI Overview. Fix = the GBP-category change (earns the pack) + a dedicated Social Booth page.`);
+    $('findings-c').innerHTML = findings.map(f => `<li class="flex gap-2"><span class="text-emerald-600 font-bold mt-0.5">✓</span><span>${f}</span></li>`).join('');
 
     // Levers
     $('levers').innerHTML = DATA.levers.map(l => `<div class="panel" style="border-left:4px solid ${l.tone==='good'?'#10b981':l.tone==='watch'?'#f59e0b':'#ef4444'}">

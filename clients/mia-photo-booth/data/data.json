@@ -351,6 +351,175 @@
   "brand_impressions": 52,
   "nonbrand_impressions": 72597
  },
+ "ga4": {
+  "labels": [
+   "Aug '25",
+   "Sep '25",
+   "Oct '25",
+   "Nov '25",
+   "Dec '25",
+   "Jan '26",
+   "Feb '26",
+   "Mar '26",
+   "Apr '26",
+   "May '26",
+   "Jun '26 *"
+  ],
+  "sessions": [
+   212,
+   447,
+   777,
+   1176,
+   1577,
+   1950,
+   1911,
+   1570,
+   1342,
+   1474,
+   88
+  ],
+  "organic": [
+   58,
+   167,
+   246,
+   701,
+   1110,
+   1445,
+   1434,
+   1176,
+   1013,
+   1135,
+   32
+  ],
+  "leads": [
+   9,
+   11,
+   14,
+   15,
+   15,
+   16,
+   9,
+   10,
+   14,
+   10,
+   1
+  ],
+  "phone_clicks": [
+   1,
+   1,
+   4,
+   2,
+   9,
+   5,
+   5,
+   5,
+   2,
+   5,
+   0
+  ],
+  "email_clicks": [
+   0,
+   3,
+   2,
+   1,
+   0,
+   3,
+   2,
+   0,
+   3,
+   0,
+   0
+  ],
+  "gmb_clicks": [
+   21,
+   37,
+   23,
+   30,
+   20,
+   45,
+   15,
+   27,
+   26,
+   9,
+   0
+  ],
+  "partial_index": 10,
+  "summary": {
+   "first_month": "2025-08",
+   "first_sessions": 212,
+   "peak_month": "2026-01",
+   "peak_sessions": 1950,
+   "growth_factor": 9.2,
+   "total_sessions_window": 12524,
+   "leads_90d": 34,
+   "form_submit_90d": 5,
+   "contact_form_submit_90d": 29,
+   "phone_clicks_90d": 12,
+   "email_clicks_90d": 3,
+   "gmb_clicks_90d": 58,
+   "sessions_90d": 4356,
+   "organic_sessions_90d": 3281,
+   "organic_pct_90d": 75.3
+  },
+  "attribution_note": "Leads = form_submit + contact_form_submit only. Phone/email/GBP-clicks charted separately. No GA4 key events configured; lead composite derived from raw form events."
+ },
+ "serp_audit": {
+  "intro": "We ran a live SERP capture (Miami, desktop + mobile) on the strongest zero-click query to find where the clicks are going.",
+  "queries": [
+   {
+    "q": "social photo booth rental miami",
+    "gsc_impressions_90d": 13146,
+    "gsc_clicks_90d": 0,
+    "gsc_position": 4.1,
+    "client_organic_rank": 4,
+    "client_absolute_desktop": 7,
+    "client_absolute_mobile": 13,
+    "has_local_pack": true,
+    "has_ai_overview": false,
+    "paid_top": 0,
+    "client_url": "https://www.miaphotobooth.net/",
+    "client_title": "Premier Photo Booth Rental Miami | MIA Photo Booth",
+    "diagnosis": "Position 4.1 is the <em>organic</em> rank \u2014 but the visible top of the page is a 3-business local pack (Captured Fun, Luxe Booth, South Florida Photo Booth Vibes), and MIA is not in it. Below the pack sit three organic competitors, so MIA's listing is the 7th block on desktop and the 13th block on mobile. The local pack absorbs the local-intent clicks (the exact clicks the GBP-category fix targets), and the page that ranks is the generic homepage whose title says nothing about \"Social\" \u2014 so even the organic listing under-matches the query. No AI Overview, no ads \u2014 this is pure local-pack + organic-competition burial.",
+    "fix": "Two levers: (1) the GBP-category fix earns a place in the local pack that's currently taking the clicks; (2) a dedicated Social Booth page (title + H1 with \"Social Photo Booth Rental Miami\") converts the 13K impressions the homepage currently wastes."
+   },
+   {
+    "q": "glam photo booth miami",
+    "gsc_impressions_90d": 5843,
+    "gsc_clicks_90d": 0,
+    "gsc_position": 11.0,
+    "client_organic_rank": 10,
+    "client_absolute_desktop": 11,
+    "client_absolute_mobile": null,
+    "has_local_pack": false,
+    "has_ai_overview": false,
+    "paid_top": 0,
+    "client_url": "https://www.miaphotobooth.net/post/glam-photo-booths-for-brides",
+    "client_title": "Glam Photo Booths for Brides",
+    "diagnosis": "MIA ranks a <strong>blog post</strong> (/post/glam-photo-booths-for-brides) at organic #10 on desktop, and it falls out of the top 30 on mobile entirely. A commercial \"glam booth\" query is being answered with informational content that can't rank or convert \u2014 the blog-vs-commercial gap, made concrete.",
+    "fix": "Build/upgrade a commercial Glam Booth service page and wire the blog post to it; the blog earns the impressions, the service page should earn the click."
+   }
+  ]
+ },
+ "sept_dip": {
+  "headline": "A one-month Maps reach collapse in Sept 2025 \u2014 diagnosed, and already recovered.",
+  "what": "Across all 8 tracked queries, MIA's grid presence collapsed in the early-Sept scans (top-3 cells 67 \u2192 2; reach roughly halved) then fully recovered by the early-Oct scans (top-3 back to 74, reach above August).",
+  "ruled_out": [
+   {
+    "label": "Not a scan/data artifact",
+    "detail": "Every Sept scan still captured the full 169-cell grid with ~3,380 rows and <em>more</em> competing businesses than August \u2014 the scan saw everything; only MIA shrank."
+   },
+   {
+    "label": "Not a delisting or suspension",
+    "detail": "The Place ID was unchanged throughout (\u2026RC9z24TEIGxg) and the review count kept climbing through the dip (92 \u2192 94 \u2192 97) \u2014 the profile stayed live and active the whole time."
+   },
+   {
+    "label": "Not a website problem",
+    "detail": "GSC organic impressions were normal in September, and GA4 shows website sessions actually <strong>rose</strong> in Sept (212 \u2192 447) with leads up (9 \u2192 11). The website was growing while only the Maps pack compressed."
+   }
+  ],
+  "cause": "The dip coincides with core-profile edits in the same window: a business-name change (MIA Photo Booth \u2192 \"MIA Photo Booth - No.1 Photo Booth Rental\", first visible in the Oct scans) and primary-category churn (Photography service \u2194 Party equipment rental service). Editing core GBP fields routinely triggers a Google re-review that temporarily compresses a profile's grid reach \u2014 which matches the shape exactly: one month down, full recovery the next.",
+  "takeaway": "Two things follow. (1) The profile is <strong>resilient and responsive</strong> \u2014 it bounced back above its prior reach within one cycle, which means a correct category fix should propagate fast. (2) GBP edits must be made <strong>deliberately, one at a time</strong>, with a 2-4 week settling window expected \u2014 so the Month-1 category change is sequenced first and alone, and we hold other core-field edits until it settles."
+ },
  "foundation": {
   "reviews": 103,
   "review_rating": "5.0\u2605",
@@ -442,7 +611,7 @@
     "15 new /photo-booth-rental/[city]/ pages live, ~400 words each, unique anchors per city",
     "All 27 legacy area-page slugs 301-redirected to the new structure",
     "Top 5 blog posts wired with in-body links + CTAs to the matching booth-type service pages",
-    "Snippet audit on \"social photo booth rental miami\" (13K imp at pos 4.1, 0 clicks \u2014 likely SERP-pack/AI overview)",
+    "Dedicated /social-photo-booth-rental-miami page targeting the 13K-impression term \u2014 SERP audit confirmed the zero clicks are a local-pack + organic-burial problem (no AI Overview), so the fix is a commercial page wired to the GBP, not a snippet tweak",
     "Sitemap.xml resubmitted to GSC; weekly GBP posts cadence restarted"
    ]
   },
@@ -542,8 +711,8 @@
    },
    {
     "week": "Week 2",
-    "lever": "F",
-    "task": "Investigate \"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with 0 clicks (SERP layout + snippet audit)",
+    "lever": "C",
+    "task": "Build a dedicated /social-photo-booth-rental-miami page (title + H1 on the exact term) to capture the 13,146 impressions/90d that today earn 0 clicks \u2014 SERP audit confirmed local-pack + organic burial, so a GBP-wired commercial page is the fix",
     "dept": "Content"
    },
    {
@@ -698,7 +867,7 @@
   "email_clicks_separate": "click_email charted on its own \u2014 never bundled with leads",
   "never_label_as": "Conversions (use 'Leads' for the form-only composite, label other engagement signals by their event name)",
   "partial_period": "Current partial month shown as single * point, no run-rate projection on the main trend line",
-  "ga4_status": "GA4 property 501143766 (HQDM Clients Local Campaign \u00b7 MIA Photobooth) confirmed accessible but OAuth token currently lacks analytics.readonly scope \u2014 re-auth pending. GSC fully accessible."
+  "ga4_status": "GA4 property 501143766 (HQDM Clients Local Campaign \u00b7 MIA Photobooth) live \u2014 monthly sessions, channel mix, and the strict-attribution lead/intent series (form leads, phone, email, GBP\u2192site) are pulled and charted. GSC fully accessible."
  },
  "meta": {
   "client": "MIA Photo Booth",
@@ -706,7 +875,7 @@
   "prepared": "2026-06-01",
   "preparer": "Aleksandar Spasevski",
   "scope": "Maps + organic recovery diagnosis. Eight tracked queries across 11 months of HQDM tenure (Aug 5 2025 \u2192 May 6 2026), enriched with GSC (446k impressions / 4,697 clicks / 16-month) and DataForSEO competitor backlink + search-volume reads.",
-  "focus": "Maps + GSC pass. GA4 access confirmed (property 501143766) but OAuth re-auth needed before lead/intent data can be layered in \u2014 flagged as owner ask. Next pass will add the GA4 layer with strict attribution rules (Leads = form+contact only; GMB/phone/email charted separately).",
+  "focus": "Maps + GSC + GA4 pass. GA4 property 501143766 is live and layered in with strict attribution (Leads = form+contact only; GBP\u2192site, phone, and email clicks charted separately). Adds the SERP teardown of \"social photo booth rental miami\" and the diagnosed Sept-2025 Maps dip.",
   "ld_window": "2025-08 \u2192 2026-05",
   "gsc_window": "2025-08 \u2192 2026-05",
   "engagement_start": "2025-07-08"
@@ -1274,12 +1443,12 @@
    "title": "Restart weekly GBP posts cadence \u2014 event highlights, booth-type spotlights"
   },
   {
-   "id": "F-11",
-   "lever": "F",
+   "id": "C-11",
+   "lever": "C",
    "dept": "Content",
    "loc": "All",
-   "priority": "Medium",
-   "title": "Investigate \"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with 0 clicks (SERP layout + snippet audit)"
+   "priority": "High",
+   "title": "Build a dedicated /social-photo-booth-rental-miami page (title + H1 on the exact term) to capture the 13,146 impressions/90d that today earn 0 clicks \u2014 SERP audit confirmed local-pack + organic burial, so a GBP-wired commercial page is the fix"
   },
   {
    "id": "C-12",
@@ -1528,18 +1697,6 @@
   {
    "q": "Capacity for the 90-page matrix build \u2014 internal copywriter or HQDM?",
    "why": "We can write the 90 cells in-house or hand a template + city list to an internal writer. Confirming the path so we can sequence Month 1-3 accurately."
-  },
-  {
-   "q": "GA4 re-auth needed (~2 min)",
-   "why": "GA4 property 501143766 (HQDM Clients Local Campaign \u00b7 MIA Photobooth) is confirmed accessible \u2014 but the existing OAuth token only has the GSC scope. Aleksandar to run <code>python C:/Users/User/Desktop/HQDM/Secrets/gsc_auth.py</code> to re-auth with analytics.readonly scope. Once done, the next pass adds Leads (form_submit + contact_form_submit), GMB clicks (gmb_click), phone clicks (click_phone_number) and email clicks (click_email) as separate trend lines \u2014 same attribution model we use for AQMS and Maison."
-  },
-  {
-   "q": "What happened in Sept 2025?",
-   "why": "LD scans show MIA dropped from 67 top-3 cells in Aug to 2 in Sept, then recovered to 74 in Oct. Worth knowing if there was a GBP issue, category swap, or temporary suspension we should factor in."
-  },
-  {
-   "q": "\"social photo booth rental miami\" \u2014 13,146 impressions at avg pos 4.1 with ZERO clicks (last 90d) \u2014 why?",
-   "why": "This is the strongest single-query opportunity in GSC. Position 4.1 should produce some clicks. Likely candidates: (1) SERP is dominated by local pack + AI Overview, so the organic position-4 result never gets seen, or (2) the snippet is unappealing. We'll do a SERP audit in Week 2 of Month 1."
   }
  ],
  "deliverables": [
