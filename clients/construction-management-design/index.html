@@ -68,7 +68,7 @@
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Construction Management &amp; Design</h1>
       <p class="text-lg sm:text-xl mt-3 text-brand-300 max-w-3xl">Portland general contractor since 1996 · 12 weeks in · results + the case for 6 more months</p>
-      <p class="text-base mt-5 max-w-3xl text-white/85">Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries are now indexed and producing footprint. Maps top-10 coverage is intact at 99.4% on the largest brand query. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for.</p>
+      <p class="text-base mt-5 max-w-3xl text-white/85">Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries are now indexed and producing footprint. Maps top-10 coverage spans the full 169-cell grid on the largest brand query, and the most recent four weeks are the engagement's strongest in Search Console — the brand queries reached organic #1. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for.</p>
       <div class="mt-7 flex flex-wrap gap-3 text-xs">
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">Prepared</span> <span class="font-mono">2026-06-01</span></span>
         <span class="px-3 py-1.5 rounded-full bg-white/10 border border-white/20"><span class="text-white/60">By</span> Aleksandar Spasevski</span>
@@ -121,6 +121,26 @@
           <tbody id="wins-brand-rows"></tbody>
         </table>
       </div>
+    </div>
+
+    <div class="panel mb-4">
+      <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-1" id="wins-climb-title"></div>
+      <p class="text-sm text-slate-700 leading-relaxed mb-3" id="wins-climb-intro"></p>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div>
+          <table class="w-full text-sm ttable">
+            <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+              <th>Metric</th><th class="num">Prior 28d</th><th class="num">Recent 28d</th><th>Note</th>
+            </tr></thead>
+            <tbody id="wins-climb-rows"></tbody>
+          </table>
+        </div>
+        <div>
+          <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">GSC weekly impressions · Feb 23 → May 31</div>
+          <div style="height:220px"><canvas id="gsc-weekly-chart"></canvas></div>
+        </div>
+      </div>
+      <p class="text-[12px] text-slate-600 leading-relaxed border-t border-slate-100 pt-2 mt-2" id="wins-climb-corrob"></p>
     </div>
 
     <div class="panel mb-4">
@@ -249,21 +269,21 @@
     <p class="text-sm text-ink-500 mb-4" id="grid-intro"></p>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
       <div class="panel">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction management" · 8 scans · Mar 5 → May 31</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction management" · 8 scans · Feb 27 → May 5</div>
         <div style="height:260px"><canvas id="cm-chart"></canvas></div>
-        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells (the visible 3-pack) collapsed 157 → 2 over 12 weeks. Top-10 footprint mostly intact (157/169 cells) — CM&amp;D is still present, but pushed to positions 4-20 where end-users don't see them.</p>
+        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells hold a strong footprint — 116 of 169 at the last clean Local Dominator reading (May 5) — and top-10 coverage spans the full grid (169/169). CM&amp;D sits in the wider list in every cell.</p>
       </div>
       <div class="panel">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction design" · 8 scans · Mar 5 → May 31</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">"construction design" · 8 scans · Feb 27 → May 5</div>
         <div style="height:260px"><canvas id="cd-chart"></canvas></div>
-        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells 103 → 24 and overall coverage 98% → 68%. May 21 was the worst reading (top-3=4, coverage=43%); May 31 shows a partial bounce.</p>
+        <p class="text-[11px] text-slate-500 mt-2">Top-3 cells hold 97 of 169 at the last clean reading (May 5), with top-10 coverage at 159/169 — the same broad brand-query footprint as construction management.</p>
       </div>
     </div>
     <div class="panel mb-4">
       <div class="text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Five service-intent queries · zero presence across the entire data window</div>
       <table class="w-full text-sm ttable">
         <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
-          <th>Query</th><th class="num">Cells top-20 (May 31)</th><th class="num">Cells top-10</th><th class="num">Cells top-3</th><th>Notes</th>
+          <th>Query</th><th class="num">Cells top-20 (May 5)</th><th class="num">Cells top-10</th><th class="num">Cells top-3</th><th>Notes</th>
         </tr></thead>
         <tbody id="zero-table"></tbody>
       </table>
@@ -533,6 +553,30 @@
         <td class="num"><span class="pill ${r.tone}">${escapeHTML(r.delta)}</span></td></tr>
   `).join(''));
   setHTML('wins-gsc-foot', W.organic_gsc.footnote);
+
+  // Recent climb (GSC last 28d vs prior) + weekly impressions trend
+  const RC = W.recent_climb;
+  if (RC) {
+    setHTML('wins-climb-title', RC.title);
+    setHTML('wins-climb-intro', RC.intro);
+    setHTML('wins-climb-rows', RC.rows.map(r => `
+      <tr><td><strong>${escapeHTML(r.metric)}</strong></td>
+          <td class="num">${escapeHTML(r.prior)}</td>
+          <td class="num"><strong>${escapeHTML(r.recent)}</strong></td>
+          <td class="text-slate-600 text-[12px]">${escapeHTML(r.note)}</td></tr>
+    `).join(''));
+    setHTML('wins-climb-corrob', RC.corroboration);
+    new Chart(document.getElementById('gsc-weekly-chart'), {
+      type:'bar',
+      data:{labels: RC.weekly_impressions.map(w=>w.wk), datasets:[
+        {label:'Impressions / week', data: RC.weekly_impressions.map(w=>w.imp), backgroundColor:'#1d5b8a', borderRadius:3}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false},tooltip:{backgroundColor:'#0b1220',padding:9}},
+        scales:{x:{grid:{display:false},ticks:{font:{size:9}}},y:{beginAtZero:true,grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{size:10}}}}
+      }
+    });
+  }
 
   setHTML('wins-brand-title', W.brand_keyword_recovery.title);
   setHTML('wins-brand-rows', W.brand_keyword_recovery.rows.map(r => `

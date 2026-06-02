@@ -1,0 +1,482 @@
+{
+  "meta": {
+    "client": "Daymakers Moving & Storage",
+    "domain": "daymakersmoving.com",
+    "tier": "Multi-location · MN/WI",
+    "vertical": "Moving & Storage · 5-location network",
+    "prepared_by": "Aleksandar Spasevski",
+    "date": "2026-06-02",
+    "focus": "Google Business Profile + Maps · 5 pins (Roseville · Lake Elmo · Hudson · Bloomington · Eau Claire) · organic recovery + profile↔site connection",
+    "data_window": "LocalDominator geo-grid scans Mar 5 – Jun 1 2026 (169-cell / 13×13 grids; per-pin windows) + GA4 & GSC (18 mo) + DataForSEO (organic footprint, backlinks, SERP, GBP)"
+  },
+  "tldr": "Daymakers runs a genuinely strong five-profile network across the Twin Cities east/north metro and the western-Wisconsin border, and four of the five pins already own their markets: <strong>Roseville (#1 of 113)</strong>, <strong>Hudson (#1 of 171)</strong>, <strong>Bloomington (#1 of 110)</strong> and a close <strong>Lake Elmo (#2 of 183)</strong>, on a combined <strong>~2,265 reviews</strong> at a 4.9–5.0★ network rating. Organic search has <strong>turned the corner</strong> — clicks bottomed at 359 in February and have climbed every month since (491 → 704 → 706 through May), roughly doubling the Q1→Q2 run-rate. On the busy-season question: <strong>May did not actually trail April in search</strong> — organic clicks held (704 → 706) and impressions rose; the GA4 lead-count dip is downstream and largely a tracking artifact. The real work is narrow and high-leverage: <strong>flag the lead events as key events in GA4</strong> (today nothing is counted as a conversion), <strong>point the Eau Claire profile at its own city page</strong> (it still lands on the homepage), and tighten a few profile↔site details. This is a defend-and-extend engagement, not a rebuild.",
+  "headline": {
+    "h2": "A dominant five-pin network and an organic rebound — that the measurement isn't yet counting",
+    "lede": "Four of five Daymakers pins lead or nearly lead their Maps markets, the website is well-built (per-location LocalBusiness schema, dedicated city pages, a strong Minneapolis hub), and organic traffic has climbed every month since February. The gaps are specific and fixable: GA4 isn't flagging any lead events as conversions, the Eau Claire profile points at the homepage instead of its existing city page, and a handful of connection details (live map embeds, on-page phone consistency, backlink hygiene) are loose. Fix those and the rebound compounds.",
+    "tiles": [
+      {
+        "label": "Maps network",
+        "value": "4 of 5",
+        "sub": "#1 Roseville / Hudson / Bloomington · #2 Lake Elmo · across 110–183-rival grids",
+        "tone": "good"
+      },
+      {
+        "label": "Organic search",
+        "value": "Rebounding",
+        "sub": "Feb trough 359 → 706 in May · +43% Apr MoM · Q1→Q2 run-rate ≈2×",
+        "tone": "good"
+      },
+      {
+        "label": "Eau Claire · the gap",
+        "value": "#6 of 103",
+        "sub": "newest market · GBP → homepage, not /eau-claire-wi-movers/ · 22 reviews",
+        "tone": "watch"
+      },
+      {
+        "label": "Lead tracking",
+        "value": "Not configured",
+        "sub": "GA4 key events 0 / 4 · gmb_click untagged · calls live in CallRail",
+        "tone": "bad"
+      }
+    ]
+  },
+  "pins": {
+    "roseville": {
+      "label": "Roseville, MN",
+      "address": "2355 MN-36 Suite 400 Office 412, Roseville, MN 55113",
+      "gbp_phone": "(651) 377-5008",
+      "rating": "5.0",
+      "reviews": "457",
+      "market_rank": "#1 of 113",
+      "trend": "dominant, holding",
+      "note": "Owns the north-metro grid — avg rank 3.98 and top-3 coverage up 719 → 883 cells across the window. Long-distance visibility jumped sharply (the 'long distance movers roseville' grid went from 25 to 166 top-3 cells). Main pursuers are Allied Van Lines and Two Men and a Truck.",
+      "grids_file": "ld_grids_roseville.json"
+    },
+    "lake_elmo": {
+      "label": "Lake Elmo, MN",
+      "address": "8530 Eagle Point Blvd Suite 100 #132, Lake Elmo, MN 55042",
+      "gbp_phone": "(651) 371-4592",
+      "rating": "5.0",
+      "reviews": "422",
+      "market_rank": "#2 of 183",
+      "trend": "strong #2, gaining",
+      "note": "Added the most top-3 cells of any pin (869 → 1,058, +189) and sits second only to Two Men and a Truck (1,282). City-term coverage is near-total; the remaining gap to #1 is on the broad 'movers / moving company' grids.",
+      "grids_file": "ld_grids_lake_elmo.json"
+    },
+    "hudson": {
+      "label": "Hudson, WI",
+      "address": "588 Schommer Dr, Hudson, WI 54016",
+      "gbp_phone": "(715) 226-3189",
+      "rating": "4.9",
+      "reviews": "635",
+      "market_rank": "#1 of 171",
+      "trend": "dominant",
+      "note": "The strongest pin — avg rank 1.61 and 1,393 top-3 cells, nearly double the #2 (Quality Moving & Storage, 788). Holds #1 on every tracked city query. Largest WI review base at 635.",
+      "grids_file": "ld_grids_hudson.json"
+    },
+    "bloomington": {
+      "label": "Bloomington, MN",
+      "address": "8400 Normandale Lake Blvd #920, Bloomington, MN 55437",
+      "gbp_phone": "(651) 867-2810",
+      "rating": "5.0",
+      "reviews": "729",
+      "market_rank": "#1 of 110",
+      "trend": "dominant, watch",
+      "note": "Clear #1 (avg 2.31, ~1.8× the #2 Minute Men Movers) and the biggest review base in the network (729) — but the only pin that lost top-3 coverage this window (802 → 688, −114). Midwest Moving (+118) and Minute Men are the risers to watch.",
+      "grids_file": "ld_grids_bloomington.json"
+    },
+    "eau_claire": {
+      "label": "Eau Claire, WI",
+      "address": "6445 Scully Dr Suite 4, Eau Claire, WI 54701",
+      "gbp_phone": "(715) 500-6172",
+      "rating": "5.0",
+      "reviews": "22",
+      "market_rank": "#6 of 103",
+      "trend": "emerging, climbing fast",
+      "note": "Newest and smallest pin, climbing fast off a low base (top-3 cells 16 → 158 in 17 days) but still behind Dan the Moving Man, Elite Movers, Two Men and Next Step. The profile points at the homepage rather than its existing /eau-claire-wi-movers/ page, and carries only 22 reviews — the clearest growth opportunity in the network.",
+      "grids_file": "ld_grids_eau_claire.json"
+    }
+  },
+  "gbp_completeness": {
+    "intro": "All five profiles are claimed, verified, and correctly categorized as \"Mover\" with consistent secondary categories (piano moving, storage). The network is in good shape — the per-pin notes below flag where each profile differs, most importantly Eau Claire's website link and thin review base.",
+    "pins": [
+      {
+        "loc": "Roseville",
+        "rank": "#1 of 113",
+        "rating": "5.0",
+        "reviews": "457",
+        "claimed": "good",
+        "category": "good",
+        "url": { "s": "good", "t": "→ /roseville-mn-movers/" },
+        "note": "Fully wired. Secondary: piano moving, storage facility."
+      },
+      {
+        "loc": "Lake Elmo",
+        "rank": "#2 of 183",
+        "rating": "5.0",
+        "reviews": "422",
+        "claimed": "good",
+        "category": "good",
+        "url": { "s": "good", "t": "→ /lake-elmo-mn-movers/" },
+        "note": "Fully wired. Secondary: moving & storage, piano, storage facility."
+      },
+      {
+        "loc": "Hudson",
+        "rank": "#1 of 171",
+        "rating": "4.9",
+        "reviews": "635",
+        "claimed": "good",
+        "category": "good",
+        "url": { "s": "good", "t": "→ /hudson-wi-movers/" },
+        "note": "Fully wired. The only pin rated below 5.0 (4.9) — still the strongest grid."
+      },
+      {
+        "loc": "Bloomington",
+        "rank": "#1 of 110",
+        "rating": "5.0",
+        "reviews": "729",
+        "claimed": "good",
+        "category": "good",
+        "url": { "s": "good", "t": "→ /bloomington-mn-movers/" },
+        "note": "Fully wired. Largest review base in the network."
+      },
+      {
+        "loc": "Eau Claire",
+        "rank": "#6 of 103",
+        "rating": "5.0",
+        "reviews": "22",
+        "claimed": "good",
+        "category": "good",
+        "url": { "s": "bad", "t": "→ homepage (should be /eau-claire-wi-movers/)" },
+        "note": "The city page exists and is solid — the profile just isn't pointed at it. Only 22 reviews."
+      }
+    ]
+  },
+  "connection": {
+    "intro": "The question that matters: is the website wired to the five profiles the right way? Mostly yes — and that's the good news. The site already carries <strong>per-location LocalBusiness schema</strong> with correct addresses, geo-coordinates, aggregateRating and sameAs links, dedicated city pages with genuine local content, and clean in-body links to the service pages. That foundation is strong. What's left is a short list of specific, mostly one-time fixes.",
+    "verdict": "Well-connected, with a handful of concrete gaps. The single biggest unlock isn't on the website at all — it's flagging the lead events in GA4 so the work can actually be measured. The rest are quick profile and page fixes.",
+    "rows": [
+      {
+        "issue": "GA4 isn't counting any leads as conversions",
+        "sev": "high",
+        "detail": "335 form_submit, 222 click_phone_number and 16 click_email events fired since tracking began, but GA4 native conversions read 0 — the lead events aren't flagged as key events, and gmb_click isn't tagged at all. Calls run through CallRail (the per-profile tracking lines) but don't flow into GA4 as conversions.",
+        "fix": "Flag form_submit, click_phone_number and click_email as key events in GA4; tag gmb_click and treat it as interest, not a completed lead; reconcile GA4 leads with CallRail so month-to-month comparisons are trustworthy."
+      },
+      {
+        "issue": "Eau Claire profile points at the homepage, not its city page",
+        "sev": "high",
+        "detail": "A real /eau-claire-wi-movers/ page already exists (H1 \"Top-Rated Movers in Eau Claire, WI\", per-location schema with the 6445 Scully Dr address + geo 44.811, -91.498, genuine Chippewa-Valley content) — but the GBP website link sends clicks to www.daymakersmoving.com/ instead.",
+        "fix": "Repoint the Eau Claire GBP website link to /eau-claire-wi-movers/."
+      },
+      {
+        "issue": "City pages use static map images, not live Google Map embeds",
+        "sev": "med",
+        "detail": "The Roseville and Eau Claire pages (and, by pattern, the others) show a static map graphic rather than an embedded Google Map of the actual GBP pin. The only live map embeds found sitewide are on the contact page.",
+        "fix": "Embed each location's real Google Map (the GBP/CID pin) on its city page — a recognized local-relevance signal that ties the page to the listing."
+      },
+      {
+        "issue": "On-page phone numbers don't match the profile lines",
+        "sev": "med",
+        "detail": "The GBPs use per-location call-tracking numbers (e.g. Eau Claire 715-500-6172), while the site shows a general MN line (651-955-1283) and WI line (715-410-4054). The Eau Claire page even lists Hudson's profile number (715-226-3189) as its \"primary\" line.",
+        "fix": "Confirm the tracking-number strategy with the owner; show one canonical public number per city page and keep citations (BBB, Yelp, chamber) consistent with it."
+      }
+    ]
+  },
+  "levers": [
+    {
+      "id": "A",
+      "title": "Make the leads countable (GA4 + GBP events)",
+      "priority": "P0 · prerequisite",
+      "tone": "bad",
+      "summary": "Today GA4 counts zero conversions even though hundreds of calls, forms and emails fire each month, and gmb_click isn't tagged. Flag form_submit, click_phone_number and click_email as key events, tag gmb_click as interest, and reconcile GA4 with CallRail. Until this is done, the busy-season \"May vs April\" question — and every future month — can't be answered cleanly from the data. Almost entirely a one-time analytics fix."
+    },
+    {
+      "id": "B",
+      "title": "Convert Eau Claire from emerging to established",
+      "priority": "High",
+      "tone": "watch",
+      "summary": "The newest pin is climbing fast (top-3 cells 16 → 158 in 17 days) but starts from #6 of 103. Repoint the GBP to the existing /eau-claire-wi-movers/ page, embed the live map, fix the phone shown on-page (it currently lists Hudson's line), and build Chippewa-Valley suburb depth — Altoona, Chippewa Falls, Menomonie — to feed the grid."
+    },
+    {
+      "id": "C",
+      "title": "Defend the four dominant pins",
+      "priority": "High",
+      "tone": "good",
+      "summary": "Hold #1 at Roseville, Hudson and Bloomington and close the small gap to #1 at Lake Elmo. Watch Bloomington's slight softening (−114 top-3 cells this window) and the per-market risers — Minute Men and Midwest Moving (Bloomington), Two Men and a Truck (Lake Elmo), Quality Moving & Storage (Hudson). Build service-area suburb depth around each pin."
+    },
+    {
+      "id": "D",
+      "title": "Finish the profile↔site connection",
+      "priority": "Med",
+      "tone": "watch",
+      "summary": "The schema foundation is strong; finish the job. Add live Google Map embeds on each city page (replacing the static images), reconcile the public phone shown on each page with the intended number, and keep NAP consistent across citations. Mostly one-time developer / GMB work."
+    },
+    {
+      "id": "E",
+      "title": "Keep the organic rebound compounding",
+      "priority": "Med",
+      "tone": "good",
+      "summary": "Organic clicks have climbed every month since February. Sustain the content cadence behind it, strengthen the /minneapolis-mn-movers/ hub (the top organic asset — it ranks for dozens of \"Minneapolis movers\" terms but mostly on pages 1–4, with room to push into the top 10), and clean up the backlink profile (111 referring domains at spam ≥30, 53 broken links)."
+    }
+  ],
+  "tasks": [
+    { "id": "A1", "lever": "A", "dept": "Analytics", "loc": "Network", "priority": "P0", "title": "Flag form_submit, click_phone_number and click_email as key events in GA4; tag gmb_click and treat it as interest, not a completed lead" },
+    { "id": "A2", "lever": "A", "dept": "Analytics", "loc": "Network", "priority": "P0", "title": "Reconcile GA4 leads with CallRail so call volume is attributable and month-to-month comparisons are trustworthy" },
+    { "id": "A3", "lever": "A", "dept": "Analytics", "loc": "Network", "priority": "Med", "title": "Drop the dead contact_form_submit event (fires 0) to keep the lead model clean" },
+    { "id": "B1", "lever": "B", "dept": "GMB Ops", "loc": "Eau Claire", "priority": "High", "title": "Repoint the Eau Claire GBP website link → /eau-claire-wi-movers/ (currently → homepage)" },
+    { "id": "B2", "lever": "B", "dept": "Web Dev", "loc": "Eau Claire", "priority": "High", "title": "Embed the live Eau Claire GBP map + fix the on-page phone (page currently shows Hudson's 715-226-3189 line)" },
+    { "id": "B3", "lever": "B", "dept": "Content", "loc": "Eau Claire", "priority": "Med", "title": "Build Chippewa-Valley suburb pages (Altoona, Chippewa Falls, Menomonie) feeding /eau-claire-wi-movers/" },
+    { "id": "C1", "lever": "C", "dept": "GMB Ops", "loc": "Bloomington", "priority": "High", "title": "Investigate Bloomington's −114 top-3 softening; refresh posts / photos / service areas and re-check the grid" },
+    { "id": "C2", "lever": "C", "dept": "Content", "loc": "Lake Elmo", "priority": "Med", "title": "Build broad-term + suburb depth (Woodbury, Oakdale, Stillwater) to close the gap to #1 vs Two Men and a Truck" },
+    { "id": "C3", "lever": "C", "dept": "GMB Ops", "loc": "Network", "priority": "Med", "title": "Weekly LocalDominator monitoring of all five grids + per-market risers" },
+    { "id": "C4", "lever": "C", "dept": "Content", "loc": "Roseville / Hudson", "priority": "Med", "title": "Suburb depth around the dominant pins (Shoreview / Maplewood; River Falls / New Richmond)" },
+    { "id": "D1", "lever": "D", "dept": "Web Dev", "loc": "Network", "priority": "Med", "title": "Embed the live Google Map (GBP/CID pin) on all five city pages, replacing the static map images" },
+    { "id": "D2", "lever": "D", "dept": "Web Dev", "loc": "Network", "priority": "Med", "title": "Reconcile the public phone shown per city page; one canonical number + citation NAP consistency" },
+    { "id": "D3", "lever": "D", "dept": "GMB Ops", "loc": "Network", "priority": "Low", "title": "Confirm secondary categories + service areas are uniform across all five profiles" },
+    { "id": "E1", "lever": "E", "dept": "Content", "loc": "Network", "priority": "Med", "title": "Strengthen the /minneapolis-mn-movers/ hub to push page-1-but-not-top-10 terms into the top 10" },
+    { "id": "E2", "lever": "E", "dept": "Off-Page", "loc": "Network", "priority": "Med", "title": "Backlink hygiene — disavow/clean the 111 high-spam referrers; reclaim or redirect the 53 broken backlinks" },
+    { "id": "E3", "lever": "E", "dept": "Content", "loc": "Network", "priority": "Ongoing", "title": "Maintain the content cadence (1–2 service/location pages + 5 blogs + 3 suburb pages / mo) behind the rebound" }
+  ],
+  "kpi_targets": [
+    { "metric": "Pins at #1 on Maps", "current": "3 of 5", "target": "4 of 5 (add Lake Elmo)", "stretch": "4 held + Eau Claire top-3" },
+    { "metric": "Eau Claire — market rank", "current": "#6 of 103", "target": "top 4", "stretch": "top 3" },
+    { "metric": "Eau Claire — top-3 map cells (9 queries)", "current": "158", "target": "300+", "stretch": "450+" },
+    { "metric": "Lake Elmo — top-3 map cells (10 queries)", "current": "1,058", "target": "1,150+", "stretch": "overtake #1" },
+    { "metric": "Bloomington — top-3 map cells (5 queries)", "current": "688", "target": "hold 700+", "stretch": "recover to 800+" },
+    { "metric": "GA4 lead events as key events", "current": "0 / 4", "target": "4 / 4", "stretch": "4 / 4 + CallRail reconciled" },
+    { "metric": "Live map embed on city pages", "current": "0 / 5", "target": "5 / 5", "stretch": "5 / 5" },
+    { "metric": "Eau Claire GBP → city page", "current": "homepage", "target": "/eau-claire-wi-movers/", "stretch": "live" },
+    { "metric": "Organic clicks — monthly (GSC)", "current": "706 (May)", "target": "hold 700+ through summer", "stretch": "800+" },
+    { "metric": "High-spam referring domains (≥30)", "current": "111", "target": "<70", "stretch": "<40" }
+  ],
+  "owner_asks": [
+    {
+      "q": "Confirm the GA4 / CallRail setup and who owns it.",
+      "why": "GA4 counts zero conversions today, and call tracking lives in CallRail (the per-profile lines). We need to flag the lead events as key events and reconcile the two so calls and forms are actually counted — this is the prerequisite for answering the busy-season question reliably."
+    },
+    {
+      "q": "What public phone number should each city page show?",
+      "why": "The profiles use per-location tracking lines (e.g. Eau Claire 715-500-6172), but the site shows general MN/WI numbers, and the Eau Claire page lists Hudson's number. We want one canonical public number per location across the site, schema and citations."
+    },
+    {
+      "q": "GBP manager access for all five profiles.",
+      "why": "Repointing the Eau Claire link, syncing categories / service areas, and the connection fixes all need write access to each listing."
+    },
+    {
+      "q": "Is Eau Claire a priority growth market this year, or steady-state?",
+      "why": "It's the clearest opportunity in the network (newest, smallest, fastest-climbing). How hard we push suburb depth + on-page there depends on whether you want to win the Chippewa Valley in 2026."
+    },
+    {
+      "q": "Are there any other Google Business Profiles or planned locations to fold in?",
+      "why": "We now track five pins; if more exist or are coming, we want them on the same schema, NAP and content cadence from day one."
+    }
+  ],
+  "deliverables": [
+    {
+      "name": "Strategic Dashboard",
+      "type": "Full · internal",
+      "href": "index.html",
+      "desc": "Complete analyst view — all five GBP audits, the site-connection audit, five Maps heatmaps, competitor leaderboards, the organic recovery chart, levers, the full task list, KPI targets and owner asks."
+    },
+    {
+      "name": "Condensed Strategy",
+      "type": "Summary · AM",
+      "href": "condensed.html",
+      "desc": "The findings and the 90-day plan on one page — for packaging into client communication."
+    },
+    {
+      "name": "Client Snapshot",
+      "type": "Client-facing",
+      "href": "snapshot.html",
+      "desc": "Plain-English single-screen report: how the five Maps look, the organic rebound, and what we'll do next."
+    }
+  ],
+  "snapshot": {
+    "eyebrow": "HQDM Search Intelligence · Prepared by Aleksandar Spasevski",
+    "title": "Daymakers Moving & Storage",
+    "short_name": "Daymakers Moving",
+    "subtitle": "Q2 2026 · Twin Cities + Western WI · Client Snapshot",
+    "footer": "Client snapshot · June 2026 · Prepared by Aleksandar Spasevski",
+    "nav": {
+      "condensed": { "href": "./condensed.html", "label": "Condensed report →" },
+      "strategy": { "href": "./index.html", "label": "Full strategy →" }
+    },
+    "exec_html": "<p>Daymakers leads four of its five Maps markets — <strong>#1 in Roseville, Hudson and Bloomington</strong> and a close <strong>#2 in Lake Elmo</strong> — on a combined <strong>~2,265 reviews</strong> at a 4.9–5.0★ rating. Organic website traffic has <strong>climbed every month since February</strong> (359 → 491 → 704 → 706), roughly doubling the quarter-over-quarter run-rate. The busy-season question answers itself in the data: <strong>May held level with April in search</strong> (clicks 704 → 706, impressions up), so the month's lead-count dip is downstream, not a demand drop. The next 90 days lock that in — flag the lead events in GA4 so every call and form is counted, point the Eau Claire profile at its own city page, and finish a few profile↔site details.</p>",
+    "chips": [
+      { "v": "4 / 5", "l": "pins at #1–#2 on Maps", "good": true },
+      { "v": "706", "l": "May organic clicks · vs 359 Feb trough", "good": true },
+      { "v": "2,265", "l": "reviews across 5 profiles · 4.9–5.0★", "good": true },
+      { "v": "#6", "l": "Eau Claire · the one gap", "good": false }
+    ],
+    "line": {
+      "title": "Organic website traffic & generated leads · Nov '25 → May '26",
+      "labels": ["Nov '25", "Dec '25", "Jan '26", "Feb '26", "Mar '26", "Apr '26", "May '26"],
+      "visitors": [432, 415, 465, 359, 491, 704, 706],
+      "leads": [null, null, null, null, 96, 270, 201],
+      "visitors_label": "Website clicks (GSC)",
+      "leads_label": "Generated leads (calls + forms + email)",
+      "partial_index": null,
+      "caption": "Website clicks from Google Search Console (left axis). Generated leads from GA4 (right axis) — phone, form and email actions only; Google Business profile clicks are charted separately so they don't inflate the total. Phone and email tagging matured through spring 2026, so part of the April step-up is instrumentation rather than new demand — and because GA4 isn't yet flagging these as conversions, treat the lead counts as directional until tracking is fixed."
+    },
+    "quarters": {
+      "title": "By quarter · website clicks & generated leads",
+      "labels": ["Q3 '25", "Q4 '25", "Q1 '26", "Q2 '26*"],
+      "visitors": [1890, 1373, 1315, 1410],
+      "leads": [null, null, 96, 471],
+      "visitors_label": "Website clicks",
+      "leads_label": "Generated leads",
+      "partial_index": 3
+    },
+    "boxes": [
+      {
+        "win": "Organic search · recovery",
+        "cmp": "Feb → May 2026",
+        "kind": "good",
+        "rows": [
+          { "m": "Monthly clicks", "d": "359 → 706 (≈2×)", "cls": "pos" },
+          { "m": "Apr month-over-month", "d": "+43%", "cls": "pos" }
+        ]
+      },
+      {
+        "win": "Maps · 5-pin network",
+        "cmp": "Mar → Jun 2026",
+        "kind": "good",
+        "rows": [
+          { "m": "Pins at #1", "d": "3 (Roseville/Hudson/Bloomington)", "cls": "pos" },
+          { "m": "Eau Claire top-3 cells", "d": "16 → 158", "cls": "pos" }
+        ]
+      },
+      {
+        "win": "Lead measurement",
+        "cmp": "GA4 today",
+        "kind": "watch",
+        "rows": [
+          { "m": "Key events configured", "d": "0 / 4", "cls": "neg" },
+          { "m": "gmb_click tagged", "d": "no", "cls": "muted" }
+        ],
+        "extra": { "m": "calls", "d": "tracked in CallRail", "cls": "muted" }
+      }
+    ],
+    "boxes_reading_html": "Reading: the organic rebound (Feb trough → May) and the four-pin Maps dominance are real behavior. The May-vs-April question is answered in the traffic, not lost — organic clicks held (704 → 706) and impressions rose; the GA4 lead-count dip is downstream and partly an artifact of phone/email tagging that only matured this spring. The biggest near-term unlock is measurement: flag the lead events as key events so every call and form is actually counted.",
+    "maps": { "enabled": false },
+    "competitors": { "enabled": false },
+    "focus": [
+      {
+        "title": "Convert Eau Claire from emerging to established",
+        "color": "#10b981",
+        "body": "Repoint the profile to the existing /eau-claire-wi-movers/ page, embed the live map, fix the phone shown on-page, and build Chippewa-Valley suburb depth (Altoona, Chippewa Falls, Menomonie) to feed the grid."
+      },
+      {
+        "title": "Defend the four dominant pins",
+        "color": "#1d5b8a",
+        "body": "Hold #1 at Roseville, Hudson and Bloomington and close the small gap to #1 at Lake Elmo. Watch Bloomington's slight Maps softening and the fast risers in each grid."
+      },
+      {
+        "title": "Wire up lead measurement",
+        "color": "#f59e0b",
+        "body": "Flag form_submit, click_phone_number and click_email as key events in GA4 and tag gmb_click, then reconcile with CallRail so the spring rebound in calls and forms is actually counted."
+      },
+      {
+        "title": "Keep the organic rebound compounding",
+        "color": "#6366f1",
+        "body": "Sustain the content cadence behind the Feb→May recovery, strengthen the Minneapolis hub (the top organic asset), and clean up the spammy and broken backlinks."
+      }
+    ],
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · June → August 2026",
+      "subtitle": "Jun → Aug 2026 · scope per month: 1–2 service / location pages · 5 blogs · 3 suburb pages · on-page as needed",
+      "months": ["M1 · June 2026", "M2 · July 2026", "M3 · August 2026"],
+      "rows": [
+        {
+          "label": "Services / Locations",
+          "cap": "1–2 / mo · REVAMP + NEW",
+          "cells": [
+            [
+              { "k": "revamp", "u": "/eau-claire-wi-movers/", "n": "embed live Eau Claire GBP map · fix on-page phone (shows Hudson's line) · in-body links to /local-moving/ + /long-distance-movers/ + /storage/ · prep for GBP repoint" },
+              { "k": "revamp", "u": "/minneapolis-mn-movers/", "n": "strengthen the top organic hub · push page-1-but-not-top-10 'Minneapolis movers' terms into the top 10 · FAQ schema" }
+            ],
+            [
+              { "k": "revamp", "u": "/bloomington-mn-movers/", "n": "refresh in response to the −114 top-3 softening · service-area depth (Edina, Eden Prairie, Richfield) · live map embed" },
+              { "k": "revamp", "u": "/lake-elmo-mn-movers/", "n": "broad-term depth to close the gap to #1 · cross-link suburb pages · live map embed" }
+            ],
+            [
+              { "k": "revamp", "u": "/long-distance-movers/", "n": "interstate framing · cross-link from all five city hubs · the long-distance grids are the softest per-pin coverage" },
+              { "k": "new", "u": "/storage/ refresh", "n": "storage-near-me framing for the MN pins · cross-link to city hubs (secondary GBP category sitewide)" }
+            ]
+          ]
+        },
+        {
+          "label": "Blogs",
+          "cap": "5 / mo · DEMAND-CAPTURE + REFRESH",
+          "cells": [
+            [
+              { "k": "new", "u": "/blog/moving-to-eau-claire-wi", "n": "Chippewa-Valley demand-capture · routes to /eau-claire-wi-movers/" },
+              { "k": "refresh", "u": "/blog/moving-to-roseville-mn-guide", "n": "ranks #17 for 'movers roseville mn' · tighten + route to /roseville-mn-movers/" },
+              { "k": "refresh", "u": "/blog/first-apartment-checklist", "n": "4,400-vol term at #54/#92 · refresh + internal links to city + service pages" },
+              { "k": "refresh", "u": "/blog/long-distance-moving-tips", "n": "route to /long-distance-movers/" },
+              { "k": "refresh", "u": "/blog/packing-tips", "n": "route to /packing-services/ + city hubs" }
+            ],
+            [
+              { "k": "new", "u": "/blog/moving-to-hudson-wi", "n": "St-Croix-Valley demand-capture · routes to /hudson-wi-movers/" },
+              { "k": "new", "u": "/blog/cost-of-movers-twin-cities", "n": "metro cost guide · routes to /minneapolis-mn-movers/ + city hubs" },
+              { "k": "refresh", "u": "/blog/storage-during-a-move", "n": "route to /storage/ + city pages" },
+              { "k": "refresh", "u": "/blog/office-move-checklist", "n": "route to /commercial-movers/" },
+              { "k": "refresh", "u": "/blog/moving-with-pets", "n": "internal link to /local-movers/" }
+            ],
+            [
+              { "k": "new", "u": "/blog/moving-to-bloomington-mn", "n": "south-metro demand-capture · routes to /bloomington-mn-movers/" },
+              { "k": "new", "u": "/blog/best-time-to-move-in-minnesota", "n": "seasonality angle · routes to city hubs" },
+              { "k": "refresh", "u": "/blog/piano-moving", "n": "/piano-moving/ ranks #99 for a 22k-vol term · refresh the supporting blog + route to the service page" },
+              { "k": "refresh", "u": "/blog/diy-vs-professional-movers", "n": "route to /local-movers/ + city pages" },
+              { "k": "refresh", "u": "/blog/moving-checklist", "n": "internal links to all five city hubs" }
+            ]
+          ]
+        },
+        {
+          "label": "Suburbs",
+          "cap": "3 / mo · NEW + INTERNAL LINKS",
+          "cells": [
+            [
+              { "k": "new", "u": "/suburb/altoona-wi", "n": "Chippewa-Valley feeder · feeds /eau-claire-wi-movers/" },
+              { "k": "new", "u": "/suburb/chippewa-falls-wi", "n": "Chippewa-Valley feeder · feeds /eau-claire-wi-movers/" },
+              { "k": "new", "u": "/suburb/woodbury-mn", "n": "east-metro feeder · feeds /lake-elmo-mn-movers/" }
+            ],
+            [
+              { "k": "new", "u": "/suburb/edina-mn", "n": "south-metro depth · feeds /bloomington-mn-movers/ grid" },
+              { "k": "new", "u": "/suburb/eden-prairie-mn", "n": "south-metro depth · feeds /bloomington-mn-movers/ grid" },
+              { "k": "new", "u": "/suburb/river-falls-wi", "n": "St-Croix-Valley feeder · feeds /hudson-wi-movers/" }
+            ],
+            [
+              { "k": "new", "u": "/suburb/shoreview-mn", "n": "north-metro feeder · feeds /roseville-mn-movers/" },
+              { "k": "new", "u": "/suburb/oakdale-mn", "n": "east-metro feeder · feeds /lake-elmo-mn-movers/" },
+              { "k": "new", "u": "/suburb/menomonie-wi", "n": "Chippewa-Valley depth · feeds /eau-claire-wi-movers/" }
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "per need · ANALYTICS · GBP · DEV",
+          "cells": [
+            [
+              { "k": "fix", "u": "GA4 key events", "n": "flag form_submit + click_phone_number + click_email as key events · tag gmb_click as interest · drop dead contact_form_submit" },
+              { "k": "fix", "u": "Eau Claire GBP repoint", "n": "website link → /eau-claire-wi-movers/ (currently → homepage)" },
+              { "k": "fix", "u": "Eau Claire phone", "n": "page lists Hudson's 715-226-3189 as 'primary' — replace with the intended Eau Claire public number" }
+            ],
+            [
+              { "k": "fix", "u": "GA4 ↔ CallRail reconcile", "n": "tie call tracking to GA4 so calls + forms reconcile and month-to-month is trustworthy" },
+              { "k": "fix", "u": "Live map embeds", "n": "embed each location's real Google Map (GBP/CID pin) on its city page — replace the static images" },
+              { "k": "fix", "u": "Phone / NAP per city page", "n": "one canonical public number per location across site, schema + citations" }
+            ],
+            [
+              { "k": "fix", "u": "Backlink hygiene", "n": "disavow/clean 111 high-spam referrers (≥30) · reclaim or redirect 53 broken backlinks" },
+              { "k": "fix", "u": "GBP uniformity", "n": "confirm secondary categories + service areas match across all five profiles" },
+              { "k": "fix", "u": "Internal-link finalization", "n": "city ↔ suburb ↔ service link graph closed across all five pins" }
+            ]
+          ]
+        }
+      ],
+      "note_html": "M1 fixes measurement (GA4 key events + CallRail) and the Eau Claire profile→page repoint — the highest-ROI work — while strengthening the Minneapolis organic hub. M2 finishes the connection (live map embeds, phone/NAP per city page) and builds south-metro + St-Croix suburb depth. M3 closes the internal-link graph, cleans the backlink profile, and fills the long-distance gap that shows up as the softest per-pin grid. Suburb cadence prioritizes Eau Claire (Chippewa Valley) growth and Bloomington defense, balanced with feeders for the other three pins."
+    }
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "property": "properties/528556107",
+  "gsc_property": "https://daymakersmoving.com/",
+  "pulled": "2026-06-02",
+  "ga4_history_months": 4,
+  "ga4_from": "2026-03",
+  "conversion_tracking": {
+    "configured": false,
+    "native_conversions_total": 0,
+    "lead_event_totals_since_jan": {
+      "form_submit": 335,
+      "contact_form_submit": 0,
+      "click_phone_number": 222,
+      "click_email": 16,
+      "gmb_click": 0
+    },
+    "event_totals_split": {
+      "gbp_clicks_total": 0,
+      "generated_leads_total": 573
+    },
+    "event_by_month": {
+      "form_submit": {
+        "2026-04": 151,
+        "2026-05": 125,
+        "2026-03": 55,
+        "2026-06": 4
+      },
+      "contact_form_submit": {},
+      "click_phone_number": {
+        "2026-04": 113,
+        "2026-05": 73,
+        "2026-03": 34,
+        "2026-06": 2
+      },
+      "click_email": {
+        "2026-03": 7,
+        "2026-04": 6,
+        "2026-05": 3
+      },
+      "gmb_click": {}
+    },
+    "gbp_events": [
+      "gmb_click"
+    ],
+    "lead_events": [
+      "form_submit",
+      "contact_form_submit",
+      "click_phone_number",
+      "click_email"
+    ],
+    "note": "Generated leads = form_submit + contact_form_submit + click_phone_number + click_email; GBP clicks = gmb_click, charted separately (interest in the listing, not a completed lead). If GA4 native conversions read ~0, the lead events fire but are not flagged as key events \u2014 configuring them is a P0 fix consistent with the other movers."
+  },
+  "trend": {
+    "months": [
+      "Jan 25",
+      "Feb 25",
+      "Mar 25",
+      "Apr 25",
+      "May 25",
+      "Jun 25",
+      "Jul 25",
+      "Aug 25",
+      "Sep 25",
+      "Oct 25",
+      "Nov 25",
+      "Dec 25",
+      "Jan 26",
+      "Feb 26",
+      "Mar 26",
+      "Apr 26",
+      "May 26"
+    ],
+    "months_iso": [
+      "2025-01",
+      "2025-02",
+      "2025-03",
+      "2025-04",
+      "2025-05",
+      "2025-06",
+      "2025-07",
+      "2025-08",
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05"
+    ],
+    "organic_clicks": [
+      418,
+      1081,
+      1277,
+      1094,
+      1208,
+      676,
+      591,
+      584,
+      715,
+      526,
+      432,
+      415,
+      465,
+      359,
+      491,
+      704,
+      706
+    ],
+    "organic_impressions": [
+      73681,
+      151645,
+      179729,
+      185986,
+      252258,
+      229226,
+      221990,
+      201334,
+      149207,
+      109221,
+      127568,
+      147939,
+      144990,
+      94220,
+      116842,
+      128529,
+      150525
+    ],
+    "generated_leads": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      96,
+      270,
+      201
+    ],
+    "gbp_clicks": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      0,
+      0
+    ],
+    "organic_sessions_ga4": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      352,
+      783,
+      940
+    ],
+    "partial_last": false,
+    "ga4_from": "2026-03",
+    "lead_actions": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      96,
+      270,
+      201
+    ]
+  },
+  "quarterly": [
+    {
+      "q": "Q1 2025",
+      "clicks": 2776,
+      "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q2 2025",
+      "clicks": 2978,
+      "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q3 2025",
+      "clicks": 1890,
+      "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q4 2025",
+      "clicks": 1373,
+      "months": 3,
+      "generated_leads": null,
+      "gbp_clicks": null,
+      "leads": null,
+      "partial": false
+    },
+    {
+      "q": "Q1 2026",
+      "clicks": 1315,
+      "months": 3,
+      "generated_leads": 96,
+      "gbp_clicks": 0,
+      "leads": 96,
+      "partial": false
+    },
+    {
+      "q": "Q2 2026",
+      "clicks": 1410,
+      "months": 2,
+      "generated_leads": 471,
+      "gbp_clicks": 0,
+      "leads": 471,
+      "partial": true
+    }
+  ],
+  "yoy_clicks": [
+    {
+      "q": "Q1 2026",
+      "prior": "Q1 2025",
+      "clicks_cur": 1315,
+      "clicks_prior": 2776,
+      "pct": -52.6,
+      "partial": false
+    },
+    {
+      "q": "Q2 2026",
+      "prior": "Q2 2025",
+      "clicks_cur": 1410,
+      "clicks_prior": 2302,
+      "pct": -38.7,
+      "partial": true
+    }
+  ],
+  "mom_clicks": [
+    {
+      "month": "Feb 25",
+      "iso": "2025-02",
+      "clicks": 1081,
+      "prev_clicks": 418,
+      "pct": 158.6
+    },
+    {
+      "month": "Mar 25",
+      "iso": "2025-03",
+      "clicks": 1277,
+      "prev_clicks": 1081,
+      "pct": 18.1
+    },
+    {
+      "month": "Apr 25",
+      "iso": "2025-04",
+      "clicks": 1094,
+      "prev_clicks": 1277,
+      "pct": -14.3
+    },
+    {
+      "month": "May 25",
+      "iso": "2025-05",
+      "clicks": 1208,
+      "prev_clicks": 1094,
+      "pct": 10.4
+    },
+    {
+      "month": "Jun 25",
+      "iso": "2025-06",
+      "clicks": 676,
+      "prev_clicks": 1208,
+      "pct": -44.0
+    },
+    {
+      "month": "Jul 25",
+      "iso": "2025-07",
+      "clicks": 591,
+      "prev_clicks": 676,
+      "pct": -12.6
+    },
+    {
+      "month": "Aug 25",
+      "iso": "2025-08",
+      "clicks": 584,
+      "prev_clicks": 591,
+      "pct": -1.2
+    },
+    {
+      "month": "Sep 25",
+      "iso": "2025-09",
+      "clicks": 715,
+      "prev_clicks": 584,
+      "pct": 22.4
+    },
+    {
+      "month": "Oct 25",
+      "iso": "2025-10",
+      "clicks": 526,
+      "prev_clicks": 715,
+      "pct": -26.4
+    },
+    {
+      "month": "Nov 25",
+      "iso": "2025-11",
+      "clicks": 432,
+      "prev_clicks": 526,
+      "pct": -17.9
+    },
+    {
+      "month": "Dec 25",
+      "iso": "2025-12",
+      "clicks": 415,
+      "prev_clicks": 432,
+      "pct": -3.9
+    },
+    {
+      "month": "Jan 26",
+      "iso": "2026-01",
+      "clicks": 465,
+      "prev_clicks": 415,
+      "pct": 12.0
+    },
+    {
+      "month": "Feb 26",
+      "iso": "2026-02",
+      "clicks": 359,
+      "prev_clicks": 465,
+      "pct": -22.8
+    },
+    {
+      "month": "Mar 26",
+      "iso": "2026-03",
+      "clicks": 491,
+      "prev_clicks": 359,
+      "pct": 36.8
+    },
+    {
+      "month": "Apr 26",
+      "iso": "2026-04",
+      "clicks": 704,
+      "prev_clicks": 491,
+      "pct": 43.4
+    },
+    {
+      "month": "May 26",
+      "iso": "2026-05",
+      "clicks": 706,
+      "prev_clicks": 704,
+      "pct": 0.3
+    }
+  ]
+}

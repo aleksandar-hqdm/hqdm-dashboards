@@ -1,0 +1,3409 @@
+{
+  "meta": {
+    "client": "Deep Relief",
+    "short": "Deep Relief",
+    "domain": "deeprelief.com",
+    "tagline": "Multi-service wellness clinic · South Austin TX · chiropractic + acupuncture + massage + cold laser · 4.9★ × 443 reviews",
+    "tier": "Tier 3 · Local Services",
+    "vertical": "Multi-service wellness (chiro + acupuncture + massage + cold laser)",
+    "address": "7101 State Hwy 71 Ste A-1, Austin, TX 78735",
+    "pin": {
+      "lat": 30.234357600000003,
+      "lng": -97.87645429999999
+    },
+    "place_id": "ChIJFedsj1NBW4YRHmNCjVsdxaw",
+    "primary_category": "Chiropractor",
+    "secondary_categories": "Acupuncture clinic, Massage therapist",
+    "rating": 4.9,
+    "reviews": 443,
+    "gbp_url": "https://www.google.com/maps?cid=12449389023984771870",
+    "prepared_date": "2026-06-02",
+    "preparer": "Aleksandar Spasevski",
+    "hqdm_am": "Matt Olderman",
+    "quarter": "Q2 2026",
+    "ld_keywords": [
+      "chiropractor",
+      "acupuncture",
+      "cold laser austin",
+      "dry needling near me",
+      "prenatal massage near me",
+      "deep tissue massage",
+      "pregnancy massage",
+      "pregnancy massage near me"
+    ],
+    "ld_dates": [
+      "Mar 12 2026",
+      "Mar 15 2026",
+      "Apr 14 2026",
+      "May 15 2026"
+    ],
+    "ld_baseline_date": "Mar 12 2026",
+    "ld_current_date": "May 15 2026",
+    "ld_window_days": 64,
+    "gsc_window": "2025-06-02 → 2026-05-31",
+    "gsc_window_days": 365,
+    "ga4_status": "Not connected — owner ask outstanding (no GA4 property registered under HQDM access)."
+  },
+  "tldr": "Deep Relief holds the deep-tissue-massage moat at scale (47 top-3 cells, 1.9× the next competitor) and is gaining top-10 footprint on chiropractor + acupuncture (+24 and +18 top-10 cells Mar 12 → May 15). The bleed is on pregnancy/prenatal massage where Sage Blossom Massage’s second listing (209-review pin) is taking share: pregnancy-massage-near-me top-3 cells 34 → 26 (−8). DataForSEO confirms 15 untracked services where Deep Relief sits #1–#3 at the pin today — including massage therapy austin (590 vol, #1), deep tissue massage austin (590, #1), acupuncture austin (1,000, #1), cupping therapy austin (170, #1), and massage near me (40,500, #2). The strategic play is: defend the deep-tissue moat, counter Sage Blossom on pregnancy, formalize tracking on the at-pin wins, and connect GA4 so conversion stops being invisible.",
+  "headline": {
+    "h2": "Deep Relief owns deep-tissue and is widening top-10 reach — the bleed is on pregnancy massage, where Sage Blossom’s newer pin is taking cells.",
+    "lede": "Across an 8-keyword 13×13 Local Falcon grid scanned 4 times (Mar 12 → May 15, 2026): <strong>portfolio top-10 footprint grew from 328 to 363 cells (+35)</strong> — the clinic’s pin is being shown across more of South Austin than before. Top-3 share is flat-to-slightly-down (-11) entirely because of one keyword cluster: pregnancy/prenatal massage, where Sage Blossom Massage’s 209-review listing has accelerated. The deep-tissue-massage category is decisively owned (DR 47 top-3 cells; nearest competitor 25). Cold laser is unwinnable against Laser Therapy Clinic-Austin’s category-exact pin (133/133 cells in top-3) — accept the constraint and stop measuring against it. <br><br>GSC: 365 days, 7,839 clicks against 945,867 impressions. Sitewide CTR 0.83% — the bottleneck isn’t reach (impressions +2.8% H2 vs H1), it’s click-capture: brand queries are 3.4% of impressions but 63.8% of clicks, non-brand impressions get 0.4% CTR. <strong>GA4 is not connected</strong> — conversion-side measurement is the single biggest open question, and the only owner-side ask in this diagnosis.",
+    "tiles": [
+      {
+        "label": "Top-3 cells · 8 tracked kws",
+        "value": "143",
+        "sub": "vs baseline 154 (-11) · Mar 12 → May 15",
+        "sentiment": "neutral"
+      },
+      {
+        "label": "Top-10 footprint · 8 tracked kws",
+        "value": "363",
+        "sub": "vs baseline 328 (+35) · net rank improvement",
+        "sentiment": "positive"
+      },
+      {
+        "label": "Deep tissue massage · #1 portfolio",
+        "value": "47 top-3 cells",
+        "sub": "Nearest competitor 25 cells · the moat · mean dx -0.13",
+        "sentiment": "positive"
+      },
+      {
+        "label": "Untracked at-pin wins (DFS)",
+        "value": "15 kws · ~48K mo vol",
+        "sub": "Deep Relief #1–#3 at center for 15 services not in LD tracking",
+        "sentiment": "positive"
+      }
+    ]
+  },
+  "pin": {
+    "label": "Deep Relief · South Austin chiropractor + multi-service wellness",
+    "address": "7101 State Hwy 71 Ste A-1, Austin, TX 78735",
+    "service_area": "South Austin core + adjacent suburbs (Sunset Valley, Oak Hill, West Lake Hills, Dripping Springs, Bee Cave) — storefront, not service-area-only",
+    "rating": 4.9,
+    "reviews": 443,
+    "primary": "Chiropractor",
+    "secondary": "Acupuncture clinic, Massage therapist",
+    "url": "https://www.google.com/maps?cid=12449389023984771870",
+    "domain": "deeprelief.com",
+    "ld_grid": "13x13 (169 cells) · 6 mi (1-mi cell spacing)"
+  },
+  "trajectory_ld": {
+    "labels": [
+      "Mar 12 2026",
+      "Mar 15 2026",
+      "Apr 14 2026",
+      "May 15 2026"
+    ],
+    "per_kw": {
+      "chiropractor": {
+        "avg_rank": [
+          15.81,
+          9.72,
+          13.6,
+          13.57
+        ],
+        "top3": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "top10": [
+          2,
+          25,
+          3,
+          6
+        ],
+        "top20": [
+          16,
+          39,
+          10,
+          30
+        ]
+      },
+      "acupuncture": {
+        "avg_rank": [
+          14.0,
+          10.7,
+          13.41,
+          11.07
+        ],
+        "top3": [
+          1,
+          5,
+          1,
+          3
+        ],
+        "top10": [
+          6,
+          29,
+          10,
+          24
+        ],
+        "top20": [
+          27,
+          56,
+          32,
+          42
+        ]
+      },
+      "cold laser austin": {
+        "avg_rank": [
+          14.46,
+          9.13,
+          14.0,
+          11.63
+        ],
+        "top3": [
+          4,
+          14,
+          3,
+          8
+        ],
+        "top10": [
+          14,
+          73,
+          14,
+          19
+        ],
+        "top20": [
+          67,
+          107,
+          65,
+          46
+        ]
+      },
+      "dry needling near me": {
+        "avg_rank": [
+          10.82,
+          7.42,
+          10.56,
+          10.84
+        ],
+        "top3": [
+          5,
+          26,
+          4,
+          5
+        ],
+        "top10": [
+          13,
+          56,
+          20,
+          22
+        ],
+        "top20": [
+          28,
+          80,
+          41,
+          44
+        ]
+      },
+      "prenatal massage near me": {
+        "avg_rank": [
+          8.03,
+          7.57,
+          7.85,
+          8.18
+        ],
+        "top3": [
+          14,
+          17,
+          15,
+          13
+        ],
+        "top10": [
+          63,
+          78,
+          71,
+          66
+        ],
+        "top20": [
+          90,
+          102,
+          94,
+          96
+        ]
+      },
+      "deep tissue massage": {
+        "avg_rank": [
+          5.07,
+          5.3,
+          5.85,
+          5.51
+        ],
+        "top3": [
+          50,
+          64,
+          50,
+          47
+        ],
+        "top10": [
+          73,
+          82,
+          76,
+          73
+        ],
+        "top20": [
+          90,
+          105,
+          97,
+          92
+        ]
+      },
+      "pregnancy massage": {
+        "avg_rank": [
+          6.56,
+          6.08,
+          6.83,
+          6.81
+        ],
+        "top3": [
+          45,
+          57,
+          47,
+          40
+        ],
+        "top10": [
+          77,
+          91,
+          73,
+          73
+        ],
+        "top20": [
+          100,
+          117,
+          105,
+          95
+        ]
+      },
+      "pregnancy massage near me": {
+        "avg_rank": [
+          6.67,
+          5.99,
+          6.79,
+          7.12
+        ],
+        "top3": [
+          34,
+          41,
+          33,
+          26
+        ],
+        "top10": [
+          80,
+          90,
+          84,
+          80
+        ],
+        "top20": [
+          102,
+          108,
+          108,
+          104
+        ]
+      }
+    },
+    "portfolio": {
+      "top3": [
+        154,
+        226,
+        154,
+        143
+      ],
+      "top10": [
+        328,
+        524,
+        351,
+        363
+      ],
+      "top20": [
+        520,
+        714,
+        552,
+        549
+      ]
+    }
+  },
+  "kw_table": [
+    {
+      "kw": "chiropractor",
+      "search_volume_austin": null,
+      "rank_base": 15.81,
+      "rank_cur": 13.57,
+      "top3_base": 1,
+      "top3_cur": 1,
+      "top10_base": 2,
+      "top10_cur": 6,
+      "top20_base": 16,
+      "top20_cur": 30,
+      "mean_dx": 4.94,
+      "cells_entered": 14,
+      "cells_lost": 0,
+      "sentiment": "positive"
+    },
+    {
+      "kw": "acupuncture",
+      "search_volume_austin": 1600,
+      "rank_base": 14.0,
+      "rank_cur": 11.07,
+      "top3_base": 1,
+      "top3_cur": 3,
+      "top10_base": 6,
+      "top10_cur": 24,
+      "top20_base": 27,
+      "top20_cur": 42,
+      "mean_dx": 5.74,
+      "cells_entered": 15,
+      "cells_lost": 0,
+      "sentiment": "positive"
+    },
+    {
+      "kw": "cold laser austin",
+      "search_volume_austin": 10,
+      "rank_base": 14.46,
+      "rank_cur": 11.63,
+      "top3_base": 4,
+      "top3_cur": 8,
+      "top10_base": 14,
+      "top10_cur": 19,
+      "top20_base": 67,
+      "top20_cur": 46,
+      "mean_dx": 1.07,
+      "cells_entered": 5,
+      "cells_lost": 26,
+      "sentiment": "positive"
+    },
+    {
+      "kw": "dry needling near me",
+      "search_volume_austin": 110,
+      "rank_base": 10.82,
+      "rank_cur": 10.84,
+      "top3_base": 5,
+      "top3_cur": 5,
+      "top10_base": 13,
+      "top10_cur": 22,
+      "top20_base": 28,
+      "top20_cur": 44,
+      "mean_dx": 2.93,
+      "cells_entered": 16,
+      "cells_lost": 0,
+      "sentiment": "positive"
+    },
+    {
+      "kw": "prenatal massage near me",
+      "search_volume_austin": 140,
+      "rank_base": 8.03,
+      "rank_cur": 8.18,
+      "top3_base": 14,
+      "top3_cur": 13,
+      "top10_base": 63,
+      "top10_cur": 66,
+      "top20_base": 90,
+      "top20_cur": 96,
+      "mean_dx": 0.49,
+      "cells_entered": 8,
+      "cells_lost": 2,
+      "sentiment": "neutral"
+    },
+    {
+      "kw": "deep tissue massage",
+      "search_volume_austin": 720,
+      "rank_base": 5.07,
+      "rank_cur": 5.51,
+      "top3_base": 50,
+      "top3_cur": 47,
+      "top10_base": 73,
+      "top10_cur": 73,
+      "top20_base": 90,
+      "top20_cur": 92,
+      "mean_dx": -0.13,
+      "cells_entered": 3,
+      "cells_lost": 1,
+      "sentiment": "neutral"
+    },
+    {
+      "kw": "pregnancy massage",
+      "search_volume_austin": 50,
+      "rank_base": 6.56,
+      "rank_cur": 6.81,
+      "top3_base": 45,
+      "top3_cur": 40,
+      "top10_base": 77,
+      "top10_cur": 73,
+      "top20_base": 100,
+      "top20_cur": 95,
+      "mean_dx": -0.66,
+      "cells_entered": 3,
+      "cells_lost": 8,
+      "sentiment": "negative"
+    },
+    {
+      "kw": "pregnancy massage near me",
+      "search_volume_austin": 20,
+      "rank_base": 6.67,
+      "rank_cur": 7.12,
+      "top3_base": 34,
+      "top3_cur": 26,
+      "top10_base": 80,
+      "top10_cur": 80,
+      "top20_base": 102,
+      "top20_cur": 104,
+      "mean_dx": -0.17,
+      "cells_entered": 4,
+      "cells_lost": 2,
+      "sentiment": "negative"
+    }
+  ],
+  "distance_bands": [
+    {
+      "band": "0-0.5 mi (pin core)",
+      "lo_mi": 0.0,
+      "hi_mi": 0.5,
+      "cells_total": 8,
+      "cells_visible_top20": 8,
+      "cells_top10": 8,
+      "cells_top3": 8,
+      "cells_out": 0
+    },
+    {
+      "band": "0.5-1 mi",
+      "lo_mi": 0.5,
+      "hi_mi": 1.0,
+      "cells_total": 24,
+      "cells_visible_top20": 24,
+      "cells_top10": 22,
+      "cells_top3": 14,
+      "cells_out": 0
+    },
+    {
+      "band": "1-2 mi",
+      "lo_mi": 1.0,
+      "hi_mi": 2.0,
+      "cells_total": 72,
+      "cells_visible_top20": 67,
+      "cells_top10": 56,
+      "cells_top3": 37,
+      "cells_out": 5
+    },
+    {
+      "band": "2-3 mi",
+      "lo_mi": 2.0,
+      "hi_mi": 3.0,
+      "cells_total": 144,
+      "cells_visible_top20": 114,
+      "cells_top10": 92,
+      "cells_top3": 34,
+      "cells_out": 30
+    },
+    {
+      "band": "3-5 mi",
+      "lo_mi": 3.0,
+      "hi_mi": 5.0,
+      "cells_total": 416,
+      "cells_visible_top20": 213,
+      "cells_top10": 120,
+      "cells_top3": 38,
+      "cells_out": 203
+    },
+    {
+      "band": "5-10 mi (grid edge)",
+      "lo_mi": 5.0,
+      "hi_mi": 10.0,
+      "cells_total": 400,
+      "cells_visible_top20": 123,
+      "cells_top10": 65,
+      "cells_top3": 12,
+      "cells_out": 277
+    }
+  ],
+  "leaderboard": [
+    {
+      "name": "Sage Blossom Massage",
+      "place_id": "ChIJA_5Weg9LW4YRMCyLSrArxKk",
+      "primary_cat": "Massage therapist",
+      "website": "https://sageblossommassage.com/?utm_source=gmb&utm_medium=organic&utm_campaign=url&utm_id=290",
+      "address": "6705 US-290, Austin, TX 78735",
+      "rating": 4.8,
+      "reviews": 209,
+      "top3_cells": 193,
+      "top10_cells": 340,
+      "top20_cells": 433,
+      "no1_cells": 76,
+      "avg_rank": 5.99,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 187,
+      "top10_cells_base": 333,
+      "top20_cells_base": 420,
+      "delta_top3": 6,
+      "delta_top10": 7,
+      "delta_top20": 13,
+      "avg_rank_base": 6.12,
+      "delta_avg_rank": 0.13
+    },
+    {
+      "name": "Deep Relief",
+      "place_id": "ChIJFedsj1NBW4YRHmNCjVsdxaw",
+      "primary_cat": "Massage therapist",
+      "website": "https://deeprelief.com/",
+      "address": "7101 State Hwy 71 Ste A-1, Austin, TX 78735",
+      "rating": 4.9,
+      "reviews": 443,
+      "top3_cells": 143,
+      "top10_cells": 363,
+      "top20_cells": 549,
+      "no1_cells": 48,
+      "avg_rank": 8.31,
+      "kws_top3": [
+        "acupuncture",
+        "chiropractor",
+        "cold laser austin",
+        "deep tissue massage",
+        "dry needling near me",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "acupuncture",
+        "chiropractor",
+        "cold laser austin",
+        "deep tissue massage",
+        "dry needling near me",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": true,
+      "top3_cells_base": 154,
+      "top10_cells_base": 328,
+      "top20_cells_base": 520,
+      "delta_top3": -11,
+      "delta_top10": 35,
+      "delta_top20": 29,
+      "avg_rank_base": 8.5,
+      "delta_avg_rank": 0.19
+    },
+    {
+      "name": "Laser Therapy Clinic-Austin",
+      "place_id": "ChIJDQyH-jZLW4YREqoBDXJU1jE",
+      "primary_cat": "Specialized clinic",
+      "website": "http://www.silkybody.com/",
+      "address": "4422 Pack Saddle Pass, Austin, TX 78745",
+      "rating": 3.9,
+      "reviews": 28,
+      "top3_cells": 127,
+      "top10_cells": 133,
+      "top20_cells": 133,
+      "no1_cells": 30,
+      "avg_rank": 2.17,
+      "kws_top3": [
+        "cold laser austin"
+      ],
+      "kws_top10": [
+        "cold laser austin"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 105,
+      "top10_cells_base": 126,
+      "top20_cells_base": 133,
+      "delta_top3": 22,
+      "delta_top10": 7,
+      "delta_top20": 0,
+      "avg_rank_base": 2.84,
+      "delta_avg_rank": 0.67
+    },
+    {
+      "name": "Sage Blossom Massage",
+      "place_id": "ChIJxU2qNV5LW4YRQjm_3KUG6K4",
+      "primary_cat": "Massage therapist",
+      "website": "https://sageblossommassage.com/?utm_source=gmb&utm_medium=organic&utm_campaign=url&utm_id=menchaca",
+      "address": "6603 Menchaca Rd, Austin, TX 78745",
+      "rating": 4.9,
+      "reviews": 763,
+      "top3_cells": 101,
+      "top10_cells": 272,
+      "top20_cells": 395,
+      "no1_cells": 33,
+      "avg_rank": 8.02,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 143,
+      "top10_cells_base": 308,
+      "top20_cells_base": 412,
+      "delta_top3": -42,
+      "delta_top10": -36,
+      "delta_top20": -17,
+      "avg_rank_base": 7.27,
+      "delta_avg_rank": -0.75
+    },
+    {
+      "name": "Oak Hill Spa",
+      "place_id": "ChIJl2KyxRJJW4YRIWHuWQTLBWU",
+      "primary_cat": "Massage therapist",
+      "website": "https://business.google.com/v/oak-hill-spa/018197180894351604479/f002/_?",
+      "address": "8305 State Hwy 71 Unit 150, Austin, TX 78735",
+      "rating": 4.9,
+      "reviews": 46,
+      "top3_cells": 96,
+      "top10_cells": 248,
+      "top20_cells": 330,
+      "no1_cells": 37,
+      "avg_rank": 7.36,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 73,
+      "top10_cells_base": 204,
+      "top20_cells_base": 290,
+      "delta_top3": 23,
+      "delta_top10": 44,
+      "delta_top20": 40,
+      "avg_rank_base": 8.06,
+      "delta_avg_rank": 0.7
+    },
+    {
+      "name": "Creek Spa Massage",
+      "place_id": "ChIJsyLwGIZLW4YRmI-uFnj6dms",
+      "primary_cat": "Massage therapist",
+      "website": "",
+      "address": "8106 Brodie Ln Ste 107, Austin, TX 78745",
+      "rating": 4.9,
+      "reviews": 90,
+      "top3_cells": 74,
+      "top10_cells": 238,
+      "top20_cells": 350,
+      "no1_cells": 22,
+      "avg_rank": 8.28,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 49,
+      "top10_cells_base": 155,
+      "top20_cells_base": 320,
+      "delta_top3": 25,
+      "delta_top10": 83,
+      "delta_top20": 30,
+      "avg_rank_base": 10.31,
+      "delta_avg_rank": 2.03
+    },
+    {
+      "name": "BirthCo. Chiropractic + Wellness Center - Prenatal Chiropractor In SW Austin",
+      "place_id": "ChIJvb0NjmCzRIYRxdTwR6KJQsI",
+      "primary_cat": "Pregnancy care center",
+      "website": "http://www.birth-co.com/",
+      "address": "9217 US-290 150, Austin, TX 78736",
+      "rating": 5.0,
+      "reviews": 247,
+      "top3_cells": 69,
+      "top10_cells": 157,
+      "top20_cells": 246,
+      "no1_cells": 36,
+      "avg_rank": 8.27,
+      "kws_top3": [
+        "acupuncture",
+        "chiropractor",
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "acupuncture",
+        "chiropractor",
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 67,
+      "top10_cells_base": 135,
+      "top20_cells_base": 223,
+      "delta_top3": 2,
+      "delta_top10": 22,
+      "delta_top20": 23,
+      "avg_rank_base": 8.73,
+      "delta_avg_rank": 0.46
+    },
+    {
+      "name": "Massage Heights Dripping Springs",
+      "place_id": "ChIJhwNOb-JHW4YR5dTBO5WTMH8",
+      "primary_cat": "Massage spa",
+      "website": "https://www.heightswellnessretreat.com/dripping-springs/",
+      "address": "12680 US-290 Suite 140, Austin, TX 78737",
+      "rating": 4.7,
+      "reviews": 48,
+      "top3_cells": 67,
+      "top10_cells": 105,
+      "top20_cells": 142,
+      "no1_cells": 36,
+      "avg_rank": 6.43,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 62,
+      "top10_cells_base": 103,
+      "top20_cells_base": 145,
+      "delta_top3": 5,
+      "delta_top10": 2,
+      "delta_top20": -3,
+      "avg_rank_base": 7.04,
+      "delta_avg_rank": 0.61
+    },
+    {
+      "name": "Zen Blend Mind + Body Spa",
+      "place_id": "ChIJ-YzPcu5MW4YRaA3hgcBfBC0",
+      "primary_cat": "Massage spa",
+      "website": "http://www.austinspa.org/",
+      "address": "1309 W Slaughter Ln, Austin, TX 78748",
+      "rating": 4.9,
+      "reviews": 359,
+      "top3_cells": 65,
+      "top10_cells": 146,
+      "top20_cells": 266,
+      "no1_cells": 27,
+      "avg_rank": 9.25,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 58,
+      "top10_cells_base": 142,
+      "top20_cells_base": 236,
+      "delta_top3": 7,
+      "delta_top10": 4,
+      "delta_top20": 30,
+      "avg_rank_base": 8.96,
+      "delta_avg_rank": -0.29
+    },
+    {
+      "name": "Austin Laser Solutions - Sunset Valley",
+      "place_id": "ChIJpbskBbdLW4YRq-3aj0AXuzA",
+      "primary_cat": "Laser hair removal service",
+      "website": "https://www.austinlasersolutions.com/location/sunset-valley/?utm_source=gb&utm_medium=organic",
+      "address": "5601 Brodie Ln 1000, Austin, TX 78745",
+      "rating": 5.0,
+      "reviews": 253,
+      "top3_cells": 65,
+      "top10_cells": 72,
+      "top20_cells": 72,
+      "no1_cells": 31,
+      "avg_rank": 1.86,
+      "kws_top3": [
+        "cold laser austin"
+      ],
+      "kws_top10": [
+        "cold laser austin"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 16,
+      "top10_cells_base": 20,
+      "top20_cells_base": 20,
+      "delta_top3": 49,
+      "delta_top10": 52,
+      "delta_top20": 52,
+      "avg_rank_base": 2.7,
+      "delta_avg_rank": 0.84
+    },
+    {
+      "name": "Pampering Pros",
+      "place_id": "ChIJfd_spIFKW4YR_OCvh1QUjI4",
+      "primary_cat": "Massage therapist",
+      "website": "https://www.pamperingpros.com/",
+      "address": "1001 S Capital of Texas Hwy Building M, Suite 228, Austin, TX 78746",
+      "rating": 5.0,
+      "reviews": 65,
+      "top3_cells": 58,
+      "top10_cells": 120,
+      "top20_cells": 220,
+      "no1_cells": 18,
+      "avg_rank": 9.65,
+      "kws_top3": [
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 57,
+      "top10_cells_base": 115,
+      "top20_cells_base": 217,
+      "delta_top3": 1,
+      "delta_top10": 5,
+      "delta_top20": 3,
+      "avg_rank_base": 9.76,
+      "delta_avg_rank": 0.11
+    },
+    {
+      "name": "Slaughter Lane Chiropractic",
+      "place_id": "ChIJ1xKcUvRMW4YRzwm9PnEtC9c",
+      "primary_cat": "Chiropractor",
+      "website": "http://www.slc-chiro.com/",
+      "address": "3107 W Slaughter Ln, Austin, TX 78748",
+      "rating": 5.0,
+      "reviews": 245,
+      "top3_cells": 51,
+      "top10_cells": 106,
+      "top20_cells": 188,
+      "no1_cells": 16,
+      "avg_rank": 9.29,
+      "kws_top3": [
+        "chiropractor",
+        "cold laser austin"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "cold laser austin",
+        "pregnancy massage",
+        "pregnancy massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 50,
+      "top10_cells_base": 100,
+      "top20_cells_base": 166,
+      "delta_top3": 1,
+      "delta_top10": 6,
+      "delta_top20": 22,
+      "avg_rank_base": 8.73,
+      "delta_avg_rank": -0.56
+    },
+    {
+      "name": "Relax Sun Spa",
+      "place_id": "ChIJrVCBEWxMW4YRRvdbtE_cKkU",
+      "primary_cat": "Massage therapist",
+      "website": "http://www.relaxsunspatx.com/",
+      "address": "9901 Brodie Ln, Austin, TX 78748",
+      "rating": 4.3,
+      "reviews": 94,
+      "top3_cells": 48,
+      "top10_cells": 114,
+      "top20_cells": 195,
+      "no1_cells": 24,
+      "avg_rank": 9.17,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 26,
+      "top10_cells_base": 69,
+      "top20_cells_base": 121,
+      "delta_top3": 22,
+      "delta_top10": 45,
+      "delta_top20": 74,
+      "avg_rank_base": 9.46,
+      "delta_avg_rank": 0.29
+    },
+    {
+      "name": "Zen Deep Massage Therapy",
+      "place_id": "ChIJ9WbkUstKW4YRf1GTM7UaAGY",
+      "primary_cat": "Massage therapist",
+      "website": "https://zendeepmassage.com/",
+      "address": "7035 Bee Caves Rd 206, Austin, TX 78746",
+      "rating": 4.9,
+      "reviews": 120,
+      "top3_cells": 46,
+      "top10_cells": 92,
+      "top20_cells": 148,
+      "no1_cells": 20,
+      "avg_rank": 8.66,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 36,
+      "top10_cells_base": 77,
+      "top20_cells_base": 122,
+      "delta_top3": 10,
+      "delta_top10": 15,
+      "delta_top20": 26,
+      "avg_rank_base": 8.4,
+      "delta_avg_rank": -0.26
+    },
+    {
+      "name": "Austin Laser Solutions - Bee Cave",
+      "place_id": "ChIJsTLvwuo3W4YRhur6VosCr0I",
+      "primary_cat": "Laser hair removal service",
+      "website": "https://www.austinlasersolutions.com/location/bee-cave/?utm_source=gb&utm_medium=organic",
+      "address": "12700 Hill Country Blvd Suite S-121, Austin, TX 78738",
+      "rating": 5.0,
+      "reviews": 306,
+      "top3_cells": 40,
+      "top10_cells": 49,
+      "top20_cells": 50,
+      "no1_cells": 37,
+      "avg_rank": 2.04,
+      "kws_top3": [
+        "cold laser austin"
+      ],
+      "kws_top10": [
+        "cold laser austin"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 7,
+      "top10_cells_base": 8,
+      "top20_cells_base": 8,
+      "delta_top3": 33,
+      "delta_top10": 41,
+      "delta_top20": 42,
+      "avg_rank_base": 1.5,
+      "delta_avg_rank": -0.54
+    },
+    {
+      "name": "BirthCo. Chiropractic + Wellness Center - Prenatal Chiropractor In Bee Cave TX",
+      "place_id": "ChIJTd82cKw3W4YR8NwTYRTlpxE",
+      "primary_cat": "Pregnancy care center",
+      "website": "http://www.birth-co.com/",
+      "address": "3944 Ranch Rd 620 S Building 2, Suite 110, Bee Cave, TX 78738",
+      "rating": 5.0,
+      "reviews": 133,
+      "top3_cells": 38,
+      "top10_cells": 84,
+      "top20_cells": 142,
+      "no1_cells": 22,
+      "avg_rank": 9.22,
+      "kws_top3": [
+        "chiropractor",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "dry needling near me",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 31,
+      "top10_cells_base": 72,
+      "top20_cells_base": 124,
+      "delta_top3": 7,
+      "delta_top10": 12,
+      "delta_top20": 18,
+      "avg_rank_base": 9.15,
+      "delta_avg_rank": -0.07
+    },
+    {
+      "name": "The Joint Chiropractic",
+      "place_id": "ChIJjTKt6lNJW4YR78VoDgtZJco",
+      "primary_cat": "Chiropractor",
+      "website": "https://www.thejoint.com/texas/austin/circle-c-28051",
+      "address": "8916 Brodie Ln 500, Austin, TX 78748",
+      "rating": 4.9,
+      "reviews": 666,
+      "top3_cells": 38,
+      "top10_cells": 76,
+      "top20_cells": 121,
+      "no1_cells": 21,
+      "avg_rank": 8.28,
+      "kws_top3": [
+        "chiropractor"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "pregnancy massage",
+        "pregnancy massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 26,
+      "top10_cells_base": 61,
+      "top20_cells_base": 82,
+      "delta_top3": 12,
+      "delta_top10": 15,
+      "delta_top20": 39,
+      "avg_rank_base": 7.0,
+      "delta_avg_rank": -1.28
+    },
+    {
+      "name": "PT Solutions of Oak Hill",
+      "place_id": "ChIJZ5RTMzVJW4YRRW6k7NXHxE0",
+      "primary_cat": "Physical therapy clinic",
+      "website": "https://ptsolutions.com/find-a-clinic/tx/austin/oak-hill/?utm_source=google&utm_medium=organic&utm_campaign=GMB-PT-Solutions-Oak-Hill&utm_content=listing",
+      "address": "7826 US-290 Ste 105, Austin, TX 78736",
+      "rating": 4.8,
+      "reviews": 92,
+      "top3_cells": 34,
+      "top10_cells": 61,
+      "top20_cells": 80,
+      "no1_cells": 13,
+      "avg_rank": 6.19,
+      "kws_top3": [
+        "dry needling near me"
+      ],
+      "kws_top10": [
+        "dry needling near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 41,
+      "top10_cells_base": 69,
+      "top20_cells_base": 89,
+      "delta_top3": -7,
+      "delta_top10": -8,
+      "delta_top20": -9,
+      "avg_rank_base": 6.43,
+      "delta_avg_rank": 0.24
+    },
+    {
+      "name": "TexStar Chiropractic - Dripping Springs / Belterra",
+      "place_id": "ChIJTxiyazRHW4YRVkaZwAFEehs",
+      "primary_cat": "Chiropractor",
+      "website": "https://texstarchiropractic.com/locations/dripping-springs/",
+      "address": "13341 W U.S. 290 Building 1, Suite 102, Austin, TX 78737",
+      "rating": 5.0,
+      "reviews": 122,
+      "top3_cells": 33,
+      "top10_cells": 67,
+      "top20_cells": 106,
+      "no1_cells": 13,
+      "avg_rank": 8.21,
+      "kws_top3": [
+        "chiropractor",
+        "cold laser austin"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "cold laser austin"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 37,
+      "top10_cells_base": 75,
+      "top20_cells_base": 120,
+      "delta_top3": -4,
+      "delta_top10": -8,
+      "delta_top20": -14,
+      "avg_rank_base": 8.63,
+      "delta_avg_rank": 0.42
+    },
+    {
+      "name": "Massage + Chiro",
+      "place_id": "ChIJy-SjiZI3W4YRqRt6ycQGDKk",
+      "primary_cat": "Massage therapist",
+      "website": "http://massagechiro.center/",
+      "address": "3932-A Ranch Rd 620 S, Bee Cave, TX 78738",
+      "rating": 4.9,
+      "reviews": 69,
+      "top3_cells": 32,
+      "top10_cells": 81,
+      "top20_cells": 124,
+      "no1_cells": 9,
+      "avg_rank": 8.43,
+      "kws_top3": [
+        "chiropractor",
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 14,
+      "top10_cells_base": 54,
+      "top20_cells_base": 88,
+      "delta_top3": 18,
+      "delta_top10": 27,
+      "delta_top20": 36,
+      "avg_rank_base": 9.43,
+      "delta_avg_rank": 1.0
+    },
+    {
+      "name": "South Austin Community Acupuncture",
+      "place_id": "ChIJU4ZZlr60RIYRF9e6nrm3Fxg",
+      "primary_cat": "Acupuncture clinic",
+      "website": "http://acupunctureworldheadquarters.com/",
+      "address": "5700 Menchaca Rd Suite 300, Austin, TX 78745",
+      "rating": 4.9,
+      "reviews": 84,
+      "top3_cells": 32,
+      "top10_cells": 78,
+      "top20_cells": 106,
+      "no1_cells": 14,
+      "avg_rank": 7.28,
+      "kws_top3": [
+        "acupuncture"
+      ],
+      "kws_top10": [
+        "acupuncture"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 30,
+      "top10_cells_base": 76,
+      "top20_cells_base": 107,
+      "delta_top3": 2,
+      "delta_top10": 2,
+      "delta_top20": -1,
+      "avg_rank_base": 7.73,
+      "delta_avg_rank": 0.45
+    },
+    {
+      "name": "Dee Acupuncture",
+      "place_id": "ChIJIdoA7HVLW4YR7hf7ZsLpCRA",
+      "primary_cat": "Acupuncturist",
+      "website": "https://deeacupuncture.com/",
+      "address": "9217 US-290 150, Austin, TX 78736",
+      "rating": 5.0,
+      "reviews": 66,
+      "top3_cells": 32,
+      "top10_cells": 56,
+      "top20_cells": 81,
+      "no1_cells": 21,
+      "avg_rank": 6.77,
+      "kws_top3": [
+        "acupuncture"
+      ],
+      "kws_top10": [
+        "acupuncture"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 32,
+      "top10_cells_base": 57,
+      "top20_cells_base": 82,
+      "delta_top3": 0,
+      "delta_top10": -1,
+      "delta_top20": -1,
+      "avg_rank_base": 6.9,
+      "delta_avg_rank": 0.13
+    },
+    {
+      "name": "Dimensions Massage Therapy",
+      "place_id": "ChIJJ-JIrhpLW4YRmyT8SXWM_Hg",
+      "primary_cat": "Massage therapist",
+      "website": "https://www.dimensionsmt.com/",
+      "address": "4477 S Lamar Blvd Suite 410, Austin, TX 78745",
+      "rating": 5.0,
+      "reviews": 170,
+      "top3_cells": 31,
+      "top10_cells": 86,
+      "top20_cells": 215,
+      "no1_cells": 5,
+      "avg_rank": 11.92,
+      "kws_top3": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "kws_top10": [
+        "deep tissue massage",
+        "pregnancy massage",
+        "pregnancy massage near me",
+        "prenatal massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 21,
+      "top10_cells_base": 69,
+      "top20_cells_base": 177,
+      "delta_top3": 10,
+      "delta_top10": 17,
+      "delta_top20": 38,
+      "avg_rank_base": 12.08,
+      "delta_avg_rank": 0.16
+    },
+    {
+      "name": "Restore Hyper Wellness",
+      "place_id": "ChIJHUxHt8E3W4YR2CYV6O500pQ",
+      "primary_cat": "Medical spa",
+      "website": "https://www.restore.com/locations/tx-bee-cave-tx003?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk5MjUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+      "address": "4005 Market St Unit 130, Bee Cave, TX 78738",
+      "rating": 4.9,
+      "reviews": 431,
+      "top3_cells": 31,
+      "top10_cells": 56,
+      "top20_cells": 84,
+      "no1_cells": 2,
+      "avg_rank": 7.83,
+      "kws_top3": [
+        "cold laser austin",
+        "deep tissue massage",
+        "dry needling near me"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "cold laser austin",
+        "deep tissue massage",
+        "dry needling near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 31,
+      "top10_cells_base": 57,
+      "top20_cells_base": 82,
+      "delta_top3": 0,
+      "delta_top10": -1,
+      "delta_top20": 2,
+      "avg_rank_base": 7.51,
+      "delta_avg_rank": -0.32
+    },
+    {
+      "name": "The Joint Chiropractic",
+      "place_id": "ChIJCY0pH_ZLW4YRFghuVmGJKDE",
+      "primary_cat": "Chiropractor",
+      "website": "https://www.thejoint.com/texas/west-lake-hills/westlake-28111",
+      "address": "701 S Capital of Texas Hwy Suite D475, West Lake Hills, TX 78746",
+      "rating": 4.9,
+      "reviews": 391,
+      "top3_cells": 30,
+      "top10_cells": 45,
+      "top20_cells": 72,
+      "no1_cells": 16,
+      "avg_rank": 8.18,
+      "kws_top3": [
+        "chiropractor"
+      ],
+      "kws_top10": [
+        "chiropractor",
+        "pregnancy massage",
+        "pregnancy massage near me"
+      ],
+      "is_dr": false,
+      "top3_cells_base": 20,
+      "top10_cells_base": 32,
+      "top20_cells_base": 45,
+      "delta_top3": 10,
+      "delta_top10": 13,
+      "delta_top20": 27,
+      "avg_rank_base": 6.64,
+      "delta_avg_rank": -1.54
+    }
+  ],
+  "per_kw_competitors": {
+    "chiropractor": [
+      {
+        "name": "The Joint Chiropractic",
+        "rating": 4.9,
+        "reviews": 666,
+        "top3_cells": 38,
+        "top10_cells": 73,
+        "top20_cells": 84,
+        "avg_rank": 5.18,
+        "is_dr": false
+      },
+      {
+        "name": "The Joint Chiropractic",
+        "rating": 4.9,
+        "reviews": 391,
+        "top3_cells": 30,
+        "top10_cells": 43,
+        "top20_cells": 56,
+        "avg_rank": 6.5,
+        "is_dr": false
+      },
+      {
+        "name": "The Joint Chiropractic",
+        "rating": 4.9,
+        "reviews": 727,
+        "top3_cells": 25,
+        "top10_cells": 63,
+        "top20_cells": 104,
+        "avg_rank": 8.86,
+        "is_dr": false
+      },
+      {
+        "name": "South Austin Chiro",
+        "rating": 5.0,
+        "reviews": 390,
+        "top3_cells": 25,
+        "top10_cells": 49,
+        "top20_cells": 67,
+        "avg_rank": 7.12,
+        "is_dr": false
+      },
+      {
+        "name": "Experience Chiropractic ATX",
+        "rating": 5.0,
+        "reviews": 49,
+        "top3_cells": 24,
+        "top10_cells": 50,
+        "top20_cells": 63,
+        "avg_rank": 6.68,
+        "is_dr": false
+      },
+      {
+        "name": "Slaughter Lane Chiropractic",
+        "rating": 5.0,
+        "reviews": 245,
+        "top3_cells": 24,
+        "top10_cells": 41,
+        "top20_cells": 56,
+        "avg_rank": 6.96,
+        "is_dr": false
+      },
+      {
+        "name": "BirthCo. Chiropractic + Wellness Center - Prenatal Chiropractor In SW Austin",
+        "rating": 5.0,
+        "reviews": 247,
+        "top3_cells": 23,
+        "top10_cells": 40,
+        "top20_cells": 53,
+        "avg_rank": 6.3,
+        "is_dr": false
+      },
+      {
+        "name": "Precision Chiropractic ATX",
+        "rating": 5.0,
+        "reviews": 349,
+        "top3_cells": 19,
+        "top10_cells": 34,
+        "top20_cells": 40,
+        "avg_rank": 5.1,
+        "is_dr": false
+      }
+    ],
+    "acupuncture": [
+      {
+        "name": "South Austin Community Acupuncture",
+        "rating": 4.9,
+        "reviews": 84,
+        "top3_cells": 32,
+        "top10_cells": 78,
+        "top20_cells": 106,
+        "avg_rank": 7.28,
+        "is_dr": false
+      },
+      {
+        "name": "Dee Acupuncture",
+        "rating": 5.0,
+        "reviews": 66,
+        "top3_cells": 32,
+        "top10_cells": 56,
+        "top20_cells": 81,
+        "avg_rank": 6.77,
+        "is_dr": false
+      },
+      {
+        "name": "Dripping Springs Acupuncture & Restorative Medicine",
+        "rating": 5.0,
+        "reviews": 49,
+        "top3_cells": 28,
+        "top10_cells": 40,
+        "top20_cells": 57,
+        "avg_rank": 6.72,
+        "is_dr": false
+      },
+      {
+        "name": "The Healing House – Integrative Acupuncture",
+        "rating": 5.0,
+        "reviews": 28,
+        "top3_cells": 22,
+        "top10_cells": 59,
+        "top20_cells": 97,
+        "avg_rank": 9.36,
+        "is_dr": false
+      },
+      {
+        "name": "TigerLily Wellness & Acupuncture",
+        "rating": 4.7,
+        "reviews": 75,
+        "top3_cells": 21,
+        "top10_cells": 37,
+        "top20_cells": 51,
+        "avg_rank": 6.9,
+        "is_dr": false
+      },
+      {
+        "name": "Mother Nature's Acupuncture & Chinese Herbs",
+        "rating": 5.0,
+        "reviews": 38,
+        "top3_cells": 20,
+        "top10_cells": 62,
+        "top20_cells": 90,
+        "avg_rank": 8.82,
+        "is_dr": false
+      },
+      {
+        "name": "Bee Cave Acupuncture",
+        "rating": 5.0,
+        "reviews": 229,
+        "top3_cells": 19,
+        "top10_cells": 34,
+        "top20_cells": 50,
+        "avg_rank": 7.48,
+        "is_dr": false
+      },
+      {
+        "name": "Yi Guan Acupuncture and Chinese Herbalism",
+        "rating": 5.0,
+        "reviews": 19,
+        "top3_cells": 18,
+        "top10_cells": 36,
+        "top20_cells": 48,
+        "avg_rank": 7.08,
+        "is_dr": false
+      }
+    ],
+    "cold laser austin": [
+      {
+        "name": "Laser Therapy Clinic-Austin",
+        "rating": 3.9,
+        "reviews": 28,
+        "top3_cells": 127,
+        "top10_cells": 133,
+        "top20_cells": 133,
+        "avg_rank": 2.17,
+        "is_dr": false
+      },
+      {
+        "name": "Austin Laser Solutions - Sunset Valley",
+        "rating": 5.0,
+        "reviews": 253,
+        "top3_cells": 65,
+        "top10_cells": 72,
+        "top20_cells": 72,
+        "avg_rank": 1.86,
+        "is_dr": false
+      },
+      {
+        "name": "Austin Laser Solutions - Bee Cave",
+        "rating": 5.0,
+        "reviews": 306,
+        "top3_cells": 40,
+        "top10_cells": 49,
+        "top20_cells": 50,
+        "avg_rank": 2.04,
+        "is_dr": false
+      },
+      {
+        "name": "Slaughter Lane Chiropractic",
+        "rating": 5.0,
+        "reviews": 245,
+        "top3_cells": 27,
+        "top10_cells": 57,
+        "top20_cells": 90,
+        "avg_rank": 8.71,
+        "is_dr": false
+      },
+      {
+        "name": "TexStar Chiropractic - Dripping Springs / Belterra",
+        "rating": 5.0,
+        "reviews": 122,
+        "top3_cells": 25,
+        "top10_cells": 48,
+        "top20_cells": 77,
+        "avg_rank": 8.43,
+        "is_dr": false
+      },
+      {
+        "name": "Restore Hyper Wellness",
+        "rating": 4.9,
+        "reviews": 431,
+        "top3_cells": 23,
+        "top10_cells": 43,
+        "top20_cells": 65,
+        "avg_rank": 7.97,
+        "is_dr": false
+      },
+      {
+        "name": "CLEAR Acne Treatment Centers",
+        "rating": 5.0,
+        "reviews": 77,
+        "top3_cells": 20,
+        "top10_cells": 53,
+        "top20_cells": 133,
+        "avg_rank": 10.54,
+        "is_dr": false
+      },
+      {
+        "name": "Elements Laser Spa",
+        "rating": 4.4,
+        "reviews": 64,
+        "top3_cells": 14,
+        "top10_cells": 132,
+        "top20_cells": 133,
+        "avg_rank": 5.77,
+        "is_dr": false
+      }
+    ],
+    "dry needling near me": [
+      {
+        "name": "PT Solutions of Oak Hill",
+        "rating": 4.8,
+        "reviews": 92,
+        "top3_cells": 34,
+        "top10_cells": 61,
+        "top20_cells": 80,
+        "avg_rank": 6.19,
+        "is_dr": false
+      },
+      {
+        "name": "Fyzical Therapy and Balance Centers - Brodie Lane",
+        "rating": 4.8,
+        "reviews": 89,
+        "top3_cells": 25,
+        "top10_cells": 58,
+        "top20_cells": 87,
+        "avg_rank": 8.09,
+        "is_dr": false
+      },
+      {
+        "name": "Athletes' Edge Physical Therapy",
+        "rating": 5.0,
+        "reviews": 183,
+        "top3_cells": 22,
+        "top10_cells": 46,
+        "top20_cells": 69,
+        "avg_rank": 8.54,
+        "is_dr": false
+      },
+      {
+        "name": "Baylor Scott & White Outpatient Therapy - Austin - Highway 290",
+        "rating": 5.0,
+        "reviews": 31,
+        "top3_cells": 20,
+        "top10_cells": 35,
+        "top20_cells": 47,
+        "avg_rank": 6.53,
+        "is_dr": false
+      },
+      {
+        "name": "CC Dry Needling & Physical Therapy",
+        "rating": 5.0,
+        "reviews": 97,
+        "top3_cells": 19,
+        "top10_cells": 82,
+        "top20_cells": 128,
+        "avg_rank": 8.92,
+        "is_dr": false
+      },
+      {
+        "name": "Texas Physical Therapy Specialists",
+        "rating": 5.0,
+        "reviews": 57,
+        "top3_cells": 18,
+        "top10_cells": 25,
+        "top20_cells": 33,
+        "avg_rank": 5.82,
+        "is_dr": false
+      },
+      {
+        "name": "Endeavor Physical Therapy (Austin South West)",
+        "rating": 4.8,
+        "reviews": 162,
+        "top3_cells": 17,
+        "top10_cells": 35,
+        "top20_cells": 62,
+        "avg_rank": 9.39,
+        "is_dr": false
+      },
+      {
+        "name": "Spero Rehab Austin",
+        "rating": 4.8,
+        "reviews": 185,
+        "top3_cells": 16,
+        "top10_cells": 33,
+        "top20_cells": 53,
+        "avg_rank": 8.81,
+        "is_dr": false
+      }
+    ],
+    "prenatal massage near me": [
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.8,
+        "reviews": 209,
+        "top3_cells": 83,
+        "top10_cells": 110,
+        "top20_cells": 130,
+        "avg_rank": 4.47,
+        "is_dr": false
+      },
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.9,
+        "reviews": 763,
+        "top3_cells": 51,
+        "top10_cells": 115,
+        "top20_cells": 129,
+        "avg_rank": 5.49,
+        "is_dr": false
+      },
+      {
+        "name": "Oak Hill Spa",
+        "rating": 4.9,
+        "reviews": 46,
+        "top3_cells": 27,
+        "top10_cells": 74,
+        "top20_cells": 97,
+        "avg_rank": 7.35,
+        "is_dr": false
+      },
+      {
+        "name": "Zen Blend Mind + Body Spa",
+        "rating": 4.9,
+        "reviews": 359,
+        "top3_cells": 27,
+        "top10_cells": 53,
+        "top20_cells": 95,
+        "avg_rank": 8.74,
+        "is_dr": false
+      },
+      {
+        "name": "Massage Heights Dripping Springs",
+        "rating": 4.7,
+        "reviews": 48,
+        "top3_cells": 23,
+        "top10_cells": 40,
+        "top20_cells": 56,
+        "avg_rank": 7.52,
+        "is_dr": false
+      },
+      {
+        "name": "Creek Spa Massage",
+        "rating": 4.9,
+        "reviews": 90,
+        "top3_cells": 15,
+        "top10_cells": 75,
+        "top20_cells": 100,
+        "avg_rank": 8.18,
+        "is_dr": false
+      },
+      {
+        "name": "Pampering Pros",
+        "rating": 5.0,
+        "reviews": 65,
+        "top3_cells": 14,
+        "top10_cells": 31,
+        "top20_cells": 58,
+        "avg_rank": 9.52,
+        "is_dr": false
+      },
+      {
+        "name": "Deep Relief",
+        "rating": 4.9,
+        "reviews": 443,
+        "top3_cells": 13,
+        "top10_cells": 66,
+        "top20_cells": 96,
+        "avg_rank": 8.18,
+        "is_dr": true
+      }
+    ],
+    "deep tissue massage": [
+      {
+        "name": "Deep Relief",
+        "rating": 4.9,
+        "reviews": 443,
+        "top3_cells": 47,
+        "top10_cells": 73,
+        "top20_cells": 92,
+        "avg_rank": 5.51,
+        "is_dr": true
+      },
+      {
+        "name": "Deeply Therapeutic, LLC",
+        "rating": 5.0,
+        "reviews": 134,
+        "top3_cells": 25,
+        "top10_cells": 34,
+        "top20_cells": 42,
+        "avg_rank": 5.48,
+        "is_dr": false
+      },
+      {
+        "name": "Iler Method® Sports Massage & Trigger Point Massage Therapy - Austin",
+        "rating": 5.0,
+        "reviews": 117,
+        "top3_cells": 23,
+        "top10_cells": 35,
+        "top20_cells": 57,
+        "avg_rank": 8.14,
+        "is_dr": false
+      },
+      {
+        "name": "AUSTINDEEP Barton Creek",
+        "rating": 4.8,
+        "reviews": 65,
+        "top3_cells": 22,
+        "top10_cells": 41,
+        "top20_cells": 58,
+        "avg_rank": 7.0,
+        "is_dr": false
+      },
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.8,
+        "reviews": 209,
+        "top3_cells": 18,
+        "top10_cells": 51,
+        "top20_cells": 75,
+        "avg_rank": 7.93,
+        "is_dr": false
+      },
+      {
+        "name": "Relax Sun Spa",
+        "rating": 4.3,
+        "reviews": 94,
+        "top3_cells": 18,
+        "top10_cells": 34,
+        "top20_cells": 46,
+        "avg_rank": 6.89,
+        "is_dr": false
+      },
+      {
+        "name": "Creek Spa Massage",
+        "rating": 4.9,
+        "reviews": 90,
+        "top3_cells": 17,
+        "top10_cells": 36,
+        "top20_cells": 65,
+        "avg_rank": 9.38,
+        "is_dr": false
+      },
+      {
+        "name": "Massage Heights Dripping Springs",
+        "rating": 4.7,
+        "reviews": 48,
+        "top3_cells": 17,
+        "top10_cells": 24,
+        "top20_cells": 38,
+        "avg_rank": 7.63,
+        "is_dr": false
+      }
+    ],
+    "pregnancy massage": [
+      {
+        "name": "Deep Relief",
+        "rating": 4.9,
+        "reviews": 443,
+        "top3_cells": 40,
+        "top10_cells": 73,
+        "top20_cells": 95,
+        "avg_rank": 6.81,
+        "is_dr": true
+      },
+      {
+        "name": "Oak Hill Spa",
+        "rating": 4.9,
+        "reviews": 46,
+        "top3_cells": 33,
+        "top10_cells": 61,
+        "top20_cells": 83,
+        "avg_rank": 6.69,
+        "is_dr": false
+      },
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.8,
+        "reviews": 209,
+        "top3_cells": 30,
+        "top10_cells": 80,
+        "top20_cells": 108,
+        "avg_rank": 7.26,
+        "is_dr": false
+      },
+      {
+        "name": "Pampering Pros",
+        "rating": 5.0,
+        "reviews": 65,
+        "top3_cells": 24,
+        "top10_cells": 40,
+        "top20_cells": 61,
+        "avg_rank": 8.03,
+        "is_dr": false
+      },
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.9,
+        "reviews": 763,
+        "top3_cells": 22,
+        "top10_cells": 50,
+        "top20_cells": 98,
+        "avg_rank": 9.79,
+        "is_dr": false
+      },
+      {
+        "name": "Creek Spa Massage",
+        "rating": 4.9,
+        "reviews": 90,
+        "top3_cells": 21,
+        "top10_cells": 56,
+        "top20_cells": 86,
+        "avg_rank": 8.05,
+        "is_dr": false
+      },
+      {
+        "name": "Relax Sun Spa",
+        "rating": 4.3,
+        "reviews": 94,
+        "top3_cells": 19,
+        "top10_cells": 36,
+        "top20_cells": 59,
+        "avg_rank": 8.53,
+        "is_dr": false
+      },
+      {
+        "name": "BirthCo. Chiropractic + Wellness Center - Prenatal Chiropractor In SW Austin",
+        "rating": 5.0,
+        "reviews": 247,
+        "top3_cells": 18,
+        "top10_cells": 43,
+        "top20_cells": 62,
+        "avg_rank": 8.1,
+        "is_dr": false
+      }
+    ],
+    "pregnancy massage near me": [
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.8,
+        "reviews": 209,
+        "top3_cells": 62,
+        "top10_cells": 99,
+        "top20_cells": 119,
+        "avg_rank": 5.2,
+        "is_dr": false
+      },
+      {
+        "name": "Oak Hill Spa",
+        "rating": 4.9,
+        "reviews": 46,
+        "top3_cells": 28,
+        "top10_cells": 74,
+        "top20_cells": 99,
+        "avg_rank": 7.29,
+        "is_dr": false
+      },
+      {
+        "name": "Deep Relief",
+        "rating": 4.9,
+        "reviews": 443,
+        "top3_cells": 26,
+        "top10_cells": 80,
+        "top20_cells": 104,
+        "avg_rank": 7.12,
+        "is_dr": true
+      },
+      {
+        "name": "Sage Blossom Massage",
+        "rating": 4.9,
+        "reviews": 763,
+        "top3_cells": 22,
+        "top10_cells": 82,
+        "top20_cells": 117,
+        "avg_rank": 8.26,
+        "is_dr": false
+      },
+      {
+        "name": "Creek Spa Massage",
+        "rating": 4.9,
+        "reviews": 90,
+        "top3_cells": 21,
+        "top10_cells": 71,
+        "top20_cells": 99,
+        "avg_rank": 7.85,
+        "is_dr": false
+      },
+      {
+        "name": "Pampering Pros",
+        "rating": 5.0,
+        "reviews": 65,
+        "top3_cells": 20,
+        "top10_cells": 36,
+        "top20_cells": 72,
+        "avg_rank": 10.18,
+        "is_dr": false
+      },
+      {
+        "name": "Zen Blend Mind + Body Spa",
+        "rating": 4.9,
+        "reviews": 359,
+        "top3_cells": 18,
+        "top10_cells": 38,
+        "top20_cells": 83,
+        "avg_rank": 10.22,
+        "is_dr": false
+      },
+      {
+        "name": "BirthCo. Chiropractic + Wellness Center - Prenatal Chiropractor In SW Austin",
+        "rating": 5.0,
+        "reviews": 247,
+        "top3_cells": 17,
+        "top10_cells": 40,
+        "top20_cells": 61,
+        "avg_rank": 8.31,
+        "is_dr": false
+      }
+    ]
+  },
+  "untracked_at_pin": [
+    {
+      "kw": "chiropractor near me",
+      "rank_at_pin": 1,
+      "search_volume_austin": 3600
+    },
+    {
+      "kw": "acupuncture austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 1000
+    },
+    {
+      "kw": "deep tissue massage austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 590
+    },
+    {
+      "kw": "massage therapy austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 590
+    },
+    {
+      "kw": "sports massage austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 320
+    },
+    {
+      "kw": "cupping therapy austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 170
+    },
+    {
+      "kw": "laser therapy austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 10
+    },
+    {
+      "kw": "trigger point therapy austin",
+      "rank_at_pin": 1,
+      "search_volume_austin": 10
+    },
+    {
+      "kw": "acupuncture near me",
+      "rank_at_pin": 1,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "massage near me",
+      "rank_at_pin": 2,
+      "search_volume_austin": 40500
+    },
+    {
+      "kw": "lymphatic drainage massage austin",
+      "rank_at_pin": 2,
+      "search_volume_austin": 1000
+    },
+    {
+      "kw": "couples massage austin",
+      "rank_at_pin": 2,
+      "search_volume_austin": 1000
+    },
+    {
+      "kw": "myofascial release austin",
+      "rank_at_pin": 2,
+      "search_volume_austin": 140
+    },
+    {
+      "kw": "dry needling austin",
+      "rank_at_pin": 2,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "chiropractor austin",
+      "rank_at_pin": 3,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "sports chiropractor austin",
+      "rank_at_pin": 4,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "back pain treatment austin",
+      "rank_at_pin": 4,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "cold laser therapy austin",
+      "rank_at_pin": 5,
+      "search_volume_austin": 10
+    },
+    {
+      "kw": "prenatal chiropractor austin",
+      "rank_at_pin": 6,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "best chiropractor austin",
+      "rank_at_pin": 7,
+      "search_volume_austin": null
+    },
+    {
+      "kw": "red light therapy austin",
+      "rank_at_pin": 8,
+      "search_volume_austin": 170
+    },
+    {
+      "kw": "chiropractor south austin",
+      "rank_at_pin": 20,
+      "search_volume_austin": null
+    }
+  ],
+  "gap_at_pin": [
+    {
+      "kw": "cosmetic acupuncture austin",
+      "search_volume_austin": 10,
+      "current_leader_at_pin": "Si Shou Acupuncture & Wellness, PLLC"
+    },
+    {
+      "kw": "decompression therapy austin",
+      "search_volume_austin": 10,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "pediatric chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Sprout Chiropractic"
+    },
+    {
+      "kw": "fertility acupuncture austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
+    },
+    {
+      "kw": "auto accident chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "spinal decompression austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "acupuncture south austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "South Austin Community Acupuncture"
+    },
+    {
+      "kw": "low level laser therapy",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    }
+  ],
+  "gsc": {
+    "trend": {
+      "headline": "GSC sitewide clicks + impressions — 365-day monthly trend",
+      "annotation_text": "GSC daily aggregates rolled up to month. Sitewide. Property: https://deeprelief.com/ (siteOwner permission). Window: 2025-06-02 → 2026-05-31.",
+      "may_extrapolation_note": "",
+      "months": [
+        "Jun 2025",
+        "Jul 2025",
+        "Aug 2025",
+        "Sep 2025",
+        "Oct 2025",
+        "Nov 2025",
+        "Dec 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Mar 2026",
+        "Apr 2026",
+        "May 2026"
+      ],
+      "clicks": [
+        269,
+        340,
+        652,
+        699,
+        765,
+        811,
+        781,
+        767,
+        765,
+        762,
+        596,
+        632
+      ],
+      "impressions": [
+        55761,
+        57979,
+        67035,
+        67357,
+        96937,
+        121370,
+        131032,
+        82007,
+        68975,
+        78897,
+        58104,
+        60413
+      ],
+      "ctr_pct": [
+        0.48,
+        0.59,
+        0.97,
+        1.04,
+        0.79,
+        0.67,
+        0.6,
+        0.94,
+        1.11,
+        0.97,
+        1.03,
+        1.05
+      ],
+      "quarterly": [
+        {
+          "q": "2025Q2",
+          "clicks_total": 269,
+          "imp_total": 55761,
+          "clicks_per_mo": 90,
+          "imp_per_mo": 18587,
+          "ctr_pct": 0.48,
+          "months": 3,
+          "is_partial": false
+        },
+        {
+          "q": "2025Q3",
+          "clicks_total": 1691,
+          "imp_total": 192371,
+          "clicks_per_mo": 564,
+          "imp_per_mo": 64124,
+          "ctr_pct": 0.88,
+          "months": 3,
+          "is_partial": false
+        },
+        {
+          "q": "2025Q4",
+          "clicks_total": 2357,
+          "imp_total": 349339,
+          "clicks_per_mo": 786,
+          "imp_per_mo": 116446,
+          "ctr_pct": 0.67,
+          "months": 3,
+          "is_partial": false
+        },
+        {
+          "q": "2026Q1",
+          "clicks_total": 2294,
+          "imp_total": 229879,
+          "clicks_per_mo": 765,
+          "imp_per_mo": 76626,
+          "ctr_pct": 1.0,
+          "months": 3,
+          "is_partial": false
+        },
+        {
+          "q": "2026Q2",
+          "clicks_total": 1228,
+          "imp_total": 118517,
+          "clicks_per_mo": 409,
+          "imp_per_mo": 39506,
+          "ctr_pct": 1.04,
+          "months": 3,
+          "is_partial": true
+        }
+      ]
+    },
+    "summary": {
+      "window_days": 365,
+      "clicks_365d": 7839,
+      "impressions_365d": 945867,
+      "clicks_90d": 1958,
+      "impressions_90d": 195408,
+      "clicks_30d": 632,
+      "impressions_30d": 60413,
+      "unique_pages_365d": 188,
+      "unique_queries_365d": 14175,
+      "data_range": [
+        "2025-06-02",
+        "2026-05-31"
+      ],
+      "sitewide_ctr_pct_365d": 0.83,
+      "yoy_quarters": {
+        "2025Q1": {
+          "clicks": 0,
+          "impressions": 0,
+          "days": 0
+        },
+        "2026Q1": {
+          "clicks": 2294,
+          "impressions": 229879,
+          "days": 90
+        },
+        "2025Q2": {
+          "clicks": 269,
+          "impressions": 55761,
+          "days": 29
+        },
+        "2026Q2": {
+          "clicks": 1228,
+          "impressions": 118517,
+          "days": 61
+        }
+      }
+    },
+    "brand_pull": {
+      "brand": {
+        "imp": 3648,
+        "imp_pct": 3.4,
+        "clicks": 789,
+        "clicks_pct": 63.8
+      },
+      "non_brand": {
+        "imp": 102343,
+        "imp_pct": 96.6,
+        "clicks": 447,
+        "clicks_pct": 36.2
+      },
+      "note": "Last 90 days · 7507 distinct queries · 1,236 clicks · 105,991 impressions",
+      "window_days": 90
+    },
+    "top_nonbrand_queries_90d": [
+      {
+        "query": "massage near me",
+        "clicks": 62,
+        "impressions": 13213,
+        "position": 8.9
+      },
+      {
+        "query": "deep tissue massage austin",
+        "clicks": 19,
+        "impressions": 2029,
+        "position": 9.4
+      },
+      {
+        "query": "thai massage austin",
+        "clicks": 10,
+        "impressions": 408,
+        "position": 10.2
+      },
+      {
+        "query": "deep tissue massage near me",
+        "clicks": 10,
+        "impressions": 659,
+        "position": 20.5
+      },
+      {
+        "query": "massage austin",
+        "clicks": 9,
+        "impressions": 1473,
+        "position": 19.3
+      },
+      {
+        "query": "massage therapist near me",
+        "clicks": 8,
+        "impressions": 625,
+        "position": 15.2
+      },
+      {
+        "query": "deep tissue massage",
+        "clicks": 8,
+        "impressions": 1702,
+        "position": 14.0
+      },
+      {
+        "query": "deep.relief",
+        "clicks": 7,
+        "impressions": 20,
+        "position": 1.1
+      },
+      {
+        "query": "deep releif",
+        "clicks": 7,
+        "impressions": 32,
+        "position": 2.1
+      },
+      {
+        "query": "deep tissue massage south austin",
+        "clicks": 6,
+        "impressions": 67,
+        "position": 7.8
+      },
+      {
+        "query": "massage",
+        "clicks": 6,
+        "impressions": 2954,
+        "position": 13.1
+      },
+      {
+        "query": "cupping therapy",
+        "clicks": 6,
+        "impressions": 42,
+        "position": 4.7
+      },
+      {
+        "query": "cupping therapy near me",
+        "clicks": 6,
+        "impressions": 300,
+        "position": 11.8
+      },
+      {
+        "query": "massage therapy austin",
+        "clicks": 5,
+        "impressions": 286,
+        "position": 13.5
+      },
+      {
+        "query": "massage oak hill",
+        "clicks": 5,
+        "impressions": 68,
+        "position": 3.6
+      },
+      {
+        "query": "austin ashiatsu",
+        "clicks": 5,
+        "impressions": 1062,
+        "position": 8.6
+      },
+      {
+        "query": "best deep tissue massage austin",
+        "clicks": 4,
+        "impressions": 124,
+        "position": 7.3
+      },
+      {
+        "query": "what to do after a massage",
+        "clicks": 4,
+        "impressions": 723,
+        "position": 12.3
+      },
+      {
+        "query": "sports massage austin",
+        "clicks": 4,
+        "impressions": 339,
+        "position": 21.4
+      },
+      {
+        "query": "massage therapy near me",
+        "clicks": 3,
+        "impressions": 961,
+        "position": 28.3
+      },
+      {
+        "query": "deep massage",
+        "clicks": 3,
+        "impressions": 118,
+        "position": 23.4
+      },
+      {
+        "query": "massages near me",
+        "clicks": 3,
+        "impressions": 649,
+        "position": 10.4
+      },
+      {
+        "query": "myofascial release near me",
+        "clicks": 3,
+        "impressions": 6,
+        "position": 5.2
+      },
+      {
+        "query": "deep massage austin",
+        "clicks": 3,
+        "impressions": 205,
+        "position": 5.6
+      },
+      {
+        "query": "austin ashiatsu massage",
+        "clicks": 3,
+        "impressions": 56,
+        "position": 7.3
+      },
+      {
+        "query": "things to do after massage",
+        "clicks": 3,
+        "impressions": 36,
+        "position": 8.8
+      },
+      {
+        "query": "ashiatsu massage",
+        "clicks": 3,
+        "impressions": 504,
+        "position": 16.7
+      },
+      {
+        "query": "eds massage therapist near me",
+        "clicks": 3,
+        "impressions": 3,
+        "position": 8.3
+      },
+      {
+        "query": "chair massage near me",
+        "clicks": 3,
+        "impressions": 32,
+        "position": 6.1
+      },
+      {
+        "query": "what to do after deep tissue massage",
+        "clicks": 3,
+        "impressions": 720,
+        "position": 6.4
+      }
+    ],
+    "top_impression_queries_90d": [
+      {
+        "query": "massage near me",
+        "clicks": 62,
+        "impressions": 13213,
+        "position": 8.9,
+        "ctr_pct": 0.47,
+        "is_brand": false
+      },
+      {
+        "query": "massage",
+        "clicks": 6,
+        "impressions": 2954,
+        "position": 13.1,
+        "ctr_pct": 0.2,
+        "is_brand": false
+      },
+      {
+        "query": "swedish massage",
+        "clicks": 0,
+        "impressions": 2937,
+        "position": 42.8,
+        "ctr_pct": 0.0,
+        "is_brand": false
+      },
+      {
+        "query": "deep tissue massage austin",
+        "clicks": 19,
+        "impressions": 2029,
+        "position": 9.4,
+        "ctr_pct": 0.94,
+        "is_brand": false
+      },
+      {
+        "query": "deep relief",
+        "clicks": 458,
+        "impressions": 1719,
+        "position": 2.3,
+        "ctr_pct": 26.64,
+        "is_brand": true
+      },
+      {
+        "query": "deep tissue massage",
+        "clicks": 8,
+        "impressions": 1702,
+        "position": 14.0,
+        "ctr_pct": 0.47,
+        "is_brand": false
+      },
+      {
+        "query": "massage austin",
+        "clicks": 9,
+        "impressions": 1473,
+        "position": 19.3,
+        "ctr_pct": 0.61,
+        "is_brand": false
+      },
+      {
+        "query": "massage therapy",
+        "clicks": 1,
+        "impressions": 1096,
+        "position": 36.7,
+        "ctr_pct": 0.09,
+        "is_brand": false
+      },
+      {
+        "query": "orthopedic massage therapist",
+        "clicks": 0,
+        "impressions": 1093,
+        "position": 8.3,
+        "ctr_pct": 0.0,
+        "is_brand": false
+      },
+      {
+        "query": "austin ashiatsu",
+        "clicks": 5,
+        "impressions": 1062,
+        "position": 8.6,
+        "ctr_pct": 0.47,
+        "is_brand": false
+      },
+      {
+        "query": "massage near me open now",
+        "clicks": 2,
+        "impressions": 1056,
+        "position": 8.3,
+        "ctr_pct": 0.19,
+        "is_brand": false
+      },
+      {
+        "query": "massage therapy near me",
+        "clicks": 3,
+        "impressions": 961,
+        "position": 28.3,
+        "ctr_pct": 0.31,
+        "is_brand": false
+      },
+      {
+        "query": "austin deep",
+        "clicks": 0,
+        "impressions": 916,
+        "position": 11.1,
+        "ctr_pct": 0.0,
+        "is_brand": false
+      },
+      {
+        "query": "austin massage",
+        "clicks": 3,
+        "impressions": 909,
+        "position": 19.6,
+        "ctr_pct": 0.33,
+        "is_brand": false
+      },
+      {
+        "query": "what to do after a deep tissue massage",
+        "clicks": 2,
+        "impressions": 909,
+        "position": 6.0,
+        "ctr_pct": 0.22,
+        "is_brand": false
+      },
+      {
+        "query": "thai massage",
+        "clicks": 1,
+        "impressions": 833,
+        "position": 17.5,
+        "ctr_pct": 0.12,
+        "is_brand": false
+      },
+      {
+        "query": "prenatal massage",
+        "clicks": 1,
+        "impressions": 797,
+        "position": 44.4,
+        "ctr_pct": 0.13,
+        "is_brand": false
+      },
+      {
+        "query": "massage insurance",
+        "clicks": 1,
+        "impressions": 784,
+        "position": 6.8,
+        "ctr_pct": 0.13,
+        "is_brand": false
+      },
+      {
+        "query": "massage therapy insurance",
+        "clicks": 0,
+        "impressions": 752,
+        "position": 7.8,
+        "ctr_pct": 0.0,
+        "is_brand": false
+      },
+      {
+        "query": "what to do after a massage",
+        "clicks": 4,
+        "impressions": 723,
+        "position": 12.3,
+        "ctr_pct": 0.55,
+        "is_brand": false
+      },
+      {
+        "query": "what to do after deep tissue massage",
+        "clicks": 3,
+        "impressions": 720,
+        "position": 6.4,
+        "ctr_pct": 0.42,
+        "is_brand": false
+      },
+      {
+        "query": "deep tissue massage near me",
+        "clicks": 10,
+        "impressions": 659,
+        "position": 20.5,
+        "ctr_pct": 1.52,
+        "is_brand": false
+      },
+      {
+        "query": "massages near me",
+        "clicks": 3,
+        "impressions": 649,
+        "position": 10.4,
+        "ctr_pct": 0.46,
+        "is_brand": false
+      },
+      {
+        "query": "massage therapist near me",
+        "clicks": 8,
+        "impressions": 625,
+        "position": 15.2,
+        "ctr_pct": 1.28,
+        "is_brand": false
+      },
+      {
+        "query": "massage places near me",
+        "clicks": 3,
+        "impressions": 579,
+        "position": 10.2,
+        "ctr_pct": 0.52,
+        "is_brand": false
+      }
+    ],
+    "top_pages_90d": [
+      {
+        "page": "https://deeprelief.com/",
+        "clicks": 1520,
+        "impressions": 77033,
+        "position": 14.3,
+        "ctr_pct": 1.97
+      },
+      {
+        "page": "https://deeprelief.com/what-to-do-after-a-deep-tissue-massage-for-best-results/",
+        "clicks": 99,
+        "impressions": 27105,
+        "position": 6.7,
+        "ctr_pct": 0.37
+      },
+      {
+        "page": "https://deeprelief.com/massage-therapy-insurance-coverage/",
+        "clicks": 40,
+        "impressions": 6868,
+        "position": 14.5,
+        "ctr_pct": 0.58
+      },
+      {
+        "page": "https://deeprelief.com/how-often-can-you-do-dry-needling/",
+        "clicks": 35,
+        "impressions": 10987,
+        "position": 7.7,
+        "ctr_pct": 0.32
+      },
+      {
+        "page": "https://deeprelief.com/deep-relief-in-austin-texas/",
+        "clicks": 34,
+        "impressions": 7191,
+        "position": 9.8,
+        "ctr_pct": 0.47
+      },
+      {
+        "page": "https://deeprelief.com/thai-massage-in-austin/",
+        "clicks": 33,
+        "impressions": 4154,
+        "position": 15.0,
+        "ctr_pct": 0.79
+      },
+      {
+        "page": "https://deeprelief.com/ashiatsu-massage-in-austin-tx/",
+        "clicks": 30,
+        "impressions": 3959,
+        "position": 12.7,
+        "ctr_pct": 0.76
+      },
+      {
+        "page": "https://deeprelief.com/cold-laser-therapy-in-austin/",
+        "clicks": 15,
+        "impressions": 881,
+        "position": 17.4,
+        "ctr_pct": 1.7
+      },
+      {
+        "page": "https://deeprelief.com/memberships/",
+        "clicks": 12,
+        "impressions": 5325,
+        "position": 5.6,
+        "ctr_pct": 0.23
+      },
+      {
+        "page": "https://deeprelief.com/deep-relief-in-austin-texas-2/",
+        "clicks": 11,
+        "impressions": 4673,
+        "position": 6.4,
+        "ctr_pct": 0.24
+      },
+      {
+        "page": "https://deeprelief.com/massage-therapy-services-in-austin-texas/trigger-point-therapy/",
+        "clicks": 10,
+        "impressions": 1042,
+        "position": 24.3,
+        "ctr_pct": 0.96
+      },
+      {
+        "page": "https://deeprelief.com/massage-therapy-services-in-austin-texas/",
+        "clicks": 9,
+        "impressions": 6375,
+        "position": 11.3,
+        "ctr_pct": 0.14
+      },
+      {
+        "page": "https://deeprelief.com/orthopedic-massage-in-austin/",
+        "clicks": 8,
+        "impressions": 2809,
+        "position": 15.2,
+        "ctr_pct": 0.28
+      },
+      {
+        "page": "https://deeprelief.com/federal-workers-comp-massage-acupuncture/",
+        "clicks": 8,
+        "impressions": 1221,
+        "position": 7.7,
+        "ctr_pct": 0.66
+      },
+      {
+        "page": "https://deeprelief.com/cupping-therapy-austin/",
+        "clicks": 6,
+        "impressions": 2354,
+        "position": 23.3,
+        "ctr_pct": 0.25
+      },
+      {
+        "page": "https://deeprelief.com/shop/",
+        "clicks": 6,
+        "impressions": 364,
+        "position": 9.1,
+        "ctr_pct": 1.65
+      },
+      {
+        "page": "https://deeprelief.com/relaxation-massage-in-austin-texas/",
+        "clicks": 6,
+        "impressions": 2091,
+        "position": 14.2,
+        "ctr_pct": 0.29
+      },
+      {
+        "page": "https://deeprelief.com/careers-deep-relief/",
+        "clicks": 6,
+        "impressions": 858,
+        "position": 11.7,
+        "ctr_pct": 0.7
+      },
+      {
+        "page": "https://deeprelief.com/team/",
+        "clicks": 6,
+        "impressions": 115,
+        "position": 6.8,
+        "ctr_pct": 5.22
+      },
+      {
+        "page": "https://deeprelief.com/who-is-not-a-good-candidate-for-a-deep-tissue-massage/",
+        "clicks": 5,
+        "impressions": 3745,
+        "position": 5.0,
+        "ctr_pct": 0.13
+      }
+    ],
+    "halves": {
+      "h1_label": "Jun–Nov 2025",
+      "h2_label": "Dec 2025–May 2026",
+      "h1_clicks": 3536,
+      "h2_clicks": 4303,
+      "h1_imps": 466439,
+      "h2_imps": 479428,
+      "clicks_pct": 21.7,
+      "imps_pct": 2.8
+    }
+  },
+  "search_demand": [
+    {
+      "keyword": "massage near me",
+      "search_volume": 40500,
+      "cpc": 1.39,
+      "competition_index": 59,
+      "tracked": false,
+      "dr_at_pin_rank": 2
+    },
+    {
+      "keyword": "chiropractor near me",
+      "search_volume": 3600,
+      "cpc": 7.16,
+      "competition_index": 53,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "acupuncture",
+      "search_volume": 1600,
+      "cpc": 2.94,
+      "competition_index": 29,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "lymphatic drainage massage austin",
+      "search_volume": 1000,
+      "cpc": 2.63,
+      "competition_index": 100,
+      "tracked": false,
+      "dr_at_pin_rank": 2
+    },
+    {
+      "keyword": "couples massage austin",
+      "search_volume": 1000,
+      "cpc": 1.98,
+      "competition_index": 100,
+      "tracked": false,
+      "dr_at_pin_rank": 2
+    },
+    {
+      "keyword": "acupuncture austin",
+      "search_volume": 1000,
+      "cpc": 3.26,
+      "competition_index": 69,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "deep tissue massage",
+      "search_volume": 720,
+      "cpc": 3.12,
+      "competition_index": 60,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "deep tissue massage austin",
+      "search_volume": 590,
+      "cpc": 3.73,
+      "competition_index": 92,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "massage therapy austin",
+      "search_volume": 590,
+      "cpc": 3.62,
+      "competition_index": 42,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "sports massage austin",
+      "search_volume": 320,
+      "cpc": 2.98,
+      "competition_index": 81,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "cupping therapy austin",
+      "search_volume": 170,
+      "cpc": 1.59,
+      "competition_index": 47,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "red light therapy austin",
+      "search_volume": 170,
+      "cpc": 4.95,
+      "competition_index": 100,
+      "tracked": false,
+      "dr_at_pin_rank": 8
+    },
+    {
+      "keyword": "myofascial release austin",
+      "search_volume": 140,
+      "cpc": 2.6,
+      "competition_index": 92,
+      "tracked": false,
+      "dr_at_pin_rank": 2
+    },
+    {
+      "keyword": "prenatal massage near me",
+      "search_volume": 140,
+      "cpc": 2.1,
+      "competition_index": 67,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "dry needling near me",
+      "search_volume": 110,
+      "cpc": 7.22,
+      "competition_index": 65,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "pregnancy massage",
+      "search_volume": 50,
+      "cpc": 2.05,
+      "competition_index": 71,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "wellness clinic austin",
+      "search_volume": 40,
+      "cpc": 5.78,
+      "competition_index": 66,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "pregnancy massage near me",
+      "search_volume": 20,
+      "cpc": 1.46,
+      "competition_index": 83,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "cold laser austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": 17,
+      "tracked": true,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "cosmetic acupuncture austin",
+      "search_volume": 10,
+      "cpc": 2.79,
+      "competition_index": 62,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "decompression therapy austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": 0,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "laser therapy austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": 62,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "cold laser therapy austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": 17,
+      "tracked": false,
+      "dr_at_pin_rank": 5
+    },
+    {
+      "keyword": "trigger point therapy austin",
+      "search_volume": 10,
+      "cpc": 4.26,
+      "competition_index": 89,
+      "tracked": false,
+      "dr_at_pin_rank": 1
+    },
+    {
+      "keyword": "sciatica treatment austin",
+      "search_volume": 10,
+      "cpc": 6.05,
+      "competition_index": 55,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "knee pain treatment austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": 0,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    },
+    {
+      "keyword": "plantar fasciitis treatment austin",
+      "search_volume": 10,
+      "cpc": null,
+      "competition_index": null,
+      "tracked": false,
+      "dr_at_pin_rank": null
+    }
+  ],
+  "levers": [
+    {
+      "id": "A",
+      "name": "Defend the deep-tissue moat — don't lose ground to growing competitors",
+      "color": "emerald",
+      "priority": "P1",
+      "why": "Deep tissue massage is the only query where Deep Relief has portfolio-defining ownership (47 top-3 cells; nearest competitor Deeply Therapeutic at 25). Slight rank softening (avg 5.07 → 5.51, mean dx -0.13) and 3-cell top-3 loss show this isn't permanent. Sage Blossom’s 209-review listing and AUSTINDEEP Barton Creek are the watch-list.",
+      "actions": [
+        "Sustain GBP posting cadence specifically tagging deep tissue massage on photos + posts.",
+        "Schema-mark /services/massage-therapy/ as MedicalTherapy with hasOfferCatalog including DeepTissueMassage.",
+        "Internal link the deep tissue massage service page from every top-traffic blog (currently mostly orphaned).",
+        "Run /services/deep-tissue-massage-austin/ as a dedicated landing page (currently folded into massage hub)."
+      ],
+      "outcome": "Hold 45+ top-3 cells; widen top-10 from 73 to 80+; ensure rank doesn’t drift past 6.0 avg."
+    },
+    {
+      "id": "B",
+      "name": "Counter Sage Blossom on pregnancy/prenatal massage — reverse the bleed",
+      "color": "rose",
+      "priority": "P1",
+      "why": "Sage Blossom Massage (209-rev listing) holds 62 top-3 cells on pregnancy-massage-near-me to DR’s 26 and is gaining (+6 portfolio-wide). DR lost 8 top-3 cells on pregnancy-massage-near-me alone and dropped #1 cells from 7 to 2. This is the largest single category bleed.",
+      "actions": [
+        "Build a dedicated /services/prenatal-massage-austin/ landing page (currently lives only as a Massage sub-section).",
+        "Add pregnancy-massage trust signals to homepage and GBP description: certifications, training, body cushion equipment.",
+        "Push 3 prenatal-massage GBP posts per month with client photos (with permission) for the next 90 days.",
+        "Run a backlink push targeting Austin Mom blogs, doula directories (Austin Birth Doulas, Austin Childbirth Trust), and prenatal yoga studios for referral + citation."
+      ],
+      "outcome": "Recover 8+ top-3 cells on pregnancy-massage-near-me; widen top-10 reach by 10+ cells."
+    },
+    {
+      "id": "C",
+      "name": "Formalize tracking on the at-pin wins — stop measuring blind",
+      "color": "amber",
+      "priority": "P2",
+      "why": "DataForSEO Maps SERP at the pin shows Deep Relief sitting at rank #1–#3 for 15 services that are not currently in LD tracking, representing ~48K monthly Austin DMA searches. We can’t defend (or grow) what we don’t measure. Wins we don’t track silently erode.",
+      "actions": [
+        "Add to LD tracking: chiropractor near me (3,600/mo), massage therapy austin (590), deep tissue massage austin (590), acupuncture austin (1,000), cupping therapy austin (170), sports massage austin (320), lymphatic drainage massage austin (1,000), couples massage austin (1,000), massage near me (40,500).",
+        "Run baseline LD grid scans on all 9 net-new tracked queries this month.",
+        "Re-evaluate priority list next quarter — whatever moves first will signal which deserve dedicated landing pages."
+      ],
+      "outcome": "Add ~50K monthly Austin volume to the tracked surface, with DR already in top-3 position at center."
+    },
+    {
+      "id": "D",
+      "name": "Connect GA4 — close the conversion-side measurement blackout",
+      "color": "indigo",
+      "priority": "P1 (owner-gated)",
+      "why": "GA4 is not connected. We can see GSC clicks (7,839 in 365d), Maps reach, and competitor movement — but we cannot see leads, calls, bookings, or revenue. With 96.6% of impressions non-brand and 0.4% CTR there, the click → booking ratio is the single most actionable diagnostic we can’t run.",
+      "actions": [
+        "Owner ask: grant info@hqdm.io editor access to the Deep Relief GA4 property (or share property ID if it already exists).",
+        "Once connected: rebuild conversion stack (form submits + click_phone + click_email + booking confirmations) and categorize events per BB Massage convention — booking + lead = TRUE conversion, calls = qualified intent, GBP listing taps = engagement-not-conversion.",
+        "Wire GTM-side phone-click and form-submit tracking if missing."
+      ],
+      "outcome": "Conversion-side picture matches the maps-side picture; we can attribute lift to the right lever."
+    },
+    {
+      "id": "E",
+      "name": "Click-capture: lift sitewide CTR off 0.83% — the impressions are already there",
+      "color": "amber",
+      "priority": "P2",
+      "why": "GSC shows 945,867 impressions and only 7,839 clicks (0.83% CTR). Brand queries (3.4% of impressions) earn 63.8% of clicks (~22% CTR); non-brand (96.6% of impressions) earns 0.4% CTR. The supply problem is solved — the demand-capture problem isn’t. Title + meta + result-snippet rewrites are the unblocked work.",
+      "actions": [
+        "Run a title-tag + meta-description rewrite across the top 25 non-brand pages by impressions (priority on those at position 4–15).",
+        "Add FAQ / HowTo schema to long-form service pages so the SERP card is fuller.",
+        "Build out specific service-page H1s that match high-impression query phrasing (e.g., add “Austin” to service-page titles where the query specifies metro).",
+        "A/B observe over 60 days; expand pattern to remaining pages if CTR moves >0.3pp."
+      ],
+      "outcome": "Move sitewide CTR from 0.83% to 1.20%+ within 90 days — a worth ~3,500 additional clicks/yr at current impressions."
+    },
+    {
+      "id": "F",
+      "name": "Concede cold-laser — it’s a category-aligned competitor moat",
+      "color": "slate",
+      "priority": "P3 (decision)",
+      "why": "Laser Therapy Clinic-Austin (28 reviews, 3.9★) holds 133/133 top-3 cells on cold-laser-austin at avg rank 2.17 — they’re the exact-name match. Austin Laser Solutions runs 2 locations splitting #2/#3. Deep Relief is currently 8 top-3 cells out of 46 visible — a real position but capped by category mismatch. Spending on this query is low-leverage.",
+      "actions": [
+        "Keep the cold laser landing page; do NOT invest in additional content/links for cold-laser-specific queries.",
+        "Re-target the cold-laser landing page to capture ‘cold laser + condition’ long-tail (knee pain, plantar fasciitis, peripheral neuropathy) — fewer competitors there.",
+        "Remove cold-laser-specific GBP posting cadence; redirect that production to deep-tissue + pregnancy-massage content."
+      ],
+      "outcome": "Stop wasting attention on an unwinnable surface; redirect to leverage-positive queries."
+    }
+  ],
+  "owner_asks": [
+    {
+      "id": "OA-1",
+      "title": "Grant GA4 access for Deep Relief property",
+      "why": "No GA4 property is registered under HQDM access. Without GA4 we can see search-side performance (clicks, impressions, map rank) but cannot connect that to leads / bookings / revenue. The next quarter’s diagnosis needs this connected.",
+      "asked_of": "Owner (Deep Relief)",
+      "status": "Outstanding"
+    },
+    {
+      "id": "OA-2",
+      "title": "Confirm priority service additions to LD tracking",
+      "why": "DataForSEO shows Deep Relief at #1-#3 at the pin for 15 untracked services. We recommend adding all 9 to LD; owner can confirm which 4-5 are commercial priorities so we build dedicated landing pages first.",
+      "asked_of": "Owner + Matt",
+      "status": "Outstanding"
+    },
+    {
+      "id": "OA-3",
+      "title": "Provide pregnancy-massage equipment + certification facts",
+      "why": "Lever B (countering Sage Blossom on pregnancy massage) needs trust signals on the prenatal page. Specifics on body cushion equipment, practitioner certifications, prenatal training hours, and any obstetrician referral relationships would dramatically strengthen the landing page.",
+      "asked_of": "Owner (Deep Relief)",
+      "status": "Outstanding"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "M1-A1",
+      "lever": "A",
+      "title": "Add deep-tissue MedicalTherapy schema (hasOfferCatalog)",
+      "month": 1,
+      "owner_role": "Dev"
+    },
+    {
+      "id": "M1-A2",
+      "lever": "A",
+      "title": "Build /services/deep-tissue-massage-austin/ landing page",
+      "month": 1,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M1-A3",
+      "lever": "A",
+      "title": "Internal-link DT massage service from top 10 blog posts",
+      "month": 1,
+      "owner_role": "Content"
+    },
+    {
+      "id": "M1-B1",
+      "lever": "B",
+      "title": "Build /services/prenatal-massage-austin/ landing page",
+      "month": 1,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M1-B2",
+      "lever": "B",
+      "title": "Push 3 prenatal-massage GBP posts with client photos",
+      "month": 1,
+      "owner_role": "GBP"
+    },
+    {
+      "id": "M1-C1",
+      "lever": "C",
+      "title": "Add 9 net-new queries to LD tracking + baseline scan",
+      "month": 1,
+      "owner_role": "HQDM"
+    },
+    {
+      "id": "M1-D1",
+      "lever": "D",
+      "title": "Owner ask: GA4 property access",
+      "month": 1,
+      "owner_role": "Matt → Owner"
+    },
+    {
+      "id": "M1-E1",
+      "lever": "E",
+      "title": "Title/meta rewrite top 10 high-impression non-brand pages",
+      "month": 1,
+      "owner_role": "Content"
+    },
+    {
+      "id": "M2-A1",
+      "lever": "A",
+      "title": "Track DT moat; alert on any single-cell top-3 loss",
+      "month": 2,
+      "owner_role": "HQDM"
+    },
+    {
+      "id": "M2-B1",
+      "lever": "B",
+      "title": "Outreach: 5 doulas + 3 Austin Mom blogs for prenatal page backlinks",
+      "month": 2,
+      "owner_role": "Outreach"
+    },
+    {
+      "id": "M2-B2",
+      "lever": "B",
+      "title": "Build /conditions/pregnancy-related-back-pain/ pillar content",
+      "month": 2,
+      "owner_role": "Content"
+    },
+    {
+      "id": "M2-C1",
+      "lever": "C",
+      "title": "Build /services/cupping-therapy-austin/ landing page",
+      "month": 2,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M2-C2",
+      "lever": "C",
+      "title": "Build /services/myofascial-release-austin/ landing page",
+      "month": 2,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M2-D1",
+      "lever": "D",
+      "title": "Wire GTM events (after GA4 connected): form-submit, phone, email",
+      "month": 2,
+      "owner_role": "Dev"
+    },
+    {
+      "id": "M2-E1",
+      "lever": "E",
+      "title": "Apply title/meta rewrite to next 15 non-brand pages",
+      "month": 2,
+      "owner_role": "Content"
+    },
+    {
+      "id": "M2-F1",
+      "lever": "F",
+      "title": "Pivot cold-laser page to cold-laser + condition long-tail",
+      "month": 2,
+      "owner_role": "Content"
+    },
+    {
+      "id": "M3-A1",
+      "lever": "A",
+      "title": "Monthly cadence: 4 GBP posts tagged deep tissue",
+      "month": 3,
+      "owner_role": "GBP"
+    },
+    {
+      "id": "M3-B1",
+      "lever": "B",
+      "title": "Second LD scan: measure prenatal recovery",
+      "month": 3,
+      "owner_role": "HQDM"
+    },
+    {
+      "id": "M3-C1",
+      "lever": "C",
+      "title": "Build /services/sports-massage-austin/ landing page",
+      "month": 3,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M3-C2",
+      "lever": "C",
+      "title": "Build /services/lymphatic-drainage-austin/ landing page",
+      "month": 3,
+      "owner_role": "Content + Dev"
+    },
+    {
+      "id": "M3-D1",
+      "lever": "D",
+      "title": "First GA4 × LD correlation pass; surface lift-by-lever",
+      "month": 3,
+      "owner_role": "HQDM"
+    },
+    {
+      "id": "M3-E1",
+      "lever": "E",
+      "title": "Review CTR change on rewritten pages; expand pattern if >0.3pp",
+      "month": 3,
+      "owner_role": "HQDM"
+    }
+  ],
+  "kpi_targets": [
+    {
+      "kpi": "Portfolio top-3 cells (8 tracked kws)",
+      "baseline": 154,
+      "current": 143,
+      "m3_target": 161,
+      "stretch": 177
+    },
+    {
+      "kpi": "Portfolio top-10 cells (8 tracked kws)",
+      "baseline": 328,
+      "current": 363,
+      "m3_target": 381,
+      "stretch": 399
+    },
+    {
+      "kpi": "Pregnancy-massage-near-me top-3 cells",
+      "baseline": 34,
+      "current": 26,
+      "m3_target": 34,
+      "stretch": 39
+    },
+    {
+      "kpi": "Deep tissue massage top-3 cells",
+      "baseline": 50,
+      "current": 47,
+      "m3_target": 50,
+      "stretch": 55
+    },
+    {
+      "kpi": "GSC sitewide CTR (90d trailing)",
+      "baseline": "0.83%",
+      "current": "1.00%",
+      "m3_target": "1.20%",
+      "stretch": "1.50%"
+    },
+    {
+      "kpi": "Tracked services with DR in top-3 at pin",
+      "baseline": 5,
+      "current": 5,
+      "m3_target": 9,
+      "stretch": 12,
+      "note": "Counts cells across 8 kws where DR holds #1–#3"
+    }
+  ],
+  "attribution_rules": {
+    "leads_definition": "form_submit + contact_form_submit (when GA4 connected)",
+    "calls_separate": "click_to_dial + click_phone_number tracked separately; never bundled into Leads",
+    "gbp_clicks_separate": "gmb_click is engagement-not-conversion; never reported as a conversion",
+    "partial_period": "Latest month in trend marked with * if days_actual < days_in_month",
+    "ga4_status": "Not connected — see Owner Ask OA-1"
+  }
+}

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Deep Relief · Condensed Strategy · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{ink:{900:'#0b1220',700:'#1f2937',500:'#6b7280'},brand:{900:'#0b2545',700:'#13315c',500:'#1d5b8a',300:'#8ecae6'}}}}}</script>
+  <style>
+    html { scroll-behavior:smooth } @page { size:Letter; margin:.5in }
+    .shell { max-width:1100px }
+    .panel { background:#fff; border:1px solid #e2e8f0; border-radius:.75rem; padding:1.25rem 1.5rem; box-shadow:0 1px 2px rgba(0,0,0,.04) }
+    .tile { background:#fff; border-radius:.5rem; padding:.9rem 1.1rem; border-left:4px solid #1d5b8a }
+    .tile.good { border-left-color:#10b981 } .tile.watch { border-left-color:#f59e0b } .tile.bad { border-left-color:#ef4444 }
+    .tile .v { font-size:1.45rem; font-weight:800; color:#0b1220; line-height:1.1 }
+    .tile .l { font-size:.6rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:#6b7280; margin-bottom:.3rem }
+    .tile .s { font-size:.7rem; color:#6b7280; margin-top:.3rem; line-height:1.3 }
+    .pill { display:inline-block; padding:.12rem .5rem; border-radius:.375rem; font-size:.6rem; font-weight:700; text-transform:uppercase; letter-spacing:.04em }
+    .pill.good { background:#d1fae5; color:#065f46 } .pill.watch { background:#fef3c7; color:#92400e } .pill.bad { background:#fee2e2; color:#991b1b } .pill.neutral { background:#e2e8f0; color:#475569 }
+    .pill.p1 { background:#fee2e2; color:#991b1b } .pill.p2 { background:#fef3c7; color:#92400e } .pill.p3 { background:#e2e8f0; color:#475569 }
+    td, th { padding:.45rem .55rem; border-bottom:1px solid #f1f5f9 } .num { text-align:right; font-variant-numeric:tabular-nums; font-family:ui-monospace,monospace }
+    tr.me td { background:#eff6ff; font-weight:600; }
+    code { background:#f1f5f9; padding:.05rem .3rem; border-radius:.2rem; font-size:.85em }
+    @media print { .no-print { display:none !important } body { background:#fff !important } .panel, .tile { box-shadow:none !important } }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+  <main class="shell mx-auto px-4 sm:px-8 py-6 bg-white shadow-sm my-4 print:my-0">
+    <div class="flex items-center justify-between gap-3 border-b border-slate-200 pb-4 mb-5">
+      <div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500">HQDM · Condensed Strategy</div>
+        <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Deep Relief</h1>
+        <p class="text-sm text-slate-500 mt-0.5">Q2 2026 · single-pin multi-service wellness · South Austin · 4 LD scans (Mar 12 → May 15)</p>
+      </div>
+      <div class="flex gap-2 text-xs no-print">
+        <a href="index.html" class="px-2.5 py-1.5 rounded bg-slate-100 hover:bg-slate-200 font-semibold">Full dashboard</a>
+        <a href="snapshot.html" class="px-2.5 py-1.5 rounded bg-brand-500 text-white font-semibold">Client snapshot</a>
+      </div>
+    </div>
+
+    <section class="mb-5">
+      <div class="panel" style="background:linear-gradient(180deg,#fff,#fffbeb); border-left:4px solid #f59e0b">
+        <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1">Status</div>
+        <p class="text-[15px] leading-relaxed text-slate-800" id="tldr"></p>
+      </div>
+    </section>
+
+    <section class="mb-5"><div class="grid grid-cols-2 lg:grid-cols-4 gap-3" id="tiles"></div></section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The 8 tracked keywords · Mar 12 → May 15</h2>
+      <div class="panel overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th>
+          <th class="num">SV (Austin)</th>
+          <th class="num">Top-3 Mar → May</th>
+          <th class="num">Δ</th>
+          <th class="num">Avg rank</th>
+          <th class="num">Mean dx</th>
+          <th>Verdict</th>
+        </tr></thead>
+        <tbody id="kw-rows"></tbody></table></div>
+      <p class="text-xs text-slate-500 mt-2">Mean dx = average rank change per cell where Deep Relief stayed visible on both dates (positive = improved). Deep tissue massage is the moat (47 top-3 cells, nearest competitor 25). Pregnancy/prenatal is the bleed — Sage Blossom's 209-review pin is taking share.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Untracked at-pin wins — DataForSEO Maps SERP</h2>
+      <div class="panel overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th>
+          <th class="num">Rank at pin</th>
+          <th class="num">SV (Austin)</th>
+        </tr></thead>
+        <tbody id="untracked-rows"></tbody></table></div>
+      <p class="text-xs text-slate-500 mt-2">Services where Deep Relief sits #1–#5 at center but isn't being tracked. Combined Austin-DMA demand on top-3 untracked: <strong id="untracked-vol">—</strong>/mo. Adding to LD (Lever C) = formal defense; we won't notice if any of them slip otherwise.</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Top 10 competitors · portfolio-wide</h2>
+      <div class="panel overflow-x-auto"><table class="w-full text-sm">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Business</th>
+          <th class="num">Top-3 (May 15)</th>
+          <th class="num">Δ vs Mar 12</th>
+          <th class="num">Top-10</th>
+          <th class="num">Reviews</th>
+          <th class="num">Rating</th>
+        </tr></thead>
+        <tbody id="comp-rows"></tbody></table></div>
+      <p class="text-xs text-slate-500 mt-2">Sage Blossom Massage (209-rev listing) is the watch competitor — gaining +6 top-3 cells with massive top-3 ownership on pregnancy/prenatal. Laser Therapy Clinic-Austin owns cold-laser absolutely (133/133 cells) — concede that surface (Lever F).</p>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">GSC · what's working, what's not</h2>
+      <div class="panel">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="gsc-summary"></div>
+        <p class="text-xs text-slate-500 mt-3 leading-relaxed" id="gsc-note"></p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Six strategic levers</h2>
+      <div class="space-y-2" id="levers-rows"></div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Owner asks · outstanding</h2>
+      <div class="panel">
+        <ul class="space-y-3" id="owner-asks-rows"></ul>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="tasks-rows"></div>
+    </section>
+
+    <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
+      <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Deep Relief · Aleksandar Spasevski · 2026-06-02</span>
+      <span class="text-slate-400">Confidential — for Deep Relief.</span>
+    </footer>
+  </main>
+
+<script>
+(async function () {
+  const D = await fetch('./data/data.json?v=' + Date.now()).then(r => r.json());
+  const $ = id => document.getElementById(id);
+  const fmt = n => (n == null) ? '—' : Number(n).toLocaleString();
+
+  $('tldr').textContent = D.tldr;
+
+  // Tiles
+  $('tiles').innerHTML = D.headline.tiles.map(t => `<div class="tile ${t.sentiment === 'positive' ? 'good' : t.sentiment === 'negative' ? 'bad' : ''}">
+    <div class="l">${t.label}</div>
+    <div class="v">${t.value}</div>
+    <div class="s">${t.sub}</div>
+  </div>`).join('');
+
+  // Keyword movement
+  $('kw-rows').innerHTML = D.kw_table.map(k => {
+    const dt3 = k.top3_cur - k.top3_base;
+    const verdictPill = k.sentiment === 'positive' ? '<span class="pill good">improving</span>'
+      : k.sentiment === 'negative' ? '<span class="pill bad">softening</span>'
+      : '<span class="pill neutral">flat</span>';
+    const dxColor = k.mean_dx > 0 ? 'text-emerald-700' : k.mean_dx < 0 ? 'text-rose-700' : '';
+    return `<tr>
+      <td>${k.kw}</td>
+      <td class="num">${fmt(k.search_volume_austin)}</td>
+      <td class="num">${k.top3_base} → ${k.top3_cur}</td>
+      <td class="num ${dt3 > 0 ? 'text-emerald-700' : dt3 < 0 ? 'text-rose-700' : ''} font-semibold">${dt3 > 0 ? '+' : ''}${dt3}</td>
+      <td class="num">${k.rank_base} → ${k.rank_cur}</td>
+      <td class="num ${dxColor} font-semibold">${k.mean_dx > 0 ? '+' : ''}${k.mean_dx}</td>
+      <td>${verdictPill}</td>
+    </tr>`;
+  }).join('');
+
+  // Untracked rows
+  $('untracked-rows').innerHTML = D.untracked_at_pin.slice(0, 12).map(r => {
+    const pillClass = r.rank_at_pin <= 3 ? 'good' : 'watch';
+    return `<tr>
+      <td><strong>${r.kw}</strong></td>
+      <td class="num"><span class="pill ${pillClass}">#${r.rank_at_pin}</span></td>
+      <td class="num">${fmt(r.search_volume_austin)}</td>
+    </tr>`;
+  }).join('');
+  const totVol = D.untracked_at_pin.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
+  $('untracked-vol').textContent = fmt(totVol) + ' searches';
+
+  // Competitor rows
+  $('comp-rows').innerHTML = D.leaderboard.slice(0, 10).map(c => {
+    const meRow = c.is_dr ? 'me' : '';
+    const watchPill = !c.is_dr && c.delta_top3 >= 20 ? '<span class="pill bad ml-1">accelerating</span>' : '';
+    return `<tr class="${meRow}">
+      <td>${c.is_dr ? '<strong>' + c.name + '</strong>' : c.name}${watchPill}</td>
+      <td class="num font-semibold">${c.top3_cells}</td>
+      <td class="num ${c.delta_top3 > 0 ? 'text-emerald-700' : c.delta_top3 < 0 ? 'text-rose-700' : ''} font-semibold">${c.delta_top3 > 0 ? '+' : ''}${c.delta_top3}</td>
+      <td class="num">${c.top10_cells}</td>
+      <td class="num">${fmt(c.reviews)}</td>
+      <td class="num">${c.rating}★</td>
+    </tr>`;
+  }).join('');
+
+  // GSC summary
+  const g = D.gsc.summary;
+  const bp = D.gsc.brand_pull;
+  const h = D.gsc.halves;
+  $('gsc-summary').innerHTML = `
+    <div class="rounded-lg bg-emerald-50 border border-emerald-200 p-3">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 mb-1">365-day totals</div>
+      <div class="text-xl font-extrabold text-slate-900">${fmt(g.clicks_365d)} <span class="text-sm font-normal text-slate-500">clicks</span></div>
+      <div class="text-[11px] text-slate-600 mt-1">${fmt(g.impressions_365d)} impressions · ${g.sitewide_ctr_pct_365d}% CTR · ${g.unique_pages_365d} indexed pages</div>
+    </div>
+    <div class="rounded-lg bg-amber-50 border border-amber-200 p-3">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-amber-700 mb-1">CTR leak — non-brand</div>
+      <div class="text-xl font-extrabold text-slate-900">${bp.non_brand.imp_pct}%</div>
+      <div class="text-[11px] text-slate-600 mt-1">of impressions earns ${bp.non_brand.clicks_pct}% of clicks (${(bp.non_brand.clicks/bp.non_brand.imp*100).toFixed(2)}% CTR)</div>
+    </div>
+    <div class="rounded-lg bg-slate-50 border border-slate-200 p-3">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-slate-700 mb-1">H1 vs H2 trajectory</div>
+      <div class="text-xl font-extrabold text-slate-900">${h.clicks_pct >= 0 ? '+' : ''}${h.clicks_pct}% clicks</div>
+      <div class="text-[11px] text-slate-600 mt-1">${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% impressions · ${h.h1_label} → ${h.h2_label}</div>
+    </div>`;
+  $('gsc-note').innerHTML = `Brand earns <strong>${(bp.brand.clicks/bp.brand.imp*100).toFixed(1)}% CTR</strong> on its 3.4% impression slice; non-brand earns <strong>${(bp.non_brand.clicks/bp.non_brand.imp*100).toFixed(2)}% CTR</strong> on its 96.6% slice. Impressions are healthy and growing — the unblock is click capture: title/meta rewrite + schema (Lever E).`;
+
+  // Levers
+  const leverColors = { emerald: '#10b981', rose: '#f43f5e', amber: '#f59e0b', indigo: '#6366f1', slate: '#64748b' };
+  $('levers-rows').innerHTML = D.levers.map(l => `
+    <div class="panel" style="border-left:4px solid ${leverColors[l.color] || '#1d5b8a'}; padding:.85rem 1.1rem">
+      <div class="flex items-start justify-between gap-3 flex-wrap">
+        <div class="flex-1 min-w-0">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-xs font-bold px-2 py-0.5 rounded" style="background:${leverColors[l.color]}20; color:${leverColors[l.color]}">LEVER ${l.id}</span>
+            <span class="pill ${l.priority.startsWith('P1') ? 'p1' : l.priority.startsWith('P2') ? 'p2' : 'p3'}">${l.priority}</span>
+            <h3 class="text-sm font-bold text-slate-900">${l.name}</h3>
+          </div>
+          <p class="text-xs text-slate-600 mt-1 leading-relaxed">${l.outcome}</p>
+        </div>
+      </div>
+    </div>`).join('');
+
+  // Owner asks
+  $('owner-asks-rows').innerHTML = D.owner_asks.map(a => `<li class="flex gap-2 text-sm">
+    <span class="font-mono text-[10px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded self-start whitespace-nowrap">${a.id}</span>
+    <div>
+      <div class="font-semibold text-slate-900">${a.title}</div>
+      <div class="text-xs text-slate-600 mt-0.5">${a.why}</div>
+      <div class="text-[10px] text-slate-500 mt-0.5">Asked of: <strong>${a.asked_of}</strong> · Status: <strong>${a.status}</strong></div>
+    </div>
+  </li>`).join('');
+
+  // Tasks
+  const byMonth = {};
+  D.tasks.forEach(t => { (byMonth[t.month] = byMonth[t.month] || []).push(t); });
+  $('tasks-rows').innerHTML = [1, 2, 3].map(m => `<div class="panel" style="border-top:4px solid ${m === 1 ? '#10b981' : m === 2 ? '#1d5b8a' : '#6366f1'}; padding:1rem">
+    <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">Month ${m} · ${m === 1 ? 'June' : m === 2 ? 'July' : 'August'} 2026</div>
+    <ul class="space-y-1.5">
+      ${(byMonth[m] || []).map(t => `<li class="text-[12px] flex gap-1.5">
+        <span class="text-slate-400">▸</span>
+        <span class="text-slate-800">${t.title}</span>
+      </li>`).join('')}
+    </ul>
+  </div>`).join('');
+})();
+</script>
+</body>
+</html>

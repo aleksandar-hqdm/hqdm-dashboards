@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <title>Deep Relief · Client Snapshot · HQDM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        colors: {
+          ink: { 900: '#0b1220', 800: '#111827', 700: '#1f2937', 600: '#374151', 500: '#6b7280', 400: '#9ca3af', 300: '#d1d5db' },
+          brand: { 900: '#0b2545', 700: '#13315c', 500: '#1d5b8a', 300: '#8ecae6' }
+        }
+      } }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-feature-settings: "cv02","cv03","cv04","cv11"; }
+    .shell { max-width: 1100px; }
+    .panel { background: #fff; border: 1px solid #e2e8f0; border-radius: .75rem; padding: 1.25rem 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .chip { display: inline-flex; align-items: baseline; gap: .35rem; background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 999px; padding: .35rem .8rem; font-size: .7rem; }
+    .chip.good { background: #ecfdf5; border-color: #a7f3d0; color: #047857; }
+    .chip.watch { background: #fffbeb; border-color: #fde68a; color: #92400e; }
+    .chip .v { font-weight: 800; color: #0b1220; }
+    .chip.good .v { color: #065f46; } .chip.watch .v { color: #92400e; }
+    .month-card { background: #fff; border: 1px solid #e2e8f0; border-top: 5px solid var(--accent, #1d5b8a); border-radius: .75rem; padding: 1.25rem 1.5rem; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+    .month-card .badge { display: inline-block; font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .15rem .55rem; border-radius: .35rem; background: color-mix(in srgb, var(--accent) 15%, white); color: var(--accent, #1d5b8a); }
+    table.mini th, table.mini td { font-size: .72rem; padding: .35rem .5rem; border-bottom: 1px solid #f1f5f9; }
+    table.mini th { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .58rem; color: #64748b; background: #f8fafc; text-align: left; }
+    table.mini td.num, table.mini th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; }
+    table.mini tr.me td { background:#eff6ff; font-weight:600; }
+    @media print { .no-print { display: none !important; } body { background: #fff !important; } .panel, .month-card { box-shadow: none !important; } @page { margin: .5in; } }
+  </style>
+</head>
+<body class="bg-slate-100 font-sans text-slate-800 antialiased">
+
+  <header class="no-print sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+    <div class="shell mx-auto px-4 sm:px-6 py-2 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2 min-w-0">
+        <span class="font-semibold truncate">Deep Relief</span>
+        <span class="text-slate-400 hidden sm:inline">· Client Snapshot · Q2 2026</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="condensed.html" class="text-brand-500 font-semibold hover:underline">Condensed →</a>
+        <a href="index.html" class="text-slate-500 hover:text-slate-900 hidden sm:inline">Full strategy →</a>
+        <button onclick="window.print()" class="px-2.5 py-1 rounded border border-slate-300 text-slate-600 hover:bg-slate-50">Print / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell mx-auto px-4 sm:px-6 py-4">
+    <section class="mb-4">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-brand-500 mb-1">HQDM Search Intelligence · Q2 2026 review + 90-day plan</div>
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-1">
+        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Deep Relief · 90-Day Plan</h1>
+        <div class="text-sm text-slate-500">Prepared <span class="font-mono">2026-06-02</span></div>
+      </div>
+
+      <div class="panel mt-3" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
+        <p class="text-[15px] leading-relaxed text-slate-800">
+          <strong>The deep-tissue moat is intact and the top-10 footprint is widening — the work this quarter is defending pregnancy/prenatal and turning impression breadth into actual clicks.</strong>
+        </p>
+        <p class="text-[14px] leading-relaxed text-slate-700 mt-2.5" id="exec-1"></p>
+        <p class="text-[14px] leading-relaxed text-slate-700 mt-2" id="exec-2"></p>
+        <div class="flex flex-wrap gap-2 mt-3.5" id="chips"></div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="panel">
+        <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Organic search · monthly clicks + impressions</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="gsc-window">—</div>
+          </div>
+          <div class="flex items-center gap-3 text-[10px] text-slate-500">
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Impressions</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Clicks</span>
+          </div>
+        </div>
+        <div style="height: 240px;"><canvas id="gsc-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="gsc-caption"></p>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="panel">
+        <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 4 scans · 8 tracked queries</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="ld-window">—</div>
+          </div>
+          <div class="flex items-center gap-3 text-[10px] text-slate-500">
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Top-10 cells</span>
+            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Top-3 cells</span>
+          </div>
+        </div>
+        <div style="height: 200px;"><canvas id="ld-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="ld-caption"></p>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-emerald-700 mb-2">Where you already lead</div>
+        <ul class="space-y-2.5 text-sm text-slate-700" id="leads"></ul>
+      </div>
+      <div class="panel">
+        <div class="text-[11px] font-bold uppercase tracking-widest text-amber-700 mb-2">Where the market's reshuffling</div>
+        <ul class="space-y-2.5 text-sm text-slate-700" id="reshuffle"></ul>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">8 tracked services · Mar 12 → May 15</h2>
+      <div class="panel overflow-x-auto">
+        <table class="mini w-full">
+          <thead><tr>
+            <th>Service</th>
+            <th class="num">Top-3 Mar 12</th>
+            <th class="num">Top-3 May 15</th>
+            <th class="num">Δ</th>
+            <th class="num">Avg rank Mar → May</th>
+            <th>Verdict</th>
+          </tr></thead>
+          <tbody id="kw-rows"></tbody>
+        </table>
+      </div>
+      <p class="text-[11px] text-slate-500 mt-2">Top-3 cells = grid cells where Deep Relief ranks 1st, 2nd, or 3rd on Maps when someone searches that service nearby. We measure across a 169-cell grid covering 6 miles around your pin.</p>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Services you're already winning that weren't being tracked</h2>
+      <div class="panel overflow-x-auto">
+        <table class="mini w-full">
+          <thead><tr>
+            <th>Service</th>
+            <th class="num">Your rank at center</th>
+            <th class="num">Austin searches / mo</th>
+          </tr></thead>
+          <tbody id="untracked-rows"></tbody>
+        </table>
+        <p class="text-[11px] text-slate-500 mt-2" id="untracked-note"></p>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The 90-day plan · 3 focus areas</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="focus-months"></div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What we need from you</h2>
+      <div class="panel">
+        <ul class="space-y-3" id="owner-asks-rows"></ul>
+      </div>
+    </section>
+
+    <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
+      <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Client snapshot · Aleksandar Spasevski · 2026-06-02</span>
+      <span class="text-slate-400">Confidential — for Deep Relief.</span>
+    </footer>
+    <p class="mt-2 text-[10px] text-slate-400 leading-relaxed">
+      Data sources: Local Falcon 13×13 geo-grid scans (4 dates, 8 tracked queries, Mar 12 → May 15 2026);
+      Google Search Console (https://deeprelief.com/ · 365-day window, 945,867 impressions / 7,839 clicks);
+      DataForSEO Maps SERP at pin coordinates (43 queries) + Austin-DMA Google Ads search volumes.
+    </p>
+  </main>
+
+<script>
+(async function () {
+  const D = await fetch('./data/data.json?v=' + Date.now()).then(r => r.json());
+  const $ = id => document.getElementById(id);
+  const fmt = n => (n == null) ? '—' : Number(n).toLocaleString();
+
+  // Exec
+  const t3_b = D.headline.tiles[0].sub.match(/baseline (\d+)/);
+  const t10_b = D.headline.tiles[1].sub.match(/baseline (\d+)/);
+  const dt = D.kw_table.find(k => k.kw === 'deep tissue massage');
+  const pm = D.kw_table.find(k => k.kw === 'pregnancy massage near me');
+  const g = D.gsc.summary;
+  const bp = D.gsc.brand_pull;
+  const h = D.gsc.halves;
+
+  $('exec-1').innerHTML = `Across the 4 Local Falcon map scans we ran between March 12 and May 15, your Maps presence widened in nine of ten ways that matter. <strong>Top-10 cells across all 8 tracked services grew from ${t10_b ? t10_b[1] : 328} to 363 (+35)</strong> — your profile is now showing in more of South Austin than before. <strong>Deep tissue massage</strong> is your defining service: 47 top-3 cells, almost twice the nearest competitor (Deeply Therapeutic at 25 cells). DataForSEO confirms you're sitting at <strong>#1 at your storefront's center</strong> for 9 other services we hadn't been tracking — including <code>chiropractor near me</code> (3,600 Austin searches/mo), <code>acupuncture austin</code> (1,000/mo), <code>deep tissue massage austin</code> (590/mo), and <code>cupping therapy austin</code> (170/mo).`;
+
+  $('exec-2').innerHTML = `The one watch area is <strong>pregnancy + prenatal massage</strong>, where a competitor pin (Sage Blossom Massage's newer 209-review listing) has been gaining share — you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" over the window. That's the single largest category bleed and the first lever this quarter aims to reverse. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong> — up ${h.imps_pct}% over the last 6 months — but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
+
+  // Chips
+  $('chips').innerHTML = [
+    { v: '47 top-3', l: 'deep tissue massage · the moat', good: true },
+    { v: '+35 cells', l: 'top-10 footprint gained · Mar → May', good: true },
+    { v: '15 services', l: 'you win at center but weren\'t tracking', good: true },
+    { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · organic search', good: true },
+    { v: 'Sage Blossom', l: 'the pregnancy-massage watch competitor', watch: true },
+  ].map(c => `<span class="chip ${c.good ? 'good' : c.watch ? 'watch' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
+
+  // GSC chart
+  const trend = D.gsc.trend;
+  $('gsc-window').textContent = trend.months[0] + ' → ' + trend.months[trend.months.length - 1] + ' · monthly · whole site';
+  new Chart($('gsc-chart'), {
+    data: {
+      labels: trend.months,
+      datasets: [
+        { type: 'line', label: 'Impressions', data: trend.impressions, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 3, yAxisID: 'y', fill: true },
+        { type: 'line', label: 'Clicks', data: trend.clicks, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, yAxisID: 'y1', fill: false },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+        y: { position: 'left', beginAtZero: true, ticks: { font: { size: 9 } } },
+        y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } } },
+      }
+    }
+  });
+  $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter — total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work — we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
+
+  // LD chart
+  $('ld-window').textContent = D.trajectory_ld.labels.join(' · ') + ' · top-3 + top-10 cells across 8 keywords';
+  new Chart($('ld-chart'), {
+    data: {
+      labels: D.trajectory_ld.labels,
+      datasets: [
+        { type: 'line', label: 'Top-10 cells', data: D.trajectory_ld.portfolio.top10, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true },
+        { type: 'line', label: 'Top-3 cells', data: D.trajectory_ld.portfolio.top3, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4 },
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+        y: { beginAtZero: true, ticks: { font: { size: 9 } } },
+      }
+    }
+  });
+  const t3Series = D.trajectory_ld.portfolio.top3;
+  const t10Series = D.trajectory_ld.portfolio.top10;
+  $('ld-caption').innerHTML = `Top-10 cells: <strong>${t10Series[0]} → ${t10Series[t10Series.length-1]} (${t10Series[t10Series.length-1]-t10Series[0] >= 0 ? '+' : ''}${t10Series[t10Series.length-1]-t10Series[0]})</strong>. Top-3 cells flat-to-down (-11) because of the pregnancy-massage cluster bleed — everything else either held or expanded.`;
+
+  // Leads
+  $('leads').innerHTML = [
+    `<strong>Deep tissue massage</strong> — 47 top-3 grid cells across South Austin · nearest competitor sits at 25. Your single most decisive ranking advantage.`,
+    `<strong>Multi-category clinic</strong> — chiropractor primary + acupuncture clinic + massage therapist secondary. That breadth is the reason you hold position on 15+ services from one pin.`,
+    `<strong>4.9★ × 443 reviews</strong> — more reviews than every direct South Austin competitor in your category mix. The trust signal is locked in.`,
+    `<strong>${fmt(g.clicks_365d)} organic clicks / year</strong> from ${fmt(g.impressions_365d)} impressions — Google routinely shows your site for service queries; we're widening the click-through next.`,
+    `<strong>15 untracked services at #1–#3 at your pin</strong>: <code>chiropractor near me</code> (#1) · <code>massage therapy austin</code> (#1) · <code>acupuncture austin</code> (#1) · <code>cupping therapy austin</code> (#1) · <code>massage near me</code> (#2, 40,500/mo) · and 10 more.`,
+  ].map(li => `<li class="flex gap-2"><span class="text-emerald-500 font-bold mt-0.5">✓</span><span>${li}</span></li>`).join('');
+
+  // Reshuffle
+  $('reshuffle').innerHTML = [
+    `<strong>Sage Blossom Massage</strong> (the 209-review listing) is taking share on pregnancy + prenatal — you lost 8 top-3 cells on "pregnancy massage near me" between March and May. Lever 2 puts a dedicated prenatal landing page + outreach to doulas / Austin Mom blogs in motion.`,
+    `<strong>Laser Therapy Clinic-Austin</strong> owns "cold laser austin" absolutely — 133/133 grid cells in top-3 — because their GBP category is an exact-name match. The honest read: this is unwinnable. Lever 6 pivots the cold-laser page to "cold laser + condition" long-tail queries (knee pain, neuropathy) where the field is open.`,
+    `<strong>The chiropractor pack</strong> (The Joint Chiropractic × 3 locations + South Austin Chiro) is consolidating top-3 for the unmodified "chiropractor" query. You're not in their top-3 — but you ARE #1 for "chiropractor near me" at your pin, which is the higher-intent query.`,
+    `<strong>Cold laser + Austin Laser Solutions</strong> at Sunset Valley and Bee Cave are accelerating (+49 and +33 top-3 cells respectively). They're category-aligned competitors. Holding our ground at #5 in cold laser is the realistic ceiling.`,
+  ].map(li => `<li class="flex gap-2"><span class="text-amber-500 font-bold mt-0.5">↻</span><span>${li}</span></li>`).join('');
+
+  // Keyword rows
+  $('kw-rows').innerHTML = D.kw_table.map(k => {
+    const dt3 = k.top3_cur - k.top3_base;
+    const verdictPill = k.sentiment === 'positive' ? '<span style="color:#047857;font-weight:700;font-size:.62rem;letter-spacing:.04em;text-transform:uppercase">↑ improving</span>'
+      : k.sentiment === 'negative' ? '<span style="color:#991b1b;font-weight:700;font-size:.62rem;letter-spacing:.04em;text-transform:uppercase">↓ softening</span>'
+      : '<span style="color:#475569;font-weight:700;font-size:.62rem;letter-spacing:.04em;text-transform:uppercase">→ flat</span>';
+    return `<tr>
+      <td>${k.kw}</td>
+      <td class="num">${k.top3_base}</td>
+      <td class="num font-semibold">${k.top3_cur}</td>
+      <td class="num ${dt3 > 0 ? 'text-emerald-700' : dt3 < 0 ? 'text-rose-700' : ''} font-semibold">${dt3 > 0 ? '+' : ''}${dt3}</td>
+      <td class="num">${k.rank_base} → ${k.rank_cur}</td>
+      <td>${verdictPill}</td>
+    </tr>`;
+  }).join('');
+
+  // Untracked rows
+  $('untracked-rows').innerHTML = D.untracked_at_pin.slice(0, 12).map(r => `<tr>
+    <td><strong>${r.kw}</strong></td>
+    <td class="num"><span style="background:${r.rank_at_pin <= 3 ? '#d1fae5' : '#fef3c7'};color:${r.rank_at_pin <= 3 ? '#065f46' : '#92400e'};padding:.1rem .4rem;border-radius:.25rem;font-weight:700;font-size:.65rem">#${r.rank_at_pin}</span></td>
+    <td class="num">${fmt(r.search_volume_austin)}</td>
+  </tr>`).join('');
+  const totVol = D.untracked_at_pin.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
+  $('untracked-note').innerHTML = `Combined Austin demand on top-3 untracked: <strong>${fmt(totVol)} searches/month</strong>. We'll add these to our weekly tracking starting Month 1, so we'll catch any change before it shows up in your booking volume.`;
+
+  // Focus months
+  const months = [
+    {
+      month: 'Month 1 · June 2026',
+      theme: 'Defend + measure',
+      color: '#10b981',
+      summary: 'Lock in the deep-tissue moat and start the prenatal recovery — the two highest-leverage queries get dedicated landing pages this month. Add the 9 net-new untracked services to weekly tracking. Owner ask: GA4 access.',
+      by_end_of_month: 'Deep tissue + prenatal massage have dedicated, schema-marked landing pages; weekly LD tracking includes 9 new services; GA4 connection request in motion.',
+      deliverables: [
+        '/services/deep-tissue-massage-austin/ landing page (live)',
+        '/services/prenatal-massage-austin/ landing page (live)',
+        '3 prenatal-massage GBP posts with client photos',
+        'Title/meta rewrite on top 10 high-impression non-brand pages',
+        'LD baseline scans on 9 new tracked queries',
+      ],
+    },
+    {
+      month: 'Month 2 · July 2026',
+      theme: 'Expand the surface',
+      color: '#1d5b8a',
+      summary: 'With moat queries locked, expand into the next layer of services where you already win at the pin — cupping therapy, myofascial release, sports massage, lymphatic drainage. Outreach round for prenatal page backlinks. GA4 wired (if access granted).',
+      by_end_of_month: 'Three more dedicated service pages live; 8+ doula / Austin Mom blog outreach completed; GA4 leads/calls/email funnel categorized per HQDM convention.',
+      deliverables: [
+        '/services/cupping-therapy-austin/ + /myofascial-release-austin/ landing pages',
+        '5-doula + 3-Austin-Mom-blog outreach for prenatal page',
+        '/conditions/pregnancy-related-back-pain/ pillar content',
+        'GTM events wired (form_submit, click_phone, click_email)',
+        'Title/meta rewrite on next 15 high-impression pages',
+      ],
+    },
+    {
+      month: 'Month 3 · August 2026',
+      theme: 'Measure + iterate',
+      color: '#6366f1',
+      summary: 'Second LD scan to measure pregnancy-massage recovery. First GA4 × LD correlation pass — surface which lever moved which booking metric. Final 2 expansion pages.',
+      by_end_of_month: 'Pregnancy-massage top-3 cells recovered; CTR uplift on rewritten pages measured; full 90-day picture clear with conversion signal.',
+      deliverables: [
+        '/services/sports-massage-austin/ + /lymphatic-drainage-austin/ landing pages',
+        '4 GBP posts/mo tagged deep-tissue + prenatal (defense)',
+        'Pivoted cold-laser page targeting condition long-tail',
+        'Second LD scan + GA4 × LD correlation report',
+        'CTR uplift measurement on rewritten pages',
+      ],
+    },
+  ];
+  $('focus-months').innerHTML = months.map(m => `
+    <div class="month-card" style="--accent:${m.color}">
+      <div class="badge mb-2">${m.theme}</div>
+      <h3 class="font-extrabold text-slate-900 text-base">${m.month}</h3>
+      <p class="text-sm text-slate-700 leading-relaxed mt-1.5">${m.summary}</p>
+      <div class="mt-3 pt-3 border-t border-slate-100">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">By end of month</div>
+        <p class="text-xs text-slate-700 italic leading-snug">${m.by_end_of_month}</p>
+      </div>
+      <div class="mt-3">
+        <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1.5">Deliverables</div>
+        <ul class="space-y-1">
+          ${m.deliverables.map(d => `<li class="flex gap-1.5 text-[12px] text-slate-700 leading-snug"><span class="text-slate-400 mt-1">▸</span><span>${d}</span></li>`).join('')}
+        </ul>
+      </div>
+    </div>`).join('');
+
+  // Owner asks
+  $('owner-asks-rows').innerHTML = D.owner_asks.map(a => `<li class="flex gap-2 text-sm">
+    <span class="font-mono text-[10px] bg-indigo-100 text-indigo-700 px-1.5 py-0.5 rounded self-start whitespace-nowrap">${a.id}</span>
+    <div>
+      <div class="font-semibold text-slate-900">${a.title}</div>
+      <div class="text-xs text-slate-600 mt-0.5">${a.why}</div>
+    </div>
+  </li>`).join('');
+})();
+</script>
+</body>
+</html>

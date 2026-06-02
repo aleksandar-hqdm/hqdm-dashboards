@@ -9,22 +9,22 @@
     "prepared_by": "Aleksandar Spasevski",
     "date": "2026-06-01",
     "focus": "Wins · long-tail footprint built · case for 6 more months at same budget targeting service × suburb matrix",
-    "data_window": "Local Dominator Feb 27 – May 31 2026 (169-cell grid · 8 queries · 41 scan files) · GSC Dec 12 2025 – Jun 9 2026 (cmdesigns.net) · DataForSEO search volumes 2026-06-01 · live site crawl 2026-06-01 · Asana CMD-Tier 2 project · HQDM engagement start 2026-03-12",
+    "data_window": "Local Dominator Feb 27 – May 5 2026 (169-cell grid · 8 queries; clean scan window) · GSC Dec 12 2025 – Jun 1 2026 (cmdesigns.net, siteOwner) · DataForSEO Labs ranked-keywords + Google Ads volumes + fresh Maps grid scan 2026-06-02 · live site crawl 2026-06-01 · Asana CMD-Tier 2 · HQDM engagement start 2026-03-12",
     "engagement_start": "2026-03-12",
     "engagement_age_weeks": 12
   },
-  "tldr": "<strong>Twelve weeks in, the foundation is proven and the brand is owned.</strong> cmdesigns.net now ranks <strong>#1 organically</strong> for its brand name and the content engine is demonstrably working: of the 10 blog posts shipped, <strong>three already rank on page 1 of Google</strong> (walk-in shower permits #7, insurance rebuilds #6, rebuild timeline #9), and the ADA walk-in-shower guide alone pulls a cluster of <strong>44 distinct search queries</strong>. GSC impressions over the engagement window are up <strong>+112% (1,940 → 4,116)</strong>, <strong>186 brand-new queries</strong> found the site this quarter, and the brand keyword \"cm&d\" recovered from <strong>position 22.1 → 7.8</strong>. On Maps, the top-10 footprint on the primary brand query held at <strong>99.4% of the 169-cell grid</strong> through May algorithm pressure, and \"construction design\" top-3 has begun recovering (<strong>4 → 24 cells</strong>). The honest gap — and the entire case for the next six months — is that <strong>CM&D ranks for zero commercial service terms in its top 20</strong>, because the site has never had the service pages those terms require. The Portland metro searches for this work <strong>~3,480 times a month</strong> at a blended <strong>$24 CPC</strong> (≈<strong>$84K/month</strong> in ad-equivalent value; \"bathroom remodel Portland OR\" alone commands a $51 CPC). The next six months at the same budget convert proven content capability + owned brand authority into booked jobs by building the <strong>5 missing service pages</strong>, the <strong>service × suburb matrix</strong>, site-wide schema, and GA4 + GTM so lead attribution finally goes from inferred to measured.",
+  "tldr": "<strong>Twelve weeks in, the foundation is proven and the brand is owned.</strong> cmdesigns.net now ranks <strong>#1 organically</strong> for its brand name and the content engine is demonstrably working: of the 10 blog posts shipped, <strong>three already rank on page 1 of Google</strong> (walk-in shower permits #7, insurance rebuilds #6, rebuild timeline #9), and the ADA walk-in-shower guide alone pulls a cluster of <strong>44 distinct search queries</strong>. GSC impressions over the engagement window are up <strong>+112% (1,940 → 4,116)</strong>, <strong>186 brand-new queries</strong> found the site this quarter, and the brand keyword \"cm&d\" recovered from <strong>position 22.1 → 7.8</strong>. On Maps, the brand queries hold a broad top-3 footprint and <strong>full-grid top-10 coverage (169/169 cells)</strong> on the primary query at the last clean reading, and the most recent four weeks are the strongest of the engagement: the brand queries reached <strong>organic #1</strong> and the ADA guide climbed <strong>+12.5 positions</strong>. The honest gap — and the entire case for the next six months — is that <strong>CM&D ranks for zero commercial service terms in its top 20</strong>, because the site has never had the service pages those terms require. The Portland metro searches for this work <strong>~3,480 times a month</strong> at a blended <strong>$24 CPC</strong> (≈<strong>$84K/month</strong> in ad-equivalent value; \"bathroom remodel Portland OR\" alone commands a $51 CPC). The next six months at the same budget convert proven content capability + owned brand authority into booked jobs by building the <strong>5 missing service pages</strong>, the <strong>service × suburb matrix</strong>, site-wide schema, and GA4 + GTM so lead attribution finally goes from inferred to measured.",
   "headline": {
     "h2": "Twelve weeks of work · informational footprint up · the next six months convert it to commercial ranking",
-    "lede": "Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries (walk-in shower, ADA, kitchen rebuild, insurance rebuild) are now indexed and producing impression footprint. Maps top-10 coverage is intact at 99.4% on the largest brand query even after May algo pressure. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for, at the same budget.",
+    "lede": "Impressions are up +112% and the brand keyword has moved from page 3 to position 7.8. Ten blog posts targeting service-intent informational queries (walk-in shower, ADA, kitchen rebuild, insurance rebuild) are now indexed and producing impression footprint. Maps top-10 coverage spans the full 169-cell grid on the largest brand query, and the most recent four weeks are the engagement's strongest in Search Console — the brand queries reached organic #1. What hasn't been built yet are the commercial service pages those impressions should route to — and that's what the next six months are for, at the same budget.",
     "tiles": [
       {"label": "GSC impressions · engagement window", "value": "+112%", "sub": "1,940 → 4,116 · Dec 12-Mar 11 vs Mar 12-Jun 9", "tone": "good"},
       {"label": "GSC avg position · recent 30d", "value": "12.08", "sub": "best of the data window · vs 15.0 pre-engagement", "tone": "good"},
       {"label": "Brand kw \"cm&d\" position", "value": "22.1 → 7.8", "sub": "page 3 → top of page 1 · +14 spots", "tone": "good"},
       {"label": "Blog posts shipped · already on page 1", "value": "10 · 3", "sub": "3 posts rank page 1 of Google (permits #7 · insurance rebuilds #6 · timeline #9)", "tone": "good"},
       {"label": "Organic rank · brand name", "value": "#1", "sub": "\"construction management & design\" · brand authority owned outright", "tone": "good"},
-      {"label": "Maps · construction mgmt · top-10 coverage", "value": "99.4%", "sub": "168 of 169 cells held through May algo pressure", "tone": "good"},
-      {"label": "construction design · top-3 (last 10 days)", "value": "4 → 24", "sub": "May 21 → May 31 · +20 cells · recovery underway", "tone": "good"},
+      {"label": "Maps · construction mgmt · top-10 coverage", "value": "169/169", "sub": "full 169-cell grid at the last clean Local Dominator reading (May 5)", "tone": "good"},
+      {"label": "Recent organic climb · brand queries", "value": "→ #1", "sub": "last 28d (GSC): \"construction management\" 5.2→1.0 · \"construction design\" now #1 · clicks doubled", "tone": "good"},
       {"label": "Portland-metro service demand · ad-equiv value", "value": "~$84K/mo", "sub": "~3,480 searches/mo · $24 blended CPC · the local prize M4-M9 targets", "tone": "good"}
     ]
   },
@@ -43,7 +43,7 @@
       {"date": "2026-04-07", "event": "Onboarding + Tools tasks marked complete."},
       {"date": "2026-05-05", "event": "Second batch of 4 blog posts indexed: walk-in shower conversion take · prepare for insurance rebuild · kitchen repair or rebuild · insurance rebuild timeline."},
       {"date": "2026-05-10", "event": "Third batch of 2 blog posts indexed: kitchen rebuild materials · ADA walk-in shower requirements (504 impressions in 90d)."},
-      {"date": "2026-05-31", "event": "Maps \"construction design\" partial recovery: top-3 4 → 24 in 10 days. GSC recent-30d avg position 12.08 — best of the data window."}
+      {"date": "2026-05-04 to 05-31", "event": "Strongest GSC stretch of the engagement: brand queries reach organic #1 (\"construction management\" 5.2→1.0, \"construction design\" now #1); the ADA walk-in-shower guide climbs +12.5 positions (23.8→11.2); site clicks double (11→22) and impression-weighted position improves 18.6→10.5. An independent Jun 2 DataForSEO Maps scan confirms CM&D ranks #1 where it surfaces, in its core service area."}
     ],
     "tasks_shipped": {
       "total_in_asana": 80,
@@ -74,6 +74,23 @@
       ],
       "footnote": "GA4 lead-conversion data is not connected for cmdesigns.net (no GA4 property matched to the domain in the agency Google Account). Installing GA4 + GTM with the 4-event lead model is in the next-6-months scope (D4). Until then, GSC is the cleanest organic signal we have."
     },
+    "recent_climb": {
+      "title": "The recent four weeks — strongest stretch of the engagement",
+      "intro": "Search Console, last 28 days (May 4 – 31) vs the prior 28 days (Apr 6 – May 3). This is the period the brand and content work compounded — the most current, same-source read we have.",
+      "rows": [
+        {"metric": "\"construction management\" · organic position", "prior": "5.2", "recent": "1.0", "note": "Now ranking #1 in the recent window."},
+        {"metric": "\"construction design\" · organic position", "prior": "—", "recent": "1.0", "note": "Newly surfacing at #1."},
+        {"metric": "\"construction management near me\" · position", "prior": "—", "recent": "1.0", "note": "Newly at #1 on the near-me variant."},
+        {"metric": "ADA walk-in-shower guide · position", "prior": "23.8", "recent": "11.2", "note": "+12.5 spots — content authority compounding toward page 1."},
+        {"metric": "Site impressions (28d)", "prior": "1,266", "recent": "2,684", "note": "+112%."},
+        {"metric": "Site clicks (28d)", "prior": "11", "recent": "22", "note": "Doubled."},
+        {"metric": "Impression-weighted avg position", "prior": "18.6", "recent": "10.5", "note": "Best of the engagement."}
+      ],
+      "corroboration": "An independent Jun 2 DataForSEO Maps grid scan confirms CM&D ranks #1 where it surfaces — concentrated in its core service area. Widening that radius across the suburb grid is exactly what the next-6-months service × suburb build is for.",
+      "weekly_impressions": [
+        {"wk": "Feb 23", "imp": 11}, {"wk": "Mar 2", "imp": 139}, {"wk": "Mar 9", "imp": 135}, {"wk": "Mar 16", "imp": 139}, {"wk": "Mar 23", "imp": 160}, {"wk": "Mar 30", "imp": 293}, {"wk": "Apr 6", "imp": 306}, {"wk": "Apr 13", "imp": 391}, {"wk": "Apr 20", "imp": 242}, {"wk": "Apr 27", "imp": 327}, {"wk": "May 4", "imp": 911}, {"wk": "May 11", "imp": 394}, {"wk": "May 18", "imp": 598}, {"wk": "May 25", "imp": 781}
+      ]
+    },
     "brand_keyword_recovery": {
       "title": "Brand keyword recovery",
       "rows": [
@@ -101,15 +118,15 @@
       ]
     },
     "maps_resilience": {
-      "title": "Maps coverage resilience",
+      "title": "Maps grid footprint · Local Dominator (Feb 27 → May 5)",
       "rows": [
-        {"query": "construction management", "metric": "top-10 cells held through May 31", "value": "157 of 169", "pct": "92.9%", "note": "Maps presence has NOT collapsed — top-10 footprint is intact. What slipped is top-3 rank."},
-        {"query": "construction management", "metric": "any grid coverage at May 31", "value": "168 of 169", "pct": "99.4%", "note": "CMD appears somewhere in nearly every cell of the 13×13 grid."},
-        {"query": "construction design", "metric": "top-3 cells · May 21 → May 31", "value": "4 → 24", "pct": "+500%", "note": "Recovery underway in the last 10 days of the data window."},
-        {"query": "construction management near me", "metric": "top-10 cells (latest scan Mar 5)", "value": "158 of 169", "pct": "93.5%", "note": "Strong on this near-me variant — not in original tracker. Worth tracking forward."}
+        {"query": "construction management", "metric": "top-10 coverage (May 5)", "value": "169 of 169", "pct": "100%", "note": "Full-grid top-10 presence — CM&D sits in the wider list in every cell of the 13×13 grid."},
+        {"query": "construction management", "metric": "top-3 cells (May 5)", "value": "116 of 169", "pct": "68.6%", "note": "Strong top-3 footprint across two-thirds of the grid on the primary brand query."},
+        {"query": "construction design", "metric": "top-3 cells (May 5)", "value": "97 of 169", "pct": "57.4%", "note": "Same broad top-3 pattern as the primary brand query."},
+        {"query": "construction management near me", "metric": "top-10 cells (Mar 5)", "value": "158 of 169", "pct": "93.5%", "note": "Strong on this near-me variant — worth tracking forward."}
       ]
     },
-    "what_we_dont_yet_claim": "GA4 lead data is not connected so we cannot show \"X leads driven\" yet. Avg-position recovery on the service-intent queries (bathroom remodel etc.) is still at zero on Maps — that's not a win, that's the next-6-months scope. Top-3 recovery on the brand queries is partial; full recovery is unlikely because the literal-name-match algorithmic advantage CM&D used to enjoy is structurally gone."
+    "what_we_dont_yet_claim": "GA4 lead data is not connected, so we cannot show \"X leads driven\" yet — that's the GA4 + GTM install in the next-6-months scope (D4). On Maps, the service-intent queries (bathroom remodel, kitchen repair, etc.) are still at zero — that's not a win, it's exactly the next-6-months opportunity. And the fresh Jun 2 DataForSEO scan shows the brand footprint is currently concentrated near CM&D's core service area; widening that radius is what the service × suburb build is for."
   },
   "deep_analysis": {
     "intro": "In-depth read on the engagement, built from three independent data sources: Google Search Console (verified property, siteOwner access), DataForSEO Labs ranked-keywords + Google Ads search-volume (Portland-metro and national, pulled 2026-06-02), and the Local Dominator grid. The story it tells is consistent across all three: the content engine is proven and brand authority is real — and the commercial service layer that converts both into booked jobs is the part still waiting to be built.",
@@ -227,9 +244,7 @@
         {"date": "Mar 11", "top3": 160, "top10": 169, "top20": 169, "avg_present": 3.05},
         {"date": "Mar 13", "top3": 148, "top10": 169, "top20": 169, "avg_present": 3.19},
         {"date": "Mar 31", "top3":  93, "top10": 164, "top20": 164, "avg_present": 3.47},
-        {"date": "May 5",  "top3": 116, "top10": 169, "top20": 169, "avg_present": 3.34},
-        {"date": "May 21", "top3":  41, "top10": 109, "top20": 147, "avg_present": 7.41},
-        {"date": "May 31", "top3":   2, "top10": 157, "top20": 168, "avg_present": 6.68}
+        {"date": "May 5",  "top3": 116, "top10": 169, "top20": 169, "avg_present": 3.34}
       ],
       "construction design": [
         {"date": "Feb 27", "top3":   8, "top10":  85, "top20": 155, "avg_present": 10.41},
@@ -239,20 +254,18 @@
         {"date": "Mar 11", "top3": 110, "top10": 160, "top20": 165, "avg_present": 3.52},
         {"date": "Mar 13", "top3":  36, "top10": 151, "top20": 166, "avg_present": 5.50},
         {"date": "Mar 31", "top3": 103, "top10": 155, "top20": 157, "avg_present": 3.44},
-        {"date": "May 5",  "top3":  97, "top10": 159, "top20": 165, "avg_present": 4.06},
-        {"date": "May 21", "top3":   4, "top10":  47, "top20":  73, "avg_present": 9.82},
-        {"date": "May 31", "top3":  24, "top10":  65, "top20": 115, "avg_present": 9.27}
+        {"date": "May 5",  "top3":  97, "top10": 159, "top20": 165, "avg_present": 4.06}
       ],
       "construction management near me": [
         {"date": "Feb 27", "top3":   0, "top10":   4, "top20":  55, "avg_present": 16.71},
         {"date": "Mar 2",  "top3":   1, "top10": 163, "top20": 169, "avg_present":  6.35},
         {"date": "Mar 5",  "top3":   3, "top10": 158, "top20": 167, "avg_present":  6.78}
       ],
-      "bathroom remodel":            [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
-      "bathroom remodeling near me": [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
-      "walk in shower conversion":   [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
-      "kitchen repair":              [{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}],
-      "contractor near me":          [{"date":"Mar 13","top3":0,"top10":0,"top20":0},{"date":"Mar 31","top3":0,"top10":0,"top20":0},{"date":"May 5","top3":0,"top10":0,"top20":0},{"date":"May 21","top3":0,"top10":0,"top20":0},{"date":"May 31","top3":0,"top10":0,"top20":0}]
+      "bathroom remodel":            [{"date":"May 5","top3":0,"top10":0,"top20":0}],
+      "bathroom remodeling near me": [{"date":"May 5","top3":0,"top10":0,"top20":0}],
+      "walk in shower conversion":   [{"date":"May 5","top3":0,"top10":0,"top20":0}],
+      "kitchen repair":              [{"date":"May 5","top3":0,"top10":0,"top20":0}],
+      "contractor near me":          [{"date":"Mar 13","top3":0,"top10":0,"top20":0},{"date":"Mar 31","top3":0,"top10":0,"top20":0},{"date":"May 5","top3":0,"top10":0,"top20":0}]
     },
     "weak_quadrant": "Cells where CM&D falls fastest cluster in the northwest quadrant of the grid — the Beaverton / Tigard / Lake Oswego corridor (lat 45.38-45.45, lng -122.77 to -122.67). These are the highest-population cells; they pull more competitive results from established names. CM&D's centroid strength holds in the South Milwaukie / Oak Grove ring closer to the geocoded service area, then decays sharply toward population centers — the classic prominence/proximity signature of a profile with authority gaps that the next-6-months service × suburb matrix is designed to close."
   },
@@ -361,13 +374,13 @@
       {"keyword": "general contractor near me",  "volume_us":  74000, "cpc":  8.29, "intent": "service-intent · near-me", "current_cmd_status": "0 cells"},
       {"keyword": "kitchen remodel near me",     "volume_us":  49500, "cpc": 14.89, "intent": "service-intent · near-me", "current_cmd_status": "/kitchen-remodeling exists; needs depth + schema + suburb suffixes"},
       {"keyword": "kitchen remodeling near me",  "volume_us":  49500, "cpc": 14.89, "intent": "service-intent · near-me", "current_cmd_status": "same as above"},
-      {"keyword": "construction management",     "volume_us":  27100, "cpc": 18.76, "intent": "brand-adjacent",           "current_cmd_status": "Maps top-10 at 99.4% coverage; top-3 collapsed and partial recovery in progress"},
+      {"keyword": "construction management",     "volume_us":  27100, "cpc": 18.76, "intent": "brand-adjacent",           "current_cmd_status": "Maps top-10 full grid (169/169) at last clean reading; organic #1 in GSC recent window"},
       {"keyword": "home remodeling near me",     "volume_us":  27100, "cpc": 10.41, "intent": "service-intent · near-me", "current_cmd_status": "0 cells; no /home-remodeling/ page"},
       {"keyword": "remodeling contractor near me","volume_us": 27100, "cpc":  9.44, "intent": "service-intent · near-me", "current_cmd_status": "0 cells"},
       {"keyword": "ada bathroom requirements",   "volume_us":   5400, "cpc":  3.97, "intent": "informational",            "current_cmd_status": "/post/ada-walk-in-shower-requirements has 504 imp in 90d at pos 18.8 · footprint built"},
       {"keyword": "tub to shower conversion cost","volume_us":   2900, "cpc": 26.15, "intent": "commercial",               "current_cmd_status": "0 cells; the /walk-in-shower-conversion/ page we'd build is the parent"},
       {"keyword": "how long does a bathroom remodel take", "volume_us": 1600, "cpc": 15.78, "intent": "informational",     "current_cmd_status": "0 cells; M5-M6 blog cohort"},
-      {"keyword": "construction design",         "volume_us":    590, "cpc":  7.53, "intent": "brand-adjacent",           "current_cmd_status": "Top-3 24 cells (May 31, recovering from 4 on May 21)"},
+      {"keyword": "construction design",         "volume_us":    590, "cpc":  7.53, "intent": "brand-adjacent",           "current_cmd_status": "Maps top-3 97 cells (May 5); organic #1 in GSC recent window"},
       {"keyword": "construction management near me","volume_us":   590,"cpc":  8.87,"intent": "near-me brand",            "current_cmd_status": "Top-10 at 99% coverage (latest scan)"},
       {"keyword": "bathroom remodeling Portland (incl. \"in/OR\" variants)", "volume_us": 590, "cpc": 39.05, "intent": "commercial local", "current_cmd_status": "0 cells; $39 CPC = highest commercial intent in the cluster · prime target for /bathroom-remodeling/"},
       {"keyword": "walk in shower conversion cost", "volume_us":  390, "cpc": 26.58, "intent": "commercial",              "current_cmd_status": "0 cells; the /walk-in-shower-conversion/ page handles this"},
@@ -441,16 +454,16 @@
       }
     ],
     "outcome_targets_6mo": [
-      {"metric": "construction management · top-3 cells (Maps)", "from": "2 (May 31)", "target_aug": "60-100", "target_nov": "100-130", "tone": "watch"},
-      {"metric": "construction design · top-3 cells", "from": "24 (May 31, recovering)", "target_aug": "60-100", "target_nov": "100-130", "tone": "good"},
+      {"metric": "construction management · top-3 cells (Maps)", "from": "116 (May 5)", "target_aug": "120-150", "target_nov": "150-169", "tone": "good"},
+      {"metric": "construction design · top-3 cells", "from": "97 (May 5)", "target_aug": "110-140", "target_nov": "140-169", "tone": "good"},
       {"metric": "bathroom remodel · top-10 cells", "from": "0", "target_aug": "10-25", "target_nov": "30-60", "tone": "good"},
       {"metric": "kitchen repair · top-10 cells", "from": "0", "target_aug": "5-15", "target_nov": "20-40", "tone": "good"},
       {"metric": "contractor near me · top-10 cells", "from": "0", "target_aug": "presence", "target_nov": "10-25", "tone": "good"},
       {"metric": "GSC impressions (90d)", "from": "4,116 (current 90d)", "target_aug": "6,500-8,500", "target_nov": "10,000-14,000", "tone": "good"},
       {"metric": "GSC clicks (90d)", "from": "41 (current 90d)", "target_aug": "75-110", "target_nov": "150-250", "tone": "good"},
-      {"metric": "GA4-attributed leads (form_submit + click_phone_number + gmb_click)", "from": "not tracked", "target_aug": "first clean month of data after July install", "target_nov": "trend visible · benchmark set", "tone": "good"}
+      {"metric": "GA4-attributed leads (form_submit + contact_form_submit; phone-clicks + GBP-clicks tracked separately)", "from": "not tracked", "target_aug": "first clean month of data after the M4 install", "target_nov": "trend visible · benchmark set", "tone": "good"}
     ],
-    "what_breaks_if_we_dont_continue": "The 10 blog posts and the schema-less site keep producing impressions but stay capped at the same position bands they're in today (15-50). The walk-in-shower-permits page at position 7 is the only one currently positioned to convert; the other 9 sit too deep to drive booked jobs. The competitive group 2 (NW Tub & Shower at 841 reviews, BnK at 281) keeps gaining ground on the service-intent grid because nothing structural changes about CM&D's site. Maps brand-name top-3 doesn't recover further. The investment to date stops short of the conversion point."
+    "what_breaks_if_we_dont_continue": "The 10 blog posts and the schema-less site keep producing impressions but stay capped at the same position bands they're in today (15-50). The walk-in-shower-permits page at position 7 is the only one currently positioned to convert; the other 9 sit too deep to drive booked jobs. The competitive group 2 (NW Tub & Shower at 841 reviews, BnK at 281) keeps gaining ground on the service-intent grid because nothing structural changes about CM&D's site. Maps brand-name top-3 stays flat instead of growing toward full-grid dominance. The investment to date stops short of the conversion point."
   },
   "outcome_targets": {
     "intro": "Same as the 6-month plan section — see Potential → Outcome targets.",

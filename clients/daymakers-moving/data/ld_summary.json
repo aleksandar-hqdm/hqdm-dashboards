@@ -1,0 +1,2069 @@
+{
+  "generated_for": "Daymakers Moving & Storage",
+  "pulled": "2026-06-02",
+  "pins": {
+    "roseville": {
+      "label": "Roseville, MN",
+      "place_id": "18298583871605603282",
+      "name": "Daymakers Moving & Storage",
+      "address": "2355 MN-36 Suite 400 Office 412, Roseville, MN 55113",
+      "category": "Mover",
+      "site": "https://daymakersmoving.com/roseville-mn-movers/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "rating": 5.0,
+      "reviews": 457.0,
+      "market_rank": 1,
+      "market_size": 113,
+      "agg_top3_last": 883,
+      "agg_top3_first": 719,
+      "agg_avg_last": 3.98,
+      "n_keywords": 8,
+      "n_cells": 169,
+      "dates": [
+        "Mar 5",
+        "Mar 30",
+        "Jun 1"
+      ],
+      "date_keys": [
+        "2026-03-05",
+        "2026-03-30",
+        "2026-06-01"
+      ],
+      "movement": [
+        {
+          "keyword": "movers roseville",
+          "first_avg": 1.01,
+          "last_avg": 1.05,
+          "first_top3": 169,
+          "last_top3": 167,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -2,
+          "d_avg": 0.04,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.01,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.01,
+              "top3": 160,
+              "reach": 160
+            },
+            {
+              "date": "Jun 1",
+              "avg": 1.05,
+              "top3": 167,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers roseville",
+          "first_avg": 1.03,
+          "last_avg": 1.07,
+          "first_top3": 169,
+          "last_top3": 166,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -3,
+          "d_avg": 0.04,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.03,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.01,
+              "top3": 162,
+              "reach": 162
+            },
+            {
+              "date": "Jun 1",
+              "avg": 1.07,
+              "top3": 166,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "long distance movers roseville",
+          "first_avg": 6.04,
+          "last_avg": 2.24,
+          "first_top3": 25,
+          "last_top3": 166,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 141,
+          "d_avg": -3.8,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 6.04,
+              "top3": 25,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 2.48,
+              "top3": 160,
+              "reach": 166
+            },
+            {
+              "date": "Jun 1",
+              "avg": 2.24,
+              "top3": 166,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving services roseville",
+          "first_avg": 1.01,
+          "last_avg": 1.08,
+          "first_top3": 169,
+          "last_top3": 166,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -3,
+          "d_avg": 0.07,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.01,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.0,
+              "top3": 164,
+              "reach": 164
+            },
+            {
+              "date": "Jun 1",
+              "avg": 1.08,
+              "top3": 166,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving company roseville",
+          "first_avg": 1.0,
+          "last_avg": 1.1,
+          "first_top3": 169,
+          "last_top3": 164,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -5,
+          "d_avg": 0.1,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.0,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.0,
+              "top3": 162,
+              "reach": 162
+            },
+            {
+              "date": "Jun 1",
+              "avg": 1.1,
+              "top3": 164,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers",
+          "first_avg": 10.05,
+          "last_avg": 8.3,
+          "first_top3": 11,
+          "last_top3": 28,
+          "first_reach": 165,
+          "last_reach": 166,
+          "d_top3": 17,
+          "d_avg": -1.75,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 10.05,
+              "top3": 11,
+              "reach": 165
+            },
+            {
+              "date": "Mar 30",
+              "avg": 11.82,
+              "top3": 5,
+              "reach": 141
+            },
+            {
+              "date": "Jun 1",
+              "avg": 8.3,
+              "top3": 28,
+              "reach": 166
+            }
+          ]
+        },
+        {
+          "keyword": "moving company",
+          "first_avg": 9.91,
+          "last_avg": 7.56,
+          "first_top3": 6,
+          "last_top3": 18,
+          "first_reach": 160,
+          "last_reach": 169,
+          "d_top3": 12,
+          "d_avg": -2.35,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 9.91,
+              "top3": 6,
+              "reach": 160
+            },
+            {
+              "date": "Mar 30",
+              "avg": 11.88,
+              "top3": 1,
+              "reach": 101
+            },
+            {
+              "date": "Jun 1",
+              "avg": 7.56,
+              "top3": 18,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "long distance movers near me",
+          "first_avg": 11.28,
+          "last_avg": 9.86,
+          "first_top3": 1,
+          "last_top3": 8,
+          "first_reach": 134,
+          "last_reach": 160,
+          "d_top3": 7,
+          "d_avg": -1.42,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 11.28,
+              "top3": 1,
+              "reach": 134
+            },
+            {
+              "date": "Mar 30",
+              "avg": 12.97,
+              "top3": 1,
+              "reach": 93
+            },
+            {
+              "date": "Jun 1",
+              "avg": 9.86,
+              "top3": 8,
+              "reach": 160
+            }
+          ]
+        }
+      ],
+      "leaderboard": [
+        {
+          "name": "Daymakers Moving and Storage",
+          "avg": 3.98,
+          "top3": 883,
+          "reach": 1340,
+          "rating": 5.0,
+          "reviews": 457,
+          "d_top3": 164,
+          "is_client": true
+        },
+        {
+          "name": "Allied Van Lines",
+          "avg": 4.3,
+          "top3": 734,
+          "reach": 1072,
+          "rating": 4.8,
+          "reviews": 176,
+          "d_top3": 256,
+          "is_client": false
+        },
+        {
+          "name": "Two Men and a Truck Moving",
+          "avg": 5.44,
+          "top3": 624,
+          "reach": 1337,
+          "rating": 4.9,
+          "reviews": 894,
+          "d_top3": 210,
+          "is_client": false
+        },
+        {
+          "name": "Matt's Moving Company",
+          "avg": 9.32,
+          "top3": 313,
+          "reach": 1133,
+          "rating": 4.8,
+          "reviews": 961,
+          "d_top3": -119,
+          "is_client": false
+        },
+        {
+          "name": "The Move Crew - Minneapolis Movers",
+          "avg": 9.52,
+          "top3": 195,
+          "reach": 1340,
+          "rating": 4.9,
+          "reviews": 511,
+          "d_top3": 71,
+          "is_client": false
+        },
+        {
+          "name": "Beltmann Moving and Storage",
+          "avg": 6.82,
+          "top3": 183,
+          "reach": 733,
+          "rating": null,
+          "reviews": null,
+          "d_top3": 178,
+          "is_client": false
+        },
+        {
+          "name": "Good Stuff Moving - Saint Paul",
+          "avg": 8.36,
+          "top3": 167,
+          "reach": 1267,
+          "rating": 4.8,
+          "reviews": 1800,
+          "d_top3": 56,
+          "is_client": false
+        },
+        {
+          "name": "Matt's Moving Company",
+          "avg": 10.27,
+          "top3": 144,
+          "reach": 985,
+          "rating": 4.8,
+          "reviews": 918,
+          "d_top3": 50,
+          "is_client": false
+        },
+        {
+          "name": "Pacific Moving Services",
+          "avg": 9.45,
+          "top3": 110,
+          "reach": 788,
+          "rating": null,
+          "reviews": null,
+          "d_top3": -30,
+          "is_client": false
+        },
+        {
+          "name": "Ross Moving",
+          "avg": 10.67,
+          "top3": 77,
+          "reach": 344,
+          "rating": 5.0,
+          "reviews": 296,
+          "d_top3": 29,
+          "is_client": false
+        },
+        {
+          "name": "City Moving And Storage",
+          "avg": 8.98,
+          "top3": 64,
+          "reach": 1065,
+          "rating": 4.8,
+          "reviews": 651,
+          "d_top3": -44,
+          "is_client": false
+        },
+        {
+          "name": "College Hunks Hauling Junk and Moving Shoreview",
+          "avg": 8.44,
+          "top3": 59,
+          "reach": 1150,
+          "rating": 4.9,
+          "reviews": 2200,
+          "d_top3": -705,
+          "is_client": false
+        }
+      ],
+      "velocity": [
+        {
+          "date": "Mar 5",
+          "rating": 5.0,
+          "reviews": 415
+        },
+        {
+          "date": "Mar 30",
+          "rating": 5.0,
+          "reviews": 427
+        },
+        {
+          "date": "Jun 1",
+          "rating": 5.0,
+          "reviews": 457
+        }
+      ]
+    },
+    "lake_elmo": {
+      "label": "Lake Elmo, MN",
+      "place_id": "1676612658646126109",
+      "name": "Daymakers Moving and Storage",
+      "address": "8530 Eagle Point Blvd Suite 100 132, Lake Elmo, MN 55042",
+      "category": "Mover",
+      "site": "https://daymakersmoving.com/lake-elmo-mn-movers/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "rating": 5.0,
+      "reviews": 422.0,
+      "market_rank": 2,
+      "market_size": 183,
+      "agg_top3_last": 1058,
+      "agg_top3_first": 869,
+      "agg_avg_last": 3.66,
+      "n_keywords": 10,
+      "n_cells": 169,
+      "dates": [
+        "Mar 5",
+        "Mar 30",
+        "May 29"
+      ],
+      "date_keys": [
+        "2026-03-05",
+        "2026-03-30",
+        "2026-05-29"
+      ],
+      "movement": [
+        {
+          "keyword": "movers lake elmo",
+          "first_avg": 3.24,
+          "last_avg": 1.15,
+          "first_top3": 107,
+          "last_top3": 164,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 57,
+          "d_avg": -2.09,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 3.24,
+              "top3": 107,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 2.2,
+              "top3": 152,
+              "reach": 161
+            },
+            {
+              "date": "May 29",
+              "avg": 1.15,
+              "top3": 164,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving services lake elmo",
+          "first_avg": 3.05,
+          "last_avg": 1.43,
+          "first_top3": 134,
+          "last_top3": 161,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 27,
+          "d_avg": -1.62,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 3.05,
+              "top3": 134,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 2.07,
+              "top3": 161,
+              "reach": 162
+            },
+            {
+              "date": "May 29",
+              "avg": 1.43,
+              "top3": 161,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving company lake elmo",
+          "first_avg": 2.82,
+          "last_avg": 1.3,
+          "first_top3": 153,
+          "last_top3": 158,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 5,
+          "d_avg": -1.52,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 2.82,
+              "top3": 153,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 2.06,
+              "top3": 163,
+              "reach": 167
+            },
+            {
+              "date": "May 29",
+              "avg": 1.3,
+              "top3": 158,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers lake elmo",
+          "first_avg": 1.18,
+          "last_avg": 1.35,
+          "first_top3": 169,
+          "last_top3": 153,
+          "first_reach": 169,
+          "last_reach": 168,
+          "d_top3": -16,
+          "d_avg": 0.17,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.18,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.23,
+              "top3": 163,
+              "reach": 163
+            },
+            {
+              "date": "May 29",
+              "avg": 1.35,
+              "top3": 153,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "local movers near me",
+          "first_avg": 4.96,
+          "last_avg": 4.03,
+          "first_top3": 87,
+          "last_top3": 98,
+          "first_reach": 192,
+          "last_reach": 169,
+          "d_top3": 11,
+          "d_avg": -0.93,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 4.96,
+              "top3": 87,
+              "reach": 192
+            },
+            {
+              "date": "Mar 30",
+              "avg": 5.58,
+              "top3": 63,
+              "reach": 161
+            },
+            {
+              "date": "May 29",
+              "avg": 4.03,
+              "top3": 98,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "movers near me",
+          "first_avg": 6.44,
+          "last_avg": 4.82,
+          "first_top3": 74,
+          "last_top3": 93,
+          "first_reach": 219,
+          "last_reach": 168,
+          "d_top3": 19,
+          "d_avg": -1.62,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 6.44,
+              "top3": 74,
+              "reach": 219
+            },
+            {
+              "date": "Mar 30",
+              "avg": 5.36,
+              "top3": 55,
+              "reach": 146
+            },
+            {
+              "date": "May 29",
+              "avg": 4.82,
+              "top3": 93,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "moving company",
+          "first_avg": 4.92,
+          "last_avg": 4.41,
+          "first_top3": 63,
+          "last_top3": 86,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 23,
+          "d_avg": -0.51,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 4.92,
+              "top3": 63,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 5.74,
+              "top3": 18,
+              "reach": 161
+            },
+            {
+              "date": "May 29",
+              "avg": 4.41,
+              "top3": 86,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "movers",
+          "first_avg": 5.52,
+          "last_avg": 4.65,
+          "first_top3": 47,
+          "last_top3": 81,
+          "first_reach": 168,
+          "last_reach": 168,
+          "d_top3": 34,
+          "d_avg": -0.87,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 5.52,
+              "top3": 47,
+              "reach": 168
+            },
+            {
+              "date": "Mar 30",
+              "avg": 6.18,
+              "top3": 8,
+              "reach": 151
+            },
+            {
+              "date": "May 29",
+              "avg": 4.65,
+              "top3": 81,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "moving services",
+          "first_avg": 5.16,
+          "last_avg": 4.01,
+          "first_top3": 19,
+          "last_top3": 64,
+          "first_reach": 169,
+          "last_reach": 98,
+          "d_top3": 45,
+          "d_avg": -1.15,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 5.16,
+              "top3": 19,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 6.25,
+              "top3": 7,
+              "reach": 159
+            },
+            {
+              "date": "May 29",
+              "avg": 4.01,
+              "top3": 64,
+              "reach": 98
+            }
+          ]
+        },
+        {
+          "keyword": "long distance movers",
+          "first_avg": 7.93,
+          "last_avg": 10.85,
+          "first_top3": 16,
+          "last_top3": 0,
+          "first_reach": 142,
+          "last_reach": 140,
+          "d_top3": -16,
+          "d_avg": 2.92,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 7.93,
+              "top3": 16,
+              "reach": 142
+            },
+            {
+              "date": "Mar 30",
+              "avg": 9.09,
+              "top3": 2,
+              "reach": 116
+            },
+            {
+              "date": "May 29",
+              "avg": 10.85,
+              "top3": 0,
+              "reach": 140
+            }
+          ]
+        }
+      ],
+      "leaderboard": [
+        {
+          "name": "Two Men and a Truck Moving",
+          "avg": 2.59,
+          "top3": 1282,
+          "reach": 1613,
+          "rating": 4.8,
+          "reviews": 670,
+          "d_top3": 53,
+          "is_client": false
+        },
+        {
+          "name": "Daymakers Moving and Storage",
+          "avg": 3.66,
+          "top3": 1058,
+          "reach": 1587,
+          "rating": 5.0,
+          "reviews": 422,
+          "d_top3": 189,
+          "is_client": true
+        },
+        {
+          "name": "Premium Moving Services",
+          "avg": 5.18,
+          "top3": 618,
+          "reach": 1610,
+          "rating": 4.5,
+          "reviews": 222,
+          "d_top3": -308,
+          "is_client": false
+        },
+        {
+          "name": "Matt's Moving Company",
+          "avg": 4.75,
+          "top3": 617,
+          "reach": 1597,
+          "rating": 4.8,
+          "reviews": 913,
+          "d_top3": -311,
+          "is_client": false
+        },
+        {
+          "name": "Good Stuff Moving - Saint Paul",
+          "avg": 4.87,
+          "top3": 320,
+          "reach": 1612,
+          "rating": 4.8,
+          "reviews": 1800,
+          "d_top3": 93,
+          "is_client": false
+        },
+        {
+          "name": "Revival Moving",
+          "avg": 9.64,
+          "top3": 162,
+          "reach": 1202,
+          "rating": 4.9,
+          "reviews": 110,
+          "d_top3": 162,
+          "is_client": false
+        },
+        {
+          "name": "Affinity Moving",
+          "avg": 1.17,
+          "top3": 161,
+          "reach": 161,
+          "rating": 4.8,
+          "reviews": 352,
+          "d_top3": 158,
+          "is_client": false
+        },
+        {
+          "name": "Quality Moving & Storage",
+          "avg": 9.22,
+          "top3": 153,
+          "reach": 1550,
+          "rating": 4.9,
+          "reviews": 245,
+          "d_top3": 3,
+          "is_client": false
+        },
+        {
+          "name": "Ross Moving",
+          "avg": 2.01,
+          "top3": 84,
+          "reach": 84,
+          "rating": 5.0,
+          "reviews": 295,
+          "d_top3": 81,
+          "is_client": false
+        },
+        {
+          "name": "EZ Breezy Movers",
+          "avg": 7.87,
+          "top3": 80,
+          "reach": 1297,
+          "rating": 5.0,
+          "reviews": 100,
+          "d_top3": -142,
+          "is_client": false
+        },
+        {
+          "name": "Higher Ground Moving",
+          "avg": 1.58,
+          "top3": 72,
+          "reach": 72,
+          "rating": 5.0,
+          "reviews": 800,
+          "d_top3": 72,
+          "is_client": false
+        },
+        {
+          "name": "Packhorse Moving",
+          "avg": 2.24,
+          "top3": 48,
+          "reach": 49,
+          "rating": 4.8,
+          "reviews": 674,
+          "d_top3": 48,
+          "is_client": false
+        }
+      ],
+      "velocity": [
+        {
+          "date": "Mar 5",
+          "rating": 5.0,
+          "reviews": 392
+        },
+        {
+          "date": "Mar 30",
+          "rating": 5.0,
+          "reviews": 411
+        },
+        {
+          "date": "May 29",
+          "rating": 5.0,
+          "reviews": 422
+        }
+      ]
+    },
+    "hudson": {
+      "label": "Hudson, WI",
+      "place_id": "646569209791984179",
+      "name": "Daymakers Moving & Storage",
+      "address": "588 Schommer Dr, Hudson, WI 54016",
+      "category": "Mover",
+      "site": "https://daymakersmoving.com/hudson-wi-movers/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_term=hudson",
+      "rating": 4.9,
+      "reviews": 635.0,
+      "market_rank": 1,
+      "market_size": 171,
+      "agg_top3_last": 1393,
+      "agg_top3_first": 1354,
+      "agg_avg_last": 1.61,
+      "n_keywords": 9,
+      "n_cells": 169,
+      "dates": [
+        "Mar 5",
+        "Mar 29",
+        "Apr 7",
+        "May 29"
+      ],
+      "date_keys": [
+        "2026-03-05",
+        "2026-03-29",
+        "2026-04-07",
+        "2026-05-29"
+      ],
+      "movement": [
+        {
+          "keyword": "moving company hudson",
+          "first_avg": 1.01,
+          "last_avg": 1.14,
+          "first_top3": 169,
+          "last_top3": 168,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -1,
+          "d_avg": 0.13,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.01,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 29",
+              "avg": 1.01,
+              "top3": 162,
+              "reach": 162
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.09,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.14,
+              "top3": 168,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving services hudson",
+          "first_avg": 1.02,
+          "last_avg": 1.16,
+          "first_top3": 169,
+          "last_top3": 166,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -3,
+          "d_avg": 0.14,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.02,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.02,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.16,
+              "top3": 166,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers hudson",
+          "first_avg": 1.05,
+          "last_avg": 1.22,
+          "first_top3": 169,
+          "last_top3": 165,
+          "first_reach": 169,
+          "last_reach": 168,
+          "d_top3": -4,
+          "d_avg": 0.17,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.05,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.08,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.22,
+              "top3": 165,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "local movers",
+          "first_avg": 1.81,
+          "last_avg": 1.64,
+          "first_top3": 152,
+          "last_top3": 157,
+          "first_reach": 169,
+          "last_reach": 168,
+          "d_top3": 5,
+          "d_avg": -0.17,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.81,
+              "top3": 152,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.73,
+              "top3": 157,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.64,
+              "top3": 157,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "moving company near me",
+          "first_avg": 1.83,
+          "last_avg": 1.62,
+          "first_top3": 145,
+          "last_top3": 154,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 9,
+          "d_avg": -0.21,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.83,
+              "top3": 145,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.78,
+              "top3": 152,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.62,
+              "top3": 154,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers near me",
+          "first_avg": 2.17,
+          "last_avg": 1.88,
+          "first_top3": 139,
+          "last_top3": 150,
+          "first_reach": 169,
+          "last_reach": 167,
+          "d_top3": 11,
+          "d_avg": -0.29,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 2.17,
+              "top3": 139,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.91,
+              "top3": 150,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.88,
+              "top3": 150,
+              "reach": 167
+            }
+          ]
+        },
+        {
+          "keyword": "moving company",
+          "first_avg": 2.14,
+          "last_avg": 1.53,
+          "first_top3": 142,
+          "last_top3": 150,
+          "first_reach": 169,
+          "last_reach": 167,
+          "d_top3": 8,
+          "d_avg": -0.61,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 2.14,
+              "top3": 142,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.88,
+              "top3": 142,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.53,
+              "top3": 150,
+              "reach": 167
+            }
+          ]
+        },
+        {
+          "keyword": "movers near me",
+          "first_avg": 1.99,
+          "last_avg": 1.93,
+          "first_top3": 145,
+          "last_top3": 148,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 3,
+          "d_avg": -0.06,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.99,
+              "top3": 145,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 1.83,
+              "top3": 152,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 1.93,
+              "top3": 148,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving services",
+          "first_avg": 2.47,
+          "last_avg": 2.39,
+          "first_top3": 124,
+          "last_top3": 135,
+          "first_reach": 169,
+          "last_reach": 165,
+          "d_top3": 11,
+          "d_avg": -0.08,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 2.47,
+              "top3": 124,
+              "reach": 169
+            },
+            {
+              "date": "Apr 7",
+              "avg": 2.27,
+              "top3": 141,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 2.39,
+              "top3": 135,
+              "reach": 165
+            }
+          ]
+        }
+      ],
+      "leaderboard": [
+        {
+          "name": "Daymakers Moving and Storage",
+          "avg": 1.61,
+          "top3": 1393,
+          "reach": 1511,
+          "rating": 4.9,
+          "reviews": 635,
+          "d_top3": 39,
+          "is_client": true
+        },
+        {
+          "name": "Quality Moving & Storage",
+          "avg": 4.09,
+          "top3": 788,
+          "reach": 1511,
+          "rating": 4.6,
+          "reviews": 74,
+          "d_top3": 128,
+          "is_client": false
+        },
+        {
+          "name": "Win-Win Moving Solutions",
+          "avg": 5.0,
+          "top3": 598,
+          "reach": 1507,
+          "rating": 5.0,
+          "reviews": 139,
+          "d_top3": 28,
+          "is_client": false
+        },
+        {
+          "name": "Two Men and a Truck Moving",
+          "avg": 4.44,
+          "top3": 533,
+          "reach": 1512,
+          "rating": 4.8,
+          "reviews": 670,
+          "d_top3": 42,
+          "is_client": false
+        },
+        {
+          "name": "St Croix Movers",
+          "avg": 7.65,
+          "top3": 353,
+          "reach": 1321,
+          "rating": 5.0,
+          "reviews": 90,
+          "d_top3": 30,
+          "is_client": false
+        },
+        {
+          "name": "The Moving Guys",
+          "avg": 8.32,
+          "top3": 199,
+          "reach": 1323,
+          "rating": 5.0,
+          "reviews": 1,
+          "d_top3": 2,
+          "is_client": false
+        },
+        {
+          "name": "Revival Moving",
+          "avg": 7.62,
+          "top3": 180,
+          "reach": 1511,
+          "rating": 4.9,
+          "reviews": 110,
+          "d_top3": 180,
+          "is_client": false
+        },
+        {
+          "name": "Premium Moving Services",
+          "avg": 8.03,
+          "top3": 139,
+          "reach": 1418,
+          "rating": 5.0,
+          "reviews": 7,
+          "d_top3": -135,
+          "is_client": false
+        },
+        {
+          "name": "Ross Moving",
+          "avg": 1.49,
+          "top3": 84,
+          "reach": 84,
+          "rating": 5.0,
+          "reviews": 295,
+          "d_top3": 83,
+          "is_client": false
+        },
+        {
+          "name": "Win-Win Moving Solutions",
+          "avg": 12.01,
+          "top3": 53,
+          "reach": 758,
+          "rating": 5.0,
+          "reviews": 5,
+          "d_top3": 53,
+          "is_client": false
+        },
+        {
+          "name": "Matt's Moving Company",
+          "avg": 9.01,
+          "top3": 43,
+          "reach": 1174,
+          "rating": 4.8,
+          "reviews": 913,
+          "d_top3": -280,
+          "is_client": false
+        },
+        {
+          "name": "College Hunks Hauling Junk and Moving Shoreview",
+          "avg": 16.08,
+          "top3": 17,
+          "reach": 142,
+          "rating": 4.9,
+          "reviews": 2200,
+          "d_top3": 11,
+          "is_client": false
+        }
+      ],
+      "velocity": [
+        {
+          "date": "Mar 5",
+          "rating": 4.9,
+          "reviews": 588
+        },
+        {
+          "date": "Mar 29",
+          "rating": 4.9,
+          "reviews": 588
+        },
+        {
+          "date": "Apr 7",
+          "rating": 4.9,
+          "reviews": 601
+        },
+        {
+          "date": "May 29",
+          "rating": 4.9,
+          "reviews": 635
+        }
+      ]
+    },
+    "bloomington": {
+      "label": "Bloomington, MN",
+      "place_id": "14232891601875205660",
+      "name": "Daymakers Moving & Storage",
+      "address": "8400 Normandale Lake Blvd 920, Bloomington, MN 55437",
+      "category": "Mover",
+      "site": "https://daymakersmoving.com/bloomington-mn-movers/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+      "rating": 5.0,
+      "reviews": 729.0,
+      "market_rank": 1,
+      "market_size": 110,
+      "agg_top3_last": 688,
+      "agg_top3_first": 802,
+      "agg_avg_last": 2.31,
+      "n_keywords": 6,
+      "n_cells": 169,
+      "dates": [
+        "Mar 5",
+        "Mar 30",
+        "May 29"
+      ],
+      "date_keys": [
+        "2026-03-05",
+        "2026-03-30",
+        "2026-05-29"
+      ],
+      "movement": [
+        {
+          "keyword": "local movers bloomington",
+          "first_avg": 1.22,
+          "last_avg": 1.22,
+          "first_top3": 168,
+          "last_top3": 160,
+          "first_reach": 169,
+          "last_reach": 168,
+          "d_top3": -8,
+          "d_avg": 0.0,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.22,
+              "top3": 168,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.31,
+              "top3": 166,
+              "reach": 166
+            },
+            {
+              "date": "May 29",
+              "avg": 1.22,
+              "top3": 160,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "moving company bloomington",
+          "first_avg": 1.2,
+          "last_avg": 1.25,
+          "first_top3": 168,
+          "last_top3": 160,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -8,
+          "d_avg": 0.05,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.2,
+              "top3": 168,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.49,
+              "top3": 162,
+              "reach": 162
+            },
+            {
+              "date": "May 29",
+              "avg": 1.25,
+              "top3": 160,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "movers bloomington",
+          "first_avg": 1.18,
+          "last_avg": 1.67,
+          "first_top3": 169,
+          "last_top3": 154,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": -15,
+          "d_avg": 0.49,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.18,
+              "top3": 169,
+              "reach": 169
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.35,
+              "top3": 165,
+              "reach": 165
+            },
+            {
+              "date": "May 29",
+              "avg": 1.67,
+              "top3": 154,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "long distance movers bloomington",
+          "first_avg": 1.51,
+          "last_avg": 1.78,
+          "first_top3": 161,
+          "last_top3": 148,
+          "first_reach": 171,
+          "last_reach": 167,
+          "d_top3": -13,
+          "d_avg": 0.27,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 1.51,
+              "top3": 161,
+              "reach": 171
+            },
+            {
+              "date": "Mar 30",
+              "avg": 1.9,
+              "top3": 131,
+              "reach": 162
+            },
+            {
+              "date": "May 29",
+              "avg": 1.78,
+              "top3": 148,
+              "reach": 167
+            }
+          ]
+        },
+        {
+          "keyword": "movers near me",
+          "first_avg": 6.34,
+          "last_avg": 5.95,
+          "first_top3": 71,
+          "last_top3": 66,
+          "first_reach": 164,
+          "last_reach": 154,
+          "d_top3": -5,
+          "d_avg": -0.39,
+          "series": [
+            {
+              "date": "Mar 5",
+              "avg": 6.34,
+              "top3": 71,
+              "reach": 164
+            },
+            {
+              "date": "Mar 30",
+              "avg": 7.54,
+              "top3": 57,
+              "reach": 233
+            },
+            {
+              "date": "May 29",
+              "avg": 5.95,
+              "top3": 66,
+              "reach": 154
+            }
+          ]
+        }
+      ],
+      "leaderboard": [
+        {
+          "name": "Daymakers Moving and Storage",
+          "avg": 2.31,
+          "top3": 688,
+          "reach": 827,
+          "rating": 5.0,
+          "reviews": 729,
+          "d_top3": -114,
+          "is_client": true
+        },
+        {
+          "name": "Minute Men Movers",
+          "avg": 4.19,
+          "top3": 493,
+          "reach": 774,
+          "rating": 4.4,
+          "reviews": 104,
+          "d_top3": -30,
+          "is_client": false
+        },
+        {
+          "name": "Midwest Moving Company",
+          "avg": 6.33,
+          "top3": 302,
+          "reach": 676,
+          "rating": 4.8,
+          "reviews": 19,
+          "d_top3": 118,
+          "is_client": false
+        },
+        {
+          "name": "Two Men and a Truck Moving and Storage",
+          "avg": 5.83,
+          "top3": 179,
+          "reach": 538,
+          "rating": 4.9,
+          "reviews": 1000,
+          "d_top3": 100,
+          "is_client": false
+        },
+        {
+          "name": "A Better Way Moving and Storage",
+          "avg": 8.59,
+          "top3": 154,
+          "reach": 501,
+          "rating": 4.9,
+          "reviews": 454,
+          "d_top3": -14,
+          "is_client": false
+        },
+        {
+          "name": "Minne Movers",
+          "avg": 7.33,
+          "top3": 114,
+          "reach": 492,
+          "rating": 5.0,
+          "reviews": 200,
+          "d_top3": 9,
+          "is_client": false
+        },
+        {
+          "name": "College Hunks Hauling Junk and Moving Eden Prairie",
+          "avg": 10.05,
+          "top3": 89,
+          "reach": 625,
+          "rating": 5.0,
+          "reviews": 1200,
+          "d_top3": 8,
+          "is_client": false
+        },
+        {
+          "name": "Affinity Moving",
+          "avg": 1.24,
+          "top3": 67,
+          "reach": 67,
+          "rating": 4.8,
+          "reviews": 352,
+          "d_top3": 65,
+          "is_client": false
+        },
+        {
+          "name": "5-Star Movers",
+          "avg": 8.96,
+          "top3": 53,
+          "reach": 305,
+          "rating": 5.0,
+          "reviews": 2600,
+          "d_top3": -11,
+          "is_client": false
+        },
+        {
+          "name": "Rose's Daughters",
+          "avg": 6.95,
+          "top3": 44,
+          "reach": 626,
+          "rating": 4.6,
+          "reviews": 56,
+          "d_top3": -104,
+          "is_client": false
+        },
+        {
+          "name": "Matt's Moving",
+          "avg": 10.4,
+          "top3": 42,
+          "reach": 184,
+          "rating": 4.9,
+          "reviews": 292,
+          "d_top3": -31,
+          "is_client": false
+        },
+        {
+          "name": "AAA Movers Inc. of Minneapolis",
+          "avg": 10.75,
+          "top3": 37,
+          "reach": 357,
+          "rating": 4.9,
+          "reviews": 1400,
+          "d_top3": -88,
+          "is_client": false
+        }
+      ],
+      "velocity": [
+        {
+          "date": "Mar 5",
+          "rating": 5.0,
+          "reviews": 725
+        },
+        {
+          "date": "Mar 30",
+          "rating": 5.0,
+          "reviews": 724
+        },
+        {
+          "date": "May 29",
+          "rating": 5.0,
+          "reviews": 729
+        }
+      ]
+    },
+    "eau_claire": {
+      "label": "Eau Claire, WI",
+      "place_id": "14180333548071754114",
+      "name": "Daymakers Moving & Storage",
+      "address": "6445 Scully Dr Suite 4, Eau Claire, WI 54701",
+      "category": "Mover",
+      "site": "https://www.daymakersmoving.com/",
+      "rating": 5.0,
+      "reviews": 22.0,
+      "market_rank": 6,
+      "market_size": 103,
+      "agg_top3_last": 158,
+      "agg_top3_first": 16,
+      "agg_avg_last": 5.31,
+      "n_keywords": 9,
+      "n_cells": 169,
+      "dates": [
+        "May 12",
+        "May 29"
+      ],
+      "date_keys": [
+        "2026-05-12",
+        "2026-05-29"
+      ],
+      "movement": [
+        {
+          "keyword": "local movers near me",
+          "first_avg": 6.19,
+          "last_avg": 4.12,
+          "first_top3": 11,
+          "last_top3": 77,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 66,
+          "d_avg": -2.07,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.19,
+              "top3": 11,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 4.12,
+              "top3": 77,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving services eau claire",
+          "first_avg": 6.56,
+          "last_avg": 4.2,
+          "first_top3": 0,
+          "last_top3": 57,
+          "first_reach": 73,
+          "last_reach": 169,
+          "d_top3": 57,
+          "d_avg": -2.36,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.56,
+              "top3": 0,
+              "reach": 73
+            },
+            {
+              "date": "May 29",
+              "avg": 4.2,
+              "top3": 57,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "movers eau claire",
+          "first_avg": 6.76,
+          "last_avg": 5.31,
+          "first_top3": 0,
+          "last_top3": 10,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 10,
+          "d_avg": -1.45,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.76,
+              "top3": 0,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 5.31,
+              "top3": 10,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "local movers",
+          "first_avg": 6.58,
+          "last_avg": 5.77,
+          "first_top3": 1,
+          "last_top3": 6,
+          "first_reach": 154,
+          "last_reach": 153,
+          "d_top3": 5,
+          "d_avg": -0.81,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.58,
+              "top3": 1,
+              "reach": 154
+            },
+            {
+              "date": "May 29",
+              "avg": 5.77,
+              "top3": 6,
+              "reach": 153
+            }
+          ]
+        },
+        {
+          "keyword": "moving services",
+          "first_avg": 6.41,
+          "last_avg": 5.27,
+          "first_top3": 3,
+          "last_top3": 4,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 1,
+          "d_avg": -1.14,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.41,
+              "top3": 3,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 5.27,
+              "top3": 4,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving company near me",
+          "first_avg": 6.93,
+          "last_avg": 6.12,
+          "first_top3": 1,
+          "last_top3": 2,
+          "first_reach": 168,
+          "last_reach": 168,
+          "d_top3": 1,
+          "d_avg": -0.81,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 6.93,
+              "top3": 1,
+              "reach": 168
+            },
+            {
+              "date": "May 29",
+              "avg": 6.12,
+              "top3": 2,
+              "reach": 168
+            }
+          ]
+        },
+        {
+          "keyword": "local movers eau claire",
+          "first_avg": 7.1,
+          "last_avg": 5.28,
+          "first_top3": 0,
+          "last_top3": 1,
+          "first_reach": 167,
+          "last_reach": 169,
+          "d_top3": 1,
+          "d_avg": -1.82,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 7.1,
+              "top3": 0,
+              "reach": 167
+            },
+            {
+              "date": "May 29",
+              "avg": 5.28,
+              "top3": 1,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "moving company",
+          "first_avg": 7.39,
+          "last_avg": 6.43,
+          "first_top3": 0,
+          "last_top3": 1,
+          "first_reach": 169,
+          "last_reach": 169,
+          "d_top3": 1,
+          "d_avg": -0.96,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": 7.39,
+              "top3": 0,
+              "reach": 169
+            },
+            {
+              "date": "May 29",
+              "avg": 6.43,
+              "top3": 1,
+              "reach": 169
+            }
+          ]
+        },
+        {
+          "keyword": "long distance movers",
+          "first_avg": null,
+          "last_avg": 5.3,
+          "first_top3": null,
+          "last_top3": 0,
+          "first_reach": null,
+          "last_reach": 150,
+          "d_top3": null,
+          "d_avg": null,
+          "series": [
+            {
+              "date": "May 12",
+              "avg": null,
+              "top3": null,
+              "reach": null
+            },
+            {
+              "date": "May 29",
+              "avg": 5.3,
+              "top3": 0,
+              "reach": 150
+            }
+          ]
+        }
+      ],
+      "leaderboard": [
+        {
+          "name": "Dan the Moving Man",
+          "avg": 2.35,
+          "top3": 1353,
+          "reach": 1518,
+          "rating": 4.8,
+          "reviews": 873,
+          "d_top3": 302,
+          "is_client": false
+        },
+        {
+          "name": "Elite Movers",
+          "avg": 1.6,
+          "top3": 1280,
+          "reach": 1513,
+          "rating": 5.0,
+          "reviews": 1200,
+          "d_top3": -62,
+          "is_client": false
+        },
+        {
+          "name": "Two Men and a Truck Moving",
+          "avg": 3.48,
+          "top3": 867,
+          "reach": 1518,
+          "rating": 4.8,
+          "reviews": 96,
+          "d_top3": -29,
+          "is_client": false
+        },
+        {
+          "name": "Next Step Moving Eau Claire",
+          "avg": 3.89,
+          "top3": 592,
+          "reach": 1518,
+          "rating": 5.0,
+          "reviews": 83,
+          "d_top3": -190,
+          "is_client": false
+        },
+        {
+          "name": "Anderson Moving",
+          "avg": 5.03,
+          "top3": 182,
+          "reach": 1493,
+          "rating": 5.0,
+          "reviews": 55,
+          "d_top3": -277,
+          "is_client": false
+        },
+        {
+          "name": "Daymakers Moving & Storage",
+          "avg": 5.31,
+          "top3": 158,
+          "reach": 1485,
+          "rating": 5.0,
+          "reviews": 22,
+          "d_top3": 142,
+          "is_client": true
+        },
+        {
+          "name": "Anderson Moving",
+          "avg": 11.31,
+          "top3": 109,
+          "reach": 1333,
+          "rating": 4.9,
+          "reviews": 69,
+          "d_top3": 101,
+          "is_client": false
+        },
+        {
+          "name": "U-Pack",
+          "avg": 13.9,
+          "top3": 5,
+          "reach": 1311,
+          "rating": 4.9,
+          "reviews": 10,
+          "d_top3": 5,
+          "is_client": false
+        },
+        {
+          "name": "Two Men and a Truck Moving",
+          "avg": 1.0,
+          "top3": 1,
+          "reach": 1,
+          "rating": null,
+          "reviews": null,
+          "d_top3": 1,
+          "is_client": false
+        },
+        {
+          "name": "Volume One & The Local Store",
+          "avg": 1.0,
+          "top3": 1,
+          "reach": 1,
+          "rating": 4.7,
+          "reviews": 523,
+          "d_top3": -1,
+          "is_client": false
+        },
+        {
+          "name": "Next Step Moving Eau Claire",
+          "avg": 1.0,
+          "top3": 1,
+          "reach": 1,
+          "rating": null,
+          "reviews": null,
+          "d_top3": 1,
+          "is_client": false
+        },
+        {
+          "name": "WA LONG CHOUA",
+          "avg": 1.0,
+          "top3": 1,
+          "reach": 1,
+          "rating": 5.0,
+          "reviews": 2,
+          "d_top3": 1,
+          "is_client": false
+        }
+      ],
+      "velocity": [
+        {
+          "date": "May 12",
+          "rating": 5.0,
+          "reviews": 14
+        },
+        {
+          "date": "May 29",
+          "rating": 5.0,
+          "reviews": 22
+        }
+      ]
+    }
+  }
+}
