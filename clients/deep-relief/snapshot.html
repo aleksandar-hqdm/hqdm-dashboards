@@ -38,6 +38,25 @@
     table.mini th { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; font-size: .58rem; color: #64748b; background: #f8fafc; text-align: left; }
     table.mini td.num, table.mini th.num { text-align: right; font-variant-numeric: tabular-nums; font-family: ui-monospace, monospace; }
     table.mini tr.me td { background:#eff6ff; font-weight:600; }
+    /* Build calendar — matches MIA Photo Booth + BB Massage convention */
+    table.cal { width: 100%; border-collapse: separate; border-spacing: 0; }
+    table.cal th { font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #64748b; padding: .4rem .65rem .5rem; border-bottom: 1px solid #e2e8f0; text-align: left; vertical-align: bottom; }
+    table.cal th.month { color: #0b1220; font-size: .72rem; letter-spacing: .04em; }
+    table.cal td { padding: .55rem .65rem; border-bottom: 1px solid #f1f5f9; vertical-align: top; font-size: .72rem; line-height: 1.4; }
+    table.cal td.row-label { font-weight: 700; color: #1f2937; background: #f8fafc; min-width: 7.5rem; font-size: .78rem; border-right: 1px solid #e2e8f0; }
+    table.cal td.row-label .cap { display: block; font-size: .58rem; font-weight: 500; color: #94a3b8; margin-top: .15rem; letter-spacing: .04em; text-transform: uppercase; }
+    table.cal tr:last-child td { border-bottom: 0; }
+    .cal .item { display: flex; gap: .4rem; align-items: baseline; margin: .22rem 0; }
+    .cal .item:first-child { margin-top: 0; }
+    .cal .item:last-child { margin-bottom: 0; }
+    .cal .tag { flex-shrink: 0; display: inline-block; font-size: .54rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: .12rem .4rem; border-radius: .25rem; line-height: 1.25; min-width: 3.7rem; text-align: center; }
+    .cal .tag.revamp   { background: #dbeafe; color: #1d4ed8; }
+    .cal .tag.new      { background: #d1fae5; color: #047857; }
+    .cal .tag.refresh  { background: #fef3c7; color: #b45309; }
+    .cal .tag.redirect { background: #e2e8f0; color: #475569; }
+    .cal .tag.fix      { background: #e0e7ff; color: #4338ca; }
+    .cal .u { color: #0b1220; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .7rem; word-break: break-word; }
+    .cal .n { color: #64748b; font-size: .66rem; font-family: 'Inter', system-ui, sans-serif; }
     @media print { .no-print { display: none !important; } body { background: #fff !important; } .panel, .month-card { box-shadow: none !important; } @page { margin: .5in; } }
   </style>
 </head>
@@ -162,6 +181,27 @@
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">What we need from you</h2>
       <div class="panel">
         <ul class="space-y-3" id="owner-asks-rows"></ul>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-1">Build Calendar · June → August 2026</div>
+      <div class="panel">
+        <p class="text-[11px] text-slate-500 mb-2">Production rolls forward on a steady cadence; on-page work is per-need. Schema (LocalBusiness, Service, FAQPage) lands progressively across M1-M3. GBP posts, photos, reviews and Q&amp;A sit outside this program scope.</p>
+        <div class="overflow-x-auto">
+          <table class="cal">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="month" style="color:#047857;">M1 · June 2026</th>
+                <th class="month" style="color:#1d4ed8;">M2 · July 2026</th>
+                <th class="month" style="color:#6366f1;">M3 · August 2026</th>
+              </tr>
+            </thead>
+            <tbody id="cal-rows"></tbody>
+          </table>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-3">Cadence reflects in-scope production: 2 service pages + 5 blogs + 3 suburb pages per month, with on-page fixes wired in as the hubs land. GBP posts, photos, reviews and Q&amp;A sit outside the program scope per the client agreement.</p>
       </div>
     </section>
 
@@ -390,6 +430,45 @@
       <div class="text-xs text-slate-600 mt-0.5">${a.why}</div>
     </div>
   </li>`).join('');
+
+  // Build calendar — render from tasks_by_month
+  if (D.tasks_by_month && $('cal-rows')) {
+    // Infer tag class from item text + surface
+    function tagFor(surface, item) {
+      const it = (item.item || '').toLowerCase();
+      const note = (item.note || '').toLowerCase();
+      if (it.includes('301') || it.includes('redirect') || note.includes('301') || note.includes('redirect')) return 'redirect';
+      if (it.includes('refresh') || note.includes('refresh')) return 'refresh';
+      if (it.includes('revamp') || note.includes('revamp') || note.includes('rebuild')) return 'revamp';
+      if (surface.toLowerCase().includes('on-page') || surface.toLowerCase().includes('ops')) return 'fix';
+      return 'new';
+    }
+    // Cadence captions per surface
+    const surfaceCaps = {
+      'Services (2)':     '2 / month · new · LocalBusiness + Service schema',
+      'Blogs (5)':        '5 / month · new + refresh · FAQ schema + cross-link to services',
+      'Suburb pages (3)': '3 / month · new at matrix gaps · service-area schema',
+      'On-page + ops':    'per need · schema · internal links · LF + GA4 housekeeping',
+    };
+    // Order rows: Services, Blogs, Suburb pages, On-page + ops
+    const orderedSurfaces = ['Services (2)', 'Blogs (5)', 'Suburb pages (3)', 'On-page + ops'];
+    const monthsData = D.tasks_by_month;
+    const rowsHtml = orderedSurfaces.map(surface => {
+      const label = surface.replace(/\s*\(\d+\)$/, '');
+      const cap = surfaceCaps[surface] || '';
+      const cells = monthsData.map(m => {
+        const items = m.deliverables[surface] || [];
+        if (items.length === 0) return '<td><span class="text-slate-400 text-[11px] italic">—</span></td>';
+        const itemHtml = items.map(it => {
+          const tag = tagFor(surface, it);
+          return `<div class="item"><span class="tag ${tag}">${tag}</span><div><span class="u">${it.item}</span> <span class="n">. ${it.note || ''}</span></div></div>`;
+        }).join('');
+        return `<td>${itemHtml}</td>`;
+      }).join('');
+      return `<tr><td class="row-label">${label}<span class="cap">${cap}</span></td>${cells}</tr>`;
+    }).join('');
+    $('cal-rows').innerHTML = rowsHtml;
+  }
 })();
 </script>
 </body>
