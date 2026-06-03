@@ -114,20 +114,6 @@
       <div class="panel">
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
-            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Website sessions · GA4 monthly by channel</div>
-            <div class="text-xs text-slate-500 mt-0.5" id="ga4-window">…</div>
-          </div>
-          <div class="flex items-center gap-3 text-[10px] text-slate-500" id="ga4-legend"></div>
-        </div>
-        <div style="height: 220px;"><canvas id="ga4-chart"></canvas></div>
-        <p class="text-[11px] text-slate-500 mt-2" id="ga4-caption"></p>
-      </div>
-    </section>
-
-    <section class="mb-4">
-      <div class="panel">
-        <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
-          <div>
             <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 5 long-history keywords · Nov 2025 to May 2026</div>
             <div class="text-xs text-slate-500 mt-0.5" id="ld-window">…</div>
           </div>
@@ -296,63 +282,6 @@
   } catch (err) {
     console.error('GSC chart render failed', err);
     $('gsc-caption').innerHTML = `<span class="text-rose-700">GSC trend chart unavailable; see the strategy dashboard.</span>`;
-  }
-
-  // GA4 chart: monthly sessions stacked by channel
-  try {
-    if (D.ga4 && D.ga4.monthly_trend) {
-      const g = D.ga4.monthly_trend;
-      const channelColors = {
-        'Organic Search': '#10b981',
-        'Direct': '#1d5b8a',
-        'Paid Search': '#f59e0b',
-        'Referral': '#8b5cf6',
-        'Organic Social': '#06b6d4',
-        'Paid Social': '#ec4899',
-        'Email': '#a855f7',
-        'Display': '#f43f5e',
-        'Cross-network': '#64748b',
-        'Unassigned': '#94a3b8',
-      };
-      // Only show channels with non-zero totals
-      const activeChannels = Object.keys(g.channels).filter(c => g.channels[c].some(v => v > 0));
-      $('ga4-window').textContent = `${g.month_labels_short[0]} to ${g.month_labels_short[g.month_labels_short.length-1]} . property ${D.ga4.meta.property_id}`;
-      $('ga4-legend').innerHTML = activeChannels.slice(0, 6).map(c => `<span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:${channelColors[c]||'#64748b'}"></span>${c}</span>`).join('');
-      new Chart($('ga4-chart'), {
-        type: 'bar',
-        data: {
-          labels: g.month_labels_short,
-          datasets: activeChannels.map(c => ({
-            label: c,
-            data: g.channels[c],
-            backgroundColor: channelColors[c] || '#64748b',
-            stack: 'sessions',
-            borderWidth: 0,
-          })),
-        },
-        options: {
-          responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-          plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
-          scales: {
-            x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
-            y: { stacked: true, beginAtZero: true, ticks: { font: { size: 9 } } },
-          }
-        }
-      });
-      const lastIdx = g.total_sessions.length - 1;
-      const lastMonth = g.month_labels_short[lastIdx];
-      const lastTotal = g.total_sessions[lastIdx];
-      const lastOrganic = g.channels['Organic Search'][lastIdx];
-      const lastDirect = g.channels['Direct'][lastIdx];
-      const organicPct = lastTotal ? Math.round(lastOrganic / lastTotal * 100) : 0;
-      const ninetyDay = D.ga4.acquisition_summary && D.ga4.acquisition_summary.last_90d ? D.ga4.acquisition_summary.last_90d : [];
-      const organic90 = ninetyDay.find(r => r.sessionDefaultChannelGroup === 'Organic Search');
-      const orgSessions90 = organic90 ? organic90.sessions : 0;
-      $('ga4-caption').innerHTML = `${lastMonth} sessions: <strong>${lastTotal.toLocaleString()}</strong> total, <strong>${lastOrganic.toLocaleString()} (${organicPct}%)</strong> from Organic Search, ${lastDirect.toLocaleString()} Direct. Last 90 days: <strong>${orgSessions90.toLocaleString()} Organic Search sessions</strong>. The trajectory has held steady around 1,400-1,800 sessions/month since the Nov 2025 onboarding spike (which was mostly Direct, likely a property-setup artifact).`;
-    }
-  } catch (err) {
-    console.error('GA4 chart render failed', err);
-    if ($('ga4-caption')) $('ga4-caption').innerHTML = `<span class="text-rose-700">GA4 chart unavailable: ${err.message}</span>`;
   }
 
   // LD chart, cohort A on a monthly category axis. Buckets each month and
