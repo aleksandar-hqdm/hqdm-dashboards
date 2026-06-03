@@ -121,21 +121,21 @@
     </section>
 
     <section class="mb-4">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">8 tracked services · Mar 12 → May 15</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">10 tracked services · baseline to May 15 2026</h2>
       <div class="panel overflow-x-auto">
         <table class="mini w-full">
           <thead><tr>
             <th>Service</th>
-            <th class="num">Top-3 Mar 12</th>
+            <th class="num">Window</th>
+            <th class="num">Top-3 start</th>
             <th class="num">Top-3 May 15</th>
             <th class="num">Δ</th>
-            <th class="num">Avg rank Mar → May</th>
             <th>Verdict</th>
           </tr></thead>
           <tbody id="kw-rows"></tbody>
         </table>
       </div>
-      <p class="text-[11px] text-slate-500 mt-2">Top-3 cells = grid cells where Deep Relief ranks 1st, 2nd, or 3rd on Maps when someone searches that service nearby. We measure across a 169-cell grid covering 6 miles around your pin.</p>
+      <p class="text-[11px] text-slate-500 mt-2">Top-3 cells = grid cells where Deep Relief ranks 1st, 2nd, or 3rd on Maps when someone searches that service nearby. We measure across a 169-cell grid covering 6 miles around your pin. Each service compares against its own first available scan (the 5 long-history queries go back to November 2025; the 2 newer queries to October 2025; the 3 pregnancy/prenatal queries only to March 12).</p>
     </section>
 
     <section class="mb-4">
@@ -204,57 +204,68 @@
     { v: 'Sage Blossom', l: 'the pregnancy-massage watch competitor', watch: true },
   ].map(c => `<span class="chip ${c.good ? 'good' : c.watch ? 'watch' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
 
-  // GSC chart
-  const trend = D.gsc.trend;
-  $('gsc-window').textContent = trend.months[0] + ' → ' + trend.months[trend.months.length - 1] + ' · monthly · whole site';
-  new Chart($('gsc-chart'), {
-    data: {
-      labels: trend.months,
-      datasets: [
-        { type: 'line', label: 'Impressions', data: trend.impressions, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 3, yAxisID: 'y', fill: true },
-        { type: 'line', label: 'Clicks', data: trend.clicks, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, yAxisID: 'y1', fill: false },
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
-      scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
-        y: { position: 'left', beginAtZero: true, ticks: { font: { size: 9 } } },
-        y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } } },
+  // GSC chart (wrapped in try/catch for safety)
+  try {
+    const trend = D.gsc.trend;
+    $('gsc-window').textContent = trend.months[0] + ' → ' + trend.months[trend.months.length - 1] + ' · monthly · whole site';
+    new Chart($('gsc-chart'), {
+      data: {
+        labels: trend.months,
+        datasets: [
+          { type: 'line', label: 'Impressions', data: trend.impressions, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 3, yAxisID: 'y', fill: true },
+          { type: 'line', label: 'Clicks', data: trend.clicks, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, yAxisID: 'y1', fill: false },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { position: 'left', beginAtZero: true, ticks: { font: { size: 9 } } },
+          y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } } },
+        }
       }
-    }
-  });
-  $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter, total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work, we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
+    });
+    $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter, total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work, we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
+  } catch (err) {
+    console.error('GSC chart render failed', err);
+    $('gsc-caption').innerHTML = `<span class="text-rose-700">GSC trend chart unavailable; see the strategy dashboard.</span>`;
+  }
 
-  // LD chart, cohort A on time axis
-  const traj = D.trajectory_ld;
-  const ca = traj.cohort_a || { top3: [], top10: [] };
-  const datesIso = traj.dates_iso || traj.labels;
-  $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords with full 6-month history · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
-  new Chart($('ld-chart'), {
-    data: {
-      datasets: [
-        { label: 'Top-10 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top10[i] })), borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true, spanGaps: true },
-        { label: 'Top-3 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top3[i] })), borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, spanGaps: true },
-      ]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
-      scales: {
-        x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
-        y: { beginAtZero: true, ticks: { font: { size: 9 } } },
+  // LD chart, cohort A on time axis. Wrapped in try/catch so a Chart.js
+  // failure (e.g. all-null series) doesn't break the rest of the page.
+  try {
+    const traj = D.trajectory_ld;
+    const ca = traj.cohort_a || { top3: [], top10: [] };
+    const datesIso = traj.dates_iso || traj.labels;
+    $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords with full 6-month history · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
+    new Chart($('ld-chart'), {
+      data: {
+        datasets: [
+          { label: 'Top-10 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top10[i] })), borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true, spanGaps: true },
+          { label: 'Top-3 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top3[i] })), borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, spanGaps: true },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+        scales: {
+          x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { beginAtZero: true, ticks: { font: { size: 9 } } },
+        }
       }
-    }
-  });
-  const t3v = ca.top3.filter(v => v != null);
-  const t10v = ca.top10.filter(v => v != null);
-  const t3First = t3v[0] || 0;
-  const t3Last = t3v[t3v.length-1] || 0;
-  const t10First = t10v[0] || 0;
-  const t10Last = t10v[t10v.length-1] || 0;
-  $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
+    });
+    const t3v = ca.top3.filter(v => v != null);
+    const t10v = ca.top10.filter(v => v != null);
+    const t3First = t3v[0] || 0;
+    const t3Last = t3v[t3v.length-1] || 0;
+    const t10First = t10v[0] || 0;
+    const t10Last = t10v[t10v.length-1] || 0;
+    $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
+  } catch (err) {
+    console.error('LD chart render failed', err);
+    $('ld-caption').innerHTML = `<span class="text-rose-700">Maps trajectory chart unavailable; see the strategy dashboard for the full per-keyword view.</span>`;
+  }
 
   // Leads
   $('leads').innerHTML = [
@@ -282,10 +293,10 @@
       : '<span style="color:#475569;font-weight:700;font-size:.62rem;letter-spacing:.04em;text-transform:uppercase">→ flat</span>';
     return `<tr>
       <td>${k.kw}</td>
+      <td class="num"><span style="font-size:.6rem;color:#64748b;letter-spacing:.02em">${k.baseline_date || 'start'} · ${k.scan_count || '?'} scans</span></td>
       <td class="num">${k.top3_base}</td>
       <td class="num font-semibold">${k.top3_cur}</td>
       <td class="num ${dt3 > 0 ? 'text-emerald-700' : dt3 < 0 ? 'text-rose-700' : ''} font-semibold">${dt3 > 0 ? '+' : ''}${dt3}</td>
-      <td class="num">${k.rank_base} → ${k.rank_cur}</td>
       <td>${verdictPill}</td>
     </tr>`;
   }).join('');
