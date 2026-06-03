@@ -157,21 +157,6 @@
       <p class="text-[11px] text-slate-500 mt-2">Top-3 cells = grid cells where Deep Relief ranks 1st, 2nd, or 3rd on Maps when someone searches that service nearby. Avg rank within 1 mile / within 2 miles is the average Maps position across all cells in that radius around the storefront on the May 15 scan. We measure across a 169-cell grid covering 6 miles around your pin.</p>
     </section>
 
-    <section class="mb-4">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Services where you win at the storefront but lose past 1–2 miles</h2>
-      <div class="panel overflow-x-auto">
-        <table class="mini w-full">
-          <thead><tr>
-            <th>Service</th>
-            <th class="num">Your rank at center</th>
-            <th class="num">Austin searches / mo</th>
-          </tr></thead>
-          <tbody id="untracked-rows"></tbody>
-        </table>
-        <p class="text-[11px] text-slate-500 mt-2" id="untracked-note"></p>
-      </div>
-    </section>
-
     <section class="mb-5">
       <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">The 90-day plan · 3 focus areas</h2>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="focus-months"></div>
@@ -242,7 +227,7 @@
   const bp = D.gsc.brand_pull;
   const h = D.gsc.halves;
 
-  $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. A pin-level scan at the storefront also identified 15 services where you sit at #1–#3 at center but lose visibility past 1–2 miles, that's the off-pin reach gap this quarter's plan closes via dedicated service + suburb pages.`;
+  $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. This quarter's plan extends that same pattern, dedicated service + suburb pages for the next tier of high-intent queries, so the wins compound past the immediate storefront.`;
 
   $('exec-2').innerHTML = `Two watch areas the plan addresses head-on: <strong>acupuncture and dry needling</strong> softened a little across the 6 months, services that don't have dedicated landing pages today, and <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days. Both are reversed in this quarter's plan via dedicated service-page builds. GA4 is connected and we can see ~1,500 sessions/month with ~67% from Organic Search, so the audience picture is clean; the next wiring upgrade (Lever D) turns those sessions into measurable booking attribution.`;
 
@@ -256,6 +241,7 @@
     { v: '+29 cells', l: 'top-3 lifted on 5 kws · Nov 2025 → May 2026', good: true },
     { v: ga4Sessions90.toLocaleString() + ' sessions', l: 'GA4 last 90d · ' + ga4OrgSessions90.toLocaleString() + ' organic search', good: true },
     { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · GSC organic', good: true },
+    { v: '4.9★ × 443', l: 'reviews · trust signal locked', good: true },
   ].map(c => `<span class="chip ${c.good ? 'good' : c.watch ? 'watch' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
 
   // GSC chart (wrapped in try/catch for safety)
@@ -370,15 +356,6 @@
       <td>${verdictPill}</td>
     </tr>`;
   }).join('');
-
-  // Untracked rows
-  $('untracked-rows').innerHTML = D.pin_strong_grid_weak.slice(0, 12).map(r => `<tr>
-    <td><strong>${r.kw}</strong></td>
-    <td class="num"><span style="background:${r.rank_at_pin <= 3 ? '#d1fae5' : '#fef3c7'};color:${r.rank_at_pin <= 3 ? '#065f46' : '#92400e'};padding:.1rem .4rem;border-radius:.25rem;font-weight:700;font-size:.65rem">#${r.rank_at_pin}</span></td>
-    <td class="num">${fmt(r.search_volume_austin)}</td>
-  </tr>`).join('');
-  const totVol = D.pin_strong_grid_weak.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
-  $('untracked-note').innerHTML = `Combined Austin demand on these top-3 at-pin services: <strong>${fmt(totVol)} searches/month</strong>. Local Falcon already tracks the wider picture for these queries, you're winning at the storefront but the ranking falls off within 1–2 miles. The plan this quarter builds dedicated landing pages for the five biggest ones, which is how we extend the radius where you show up first.`;
 
   // Focus months
   const months = [
