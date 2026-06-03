@@ -96,7 +96,7 @@
       <div class="panel">
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
-            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 4 scans · 8 tracked queries</div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 5 long-history keywords · Nov 2025 to May 2026</div>
             <div class="text-xs text-slate-500 mt-0.5" id="ld-window">…</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
@@ -232,39 +232,49 @@
     $('gsc-caption').innerHTML = `<span class="text-rose-700">GSC trend chart unavailable; see the strategy dashboard.</span>`;
   }
 
-  // LD chart, cohort A on time axis. Wrapped in try/catch so a Chart.js
-  // failure (e.g. all-null series) doesn't break the rest of the page.
+  // LD chart, cohort A on a category axis (more reliable than time axis
+  // with sparse null data). Filter to only the dates where all 5 cohort
+  // kws actually scanned together; that's the apples-comparable trajectory.
   try {
     const traj = D.trajectory_ld;
-    const ca = traj.cohort_a || { top3: [], top10: [] };
-    const datesIso = traj.dates_iso || traj.labels;
+    const ca = traj.cohort_a || { top3: [], top10: [], all_present: [] };
+    const allDates = traj.labels || [];
+    // Keep only the indices where all 5 cohort kws were present together.
+    const keepIdx = (ca.all_present || ca.top3.map(v => v != null)).map((p, i) => p ? i : -1).filter(i => i >= 0);
+    const labels = keepIdx.map(i => allDates[i]);
+    const top3 = keepIdx.map(i => ca.top3[i]);
+    const top10 = keepIdx.map(i => ca.top10[i]);
     $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords with full 6-month history · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
-    new Chart($('ld-chart'), {
-      data: {
-        datasets: [
-          { label: 'Top-10 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top10[i] })), borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true, spanGaps: true },
-          { label: 'Top-3 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top3[i] })), borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, spanGaps: true },
-        ]
-      },
-      options: {
-        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-        plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
-        scales: {
-          x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
-          y: { beginAtZero: true, ticks: { font: { size: 9 } } },
+    if (labels.length === 0) {
+      $('ld-caption').innerHTML = `<span class="text-rose-700">No cohort readings available; see the strategy dashboard for the full per-keyword view.</span>`;
+    } else {
+      new Chart($('ld-chart'), {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [
+            { label: 'Top-10 cells', data: top10, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true },
+            { label: 'Top-3 cells', data: top3, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, fill: false },
+          ]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+            y: { beginAtZero: true, ticks: { font: { size: 9 } } },
+          }
         }
-      }
-    });
-    const t3v = ca.top3.filter(v => v != null);
-    const t10v = ca.top10.filter(v => v != null);
-    const t3First = t3v[0] || 0;
-    const t3Last = t3v[t3v.length-1] || 0;
-    const t10First = t10v[0] || 0;
-    const t10Last = t10v[t10v.length-1] || 0;
-    $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
+      });
+      const t3First = top3[0];
+      const t3Last = top3[top3.length-1];
+      const t10First = top10[0];
+      const t10Last = top10[top10.length-1];
+      $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong> across ${labels.length} apples-comparable scans. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
+    }
   } catch (err) {
     console.error('LD chart render failed', err);
-    $('ld-caption').innerHTML = `<span class="text-rose-700">Maps trajectory chart unavailable; see the strategy dashboard for the full per-keyword view.</span>`;
+    $('ld-caption').innerHTML = `<span class="text-rose-700">Maps trajectory chart error: ${err.message}. See the strategy dashboard for the full per-keyword view.</span>`;
   }
 
   // Leads
