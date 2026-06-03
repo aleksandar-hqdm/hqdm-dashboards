@@ -388,7 +388,7 @@
 
   <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
     <h2 class="text-2xl font-bold tracking-tight mb-1">90-day plan</h2>
-    <p class="text-sm text-ink-500 mb-4">Production cadence: 2 service pages + 5 blogs + 3 suburb pages each month, plus per-need on-page work. Each month has a clear theme and end-of-month checkpoint. Lever D items unblock when GA4 access lands.</p>
+    <p class="text-sm text-ink-500 mb-4">Production cadence: 2 service pages + 5 blogs + 3 suburb pages each month, plus per-need on-page work. Each month has a clear theme and end-of-month checkpoint. Lever D items unblock as the GA4 conversion-event wiring lands in M1-M2.</p>
     <div class="space-y-5" id="tasks-by-month"></div>
   </section>
 
@@ -408,7 +408,7 @@
       Data sources: Local Falcon 13×13 geo-grid scans (4 dates, 8 tracked keywords, Mar 12 → May 15 2026);
       Google Search Console (https://deeprelief.com/ · siteOwner, 365-day window, 945,867 impressions / 7,839 clicks);
       DataForSEO Maps SERP at pin (43 queries) + Austin-DMA Google Ads search volumes (53 queries) + keyword suggestions (2,057 rows).
-      GA4 not connected, see Owner Ask OA-1.
+      GA4 connected (property 510766498); conversion events not yet wired, see Owner Ask OA-1 + Lever D.
     </p>
   </footer>
 
@@ -420,7 +420,7 @@
   const round = (n, d) => (n == null) ? '…' : Number(n).toFixed(d);
 
   // ===== Hero =====
-  $('hero-scope').innerHTML = `${D.meta.address} · ${D.meta.primary_category} (primary) · ${D.meta.secondary_categories} (secondary) · <strong>${D.meta.rating}★</strong> × ${D.meta.reviews} reviews. ${D.meta.ga4_status.startsWith('Not') ? '<span class="text-amber-300 font-semibold">GA4 not connected</span>, see Owner Ask OA-1.' : ''}`;
+  $('hero-scope').innerHTML = `${D.meta.address} · ${D.meta.primary_category} (primary) · ${D.meta.secondary_categories} (secondary) · <strong>${D.meta.rating}★</strong> × ${D.meta.reviews} reviews. ${D.meta.ga4_status.startsWith('Not') ? '<span class="text-amber-300 font-semibold">GA4 not connected</span>, see Owner Ask OA-1.' : '<span class="text-emerald-300 font-semibold">GA4 connected</span>; conversion-event wiring queued in Lever D.'}`;
   $('hero-prepared').textContent = D.meta.prepared_date;
   $('hero-preparer').textContent = D.meta.preparer;
   $('hero-domain').textContent = D.meta.domain;

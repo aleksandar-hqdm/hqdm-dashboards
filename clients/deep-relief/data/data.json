@@ -1134,7 +1134,11 @@
       "sentiment": "negative",
       "baseline_date": "Nov 21 2025",
       "current_date": "May 15 2026",
-      "scan_count": 8
+      "scan_count": 8,
+      "avg_rank_1mi": 4.75,
+      "avg_rank_2mi": 8.17,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 12
     },
     {
       "kw": "chiropractor",
@@ -1153,7 +1157,11 @@
       "sentiment": "negative",
       "baseline_date": "Nov 21 2025",
       "current_date": "May 15 2026",
-      "scan_count": 8
+      "scan_count": 8,
+      "avg_rank_1mi": 10.0,
+      "avg_rank_2mi": 10.5,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 10
     },
     {
       "kw": "cold laser austin",
@@ -1172,7 +1180,11 @@
       "sentiment": "positive",
       "baseline_date": "Nov 21 2025",
       "current_date": "May 15 2026",
-      "scan_count": 8
+      "scan_count": 8,
+      "avg_rank_1mi": 3.5,
+      "avg_rank_2mi": 6.31,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "deep tissue massage",
@@ -1191,7 +1203,11 @@
       "sentiment": "positive",
       "baseline_date": "Nov 21 2025",
       "current_date": "May 15 2026",
-      "scan_count": 8
+      "scan_count": 8,
+      "avg_rank_1mi": 2.25,
+      "avg_rank_2mi": 1.46,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "dry needling near me",
@@ -1210,7 +1226,11 @@
       "sentiment": "negative",
       "baseline_date": "Nov 21 2025",
       "current_date": "May 15 2026",
-      "scan_count": 8
+      "scan_count": 8,
+      "avg_rank_1mi": 3.0,
+      "avg_rank_2mi": 5.67,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 12
     },
     {
       "kw": "massage near me",
@@ -1229,7 +1249,11 @@
       "sentiment": "positive",
       "baseline_date": "Oct 9 2025",
       "current_date": "May 15 2026",
-      "scan_count": 9
+      "scan_count": 9,
+      "avg_rank_1mi": 4.5,
+      "avg_rank_2mi": 7.38,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "massage therapy near me",
@@ -1248,7 +1272,11 @@
       "sentiment": "positive",
       "baseline_date": "Oct 9 2025",
       "current_date": "May 15 2026",
-      "scan_count": 9
+      "scan_count": 9,
+      "avg_rank_1mi": 3.0,
+      "avg_rank_2mi": 3.31,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "pregnancy massage",
@@ -1267,7 +1295,11 @@
       "sentiment": "negative",
       "baseline_date": "Mar 12 2026",
       "current_date": "May 15 2026",
-      "scan_count": 4
+      "scan_count": 4,
+      "avg_rank_1mi": 2.0,
+      "avg_rank_2mi": 1.62,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "pregnancy massage near me",
@@ -1286,7 +1318,11 @@
       "sentiment": "negative",
       "baseline_date": "Mar 12 2026",
       "current_date": "May 15 2026",
-      "scan_count": 4
+      "scan_count": 4,
+      "avg_rank_1mi": 1.75,
+      "avg_rank_2mi": 2.23,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     },
     {
       "kw": "prenatal massage near me",
@@ -1305,7 +1341,11 @@
       "sentiment": "neutral",
       "baseline_date": "Mar 12 2026",
       "current_date": "May 15 2026",
-      "scan_count": 4
+      "scan_count": 4,
+      "avg_rank_1mi": 2.5,
+      "avg_rank_2mi": 3.0,
+      "cells_1mi_visible": 4,
+      "cells_2mi_visible": 13
     }
   ],
   "distance_bands": [
@@ -3417,17 +3457,7 @@
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
-      "kw": "pediatric chiropractor austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "Sprout Chiropractic"
-    },
-    {
       "kw": "spinal decompression austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
-    },
-    {
-      "kw": "low level laser therapy",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
@@ -3437,14 +3467,24 @@
       "current_leader_at_pin": "South Austin Community Acupuncture"
     },
     {
+      "kw": "fertility acupuncture austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
+    },
+    {
       "kw": "auto accident chiropractor austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
-      "kw": "fertility acupuncture austin",
+      "kw": "low level laser therapy",
       "search_volume_austin": null,
-      "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "pediatric chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Sprout Chiropractic"
     }
   ],
   "gsc": {
@@ -5088,8 +5128,8 @@
       "month_label": "Month 1 · June 2026",
       "lever": "D",
       "surface": "On-page + ops",
-      "title": "Owner ask: GA4 property access (or stand up new property in owner's Google account)",
-      "note": "Matt to Owner."
+      "title": "GTM: wire form_submit + click_phone_number + click_to_email sitewide; coordinate Meevo booking_confirmed bridge",
+      "note": "Dev + Meevo contact; resolves the OA-1 lead-attribution gap."
     },
     {
       "id": "M2-SER-15",
@@ -5368,8 +5408,8 @@
       "month_label": "Month 1 · June 2026",
       "theme": "Lock the moat, start the prenatal recovery, clean LF",
       "color": "#10b981",
-      "summary": "Two service pages (deep tissue + prenatal) anchor the highest-leverage pin-strong queries with proper schema. Five blogs target buyer-question intent feeding into both. Three suburb pages (Sunset Valley, Oak Hill, Dripping Springs) on deep tissue to start extending off-pin reach. Local Falcon tracking cleaned + reallocated. Owner ask: GA4 access.",
-      "by_end_of_month": "Deep tissue + prenatal massage have dedicated, schema-marked Austin landing pages with supporting suburb variants live; 5 blogs published; LF tracking cleaned + 4 priority kws added; GA4 access request in motion.",
+      "summary": "Two service pages (deep tissue + prenatal) anchor the highest-leverage pin-strong queries with proper schema. Five blogs target buyer-question intent feeding into both. Three suburb pages (Sunset Valley, Oak Hill, Dripping Springs) on deep tissue to start extending off-pin reach. Local Falcon tracking cleaned + reallocated. GA4 conversion events wiring kicks off (form_submit + click_phone + click_email).",
+      "by_end_of_month": "Deep tissue + prenatal massage have dedicated, schema-marked Austin landing pages with supporting suburb variants live; 5 blogs published; LF tracking cleaned + 4 priority kws added; first GA4 conversion events firing (form_submit + click_phone).",
       "deliverables": {
         "Services (2)": [
           {
@@ -5444,9 +5484,9 @@
             "note": "Frees 4 slots."
           },
           {
-            "item": "Owner ask: GA4 property access (or stand up new property in owner's Google account)",
+            "item": "GTM: wire form_submit + click_phone_number + click_to_email sitewide; coordinate Meevo booking_confirmed bridge",
             "lever": "D",
-            "note": "Matt to Owner."
+            "note": "Dev + Meevo contact; resolves the OA-1 lead-attribution gap."
           }
         ]
       }
