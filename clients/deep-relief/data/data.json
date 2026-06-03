@@ -860,6 +860,71 @@
         true
       ]
     },
+    "cohort_a_monthly": {
+      "labels": [
+        "Nov 2025",
+        "Dec 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Mar 2026",
+        "Apr 2026",
+        "May 2026"
+      ],
+      "labels_short": [
+        "Nov '25",
+        "Dec '25",
+        "Jan '26",
+        "Feb '26",
+        "Mar '26",
+        "Apr '26",
+        "May '26"
+      ],
+      "top3": [
+        35,
+        55,
+        55,
+        107,
+        111,
+        59,
+        64
+      ],
+      "top10": [
+        140,
+        106,
+        131,
+        242,
+        265,
+        123,
+        144
+      ],
+      "top20": [
+        274,
+        187,
+        266,
+        383,
+        387,
+        245,
+        254
+      ],
+      "all_present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "kws_present": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
     "cohort_a_kws": [
       "chiropractor",
       "acupuncture",
@@ -3342,29 +3407,14 @@
   ],
   "gap_at_pin": [
     {
-      "kw": "decompression therapy austin",
-      "search_volume_austin": 10,
-      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
-    },
-    {
       "kw": "cosmetic acupuncture austin",
       "search_volume_austin": 10,
       "current_leader_at_pin": "Si Shou Acupuncture & Wellness, PLLC"
     },
     {
-      "kw": "pediatric chiropractor austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "Sprout Chiropractic"
-    },
-    {
-      "kw": "low level laser therapy",
-      "search_volume_austin": null,
+      "kw": "decompression therapy austin",
+      "search_volume_austin": 10,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
-    },
-    {
-      "kw": "acupuncture south austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "South Austin Community Acupuncture"
     },
     {
       "kw": "spinal decompression austin",
@@ -3372,14 +3422,29 @@
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
-      "kw": "auto accident chiropractor austin",
+      "kw": "low level laser therapy",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "pediatric chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Sprout Chiropractic"
+    },
+    {
+      "kw": "acupuncture south austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "South Austin Community Acupuncture"
     },
     {
       "kw": "fertility acupuncture austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
+    },
+    {
+      "kw": "auto accident chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     }
   ],
   "gsc": {

@@ -232,19 +232,17 @@
     $('gsc-caption').innerHTML = `<span class="text-rose-700">GSC trend chart unavailable; see the strategy dashboard.</span>`;
   }
 
-  // LD chart, cohort A on a category axis (more reliable than time axis
-  // with sparse null data). Filter to only the dates where all 5 cohort
-  // kws actually scanned together; that's the apples-comparable trajectory.
+  // LD chart, cohort A on a monthly category axis. Buckets each month and
+  // picks the latest scan within that month for each kw, which means
+  // Dec/Jan readings get included even though chiropractor + acupuncture
+  // scanned on slightly different days than the other 3 cohort kws.
   try {
     const traj = D.trajectory_ld;
-    const ca = traj.cohort_a || { top3: [], top10: [], all_present: [] };
-    const allDates = traj.labels || [];
-    // Keep only the indices where all 5 cohort kws were present together.
-    const keepIdx = (ca.all_present || ca.top3.map(v => v != null)).map((p, i) => p ? i : -1).filter(i => i >= 0);
-    const labels = keepIdx.map(i => allDates[i]);
-    const top3 = keepIdx.map(i => ca.top3[i]);
-    const top10 = keepIdx.map(i => ca.top10[i]);
-    $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords with full 6-month history · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
+    const m = traj.cohort_a_monthly || traj.cohort_a || { labels: [], top3: [], top10: [] };
+    const labels = m.labels || [];
+    const top3 = m.top3 || [];
+    const top10 = m.top10 || [];
+    $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords · monthly rollup · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
     if (labels.length === 0) {
       $('ld-caption').innerHTML = `<span class="text-rose-700">No cohort readings available; see the strategy dashboard for the full per-keyword view.</span>`;
     } else {
@@ -270,7 +268,9 @@
       const t3Last = top3[top3.length-1];
       const t10First = top10[0];
       const t10Last = top10[top10.length-1];
-      $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong> across ${labels.length} apples-comparable scans. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
+      const t3Peak = Math.max(...top3.filter(v => v != null));
+      const t3PeakLabel = labels[top3.indexOf(t3Peak)];
+      $('ld-caption').innerHTML = `Monthly readings across ${labels.length} months. Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> over the period, with a peak of <strong>${t3Peak} cells in ${t3PeakLabel}</strong>. Top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling have given back gains since the Mar peak.`;
     }
   } catch (err) {
     console.error('LD chart render failed', err);
