@@ -102,7 +102,6 @@
             <div class="text-xs text-slate-500 mt-0.5" id="gsc-window">…</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
-            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Impressions</span>
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Clicks</span>
           </div>
         </div>
@@ -115,11 +114,37 @@
       <div class="panel">
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
+            <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Website sessions · GA4 monthly by channel</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="ga4-window">…</div>
+          </div>
+          <div class="flex items-center gap-3 text-[10px] text-slate-500" id="ga4-legend"></div>
+        </div>
+        <div style="height: 220px;"><canvas id="ga4-chart"></canvas></div>
+        <p class="text-[11px] text-slate-500 mt-2" id="ga4-caption"></p>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="panel" style="border-left:4px solid #f59e0b">
+        <div class="flex items-start gap-3 flex-wrap">
+          <div class="flex-1 min-w-0">
+            <div class="text-[10px] font-bold uppercase tracking-widest text-amber-700 mb-1">Lead-attribution gap</div>
+            <p class="text-[14px] leading-relaxed text-slate-800" id="ga4-gap-headline">…</p>
+            <p class="text-[12px] leading-relaxed text-slate-700 mt-2" id="ga4-gap-detail">…</p>
+          </div>
+        </div>
+        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3" id="ga4-event-buckets"></div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <div class="panel">
+        <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
+          <div>
             <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 5 long-history keywords · Nov 2025 to May 2026</div>
             <div class="text-xs text-slate-500 mt-0.5" id="ld-window">…</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
-            <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Top-10 cells</span>
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#10b981"></span>Top-3 cells</span>
           </div>
         </div>
@@ -233,15 +258,19 @@
 
   $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. A pin-level scan at the storefront also identified 15 services where you sit at #1–#3 at center but lose visibility past 1–2 miles, that's the off-pin reach gap this quarter's plan closes via dedicated service + suburb pages.`;
 
-  $('exec-2').innerHTML = `Two watch areas: <strong>acupuncture and dry needling</strong> softened across the 6 months (mean rank dx -3.2 and -3.8 respectively), services that don't have dedicated landing pages today. And <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days, you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" alone. Both are reversed in this quarter's plan via dedicated service-page builds. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong>, up ${h.imps_pct}% over the last 6 months, but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
+  $('exec-2').innerHTML = `Two watch areas: <strong>acupuncture and dry needling</strong> softened across the 6 months (mean rank dx -3.2 and -3.8 respectively), services that don't have dedicated landing pages today. And <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days, you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" alone. Both are reversed in this quarter's plan via dedicated service-page builds. GA4 is now connected (property 510766498) and shows ~1,500 sessions/month with ~67% from Organic Search, so we can see whom search is sending you, <strong>but zero conversion events fire today</strong> (no form_submit, no click_phone, no booking_confirmed), so the one thing we cannot yet tell is how many of those sessions become bookings. Lever D wires that in M1-M2.`;
 
   // Chips
+  const ga4Sessions90 = D.ga4 && D.ga4.acquisition_summary && D.ga4.acquisition_summary.last_90d ?
+    D.ga4.acquisition_summary.last_90d.reduce((s, r) => s + r.sessions, 0) : 0;
+  const ga4OrgSessions90 = D.ga4 && D.ga4.acquisition_summary && D.ga4.acquisition_summary.last_90d ?
+    (D.ga4.acquisition_summary.last_90d.find(r => r.sessionDefaultChannelGroup === 'Organic Search') || {}).sessions || 0 : 0;
   $('chips').innerHTML = [
     { v: '47 top-3', l: 'deep tissue massage · the moat', good: true },
     { v: '+29 cells', l: 'top-3 lifted on 5 kws · Nov 2025 → May 2026', good: true },
-    { v: '15 services', l: 'you win at the storefront · reach is the work', good: true },
-    { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · organic search', good: true },
-    { v: 'Sage Blossom', l: 'the pregnancy-massage watch competitor', watch: true },
+    { v: ga4Sessions90.toLocaleString() + ' sessions', l: 'GA4 last 90d · ' + ga4OrgSessions90.toLocaleString() + ' organic search', good: true },
+    { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · GSC organic', good: true },
+    { v: '0 conversion events', l: 'GA4 lead tracking gap · Lever D', watch: true },
   ].map(c => `<span class="chip ${c.good ? 'good' : c.watch ? 'watch' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
 
   // GSC chart (wrapped in try/catch for safety)
@@ -252,8 +281,7 @@
       data: {
         labels: trend.months,
         datasets: [
-          { type: 'line', label: 'Impressions', data: trend.impressions, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 3, yAxisID: 'y', fill: true },
-          { type: 'line', label: 'Clicks', data: trend.clicks, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, yAxisID: 'y1', fill: false },
+          { type: 'line', label: 'Clicks', data: trend.clicks, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,.12)', borderWidth: 3, tension: .3, pointRadius: 4, fill: true },
         ]
       },
       options: {
@@ -261,8 +289,7 @@
         plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
         scales: {
           x: { grid: { display: false }, ticks: { font: { size: 10 } } },
-          y: { position: 'left', beginAtZero: true, ticks: { font: { size: 9 } } },
-          y1: { position: 'right', beginAtZero: true, grid: { display: false }, ticks: { font: { size: 9 } } },
+          y: { beginAtZero: true, ticks: { font: { size: 9 } } },
         }
       }
     });
@@ -270,6 +297,82 @@
   } catch (err) {
     console.error('GSC chart render failed', err);
     $('gsc-caption').innerHTML = `<span class="text-rose-700">GSC trend chart unavailable; see the strategy dashboard.</span>`;
+  }
+
+  // GA4 chart: monthly sessions stacked by channel
+  try {
+    if (D.ga4 && D.ga4.monthly_trend) {
+      const g = D.ga4.monthly_trend;
+      const channelColors = {
+        'Organic Search': '#10b981',
+        'Direct': '#1d5b8a',
+        'Paid Search': '#f59e0b',
+        'Referral': '#8b5cf6',
+        'Organic Social': '#06b6d4',
+        'Paid Social': '#ec4899',
+        'Email': '#a855f7',
+        'Display': '#f43f5e',
+        'Cross-network': '#64748b',
+        'Unassigned': '#94a3b8',
+      };
+      // Only show channels with non-zero totals
+      const activeChannels = Object.keys(g.channels).filter(c => g.channels[c].some(v => v > 0));
+      $('ga4-window').textContent = `${g.month_labels_short[0]} to ${g.month_labels_short[g.month_labels_short.length-1]} . property ${D.ga4.meta.property_id}`;
+      $('ga4-legend').innerHTML = activeChannels.slice(0, 6).map(c => `<span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:${channelColors[c]||'#64748b'}"></span>${c}</span>`).join('');
+      new Chart($('ga4-chart'), {
+        type: 'bar',
+        data: {
+          labels: g.month_labels_short,
+          datasets: activeChannels.map(c => ({
+            label: c,
+            data: g.channels[c],
+            backgroundColor: channelColors[c] || '#64748b',
+            stack: 'sessions',
+            borderWidth: 0,
+          })),
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+          plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+          scales: {
+            x: { stacked: true, grid: { display: false }, ticks: { font: { size: 10 } } },
+            y: { stacked: true, beginAtZero: true, ticks: { font: { size: 9 } } },
+          }
+        }
+      });
+      const lastIdx = g.total_sessions.length - 1;
+      const lastMonth = g.month_labels_short[lastIdx];
+      const lastTotal = g.total_sessions[lastIdx];
+      const lastOrganic = g.channels['Organic Search'][lastIdx];
+      const lastDirect = g.channels['Direct'][lastIdx];
+      const organicPct = lastTotal ? Math.round(lastOrganic / lastTotal * 100) : 0;
+      const ninetyDay = D.ga4.acquisition_summary && D.ga4.acquisition_summary.last_90d ? D.ga4.acquisition_summary.last_90d : [];
+      const organic90 = ninetyDay.find(r => r.sessionDefaultChannelGroup === 'Organic Search');
+      const orgSessions90 = organic90 ? organic90.sessions : 0;
+      $('ga4-caption').innerHTML = `${lastMonth} sessions: <strong>${lastTotal.toLocaleString()}</strong> total, <strong>${lastOrganic.toLocaleString()} (${organicPct}%)</strong> from Organic Search, ${lastDirect.toLocaleString()} Direct. Last 90 days: <strong>${orgSessions90.toLocaleString()} Organic Search sessions</strong>. The trajectory has held steady around 1,400-1,800 sessions/month since the Nov 2025 onboarding spike (which was mostly Direct, likely a property-setup artifact).`;
+    }
+  } catch (err) {
+    console.error('GA4 chart render failed', err);
+    if ($('ga4-caption')) $('ga4-caption').innerHTML = `<span class="text-rose-700">GA4 chart unavailable: ${err.message}</span>`;
+  }
+
+  // GA4 lead-attribution gap callout
+  if (D.ga4 && D.ga4.tracking_gap) {
+    const tg = D.ga4.tracking_gap;
+    $('ga4-gap-headline').innerHTML = `<strong>${tg.headline}</strong>`;
+    const missingList = [...(tg.missing_lead_events || []), ...(tg.missing_intent_events || []), ...(tg.missing_engagement_events || [])];
+    $('ga4-gap-detail').innerHTML = `Over the last 90 days GA4 fired <strong>${(D.ga4.events_categorized.reduce((s, e) => s + e.count, 0)).toLocaleString()}</strong> total events across ${D.ga4.events_categorized.length} event types, but <strong>${tg.true_lead_events_count_90d} true lead/booking events</strong>. Only ${tg.form_start_count_90d} form_starts (intent only, not completions). Missing: ${missingList.map(e => `<code>${e}</code>`).join(', ')}. Lever D's GTM wiring resolves this in M1-M2.`;
+    const b = D.ga4.buckets_90d || {};
+    const buckets = [
+      { label: 'TRUE leads (90d)', value: (b.lead || 0) + (b.booking || 0), note: 'form_submit + booking_confirmed', color: '#10b981' },
+      { label: 'Form starts (intent only)', value: b.intent_form || 0, note: 'form_start without completion', color: '#f59e0b' },
+      { label: 'Phone + email clicks', value: (b.intent_call || 0) + (b.intent_email || 0), note: 'tracked separately as qualified intent', color: '#8b5cf6' },
+    ];
+    $('ga4-event-buckets').innerHTML = buckets.map(b => `<div class="rounded-lg border border-slate-200 bg-white p-3" style="border-left:4px solid ${b.color}">
+      <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">${b.label}</div>
+      <div class="text-2xl font-extrabold text-slate-900">${b.value}</div>
+      <div class="text-[11px] text-slate-600 mt-1">${b.note}</div>
+    </div>`).join('');
   }
 
   // LD chart, cohort A on a monthly category axis. Buckets each month and
@@ -291,8 +394,7 @@
         data: {
           labels: labels,
           datasets: [
-            { label: 'Top-10 cells', data: top10, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true },
-            { label: 'Top-3 cells', data: top3, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, fill: false },
+            { label: 'Top-3 cells', data: top3, borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,.12)', borderWidth: 3, tension: .3, pointRadius: 4, fill: true },
           ]
         },
         options: {
@@ -310,7 +412,7 @@
       const t10Last = top10[top10.length-1];
       const t3Peak = Math.max(...top3.filter(v => v != null));
       const t3PeakLabel = labels[top3.indexOf(t3Peak)];
-      $('ld-caption').innerHTML = `Monthly readings across ${labels.length} months. Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> over the period, with a peak of <strong>${t3Peak} cells in ${t3PeakLabel}</strong>. Top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling have given back gains since the Mar peak.`;
+      $('ld-caption').innerHTML = `Monthly readings across ${labels.length} months. Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> over the period, with a peak of <strong>${t3Peak} cells in ${t3PeakLabel}</strong>. Deep tissue massage carries the lift; acupuncture and dry needling have given back gains since the Mar peak.`;
     }
   } catch (err) {
     console.error('LD chart render failed', err);

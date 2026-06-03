@@ -54,9 +54,9 @@
     "ld_window_days": 64,
     "gsc_window": "2025-06-02 → 2026-05-31",
     "gsc_window_days": 365,
-    "ga4_status": "Not connected; owner ask outstanding (no GA4 property registered under HQDM access)."
+    "ga4_status": "Connected (property 510766498); sessions data clean, but zero conversion events configured. Lead-attribution tracking gap is the open work."
   },
-  "tldr": "Across the 5 services with 6-month Local Falcon history (chiropractor, acupuncture, cold laser, dry needling, deep tissue), portfolio top-3 cells went 35 → 64 (+29) and top-10 cells went 140 → 144 (+4) between Nov 21 2025 and May 15 2026. Deep tissue massage is the engine of that lift: 18 top-3 cells at baseline, 47 today (+29, mean dx +4.26), nearest competitor at 25. Cold laser is the surprise: from 1 to 8 top-3 cells with a +7.5 mean rank dx, mostly through specialty long-tail. The two newest tracked queries (massage near me, massage therapy near me) show net-new visibility from near-zero. The bleed sits on pregnancy/prenatal massage where Sage Blossom's 209-review pin took 8 top-3 cells on pregnancy-massage-near-me alone since Mar 12. DataForSEO confirms 15 services where Deep Relief sits #1–#3 at the storefront but falls past top-20 portfolio-wide. The work is off-pin reach (service pages, city-modifier slugs), not adding to tracking. GA4 still not connected (Owner Ask OA-1).",
+  "tldr": "Across the 5 services with 6-month Local Falcon history (chiropractor, acupuncture, cold laser, dry needling, deep tissue), portfolio top-3 cells went 35 → 64 (+29) and top-10 cells went 140 → 144 (+4) between Nov 21 2025 and May 15 2026. Deep tissue massage is the engine of that lift: 18 top-3 cells at baseline, 47 today (+29, mean dx +4.26), nearest competitor at 25. Cold laser is the surprise: from 1 to 8 top-3 cells with a +7.5 mean rank dx, mostly through specialty long-tail. The two newest tracked queries (massage near me, massage therapy near me) show net-new visibility from near-zero. The bleed sits on pregnancy/prenatal massage where Sage Blossom's 209-review pin took 8 top-3 cells on pregnancy-massage-near-me alone since Mar 12. DataForSEO confirms 15 services where Deep Relief sits #1–#3 at the storefront but falls past top-20 portfolio-wide. The work is off-pin reach (service pages, city-modifier slugs), not adding to tracking. GA4 is connected (property 510766498, ~1,500 sessions/mo, 67% Organic Search), but zero conversion events fire today, so lead attribution is the open work (Owner Ask OA-1, Lever D).",
   "headline": {
     "h2": "Six months of Local Falcon history: portfolio top-10 cells +4 on the 5 long-history kws. Deep tissue massage drove most of the lift.",
     "lede": "Across the 5 services with continuous Local Falcon coverage since Nov 21 2025 (chiropractor, acupuncture, cold laser austin, dry needling near me, deep tissue massage): <strong>portfolio top-10 footprint grew from 140 to 144 cells (+4)</strong>, top-3 cells from 35 to 64 (+29). Deep tissue massage carried the lift: 18 top-3 cells in November to 47 today, and the moat is now decisive (nearest competitor at 25). Cold laser austin moved from 1 to 8 top-3 cells with a +7.5 mean rank delta, opening up on specialty long-tail even though the category-exact Laser Therapy Clinic-Austin still owns the head queries. Acupuncture and dry needling softened (mean dx -3.2 and -3.8), as neither service has a dedicated landing page today.<br><br>Two new tracked queries entered the dataset in October 2025 with near-zero visibility: <code>massage near me</code> (40,500 Austin DMA/mo) and <code>massage therapy near me</code>. Both lifted hard: massage near me from 0 to 1 top-3 + 53 visible cells, massage therapy near me from 3 to 20 top-3 cells. The bleed remains pregnancy/prenatal massage where Sage Blossom's 209-review pin has been taking share over the last 60 days. <br><br>GSC over the same window: 7,839 clicks against 945,867 impressions, sitewide CTR 0.83%. Impressions +2.8% H2 vs H1 (reach is healthy) while non-brand earns 0.4% CTR vs brand's 22%, so click capture (not reach) is the bottleneck. <strong>GA4 is still not connected</strong> so conversion-side measurement remains the single largest open question.",
@@ -3417,6 +3417,11 @@
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
+      "kw": "pediatric chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Sprout Chiropractic"
+    },
+    {
       "kw": "spinal decompression austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
@@ -3427,24 +3432,19 @@
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
-      "kw": "pediatric chiropractor austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "Sprout Chiropractic"
-    },
-    {
       "kw": "acupuncture south austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "South Austin Community Acupuncture"
     },
     {
-      "kw": "fertility acupuncture austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
-    },
-    {
       "kw": "auto accident chiropractor austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "fertility acupuncture austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Mother Nature's Acupuncture & Chinese Herbs"
     }
   ],
   "gsc": {
@@ -4152,6 +4152,489 @@
       "imps_pct": 2.8
     }
   },
+  "ga4": {
+    "meta": {
+      "property_id": "510766498",
+      "account": "HQDM Clients (Local Campaign)",
+      "property_name": "Deep Relief",
+      "window_days": 400,
+      "window_start": "2025-04-29",
+      "window_end": "2026-06-03"
+    },
+    "monthly_trend": {
+      "months": [
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "month_labels_short": [
+        "Oct 2025",
+        "Nov 2025",
+        "Dec 2025",
+        "Jan 2026",
+        "Feb 2026",
+        "Mar 2026",
+        "Apr 2026",
+        "May 2026",
+        "Jun 2026"
+      ],
+      "channels": {
+        "Organic Search": [
+          81,
+          1032,
+          918,
+          856,
+          946,
+          887,
+          890,
+          1002,
+          69
+        ],
+        "Direct": [
+          179,
+          1846,
+          984,
+          487,
+          422,
+          311,
+          462,
+          372,
+          21
+        ],
+        "Paid Search": [
+          0,
+          0,
+          8,
+          158,
+          182,
+          53,
+          113,
+          30,
+          1
+        ],
+        "Referral": [
+          17,
+          189,
+          142,
+          128,
+          162,
+          92,
+          97,
+          51,
+          4
+        ],
+        "Organic Social": [
+          1,
+          30,
+          19,
+          21,
+          40,
+          37,
+          40,
+          15,
+          1
+        ],
+        "Paid Social": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Email": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Display": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Cross-network": [
+          0,
+          0,
+          0,
+          5,
+          10,
+          1,
+          1,
+          0,
+          0
+        ],
+        "Unassigned": [
+          2,
+          56,
+          25,
+          16,
+          5,
+          20,
+          13,
+          16,
+          35
+        ]
+      },
+      "total_sessions": [
+        280,
+        3153,
+        2096,
+        1671,
+        1773,
+        1401,
+        1616,
+        1486,
+        131
+      ]
+    },
+    "acquisition_summary": {
+      "last_90d": [
+        {
+          "sessionDefaultChannelGroup": "Organic Search",
+          "sessions": 2729,
+          "engagedSessions": 1975,
+          "totalUsers": 1938,
+          "conversions": 0,
+          "pct_sessions": 61.4
+        },
+        {
+          "sessionDefaultChannelGroup": "Direct",
+          "sessions": 1123,
+          "engagedSessions": 722,
+          "totalUsers": 837,
+          "conversions": 0,
+          "pct_sessions": 25.3
+        },
+        {
+          "sessionDefaultChannelGroup": "Referral",
+          "sessions": 234,
+          "engagedSessions": 158,
+          "totalUsers": 127,
+          "conversions": 0,
+          "pct_sessions": 5.3
+        },
+        {
+          "sessionDefaultChannelGroup": "Paid Search",
+          "sessions": 190,
+          "engagedSessions": 144,
+          "totalUsers": 174,
+          "conversions": 0,
+          "pct_sessions": 4.3
+        },
+        {
+          "sessionDefaultChannelGroup": "Organic Social",
+          "sessions": 87,
+          "engagedSessions": 65,
+          "totalUsers": 63,
+          "conversions": 0,
+          "pct_sessions": 2.0
+        },
+        {
+          "sessionDefaultChannelGroup": "Unassigned",
+          "sessions": 82,
+          "engagedSessions": 27,
+          "totalUsers": 75,
+          "conversions": 0,
+          "pct_sessions": 1.8
+        },
+        {
+          "sessionDefaultChannelGroup": "Cross-network",
+          "sessions": 2,
+          "engagedSessions": 2,
+          "totalUsers": 2,
+          "conversions": 0,
+          "pct_sessions": 0.0
+        }
+      ],
+      "last_180d": [
+        {
+          "sessionDefaultChannelGroup": "Organic Search",
+          "sessions": 5397,
+          "engagedSessions": 3852,
+          "totalUsers": 3697,
+          "conversions": 0,
+          "pct_sessions": 55.1
+        },
+        {
+          "sessionDefaultChannelGroup": "Direct",
+          "sessions": 2883,
+          "engagedSessions": 1593,
+          "totalUsers": 2193,
+          "conversions": 0,
+          "pct_sessions": 29.4
+        },
+        {
+          "sessionDefaultChannelGroup": "Referral",
+          "sessions": 654,
+          "engagedSessions": 386,
+          "totalUsers": 325,
+          "conversions": 0,
+          "pct_sessions": 6.7
+        },
+        {
+          "sessionDefaultChannelGroup": "Paid Search",
+          "sessions": 543,
+          "engagedSessions": 399,
+          "totalUsers": 505,
+          "conversions": 0,
+          "pct_sessions": 5.5
+        },
+        {
+          "sessionDefaultChannelGroup": "Organic Social",
+          "sessions": 170,
+          "engagedSessions": 126,
+          "totalUsers": 140,
+          "conversions": 0,
+          "pct_sessions": 1.7
+        },
+        {
+          "sessionDefaultChannelGroup": "Unassigned",
+          "sessions": 128,
+          "engagedSessions": 49,
+          "totalUsers": 113,
+          "conversions": 0,
+          "pct_sessions": 1.3
+        },
+        {
+          "sessionDefaultChannelGroup": "Cross-network",
+          "sessions": 17,
+          "engagedSessions": 16,
+          "totalUsers": 17,
+          "conversions": 0,
+          "pct_sessions": 0.2
+        },
+        {
+          "sessionDefaultChannelGroup": "Email",
+          "sessions": 6,
+          "engagedSessions": 1,
+          "totalUsers": 6,
+          "conversions": 0,
+          "pct_sessions": 0.1
+        }
+      ],
+      "last_365d": [
+        {
+          "sessionDefaultChannelGroup": "Organic Search",
+          "sessions": 6655,
+          "engagedSessions": 4702,
+          "totalUsers": 4510,
+          "conversions": 0,
+          "pct_sessions": 49.2
+        },
+        {
+          "sessionDefaultChannelGroup": "Direct",
+          "sessions": 5018,
+          "engagedSessions": 2276,
+          "totalUsers": 3902,
+          "conversions": 0,
+          "pct_sessions": 37.1
+        },
+        {
+          "sessionDefaultChannelGroup": "Referral",
+          "sessions": 883,
+          "engagedSessions": 478,
+          "totalUsers": 471,
+          "conversions": 0,
+          "pct_sessions": 6.5
+        },
+        {
+          "sessionDefaultChannelGroup": "Paid Search",
+          "sessions": 545,
+          "engagedSessions": 399,
+          "totalUsers": 507,
+          "conversions": 0,
+          "pct_sessions": 4.0
+        },
+        {
+          "sessionDefaultChannelGroup": "Organic Social",
+          "sessions": 204,
+          "engagedSessions": 148,
+          "totalUsers": 173,
+          "conversions": 0,
+          "pct_sessions": 1.5
+        },
+        {
+          "sessionDefaultChannelGroup": "Unassigned",
+          "sessions": 188,
+          "engagedSessions": 61,
+          "totalUsers": 170,
+          "conversions": 0,
+          "pct_sessions": 1.4
+        },
+        {
+          "sessionDefaultChannelGroup": "Cross-network",
+          "sessions": 17,
+          "engagedSessions": 16,
+          "totalUsers": 17,
+          "conversions": 0,
+          "pct_sessions": 0.1
+        },
+        {
+          "sessionDefaultChannelGroup": "Email",
+          "sessions": 6,
+          "engagedSessions": 1,
+          "totalUsers": 6,
+          "conversions": 0,
+          "pct_sessions": 0.0
+        },
+        {
+          "sessionDefaultChannelGroup": "Organic Shopping",
+          "sessions": 1,
+          "engagedSessions": 0,
+          "totalUsers": 1,
+          "conversions": 0,
+          "pct_sessions": 0.0
+        }
+      ]
+    },
+    "events_categorized": [
+      {
+        "event": "video_progress",
+        "count": 82696,
+        "users": 2135,
+        "category": "video",
+        "category_label": "Video progress"
+      },
+      {
+        "event": "video_start",
+        "count": 23259,
+        "users": 2197,
+        "category": "video",
+        "category_label": "Video start"
+      },
+      {
+        "event": "video_complete",
+        "count": 19659,
+        "users": 1407,
+        "category": "video",
+        "category_label": "Video complete"
+      },
+      {
+        "event": "page_view",
+        "count": 8580,
+        "users": 3111,
+        "category": "nav",
+        "category_label": "Page view (navigation)"
+      },
+      {
+        "event": "user_engagement",
+        "count": 4438,
+        "users": 1720,
+        "category": "nav",
+        "category_label": "User engagement (navigation)"
+      },
+      {
+        "event": "session_start",
+        "count": 4398,
+        "users": 3100,
+        "category": "nav",
+        "category_label": "Session start (navigation)"
+      },
+      {
+        "event": "first_visit",
+        "count": 2972,
+        "users": 2968,
+        "category": "nav",
+        "category_label": "First visit (navigation)"
+      },
+      {
+        "event": "scroll",
+        "count": 2269,
+        "users": 890,
+        "category": "nav",
+        "category_label": "Scroll (navigation)"
+      },
+      {
+        "event": "click",
+        "count": 2182,
+        "users": 1269,
+        "category": "nav",
+        "category_label": "Click (generic, NOT a lead)"
+      },
+      {
+        "event": "form_start",
+        "count": 5,
+        "users": 5,
+        "category": "intent_form",
+        "category_label": "Form start (intent, not a completion)"
+      }
+    ],
+    "buckets_90d": {
+      "lead": 0,
+      "booking": 0,
+      "intent_call": 0,
+      "intent_email": 0,
+      "intent_form": 5,
+      "engagement_gbp": 0
+    },
+    "tracking_gap": {
+      "headline": "No conversion events configured in GA4. Lead generation cannot be measured until events are wired.",
+      "missing_lead_events": [
+        "form_submit",
+        "contact_form_submit",
+        "generate_lead",
+        "booking_confirmed",
+        "session_booked"
+      ],
+      "missing_intent_events": [
+        "click_phone_number",
+        "click_to_dial",
+        "click_to_email"
+      ],
+      "missing_engagement_events": [
+        "gmb_click"
+      ],
+      "events_present": [
+        "video_progress",
+        "video_start",
+        "video_complete",
+        "page_view",
+        "user_engagement",
+        "session_start",
+        "first_visit",
+        "scroll",
+        "click",
+        "form_start"
+      ],
+      "form_start_count_90d": 5,
+      "true_lead_events_count_90d": 0,
+      "implementation_path": [
+        "Wire form_submit / contact_form_submit in GTM on every booking form thank-you state.",
+        "Wire click_phone_number on every tel: link in header, footer, service pages.",
+        "Wire click_to_email on every mailto: link.",
+        "Mark form_submit + contact_form_submit + booking_confirmed as Key Events in GA4 admin.",
+        "Reconcile against the salon booking system (meevo-ob.saloncloudsplus.com appears as referral, confirming bookings flow through that platform)."
+      ]
+    },
+    "attribution_rules": {
+      "leads_definition": "form_submit + contact_form_submit + booking_confirmed (when wired)",
+      "phone_clicks_separate": "click_phone_number tracked separately as qualified intent, NEVER bundled into Leads",
+      "email_clicks_separate": "click_to_email tracked separately as qualified intent, NEVER bundled into Leads",
+      "gbp_clicks_separate": "gmb_click is engagement, NOT a conversion (per BB Massage convention)",
+      "current_ga4_status": "0 conversion events firing; tracking implementation required before lead-attribution can be reported"
+    }
+  },
   "search_demand": [
     {
       "keyword": "massage near me",
@@ -4415,16 +4898,20 @@
     },
     {
       "id": "D",
-      "name": "Connect GA4: close the conversion-side measurement blackout",
+      "name": "Wire GA4 conversion events: close the lead-attribution gap",
       "color": "indigo",
       "priority": "P1 (owner-gated)",
-      "why": "GA4 is not connected. We can see GSC clicks (7,839 in 365d), Maps reach, and competitor movement, but we cannot see leads, calls, bookings, or revenue. With 96.6% of impressions non-brand and 0.4% CTR there, the click → booking ratio is the single most actionable diagnostic we can’t run.",
+      "why": "GA4 is connected (property 510766498) and sessions data is clean: ~1,500 sessions/month, ~67% Organic Search, ~25% Direct, with the trajectory growing through Q1 2026. The gap is lead-side: zero conversion events fire (no form_submit, no click_phone_number, no gmb_click, no booking_confirmed) despite 150K total events in 90 days. We can see whom Google sends but not what they do after. The salon-booking referral pattern (meevo-ob.saloncloudsplus.com shows as the #1 referral channel) tells us bookings flow through the meevo platform, which is where the booking_confirmed event should fire back into GA4.",
       "actions": [
-        "Owner ask: grant info@hqdm.io editor access to the Deep Relief GA4 property (or share property ID if it already exists).",
-        "Once connected: rebuild conversion stack (form submits + click_phone + click_email + booking confirmations) and categorize events per BB Massage convention (booking + lead = TRUE conversion, calls = qualified intent, GBP listing taps = engagement, not conversion).",
-        "Wire GTM-side phone-click and form-submit tracking if missing."
+        "GTM: wire form_submit (and contact_form_submit if the site uses both naming conventions) on every booking-form thank-you state.",
+        "GTM: wire click_phone_number on every tel: link sitewide (header, footer, service pages).",
+        "GTM: wire click_to_email on every mailto: link.",
+        "GTM: wire gmb_click on the GBP-tagged inbound URL parameter so we can isolate the GBP-driven traffic separately from Organic Search.",
+        "Meevo (salon booking): emit booking_confirmed back into GA4 via the postMessage / dataLayer bridge so completed bookings are attributable.",
+        "GA4 admin: mark form_submit + booking_confirmed + (contact_form_submit if present) as Key Events. Leave click_phone, click_email, gmb_click as standard events (NOT marked as Key) so they don't pollute the conversion count.",
+        "Re-run the lead-attribution analysis 30 days after wiring lands. Leads = form_submit + contact_form_submit + booking_confirmed only; phone/email/GBP clicks reported separately as qualified intent."
       ],
-      "outcome": "Conversion-side picture matches the maps-side picture; we can attribute lift to the right lever."
+      "outcome": "Within 60 days of wiring: the lead/booking volume per channel is measurable; we can finally attribute the +29 top-3 cell lift to bookings."
     },
     {
       "id": "E",
@@ -4457,10 +4944,10 @@
   "owner_asks": [
     {
       "id": "OA-1",
-      "title": "Grant GA4 access for Deep Relief property",
-      "why": "No GA4 property is registered under HQDM access. Without GA4 we can see search-side performance (clicks, impressions, map rank) but cannot connect that to leads / bookings / revenue. The next quarter’s diagnosis needs this connected.",
-      "asked_of": "Owner (Deep Relief)",
-      "status": "Outstanding"
+      "title": "Wire conversion events in GA4 (form_submit, click_phone, gmb_click, booking_confirmed)",
+      "why": "GA4 property 510766498 is connected and we can see sessions clearly (~1,500/month, ~67% Organic Search). But there are zero conversion events configured: 0 form_submit, 0 click_phone_number, 0 gmb_click, 0 booking_confirmed in the last 90 days, despite 150K total events firing. Only 5 form_starts. We cannot tell which sessions translate into leads or bookings until conversion events are wired in GTM.",
+      "asked_of": "Owner + Dev",
+      "status": "Outstanding (was: grant access; resolved 2026-06-03)"
     },
     {
       "id": "OA-2",
@@ -5197,10 +5684,11 @@
     }
   ],
   "attribution_rules": {
-    "leads_definition": "form_submit + contact_form_submit (when GA4 connected)",
-    "calls_separate": "click_to_dial + click_phone_number tracked separately; never bundled into Leads",
+    "leads_definition": "form_submit + contact_form_submit + booking_confirmed (none firing today; see OA-1)",
+    "calls_separate": "click_to_dial + click_phone_number tracked separately as qualified intent; never bundled into Leads",
+    "email_separate": "click_to_email tracked separately as qualified intent; never bundled into Leads",
     "gbp_clicks_separate": "gmb_click is engagement-not-conversion; never reported as a conversion",
     "partial_period": "Latest month in trend marked with * if days_actual < days_in_month",
-    "ga4_status": "Not connected; see Owner Ask OA-1"
+    "ga4_status": "Connected (property 510766498); 0 conversion events firing; see Owner Ask OA-1 + Lever D for the wiring plan"
   }
 }
