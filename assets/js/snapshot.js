@@ -83,9 +83,14 @@
     // newer "where the brand structurally already wins" view; layout scales
     // 1/2/3-up so the grid stays balanced no matter which subset is present.
     const tablesList = [s.maps, s.anchor_towns_table, s.competitors].filter(t => t && t.enabled);
-    const tablesOn = tablesList.length;
-    const tablesGrid = tablesOn >= 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
-    const tablesHtml = tablesList.map(tablePanel).join('');
+    // Opt-in {full:true} tables render stacked full-width (for wide multi-column
+    // matrices like a per-pin churn grid); the rest pack into the 1/2-up grid as
+    // before. Clients without the flag are unaffected.
+    const fullTables = tablesList.filter(t => t.full);
+    const gridTables = tablesList.filter(t => !t.full);
+    const tablesGrid = gridTables.length >= 2 ? 'lg:grid-cols-2' : 'lg:grid-cols-1';
+    const fullTablesHtml = fullTables.map(t => `<section class="mb-3">${tablePanel(t)}</section>`).join('');
+    const gridTablesHtml = gridTables.length ? `<section class="grid grid-cols-1 ${tablesGrid} gap-4 mb-3">${gridTables.map(tablePanel).join('')}</section>` : '';
     const engagementHtml = (eng && eng.enabled) ? `
       <section class="mb-3">
         <div class="panel p-3.5">
@@ -177,7 +182,7 @@
         </div>
       </section>` : ''}`}
 
-      ${tablesOn ? `<section class="grid grid-cols-1 ${tablesGrid} gap-4 mb-3">${tablesHtml}</section>` : ''}
+      ${fullTablesHtml}${gridTablesHtml}
 
       ${engagementHtml}
 

@@ -31,6 +31,11 @@ table.mv td { font-size: 0.74rem; padding: 0.32rem 0.4rem; border-bottom: 1px so
 table.mv td:first-child { text-align: left; font-weight: 600; color: #1f2937; }
 table.mv tr.me td { background: #eff6ff; color: #13315c; }
 table.mv tr.me td:first-child { font-weight: 800; }
+table.mv td.lcell { text-align: left; }
+.mv td .sub { display: block; font-size: 0.6rem; font-weight: 500; color: #94a3b8; letter-spacing: 0.02em; margin-top: 0.05rem; }
+.mv .rankpill { display: inline-block; font-size: 0.58rem; font-weight: 800; letter-spacing: 0.04em; padding: 0.1rem 0.45rem; border-radius: 999px; white-space: nowrap; }
+.mv .rankpill.good { background: #ecfdf5; color: #047857; }
+.mv .rankpill.watch { background: #fffbeb; color: #b45309; }
 
 .arrow-up::before { content: '\25B2 '; color: #047857; font-size: 0.6rem; }
 .arrow-dn::before { content: '\25BC '; color: #b45309; font-size: 0.6rem; }
