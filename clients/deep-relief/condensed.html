@@ -131,8 +131,8 @@
     </section>
 
     <section class="mb-5">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-3" id="tasks-rows"></div>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan — 2 services + 5 blogs + 3 suburbs / month</h2>
+      <div class="space-y-3" id="tasks-rows"></div>
     </section>
 
     <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
@@ -260,18 +260,36 @@
     </div>
   </li>`).join('');
 
-  // Tasks
-  const byMonth = {};
-  D.tasks.forEach(t => { (byMonth[t.month] = byMonth[t.month] || []).push(t); });
-  $('tasks-rows').innerHTML = [1, 2, 3].map(m => `<div class="panel" style="border-top:4px solid ${m === 1 ? '#10b981' : m === 2 ? '#1d5b8a' : '#6366f1'}; padding:1rem">
-    <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-2">Month ${m} · ${m === 1 ? 'June' : m === 2 ? 'July' : 'August'} 2026</div>
-    <ul class="space-y-1.5">
-      ${(byMonth[m] || []).map(t => `<li class="text-[12px] flex gap-1.5">
-        <span class="text-slate-400">▸</span>
-        <span class="text-slate-800">${t.title}</span>
-      </li>`).join('')}
-    </ul>
-  </div>`).join('');
+  // Tasks by month
+  if (D.tasks_by_month) {
+    const surfaceColor = {
+      'Services (2)': '#10b981',
+      'Blogs (5)': '#1d5b8a',
+      'Suburb pages (3)': '#8b5cf6',
+      'On-page + ops': '#f59e0b',
+    };
+    $('tasks-rows').innerHTML = D.tasks_by_month.map(m => {
+      const surfaceHtml = Object.entries(m.deliverables).map(([surface, items]) => `
+        <div>
+          <div class="text-[9.5px] font-bold uppercase tracking-wider mb-1" style="color:${surfaceColor[surface] || '#64748b'}">${surface}</div>
+          <ul class="space-y-1">
+            ${items.map(it => `<li class="text-[11.5px]">
+              <code class="text-slate-900 font-semibold">${it.item}</code>
+              <span class="text-slate-500"> · ${it.note}</span>
+            </li>`).join('')}
+          </ul>
+        </div>`).join('');
+      return `<div class="panel" style="border-top:4px solid ${m.color}; padding:0.85rem 1rem">
+        <div class="flex items-baseline gap-2 mb-1 flex-wrap">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">${m.month_label}</span>
+          <span class="text-sm font-bold text-slate-900">· ${m.theme}</span>
+        </div>
+        <p class="text-[11.5px] text-slate-600 mb-3 leading-relaxed">${m.summary}</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">${surfaceHtml}</div>
+        <p class="text-[10.5px] text-slate-500 italic mt-3 pt-2 border-t border-slate-100"><strong>By end of month:</strong> ${m.by_end_of_month}</p>
+      </div>`;
+    }).join('');
+  }
 })();
 </script>
 </body>

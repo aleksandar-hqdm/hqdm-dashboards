@@ -7,6 +7,7 @@
   <title>Deep Relief · Client Snapshot · HQDM</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -190,14 +191,14 @@
   const bp = D.gsc.brand_pull;
   const h = D.gsc.halves;
 
-  $('exec-1').innerHTML = `Across the 4 Local Falcon map scans we ran between March 12 and May 15, your Maps presence widened in nine of ten ways that matter. <strong>Top-10 cells across all 8 tracked services grew from ${t10_b ? t10_b[1] : 328} to 363 (+35)</strong> — your profile is now showing in more of South Austin than before. <strong>Deep tissue massage</strong> is your defining service: 47 top-3 cells, almost twice the nearest competitor (Deeply Therapeutic at 25 cells). A separate scan run at your storefront's exact coordinates confirms you're sitting at <strong>#1 at the center</strong> for 9 more services — <code>chiropractor near me</code> (3,600 Austin searches/mo), <code>acupuncture austin</code> (1,000/mo), <code>deep tissue massage austin</code> (590/mo), <code>cupping therapy austin</code> (170/mo) and others — but the same queries' wider-grid averages sit at rank 17–20+, which means the win evaporates within 1–2 miles. That's the gap this quarter's plan closes.`;
+  $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. A pin-level scan at the storefront also identified 15 services where you sit at #1–#3 at center but lose visibility past 1–2 miles — that's the off-pin reach gap this quarter's plan closes via dedicated service + suburb pages.`;
 
-  $('exec-2').innerHTML = `The one watch area is <strong>pregnancy + prenatal massage</strong>, where a competitor pin (Sage Blossom Massage's newer 209-review listing) has been gaining share — you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" over the window. That's the single largest category bleed and the first lever this quarter aims to reverse. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong> — up ${h.imps_pct}% over the last 6 months — but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
+  $('exec-2').innerHTML = `Two watch areas: <strong>acupuncture and dry needling</strong> softened across the 6 months (mean rank dx -3.2 and -3.8 respectively) — services that don't have dedicated landing pages today. And <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days — you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" alone. Both are reversed in this quarter's plan via dedicated service-page builds. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong> — up ${h.imps_pct}% over the last 6 months — but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
 
   // Chips
   $('chips').innerHTML = [
     { v: '47 top-3', l: 'deep tissue massage · the moat', good: true },
-    { v: '+35 cells', l: 'top-10 footprint gained · Mar → May', good: true },
+    { v: '+29 cells', l: 'top-3 lifted on 5 kws · Nov 2025 → May 2026', good: true },
     { v: '15 services', l: 'you win at the storefront · reach is the work', good: true },
     { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · organic search', good: true },
     { v: 'Sage Blossom', l: 'the pregnancy-massage watch competitor', watch: true },
@@ -226,44 +227,51 @@
   });
   $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter — total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work — we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
 
-  // LD chart
-  $('ld-window').textContent = D.trajectory_ld.labels.join(' · ') + ' · top-3 + top-10 cells across 8 keywords';
+  // LD chart — cohort A on time axis
+  const traj = D.trajectory_ld;
+  const ca = traj.cohort_a || { top3: [], top10: [] };
+  const datesIso = traj.dates_iso || traj.labels;
+  $('ld-window').textContent = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')} · 5 keywords with full 6-month history · ${traj.cohort_a_baseline_date} → ${traj.cohort_a_current_date}`;
   new Chart($('ld-chart'), {
     data: {
-      labels: D.trajectory_ld.labels,
       datasets: [
-        { type: 'line', label: 'Top-10 cells', data: D.trajectory_ld.portfolio.top10, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true },
-        { type: 'line', label: 'Top-3 cells', data: D.trajectory_ld.portfolio.top3, borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4 },
+        { label: 'Top-10 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top10[i] })), borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true, spanGaps: true },
+        { label: 'Top-3 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top3[i] })), borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, spanGaps: true },
       ]
     },
     options: {
       responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
       plugins: { legend: { display: false }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+        x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
         y: { beginAtZero: true, ticks: { font: { size: 9 } } },
       }
     }
   });
-  const t3Series = D.trajectory_ld.portfolio.top3;
-  const t10Series = D.trajectory_ld.portfolio.top10;
-  $('ld-caption').innerHTML = `Top-10 cells: <strong>${t10Series[0]} → ${t10Series[t10Series.length-1]} (${t10Series[t10Series.length-1]-t10Series[0] >= 0 ? '+' : ''}${t10Series[t10Series.length-1]-t10Series[0]})</strong>. Top-3 cells flat-to-down (-11) because of the pregnancy-massage cluster bleed — everything else either held or expanded.`;
+  const t3v = ca.top3.filter(v => v != null);
+  const t10v = ca.top10.filter(v => v != null);
+  const t3First = t3v[0] || 0;
+  const t3Last = t3v[t3v.length-1] || 0;
+  const t10First = t10v[0] || 0;
+  const t10Last = t10v[t10v.length-1] || 0;
+  $('ld-caption').innerHTML = `Top-3 cells: <strong>${t3First} → ${t3Last} (${t3Last-t3First >= 0 ? '+' : ''}${t3Last-t3First})</strong> · top-10: <strong>${t10First} → ${t10Last} (${t10Last-t10First >= 0 ? '+' : ''}${t10Last-t10First})</strong>. Deep tissue massage carries the lift; acupuncture and dry needling softened over the same window (no dedicated landing pages today).`;
 
   // Leads
   $('leads').innerHTML = [
-    `<strong>Deep tissue massage</strong> — 47 top-3 grid cells across South Austin · nearest competitor sits at 25. Your single most decisive ranking advantage.`,
-    `<strong>Multi-category clinic</strong> — chiropractor primary + acupuncture clinic + massage therapist secondary. That breadth is the reason you hold position on 15+ services from one pin.`,
-    `<strong>4.9★ × 443 reviews</strong> — more reviews than every direct South Austin competitor in your category mix. The trust signal is locked in.`,
-    `<strong>${fmt(g.clicks_365d)} organic clicks / year</strong> from ${fmt(g.impressions_365d)} impressions — Google routinely shows your site for service queries; we're widening the click-through next.`,
-    `<strong>15 services where you rank #1–#3 at the storefront</strong>: <code>chiropractor near me</code> (#1) · <code>massage therapy austin</code> (#1) · <code>acupuncture austin</code> (#1) · <code>cupping therapy austin</code> (#1) · <code>massage near me</code> (#2, 40,500/mo) · and 10 more. The wider grid for these queries is the opportunity — service-page builds extend the win past the pin.`,
+    `<strong>Deep tissue massage — 47 top-3 cells</strong>, up from 18 in November 2025 (+29). Nearest competitor at 25. Your single most decisive ranking advantage, and it's still widening.`,
+    `<strong>Cold laser austin — 1 to 8 top-3 cells</strong> over 6 months, with +7.5 mean rank dx. Long-tail openings even though the exact-name competitor still owns the head query.`,
+    `<strong>Massage therapy near me — 3 to 20 top-3 cells</strong> since October 2025 (+17). One of the two new queries we added; built up from near-zero.`,
+    `<strong>Multi-category clinic</strong> — chiropractor primary + acupuncture clinic + massage therapist secondary. The breadth is why you hold position on 15+ services from one pin.`,
+    `<strong>4.9★ × 443 reviews</strong> — more reviews than every direct South Austin competitor in your category mix. Trust signal locked.`,
+    `<strong>${fmt(g.clicks_365d)} organic clicks / year</strong> from ${fmt(g.impressions_365d)} impressions. Google shows your site to more people every quarter; click capture is the unlock.`,
   ].map(li => `<li class="flex gap-2"><span class="text-emerald-500 font-bold mt-0.5">✓</span><span>${li}</span></li>`).join('');
 
   // Reshuffle
   $('reshuffle').innerHTML = [
-    `<strong>Sage Blossom Massage</strong> (the 209-review listing) is taking share on pregnancy + prenatal — you lost 8 top-3 cells on "pregnancy massage near me" between March and May. Lever 2 puts a dedicated prenatal landing page + outreach to doulas / Austin Mom blogs in motion.`,
-    `<strong>Laser Therapy Clinic-Austin</strong> owns "cold laser austin" absolutely — 133/133 grid cells in top-3 — because their GBP category is an exact-name match. The honest read: this is unwinnable. Lever 6 pivots the cold-laser page to "cold laser + condition" long-tail queries (knee pain, neuropathy) where the field is open.`,
-    `<strong>The chiropractor pack</strong> (The Joint Chiropractic × 3 locations + South Austin Chiro) is consolidating top-3 for the unmodified "chiropractor" query. You're not in their top-3 — but you ARE #1 for "chiropractor near me" at your pin, which is the higher-intent query.`,
-    `<strong>Cold laser + Austin Laser Solutions</strong> at Sunset Valley and Bee Cave are accelerating (+49 and +33 top-3 cells respectively). They're category-aligned competitors. Holding our ground at #5 in cold laser is the realistic ceiling.`,
+    `<strong>Sage Blossom Massage</strong> (the 209-review listing) is taking share on pregnancy + prenatal — you lost 8 top-3 cells on "pregnancy massage near me" over the last 60 days. Lever B puts a dedicated prenatal landing page + outreach to doulas / Austin Mom blogs in motion.`,
+    `<strong>Acupuncture and dry needling softened over the 6-month window</strong> — mean rank dx -3.2 and -3.8 respectively. Neither service has a dedicated landing page today, which is why the at-pin strength doesn't carry past 1-2 miles. M1 chiro-vs-acupuncture blog + M2 acupuncture-vs-dry-needling blog reseed traffic; service pages follow.`,
+    `<strong>Laser Therapy Clinic-Austin</strong> owns "cold laser austin" absolutely — 133/133 grid cells in top-3 — because their GBP category is an exact-name match. The honest read: this is unwinnable on the head term. Lever F pivots the cold-laser page to "cold laser + condition" long-tail (knee pain, neuropathy) where you're already lifting (1 to 8 top-3 cells in 6 months).`,
+    `<strong>The chiropractor pack</strong> (The Joint Chiropractic × 3 locations + South Austin Chiro) is consolidating top-3 for the unmodified "chiropractor" query. You're not in their top-3 — but you ARE #1 for "chiropractor near me" at your pin, which is the higher-intent query the plan builds against.`,
   ].map(li => `<li class="flex gap-2"><span class="text-amber-500 font-bold mt-0.5">↻</span><span>${li}</span></li>`).join('');
 
   // Keyword rows

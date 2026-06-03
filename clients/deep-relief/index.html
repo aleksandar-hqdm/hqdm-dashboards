@@ -8,6 +8,7 @@
   <meta name="description" content="Deep Relief — Austin TX multi-service wellness clinic. Strategic dashboard: Maps surface, GSC organic, 6 levers. By Aleksandar Spasevski, HQDM Search Intelligence." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -132,18 +133,18 @@
   </section>
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-    <h2 class="text-2xl font-bold tracking-tight mb-1">8 tracked keywords — Mar 12 → May 15 movement</h2>
-    <p class="text-sm text-ink-500 mb-4">Apples-to-apples grid-cell comparison. Mean dx is the average rank change per cell where Deep Relief stayed visible on both dates (positive = improved).</p>
+    <h2 class="text-2xl font-bold tracking-tight mb-1">10 tracked keywords — earliest-available baseline → May 15 2026</h2>
+    <p class="text-sm text-ink-500 mb-4">Each keyword compared against its own first scan (different keywords entered LD on different dates). 5 long-history kws have Nov 2025 baselines, 2 newer kws have Oct 2025 baselines, 3 pregnancy/prenatal kws have Mar 12 2026 baselines. Mean dx = average rank change per grid cell where Deep Relief stayed visible on both dates (positive = improved).</p>
     <div class="panel overflow-x-auto">
       <table class="w-full text-sm ttable">
         <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
           <th>Query</th>
           <th class="num">SV/mo (Austin)</th>
-          <th class="num">Top-3 Mar 12 → May 15</th>
+          <th class="num">Window</th>
+          <th class="num">Top-3 start → May 15</th>
           <th class="num">Δ top-3</th>
-          <th class="num">Top-10 Mar 12 → May 15</th>
-          <th class="num">Δ top-10</th>
-          <th class="num">Avg rank Mar → May</th>
+          <th class="num">Top-10 start → May 15</th>
+          <th class="num">Avg rank start → May</th>
           <th class="num">Mean dx</th>
           <th>Verdict</th>
         </tr></thead>
@@ -153,11 +154,20 @@
   </section>
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
-    <h2 class="text-2xl font-bold tracking-tight mb-1">LD trajectory — 4 scans</h2>
-    <p class="text-sm text-ink-500 mb-4">Portfolio-wide top-3 cells, top-10 cells, and total visible cells across 8 tracked keywords. The Mar 15 reading is a re-scan 3 days after the Mar 12 baseline — high natural variance on low-coverage queries.</p>
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Local Falcon trajectory — full history</h2>
+    <p class="text-sm text-ink-500 mb-4">Per-keyword top-3 cells on a real time axis spanning every available scan. The 5 long-history queries (chiropractor, acupuncture, cold laser, dry needling, deep tissue) trace from Nov 21 2025 (6 months). The 2 massage-vertical queries (massage near me, massage therapy near me) start Oct 9 2025 (7 months). The 3 pregnancy/prenatal queries only have data from Mar 12 2026 onwards.</p>
     <div class="panel">
-      <div style="height: 280px;"><canvas id="ld-trajectory"></canvas></div>
+      <div style="height: 320px;"><canvas id="ld-trajectory"></canvas></div>
       <p class="text-[11px] text-slate-500 mt-2" id="ld-trajectory-cap"></p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Cohort A portfolio — 5-keyword 6-month roll-up</h2>
+    <p class="text-sm text-ink-500 mb-4">The cleanest engagement-tenure trajectory: chiropractor + acupuncture + cold laser + dry needling + deep tissue massage, summed by date for every reading where all 5 scanned together. Top-3 +29 cells, top-10 +4 — deep tissue and cold laser drove the lift while acupuncture and dry needling softened.</p>
+    <div class="panel">
+      <div style="height: 260px;"><canvas id="cohort-a-trajectory"></canvas></div>
+      <p class="text-[11px] text-slate-500 mt-2" id="cohort-a-cap"></p>
     </div>
   </section>
 
@@ -378,8 +388,8 @@
 
   <section id="tasks" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
     <h2 class="text-2xl font-bold tracking-tight mb-1">90-day plan</h2>
-    <p class="text-sm text-ink-500 mb-4">Tasks grouped by month and tied to a lever. Lever D items unblock when GA4 access lands.</p>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4" id="tasks-by-month"></div>
+    <p class="text-sm text-ink-500 mb-4">Production cadence: 2 service pages + 5 blogs + 3 suburb pages each month, plus per-need on-page work. Each month has a clear theme and end-of-month checkpoint. Lever D items unblock when GA4 access lands.</p>
+    <div class="space-y-5" id="tasks-by-month"></div>
   </section>
 
   <section class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
@@ -510,38 +520,87 @@
     return `<tr>
       <td>${k.kw}</td>
       <td class="num">${fmt(k.search_volume_austin)}</td>
+      <td class="num"><span class="text-[10px] text-slate-500">${k.baseline_date} · ${k.scan_count} scans</span></td>
       <td class="num">${k.top3_base} → ${k.top3_cur}</td>
       <td class="num ${dt3 > 0 ? 'text-emerald-700' : dt3 < 0 ? 'text-rose-700' : ''} font-semibold">${dt3 > 0 ? '+' : ''}${dt3}</td>
       <td class="num">${k.top10_base} → ${k.top10_cur}</td>
-      <td class="num ${dt10 > 0 ? 'text-emerald-700' : dt10 < 0 ? 'text-rose-700' : ''} font-semibold">${dt10 > 0 ? '+' : ''}${dt10}</td>
       <td class="num">${round(k.rank_base, 2)} → ${round(k.rank_cur, 2)}</td>
       <td class="num ${dxColor} font-semibold">${k.mean_dx > 0 ? '+' : ''}${k.mean_dx}</td>
       <td>${verdictPill}</td>
     </tr>`;
   }).join('');
 
-  // ===== LD trajectory =====
+  // ===== LD trajectory — per-kw on time axis =====
   const traj = D.trajectory_ld;
+  // Per-kw color palette (one per kw)
+  const kwColors = {
+    'deep tissue massage': '#10b981',
+    'cold laser austin': '#f59e0b',
+    'chiropractor': '#1d5b8a',
+    'acupuncture': '#8b5cf6',
+    'dry needling near me': '#ef4444',
+    'massage near me': '#0ea5e9',
+    'massage therapy near me': '#06b6d4',
+    'pregnancy massage': '#ec4899',
+    'pregnancy massage near me': '#f43f5e',
+    'prenatal massage near me': '#a855f7',
+  };
+  const datesIso = traj.dates_iso || traj.labels;
+  const trajDatasets = Object.entries(traj.per_kw).map(([kw, series]) => {
+    const pts = datesIso.map((iso, i) => series.top3[i] != null ? { x: iso, y: series.top3[i] } : null).filter(Boolean);
+    return {
+      label: kw,
+      data: pts,
+      borderColor: kwColors[kw] || '#64748b',
+      backgroundColor: (kwColors[kw] || '#64748b') + '20',
+      borderWidth: 2,
+      tension: .3,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      fill: false,
+      spanGaps: true,
+    };
+  });
   new Chart($('ld-trajectory'), {
-    data: {
-      labels: traj.labels,
-      datasets: [
-        { type: 'line', label: 'Visible (top-20)', data: traj.portfolio.top20, borderColor: '#94a3b8', borderWidth: 2, tension: .3, fill: false, pointRadius: 4 },
-        { type: 'line', label: 'Top-10 cells', data: traj.portfolio.top10, borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 3, tension: .3, fill: true, pointRadius: 5 },
-        { type: 'line', label: 'Top-3 cells', data: traj.portfolio.top3, borderColor: '#10b981', borderWidth: 3, tension: .3, fill: false, pointRadius: 5 },
-      ]
-    },
+    data: { datasets: trajDatasets },
     options: {
-      responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { position: 'top', labels: { font: { size: 11 } } },
-        tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+      responsive: true, maintainAspectRatio: false, interaction: { mode: 'nearest', intersect: false },
+      plugins: {
+        legend: { position: 'top', labels: { font: { size: 10 }, boxWidth: 12, padding: 8 } },
+        tooltip: { backgroundColor: '#0b1220', padding: 10 },
+      },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-        y: { beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: 'cells (sum across 8 kws)', font: { size: 10, weight: '600' } } },
+        x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
+        y: { beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: 'top-3 cells', font: { size: 10, weight: '600' } } },
       }
     }
   });
-  $('ld-trajectory-cap').innerHTML = `Top-3 cells: <strong>${traj.portfolio.top3[0]} → ${traj.portfolio.top3[traj.portfolio.top3.length-1]} (${traj.portfolio.top3[traj.portfolio.top3.length-1]-traj.portfolio.top3[0] >= 0 ? '+' : ''}${traj.portfolio.top3[traj.portfolio.top3.length-1]-traj.portfolio.top3[0]})</strong> · Top-10: <strong>${traj.portfolio.top10[0]} → ${traj.portfolio.top10[traj.portfolio.top10.length-1]} (${traj.portfolio.top10[traj.portfolio.top10.length-1]-traj.portfolio.top10[0] >= 0 ? '+' : ''}${traj.portfolio.top10[traj.portfolio.top10.length-1]-traj.portfolio.top10[0]})</strong>. Top-10 expansion is the cleaner trend; top-3 drift comes almost entirely from pregnancy/prenatal cluster.`;
+  $('ld-trajectory-cap').innerHTML = `Top-3 cells per keyword over time. Deep tissue (+29 over 6 months) and cold laser austin (+7 over 6 months) are the lift stories; acupuncture (-4) and dry needling near me (-3) softened; the 2 newer queries (massage near me + massage therapy near me) entered with near-zero visibility and built up.`;
+
+  // ===== Cohort A trajectory (5-kw rollup) =====
+  if (traj.cohort_a) {
+    const ca = traj.cohort_a;
+    const caDatasets = [
+      { label: 'Top-10 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top10[i] })), borderColor: '#1d5b8a', backgroundColor: 'rgba(29,91,138,.12)', borderWidth: 2.5, tension: .3, pointRadius: 4, fill: true, spanGaps: true },
+      { label: 'Top-3 cells', data: datesIso.map((iso, i) => ({ x: iso, y: ca.top3[i] })), borderColor: '#10b981', borderWidth: 3, tension: .3, pointRadius: 4, fill: false, spanGaps: true },
+    ];
+    new Chart($('cohort-a-trajectory'), {
+      data: { datasets: caDatasets },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+        plugins: { legend: { position: 'top', labels: { font: { size: 11 } } }, tooltip: { backgroundColor: '#0b1220', padding: 10 } },
+        scales: {
+          x: { type: 'time', time: { unit: 'month', tooltipFormat: 'MMM d, yyyy' }, grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { beginAtZero: true, ticks: { font: { size: 10 } }, title: { display: true, text: 'cells (sum 5 kws)', font: { size: 10, weight: '600' } } },
+        }
+      }
+    });
+    const firstNonNull = ca.top3.findIndex(v => v != null);
+    const lastNonNull = ca.top3.length - 1 - [...ca.top3].reverse().findIndex(v => v != null);
+    if (firstNonNull >= 0 && lastNonNull >= 0) {
+      $('cohort-a-cap').innerHTML = `Cohort: ${(traj.cohort_a_kws || []).join(' · ')}. ${traj.cohort_a_baseline_date || 'baseline'} → ${traj.cohort_a_current_date || 'current'}: top-3 <strong>${ca.top3[firstNonNull]} → ${ca.top3[lastNonNull]} (${ca.top3[lastNonNull]-ca.top3[firstNonNull] >= 0 ? '+' : ''}${ca.top3[lastNonNull]-ca.top3[firstNonNull]})</strong> · top-10 <strong>${ca.top10[firstNonNull]} → ${ca.top10[lastNonNull]} (${ca.top10[lastNonNull]-ca.top10[firstNonNull] >= 0 ? '+' : ''}${ca.top10[lastNonNull]-ca.top10[firstNonNull]})</strong>.`;
+    }
+  }
 
   // ===== Distance bands =====
   $('distance-bands').innerHTML = D.distance_bands.map(b => {
@@ -760,23 +819,49 @@
     <td class="num font-semibold text-emerald-700">${t.stretch}</td>
   </tr>`).join('');
 
-  // ===== Tasks by month =====
-  const byMonth = {};
-  D.tasks.forEach(t => { (byMonth[t.month] = byMonth[t.month] || []).push(t); });
-  const monthLabels = ['Month 1 · June 2026', 'Month 2 · July 2026', 'Month 3 · August 2026'];
-  $('tasks-by-month').innerHTML = [1, 2, 3].map(m => `
-    <div class="panel" style="border-top:4px solid ${m === 1 ? '#10b981' : m === 2 ? '#1d5b8a' : '#6366f1'}">
-      <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-3">${monthLabels[m-1]}</div>
-      <ul class="space-y-2">
-        ${(byMonth[m] || []).map(t => `<li class="flex gap-2 text-sm">
-          <span class="font-mono text-[10px] bg-slate-100 px-1.5 py-0.5 rounded text-slate-700 self-start whitespace-nowrap">${t.id}</span>
-          <div class="min-w-0 flex-1">
-            <div class="text-slate-800">${t.title}</div>
-            <div class="text-[10px] text-slate-500">Lever ${t.lever} · ${t.owner_role}</div>
+  // ===== Tasks by month — structured deliverables =====
+  if (D.tasks_by_month) {
+    $('tasks-by-month').innerHTML = D.tasks_by_month.map(m => {
+      const surfaceColor = {
+        'Services (2)': '#10b981',
+        'Blogs (5)': '#1d5b8a',
+        'Suburb pages (3)': '#8b5cf6',
+        'On-page + ops': '#f59e0b',
+      };
+      const surfaceHtml = Object.entries(m.deliverables).map(([surface, items]) => `
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider mb-2" style="color:${surfaceColor[surface] || '#64748b'}">${surface}</div>
+          <ul class="space-y-2">
+            ${items.map(it => `<li class="text-sm">
+              <div class="flex gap-2 items-start">
+                <span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700 mt-0.5 whitespace-nowrap">L${it.lever}</span>
+                <div class="flex-1 min-w-0">
+                  <code class="text-[12px] text-slate-900 font-semibold break-all">${it.item}</code>
+                  <div class="text-[11px] text-slate-600 mt-0.5 leading-snug">${it.note}</div>
+                </div>
+              </div>
+            </li>`).join('')}
+          </ul>
+        </div>`).join('');
+      return `
+        <div class="panel" style="border-top:5px solid ${m.color}">
+          <div class="flex items-start justify-between gap-3 flex-wrap mb-3">
+            <div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">${m.month_label}</div>
+              <h3 class="text-xl font-bold text-slate-900">${m.theme}</h3>
+              <p class="text-sm text-slate-700 leading-relaxed mt-2 max-w-3xl">${m.summary}</p>
+            </div>
           </div>
-        </li>`).join('')}
-      </ul>
-    </div>`).join('');
+          <div class="rounded-lg bg-slate-50 border border-slate-200 p-3 mb-4">
+            <div class="text-[10px] font-bold uppercase tracking-wider text-slate-500 mb-1">By end of month</div>
+            <p class="text-sm text-slate-700 italic">${m.by_end_of_month}</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            ${surfaceHtml}
+          </div>
+        </div>`;
+    }).join('');
+  }
 
   // ===== Attribution rules =====
   $('attribution-rules').innerHTML = Object.entries(D.attribution_rules).map(([k, v]) =>
