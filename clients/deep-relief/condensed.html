@@ -63,11 +63,11 @@
           <th>Verdict</th>
         </tr></thead>
         <tbody id="kw-rows"></tbody></table></div>
-      <p class="text-xs text-slate-500 mt-2">Mean dx = average rank change per cell where Deep Relief stayed visible on both dates (positive = improved). Deep tissue massage is the moat (47 top-3 cells, nearest competitor 25). Pregnancy/prenatal is the bleed — Sage Blossom's 209-review pin is taking share.</p>
+      <p class="text-xs text-slate-500 mt-2">Mean dx = average rank change per cell where Deep Relief stayed visible on both dates (positive = improved). Deep tissue massage is the moat (47 top-3 cells, nearest competitor 25). Pregnancy/prenatal is the bleed, Sage Blossom's 209-review pin is taking share.</p>
     </section>
 
     <section class="mb-5">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Pin-strong, grid-weak — DataForSEO Maps SERP at the storefront</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Pin-strong, grid-weak: DataForSEO Maps SERP at the storefront</h2>
       <div class="panel overflow-x-auto"><table class="w-full text-sm">
         <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
           <th>Query</th>
@@ -75,13 +75,13 @@
           <th class="num">SV (Austin)</th>
         </tr></thead>
         <tbody id="untracked-rows"></tbody></table></div>
-      <p class="text-xs text-slate-500 mt-2">Services where Deep Relief sits #1–#5 at the storefront. Combined Austin-DMA demand on top-3: <strong id="untracked-vol">—</strong>/mo. These ARE tracked in Local Falcon (avg ranks 17–20+ portfolio-wide) — the gap isn't tracking, it's reach beyond 1–2 miles. Lever C = service-page builds + city-modifier slugs to extend off-pin radius.</p>
+      <p class="text-xs text-slate-500 mt-2">Services where Deep Relief sits #1–#5 at the storefront. Combined Austin-DMA demand on top-3: <strong id="untracked-vol">…</strong>/mo. These ARE tracked in Local Falcon (avg ranks 17–20+ portfolio-wide), the gap isn't tracking, it's reach beyond 1–2 miles. Lever C = service-page builds + city-modifier slugs to extend off-pin radius.</p>
     </section>
 
     <section class="mb-5">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Local Falcon tracking — what's in, what's out</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Local Falcon tracking: what's in, what's out</h2>
       <div class="panel">
-        <p class="text-xs text-slate-600 mb-3" id="lf-summary">—</p>
+        <p class="text-xs text-slate-600 mb-3" id="lf-summary">…</p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
           <div>
             <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-700 mb-1">Priority CSVs to pull</div>
@@ -107,7 +107,7 @@
           <th class="num">Rating</th>
         </tr></thead>
         <tbody id="comp-rows"></tbody></table></div>
-      <p class="text-xs text-slate-500 mt-2">Sage Blossom Massage (209-rev listing) is the watch competitor — gaining +6 top-3 cells with massive top-3 ownership on pregnancy/prenatal. Laser Therapy Clinic-Austin owns cold-laser absolutely (133/133 cells) — concede that surface (Lever F).</p>
+      <p class="text-xs text-slate-500 mt-2">Sage Blossom Massage (209-rev listing) is the watch competitor, gaining +6 top-3 cells with massive top-3 ownership on pregnancy/prenatal. Laser Therapy Clinic-Austin owns cold-laser absolutely (133/133 cells), concede that surface (Lever F).</p>
     </section>
 
     <section class="mb-5">
@@ -131,13 +131,13 @@
     </section>
 
     <section class="mb-5">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan — 2 services + 5 blogs + 3 suburbs / month</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">90-day plan: 2 services + 5 blogs + 3 suburbs / month</h2>
       <div class="space-y-3" id="tasks-rows"></div>
     </section>
 
     <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
       <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Deep Relief · Aleksandar Spasevski · 2026-06-02</span>
-      <span class="text-slate-400">Confidential — for Deep Relief.</span>
+      <span class="text-slate-400">Confidential, for Deep Relief.</span>
     </footer>
   </main>
 
@@ -145,7 +145,7 @@
 (async function () {
   const D = await fetch('./data/data.json?v=' + Date.now()).then(r => r.json());
   const $ = id => document.getElementById(id);
-  const fmt = n => (n == null) ? '—' : Number(n).toLocaleString();
+  const fmt = n => (n == null) ? '…' : Number(n).toLocaleString();
 
   $('tldr').textContent = D.tldr;
 
@@ -223,7 +223,7 @@
       <div class="text-[11px] text-slate-600 mt-1">${fmt(g.impressions_365d)} impressions · ${g.sitewide_ctr_pct_365d}% CTR · ${g.unique_pages_365d} indexed pages</div>
     </div>
     <div class="rounded-lg bg-amber-50 border border-amber-200 p-3">
-      <div class="text-[10px] font-bold uppercase tracking-wider text-amber-700 mb-1">CTR leak — non-brand</div>
+      <div class="text-[10px] font-bold uppercase tracking-wider text-amber-700 mb-1">CTR leak, non-brand</div>
       <div class="text-xl font-extrabold text-slate-900">${bp.non_brand.imp_pct}%</div>
       <div class="text-[11px] text-slate-600 mt-1">of impressions earns ${bp.non_brand.clicks_pct}% of clicks (${(bp.non_brand.clicks/bp.non_brand.imp*100).toFixed(2)}% CTR)</div>
     </div>
@@ -232,7 +232,7 @@
       <div class="text-xl font-extrabold text-slate-900">${h.clicks_pct >= 0 ? '+' : ''}${h.clicks_pct}% clicks</div>
       <div class="text-[11px] text-slate-600 mt-1">${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% impressions · ${h.h1_label} → ${h.h2_label}</div>
     </div>`;
-  $('gsc-note').innerHTML = `Brand earns <strong>${(bp.brand.clicks/bp.brand.imp*100).toFixed(1)}% CTR</strong> on its 3.4% impression slice; non-brand earns <strong>${(bp.non_brand.clicks/bp.non_brand.imp*100).toFixed(2)}% CTR</strong> on its 96.6% slice. Impressions are healthy and growing — the unblock is click capture: title/meta rewrite + schema (Lever E).`;
+  $('gsc-note').innerHTML = `Brand earns <strong>${(bp.brand.clicks/bp.brand.imp*100).toFixed(1)}% CTR</strong> on its 3.4% impression slice; non-brand earns <strong>${(bp.non_brand.clicks/bp.non_brand.imp*100).toFixed(2)}% CTR</strong> on its 96.6% slice. Impressions are healthy and growing, the unblock is click capture: title/meta rewrite + schema (Lever E).`;
 
   // Levers
   const leverColors = { emerald: '#10b981', rose: '#f43f5e', amber: '#f59e0b', indigo: '#6366f1', slate: '#64748b' };

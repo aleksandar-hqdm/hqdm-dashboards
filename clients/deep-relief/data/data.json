@@ -54,12 +54,12 @@
     "ld_window_days": 64,
     "gsc_window": "2025-06-02 → 2026-05-31",
     "gsc_window_days": 365,
-    "ga4_status": "Not connected — owner ask outstanding (no GA4 property registered under HQDM access)."
+    "ga4_status": "Not connected; owner ask outstanding (no GA4 property registered under HQDM access)."
   },
-  "tldr": "Across the 5 services with 6-month Local Falcon history (chiropractor, acupuncture, cold laser, dry needling, deep tissue), portfolio top-3 cells went 35 → 64 (+29) and top-10 cells went 140 → 144 (+4) between Nov 21 2025 and May 15 2026. Deep tissue massage is the engine of that lift — 18 top-3 cells at baseline, 47 today (+29, mean dx +4.26), nearest competitor at 25. Cold laser is the surprise: from 1 to 8 top-3 cells with a +7.5 mean rank dx, mostly through specialty long-tail. The two newest tracked queries (massage near me, massage therapy near me) show net-new visibility from near-zero. The bleed sits on pregnancy/prenatal massage where Sage Blossom's 209-review pin took 8 top-3 cells on pregnancy-massage-near-me alone since Mar 12. DataForSEO confirms 15 services where Deep Relief sits #1–#3 at the storefront but falls past top-20 portfolio-wide — the work is off-pin reach (service pages, city-modifier slugs), not adding to tracking. GA4 still not connected (Owner Ask OA-1).",
+  "tldr": "Across the 5 services with 6-month Local Falcon history (chiropractor, acupuncture, cold laser, dry needling, deep tissue), portfolio top-3 cells went 35 → 64 (+29) and top-10 cells went 140 → 144 (+4) between Nov 21 2025 and May 15 2026. Deep tissue massage is the engine of that lift: 18 top-3 cells at baseline, 47 today (+29, mean dx +4.26), nearest competitor at 25. Cold laser is the surprise: from 1 to 8 top-3 cells with a +7.5 mean rank dx, mostly through specialty long-tail. The two newest tracked queries (massage near me, massage therapy near me) show net-new visibility from near-zero. The bleed sits on pregnancy/prenatal massage where Sage Blossom's 209-review pin took 8 top-3 cells on pregnancy-massage-near-me alone since Mar 12. DataForSEO confirms 15 services where Deep Relief sits #1–#3 at the storefront but falls past top-20 portfolio-wide. The work is off-pin reach (service pages, city-modifier slugs), not adding to tracking. GA4 still not connected (Owner Ask OA-1).",
   "headline": {
     "h2": "Six months of Local Falcon history: portfolio top-10 cells +4 on the 5 long-history kws. Deep tissue massage drove most of the lift.",
-    "lede": "Across the 5 services with continuous Local Falcon coverage since Nov 21 2025 (chiropractor, acupuncture, cold laser austin, dry needling near me, deep tissue massage): <strong>portfolio top-10 footprint grew from 140 to 144 cells (+4)</strong>, top-3 cells from 35 to 64 (+29). Deep tissue massage carried the lift — 18 top-3 cells in November to 47 today, and the moat is now decisive (nearest competitor at 25). Cold laser austin moved from 1 to 8 top-3 cells with a +7.5 mean rank delta — specialty long-tail openings even though the category-exact Laser Therapy Clinic-Austin still owns the head queries. Acupuncture and dry needling softened (mean dx -3.2 and -3.8) — services that don't have dedicated landing pages today.<br><br>Two new tracked queries entered the dataset in October 2025 with near-zero visibility: <code>massage near me</code> (40,500 Austin DMA/mo) and <code>massage therapy near me</code>. Both lifted hard: massage near me from 0 to 1 top-3 + 53 visible cells, massage therapy near me from 3 to 20 top-3 cells. The bleed remains pregnancy/prenatal massage where Sage Blossom's 209-review pin has been taking share over the last 60 days. <br><br>GSC over the same window: 7,839 clicks against 945,867 impressions, sitewide CTR 0.83%. Impressions +2.8% H2 vs H1 (reach is healthy) while non-brand earns 0.4% CTR vs brand's 22% — click capture, not reach, is the bottleneck. <strong>GA4 is still not connected</strong> so conversion-side measurement remains the single largest open question.",
+    "lede": "Across the 5 services with continuous Local Falcon coverage since Nov 21 2025 (chiropractor, acupuncture, cold laser austin, dry needling near me, deep tissue massage): <strong>portfolio top-10 footprint grew from 140 to 144 cells (+4)</strong>, top-3 cells from 35 to 64 (+29). Deep tissue massage carried the lift: 18 top-3 cells in November to 47 today, and the moat is now decisive (nearest competitor at 25). Cold laser austin moved from 1 to 8 top-3 cells with a +7.5 mean rank delta, opening up on specialty long-tail even though the category-exact Laser Therapy Clinic-Austin still owns the head queries. Acupuncture and dry needling softened (mean dx -3.2 and -3.8), as neither service has a dedicated landing page today.<br><br>Two new tracked queries entered the dataset in October 2025 with near-zero visibility: <code>massage near me</code> (40,500 Austin DMA/mo) and <code>massage therapy near me</code>. Both lifted hard: massage near me from 0 to 1 top-3 + 53 visible cells, massage therapy near me from 3 to 20 top-3 cells. The bleed remains pregnancy/prenatal massage where Sage Blossom's 209-review pin has been taking share over the last 60 days. <br><br>GSC over the same window: 7,839 clicks against 945,867 impressions, sitewide CTR 0.83%. Impressions +2.8% H2 vs H1 (reach is healthy) while non-brand earns 0.4% CTR vs brand's 22%, so click capture (not reach) is the bottleneck. <strong>GA4 is still not connected</strong> so conversion-side measurement remains the single largest open question.",
     "tiles": [
       {
         "label": "Top-3 cells · 5 long-history kws",
@@ -90,7 +90,7 @@
   "pin": {
     "label": "Deep Relief · South Austin chiropractor + multi-service wellness",
     "address": "7101 State Hwy 71 Ste A-1, Austin, TX 78735",
-    "service_area": "South Austin core + adjacent suburbs (Sunset Valley, Oak Hill, West Lake Hills, Dripping Springs, Bee Cave) — storefront, not service-area-only",
+    "service_area": "South Austin core + adjacent suburbs (Sunset Valley, Oak Hill, West Lake Hills, Dripping Springs, Bee Cave). Storefront, not service-area-only.",
     "rating": 4.9,
     "reviews": 443,
     "primary": "Chiropractor",
@@ -3183,7 +3183,7 @@
         "in_our_window": false,
         "cluster": "acupuncture",
         "drop_recommended": true,
-        "drop_reason": "misspelling — Google auto-corrects to acupuncture near me"
+        "drop_reason": "misspelling; Google auto-corrects to acupuncture near me"
       },
       {
         "kw": "cryo spa",
@@ -3229,7 +3229,7 @@
       {
         "kw": "chiropractor near me",
         "avg_rank": 19.94,
-        "reason": "Highest-intent chiropractor query (3,600/mo). DataForSEO had #1 at pin; LD portfolio-wide falls past top-20 — the gap is exactly the pin-strong / grid-weak pattern."
+        "reason": "Highest-intent chiropractor query (3,600/mo). DataForSEO had #1 at pin; LD portfolio-wide falls past top-20, which is exactly the pin-strong / grid-weak pattern."
       }
     ]
   },
@@ -3357,11 +3357,6 @@
       "current_leader_at_pin": "South Austin Community Acupuncture"
     },
     {
-      "kw": "auto accident chiropractor austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
-    },
-    {
       "kw": "low level laser therapy",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
@@ -3377,6 +3372,11 @@
       "current_leader_at_pin": "Sprout Chiropractic"
     },
     {
+      "kw": "auto accident chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
       "kw": "spinal decompression austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
@@ -3384,7 +3384,7 @@
   ],
   "gsc": {
     "trend": {
-      "headline": "GSC sitewide clicks + impressions — 365-day monthly trend",
+      "headline": "GSC sitewide clicks + impressions: 365-day monthly trend",
       "annotation_text": "GSC daily aggregates rolled up to month. Sitewide. Property: https://deeprelief.com/ (siteOwner permission). Window: 2025-06-02 → 2026-05-31.",
       "may_extrapolation_note": "",
       "months": [
@@ -4308,7 +4308,7 @@
   "levers": [
     {
       "id": "A",
-      "name": "Defend the deep-tissue moat — don't lose ground to growing competitors",
+      "name": "Defend the deep-tissue moat: don't lose ground to growing competitors",
       "color": "emerald",
       "priority": "P1",
       "why": "Deep tissue massage is the only query where Deep Relief has portfolio-defining ownership (47 top-3 cells; nearest competitor Deeply Therapeutic at 25). Slight rank softening (avg 5.07 → 5.51, mean dx -0.13) and 3-cell top-3 loss show this isn't permanent. Sage Blossom’s 209-review listing and AUSTINDEEP Barton Creek are the watch-list.",
@@ -4322,7 +4322,7 @@
     },
     {
       "id": "B",
-      "name": "Counter Sage Blossom on pregnancy/prenatal massage — reverse the bleed",
+      "name": "Counter Sage Blossom on pregnancy/prenatal massage: reverse the bleed",
       "color": "rose",
       "priority": "P1",
       "why": "Sage Blossom Massage (209-rev listing) holds 62 top-3 cells on pregnancy-massage-near-me to DR’s 26 and is gaining (+6 portfolio-wide). DR lost 8 top-3 cells on pregnancy-massage-near-me alone and dropped #1 cells from 7 to 2. This is the largest single category bleed.",
@@ -4339,51 +4339,51 @@
       "name": "Convert pin-strong, grid-weak queries into off-pin reach",
       "color": "amber",
       "priority": "P2",
-      "why": "DataForSEO Maps SERP at the storefront shows Deep Relief at #1–#3 at the pin for 15 services (~48K monthly Austin DMA searches). Local Falcon is already tracking the same kws on the wider grid — their avg ranks portfolio-wide sit at 17–20+, which means the at-pin win evaporates within 1–2 miles of the storefront. The work isn’t tracking; the work is reach. Service-page builds with city-modifier slugs are the path Sage Blossom is already running on pregnancy massage.",
+      "why": "DataForSEO Maps SERP at the storefront shows Deep Relief at #1–#3 at the pin for 15 services (~48K monthly Austin DMA searches). Local Falcon is already tracking the same kws on the wider grid, where their avg ranks portfolio-wide sit at 17–20+, which means the at-pin win evaporates within 1–2 miles of the storefront. The work isn’t tracking; the work is reach. Service-page builds with city-modifier slugs are the path Sage Blossom is already running on pregnancy massage.",
       "actions": [
-        "Build dedicated /services/{service}-austin/ landing pages for the 5 highest-volume pin-strong queries — chiropractor near me (3,600/mo), massage therapy austin (590), deep tissue massage austin (590), acupuncture austin (1,000), cupping therapy austin (170) — each with LocalBusiness + Service schema.",
+        "Build dedicated /services/{service}-austin/ landing pages for the 5 highest-volume pin-strong queries (chiropractor near me at 3,600/mo, massage therapy austin at 590, deep tissue massage austin at 590, acupuncture austin at 1,000, cupping therapy austin at 170), each with LocalBusiness + Service schema.",
         "Add /services/{service}-{suburb}/ city-modifier pages for the 3 nearest suburbs (Sunset Valley, Oak Hill, Dripping Springs) on the top 2-3 commercial services. Modeled on the same matrix Sage Blossom is using on pregnancy.",
         "After 4 weeks of new landing-page indexation, re-scan the same 8 queries in Local Falcon and compare cell-by-cell against the May 15 baseline. Off-pin reach (cells 2-3 miles out) is the KPI.",
-        "Drop cryo spa / cryo spa near me / cryo spa austin from LF tracking — DR doesn’t offer cryo, the scans are noise. Drop accupuncture near me (misspelling) — Google auto-corrects, it’s a duplicate of acupuncture near me. Frees up 4 LF tracking slots for higher-leverage kws."
+        "Drop cryo spa / cryo spa near me / cryo spa austin from LF tracking (DR doesn’t offer cryo, those scans are noise). Drop accupuncture near me (misspelling; Google auto-corrects, so it’s a duplicate of acupuncture near me). Frees up 4 LF tracking slots for higher-leverage kws."
       ],
       "outcome": "Same 8 LF queries: off-pin reach (2-3 mi band) lifts +20% in cells visible, +50% in cells top-10. Frees 4 LF slots."
     },
     {
       "id": "D",
-      "name": "Connect GA4 — close the conversion-side measurement blackout",
+      "name": "Connect GA4: close the conversion-side measurement blackout",
       "color": "indigo",
       "priority": "P1 (owner-gated)",
-      "why": "GA4 is not connected. We can see GSC clicks (7,839 in 365d), Maps reach, and competitor movement — but we cannot see leads, calls, bookings, or revenue. With 96.6% of impressions non-brand and 0.4% CTR there, the click → booking ratio is the single most actionable diagnostic we can’t run.",
+      "why": "GA4 is not connected. We can see GSC clicks (7,839 in 365d), Maps reach, and competitor movement, but we cannot see leads, calls, bookings, or revenue. With 96.6% of impressions non-brand and 0.4% CTR there, the click → booking ratio is the single most actionable diagnostic we can’t run.",
       "actions": [
         "Owner ask: grant info@hqdm.io editor access to the Deep Relief GA4 property (or share property ID if it already exists).",
-        "Once connected: rebuild conversion stack (form submits + click_phone + click_email + booking confirmations) and categorize events per BB Massage convention — booking + lead = TRUE conversion, calls = qualified intent, GBP listing taps = engagement-not-conversion.",
+        "Once connected: rebuild conversion stack (form submits + click_phone + click_email + booking confirmations) and categorize events per BB Massage convention (booking + lead = TRUE conversion, calls = qualified intent, GBP listing taps = engagement, not conversion).",
         "Wire GTM-side phone-click and form-submit tracking if missing."
       ],
       "outcome": "Conversion-side picture matches the maps-side picture; we can attribute lift to the right lever."
     },
     {
       "id": "E",
-      "name": "Click-capture: lift sitewide CTR off 0.83% — the impressions are already there",
+      "name": "Click-capture: lift sitewide CTR off 0.83% (the impressions are already there)",
       "color": "amber",
       "priority": "P2",
-      "why": "GSC shows 945,867 impressions and only 7,839 clicks (0.83% CTR). Brand queries (3.4% of impressions) earn 63.8% of clicks (~22% CTR); non-brand (96.6% of impressions) earns 0.4% CTR. The supply problem is solved — the demand-capture problem isn’t. Title + meta + result-snippet rewrites are the unblocked work.",
+      "why": "GSC shows 945,867 impressions and only 7,839 clicks (0.83% CTR). Brand queries (3.4% of impressions) earn 63.8% of clicks (~22% CTR); non-brand (96.6% of impressions) earns 0.4% CTR. The supply problem is solved, but the demand-capture problem isn’t. Title + meta + result-snippet rewrites are the unblocked work.",
       "actions": [
         "Run a title-tag + meta-description rewrite across the top 25 non-brand pages by impressions (priority on those at position 4–15).",
         "Add FAQ / HowTo schema to long-form service pages so the SERP card is fuller.",
         "Build out specific service-page H1s that match high-impression query phrasing (e.g., add “Austin” to service-page titles where the query specifies metro).",
         "A/B observe over 60 days; expand pattern to remaining pages if CTR moves >0.3pp."
       ],
-      "outcome": "Move sitewide CTR from 0.83% to 1.20%+ within 90 days — a worth ~3,500 additional clicks/yr at current impressions."
+      "outcome": "Move sitewide CTR from 0.83% to 1.20%+ within 90 days, worth ~3,500 additional clicks/yr at current impressions."
     },
     {
       "id": "F",
-      "name": "Concede cold-laser — it’s a category-aligned competitor moat",
+      "name": "Concede cold-laser: it’s a category-aligned competitor moat",
       "color": "slate",
       "priority": "P3 (decision)",
-      "why": "Laser Therapy Clinic-Austin (28 reviews, 3.9★) holds 133/133 top-3 cells on cold-laser-austin at avg rank 2.17 — they’re the exact-name match. Austin Laser Solutions runs 2 locations splitting #2/#3. Deep Relief is currently 8 top-3 cells out of 46 visible — a real position but capped by category mismatch. Spending on this query is low-leverage.",
+      "why": "Laser Therapy Clinic-Austin (28 reviews, 3.9★) holds 133/133 top-3 cells on cold-laser-austin at avg rank 2.17 (they’re the exact-name match). Austin Laser Solutions runs 2 locations splitting #2/#3. Deep Relief is currently 8 top-3 cells out of 46 visible, a real position but capped by category mismatch. Spending on this query is low-leverage.",
       "actions": [
         "Keep the cold laser landing page; do NOT invest in additional content/links for cold-laser-specific queries.",
-        "Re-target the cold-laser landing page to capture ‘cold laser + condition’ long-tail (knee pain, plantar fasciitis, peripheral neuropathy) — fewer competitors there.",
+        "Re-target the cold-laser landing page to capture ‘cold laser + condition’ long-tail (knee pain, plantar fasciitis, peripheral neuropathy), where fewer competitors compete.",
         "Remove cold-laser-specific GBP posting cadence; redirect that production to deep-tissue + pregnancy-massage content."
       ],
       "outcome": "Stop wasting attention on an unwinnable surface; redirect to leverage-positive queries."
@@ -4804,7 +4804,7 @@
       "id": "M3-ON--44",
       "month": 3,
       "month_label": "Month 3 · August 2026",
-      "lever": "—",
+      "lever": "·",
       "surface": "On-page + ops",
       "title": "Q3 KPI review + Q4 plan draft",
       "note": "Roll-forward into next strategic diagnosis."
@@ -5079,7 +5079,7 @@
           },
           {
             "item": "Q3 KPI review + Q4 plan draft",
-            "lever": "—",
+            "lever": "·",
             "note": "Roll-forward into next strategic diagnosis."
           }
         ]
@@ -5136,6 +5136,6 @@
     "calls_separate": "click_to_dial + click_phone_number tracked separately; never bundled into Leads",
     "gbp_clicks_separate": "gmb_click is engagement-not-conversion; never reported as a conversion",
     "partial_period": "Latest month in trend marked with * if days_actual < days_in_month",
-    "ga4_status": "Not connected — see Owner Ask OA-1"
+    "ga4_status": "Not connected; see Owner Ask OA-1"
   }
 }

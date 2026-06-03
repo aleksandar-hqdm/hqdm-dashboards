@@ -67,7 +67,7 @@
 
       <div class="panel mt-3" style="background: linear-gradient(180deg,#ffffff 0%,#f0fdf4 100%);">
         <p class="text-[15px] leading-relaxed text-slate-800">
-          <strong>The deep-tissue moat is intact and the top-10 footprint is widening — the work this quarter is defending pregnancy/prenatal and turning impression breadth into actual clicks.</strong>
+          <strong>The deep-tissue moat is intact and the top-10 footprint is widening, the work this quarter is defending pregnancy/prenatal and turning impression breadth into actual clicks.</strong>
         </p>
         <p class="text-[14px] leading-relaxed text-slate-700 mt-2.5" id="exec-1"></p>
         <p class="text-[14px] leading-relaxed text-slate-700 mt-2" id="exec-2"></p>
@@ -80,7 +80,7 @@
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
             <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Organic search · monthly clicks + impressions</div>
-            <div class="text-xs text-slate-500 mt-0.5" id="gsc-window">—</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="gsc-window">…</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Impressions</span>
@@ -97,7 +97,7 @@
         <div class="flex items-end justify-between mb-2 flex-wrap gap-2">
           <div>
             <div class="text-[11px] font-bold uppercase tracking-widest text-slate-500">Maps coverage · 4 scans · 8 tracked queries</div>
-            <div class="text-xs text-slate-500 mt-0.5" id="ld-window">—</div>
+            <div class="text-xs text-slate-500 mt-0.5" id="ld-window">…</div>
           </div>
           <div class="flex items-center gap-3 text-[10px] text-slate-500">
             <span class="inline-flex items-center gap-1"><span class="inline-block w-3 h-2.5 rounded" style="background:#1d5b8a"></span>Top-10 cells</span>
@@ -167,7 +167,7 @@
 
     <footer class="mt-6 pt-4 border-t border-slate-200 text-[10px] text-slate-500 flex flex-wrap justify-between gap-2">
       <span><span class="font-semibold text-slate-700">HQDM Search Intelligence</span> · Client snapshot · Aleksandar Spasevski · 2026-06-02</span>
-      <span class="text-slate-400">Confidential — for Deep Relief.</span>
+      <span class="text-slate-400">Confidential, for Deep Relief.</span>
     </footer>
     <p class="mt-2 text-[10px] text-slate-400 leading-relaxed">
       Data sources: Local Falcon 13×13 geo-grid scans (4 dates, 8 tracked queries, Mar 12 → May 15 2026);
@@ -180,7 +180,7 @@
 (async function () {
   const D = await fetch('./data/data.json?v=' + Date.now()).then(r => r.json());
   const $ = id => document.getElementById(id);
-  const fmt = n => (n == null) ? '—' : Number(n).toLocaleString();
+  const fmt = n => (n == null) ? '…' : Number(n).toLocaleString();
 
   // Exec
   const t3_b = D.headline.tiles[0].sub.match(/baseline (\d+)/);
@@ -191,9 +191,9 @@
   const bp = D.gsc.brand_pull;
   const h = D.gsc.halves;
 
-  $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. A pin-level scan at the storefront also identified 15 services where you sit at #1–#3 at center but lose visibility past 1–2 miles — that's the off-pin reach gap this quarter's plan closes via dedicated service + suburb pages.`;
+  $('exec-1').innerHTML = `Across the 5 services we have 6 months of Local Falcon history on (chiropractor, acupuncture, cold laser, dry needling, deep tissue), top-3 cells went from <strong>35 in November 2025 to 64 today (+29)</strong>. <strong>Deep tissue massage carries the lift</strong> by itself: from 18 to 47 top-3 cells over the same window, and your moat is now decisive (nearest competitor at 25 cells). Two newer queries entered tracking in October 2025 with near-zero visibility and have built up since: <code>massage near me</code> (40,500 Austin searches/mo) and <code>massage therapy near me</code>. A pin-level scan at the storefront also identified 15 services where you sit at #1–#3 at center but lose visibility past 1–2 miles, that's the off-pin reach gap this quarter's plan closes via dedicated service + suburb pages.`;
 
-  $('exec-2').innerHTML = `Two watch areas: <strong>acupuncture and dry needling</strong> softened across the 6 months (mean rank dx -3.2 and -3.8 respectively) — services that don't have dedicated landing pages today. And <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days — you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" alone. Both are reversed in this quarter's plan via dedicated service-page builds. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong> — up ${h.imps_pct}% over the last 6 months — but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
+  $('exec-2').innerHTML = `Two watch areas: <strong>acupuncture and dry needling</strong> softened across the 6 months (mean rank dx -3.2 and -3.8 respectively), services that don't have dedicated landing pages today. And <strong>pregnancy + prenatal massage</strong> have been losing top-3 cells to a competitor pin (Sage Blossom Massage's newer 209-review listing) over the last 60 days, you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" alone. Both are reversed in this quarter's plan via dedicated service-page builds. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong>, up ${h.imps_pct}% over the last 6 months, but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
 
   // Chips
   $('chips').innerHTML = [
@@ -225,9 +225,9 @@
       }
     }
   });
-  $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter — total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work — we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
+  $('gsc-caption').innerHTML = `Google is showing your site to more people every quarter, total impressions ${h.imps_pct >= 0 ? '+' : ''}${h.imps_pct}% comparing the most recent 6 months to the prior 6. The 0.83% sitewide CTR is the work, we're rewriting titles/meta on the 25 highest-impression non-brand pages to turn that breadth into clicks.`;
 
-  // LD chart — cohort A on time axis
+  // LD chart, cohort A on time axis
   const traj = D.trajectory_ld;
   const ca = traj.cohort_a || { top3: [], top10: [] };
   const datesIso = traj.dates_iso || traj.labels;
@@ -258,20 +258,20 @@
 
   // Leads
   $('leads').innerHTML = [
-    `<strong>Deep tissue massage — 47 top-3 cells</strong>, up from 18 in November 2025 (+29). Nearest competitor at 25. Your single most decisive ranking advantage, and it's still widening.`,
-    `<strong>Cold laser austin — 1 to 8 top-3 cells</strong> over 6 months, with +7.5 mean rank dx. Long-tail openings even though the exact-name competitor still owns the head query.`,
-    `<strong>Massage therapy near me — 3 to 20 top-3 cells</strong> since October 2025 (+17). One of the two new queries we added; built up from near-zero.`,
-    `<strong>Multi-category clinic</strong> — chiropractor primary + acupuncture clinic + massage therapist secondary. The breadth is why you hold position on 15+ services from one pin.`,
-    `<strong>4.9★ × 443 reviews</strong> — more reviews than every direct South Austin competitor in your category mix. Trust signal locked.`,
+    `<strong>Deep tissue massage, 47 top-3 cells</strong>, up from 18 in November 2025 (+29). Nearest competitor at 25. Your single most decisive ranking advantage, and it's still widening.`,
+    `<strong>Cold laser austin, 1 to 8 top-3 cells</strong> over 6 months, with +7.5 mean rank dx. Long-tail openings even though the exact-name competitor still owns the head query.`,
+    `<strong>Massage therapy near me, 3 to 20 top-3 cells</strong> since October 2025 (+17). One of the two new queries we added; built up from near-zero.`,
+    `<strong>Multi-category clinic</strong>, chiropractor primary + acupuncture clinic + massage therapist secondary. The breadth is why you hold position on 15+ services from one pin.`,
+    `<strong>4.9★ × 443 reviews</strong>, more reviews than every direct South Austin competitor in your category mix. Trust signal locked.`,
     `<strong>${fmt(g.clicks_365d)} organic clicks / year</strong> from ${fmt(g.impressions_365d)} impressions. Google shows your site to more people every quarter; click capture is the unlock.`,
   ].map(li => `<li class="flex gap-2"><span class="text-emerald-500 font-bold mt-0.5">✓</span><span>${li}</span></li>`).join('');
 
   // Reshuffle
   $('reshuffle').innerHTML = [
-    `<strong>Sage Blossom Massage</strong> (the 209-review listing) is taking share on pregnancy + prenatal — you lost 8 top-3 cells on "pregnancy massage near me" over the last 60 days. Lever B puts a dedicated prenatal landing page + outreach to doulas / Austin Mom blogs in motion.`,
-    `<strong>Acupuncture and dry needling softened over the 6-month window</strong> — mean rank dx -3.2 and -3.8 respectively. Neither service has a dedicated landing page today, which is why the at-pin strength doesn't carry past 1-2 miles. M1 chiro-vs-acupuncture blog + M2 acupuncture-vs-dry-needling blog reseed traffic; service pages follow.`,
-    `<strong>Laser Therapy Clinic-Austin</strong> owns "cold laser austin" absolutely — 133/133 grid cells in top-3 — because their GBP category is an exact-name match. The honest read: this is unwinnable on the head term. Lever F pivots the cold-laser page to "cold laser + condition" long-tail (knee pain, neuropathy) where you're already lifting (1 to 8 top-3 cells in 6 months).`,
-    `<strong>The chiropractor pack</strong> (The Joint Chiropractic × 3 locations + South Austin Chiro) is consolidating top-3 for the unmodified "chiropractor" query. You're not in their top-3 — but you ARE #1 for "chiropractor near me" at your pin, which is the higher-intent query the plan builds against.`,
+    `<strong>Sage Blossom Massage</strong> (the 209-review listing) is taking share on pregnancy + prenatal, you lost 8 top-3 cells on "pregnancy massage near me" over the last 60 days. Lever B puts a dedicated prenatal landing page + outreach to doulas / Austin Mom blogs in motion.`,
+    `<strong>Acupuncture and dry needling softened over the 6-month window</strong>, mean rank dx -3.2 and -3.8 respectively. Neither service has a dedicated landing page today, which is why the at-pin strength doesn't carry past 1-2 miles. M1 chiro-vs-acupuncture blog + M2 acupuncture-vs-dry-needling blog reseed traffic; service pages follow.`,
+    `<strong>Laser Therapy Clinic-Austin</strong> owns "cold laser austin" absolutely, 133/133 grid cells in top-3, because their GBP category is an exact-name match. The honest read: this is unwinnable on the head term. Lever F pivots the cold-laser page to "cold laser + condition" long-tail (knee pain, neuropathy) where you're already lifting (1 to 8 top-3 cells in 6 months).`,
+    `<strong>The chiropractor pack</strong> (The Joint Chiropractic × 3 locations + South Austin Chiro) is consolidating top-3 for the unmodified "chiropractor" query. You're not in their top-3, but you ARE #1 for "chiropractor near me" at your pin, which is the higher-intent query the plan builds against.`,
   ].map(li => `<li class="flex gap-2"><span class="text-amber-500 font-bold mt-0.5">↻</span><span>${li}</span></li>`).join('');
 
   // Keyword rows
@@ -297,7 +297,7 @@
     <td class="num">${fmt(r.search_volume_austin)}</td>
   </tr>`).join('');
   const totVol = D.pin_strong_grid_weak.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
-  $('untracked-note').innerHTML = `Combined Austin demand on these top-3 at-pin services: <strong>${fmt(totVol)} searches/month</strong>. Local Falcon already tracks the wider picture for these queries — you're winning at the storefront but the ranking falls off within 1–2 miles. The plan this quarter builds dedicated landing pages for the five biggest ones, which is how we extend the radius where you show up first.`;
+  $('untracked-note').innerHTML = `Combined Austin demand on these top-3 at-pin services: <strong>${fmt(totVol)} searches/month</strong>. Local Falcon already tracks the wider picture for these queries, you're winning at the storefront but the ranking falls off within 1–2 miles. The plan this quarter builds dedicated landing pages for the five biggest ones, which is how we extend the radius where you show up first.`;
 
   // Focus months
   const months = [
@@ -305,7 +305,7 @@
       month: 'Month 1 · June 2026',
       theme: 'Defend + measure',
       color: '#10b981',
-      summary: 'Lock in the deep-tissue moat and start the prenatal recovery — the two highest-leverage queries get dedicated landing pages this month. Clean up the Local Falcon tracking list (drop cryo × 3 + the acupuncture misspelling, reallocate to 4 higher-leverage queries). Owner ask: GA4 access.',
+      summary: 'Lock in the deep-tissue moat and start the prenatal recovery, the two highest-leverage queries get dedicated landing pages this month. Clean up the Local Falcon tracking list (drop cryo × 3 + the acupuncture misspelling, reallocate to 4 higher-leverage queries). Owner ask: GA4 access.',
       by_end_of_month: 'Deep tissue + prenatal massage have dedicated, schema-marked landing pages; Local Falcon tracking list cleaned + reallocated; GA4 connection request in motion.',
       deliverables: [
         '/services/deep-tissue-massage-austin/ landing page (live)',
@@ -319,7 +319,7 @@
       month: 'Month 2 · July 2026',
       theme: 'Expand the surface',
       color: '#1d5b8a',
-      summary: 'With moat queries locked, expand into the next layer of services where you already win at the pin — cupping therapy, myofascial release, sports massage, lymphatic drainage. Outreach round for prenatal page backlinks. GA4 wired (if access granted).',
+      summary: 'With moat queries locked, expand into the next layer of services where you already win at the pin, cupping therapy, myofascial release, sports massage, lymphatic drainage. Outreach round for prenatal page backlinks. GA4 wired (if access granted).',
       by_end_of_month: 'Three more dedicated service pages live; 8+ doula / Austin Mom blog outreach completed; GA4 leads/calls/email funnel categorized per HQDM convention.',
       deliverables: [
         '/services/cupping-therapy-austin/ + /myofascial-release-austin/ landing pages',
@@ -333,7 +333,7 @@
       month: 'Month 3 · August 2026',
       theme: 'Measure + iterate',
       color: '#6366f1',
-      summary: 'Second LD scan to measure pregnancy-massage recovery. First GA4 × LD correlation pass — surface which lever moved which booking metric. Final 2 expansion pages.',
+      summary: 'Second LD scan to measure pregnancy-massage recovery. First GA4 × LD correlation pass, surface which lever moved which booking metric. Final 2 expansion pages.',
       by_end_of_month: 'Pregnancy-massage top-3 cells recovered; CTR uplift on rewritten pages measured; full 90-day picture clear with conversion signal.',
       deliverables: [
         '/services/sports-massage-austin/ + /lymphatic-drainage-austin/ landing pages',
