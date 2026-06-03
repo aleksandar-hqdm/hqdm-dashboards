@@ -44,7 +44,7 @@
     "gsc_window_days": 365,
     "ga4_status": "Not connected — owner ask outstanding (no GA4 property registered under HQDM access)."
   },
-  "tldr": "Deep Relief holds the deep-tissue-massage moat at scale (47 top-3 cells, 1.9× the next competitor) and is gaining top-10 footprint on chiropractor + acupuncture (+24 and +18 top-10 cells Mar 12 → May 15). The bleed is on pregnancy/prenatal massage where Sage Blossom Massage’s second listing (209-review pin) is taking share: pregnancy-massage-near-me top-3 cells 34 → 26 (−8). DataForSEO confirms 15 untracked services where Deep Relief sits #1–#3 at the pin today — including massage therapy austin (590 vol, #1), deep tissue massage austin (590, #1), acupuncture austin (1,000, #1), cupping therapy austin (170, #1), and massage near me (40,500, #2). The strategic play is: defend the deep-tissue moat, counter Sage Blossom on pregnancy, formalize tracking on the at-pin wins, and connect GA4 so conversion stops being invisible.",
+  "tldr": "Deep Relief holds the deep-tissue-massage moat at scale (47 top-3 cells, 1.9× the next competitor) and is gaining top-10 footprint on chiropractor + acupuncture (+24 and +18 top-10 cells Mar 12 → May 15). The bleed is on pregnancy/prenatal massage where Sage Blossom Massage’s second listing (209-review pin) is taking share: pregnancy-massage-near-me top-3 cells 34 → 26 (−8). DataForSEO Maps SERP at the storefront identifies 15 adjacent services where Deep Relief sits #1–#3 at the pin — including massage therapy austin (590 vol, #1), deep tissue massage austin (590, #1), acupuncture austin (1,000, #1), cupping therapy austin (170, #1), and massage near me (40,500, #2). Local Falcon tracks the broader patterns of these (avg ranks 17–20+ on the wider grid), so the gap isn’t measurement, it’s reach: pin-strong, grid-weak. The strategic play is: defend the deep-tissue moat, counter Sage Blossom on pregnancy, convert at-pin strength into off-pin reach via service-page builds, and connect GA4 so conversion stops being invisible.",
   "headline": {
     "h2": "Deep Relief owns deep-tissue and is widening top-10 reach — the bleed is on pregnancy massage, where Sage Blossom’s newer pin is taking cells.",
     "lede": "Across an 8-keyword 13×13 Local Falcon grid scanned 4 times (Mar 12 → May 15, 2026): <strong>portfolio top-10 footprint grew from 328 to 363 cells (+35)</strong> — the clinic’s pin is being shown across more of South Austin than before. Top-3 share is flat-to-slightly-down (-11) entirely because of one keyword cluster: pregnancy/prenatal massage, where Sage Blossom Massage’s 209-review listing has accelerated. The deep-tissue-massage category is decisively owned (DR 47 top-3 cells; nearest competitor 25). Cold laser is unwinnable against Laser Therapy Clinic-Austin’s category-exact pin (133/133 cells in top-3) — accept the constraint and stop measuring against it. <br><br>GSC: 365 days, 7,839 clicks against 945,867 impressions. Sitewide CTR 0.83% — the bottleneck isn’t reach (impressions +2.8% H2 vs H1), it’s click-capture: brand queries are 3.4% of impressions but 63.8% of clicks, non-brand impressions get 0.4% CTR. <strong>GA4 is not connected</strong> — conversion-side measurement is the single biggest open question, and the only owner-side ask in this diagnosis.",
@@ -68,9 +68,9 @@
         "sentiment": "positive"
       },
       {
-        "label": "Untracked at-pin wins (DFS)",
+        "label": "Pin-strong, grid-weak (DFS)",
         "value": "15 kws · ~48K mo vol",
-        "sub": "Deep Relief #1–#3 at center for 15 services not in LD tracking",
+        "sub": "Deep Relief #1–#3 at the storefront; falls past top-20 portfolio-wide on the same kws — reach is the work, not tracking",
         "sentiment": "positive"
       }
     ]
@@ -2015,7 +2015,197 @@
       }
     ]
   },
-  "untracked_at_pin": [
+  "lf_tracking": {
+    "headline": "Local Falcon already tracks 25 kws portfolio-wide. Our 4-scan CSV dataset covers 8; the other 17 are still in LF but we don't have grids for them yet.",
+    "total_tracked": 21,
+    "in_our_window": [
+      {
+        "kw": "pregnancy massage near me",
+        "avg_rank": 10.15,
+        "in_our_window": true,
+        "cluster": "pregnancy"
+      },
+      {
+        "kw": "deep tissue massage",
+        "avg_rank": 10.29,
+        "in_our_window": true,
+        "cluster": "massage"
+      },
+      {
+        "kw": "pregnancy massage",
+        "avg_rank": 10.86,
+        "in_our_window": true,
+        "cluster": "pregnancy"
+      },
+      {
+        "kw": "prenatal massage near me",
+        "avg_rank": 11.74,
+        "in_our_window": true,
+        "cluster": "pregnancy"
+      },
+      {
+        "kw": "dry needling near me",
+        "avg_rank": 17.64,
+        "in_our_window": true,
+        "cluster": "dry_needling"
+      },
+      {
+        "kw": "cold laser austin",
+        "avg_rank": 17.76,
+        "in_our_window": true,
+        "cluster": "cold_laser"
+      },
+      {
+        "kw": "acupuncture",
+        "avg_rank": 17.86,
+        "in_our_window": true,
+        "cluster": "acupuncture"
+      },
+      {
+        "kw": "chiropractor",
+        "avg_rank": 19.32,
+        "in_our_window": true,
+        "cluster": "chiropractic"
+      }
+    ],
+    "tracked_no_window_data": [
+      {
+        "kw": "massage therapy near me",
+        "avg_rank": 11.78,
+        "in_our_window": false,
+        "cluster": "massage"
+      },
+      {
+        "kw": "prenatal massage",
+        "avg_rank": 12.44,
+        "in_our_window": false,
+        "cluster": "pregnancy"
+      },
+      {
+        "kw": "massage therapist near me",
+        "avg_rank": 12.77,
+        "in_our_window": false,
+        "cluster": "massage"
+      },
+      {
+        "kw": "dry needling",
+        "avg_rank": 16.01,
+        "in_our_window": false,
+        "cluster": "dry_needling"
+      },
+      {
+        "kw": "massage near me",
+        "avg_rank": 17.35,
+        "in_our_window": false,
+        "cluster": "massage"
+      },
+      {
+        "kw": "massage places near me",
+        "avg_rank": 18.4,
+        "in_our_window": false,
+        "cluster": "massage"
+      },
+      {
+        "kw": "acupuncture austin",
+        "avg_rank": 18.73,
+        "in_our_window": false,
+        "cluster": "acupuncture"
+      },
+      {
+        "kw": "chiropractor austin",
+        "avg_rank": 18.96,
+        "in_our_window": false,
+        "cluster": "chiropractic"
+      },
+      {
+        "kw": "dry needling austin",
+        "avg_rank": 19.02,
+        "in_our_window": false,
+        "cluster": "dry_needling"
+      },
+      {
+        "kw": "acupuncture near me",
+        "avg_rank": 19.67,
+        "in_our_window": false,
+        "cluster": "acupuncture"
+      },
+      {
+        "kw": "chiropractor near me",
+        "avg_rank": 19.94,
+        "in_our_window": false,
+        "cluster": "chiropractic"
+      },
+      {
+        "kw": "cold laser",
+        "avg_rank": "20+",
+        "in_our_window": false,
+        "cluster": "cold_laser"
+      },
+      {
+        "kw": "cold laser near me",
+        "avg_rank": "20+",
+        "in_our_window": false,
+        "cluster": "cold_laser"
+      }
+    ],
+    "drop_recommended": [
+      {
+        "kw": "accupuncture near me",
+        "avg_rank": 19.67,
+        "in_our_window": false,
+        "cluster": "acupuncture",
+        "drop_recommended": true,
+        "drop_reason": "misspelling — Google auto-corrects to acupuncture near me"
+      },
+      {
+        "kw": "cryo spa",
+        "avg_rank": "20+",
+        "in_our_window": false,
+        "cluster": "cryo",
+        "drop_recommended": true,
+        "drop_reason": "DR doesn't offer cryo therapy per GBP"
+      },
+      {
+        "kw": "cryo spa near me",
+        "avg_rank": "20+",
+        "in_our_window": false,
+        "cluster": "cryo",
+        "drop_recommended": true,
+        "drop_reason": "DR doesn't offer cryo therapy per GBP"
+      },
+      {
+        "kw": "cryo spa austin",
+        "avg_rank": "20+",
+        "in_our_window": false,
+        "cluster": "cryo",
+        "drop_recommended": true,
+        "drop_reason": "DR doesn't offer cryo therapy per GBP"
+      }
+    ],
+    "priority_csvs_to_pull": [
+      {
+        "kw": "massage therapy near me",
+        "avg_rank": 11.78,
+        "reason": "Top-3 territory; broadens the massage moat beyond just deep tissue."
+      },
+      {
+        "kw": "prenatal massage",
+        "avg_rank": 12.44,
+        "reason": "Closes the pregnancy/prenatal bleed cluster (have 'near me' + 'pregnancy' variants but missing the unmodified 'prenatal massage')."
+      },
+      {
+        "kw": "massage near me",
+        "avg_rank": 17.35,
+        "reason": "40,500/mo Austin DMA demand; DataForSEO had DR #2 at pin. LD trajectory tells us how the at-pin #2 holds beyond center."
+      },
+      {
+        "kw": "chiropractor near me",
+        "avg_rank": 19.94,
+        "reason": "Highest-intent chiropractor query (3,600/mo). DataForSEO had #1 at pin; LD portfolio-wide falls past top-20 — the gap is exactly the pin-strong / grid-weak pattern."
+      }
+    ]
+  },
+  "pin_strong_grid_weak": [
     {
       "kw": "chiropractor near me",
       "rank_at_pin": 1,
@@ -2129,19 +2319,14 @@
   ],
   "gap_at_pin": [
     {
-      "kw": "cosmetic acupuncture austin",
-      "search_volume_austin": 10,
-      "current_leader_at_pin": "Si Shou Acupuncture & Wellness, PLLC"
-    },
-    {
       "kw": "decompression therapy austin",
       "search_volume_austin": 10,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
-      "kw": "pediatric chiropractor austin",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "Sprout Chiropractic"
+      "kw": "cosmetic acupuncture austin",
+      "search_volume_austin": 10,
+      "current_leader_at_pin": "Si Shou Acupuncture & Wellness, PLLC"
     },
     {
       "kw": "fertility acupuncture austin",
@@ -2154,6 +2339,16 @@
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     },
     {
+      "kw": "low level laser therapy",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
+    },
+    {
+      "kw": "pediatric chiropractor austin",
+      "search_volume_austin": null,
+      "current_leader_at_pin": "Sprout Chiropractic"
+    },
+    {
       "kw": "spinal decompression austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
@@ -2162,11 +2357,6 @@
       "kw": "acupuncture south austin",
       "search_volume_austin": null,
       "current_leader_at_pin": "South Austin Community Acupuncture"
-    },
-    {
-      "kw": "low level laser therapy",
-      "search_volume_austin": null,
-      "current_leader_at_pin": "HealthFirst Spine & Wellness | Chiropractor South Austin"
     }
   ],
   "gsc": {
@@ -3123,16 +3313,17 @@
     },
     {
       "id": "C",
-      "name": "Formalize tracking on the at-pin wins — stop measuring blind",
+      "name": "Convert pin-strong, grid-weak queries into off-pin reach",
       "color": "amber",
       "priority": "P2",
-      "why": "DataForSEO Maps SERP at the pin shows Deep Relief sitting at rank #1–#3 for 15 services that are not currently in LD tracking, representing ~48K monthly Austin DMA searches. We can’t defend (or grow) what we don’t measure. Wins we don’t track silently erode.",
+      "why": "DataForSEO Maps SERP at the storefront shows Deep Relief at #1–#3 at the pin for 15 services (~48K monthly Austin DMA searches). Local Falcon is already tracking the same kws on the wider grid — their avg ranks portfolio-wide sit at 17–20+, which means the at-pin win evaporates within 1–2 miles of the storefront. The work isn’t tracking; the work is reach. Service-page builds with city-modifier slugs are the path Sage Blossom is already running on pregnancy massage.",
       "actions": [
-        "Add to LD tracking: chiropractor near me (3,600/mo), massage therapy austin (590), deep tissue massage austin (590), acupuncture austin (1,000), cupping therapy austin (170), sports massage austin (320), lymphatic drainage massage austin (1,000), couples massage austin (1,000), massage near me (40,500).",
-        "Run baseline LD grid scans on all 9 net-new tracked queries this month.",
-        "Re-evaluate priority list next quarter — whatever moves first will signal which deserve dedicated landing pages."
+        "Build dedicated /services/{service}-austin/ landing pages for the 5 highest-volume pin-strong queries — chiropractor near me (3,600/mo), massage therapy austin (590), deep tissue massage austin (590), acupuncture austin (1,000), cupping therapy austin (170) — each with LocalBusiness + Service schema.",
+        "Add /services/{service}-{suburb}/ city-modifier pages for the 3 nearest suburbs (Sunset Valley, Oak Hill, Dripping Springs) on the top 2-3 commercial services. Modeled on the same matrix Sage Blossom is using on pregnancy.",
+        "After 4 weeks of new landing-page indexation, re-scan the same 8 queries in Local Falcon and compare cell-by-cell against the May 15 baseline. Off-pin reach (cells 2-3 miles out) is the KPI.",
+        "Drop cryo spa / cryo spa near me / cryo spa austin from LF tracking — DR doesn’t offer cryo, the scans are noise. Drop accupuncture near me (misspelling) — Google auto-corrects, it’s a duplicate of acupuncture near me. Frees up 4 LF tracking slots for higher-leverage kws."
       ],
-      "outcome": "Add ~50K monthly Austin volume to the tracked surface, with DR already in top-3 position at center."
+      "outcome": "Same 8 LF queries: off-pin reach (2-3 mi band) lifts +20% in cells visible, +50% in cells top-10. Frees 4 LF slots."
     },
     {
       "id": "D",
@@ -3185,8 +3376,8 @@
     },
     {
       "id": "OA-2",
-      "title": "Confirm priority service additions to LD tracking",
-      "why": "DataForSEO shows Deep Relief at #1-#3 at the pin for 15 untracked services. We recommend adding all 9 to LD; owner can confirm which 4-5 are commercial priorities so we build dedicated landing pages first.",
+      "title": "Confirm the 5 commercial-priority pin-strong services for service-page builds",
+      "why": "DataForSEO shows Deep Relief at #1-#3 at the storefront for 15 pin-strong services (Local Falcon already tracks the same kws portfolio-wide at avg ranks 17-20+). Recommending 5 dedicated landing-page builds first: chiropractor near me, massage therapy austin, deep tissue massage austin, acupuncture austin, cupping therapy austin. Owner can confirm which match actual booking demand vs the others.",
       "asked_of": "Owner + Matt",
       "status": "Outstanding"
     },
@@ -3237,7 +3428,7 @@
     {
       "id": "M1-C1",
       "lever": "C",
-      "title": "Add 9 net-new queries to LD tracking + baseline scan",
+      "title": "Drop cryo spa × 3 + accupuncture-misspelling from LF; reallocate 4 slots to chiropractor-near-me + massage-near-me + massage-therapy-near-me + prenatal-massage",
       "month": 1,
       "owner_role": "HQDM"
     },

@@ -138,7 +138,7 @@
     </section>
 
     <section class="mb-4">
-      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Services you're already winning that weren't being tracked</h2>
+      <h2 class="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-2">Services where you win at the storefront but lose past 1–2 miles</h2>
       <div class="panel overflow-x-auto">
         <table class="mini w-full">
           <thead><tr>
@@ -190,7 +190,7 @@
   const bp = D.gsc.brand_pull;
   const h = D.gsc.halves;
 
-  $('exec-1').innerHTML = `Across the 4 Local Falcon map scans we ran between March 12 and May 15, your Maps presence widened in nine of ten ways that matter. <strong>Top-10 cells across all 8 tracked services grew from ${t10_b ? t10_b[1] : 328} to 363 (+35)</strong> — your profile is now showing in more of South Austin than before. <strong>Deep tissue massage</strong> is your defining service: 47 top-3 cells, almost twice the nearest competitor (Deeply Therapeutic at 25 cells). DataForSEO confirms you're sitting at <strong>#1 at your storefront's center</strong> for 9 other services we hadn't been tracking — including <code>chiropractor near me</code> (3,600 Austin searches/mo), <code>acupuncture austin</code> (1,000/mo), <code>deep tissue massage austin</code> (590/mo), and <code>cupping therapy austin</code> (170/mo).`;
+  $('exec-1').innerHTML = `Across the 4 Local Falcon map scans we ran between March 12 and May 15, your Maps presence widened in nine of ten ways that matter. <strong>Top-10 cells across all 8 tracked services grew from ${t10_b ? t10_b[1] : 328} to 363 (+35)</strong> — your profile is now showing in more of South Austin than before. <strong>Deep tissue massage</strong> is your defining service: 47 top-3 cells, almost twice the nearest competitor (Deeply Therapeutic at 25 cells). A separate scan run at your storefront's exact coordinates confirms you're sitting at <strong>#1 at the center</strong> for 9 more services — <code>chiropractor near me</code> (3,600 Austin searches/mo), <code>acupuncture austin</code> (1,000/mo), <code>deep tissue massage austin</code> (590/mo), <code>cupping therapy austin</code> (170/mo) and others — but the same queries' wider-grid averages sit at rank 17–20+, which means the win evaporates within 1–2 miles. That's the gap this quarter's plan closes.`;
 
   $('exec-2').innerHTML = `The one watch area is <strong>pregnancy + prenatal massage</strong>, where a competitor pin (Sage Blossom Massage's newer 209-review listing) has been gaining share — you lost ${pm ? Math.abs(pm.top3_cur - pm.top3_base) : 8} top-3 cells on "pregnancy massage near me" over the window. That's the single largest category bleed and the first lever this quarter aims to reverse. On organic search: Google is showing your site to <strong>${fmt(g.impressions_365d)} people per year</strong> — up ${h.imps_pct}% over the last 6 months — but the click-through rate is the bottleneck: brand queries earn ~22% CTR while non-brand earns 0.4%. We'll close that gap with title/meta rewrites + schema in the next 90 days.`;
 
@@ -198,7 +198,7 @@
   $('chips').innerHTML = [
     { v: '47 top-3', l: 'deep tissue massage · the moat', good: true },
     { v: '+35 cells', l: 'top-10 footprint gained · Mar → May', good: true },
-    { v: '15 services', l: 'you win at center but weren\'t tracking', good: true },
+    { v: '15 services', l: 'you win at the storefront · reach is the work', good: true },
     { v: fmt(g.clicks_365d) + ' clicks', l: '/ year · organic search', good: true },
     { v: 'Sage Blossom', l: 'the pregnancy-massage watch competitor', watch: true },
   ].map(c => `<span class="chip ${c.good ? 'good' : c.watch ? 'watch' : ''}"><span class="v">${c.v}</span><span>· ${c.l}</span></span>`).join('');
@@ -255,7 +255,7 @@
     `<strong>Multi-category clinic</strong> — chiropractor primary + acupuncture clinic + massage therapist secondary. That breadth is the reason you hold position on 15+ services from one pin.`,
     `<strong>4.9★ × 443 reviews</strong> — more reviews than every direct South Austin competitor in your category mix. The trust signal is locked in.`,
     `<strong>${fmt(g.clicks_365d)} organic clicks / year</strong> from ${fmt(g.impressions_365d)} impressions — Google routinely shows your site for service queries; we're widening the click-through next.`,
-    `<strong>15 untracked services at #1–#3 at your pin</strong>: <code>chiropractor near me</code> (#1) · <code>massage therapy austin</code> (#1) · <code>acupuncture austin</code> (#1) · <code>cupping therapy austin</code> (#1) · <code>massage near me</code> (#2, 40,500/mo) · and 10 more.`,
+    `<strong>15 services where you rank #1–#3 at the storefront</strong>: <code>chiropractor near me</code> (#1) · <code>massage therapy austin</code> (#1) · <code>acupuncture austin</code> (#1) · <code>cupping therapy austin</code> (#1) · <code>massage near me</code> (#2, 40,500/mo) · and 10 more. The wider grid for these queries is the opportunity — service-page builds extend the win past the pin.`,
   ].map(li => `<li class="flex gap-2"><span class="text-emerald-500 font-bold mt-0.5">✓</span><span>${li}</span></li>`).join('');
 
   // Reshuffle
@@ -283,13 +283,13 @@
   }).join('');
 
   // Untracked rows
-  $('untracked-rows').innerHTML = D.untracked_at_pin.slice(0, 12).map(r => `<tr>
+  $('untracked-rows').innerHTML = D.pin_strong_grid_weak.slice(0, 12).map(r => `<tr>
     <td><strong>${r.kw}</strong></td>
     <td class="num"><span style="background:${r.rank_at_pin <= 3 ? '#d1fae5' : '#fef3c7'};color:${r.rank_at_pin <= 3 ? '#065f46' : '#92400e'};padding:.1rem .4rem;border-radius:.25rem;font-weight:700;font-size:.65rem">#${r.rank_at_pin}</span></td>
     <td class="num">${fmt(r.search_volume_austin)}</td>
   </tr>`).join('');
-  const totVol = D.untracked_at_pin.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
-  $('untracked-note').innerHTML = `Combined Austin demand on top-3 untracked: <strong>${fmt(totVol)} searches/month</strong>. We'll add these to our weekly tracking starting Month 1, so we'll catch any change before it shows up in your booking volume.`;
+  const totVol = D.pin_strong_grid_weak.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
+  $('untracked-note').innerHTML = `Combined Austin demand on these top-3 at-pin services: <strong>${fmt(totVol)} searches/month</strong>. Local Falcon already tracks the wider picture for these queries — you're winning at the storefront but the ranking falls off within 1–2 miles. The plan this quarter builds dedicated landing pages for the five biggest ones, which is how we extend the radius where you show up first.`;
 
   // Focus months
   const months = [
@@ -297,14 +297,14 @@
       month: 'Month 1 · June 2026',
       theme: 'Defend + measure',
       color: '#10b981',
-      summary: 'Lock in the deep-tissue moat and start the prenatal recovery — the two highest-leverage queries get dedicated landing pages this month. Add the 9 net-new untracked services to weekly tracking. Owner ask: GA4 access.',
-      by_end_of_month: 'Deep tissue + prenatal massage have dedicated, schema-marked landing pages; weekly LD tracking includes 9 new services; GA4 connection request in motion.',
+      summary: 'Lock in the deep-tissue moat and start the prenatal recovery — the two highest-leverage queries get dedicated landing pages this month. Clean up the Local Falcon tracking list (drop cryo × 3 + the acupuncture misspelling, reallocate to 4 higher-leverage queries). Owner ask: GA4 access.',
+      by_end_of_month: 'Deep tissue + prenatal massage have dedicated, schema-marked landing pages; Local Falcon tracking list cleaned + reallocated; GA4 connection request in motion.',
       deliverables: [
         '/services/deep-tissue-massage-austin/ landing page (live)',
         '/services/prenatal-massage-austin/ landing page (live)',
         '3 prenatal-massage GBP posts with client photos',
         'Title/meta rewrite on top 10 high-impression non-brand pages',
-        'LD baseline scans on 9 new tracked queries',
+        'Local Falcon: drop 4 noise queries (cryo × 3 + accupuncture misspelling); add chiropractor-near-me + massage-near-me + massage-therapy-near-me + prenatal-massage to fill the picture',
       ],
     },
     {

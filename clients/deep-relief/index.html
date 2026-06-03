@@ -54,7 +54,7 @@
         <a href="#headline" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Headline</a>
         <a href="#pin" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Pin</a>
         <a href="#maps" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Maps</a>
-        <a href="#untracked" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Untracked wins</a>
+        <a href="#untracked" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Pin-strong</a>
         <a href="#gsc" class="px-2.5 py-1.5 rounded hover:bg-slate-100">GSC</a>
         <a href="#competitors" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Competitors</a>
         <a href="#demand" class="px-2.5 py-1.5 rounded hover:bg-slate-100">Demand</a>
@@ -181,19 +181,62 @@
   </section>
 
   <section id="untracked" class="max-w-7xl mx-auto px-4 sm:px-6 py-9">
-    <h2 class="text-2xl font-bold tracking-tight mb-1">Untracked services where Deep Relief already wins at the pin</h2>
-    <p class="text-sm text-ink-500 mb-4">DataForSEO Maps SERP scans (June 2 2026) at the Deep Relief pin coordinates. These are services <strong>not currently in LD tracking</strong>. Deep Relief sits #1–#5 at center for all of them — adding to tracking gives us defense.</p>
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Pin-strong, grid-weak — services Deep Relief wins at the storefront but loses past 1–2 miles</h2>
+    <p class="text-sm text-ink-500 mb-4">DataForSEO Maps SERP scans at the Deep Relief storefront coordinates show #1–#3 ranking on the 15 services below. Local Falcon already tracks the same kws portfolio-wide (avg ranks 17–20+ across the wider grid) — the gap isn't measurement, it's reach. These wins evaporate within 1–2 miles of the pin, so the lever isn't "add to tracking" — it's service-page builds + city-modifier slugs that extend the off-pin radius.</p>
     <div class="panel overflow-x-auto">
       <table class="w-full text-sm ttable">
         <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
           <th>Query</th>
-          <th class="num">Rank at pin</th>
+          <th class="num">Rank at pin (DFS)</th>
           <th class="num">SV/mo (Austin)</th>
-          <th>Status</th>
+          <th>What the gap means</th>
         </tr></thead>
         <tbody id="untracked-rows"></tbody>
       </table>
       <p class="text-[11px] text-slate-500 mt-3" id="untracked-note"></p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+    <h2 class="text-2xl font-bold tracking-tight mb-1">Local Falcon tracking inventory</h2>
+    <p class="text-sm text-ink-500 mb-4">Full LF roster as of October 2025: <strong id="lf-total">—</strong> tracked queries. Our 4-scan CSV dataset covers <strong>8</strong> of them; the other <strong id="lf-no-window">—</strong> have LF coverage but no CSVs in this build. Plus <strong id="lf-drop-count">—</strong> recommended to drop.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2">In our 4-scan window · 8 kws</div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Query</th><th class="num">LF avg rank</th><th>Cluster</th>
+          </tr></thead>
+          <tbody id="lf-in-window"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Tracked in LF but missing CSVs · would tighten the picture</div>
+        <table class="w-full text-sm ttable">
+          <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+            <th>Query</th><th class="num">LF avg rank</th><th>Cluster</th>
+          </tr></thead>
+          <tbody id="lf-missing"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel mt-4" style="border-left:4px solid #ef4444">
+      <div class="text-xs font-bold uppercase tracking-wider text-rose-700 mb-2">Drop from LF tracking — wasted scans</div>
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th><th>Reason</th>
+        </tr></thead>
+        <tbody id="lf-drop"></tbody>
+      </table>
+    </div>
+    <div class="panel mt-4" style="border-left:4px solid #10b981">
+      <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-2">Priority CSVs to add for the cleanest picture (P1)</div>
+      <table class="w-full text-sm ttable">
+        <thead><tr class="text-left text-[11px] font-bold uppercase tracking-wider text-slate-500">
+          <th>Query</th><th class="num">LF avg rank</th><th>Why this one</th>
+        </tr></thead>
+        <tbody id="lf-priority"></tbody>
+      </table>
     </div>
   </section>
 
@@ -520,18 +563,38 @@
     </tr>`;
   }).join('');
 
-  // ===== Untracked at-pin =====
-  $('untracked-rows').innerHTML = D.untracked_at_pin.map(r => {
+  // ===== Pin-strong, grid-weak (formerly "untracked at-pin") =====
+  $('untracked-rows').innerHTML = D.pin_strong_grid_weak.map(r => {
     const pillClass = r.rank_at_pin <= 3 ? 'good' : 'watch';
     return `<tr>
       <td><strong>${r.kw}</strong></td>
       <td class="num"><span class="pill ${pillClass}">#${r.rank_at_pin}</span></td>
       <td class="num">${fmt(r.search_volume_austin)}</td>
-      <td>Not in LD tracking — recommend adding (Lever C)</td>
+      <td>Tracked in LF (grid-wide avg ~17-20+) — service-page build extends reach (Lever C)</td>
     </tr>`;
   }).join('');
-  const totVol = D.untracked_at_pin.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
-  $('untracked-note').innerHTML = `Combined Austin-DMA monthly demand on untracked at-pin <strong>top-3</strong> queries: <strong>${fmt(totVol)}</strong> searches/mo. Adding to LD = formal defense; otherwise we won't notice if any of them slip. The biggest single ones — <code>chiropractor near me</code> (3,600/mo, #1) and <code>massage near me</code> (40,500/mo, #2) — should be tracked even if no production work follows.`;
+  const totVol = D.pin_strong_grid_weak.filter(r => r.rank_at_pin <= 3).reduce((s, r) => s + (r.search_volume_austin || 0), 0);
+  $('untracked-note').innerHTML = `Combined Austin-DMA monthly demand on at-pin <strong>top-3</strong> queries: <strong>${fmt(totVol)}</strong> searches/mo. These are already tracked in Local Falcon (avg ranks 17-20+ on the wider grid). The story is reach, not visibility: <code>chiropractor near me</code> (3,600/mo, LF avg 19.94, DFS #1 at pin) and <code>massage near me</code> (40,500/mo, LF avg 17.35, DFS #2 at pin) both win at the storefront and fall out of the grid within 1-2 miles — the unlock is dedicated service-page + city-modifier builds, not adding to tracking.`;
+
+  // ===== Local Falcon tracking inventory =====
+  if (D.lf_tracking) {
+    const lf = D.lf_tracking;
+    document.getElementById('lf-total').textContent = lf.total_tracked;
+    document.getElementById('lf-no-window').textContent = lf.tracked_no_window_data.length;
+    document.getElementById('lf-drop-count').textContent = lf.drop_recommended.length;
+    document.getElementById('lf-in-window').innerHTML = lf.in_our_window.map(r =>
+      `<tr><td><strong>${r.kw}</strong></td><td class="num">${r.avg_rank}</td><td><span class="pill neutral">${r.cluster}</span></td></tr>`
+    ).join('');
+    document.getElementById('lf-missing').innerHTML = lf.tracked_no_window_data.map(r =>
+      `<tr><td><strong>${r.kw}</strong></td><td class="num">${r.avg_rank}</td><td><span class="pill neutral">${r.cluster}</span></td></tr>`
+    ).join('');
+    document.getElementById('lf-drop').innerHTML = lf.drop_recommended.map(r =>
+      `<tr><td><strong>${r.kw}</strong></td><td class="text-sm text-slate-600">${r.drop_reason}</td></tr>`
+    ).join('');
+    document.getElementById('lf-priority').innerHTML = lf.priority_csvs_to_pull.map(r =>
+      `<tr><td><strong>${r.kw}</strong></td><td class="num">${r.avg_rank}</td><td class="text-sm text-slate-700">${r.reason}</td></tr>`
+    ).join('');
+  }
 
   // ===== Gap services =====
   $('gap-rows').innerHTML = D.gap_at_pin.map(r => `<tr>
