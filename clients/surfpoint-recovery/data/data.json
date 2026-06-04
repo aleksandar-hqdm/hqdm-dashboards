@@ -40,7 +40,7 @@
       "GA4 property properties/394841496"
     ]
   },
-  "tldr": "Surfpoint is overperforming its architecture. The GBP listing is the strongest single asset (rank 1.47 / 96% top-3 on the tracked alcohol-rehab anchor, improving Oct 2025 → Apr 2026; rank 1 across 9 of 12 priority service anchors at Coney Island center; 4.8★ / 120 reviews / +29 in 16 days; converts at 2.53% — 8× the all-Organic-Search rate of 0.32%). Organically, the site is being actively de-indexed by Google: 756 URLs flagged Crawled/Discovered — not indexed across 87 days; daily impressions −79% peak-to-current; 47 of 99 location pages not indexed; service pages get <strong>104 sessions and 0 conversions in 365 days</strong> because the interlinking SOP routes equity to homepage + utility pages and bypasses services entirely. Backlinks carry a <strong>spam score of 43</strong> from PR placements to PBN-adjacent domains (national benchmarks sit at 16–24). Q2 move: <strong>disavow first</strong>, then ship homepage CRD + 28 location-page redirects + 9 location-page rebuilds + service-page rebuild starting with alcohol-detox + opioid-detox + MAT, refactor internal linking onto services, sequence GBP optimization beyond reviews into categories/attributes/photos/posts/Q&A/booking link, and run individual review on 555 legacy URLs the topical+backlinks overlay flagged as AUDIT. Pause new PR placement. Lean on GBP dominance as the resilience layer.",
+  "tldr": "Surfpoint is overperforming its architecture. The GBP listing is the strongest single asset (rank 1.47 / 96% top-3 on the tracked alcohol-rehab anchor, improving Oct 2025 → Apr 2026; rank 1 across 9 of 12 priority service anchors at Coney Island center; 4.8★ / 120 reviews / +29 in 16 days; converts at 2.53% — 8× the all-Organic-Search rate of 0.32%). Organically, the site is being actively de-indexed by Google: 756 URLs flagged Crawled/Discovered — not indexed across 87 days; daily impressions −79% peak-to-current; 47 of 99 location pages not indexed; service pages get <strong>104 sessions and 0 conversions in 365 days</strong> because the interlinking SOP routes equity to homepage + utility pages and bypasses services entirely. Backlinks carry a <strong>spam score of 43</strong> from PR placements to PBN-adjacent domains (national benchmarks sit at 16–24). Q2 move: <strong>disavow first</strong>, then ship homepage CRD + 28 location-page redirects + 9 location-page rebuilds + service-page rebuild starting with alcohol-detox + opioid-detox + MAT, refactor internal linking onto services, sequence GBP optimization beyond reviews into categories/attributes/photos/posts/Q&A/booking link, and run individual review on 555 legacy URLs the topical+backlinks overlay flagged as AUDIT. Pause new PR placement. Lean on GBP dominance as the resilience layer. Everything here stays inside the Coney Island and South Brooklyn service area; out-of-borough and out-of-state pages are cleanup, not ranking targets.",
   "kpis": [
     {
       "label": "Maps anchor — `alcohol rehab brooklyn`",
@@ -756,7 +756,7 @@
       "clicks_90d": 12,
       "pos": 18.5,
       "class": "location",
-      "lever": "LP-01 upgrade (M1)"
+      "lever": "LP-01 redirect (M1), out-of-borough"
     },
     {
       "url": "/locations/* — 37 empty doorway pages",
@@ -799,13 +799,13 @@
       "actions": [
         {
           "code": "LP-01",
-          "name": "Location pages cleanup: 28 redirects (5 NJ + 23 NY-area → /areas-served) + write content for 9 upgrade pages (brooklyn, manhattan, NYC, queens, staten-island, bronx, harlem, inwood, brownsville)",
+          "name": "Location pages cleanup: redirect every out-of-borough and out-of-state page to /areas-served (Manhattan, Queens, Staten Island, Bronx, Harlem, Inwood, plus the 5 NJ pages and the thin NY-area doorways); keep and strengthen only the in-radius pages (Coney Island + the Brooklyn hub + the South Brooklyn neighborhood pages)",
           "month": "M1",
           "effort": "L"
         },
         {
           "code": "LP-02",
-          "name": "Deploy LocalBusiness + BreadcrumbList schema on the 9 upgrade pages",
+          "name": "Deploy LocalBusiness + BreadcrumbList schema on the retained in-radius location pages",
           "month": "M1",
           "effort": "S"
         },
@@ -1370,7 +1370,7 @@
   ],
   "owner_asks": [
     "Publish the homepage CRD update — drafted March 2026, in client review 2 months. Either approve as-is or tell us 2–3 changes; we ship within 48h. Every downstream improvement (Treatments hub, sub-pages, schema) inherits homepage structure.",
-    "Authorize removal/redirect of 28 empty location pages — 37 of 99 are 33–37-word boilerplate doorways; 47/99 not indexed; 5 are NJ out-of-state on a NY-only OASAS-licensed facility. Decisions: 9 build-out + 28 redirect → /areas-served or parent location pages.",
+    "Authorize removal/redirect of the out-of-borough and out-of-state location pages (Manhattan, Queens, Staten Island, Bronx, Harlem, Inwood, plus the 5 NJ pages and the thin NY-area doorways): 37 of 99 are 33-37-word boilerplate, 47 of 99 are not indexed, and the NJ pages are out-of-state on a NY-only OASAS-licensed facility. Build-out stays on the in-radius South Brooklyn pages only; everything outside the Coney Island service area redirects to /areas-served or its parent.",
     "Authorize the 5 /services/* → /treatments/* legacy 301 redirects — orphaned service pages need URL canonicalization before SP-01..SP-04 ship.",
     "URL normalization for 40 verbose-slug location pages — conceptual buy-in only; execution Phase 2 (Q3 2026) when ready (40 redirects, mapped 1:1, single batch).",
     "Confirm review-acquisition SOP can run unattended at intake-discharge — QR card + 24h SMS — without weekly nudging. Velocity has moved 91 → 120 in 16 days; we want to formalize so the +20/month cadence continues.",
