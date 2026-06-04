@@ -1009,42 +1009,234 @@
     "headline": "Where Niagara is already winning",
     "subhead": "DataForSEO LocalDominator 158-cell WNY grid · Apr 30 2026 · GSC last 365d",
     "map_keyword_dominance": [
-      { "keyword": "alcohol detox near me",       "top3_pct": 70.9, "top3_cells": 112, "top10_pct": 83.5, "avg_rank": 3.13 },
-      { "keyword": "alcohol rehab",               "top3_pct": 70.3, "top3_cells": 111, "top10_pct": 81.6, "avg_rank": 2.99 },
-      { "keyword": "inpatient rehab near me",     "top3_pct": 61.4, "top3_cells": 97,  "top10_pct": 79.1, "avg_rank": 3.17 },
-      { "keyword": "addiction rehab near me",     "top3_pct": 60.8, "top3_cells": 96,  "top10_pct": 80.4, "avg_rank": 3.39 },
-      { "keyword": "addiction rehab",             "top3_pct": 60.8, "top3_cells": 96,  "top10_pct": 77.8, "avg_rank": 3.52 },
-      { "keyword": "addiction treatment center",  "top3_pct": 54.4, "top3_cells": 86,  "top10_pct": 74.7, "avg_rank": 3.30 },
-      { "keyword": "inpatient rehab",             "top3_pct": 51.3, "top3_cells": 81,  "top10_pct": 70.3, "avg_rank": 3.89 },
-      { "keyword": "rehab near me",               "top3_pct": 41.1, "top3_cells": 65,  "top10_pct": 58.2, "avg_rank": 4.66 }
+      {
+        "keyword": "alcohol detox near me",
+        "top3_pct": 70.9,
+        "top3_cells": 112,
+        "top10_pct": 83.5,
+        "avg_rank": 3.13
+      },
+      {
+        "keyword": "alcohol rehab",
+        "top3_pct": 70.3,
+        "top3_cells": 111,
+        "top10_pct": 81.6,
+        "avg_rank": 2.99
+      },
+      {
+        "keyword": "inpatient rehab near me",
+        "top3_pct": 61.4,
+        "top3_cells": 97,
+        "top10_pct": 79.1,
+        "avg_rank": 3.17
+      },
+      {
+        "keyword": "addiction rehab near me",
+        "top3_pct": 60.8,
+        "top3_cells": 96,
+        "top10_pct": 80.4,
+        "avg_rank": 3.39
+      },
+      {
+        "keyword": "addiction rehab",
+        "top3_pct": 60.8,
+        "top3_cells": 96,
+        "top10_pct": 77.8,
+        "avg_rank": 3.52
+      },
+      {
+        "keyword": "addiction treatment center",
+        "top3_pct": 54.4,
+        "top3_cells": 86,
+        "top10_pct": 74.7,
+        "avg_rank": 3.3
+      },
+      {
+        "keyword": "inpatient rehab",
+        "top3_pct": 51.3,
+        "top3_cells": 81,
+        "top10_pct": 70.3,
+        "avg_rank": 3.89
+      },
+      {
+        "keyword": "rehab near me",
+        "top3_pct": 41.1,
+        "top3_cells": 65,
+        "top10_pct": 58.2,
+        "avg_rank": 4.66
+      }
     ],
     "anchor_towns": [
-      { "town": "Newfane (pin)", "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.00, "note": "Anchor pin — structural #1" },
-      { "town": "Appleton",      "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.00, "note": "100% top-3 across all 8 priority kws" },
-      { "town": "Ransomville",   "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.22, "note": "100% top-3 across all 8 priority kws" },
-      { "town": "Cambria",       "owned_pct": 100.0, "owned_cells": 32,  "avg_rank": 1.22, "note": "100% top-3 across all 8 priority kws" },
-      { "town": "Wilson",        "owned_pct": 100.0, "owned_cells": 24,  "avg_rank": 1.00, "note": "100% top-3 across all 8 priority kws" },
-      { "town": "Youngstown",    "owned_pct": 100.0, "owned_cells": 16,  "avg_rank": 1.38, "note": "100% top-3; site location page missing" },
-      { "town": "Olcott",        "owned_pct": 100.0, "owned_cells": 8,   "avg_rank": 1.00, "note": "100% top-3" },
-      { "town": "Burt",          "owned_pct": 100.0, "owned_cells": 8,   "avg_rank": 1.00, "note": "100% top-3" },
-      { "town": "Barker",        "owned_pct": 95.2,  "owned_cells": 236, "avg_rank": 1.42, "note": "236/248 cells top-3 — broad outer-ring dominance" },
-      { "town": "Lockport",      "owned_pct": 94.2,  "owned_cells": 98,  "avg_rank": 1.53, "note": "98/104 cells top-3 — GBP service-area declaration unlocks site lift" },
-      { "town": "Pendleton",     "owned_pct": 77.1,  "owned_cells": 37,  "avg_rank": 2.57, "note": "Anchor candidate" },
-      { "town": "Clarence",      "owned_pct": 53.1,  "owned_cells": 170, "avg_rank": 3.54, "note": "Buffalo-metro edge: only 53% owned, outside the home market, not a target" }
+      {
+        "town": "Newfane (pin)",
+        "owned_pct": 100.0,
+        "owned_cells": 32,
+        "avg_rank": 1.0,
+        "note": "Anchor pin — structural #1"
+      },
+      {
+        "town": "Appleton",
+        "owned_pct": 100.0,
+        "owned_cells": 32,
+        "avg_rank": 1.0,
+        "note": "100% top-3 across all 8 priority kws"
+      },
+      {
+        "town": "Ransomville",
+        "owned_pct": 100.0,
+        "owned_cells": 32,
+        "avg_rank": 1.22,
+        "note": "100% top-3 across all 8 priority kws"
+      },
+      {
+        "town": "Cambria",
+        "owned_pct": 100.0,
+        "owned_cells": 32,
+        "avg_rank": 1.22,
+        "note": "100% top-3 across all 8 priority kws"
+      },
+      {
+        "town": "Wilson",
+        "owned_pct": 100.0,
+        "owned_cells": 24,
+        "avg_rank": 1.0,
+        "note": "100% top-3 across all 8 priority kws"
+      },
+      {
+        "town": "Youngstown",
+        "owned_pct": 100.0,
+        "owned_cells": 16,
+        "avg_rank": 1.38,
+        "note": "100% top-3; site location page missing"
+      },
+      {
+        "town": "Olcott",
+        "owned_pct": 100.0,
+        "owned_cells": 8,
+        "avg_rank": 1.0,
+        "note": "100% top-3"
+      },
+      {
+        "town": "Burt",
+        "owned_pct": 100.0,
+        "owned_cells": 8,
+        "avg_rank": 1.0,
+        "note": "100% top-3"
+      },
+      {
+        "town": "Barker",
+        "owned_pct": 95.2,
+        "owned_cells": 236,
+        "avg_rank": 1.42,
+        "note": "236/248 cells top-3 — broad outer-ring dominance"
+      },
+      {
+        "town": "Lockport",
+        "owned_pct": 94.2,
+        "owned_cells": 98,
+        "avg_rank": 1.53,
+        "note": "98/104 cells top-3 — GBP service-area declaration unlocks site lift"
+      },
+      {
+        "town": "Pendleton",
+        "owned_pct": 77.1,
+        "owned_cells": 37,
+        "avg_rank": 2.57,
+        "note": "Anchor candidate"
+      },
+      {
+        "town": "Clarence",
+        "owned_pct": 53.1,
+        "owned_cells": 170,
+        "avg_rank": 3.54,
+        "note": "Buffalo-metro edge: only 53% owned, outside the home market, not a target"
+      }
     ],
     "gsc_treatment_winners": [
-      { "query": "newfane recovery center",     "clicks": 85, "impressions": 449,  "position_avg": 2.9, "ctr_pct": 18.93 },
-      { "query": "recovery of niagara",         "clicks": 54, "impressions": 380,  "position_avg": 3.5, "ctr_pct": 14.21 },
-      { "query": "newfane drug rehab",          "clicks": 50, "impressions": 526,  "position_avg": 6.6, "ctr_pct": 9.51  },
-      { "query": "niagara rehab",               "clicks": 29, "impressions": 1001, "position_avg": 8.7, "ctr_pct": 2.90  },
-      { "query": "niagara rehab newfane ny",    "clicks": 28, "impressions": 152,  "position_avg": 1.3, "ctr_pct": 18.42 },
-      { "query": "inpatient rehab near me",     "clicks": 19, "impressions": 249,  "position_avg": 6.6, "ctr_pct": 7.63  },
-      { "query": "rehab facilities near me",    "clicks": 11, "impressions": 190,  "position_avg": 9.8, "ctr_pct": 5.79  },
-      { "query": "drug rehab facilities near me","clicks": 11, "impressions": 133,  "position_avg": 5.1, "ctr_pct": 8.27  },
-      { "query": "alcohol detox near me",       "clicks": 9,  "impressions": 83,   "position_avg": 4.6, "ctr_pct": 10.84 },
-      { "query": "alcohol rehab near me",       "clicks": 7,  "impressions": 110,  "position_avg": 6.8, "ctr_pct": 6.36  },
-      { "query": "rehab near me",               "clicks": 7,  "impressions": 96,   "position_avg": 7.1, "ctr_pct": 7.29  },
-      { "query": "inpatient rehab buffalo ny",  "clicks": 6,  "impressions": 127,  "position_avg": 6.7, "ctr_pct": 4.72  }
+      {
+        "query": "newfane recovery center",
+        "clicks": 85,
+        "impressions": 449,
+        "position_avg": 2.9,
+        "ctr_pct": 18.93
+      },
+      {
+        "query": "recovery of niagara",
+        "clicks": 54,
+        "impressions": 380,
+        "position_avg": 3.5,
+        "ctr_pct": 14.21
+      },
+      {
+        "query": "newfane drug rehab",
+        "clicks": 50,
+        "impressions": 526,
+        "position_avg": 6.6,
+        "ctr_pct": 9.51
+      },
+      {
+        "query": "niagara rehab",
+        "clicks": 29,
+        "impressions": 1001,
+        "position_avg": 8.7,
+        "ctr_pct": 2.9
+      },
+      {
+        "query": "niagara rehab newfane ny",
+        "clicks": 28,
+        "impressions": 152,
+        "position_avg": 1.3,
+        "ctr_pct": 18.42
+      },
+      {
+        "query": "inpatient rehab near me",
+        "clicks": 19,
+        "impressions": 249,
+        "position_avg": 6.6,
+        "ctr_pct": 7.63
+      },
+      {
+        "query": "rehab facilities near me",
+        "clicks": 11,
+        "impressions": 190,
+        "position_avg": 9.8,
+        "ctr_pct": 5.79
+      },
+      {
+        "query": "drug rehab facilities near me",
+        "clicks": 11,
+        "impressions": 133,
+        "position_avg": 5.1,
+        "ctr_pct": 8.27
+      },
+      {
+        "query": "alcohol detox near me",
+        "clicks": 9,
+        "impressions": 83,
+        "position_avg": 4.6,
+        "ctr_pct": 10.84
+      },
+      {
+        "query": "alcohol rehab near me",
+        "clicks": 7,
+        "impressions": 110,
+        "position_avg": 6.8,
+        "ctr_pct": 6.36
+      },
+      {
+        "query": "rehab near me",
+        "clicks": 7,
+        "impressions": 96,
+        "position_avg": 7.1,
+        "ctr_pct": 7.29
+      },
+      {
+        "query": "inpatient rehab buffalo ny",
+        "clicks": 6,
+        "impressions": 127,
+        "position_avg": 6.7,
+        "ctr_pct": 4.72
+      }
     ],
     "branded_engine": {
       "ctr_365d": 17.1,
@@ -1052,44 +1244,29 @@
       "impressions_365d": 15237,
       "query_count": 20,
       "top_branded_kws": [
-        { "query": "recovery center of niagara",  "clicks": 1222, "ctr_pct": 21.15, "position_avg": 3.0 },
-        { "query": "niagara recovery center",     "clicks": 676,  "ctr_pct": 17.82, "position_avg": 2.3 },
-        { "query": "niagara recovery",            "clicks": 254,  "ctr_pct": 15.74, "position_avg": 2.9 }
+        {
+          "query": "recovery center of niagara",
+          "clicks": 1222,
+          "ctr_pct": 21.15,
+          "position_avg": 3.0
+        },
+        {
+          "query": "niagara recovery center",
+          "clicks": 676,
+          "ctr_pct": 17.82,
+          "position_avg": 2.3
+        },
+        {
+          "query": "niagara recovery",
+          "clicks": 254,
+          "ctr_pct": 15.74,
+          "position_avg": 2.9
+        }
       ],
       "note": "The brand engine is healthy. The 41% routing to \"Recovery Center of Niagara\" is a sitewide title-tag fix away from compounding into the canonical entity."
     }
   },
   "deliverables": [
-    {
-      "label": "Q2 2026 Tasks (FINAL — SEO Neo + AI Articles filtered)",
-      "path": "Niagara_Recovery_Q2_2026_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Push 1 — Brand Canonical",
-      "path": "Niagara_Recovery_Push1_Brand_Canonical.md",
-      "type": "md"
-    },
-    {
-      "label": "Push 2 — GBP Service Area Swap",
-      "path": "Niagara_Recovery_Push2_GBP_Service_Area_Swap.md",
-      "type": "md"
-    },
-    {
-      "label": "Push 3 — Service Pages",
-      "path": "Niagara_Recovery_Push3_Service_Pages.md",
-      "type": "md"
-    },
-    {
-      "label": "Push 4 — Location Page Cleanup",
-      "path": "Niagara_Recovery_Push4_Location_Page_Architecture.md",
-      "type": "md"
-    },
-    {
-      "label": "Push 5 — Content Cleanup",
-      "path": "Niagara_Recovery_Push5_Content_Cleanup.md",
-      "type": "md"
-    },
     {
       "label": "Pages Action List",
       "path": "Niagara_Recovery_Pages_Action_List.csv",
@@ -1098,11 +1275,6 @@
     {
       "label": "Internal Linking Map",
       "path": "Niagara_Recovery_Internal_Linking_Map.csv",
-      "type": "csv"
-    },
-    {
-      "label": "GBP Action List",
-      "path": "Niagara_Recovery_GBP_Action_List.csv",
       "type": "csv"
     },
     {
@@ -1128,11 +1300,6 @@
     {
       "label": "Page Refresh Pages",
       "path": "Niagara_Recovery_Page_Refresh_Pages.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Reporting Master Template",
-      "path": "Niagara_Recovery_Reporting_Master_Template.csv",
       "type": "csv"
     }
   ],
@@ -1464,15 +1631,35 @@
           "cap": "1–2 / month",
           "cells": [
             [
-              { "u": "/services/alcohol-detoxification-services", "k": "revamp", "n": "932w → 1500w + MedicalBusiness/Service schema + per-page meta + intake CTA + 8-Q FAQ · 790/mo Bing volume (highest single-modality demand) · current page ships [phone number] placeholder + 0 schema" }
+              {
+                "u": "/services/alcohol-detoxification-services",
+                "k": "revamp",
+                "n": "932w → 1500w + MedicalBusiness/Service schema + per-page meta + intake CTA + 8-Q FAQ · 790/mo Bing volume (highest single-modality demand) · current page ships [phone number] placeholder + 0 schema"
+              }
             ],
             [
-              { "u": "/services/drug-detox-services", "k": "revamp", "n": "733w → 1500w + Service+hasOfferCatalog schema + per-modality split (opioids / amphetamines / cocaine / poly-drug / benzo) + FAQ · 6,600/mo Google Ads volume (largest captured demand)" },
-              { "u": "/services/suboxone-mat-program", "k": "new", "n": "Brand-new URL · 1500w + Service+hasOfferCatalog schema (Suboxone + Vivitrol + methadone referral) + payor info · 1,900/mo Google Ads 'suboxone doctor' + 530/mo Bing 'suboxone clinic' + 62 GBP-search 'suboxone' Dec→May" }
+              {
+                "u": "/services/drug-detox-services",
+                "k": "revamp",
+                "n": "733w → 1500w + Service+hasOfferCatalog schema + per-modality split (opioids / amphetamines / cocaine / poly-drug / benzo) + FAQ · 6,600/mo Google Ads volume (largest captured demand)"
+              },
+              {
+                "u": "/services/suboxone-mat-program",
+                "k": "new",
+                "n": "Brand-new URL · 1500w + Service+hasOfferCatalog schema (Suboxone + Vivitrol + methadone referral) + payor info · 1,900/mo Google Ads 'suboxone doctor' + 530/mo Bing 'suboxone clinic' + 62 GBP-search 'suboxone' Dec→May"
+              }
             ],
             [
-              { "u": "/services/opioid-detoxification-services", "k": "revamp", "n": "Post-CN-01 polish · expand body + MedicalBusiness schema + intake CTA + FAQ · captures the opioid sub-cluster pulled out of /services/drug-detox-services" },
-              { "u": "/services/short-term-residential-program", "k": "revamp", "n": "Post-Push 3 polish · MedicalBusiness schema + program-length + insurance + intake CTA · GBP product #1 currently has no schema floor on site" }
+              {
+                "u": "/services/opioid-detoxification-services",
+                "k": "revamp",
+                "n": "Post-CN-01 polish · expand body + MedicalBusiness schema + intake CTA + FAQ · captures the opioid sub-cluster pulled out of /services/drug-detox-services"
+              },
+              {
+                "u": "/services/short-term-residential-program",
+                "k": "revamp",
+                "n": "Post-Push 3 polish · MedicalBusiness schema + program-length + insurance + intake CTA · GBP product #1 currently has no schema floor on site"
+              }
             ]
           ]
         },
@@ -1481,14 +1668,30 @@
           "cap": "cleanup · no net-new pages",
           "cells": [
             [
-              { "u": "/locations/williamsville", "k": "revamp", "n": "986w content already in place but 0 schema + no ratings + no NAP · LD 89–93% rank 5-6 · schema + NAP is the lever (in-market, already ranking)" },
-              { "u": "/locations/lockport", "k": "revamp", "n": "Thin 276w doorway expanded to 1000w + MedicalBusiness schema + drive-time · Lockport is LD-dominant (13 cells 100% rank 1.4) but the landing wastes the signal" }
+              {
+                "u": "/locations/williamsville",
+                "k": "revamp",
+                "n": "986w content already in place but 0 schema + no ratings + no NAP · LD 89–93% rank 5-6 · schema + NAP is the lever (in-market, already ranking)"
+              },
+              {
+                "u": "/locations/lockport",
+                "k": "revamp",
+                "n": "Thin 276w doorway expanded to 1000w + MedicalBusiness schema + drive-time · Lockport is LD-dominant (13 cells 100% rank 1.4) but the landing wastes the signal"
+              }
             ],
             [
-              { "u": "Redirect ~60 doorway /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest substantive page", "k": "redirect", "n": "301s per fill-not-kill policy · stop the doorway sprawl" }
+              {
+                "u": "Redirect ~60 doorway /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest substantive page",
+                "k": "redirect",
+                "n": "301s per fill-not-kill policy · stop the doorway sprawl"
+              }
             ],
             [
-              { "u": "Towns already won (Lewiston · Youngstown · Cambria · the dominated ring) → declare in GBP service area, not new pages", "k": "fix", "n": "the Maps win already lives at the pin · no net-new Buffalo-metro builds (Tonawanda / N. Tonawanda / Cheektowaga / Amherst sit outside the home market)" }
+              {
+                "u": "Towns already won (Lewiston · Youngstown · Cambria · the dominated ring) → declare in GBP service area, not new pages",
+                "k": "fix",
+                "n": "the Maps win already lives at the pin · no net-new Buffalo-metro builds (Tonawanda / N. Tonawanda / Cheektowaga / Amherst sit outside the home market)"
+              }
             ]
           ]
         },
@@ -1497,25 +1700,85 @@
           "cap": "5 / month · refresh",
           "cells": [
             [
-              { "u": "/blog/alcohol-and-gout", "k": "refresh", "n": "1,652 clicks / 98K imp · 365d · health-curious → addiction CTA · per-post template: intake CTA × 3 placements + Article schema + medicalReviewedBy + links to /services/alcohol-detoxification-services" },
-              { "u": "/blog/friend-passed-out-drunk-how-to-wake-up-a-drunk-person", "k": "refresh", "n": "498 clicks / 41K imp · family-crisis intent → intake CTA + crisis line + links to /admissions" },
-              { "u": "/blog/alcohol-relapse-statistics", "k": "refresh", "n": "281 clicks / 39K imp · directly addiction-vertical · intake CTA + Article schema + links to /services/short-term-residential-program" },
-              { "u": "/blog/whiskey-and-acid-reflux", "k": "refresh", "n": "229 clicks / 62K imp · consequence-of-drinking intent · intake CTA + links to alcohol-detox" },
-              { "u": "/blog/withdrawal-from-alcohol-using-hydroxyzine", "k": "refresh", "n": "152 clicks / 16K imp · medical-withdrawal intent · intake CTA + links to medically-supervised detox + suboxone-MAT" }
+              {
+                "u": "/blog/alcohol-and-gout",
+                "k": "refresh",
+                "n": "1,652 clicks / 98K imp · 365d · health-curious → addiction CTA · per-post template: intake CTA × 3 placements + Article schema + medicalReviewedBy + links to /services/alcohol-detoxification-services"
+              },
+              {
+                "u": "/blog/friend-passed-out-drunk-how-to-wake-up-a-drunk-person",
+                "k": "refresh",
+                "n": "498 clicks / 41K imp · family-crisis intent → intake CTA + crisis line + links to /admissions"
+              },
+              {
+                "u": "/blog/alcohol-relapse-statistics",
+                "k": "refresh",
+                "n": "281 clicks / 39K imp · directly addiction-vertical · intake CTA + Article schema + links to /services/short-term-residential-program"
+              },
+              {
+                "u": "/blog/whiskey-and-acid-reflux",
+                "k": "refresh",
+                "n": "229 clicks / 62K imp · consequence-of-drinking intent · intake CTA + links to alcohol-detox"
+              },
+              {
+                "u": "/blog/withdrawal-from-alcohol-using-hydroxyzine",
+                "k": "refresh",
+                "n": "152 clicks / 16K imp · medical-withdrawal intent · intake CTA + links to medically-supervised detox + suboxone-MAT"
+              }
             ],
             [
-              { "u": "/blog/get-rid-of-alcohol-breath", "k": "refresh", "n": "122 clicks / 73K imp · consequence-of-drinking intent · CTA + Article schema + cross-link to /services/alcohol-detoxification-services" },
-              { "u": "/blog/dangers-of-mixing-alcohol-buspar", "k": "refresh", "n": "87 clicks / 37K imp · medication-interaction intent · CTA + links to MAT page" },
-              { "u": "/blog/dangers-of-mixing-alcohol-htp", "k": "refresh", "n": "86 clicks / 18K imp · same medication-interaction pattern" },
-              { "u": "/blog/free-sobriety-apps-to-boost-your-recovery", "k": "refresh", "n": "70 clicks / 24K imp · recovery-tools intent · CTA + links to /admissions + short-term residential" },
-              { "u": "/blog/can-alcohol-cause-blood-in-urine", "k": "refresh", "n": "67 clicks / 33K imp · health-concern intent · CTA + links to alcohol-detox" }
+              {
+                "u": "/blog/get-rid-of-alcohol-breath",
+                "k": "refresh",
+                "n": "122 clicks / 73K imp · consequence-of-drinking intent · CTA + Article schema + cross-link to /services/alcohol-detoxification-services"
+              },
+              {
+                "u": "/blog/dangers-of-mixing-alcohol-buspar",
+                "k": "refresh",
+                "n": "87 clicks / 37K imp · medication-interaction intent · CTA + links to MAT page"
+              },
+              {
+                "u": "/blog/dangers-of-mixing-alcohol-htp",
+                "k": "refresh",
+                "n": "86 clicks / 18K imp · same medication-interaction pattern"
+              },
+              {
+                "u": "/blog/free-sobriety-apps-to-boost-your-recovery",
+                "k": "refresh",
+                "n": "70 clicks / 24K imp · recovery-tools intent · CTA + links to /admissions + short-term residential"
+              },
+              {
+                "u": "/blog/can-alcohol-cause-blood-in-urine",
+                "k": "refresh",
+                "n": "67 clicks / 33K imp · health-concern intent · CTA + links to alcohol-detox"
+              }
             ],
             [
-              { "u": "/blog/can-alcohol-withdrawal-cause-chest-tightness", "k": "refresh", "n": "62 clicks / 7K imp · directly withdrawal-vertical · CTA + links to medically-supervised detox" },
-              { "u": "/blog/hospital-treatment-for-overdose-patients", "k": "refresh", "n": "62 clicks / 6K imp · urgent-care intent · CTA + crisis-line + links to inpatient detox" },
-              { "u": "/blog/keppra-and-alcohol", "k": "refresh", "n": "57 clicks / 23K imp · medication-interaction · CTA + Article schema" },
-              { "u": "/blog/sudafed-pseudoephedrine-alcohol", "k": "refresh", "n": "53 clicks / 13K imp · same pattern" },
-              { "u": "/blog/can-alcohol-cause-hives", "k": "refresh", "n": "35 clicks / 59K imp (CTR 0.06%) · title rescue + intake CTA — biggest impression-to-click rebuild opportunity in the tier" }
+              {
+                "u": "/blog/can-alcohol-withdrawal-cause-chest-tightness",
+                "k": "refresh",
+                "n": "62 clicks / 7K imp · directly withdrawal-vertical · CTA + links to medically-supervised detox"
+              },
+              {
+                "u": "/blog/hospital-treatment-for-overdose-patients",
+                "k": "refresh",
+                "n": "62 clicks / 6K imp · urgent-care intent · CTA + crisis-line + links to inpatient detox"
+              },
+              {
+                "u": "/blog/keppra-and-alcohol",
+                "k": "refresh",
+                "n": "57 clicks / 23K imp · medication-interaction · CTA + Article schema"
+              },
+              {
+                "u": "/blog/sudafed-pseudoephedrine-alcohol",
+                "k": "refresh",
+                "n": "53 clicks / 13K imp · same pattern"
+              },
+              {
+                "u": "/blog/can-alcohol-cause-hives",
+                "k": "refresh",
+                "n": "35 clicks / 59K imp (CTR 0.06%) · title rescue + intake CTA — biggest impression-to-click rebuild opportunity in the tier"
+              }
             ]
           ]
         },
@@ -1524,23 +1787,70 @@
           "cap": "per need",
           "cells": [
             [
-              { "u": "Brand-canonical sweep on 5 core pages (/about-us · /admissions · /contact-us · /treatments · /areas-served)", "k": "fix", "n": "Title + H1 + body 'Recovery Center of Niagara' → 'Niagara Recovery' · recovers 41% branded-demand bleed (363 of 891 GBP searches Dec→May still on old brand)" },
-              { "u": "LocalBusiness JSON-LD entity-name fix + WP-content image swap to live Webflow CDN", "k": "fix", "n": "Homepage + about + admissions · @id canonical · validate via validator.schema.org" },
-              { "u": "Kill '[phone number]' placeholder on alcohol-detox + Newfane dupe", "k": "fix", "n": "Replace with (716) 203-8000 · QA bug live since Webflow build" },
-              { "u": "Fix Buffalo NAP fabrication (/locations/buffalo)", "k": "redirect", "n": "Body claims 'facility in Buffalo, NY 14215' but the only facility is in Newfane · 301 to the Newfane home/contact; Buffalo is outside the home market, we don't target it" },
-              { "u": "301 the 5 -in-newfane-ny service-page dupes → 5 base /services URLs", "k": "redirect", "n": "10 service URLs collapse to 5 canonical · content-merge unique body sections under the base before redirect" },
-              { "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program", "k": "fix", "n": "Currently 0 schema on any service page · service-page entity floor" }
+              {
+                "u": "Brand-canonical sweep on 5 core pages (/about-us · /admissions · /contact-us · /treatments · /areas-served)",
+                "k": "fix",
+                "n": "Title + H1 + body 'Recovery Center of Niagara' → 'Niagara Recovery' · recovers 41% branded-demand bleed (363 of 891 GBP searches Dec→May still on old brand)"
+              },
+              {
+                "u": "LocalBusiness JSON-LD entity-name fix + WP-content image swap to live Webflow CDN",
+                "k": "fix",
+                "n": "Homepage + about + admissions · @id canonical · validate via validator.schema.org"
+              },
+              {
+                "u": "Kill '[phone number]' placeholder on alcohol-detox + Newfane dupe",
+                "k": "fix",
+                "n": "Replace with (716) 203-8000 · QA bug live since Webflow build"
+              },
+              {
+                "u": "Fix Buffalo NAP fabrication (/locations/buffalo)",
+                "k": "redirect",
+                "n": "Body claims 'facility in Buffalo, NY 14215' but the only facility is in Newfane · 301 to the Newfane home/contact; Buffalo is outside the home market, we don't target it"
+              },
+              {
+                "u": "301 the 5 -in-newfane-ny service-page dupes → 5 base /services URLs",
+                "k": "redirect",
+                "n": "10 service URLs collapse to 5 canonical · content-merge unique body sections under the base before redirect"
+              },
+              {
+                "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program",
+                "k": "fix",
+                "n": "Currently 0 schema on any service page · service-page entity floor"
+              }
             ],
             [
-              { "u": "Redirect doorway-template /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest anchor city page", "k": "redirect" },
-              { "u": "NOINDEX off-vertical high-impression blog cohort (porn-addiction · vape-by-country · social-media addiction · generic-mental-health)", "k": "fix" },
-              { "u": "Internal-link M1 refreshed blogs → /services/* hub + /admissions", "k": "fix" },
-              { "u": "GBP → site UTM consistency · ?utm_source=gmb on all GBP CTAs", "k": "fix", "n": "defend the GBP-tagged organic share (45.8% of all organic sessions in last 30d)" }
+              {
+                "u": "Redirect doorway-template /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest anchor city page",
+                "k": "redirect"
+              },
+              {
+                "u": "NOINDEX off-vertical high-impression blog cohort (porn-addiction · vape-by-country · social-media addiction · generic-mental-health)",
+                "k": "fix"
+              },
+              {
+                "u": "Internal-link M1 refreshed blogs → /services/* hub + /admissions",
+                "k": "fix"
+              },
+              {
+                "u": "GBP → site UTM consistency · ?utm_source=gmb on all GBP CTAs",
+                "k": "fix",
+                "n": "defend the GBP-tagged organic share (45.8% of all organic sessions in last 30d)"
+              }
             ],
             [
-              { "u": "Schema audit · MedicalBusiness + Service on M1/M2 revamped /services/* · LocalBusiness on upgraded /locations/*", "k": "fix" },
-              { "u": "Internal-link audit · /admissions hub → service ladder + the in-market location pages we keep", "k": "fix" },
-              { "u": "Page-level schema refactor · core pages (homepage + /about-us + /admissions + /contact-us + /treatments)", "k": "fix", "n": "swap any global @graph debris for page-specific MedicalBusiness / BreadcrumbList / FAQPage" }
+              {
+                "u": "Schema audit · MedicalBusiness + Service on M1/M2 revamped /services/* · LocalBusiness on upgraded /locations/*",
+                "k": "fix"
+              },
+              {
+                "u": "Internal-link audit · /admissions hub → service ladder + the in-market location pages we keep",
+                "k": "fix"
+              },
+              {
+                "u": "Page-level schema refactor · core pages (homepage + /about-us + /admissions + /contact-us + /treatments)",
+                "k": "fix",
+                "n": "swap any global @graph debris for page-specific MedicalBusiness / BreadcrumbList / FAQPage"
+              }
             ]
           ]
         }
@@ -1560,50 +1870,104 @@
       "rows": [
         {
           "cells": [
-            { "t": "alcohol detox near me" },
-            { "t": "<strong>112</strong> / 158" },
-            { "t": "<strong>70.9%</strong>", "c": "pos" },
-            { "t": "3.13" }
+            {
+              "t": "alcohol detox near me"
+            },
+            {
+              "t": "<strong>112</strong> / 158"
+            },
+            {
+              "t": "<strong>70.9%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "3.13"
+            }
           ]
         },
         {
           "cells": [
-            { "t": "alcohol rehab" },
-            { "t": "<strong>111</strong> / 158" },
-            { "t": "<strong>70.3%</strong>", "c": "pos" },
-            { "t": "2.99" }
+            {
+              "t": "alcohol rehab"
+            },
+            {
+              "t": "<strong>111</strong> / 158"
+            },
+            {
+              "t": "<strong>70.3%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "2.99"
+            }
           ]
         },
         {
           "cells": [
-            { "t": "inpatient rehab near me" },
-            { "t": "<strong>97</strong> / 158" },
-            { "t": "<strong>61.4%</strong>", "c": "pos" },
-            { "t": "3.17" }
+            {
+              "t": "inpatient rehab near me"
+            },
+            {
+              "t": "<strong>97</strong> / 158"
+            },
+            {
+              "t": "<strong>61.4%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "3.17"
+            }
           ]
         },
         {
           "cells": [
-            { "t": "addiction rehab near me" },
-            { "t": "<strong>96</strong> / 158" },
-            { "t": "<strong>60.8%</strong>", "c": "pos" },
-            { "t": "3.39" }
+            {
+              "t": "addiction rehab near me"
+            },
+            {
+              "t": "<strong>96</strong> / 158"
+            },
+            {
+              "t": "<strong>60.8%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "3.39"
+            }
           ]
         },
         {
           "cells": [
-            { "t": "addiction rehab" },
-            { "t": "<strong>96</strong> / 158" },
-            { "t": "<strong>60.8%</strong>", "c": "pos" },
-            { "t": "3.52" }
+            {
+              "t": "addiction rehab"
+            },
+            {
+              "t": "<strong>96</strong> / 158"
+            },
+            {
+              "t": "<strong>60.8%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "3.52"
+            }
           ]
         },
         {
           "cells": [
-            { "t": "addiction treatment center" },
-            { "t": "<strong>86</strong> / 158" },
-            { "t": "<strong>54.4%</strong>", "c": "pos" },
-            { "t": "3.30" }
+            {
+              "t": "addiction treatment center"
+            },
+            {
+              "t": "<strong>86</strong> / 158"
+            },
+            {
+              "t": "<strong>54.4%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "3.30"
+            }
           ]
         }
       ],
@@ -1620,15 +1984,159 @@
         "Avg rank"
       ],
       "rows": [
-        { "cells": [{"t":"Newfane (pin)"},{"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
-        { "cells": [{"t":"Appleton"},     {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
-        { "cells": [{"t":"Cambria"},      {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.22"}]},
-        { "cells": [{"t":"Ransomville"},  {"t":"<strong>32</strong> / 32"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.22"}]},
-        { "cells": [{"t":"Wilson"},       {"t":"<strong>24</strong> / 24"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.00"}]},
-        { "cells": [{"t":"Youngstown"},   {"t":"<strong>16</strong> / 16"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.38"}]},
-        { "cells": [{"t":"Barker"},       {"t":"<strong>236</strong> / 248"},{"t":"<strong>95.2%</strong>","c":"pos"},{"t":"1.42"}]},
-        { "cells": [{"t":"Lockport"},     {"t":"<strong>98</strong> / 104"},{"t":"<strong>94.2%</strong>","c":"pos"},{"t":"1.53"}]},
-        { "cells": [{"t":"Pendleton"},    {"t":"<strong>37</strong> / 48"},{"t":"<strong>77.1%</strong>","c":"pos"},{"t":"2.57"}]}
+        {
+          "cells": [
+            {
+              "t": "Newfane (pin)"
+            },
+            {
+              "t": "<strong>32</strong> / 32"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.00"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Appleton"
+            },
+            {
+              "t": "<strong>32</strong> / 32"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.00"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Cambria"
+            },
+            {
+              "t": "<strong>32</strong> / 32"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.22"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Ransomville"
+            },
+            {
+              "t": "<strong>32</strong> / 32"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.22"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Wilson"
+            },
+            {
+              "t": "<strong>24</strong> / 24"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.00"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Youngstown"
+            },
+            {
+              "t": "<strong>16</strong> / 16"
+            },
+            {
+              "t": "<strong>100%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.38"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Barker"
+            },
+            {
+              "t": "<strong>236</strong> / 248"
+            },
+            {
+              "t": "<strong>95.2%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.42"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Lockport"
+            },
+            {
+              "t": "<strong>98</strong> / 104"
+            },
+            {
+              "t": "<strong>94.2%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "1.53"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "t": "Pendleton"
+            },
+            {
+              "t": "<strong>37</strong> / 48"
+            },
+            {
+              "t": "<strong>77.1%</strong>",
+              "c": "pos"
+            },
+            {
+              "t": "2.57"
+            }
+          ]
+        }
       ],
       "note_html": "These are the towns where Niagara is already #1-3 in the Maps pack. The Q2 plan declares the ones it already dominates in the GBP service area (Lockport, Cambria, Pendleton, and the rest of the ring), so the profile matches the Maps win. No net-new location pages. Buffalo-metro towns Niagara doesn't own (Clarence, Cheektowaga, Amherst) stay out of scope."
     },

@@ -887,11 +887,6 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 Tasks (FINAL)",
-      "path": "Conifer_Park_3Month_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
       "label": "Glenville GBP Description Rewrite",
       "path": "LG-GV-01_Description_Rewrite.docx",
       "type": "docx"
@@ -934,11 +929,6 @@
     {
       "label": "Citations submission list",
       "path": "Conifer_Park_Citations_3Month.xlsx",
-      "type": "xlsx"
-    },
-    {
-      "label": "Off-page stack 3-Month",
-      "path": "Conifer_Park_OffPage_Stack_3Month.xlsx",
       "type": "xlsx"
     },
     {

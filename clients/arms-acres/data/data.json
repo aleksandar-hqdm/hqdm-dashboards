@@ -877,7 +877,7 @@
       "name": "GBP base optimization, Inpatient Carmel managed pin (defend + extend)",
       "priority": "High · 60d",
       "color": "green",
-      "why": "Inpatient Carmel is the managed pin. It's also dominating + improving on the high-intent grid (3 of 4 queries scan-over-scan positive). Defend posture only, don't apply spam-pattern signals to a winning pin. Description refresh (536→750 chars) + categories (5→7) + attributes (2→6) + Q&A (25/0 owner-answered → 40+ with site-URL anchors) + Posts (10→34) + ExifTool on existing 9 photos = full-stack signal lift on the managed surface.",
+      "why": "Inpatient Carmel is the managed pin. It's also dominating + improving on the high-intent grid (3 of 4 queries scan-over-scan positive). Defend posture only, don't apply spam-pattern signals to a winning pin. Description refresh (536→750 chars) + categories (5→7) + attributes (2→6) + Q&A (25/0 owner-answered → 40+ with site-URL anchors) + Posts (10→34) + image geo-tagging on existing 9 photos = full-stack signal lift on the managed surface.",
       "actions": [
         {
           "code": "LG-INPC-01",
@@ -905,7 +905,7 @@
         },
         {
           "code": "LG-INPC-05",
-          "name": "GBP Posts cadence, 24 posts across M1-M3 with site-page links + ExifTool image injection",
+          "name": "GBP Posts cadence, 24 posts across M1-M3 with site-page links + image geo-tagging image injection",
           "month": "M1-M3",
           "effort": "M"
         },
@@ -923,7 +923,7 @@
         },
         {
           "code": "LG-INPC-08",
-          "name": "ExifTool keyword-injection + re-upload existing 9 photos (vs Ascendant 90 photos)",
+          "name": "image geo-tagging keyword-injection + re-upload existing 9 photos (vs Ascendant 90 photos)",
           "month": "M1",
           "effort": "S"
         }
@@ -1053,46 +1053,6 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 2026 Tasks (FINAL, SEO-NEO filtered)",
-      "path": "Arms_Acres_3Month_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Pending GBP-Access Tasks (queue activates on access)",
-      "path": "Arms_Acres_Pending_GBP_Access_Tasks.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Push brief, LG-INPC-01 GBP Description Rewrite",
-      "path": "briefs/LG-INPC-01_Description_Rewrite.md",
-      "type": "md"
-    },
-    {
-      "label": "Push brief, LG-INPC-07 Q&A Audit",
-      "path": "briefs/LG-INPC-07_QA_Audit.md",
-      "type": "md"
-    },
-    {
-      "label": "Push brief, SP-06 GBP↔Site Service Map",
-      "path": "briefs/SP-06_GBP_to_Site_Service_Map.md",
-      "type": "md"
-    },
-    {
-      "label": "Push brief, LG-INPC-01 (docx)",
-      "path": "briefs/LG-INPC-01_Description_Rewrite.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push brief, LG-INPC-07 (docx)",
-      "path": "briefs/LG-INPC-07_QA_Audit.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push brief, SP-06 (docx)",
-      "path": "briefs/SP-06_GBP_to_Site_Service_Map.docx",
-      "type": "docx"
-    },
-    {
       "label": "GBP Posts plan, 24 posts × 3 months",
       "path": "Arms_Acres_GBP_Posts_3Month.xlsx",
       "type": "xlsx"
@@ -1135,11 +1095,6 @@
     {
       "label": "Off-Page Citations, 3-month batch (15 citations)",
       "path": "Arms_Acres_OffPage_Citations_3Month.xlsx",
-      "type": "xlsx"
-    },
-    {
-      "label": "Off-Page Stack 3-month (original, pre-halt reference)",
-      "path": "Arms_Acres_OffPage_Stack_3Month.xlsx",
       "type": "xlsx"
     }
   ],

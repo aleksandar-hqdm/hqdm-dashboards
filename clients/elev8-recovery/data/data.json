@@ -1169,36 +1169,6 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",
-      "path": "Elev8_Q2_2026_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Push 1 — Homepage Split",
-      "path": "Elev8_Push1_Homepage_Split.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 2 — Borough Hubs",
-      "path": "Elev8_Push2_Borough_Hubs.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 3 — MAT Hub",
-      "path": "Elev8_Push3_MAT_Hub.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 4 — Lock Owned",
-      "path": "Elev8_Push4_Lock_Owned.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 5 — Suburb Consolidation",
-      "path": "Elev8_Push5_Suburb_Consolidation.docx",
-      "type": "docx"
-    },
-    {
       "label": "Pages Action List (23 page actions)",
       "path": "Elev8_Pages_Action_List.csv",
       "type": "csv"
@@ -1209,18 +1179,8 @@
       "type": "csv"
     },
     {
-      "label": "GBP Action List (8 GBP edits)",
-      "path": "Elev8_GBP_Action_List.csv",
-      "type": "csv"
-    },
-    {
       "label": "Driving Direction Pins (9 lat/lng)",
       "path": "Elev8_Driving_Direction_Pins.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Reporting Master Template",
-      "path": "Elev8_Reporting_Master_Template.csv",
       "type": "csv"
     }
   ],

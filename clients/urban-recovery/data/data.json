@@ -1402,36 +1402,6 @@
   ],
   "deliverables": [
     {
-      "label": "Q2 2026 Tasks (final, SEO-NEO filtered)",
-      "path": "Urban_Recovery_Q2_2026_Tasks_FINAL.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Push 1 — GBP Surge",
-      "path": "Urban_Recovery_Push1_GBP_Surge.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 2 — Service Pages",
-      "path": "Urban_Recovery_Push2_Service_Pages.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 3 — Location Diffusion",
-      "path": "Urban_Recovery_Push3_Location_Diffusion.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 4 — Inpatient Counter",
-      "path": "Urban_Recovery_Push4_Inpatient_Counter.docx",
-      "type": "docx"
-    },
-    {
-      "label": "Push 5 — Off-Page Trust",
-      "path": "Urban_Recovery_Push5_OffPage_Trust.docx",
-      "type": "docx"
-    },
-    {
       "label": "Pages Action List",
       "path": "Urban_Recovery_Pages_Action_List.csv",
       "type": "csv"
@@ -1442,18 +1412,8 @@
       "type": "csv"
     },
     {
-      "label": "GBP Action List (8 GBP edits)",
-      "path": "Urban_Recovery_GBP_Action_List.csv",
-      "type": "csv"
-    },
-    {
       "label": "Driving Direction Pins (9 lat/lng)",
       "path": "Urban_Recovery_Driving_Direction_Pins.csv",
-      "type": "csv"
-    },
-    {
-      "label": "Reporting Master Template",
-      "path": "Urban_Recovery_Reporting_Master_Template.csv",
       "type": "csv"
     },
     {
