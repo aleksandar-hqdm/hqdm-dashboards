@@ -1623,23 +1623,25 @@ Matt</textarea>
         ]
       },
       "daymakers-moving": {
-        subject: "Your five profiles are winning — here's how we extend the lead",
+        subject: "Your five-market scoreboard, and the real answer on May vs April",
+        defaultSignoff: "Matt",
         blocks: [
           { id: "greeting", required: true, label: "Greeting", text: "Hey [Name]," },
-          { id: "intro", required: true, label: "Intro line", text: "Wanted to write this out before our next call so we can spend the time on questions, not background." },
-          { id: "headline", required: false, label: "Headline (five profiles strong)", text: "Here's the headline: your five Google Business Profiles are in genuinely strong shape. Four of the five already lead or nearly lead their Maps markets — #1 in Roseville, Hudson and Bloomington, and a close #2 in Lake Elmo. On top of that, organic web traffic has climbed every month since February. This isn't a rescue job — it's a defend-and-extend one." },
-          { id: "industryContext", required: false, label: "Industry context (AI + GBP up)", text: "The bigger context: organic web search is changing fast. AI Overviews answer “movers near me” questions right on the results page, the space gets more crowded with every new mover, and web traffic across moving is softer industry-wide. But GBP-driven leads are up. The Map pack is where customers come from now — and that's exactly where you're winning." },
-          { id: "prioritiesHeader", required: true, label: "Unlock framing", text: "So the biggest unlock isn't more content. It's making the wins countable and tightening a few details:" },
-          { id: "priority1", required: false, label: "Priority: GA4 measurement", text: "1) Right now GA4 isn't counting any of your leads as conversions. Hundreds of calls, forms and emails fire every month, but the system isn't flagging them — so we can't cleanly answer questions like “did May beat April?” Flagging those lead events is the single highest-leverage fix, and it's mostly a one-time setup." },
-          { id: "priority2", required: false, label: "Priority: Eau Claire repoint", text: "2) Your Eau Claire profile points at your homepage instead of its own Eau Claire page — which already exists and is solid. That one repoint is the clearest growth lever in the network; Eau Claire is your newest, fastest-climbing market." },
-          { id: "priority3", required: false, label: "Priority: connection details", text: "3) A few connection details — live map embeds on each city page, and making the phone number shown on each page match the profile. Small, one-time fixes that reinforce everything else." },
-          { id: "honestCloser", required: false, label: "Honest closer", text: "The honest part: nobody knows exactly where local search lands in 12 months — Google changes things almost weekly, and AI is rewriting the rulebook in front of all of us. What I'm confident in is that five strong profiles plus a site wired to them properly, with the leads actually being counted, is the foundation that holds up no matter what comes next. That's the part we fully control, and that's where the work is going." },
-          { id: "closingCta", required: true, label: "Closing line", text: "Dashboard and grid views are all in there. We'll walk through it on the call." }
+          { id: "intro", required: true, label: "Intro line", text: "Putting this in writing before our call so we can spend the time on your questions instead of on background." },
+          { id: "scoreboard", required: false, label: "Five-market scoreboard", text: "Start with the scoreboard. Here's where your five Google profiles stand on the map right now:\n\n• Roseville, MN: #1 of 113 movers\n• Hudson, WI: #1 of 171 movers\n• Bloomington, MN: #1 of 110 movers\n• Lake Elmo, MN: a close #2 of 183\n• Eau Claire, WI: #6 of 103, your newest market and climbing fast" },
+          { id: "ownMarkets", required: false, label: "Four of five markets owned", text: "Four of your five markets are yours outright, on roughly 2,265 reviews at 4.9 to 5.0 stars. That's a genuinely strong position. Most movers would trade a lot to own one market like this, and you own four." },
+          { id: "mayVsApril", required: false, label: "May vs April (busy-season read)", text: "Now the question I expect is on your mind heading into the busy season: did May actually beat April? The honest answer is that May held level. Your clicks from Google search were essentially flat (704 in April, 706 in May), and the number of people Google showed you to went up. So demand didn't drop. If May looked softer anywhere, that's a tracking gap, not a real decline, and it points straight at the first thing we're fixing." },
+          { id: "prioritiesHeader", required: true, label: "Plan header", text: "Here's the plan, in order:" },
+          { id: "priority1", required: false, label: "Priority: count the leads (GA4)", text: "1) Count the leads. Your analytics counts zero of them as leads right now. Hundreds of calls, form fills and emails come in every month, but none of them are being recorded, so we can't cleanly compare one month to the next or show the work in dollars. It's mostly a one-time setup fix, and it goes first because everything else gets easier to measure once it's done." },
+          { id: "priority2", required: false, label: "Priority: point Eau Claire at its page", text: "2) Point Eau Claire at its own page. That profile currently sends people to your homepage instead of your Eau Claire page, which already exists and is good. Eau Claire is your fastest-growing market, so this one small change is the clearest growth lever you have." },
+          { id: "priority3", required: false, label: "Priority: tighten the connections", text: "3) Tighten the connections. A few one-time details: a live Google map on each city page, and the phone number on each page matched to the one on its profile. Small fixes that reinforce everything above." },
+          { id: "honestCloser", required: false, label: "Honest closer", text: "One honest note on the big picture. Nobody can promise exactly where Google lands a year from now, and AI is rewriting the rules in front of all of us. What I'm confident in is this: five strong profiles, a website wired to them properly, and leads that are actually counted is a foundation that holds up no matter what changes. That's the part we control, and that's where your budget is going." },
+          { id: "closingCta", required: true, label: "Closing line", text: "Your full dashboard, the five map grids and the 90-day plan are all in there. We'll walk through it on the call." }
         ],
-        defaultEnabled: ["headline", "industryContext", "priority1", "priority2", "priority3", "honestCloser"],
+        defaultEnabled: ["scoreboard", "ownMarkets", "mayVsApril", "priority1", "priority2", "priority3", "honestCloser"],
         contextAnchors: [
           { value: "intro", label: "After intro" },
-          { value: "industryContext", label: "After macro framing" },
+          { value: "mayVsApril", label: "After the May vs April read" },
           { value: "closingCta", label: "At end (before sign-off)" }
         ]
       },
