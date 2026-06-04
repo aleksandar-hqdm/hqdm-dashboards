@@ -1726,74 +1726,8 @@
       "title": "Organic Performance · Monthly (Q4 2025 → now)",
       "caption": "Visitors (left axis) and leads (right axis) from organic search. A dashed tail marks the partial current month."
     },
-    "quarters": {
-      "labels": [
-        "Dec '24",
-        "Q1 '25",
-        "Q2 '25",
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        9469,
-        45609,
-        30010,
-        22925,
-        15802,
-        9873,
-        10366
-      ],
-      "leads": [
-        1,
-        36,
-        52,
-        26,
-        22,
-        14,
-        19
-      ],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 6,
-      "title": "By Quarter · Visitors & Leads"
-    },
+    "quarters": null,
     "boxes": [
-      {
-        "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-48%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-45%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-42%",
-            "cls": "neg"
-          },
-          {
-            "m": "Leads",
-            "d": "-35%",
-            "cls": "neg"
-          }
-        ]
-      },
       {
         "win": "Last 90 Days",
         "cmp": "vs prior 90 days",
@@ -1812,7 +1746,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "Leads = form_submit events only (Phone &amp; Email CTA clicks shown separately as intent signals). Organic-channel form submits tracked the organic-session drop; the GBP→Direct path picked up the lead slack with Q1 2026 direct-channel leads up ~4x vs Q3 2025. May is a partial month.",
+    "boxes_reading_html": "",
     "focus": [
       {
         "title": "Build Calendar · June → August 2026",

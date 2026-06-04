@@ -173,14 +173,10 @@
           <div style="height: 300px;"><canvas id="line-chart"></canvas></div>
           ${(s.line && s.line.caption) ? `<p class="text-[11px] text-slate-500 mt-2">${s.line.caption}</p>` : ''}
           ${(s.line && s.line.alert) ? `<div class="mt-2 rounded border-l-2 border-amber-500 bg-amber-50 px-2.5 py-1.5 text-[11px] text-amber-900 leading-snug"><strong class="font-bold">Data caveat:</strong> ${s.line.alert}</div>` : ''}
+          ${hasBoxes ? `<div class="grid grid-cols-1 sm:grid-cols-${boxCols} gap-3 mt-3 pt-3 border-t border-slate-100">${s.boxes.map(boxEl).join('')}</div>` : ''}
+          ${(hasBoxes && s.boxes_reading_html) ? `<p class="text-[11px] text-slate-500 mt-2">${s.boxes_reading_html}</p>` : ''}
         </div>
-      </section>
-      ${hasBoxes ? `<section class="mb-3">
-        <div class="panel p-3.5">
-          <div class="grid grid-cols-1 sm:grid-cols-${boxCols} gap-3">${s.boxes.map(boxEl).join('')}</div>
-          ${s.boxes_reading_html ? `<p class="text-[11px] text-slate-500 mt-3">${s.boxes_reading_html}</p>` : ''}
-        </div>
-      </section>` : ''}`}
+      </section>`}
 
       ${fullTablesHtml}${gridTablesHtml}
 

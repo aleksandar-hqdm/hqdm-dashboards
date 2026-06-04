@@ -367,9 +367,8 @@ CLIENTS = {
         'comp_note': ("Detox &amp; Drug/Alcohol Recovery edges you on raw footprint (1,217 vs 1,113 top-3 cells), but you're the only "
                       "Brooklyn pin that gained net coverage this period (+21). Lower avg rank is better."),
         'leads_label': 'Organic leads (form_submit)', 'q_leads_label': 'Leads', 'box_lead_word': 'Leads',
-        'boxes_reading': ("Leads = form_submit events only (Phone &amp; Email CTA clicks shown separately as intent signals). "
-                          "Organic-channel form submits tracked the organic-session drop; the GBP→Direct path picked up the lead slack "
-                          "with Q1 2026 direct-channel leads up ~4x vs Q3 2025. May is a partial month."),
+        'hide_quarters': True, 'skip_boxes': ['yoy', '6mo'],
+        'boxes_reading': '',
         'focus': [
             {'title': 'Build Calendar · June → August 2026', 'color': '#1d5b8a',
              'body': (
