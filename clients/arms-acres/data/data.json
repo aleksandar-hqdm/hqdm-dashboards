@@ -1466,6 +1466,131 @@
         "body": "Clean up the site architecture and roll out LocalBusiness, Service, and FAQ schema across the Tier-1 pages so the pages that already rank become eligible for rich results and AI citations."
       }
     ],
+    "calendar": {
+      "enabled": true,
+      "title": "Build Calendar · Next 90 Days",
+      "subtitle": "On-page and Google Business work on the Carmel pin and the pages it feeds.",
+      "months": [
+        "Month 1",
+        "Month 2",
+        "Month 3"
+      ],
+      "rows": [
+        {
+          "label": "Service pages",
+          "cap": "new and revamp",
+          "cells": [
+            [
+              {
+                "k": "fix",
+                "u": "Add the intake form to the service and program pages"
+              },
+              {
+                "k": "revamp",
+                "u": "Strengthen the /inpatient parent page"
+              }
+            ],
+            [
+              {
+                "k": "revamp",
+                "u": "Merge the near-duplicate Carmel service pages"
+              }
+            ],
+            [
+              {
+                "k": "new",
+                "u": "Ship /alcohol-rehab-new-york"
+              },
+              {
+                "k": "new",
+                "u": "Ship /detox-new-york"
+              },
+              {
+                "k": "revamp",
+                "u": "Insurance-carrier sections on /admissions"
+              }
+            ]
+          ]
+        },
+        {
+          "label": "Content",
+          "cap": "insurance and cost articles",
+          "cells": [
+            [
+              {
+                "k": "refresh",
+                "u": "Insurance articles: new titles and FAQ schema"
+              }
+            ],
+            [
+              {
+                "k": "refresh",
+                "u": "Current stats and internal links across the insurance set"
+              },
+              {
+                "k": "refresh",
+                "u": "Title pass on the already-ranking blogs"
+              }
+            ],
+            [
+              {
+                "k": "new",
+                "u": "Supporting articles for the new state pages"
+              }
+            ]
+          ]
+        },
+        {
+          "label": "On-page",
+          "cap": "architecture and schema",
+          "cells": [
+            [
+              {
+                "k": "fix",
+                "u": "Audit the thin doorway pages"
+              }
+            ],
+            [
+              {
+                "k": "revamp",
+                "u": "Improve the highest-traffic thin pages"
+              }
+            ],
+            [
+              {
+                "k": "fix",
+                "u": "LocalBusiness, Service and FAQ schema on the Tier-1 pages"
+              }
+            ]
+          ]
+        },
+        {
+          "label": "Google Business",
+          "cap": "Carmel pin",
+          "cells": [
+            [
+              {
+                "k": "fix",
+                "u": "Description, services, categories and attributes"
+              }
+            ],
+            [
+              {
+                "k": "fix",
+                "u": "Photo and posts cadence"
+              }
+            ],
+            [
+              {
+                "k": "fix",
+                "u": "Local citations and disavow file"
+              }
+            ]
+          ]
+        }
+      ],
+      "note_html": "Scope is the managed Carmel pin and the website pages it feeds."
+    },
     "maps": {
       "enabled": true,
       "title": "Maps Movement · Top Keywords",
