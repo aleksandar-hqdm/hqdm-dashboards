@@ -353,29 +353,39 @@ Matt</textarea>
             <span class="text-[10px] text-slate-400">show / hide</span>
           </summary>
           <div class="mt-2 space-y-2">
-            <textarea data-slug="professional-movers" class="w-full h-80 text-[11px] font-mono text-slate-700 bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-brand-300">Subject: What&apos;s changing in search &mdash; and what we&apos;re doing about it
+            <textarea data-slug="professional-movers" class="w-full h-80 text-[11px] font-mono text-slate-700 bg-slate-50 border border-slate-200 rounded p-3 leading-relaxed resize-y focus:outline-none focus:ring-2 focus:ring-brand-300">Subject: Your search traffic is down, but your leads are at an 18-month high
 
 Hey [Name],
 
-Wanted to put this in writing before our next call so you have the context going in.
+Wanted to put the full picture in writing before our next call, so we can spend the time on your questions instead of background.
 
-The way Google works in 2026 isn&apos;t the way it worked even two years ago. AI now answers a lot of questions right at the top of the search page, before anyone clicks. The September 2025 Google update reshuffled what shows up where. Every moving company is seeing less traffic to their website than they used to &mdash; that&apos;s not a Professional Movers problem, that&apos;s an industry-wide thing. The space is more crowded every quarter, and the rules of what ranks keep moving.
+The short version: fewer people are finding you through regular Google search, but you are actually getting more leads, and the most recent month was one of your strongest on record. The reason is that your leads have shifted to your Google Business Profile, the map listing people tap when they search for a mover, and that path is converting better than anything else you have.
 
-What&apos;s still working, and actually growing, is your Google Business Profile and the Map pack. When someone types &quot;movers near me&quot; and three businesses pop up on a map, that&apos;s where the calls are coming from now. Leads from there are up across the industry &mdash; the customers haven&apos;t gone away, they&apos;re just finding businesses through Maps instead of through blog posts.
+A few numbers that matter:
 
-So our priorities this quarter:
+  &bull; Quote requests coming in through your Google Business Profile are up about 30% over the past two quarters, and the most recent month was the highest in 18 months.
+  &bull; People who reach your site from that Google listing request a quote roughly 17 to 18% of the time. From regular Google search it is about 9%. So a visitor from your Google listing is about twice as likely to become a lead.
+  &bull; That Google-listing path is the one part of your traffic that never dipped through the downturn.
 
-1) GBP is the front door. Photos, posts, the service area, reviews, and making sure the website is wired to the profile properly. This is where the leads are coming from, so this gets the most attention.
+On the map itself, you are in a strong position. You rank #1 at your Walled Lake home base, and you hold a top-three spot across most of the metro for &apos;movers near me&apos;. On &apos;movers detroit&apos; specifically, your reach in the top results grew about sevenfold over the past quarter, from 9 map points to 67. That is a real expansion into the Detroit side of the market.
 
-2) Stronger site, not a bigger one. Instead of more blog posts (AI just summarizes those and the click never happens), we&apos;re cleaning up thin pages, combining duplicates, and pointing internal links at the pages that actually book jobs.
+On the part that is down: the number of times your pages show up in Google search fell sharply over the past year. Two things are driving it. First, Google&apos;s September 2025 update and the new AI answers at the top of the page have cut search clicks for moving companies across the board, and that is happening industry-wide, not just to Professional Movers. Second, almost all of the drop was on thin, templated neighborhood pages and old filler content, not the service pages that book jobs. Your service pages still bring in about half of your search clicks.
 
-3) Fix the tracking. Right now it isn&apos;t always clear which calls and forms came from where. Once we know what&apos;s driving real revenue, we can put more fuel on what&apos;s working and stop guessing on the rest.
+So here is where we are putting the work this quarter:
 
-The honest part: nobody knows exactly where search lands in 12 months &mdash; Google changes things almost weekly, and AI is rewriting the rulebook in front of all of us. What I&apos;m confident in is that a strong GBP plus a tight, well-structured site is the foundation that holds up no matter what comes next. That&apos;s the part we fully control, and that&apos;s where we&apos;re putting the work.
+1) Claim your other two offices on Google. You have offices in Detroit (on Woodward Avenue) and in Rochester that are not set up as Google Business Profiles yet. The Detroit one already shows up on the map on its own, ranking around third with nobody managing it. Claiming and managing both roughly doubles the area where you can appear on the map, with no extra ad spend. Since the map listing is your best-converting channel, this is the highest-payoff move we have.
 
-Live numbers are in the dashboard if you want to dig in before the call. Otherwise we&apos;ll walk through it together.
+2) Tighten the website instead of growing it. We are merging or removing the thin neighborhood pages that pulled your rankings down, and pointing your internal links at the service pages that book jobs. There are about 250 searches where you are close to the first page but not on it yet, and sharpening those pages is the fastest way to win them back.
 
-&mdash; Matt</textarea>
+3) Finish the lead tracking. Right now the site only records quote-form submissions. We are adding phone-click tracking and &apos;clicked through from your Google listing&apos; tracking, the same setup we run for our other movers, so every call and form is counted and you can see exactly what each channel brings in.
+
+4) Rebuild your off-site links the right way. An older automated link program left behind a batch of low-quality links and not much real authority. We are cleaning those up and replacing them with genuine local citations and earned mentions that actually help and will not put your profile at risk.
+
+The honest part: nobody can promise where Google search lands a year from now. It changes almost weekly, and AI is rewriting the rules in front of everyone. What I am confident in is that a strong Google listing plus a tight, well-organized website is the foundation that holds up no matter what comes next. That is the part we control, and your best-converting channel is already pointing that way.
+
+Live numbers are in the dashboard if you want to dig in before the call. Otherwise we will walk through it together.
+
+Matt</textarea>
             <div class="flex items-center gap-2">
               <button type="button" onclick="copyEmail(this)" class="text-xs px-3 py-1.5 rounded bg-brand-500 text-white font-semibold hover:bg-brand-700 transition">Copy email</button>
               <span class="text-[10px] text-slate-400">Edit [Name] before sending</span>
@@ -1499,23 +1509,27 @@ Matt</textarea>
     // ---- Email template engine + customize panel ----
     const emailTemplates = {
       "professional-movers": {
-        subject: "What’s changing in search — and what we’re doing about it",
+        subject: "Your search traffic is down, but your leads are at an 18-month high",
+        defaultSignoff: "Matt",
         blocks: [
           { id: "greeting", required: true, label: "Greeting", text: "Hey [Name]," },
-          { id: "intro", required: true, label: "Intro line", text: "Wanted to put this in writing before our next call so you have the context going in." },
-          { id: "industryShift", required: false, label: "Industry shift (AI + Sept 2025)", text: "The way Google works in 2026 isn’t the way it worked even two years ago. AI now answers a lot of questions right at the top of the search page, before anyone clicks. The September 2025 Google update reshuffled what shows up where. Every moving company is seeing less traffic to their website than they used to — that’s not a Professional Movers problem, that’s an industry-wide thing. The space is more crowded every quarter, and the rules of what ranks keep moving." },
-          { id: "goodNews", required: false, label: "What’s growing (GBP + Map pack)", text: "What’s still working, and actually growing, is your Google Business Profile and the Map pack. When someone types “movers near me” and three businesses pop up on a map, that’s where the calls are coming from now. Leads from there are up across the industry — the customers haven’t gone away, they’re just finding businesses through Maps instead of through blog posts." },
-          { id: "prioritiesHeader", required: true, label: "Priorities header", text: "So our priorities this quarter:" },
-          { id: "priority1", required: false, label: "Priority: GBP front door", text: "1) GBP is the front door. Photos, posts, the service area, reviews, and making sure the website is wired to the profile properly. This is where the leads are coming from, so this gets the most attention." },
-          { id: "priority2", required: false, label: "Priority: Site strength over volume", text: "2) Stronger site, not a bigger one. Instead of more blog posts (AI just summarizes those and the click never happens), we’re cleaning up thin pages, combining duplicates, and pointing internal links at the pages that actually book jobs." },
-          { id: "priority3", required: false, label: "Priority: Fix tracking", text: "3) Fix the tracking. Right now it isn’t always clear which calls and forms came from where. Once we know what’s driving real revenue, we can put more fuel on what’s working and stop guessing on the rest." },
-          { id: "honestCloser", required: false, label: "Honest closer (what we control)", text: "The honest part: nobody knows exactly where search lands in 12 months — Google changes things almost weekly, and AI is rewriting the rulebook in front of all of us. What I’m confident in is that a strong GBP plus a tight, well-structured site is the foundation that holds up no matter what comes next. That’s the part we fully control, and that’s where we’re putting the work." },
-          { id: "closingCta", required: true, label: "Closing line", text: "Live numbers are in the dashboard if you want to dig in before the call. Otherwise we’ll walk through it together." }
+          { id: "intro", required: true, label: "Intro line", text: "Wanted to put the full picture in writing before our next call, so we can spend the time on your questions instead of background." },
+          { id: "headline", required: false, label: "Headline (traffic down, leads up)", text: "The short version: fewer people are finding you through regular Google search, but you are actually getting more leads, and the most recent month was one of your strongest on record. The reason is that your leads have shifted to your Google Business Profile, the map listing people tap when they search for a mover, and that path is converting better than anything else you have." },
+          { id: "leadNumbers", required: false, label: "Lead numbers (GBP +30%, ~2x conversion)", text: "A few numbers that matter:\n\n  • Quote requests coming in through your Google Business Profile are up about 30% over the past two quarters, and the most recent month was the highest in 18 months.\n  • People who reach your site from that Google listing request a quote roughly 17 to 18% of the time. From regular Google search it is about 9%. So a visitor from your Google listing is about twice as likely to become a lead.\n  • That Google-listing path is the one part of your traffic that never dipped through the downturn." },
+          { id: "mapsPosition", required: false, label: "Maps position (#1 home base, Detroit 7x)", text: "On the map itself, you are in a strong position. You rank #1 at your Walled Lake home base, and you hold a top-three spot across most of the metro for 'movers near me'. On 'movers detroit' specifically, your reach in the top results grew about sevenfold over the past quarter, from 9 map points to 67. That is a real expansion into the Detroit side of the market." },
+          { id: "trafficContext", required: false, label: "Search-traffic context (down, but where)", text: "On the part that is down: the number of times your pages show up in Google search fell sharply over the past year. Two things are driving it. First, Google's September 2025 update and the new AI answers at the top of the page have cut search clicks for moving companies across the board, and that is happening industry-wide, not just to Professional Movers. Second, almost all of the drop was on thin, templated neighborhood pages and old filler content, not the service pages that book jobs. Your service pages still bring in about half of your search clicks." },
+          { id: "prioritiesHeader", required: true, label: "Priorities header", text: "So here is where we are putting the work this quarter:" },
+          { id: "priority1", required: false, label: "Priority: Claim Detroit + Rochester pins", text: "1) Claim your other two offices on Google. You have offices in Detroit (on Woodward Avenue) and in Rochester that are not set up as Google Business Profiles yet. The Detroit one already shows up on the map on its own, ranking around third with nobody managing it. Claiming and managing both roughly doubles the area where you can appear on the map, with no extra ad spend. Since the map listing is your best-converting channel, this is the highest-payoff move we have." },
+          { id: "priority2", required: false, label: "Priority: Tighten the site, not grow it", text: "2) Tighten the website instead of growing it. We are merging or removing the thin neighborhood pages that pulled your rankings down, and pointing your internal links at the service pages that book jobs. There are about 250 searches where you are close to the first page but not on it yet, and sharpening those pages is the fastest way to win them back." },
+          { id: "priority3", required: false, label: "Priority: Finish lead tracking", text: "3) Finish the lead tracking. Right now the site only records quote-form submissions. We are adding phone-click tracking and 'clicked through from your Google listing' tracking, the same setup we run for our other movers, so every call and form is counted and you can see exactly what each channel brings in." },
+          { id: "priority4", required: false, label: "Priority: Rebuild off-site links", text: "4) Rebuild your off-site links the right way. An older automated link program left behind a batch of low-quality links and not much real authority. We are cleaning those up and replacing them with genuine local citations and earned mentions that actually help and will not put your profile at risk." },
+          { id: "honestCloser", required: false, label: "Honest closer (what we control)", text: "The honest part: nobody can promise where Google search lands a year from now. It changes almost weekly, and AI is rewriting the rules in front of everyone. What I am confident in is that a strong Google listing plus a tight, well-organized website is the foundation that holds up no matter what comes next. That is the part we control, and your best-converting channel is already pointing that way." },
+          { id: "closingCta", required: true, label: "Closing line", text: "Live numbers are in the dashboard if you want to dig in before the call. Otherwise we will walk through it together." }
         ],
-        defaultEnabled: ["industryShift", "goodNews", "priority1", "priority2", "priority3", "honestCloser"],
+        defaultEnabled: ["headline", "leadNumbers", "mapsPosition", "trafficContext", "priority1", "priority2", "priority3", "priority4", "honestCloser"],
         contextAnchors: [
           { value: "intro", label: "After intro" },
-          { value: "goodNews", label: "After macro framing" },
+          { value: "trafficContext", label: "After search-traffic context" },
           { value: "closingCta", label: "At end (before sign-off)" }
         ]
       },
