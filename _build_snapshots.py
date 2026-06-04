@@ -331,11 +331,11 @@ CLIENTS = {
         'subtitle': 'Q2 2026 · NYC · Harlem pin · Client Snapshot',
         'footer': 'Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski',
         'exec_html': ("<p>Your Harlem pin is the <strong>only NYC addiction-treatment provider that gained ground on all eight "
-                      "tracked Maps searches</strong> last quarter — <strong>+787 grid positions with zero losses</strong> — and you own the "
+                      "tracked Maps searches</strong> last quarter, and you now hold <strong>top-3 in 425 of the tracked grid cells</strong> while gaining on all eight, and you own the "
                       "Harlem-neighborhood searches outright (positions 1–2). The next leg is structural: your homepage is trying to rank for nine "
                       "different commercial searches at once. Splitting it into dedicated pages, building borough hubs, and adding "
                       "MAT and dual-diagnosis service hubs unlocks page-one candidates you don't have today.</p>"),
-        'chips': [{'v': '+787', 'l': 'grid positions gained', 'good': True}, {'v': '3 / 8', 'l': 'Maps searches owned', 'good': True},
+        'chips': [{'v': '425', 'l': 'top-3 Maps cells', 'good': True}, {'v': '3 / 8', 'l': 'Maps searches owned', 'good': True},
                   {'v': '#1', 'l': 'NYC pin on Maps', 'good': True}, {'v': 'pos 1.2–2.1', 'l': 'Harlem organic', 'good': True}],
         'q_drop_partial': True,
         'skip_boxes': ['6mo'],
@@ -461,6 +461,13 @@ CLIENTS = {
         'short_name': 'Conifer Park', 'title': 'Conifer Park',
         'subtitle': 'Q2 2026 · Glenville NY · Client Snapshot',
         'footer': 'Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski',
+        'monthly_source': 'gmb_clicks',
+        'monthly_label': 'Visits from Maps',
+        'line_title': 'Visits From Your Google Business Listing · Monthly',
+        'line_caption': ('Monthly sessions arriving from your Google Business and Maps listing. They climbed through the winter '
+                         'to a March peak of 1,099. The dashed tail marks the partial current month.'),
+        'hide_quarters': True,
+        'hide_boxes': True,
         'exec_html': ("<p>Conifer Park's Glenville location <strong>leads its local Map Pack and is still gaining</strong>: it added "
                       "19 top-3 grid cells this period and sits #1 at the facility across the core addiction-treatment searches. "
                       "Google Business and Maps clicks climbed from about 700 a month to a March peak of 1,099, and the visitors who "
@@ -633,6 +640,22 @@ def build_snapshot(slug, cfg):
         'boxes_reading_html': reading_html,
         'focus': cfg.get('focus', []),
     }
+
+    # --- per-client monthly-chart override: use a GBP/Maps engagement series as the
+    #     single monthly chart, and drop the quarterly chart + movement boxes
+    #     (conifer-park). Config-guarded, so other clients are unaffected.
+    msrc = cfg.get('monthly_source')
+    if msrc:
+        eseries = ((t.get('engagement_signals') or {}).get('series') or {}).get(msrc) or {}
+        mdata = eseries.get('data', [])
+        mlabel = cfg.get('monthly_label', eseries.get('label', 'Visits'))
+        snap['line'] = build_line(months, mdata, [], mlabel, vis_label=mlabel,
+                                  title=cfg.get('line_title'), caption=cfg.get('line_caption'))
+    if cfg.get('hide_quarters'):
+        snap['quarters'] = None
+    if cfg.get('hide_boxes'):
+        snap['boxes'] = []
+        snap['boxes_reading_html'] = ''
 
     # maps
     ms = cfg.get('maps_source', 'per_keyword')

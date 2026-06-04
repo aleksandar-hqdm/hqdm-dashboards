@@ -1137,80 +1137,25 @@
         "May '26*"
       ],
       "visitors": [
-        9471,
-        7346,
-        5657,
-        5956,
-        4596,
-        5594,
-        4468,
-        2764
+        816,
+        721,
+        783,
+        845,
+        936,
+        1099,
+        978,
+        830
       ],
       "leads": [],
-      "visitors_label": "Organic visitors",
-      "leads_label": "Organic leads",
+      "visitors_label": "Visits from Maps",
+      "leads_label": "Visits from Maps",
       "partial_index": 7,
-      "title": "Organic Visitors · Monthly (Q4 2025 → now)",
-      "caption": "Monthly organic visitors. A dashed tail marks the partial current month. Lead/conversion tracking is being stabilized this quarter, so it’s excluded here."
+      "title": "Visits From Your Google Business Listing · Monthly",
+      "caption": "Monthly sessions arriving from your Google Business and Maps listing. They climbed through the winter to a March peak of 1,099. The dashed tail marks the partial current month."
     },
-    "quarters": {
-      "labels": [
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26",
-        "Q2 '26*"
-      ],
-      "visitors": [
-        21559,
-        22474,
-        16146,
-        7232
-      ],
-      "leads": [],
-      "visitors_label": "Visitors",
-      "leads_label": "Leads",
-      "partial_index": 3,
-      "title": "By Quarter · Organic Visitors"
-    },
-    "boxes": [
-      {
-        "win": "Year over Year",
-        "cmp": "vs Q2 2025",
-        "kind": "good",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "—",
-            "cls": "muted"
-          }
-        ]
-      },
-      {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-24%",
-            "cls": "neg"
-          }
-        ]
-      },
-      {
-        "win": "Last 90 Days",
-        "cmp": "vs prior 90 days",
-        "kind": "watch",
-        "rows": [
-          {
-            "m": "Visitors",
-            "d": "-21%",
-            "cls": "neg"
-          }
-        ]
-      }
-    ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. Lead/conversion tracking is being stabilized, so it’s excluded from these comparisons. The current month is partial.",
+    "quarters": null,
+    "boxes": [],
+    "boxes_reading_html": "",
     "focus": [
       {
         "title": "Free up the service pages",
