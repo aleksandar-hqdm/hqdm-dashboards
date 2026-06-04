@@ -60,7 +60,7 @@
     const months = (c.months || []).map(m => `<th class="month">${m}</th>`).join('');
     const itemHTML = it => {
       const tag = `<span class="tag ${it.k || 'fix'}">${it.k || ''}</span>`;
-      const note = it.n ? ` <span class="n">— ${it.n}</span>` : '';
+      const note = it.n ? `<div class="n">${it.n}</div>` : '';
       return `<div class="item">${tag}<div><span class="u">${it.u}</span>${note}</div></div>`;
     };
     const rows = (c.rows || []).map(r => {

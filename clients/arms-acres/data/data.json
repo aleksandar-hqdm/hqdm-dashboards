@@ -1469,7 +1469,7 @@
     "calendar": {
       "enabled": true,
       "title": "Build Calendar · Next 90 Days",
-      "subtitle": "On-page and Google Business work on the Carmel pin and the pages it feeds.",
+      "subtitle": "On-page, content and Google Business work on the Carmel pin and the pages it feeds. Specific pages and blogs are named.",
       "months": [
         "Month 1",
         "Month 2",
@@ -1483,59 +1483,78 @@
             [
               {
                 "k": "fix",
-                "u": "Add the intake form to the service and program pages"
+                "u": "Add a contact form to the service and program pages",
+                "n": "about 24,000 visits a year land here with no form to fill out"
+              },
+              {
+                "k": "fix",
+                "u": "Fix the homepage social-share preview",
+                "n": "it shows another brand (Bold Steps) on every share today"
               },
               {
                 "k": "revamp",
-                "u": "Strengthen the /inpatient parent page"
+                "u": "Strengthen the /inpatient page",
+                "n": "77K impressions a year at position 5.6; add insurance names, Medicaid and an FAQ"
               }
             ],
-            [
-              {
-                "k": "revamp",
-                "u": "Merge the near-duplicate Carmel service pages"
-              }
-            ],
+            [],
             [
               {
                 "k": "new",
-                "u": "Ship /alcohol-rehab-new-york"
+                "u": "Ship /alcohol-rehab-new-york",
+                "n": "state-level page for an 880-a-month search cluster"
               },
               {
                 "k": "new",
-                "u": "Ship /detox-new-york"
+                "u": "Ship /detox-new-york",
+                "n": "state-level detox page, a 260-a-month cluster"
               },
               {
                 "k": "revamp",
-                "u": "Insurance-carrier sections on /admissions"
+                "u": "Insurance-carrier sections on /admissions",
+                "n": "Aetna, Medicare, Medicaid, Tricare, Cigna, BCBS, with a verify-coverage button"
               }
             ]
           ]
         },
         {
           "label": "Content",
-          "cap": "insurance and cost articles",
+          "cap": "insurance, cost and high-traffic blogs",
           "cells": [
             [
               {
                 "k": "refresh",
-                "u": "Insurance articles: new titles and FAQ schema"
+                "u": "Insurance articles: new titles and FAQ schema",
+                "n": "insurance-cover-rehab (pos 11.6), how-to-get-insurance-to-pay-for-inpatient-rehab (pos 14.5), aetna-cover-rehab (pos 20), plus the Medicare and Tricare pages"
               }
             ],
             [
               {
                 "k": "refresh",
-                "u": "Current stats and internal links across the insurance set"
+                "u": "Insurance articles: 2026 stats and internal links",
+                "n": "deepen the same set after the title work"
               },
               {
                 "k": "refresh",
-                "u": "Title pass on the already-ranking blogs"
+                "u": "Blog titles: percocet-overview, ambien-cold-turkey, how-addictive-is-xanax",
+                "n": "percocet draws 40K impressions at 0.1% CTR, the biggest click gap on the site"
+              },
+              {
+                "k": "refresh",
+                "u": "Update alcohol-recovery-statistics and cost-without-insurance",
+                "n": "the cost page sits at 17K impressions, position 16.5"
               }
             ],
             [
               {
+                "k": "refresh",
+                "u": "Measure the insurance batch and amplify the winners",
+                "n": "position, CTR and clicks vs the starting point"
+              },
+              {
                 "k": "new",
-                "u": "Supporting articles for the new state pages"
+                "u": "Support articles for the new state pages",
+                "n": "NY inpatient admissions, medical detox in NY, length of an inpatient stay"
               }
             ]
           ]
@@ -1547,19 +1566,36 @@
             [
               {
                 "k": "fix",
-                "u": "Audit the thin doorway pages"
+                "u": "Audit the thin /suburb doorway pages",
+                "n": "keep and improve the ones with traffic or links, rather than a blanket cleanup"
+              },
+              {
+                "k": "fix",
+                "u": "Map every Google Business service to a real site page",
+                "n": "find where a Maps click lands on the homepage today"
               }
             ],
             [
               {
                 "k": "revamp",
-                "u": "Improve the highest-traffic thin pages"
+                "u": "Improve the highest-traffic thin /suburb pages",
+                "n": "real local content and internal links, preserving the existing clicks"
               }
             ],
             [
               {
+                "k": "revamp",
+                "u": "Improve the next batch of /suburb pages"
+              },
+              {
                 "k": "fix",
-                "u": "LocalBusiness, Service and FAQ schema on the Tier-1 pages"
+                "u": "Merge the duplicate Carmel service pages",
+                "n": "equine, fitness, MAT and psychiatric each have a near-identical twin"
+              },
+              {
+                "k": "fix",
+                "u": "LocalBusiness, Service and FAQ schema on the Tier-1 pages",
+                "n": "the homepage carries Organization schema only today"
               }
             ]
           ]
@@ -1571,25 +1607,82 @@
             [
               {
                 "k": "fix",
-                "u": "Description, services, categories and attributes"
+                "u": "Rewrite and expand the listing description",
+                "n": "services, insurance carriers, MAT, dual diagnosis, Hudson Valley"
+              },
+              {
+                "k": "fix",
+                "u": "Complete the services list",
+                "n": "each item linked to a real /inpatient or /service page"
+              },
+              {
+                "k": "fix",
+                "u": "Add categories and attributes",
+                "n": "detox center and counselor; accessibility, payments, service options"
+              },
+              {
+                "k": "fix",
+                "u": "Re-tag and re-upload the photos"
               }
             ],
             [
               {
                 "k": "fix",
-                "u": "Photo and posts cadence"
+                "u": "Google Business posts",
+                "n": "each post links to a matching site page; runs through the quarter"
+              }
+            ],
+            []
+          ]
+        },
+        {
+          "label": "Off-page",
+          "cap": "citations, PR and clean-up",
+          "cells": [
+            [
+              {
+                "k": "new",
+                "u": "Foundational citations",
+                "n": "SAMHSA, NYS OASAS, Start Your Recovery, Psychology Today"
               }
             ],
             [
               {
+                "k": "new",
+                "u": "Vertical directory citations",
+                "n": "alcoholism.org, best-rehabs, rehab.com, addictionresource, rehabspot"
+              },
+              {
+                "k": "new",
+                "u": "Local press pitches",
+                "n": "Hudson Valley Magazine, Press-Republican, Poughkeepsie Journal, Times Union"
+              },
+              {
+                "k": "new",
+                "u": "Trade article pitch",
+                "n": "a Hudson Valley byline on behavioralhealthnews.org"
+              }
+            ],
+            [
+              {
+                "k": "new",
+                "u": "Local NY citations",
+                "n": "Putnam County, Carmel, Dutchess and Westchester, NAMI Hudson Valley"
+              },
+              {
                 "k": "fix",
-                "u": "Local citations and disavow file"
+                "u": "Disavow the spam backlink pattern",
+                "n": "staged for your Search Console upload"
+              },
+              {
+                "k": "fix",
+                "u": "Complete the Psychology Today profiles"
               }
             ]
           ]
         }
       ],
-      "note_html": "Scope is the managed Carmel pin and the website pages it feeds."
+      "note_html": "Scope is the managed Carmel pin and the website pages it feeds. Posts and citations run through the quarter."
     },
     "maps": {
       "enabled": true,
