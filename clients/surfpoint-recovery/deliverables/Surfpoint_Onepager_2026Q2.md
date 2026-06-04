@@ -221,7 +221,7 @@ Inbound profile shows clusters from SEO Anomaly, SEO Cartel, xyz-pattern PBNs ap
 ## 7. Open Items / Follow-Up Data Pulls
 
 - **DataForSEO Backlinks full pull** — current disavow scope is based on spot-checked clusters; quantify the full toxic surface.
-- **Aaron Gruenke consultation** — Milica to verify which PBN clusters originated from SEO Neo (in-house) vs external attack.
+- **Off-page vendor consultation:** Milica to verify which PBN clusters originated from the prior in-house stack vs external attack.
 - **Elevate Point investigation** — brand-new operator with 127 cells from zero in 6 months. What launched them? PR? Posts cadence? Citation push? Diagnose-and-borrow.
 - **Blog bleed root cause** — diagnose *why* the 147 posts decayed (algorithm update window? content quality regression on AI-generated batches? sitewide trust spillover from doorways/PBNs?). M1-M3 refresh batches (CON-06/07/08 for blogs + LP-01 for location pages) will reveal whether targeted updates recover — if they don't, the cause is sitewide, not per-post.
 - **Full 5-cluster × 7-coord Maps matrix** — currently we have 5 clusters at 1 coord (Coney Island, §5) and 2 keywords at 7 coords (§5b). The full 35-cell matrix (5 clusters × 7 anchor coords) would close the topical-coverage picture for every target geo.

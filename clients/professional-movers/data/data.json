@@ -1734,7 +1734,7 @@
     "Feb→May reach loss: 90 cells / 8 net top-3 placements / 94 cells on 'detroit moving company'",
     "Rochester + Detroit Woodward GBPs unmanaged despite physical offices",
     "Organic monthly imp −74% Aug 2025 → May 2026",
-    "60+ burb pages effectively deindexed; SEO Neo-precursor stack still active in Asana",
+    "60+ burb pages effectively deindexed; legacy off-page stack still active in Asana",
     "49.6% Ahrefs-flagged spam backlinks; 17 confirmed Telegram-spam anchors via DFS",
     "Non-brand CTR 0.09%; AI-Overview + local-pack suppression structural",
     "GA4 lead-event stack incomplete vs AQMS pattern: form_submit fires (~190/mo) but flag not set; click_phone_number + gmb_click not deployed"
@@ -2041,7 +2041,7 @@
       "priority": "High priority (compliance)",
       "color": "red",
       "mini_report_url": "lever-e-link-hygiene/",
-      "why": "DFS Backlinks shows 990 / 247 ref domains with 17 confirmed Telegram-spam anchors. Ahrefs flags 211 of 425 (49.6%) as spam. SEO Neo-precursor stack still active in Asana. Earned-channel rebuild replaces the automated stack.",
+      "why": "DFS Backlinks shows 990 / 247 ref domains with 17 confirmed Telegram-spam anchors. Ahrefs flags 211 of 425 (49.6%) as spam. Legacy off-page stack still active in Asana. Earned-channel rebuild replaces the automated stack.",
       "actions": [
         {
           "code": "OP-01",
@@ -2063,7 +2063,7 @@
         },
         {
           "code": "OP-04",
-          "name": "HALT all active SEO Neo-precursor campaigns in Asana — principal instruction to Julce",
+          "name": "HALT all active legacy off-page campaigns in Asana — principal instruction to Julce",
           "month": "M1",
           "effort": "S"
         },

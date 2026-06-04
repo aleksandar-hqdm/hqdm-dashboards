@@ -1045,7 +1045,7 @@
         },
         {
           "code": "PR-PAUSE",
-          "name": "Pause new PR placements on the existing 10-domain target list pending citation-strategy review (Aaron Gruenke consultation pending per Milica 2026-05-13)",
+          "name": "Pause new PR placements on the existing 10-domain target list pending citation-strategy review (off-page vendor consultation pending per Milica 2026-05-13)",
           "month": "M1",
           "effort": "S"
         },
