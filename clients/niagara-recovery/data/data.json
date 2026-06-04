@@ -3,16 +3,16 @@
   "meta": {
     "client": "Niagara Recovery",
     "domain": "niagararecovery.com",
-    "tagline": "Western NY addiction-treatment · Newfane pin · Buffalo-metro break-out",
+    "tagline": "Western NY addiction-treatment · Newfane pin · home-market defense",
     "tier": "Tier 1 Recovery",
     "address": "2600 William St, Newfane NY 14108",
     "prepared_date": "2026-05-19",
     "author": "Aleksandar Spasevski",
     "org": "HQDM Search Intelligence",
     "quarter": "Q2 2026",
-    "doc_subtitle": "Newfane core 100% owned · Brand canonical sitewide · GBP service-area swap to 9 WNY anchors · Service-page 10→5 consolidation · Location-page build/upgrade/redirect · Content firehose pause."
+    "doc_subtitle": "Newfane core 100% owned · brand canonical sitewide · GBP service-area set to the towns we already dominate · service-page 10→5 consolidation · doorway cleanup · content firehose pause."
   },
-  "tldr": "Niagara Recovery owns Western NY in Maps. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on 70.9% of cells for \"alcohol detox near me\", 70.3% for \"alcohol rehab\", and 60%+ for addiction-rehab / addiction-rehab-near-me / inpatient-rehab-near-me — at avg rank 3.0-3.5 across the entire WNY map. Eight outer-ring towns (Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt, Newfane) are at 100% top-3 across all 8 priority keywords; Barker holds 95.2% and Lockport 94.2%. Branded search converts at 17.1% CTR on 15,237 impressions/365d — the 20 branded queries pull 2,605 clicks/year and the brand variant \"newfane recovery center\" alone earns 85 clicks at 18.9% CTR. Q2 = converting what the brand already wins in Maps into site-level traffic: brand-canonical fix to recover the 41% search-demand bleed to the old name (363 vs 528 GBP searches), GBP service-area swap to declare 9 winnable anchor towns the site doesn't yet claim, service-page consolidation, and location-page architecture. The unlock is on-page + GBP discipline, not budget.",
+  "tldr": "Niagara Recovery owns Western NY in Maps. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on 70.9% of cells for \"alcohol detox near me\", 70.3% for \"alcohol rehab\", and 60%+ for addiction-rehab / addiction-rehab-near-me / inpatient-rehab-near-me — at avg rank 3.0-3.5 across the entire WNY map. Eight outer-ring towns (Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt, Newfane) are at 100% top-3 across all 8 priority keywords; Barker holds 95.2% and Lockport 94.2%. Branded search converts at 17.1% CTR on 15,237 impressions/365d — the 20 branded queries pull 2,605 clicks/year and the brand variant \"newfane recovery center\" alone earns 85 clicks at 18.9% CTR. Q2 = converting what the brand already wins in Maps into site-level traffic: brand-canonical fix to recover the 41% search-demand bleed to the old name (363 vs 528 GBP searches), a GBP service-area set to the nearby towns it already dominates in Maps, service-page consolidation, and doorway cleanup. The unlock is on-page + GBP discipline, not budget.",
   "kpis": [
     {
       "label": "Map top-3 — alcohol detox near me",
@@ -30,7 +30,7 @@
       "label": "Anchor towns 100% owned",
       "value": "8 towns",
       "sentiment": "positive",
-      "detail": "Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, and Burt are at 100% top-3 across all 8 priority keywords. Barker (95.2%) and Lockport (94.2%) round out a 10-town dominance ring. The Newfane pin's structural reach is wider than the on-site location pages declare."
+      "detail": "Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, and Burt are at 100% top-3 across all 8 priority keywords. Barker (95.2%) and Lockport (94.2%) round out a 10-town dominance ring. This is the home market to defend; expansion past it is out of scope."
     },
     {
       "label": "Branded search CTR 365d",
@@ -45,10 +45,10 @@
       "detail": "\"Recovery Center of Niagara\" pulled 363 GBP searches Dec-May vs \"Niagara Recovery\" variants at 528. Push 1 (sitewide brand canonical) consolidates the 41% leakage into the canonical entity — recovers a measurable share of branded-search clicks within 30-60d of Google reprocessing."
     },
     {
-      "label": "Anchor towns ready to declare on site",
-      "value": "9 towns",
+      "label": "Anchor towns ready to declare in GBP",
+      "value": "7 towns",
       "sentiment": "neutral",
-      "detail": "9 WNY anchor towns are already top-3 in Maps (Lockport 13c r1.4 · Clarence 40c r3.4 · Cambria · Pendleton · Sanborn · Wheatfield · Youngstown · Lewiston · N. Tonawanda) but the GBP service-area cap is filled with 13 redundant micros on 3 ZIPs. Swap is zero-budget; site location pages compound."
+      "detail": "The towns Niagara already ranks top-3 in (Lockport 13c r1.4 · Cambria · Pendleton · Sanborn · Wheatfield · Youngstown · Lewiston) aren't declared in the GBP service area, which is filled with 13 redundant micros on 3 ZIPs. The zero-budget swap declares the towns already won. No new location pages."
     }
   ],
   "trend": {
@@ -651,7 +651,7 @@
       "bucket": "Location pages (94 URLs — 16 clicks/365d total)",
       "keywords": 94,
       "pct": 12,
-      "posture": "BUILD Tonawanda + N. Tonawanda + Lewiston + Youngstown · UPGRADE Williamsville + Cheektowaga + Lockport + NF + Amherst · REDIRECT ~60 doorways"
+      "posture": "REDIRECT ~60 doorway URLs · light schema/NAP on the pages we already rank (Williamsville, Lockport) · no net-new location pages · declare the won towns in GBP"
     },
     {
       "bucket": "Service pages (10 URLs — 3 clicks/365d combined)",
@@ -775,19 +775,19 @@
     }
   ],
   "positives": [
-    "Top-3 Maps coverage of 70.9% (alcohol-detox-near-me), 70.3% (alcohol-rehab), 61.4% (inpatient-rehab-near-me), 60.8% (addiction-rehab and addiction-rehab-near-me) on a 158-cell Western NY grid — Niagara is the structural #1 entity for the commercial-intent core of the vertical",
+    "Top-3 Maps coverage of 70.9% (alcohol-detox-near-me), 70.3% (alcohol-rehab), 61.4% (inpatient-rehab-near-me), 60.8% (addiction-rehab and addiction-rehab-near-me) on a 158-cell Western NY grid. Niagara is #1 in Maps across the commercial-intent core of its home market",
     "8 outer-ring towns at 100% top-3 across all 8 priority keywords: Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt — plus Barker at 95.2% and Lockport at 94.2%",
     "Brand engine 17.1% CTR on 15,237 imp/365d (2,605 clicks). \"newfane recovery center\" 85 clicks @ 18.9% CTR / pos 2.9 · \"niagara rehab newfane ny\" 28 clicks @ 18.4% CTR / pos 1.3 — long-tail brand recognition is healthy",
     "4.3★/47-review GBP is the entity authority for Niagara County core; competitive landscape is beatable on rating: Renaissance (2.7★), Beacon (3.6★), Casa Di Vita (3 reviews), Pathways (3.3★)",
     "GMB-tagged homepage = 3,429 clicks/365d at 6.92% CTR / avg pos 6.0 — single largest organic channel, with a fixable on-page floor that compounds directly",
     "5 high-CTR blog assets already earning ~2,400 clicks/365d combined — refresh + intake CTA captures impression at zero net new content cost",
-    "9 WNY anchor towns ready to convert from Map wins to declared site presence — Lockport, Clarence, Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, N. Tonawanda. Zero-budget GBP service-area swap consolidates 11 redundant micros into anchor declarations"
+    "The towns Niagara already wins in Maps aren't declared in its GBP service area: Lockport, Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston. The zero-budget service-area swap consolidates 11 redundant micros into declarations of towns already owned"
   ],
   "negatives": [
     "Sitewide brand-canonical drift: 5/8 core pages title-tag as \"Recovery Center of Niagara\"; LocalBusiness JSON-LD ambiguous. 363 GBP searches Dec-May still route to the old name (41% of branded demand). Push 1 = single largest discoverable lever in Q2.",
     "\"[phone number]\" placeholder LIVE on /services/alcohol-detoxification-services + -in-newfane-ny dupe (Webflow QA gap) — fix is a 10-minute edit + reprocess",
     "10 /services/* URLs (5 base + 5 -in-newfane-ny dupes) for 3 clicks / 365d combined and 0 schema — service-page traffic floor is broken, schema floor is the unlock",
-    "Buffalo location page fabricates \"our facility in Buffalo, NY 14215\" — NAP-integrity risk for Maps (the only facility is at 2600 William St Newfane); Tonawanda + N. Tonawanda 404s",
+    "Buffalo location page fabricates \"our facility in Buffalo, NY 14215\": a NAP-integrity risk for Maps, since the only facility is at 2600 William St Newfane. Buffalo is outside the home market Niagara dominates, so the page should redirect rather than target Buffalo",
     "GBP photo count 6 = lowest of 12 WNY competitor GBPs scanned (competitors at 25-280 photos) — Push 2 brings to 25+ across 5 categories",
     "670-post blog at 96% of impressions diluting toward off-vertical (porn-addiction 350K imp / vape-by-country / social-media addiction) — Push 5 NOINDEX/410s ~300 off-vertical posts, refreshes 5 high-CTR assets, and pauses the doorway-template firehose"
   ],
@@ -819,23 +819,23 @@
         },
         {
           "code": "BC-04",
-          "name": "Fix Buffalo location page fabrication (\"our facility in Buffalo, NY 14215\" → truthful \"serving Buffalo metro from Newfane\")",
+          "name": "Fix Buffalo location page fabrication: 301 /locations/buffalo to the Newfane home/contact (kills the false \"facility in Buffalo, NY 14215\"; we serve the Buffalo area from Newfane, no Buffalo location)",
           "month": "M1",
           "effort": "S"
         }
       ],
-      "outcome": "5/8 core pages re-title to canonical entity; all 3 sampled JSON-LD blocks pass validator.schema.org; 0 \"[phone number]\" literals on service pages; Buffalo page reads truthful NAP. Recovers 41% branded demand bleed within 30-60d of Google reprocessing."
+      "outcome": "5/8 core pages re-title to canonical entity; all 3 sampled JSON-LD blocks pass validator.schema.org; 0 \"[phone number]\" literals on service pages; the fabricated Buffalo page redirects. Recovers 41% branded demand bleed within 30-60d of Google reprocessing."
     },
     {
       "id": "2",
       "name": "GBP service-area swap + photo blitz + Posts cadence",
       "priority": "P0 · M1",
       "color": "green",
-      "why": "GBP service area is at 20/20 cap with 13 entries on just 3 ZIPs (7 on 14094 Lockport, 3 on 14008 Appleton, 3 on 14172 Wilson) — 11 redundant micros consolidate to 2 keeps. That frees 9 slots for 9 WNY anchor towns where LD shows 100% coverage + top-3 rank but no entity declaration: Lockport (13c/r1.4), Clarence (40c/r3.4 — biggest break-out lever), Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston, N. Tonawanda. GBP photo count of 6 is lowest of 12 WNY competitors scanned.",
+      "why": "GBP service area is at 20/20 cap with 13 entries on just 3 ZIPs (7 on 14094 Lockport, 3 on 14008 Appleton, 3 on 14172 Wilson); 11 redundant micros consolidate to 2 keeps. That frees slots to declare the nearby towns Niagara already ranks top-3 in but hasn't claimed: Lockport (13c/r1.4), Cambria, Pendleton, Sanborn, Wheatfield, Youngstown, Lewiston. GBP photo count of 6 is lowest of 12 WNY competitors scanned.",
       "actions": [
         {
           "code": "GBP-04",
-          "name": "Service-area swap: drop 11 redundant micros (7×14094 Lockport hoods + 2×14008 Appleton + 2×14172 Wilson), add 9 anchor towns (Lockport + Clarence + Cambria + Pendleton + Sanborn + Wheatfield + Youngstown + Lewiston + N. Tonawanda)",
+          "name": "Service-area swap: drop 11 redundant micros (7×14094 Lockport hoods + 2×14008 Appleton + 2×14172 Wilson), declare the 7 towns already won in Maps (Lockport + Cambria + Pendleton + Sanborn + Wheatfield + Youngstown + Lewiston)",
           "month": "M1",
           "effort": "S"
         },
@@ -865,12 +865,12 @@
         },
         {
           "code": "GBP-POST_M3",
-          "name": "GBP Posts M3 — 4 posts (short-term residential / DBT / WNY break-out / brand-canonical reinforce)",
+          "name": "GBP Posts M3 — 4 posts (short-term residential / DBT / home-market reinforce / brand-canonical reinforce)",
           "month": "M3",
           "effort": "S"
         }
       ],
-      "outcome": "GBP shows 18 entries (9 KEEPs + 9 ADDs + 2 Q3 reserves); photo count 25+ with category mix; 12 cumulative Posts published over Q2. Maps cell coverage extends from Newfane-core into 9 WNY anchor towns by M3 reprocessing."
+      "outcome": "GBP shows 16 entries (9 KEEPs + 7 ADDs); photo count 25+ with category mix; 12 cumulative Posts published over Q2. The towns Niagara already wins in Maps are now declared in the profile, defending the home-market footprint."
     },
     {
       "id": "3",
@@ -914,45 +914,15 @@
     },
     {
       "id": "4",
-      "name": "Location-page architecture (build / upgrade / redirect)",
+      "name": "Location-page cleanup (redirect doorways + schema on the pages we already rank)",
       "priority": "P1 · M1-M3",
       "color": "purple",
-      "why": "94 /locations/* pages generate 16 clicks / 365d combined. Williamsville (986w) + Cheektowaga (679w) have substantive content but zero schema, no ratings, no NAP — failing to rank at 60-80% LD coverage. Tonawanda + N. Tonawanda return 404 (matches Buffalo-metro 0/7 cell black hole). Lockport / NF / Amherst = 276-278w thin doorways. ~60 best-/most-trusted-/dependable-/premium- doorway URLs identical to Surfpoint + Arms Acres patterns.",
+      "why": "94 /locations/* pages generate 16 clicks / 365d combined, mostly thin best-/most-trusted-/dependable- doorway URLs. The job is cleanup, not expansion: redirect the doorway sprawl, and add schema + NAP to the two substantive pages for towns Niagara already dominates (Williamsville 986w, Lockport). We do NOT build net-new location pages for Buffalo-metro towns Niagara doesn't own: Tonawanda and N. Tonawanda 404 inside a 0/7-cell Buffalo black hole, and Cheektowaga / Amherst sit at 33-50% coverage. The towns Niagara already wins (Lewiston, Youngstown, the dominated ring) are declared in the GBP service area in Push 2, where the Maps win already lives.",
       "actions": [
         {
           "code": "LP-01",
-          "name": "Williamsville UPGRADE — add MedicalBusiness schema + ratings + NAP + service-link tightening (already 986w content)",
+          "name": "Williamsville UPGRADE — add MedicalBusiness schema + ratings + NAP + service-link tightening (already 986w content; LD 89-93% rank 5-6, in-market and already ranking)",
           "month": "M1",
-          "effort": "M"
-        },
-        {
-          "code": "LP-02",
-          "name": "Cheektowaga UPGRADE — same pattern as LP-01 (already 679w)",
-          "month": "M1",
-          "effort": "M"
-        },
-        {
-          "code": "LP-03",
-          "name": "Tonawanda BUILD — currently 404; ~1000w + MedicalBusiness schema + drive directions + service links",
-          "month": "M2",
-          "effort": "L"
-        },
-        {
-          "code": "LP-04",
-          "name": "N. Tonawanda BUILD — currently 404; ~1000w + schema (50-100% LD cov, rank 5-7)",
-          "month": "M2",
-          "effort": "L"
-        },
-        {
-          "code": "LP-05",
-          "name": "Lewiston BUILD — ~800w + schema (100% LD cov rank 4-5, low-effort entity claim)",
-          "month": "M2",
-          "effort": "M"
-        },
-        {
-          "code": "LP-06",
-          "name": "Youngstown BUILD — ~800w + schema (100% LD cov rank 1.3, dominant but no on-site landing)",
-          "month": "M3",
           "effort": "M"
         },
         {
@@ -962,32 +932,20 @@
           "effort": "M"
         },
         {
-          "code": "LP-08",
-          "name": "Niagara Falls UPGRADE thin (278w → 1000w)",
-          "month": "M3",
-          "effort": "M"
-        },
-        {
-          "code": "LP-09",
-          "name": "Amherst UPGRADE thin (276w → 1000w)",
-          "month": "M3",
-          "effort": "M"
-        },
-        {
           "code": "LP-10",
-          "name": "REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorway URLs to anchor city pages (small-level 301s per fill-not-kill policy)",
+          "name": "REDIRECT ~60 best-/most-trusted-/dependable-/premium- doorway URLs to the nearest substantive page (301s per fill-not-kill policy)",
           "month": "M2",
           "effort": "L"
         }
       ],
-      "outcome": "9 substantive location pages live with schema + NAP + service links by M3; ~60 doorway URLs return 301 to anchor city pages; /locations/* combined clicks 16/365d → 80/M3 target. Buffalo-metro Maps black hole closed via Tonawanda + N. Tonawanda + Cheektowaga + Williamsville builds."
+      "outcome": "The doorway sprawl (~60 URLs) returns 301s; the two substantive in-market pages (Williamsville, Lockport) carry schema + NAP. No net-new location pages. The towns Niagara already dominates are held through GBP and Maps, not through thin doorway builds."
     },
     {
       "id": "5",
       "name": "Content cleanup + cannibal consolidation + production-firehose pause",
       "priority": "P0/P1 · M1-M3",
       "color": "amber",
-      "why": "670-post blog at 96% of impressions diluting topical authority toward off-vertical content (porn-addiction 350K imp / vape-by-country / social-media addiction) and Newfane-only modifiers, not WNY break-out terrain. Non-branded discovery collapsed 87% even as 22 new PAA blogs + 9 new suburb-doorway pages shipped 2026-04-15 → 2026-05-18. Without CC-03 owner-ask pause, LP-10 doorway redirects become a perpetual cleanup cycle. Off-page rotation switched from SEO Neo / AI Articles stack to disavow + Tier-1 citations + earned-link work per 2026-05-13 program halt.",
+      "why": "670-post blog at 96% of impressions diluting topical authority toward off-vertical content (porn-addiction 350K imp / vape-by-country / social-media addiction) and Newfane-only modifiers, not the home-market terms that convert. Non-branded discovery collapsed 87% even as 22 new PAA blogs + 9 new suburb-doorway pages shipped 2026-04-15 → 2026-05-18. Without CC-03 owner-ask pause, LP-10 doorway redirects become a perpetual cleanup cycle. Off-page rotation switched from SEO Neo / AI Articles stack to disavow + Tier-1 citations + earned-link work per 2026-05-13 program halt.",
       "actions": [
         {
           "code": "CC-01",
@@ -1033,7 +991,7 @@
         },
         {
           "code": "REP-01",
-          "name": "LD recurring scan setup — 6 anchor coords × 8 priority kws weekly (Newfane / Lockport / Williamsville / N. Tonawanda / Buffalo / Niagara Falls)",
+          "name": "LD recurring scan setup — 6 anchor coords × 8 priority kws weekly (Newfane / Lockport / Williamsville / Lewiston / Youngstown / Cambria)",
           "month": "M1",
           "effort": "S"
         },
@@ -1072,7 +1030,7 @@
       { "town": "Barker",        "owned_pct": 95.2,  "owned_cells": 236, "avg_rank": 1.42, "note": "236/248 cells top-3 — broad outer-ring dominance" },
       { "town": "Lockport",      "owned_pct": 94.2,  "owned_cells": 98,  "avg_rank": 1.53, "note": "98/104 cells top-3 — GBP service-area declaration unlocks site lift" },
       { "town": "Pendleton",     "owned_pct": 77.1,  "owned_cells": 37,  "avg_rank": 2.57, "note": "Anchor candidate" },
-      { "town": "Clarence",      "owned_pct": 53.1,  "owned_cells": 170, "avg_rank": 3.54, "note": "Biggest break-out target — 320 cells × top-3 in over half" }
+      { "town": "Clarence",      "owned_pct": 53.1,  "owned_cells": 170, "avg_rank": 3.54, "note": "Buffalo-metro edge: only 53% owned, outside the home market, not a target" }
     ],
     "gsc_treatment_winners": [
       { "query": "newfane recovery center",     "clicks": 85, "impressions": 449,  "position_avg": 2.9, "ctr_pct": 18.93 },
@@ -1123,7 +1081,7 @@
       "type": "md"
     },
     {
-      "label": "Push 4 — Location Page Architecture",
+      "label": "Push 4 — Location Page Cleanup",
       "path": "Niagara_Recovery_Push4_Location_Page_Architecture.md",
       "type": "md"
     },
@@ -1387,7 +1345,7 @@
     "short_name": "Niagara Recovery",
     "subtitle": "Q2 2026 · Western NY · Newfane pin · Client Snapshot",
     "footer": "Client snapshot · Q2 2026 · Prepared by Aleksandar Spasevski",
-    "exec_html": "<p>Niagara Recovery <strong>is the structural #1 entity for addiction-treatment Maps across Western NY</strong>. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on <strong>70.9%</strong> of cells for <em>alcohol detox near me</em>, <strong>70.3%</strong> for <em>alcohol rehab</em>, and 60%+ for the rest of the priority-keyword set — at avg rank 3.0–3.5 across the whole map. <strong>Eight outer-ring towns</strong> (Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt) are at 100% top-3 across all 8 priority queries; Lockport (94%) and Barker (95%) round out a 10-town dominance ring. Branded search clicks through at <strong>17.1%</strong> on 15,237 imp/365d. Q2 is about converting what the brand already wins in Maps into site-level traffic: brand-canonical fix to recover the 41% search bleed to the old name, a Google Business service-area swap to declare 9 winnable anchor towns, service-page consolidation, and location-page architecture.</p>",
+    "exec_html": "<p>Niagara Recovery <strong>owns its Western NY home market in Maps</strong>. On a 158-cell DataForSEO LocalDominator grid (Apr 30 2026), the brand is top-3 on <strong>70.9%</strong> of cells for <em>alcohol detox near me</em>, <strong>70.3%</strong> for <em>alcohol rehab</em>, and 60%+ for the rest of the priority-keyword set — at avg rank 3.0–3.5 across the whole map. <strong>Eight outer-ring towns</strong> (Newfane, Appleton, Ransomville, Cambria, Wilson, Youngstown, Olcott, Burt) are at 100% top-3 across all 8 priority queries; Lockport (94%) and Barker (95%) round out a 10-town dominance ring. Branded search clicks through at <strong>17.1%</strong> on 15,237 imp/365d. Q2 is about converting what the brand already wins in Maps into site-level traffic: a brand-canonical fix to recover the 41% search bleed to the old name, a Google Business service-area swap that declares the nearby towns it already dominates, service-page consolidation, and a doorway cleanup.</p>",
     "chips": [
       {
         "v": "70.9%",
@@ -1489,7 +1447,7 @@
         ]
       }
     ],
-    "boxes_reading_html": "The Maps engine is the clean signal — Niagara is the structural #1 entity for addiction-treatment across Western NY, with 759 top-3 cells vs 230 for the next provider. The branded search engine routes 2,605 clicks/year at a healthy 17.1% CTR. Q2 levers convert this structural position into more site-declared territory and more on-page surface for the brand to compound on.",
+    "boxes_reading_html": "The Maps engine is the clean signal: Niagara is #1 for addiction-treatment across its Western NY home market, with 759 top-3 cells vs 230 for the next provider. The branded search engine routes 2,605 clicks/year at a healthy 17.1% CTR. Q2 defends that home-market lead and converts it into site traffic and leads through the service pages, the brand-canonical fix, and GBP.",
     "focus": [],
     "calendar": {
       "enabled": true,
@@ -1519,23 +1477,18 @@
           ]
         },
         {
-          "label": "Suburbs",
-          "cap": "3 / month",
+          "label": "Locations",
+          "cap": "cleanup · no net-new pages",
           "cells": [
             [
-              { "u": "/locations/williamsville", "k": "revamp", "n": "986w content already in place but 0 schema + no ratings + no NAP · LD coverage 89–93% rank 5-6 · schema + NAP is the lever" },
-              { "u": "/locations/cheektowaga", "k": "revamp", "n": "679w content + 0 schema · LD coverage 37–50% rank 8-10 · same upgrade pattern as Williamsville" },
-              { "u": "/locations/lockport", "k": "revamp", "n": "Thin 276w doorway expanded to 1000w + MedicalBusiness schema + drive-time + neighborhood mentions (Cambria / Pendleton / Ridgewood) · Lockport entity is LD-dominant (13 cells 100% rank 1.4) but landing wastes the signal" }
+              { "u": "/locations/williamsville", "k": "revamp", "n": "986w content already in place but 0 schema + no ratings + no NAP · LD 89–93% rank 5-6 · schema + NAP is the lever (in-market, already ranking)" },
+              { "u": "/locations/lockport", "k": "revamp", "n": "Thin 276w doorway expanded to 1000w + MedicalBusiness schema + drive-time · Lockport is LD-dominant (13 cells 100% rank 1.4) but the landing wastes the signal" }
             ],
             [
-              { "u": "/locations/tonawanda", "k": "new", "n": "Currently 404 · build ~1000w + MedicalBusiness schema + drive directions from Tonawanda + service-area + intake CTA · Buffalo-metro break-out anchor with zero on-site landing" },
-              { "u": "/locations/north-tonawanda", "k": "new", "n": "Currently 404 · same build template · LD 2-8 cells 50–100% rank 5-7 (larger entity surface than Tonawanda)" },
-              { "u": "/locations/lewiston", "k": "new", "n": "No page today · ~800w build + schema · LD 100% rank 4-5 — entity-claim with low-effort win, rank already winnable" }
+              { "u": "Redirect ~60 doorway /locations/* URLs (best- · most-trusted- · dependable- · premium- · holistic-*) → nearest substantive page", "k": "redirect", "n": "301s per fill-not-kill policy · stop the doorway sprawl" }
             ],
             [
-              { "u": "/locations/youngstown", "k": "new", "n": "No page today · ~800w build + schema · LD 100% rank 1.3 — dominant in zone but no entity landing currently" },
-              { "u": "/locations/niagara-falls", "k": "revamp", "n": "Thin 278w expanded to 1000w + schema + NF-specific drive-time · lift comes from the entity claim, not the LD position alone (LD rank 10-16)" },
-              { "u": "/locations/amherst", "k": "revamp", "n": "Thin 276w expanded to 1000w + schema · weakest anchor (LD 33% rank 12-15) — deferred to M3 because Lockport / Tonawanda / NF carry larger lift" }
+              { "u": "Towns already won (Lewiston · Youngstown · Cambria · the dominated ring) → declare in GBP service area, not new pages", "k": "fix", "n": "the Maps win already lives at the pin · no net-new Buffalo-metro builds (Tonawanda / N. Tonawanda / Cheektowaga / Amherst sit outside the home market)" }
             ]
           ]
         },
@@ -1574,7 +1527,7 @@
               { "u": "Brand-canonical sweep on 5 core pages (/about-us · /admissions · /contact-us · /treatments · /areas-served)", "k": "fix", "n": "Title + H1 + body 'Recovery Center of Niagara' → 'Niagara Recovery' · recovers 41% branded-demand bleed (363 of 891 GBP searches Dec→May still on old brand)" },
               { "u": "LocalBusiness JSON-LD entity-name fix + WP-content image swap to live Webflow CDN", "k": "fix", "n": "Homepage + about + admissions · @id canonical · validate via validator.schema.org" },
               { "u": "Kill '[phone number]' placeholder on alcohol-detox + Newfane dupe", "k": "fix", "n": "Replace with (716) 203-8000 · QA bug live since Webflow build" },
-              { "u": "Fix Buffalo NAP fabrication (/locations/buffalo)", "k": "fix", "n": "Body claims 'facility in Buffalo, NY 14215' but the only facility is in Newfane · rewrite to 'serving Buffalo metro from Newfane'" },
+              { "u": "Fix Buffalo NAP fabrication (/locations/buffalo)", "k": "redirect", "n": "Body claims 'facility in Buffalo, NY 14215' but the only facility is in Newfane · 301 to the Newfane home/contact; Buffalo is outside the home market, we don't target it" },
               { "u": "301 the 5 -in-newfane-ny service-page dupes → 5 base /services URLs", "k": "redirect", "n": "10 service URLs collapse to 5 canonical · content-merge unique body sections under the base before redirect" },
               { "u": "MedicalBusiness + Service schema on 5 base /services pages + /treatments + /services/short-term-residential-program", "k": "fix", "n": "Currently 0 schema on any service page · service-page entity floor" }
             ],
@@ -1586,7 +1539,7 @@
             ],
             [
               { "u": "Schema audit · MedicalBusiness + Service on M1/M2 revamped /services/* · LocalBusiness on upgraded /locations/*", "k": "fix" },
-              { "u": "Internal-link audit · /admissions hub → service ladder + WNY anchor location pages", "k": "fix" },
+              { "u": "Internal-link audit · /admissions hub → service ladder + the in-market location pages we keep", "k": "fix" },
               { "u": "Page-level schema refactor · core pages (homepage + /about-us + /admissions + /contact-us + /treatments)", "k": "fix", "n": "swap any global @graph debris for page-specific MedicalBusiness / BreadcrumbList / FAQPage" }
             ]
           ]
@@ -1658,7 +1611,7 @@
     },
     "anchor_towns_table": {
       "enabled": true,
-      "title": "Anchor Towns · 100% Top-3 Owned",
+      "title": "Anchor Towns · Maps Dominance Ring",
       "window": "Across 8 priority keywords · 158-cell grid · Apr 30 2026",
       "headers": [
         "Town",
@@ -1675,10 +1628,9 @@
         { "cells": [{"t":"Youngstown"},   {"t":"<strong>16</strong> / 16"},{"t":"<strong>100%</strong>","c":"pos"},{"t":"1.38"}]},
         { "cells": [{"t":"Barker"},       {"t":"<strong>236</strong> / 248"},{"t":"<strong>95.2%</strong>","c":"pos"},{"t":"1.42"}]},
         { "cells": [{"t":"Lockport"},     {"t":"<strong>98</strong> / 104"},{"t":"<strong>94.2%</strong>","c":"pos"},{"t":"1.53"}]},
-        { "cells": [{"t":"Pendleton"},    {"t":"<strong>37</strong> / 48"},{"t":"<strong>77.1%</strong>","c":"pos"},{"t":"2.57"}]},
-        { "cells": [{"t":"Clarence"},     {"t":"<strong>170</strong> / 320"},{"t":"<strong>53.1%</strong>","c":"pos"},{"t":"3.54"}]}
+        { "cells": [{"t":"Pendleton"},    {"t":"<strong>37</strong> / 48"},{"t":"<strong>77.1%</strong>","c":"pos"},{"t":"2.57"}]}
       ],
-      "note_html": "These are the towns where Niagara is already structurally #1-3 in the Maps pack. The Q2 plan converts this Map presence into site-declared entity presence — the GBP service-area swap declares Lockport, Clarence, Cambria, Pendleton, and 5 more anchor towns; the location-page architecture builds the on-site landings to match."
+      "note_html": "These are the towns where Niagara is already #1-3 in the Maps pack. The Q2 plan declares the ones it already dominates in the GBP service area (Lockport, Cambria, Pendleton, and the rest of the ring), so the profile matches the Maps win. No net-new location pages. Buffalo-metro towns Niagara doesn't own (Clarence, Cheektowaga, Amherst) stay out of scope."
     },
     "competitors": {
       "enabled": false,
