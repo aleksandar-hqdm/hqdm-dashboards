@@ -1619,19 +1619,9 @@
                 "k": "fix",
                 "u": "Add categories and attributes",
                 "n": "detox center and counselor; accessibility, payments, service options"
-              },
-              {
-                "k": "fix",
-                "u": "Re-tag and re-upload the photos"
               }
             ],
-            [
-              {
-                "k": "fix",
-                "u": "Google Business posts",
-                "n": "each post links to a matching site page; runs through the quarter"
-              }
-            ],
+            [],
             []
           ]
         },
@@ -1682,7 +1672,7 @@
           ]
         }
       ],
-      "note_html": "Scope is the managed Carmel pin and the website pages it feeds. Posts and citations run through the quarter."
+      "note_html": "Scope is the managed Carmel pin and the website pages it feeds. Citations run through the quarter."
     },
     "maps": {
       "enabled": true,

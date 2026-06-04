@@ -1165,7 +1165,7 @@
       {
         "title": "Google Business depth",
         "color": "#1d5b8a",
-        "body": "A full pass on the Glenville profile: description, services list pointed at the right pages, attributes, posting cadence, and photos, plus a tracking tag so the Maps clicks show up by location."
+        "body": "A full pass on the Glenville profile: description, services list pointed at the right pages, attributes, plus a tracking tag so the Maps clicks show up by location."
       },
       {
         "title": "Site cleanup",
@@ -1273,19 +1273,9 @@
                 "k": "fix",
                 "u": "Complete the attributes and add a tracking tag to the website link",
                 "n": "so the Maps clicks attribute by location"
-              },
-              {
-                "k": "fix",
-                "u": "Re-tag the existing photos"
               }
             ],
-            [
-              {
-                "k": "fix",
-                "u": "Google Business posts",
-                "n": "each links to a matching site page; runs through the quarter"
-              }
-            ],
+            [],
             []
           ]
         },
@@ -1358,7 +1348,7 @@
           ]
         }
       ],
-      "note_html": "Scope is the managed Glenville pin and the website pages it feeds. Posts and citations run through the quarter."
+      "note_html": "Scope is the managed Glenville pin and the website pages it feeds. Citations run through the quarter."
     },
     "maps": {
       "enabled": true,

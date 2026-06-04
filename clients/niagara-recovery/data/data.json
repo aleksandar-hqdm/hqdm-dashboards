@@ -1545,7 +1545,7 @@
           ]
         }
       ],
-      "note_html": "Sources: GSC pages_last_365d (blog refresh queue), DataForSEO Bing + Google Ads volumes (service-page priority), LocalDominator 158-cell WNY grid Apr 30 2026 (suburb selection), GBP intake 2026-05-19 (service-area + photo + Posts state). Tags: <span class=\"tag revamp\">revamp</span> existing page rebuild · <span class=\"tag new\">new</span> net-new page · <span class=\"tag refresh\">refresh</span> blog title + intro + CTA + Article schema · <span class=\"tag redirect\">redirect</span> 301 / 410 / canonical · <span class=\"tag fix\">fix</span> technical on-page."
+      "note_html": "Sources: GSC pages_last_365d (blog refresh queue), DataForSEO Bing + Google Ads volumes (service-page priority), LocalDominator 158-cell WNY grid Apr 30 2026 (suburb selection), GBP intake 2026-05-19 (service-area). Tags: <span class=\"tag revamp\">revamp</span> existing page rebuild · <span class=\"tag new\">new</span> net-new page · <span class=\"tag refresh\">refresh</span> blog title + intro + CTA + Article schema · <span class=\"tag redirect\">redirect</span> 301 / 410 / canonical · <span class=\"tag fix\">fix</span> technical on-page."
     },
     "maps": {
       "enabled": true,
