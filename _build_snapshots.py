@@ -543,19 +543,17 @@ CLIENTS = {
         ],
         'calendar': {'enabled': True,
  'title': 'Build Calendar · Next 90 Days',
- 'subtitle': 'The exact on-page, content and Google Business work on the Glenville location and the pages it '
-             'feeds.',
+ 'subtitle': 'The exact on-page, content and Google Business work on the Glenville location and the pages it feeds.',
  'months': ['Month 1', 'Month 2', 'Month 3'],
  'rows': [{'label': 'Service pages',
            'cap': 'open up and rewrite',
            'cells': [[{'k': 'fix',
                        'u': 'Move the service pages off the single-city web addresses',
-                       'n': 'drop the -in-glenville-ny ending for clean /services/ addresses, with redirects '
-                            'in place'}],
+                       'n': 'drop the -in-glenville-ny ending for clean /services/ addresses, with redirects in '
+                            'place'}],
                      [{'k': 'revamp',
                        'u': 'Rewrite the detox, inpatient rehab and dual-diagnosis pages',
-                       'n': 'each built around its treatment search, with the Glenville area as the area '
-                            'served'},
+                       'n': 'each built around its treatment search, with the Glenville area as the area served'},
                       {'k': 'fix',
                        'u': 'Link the in-area pages into the service pages',
                        'n': 'so the right page catches the intent'}],
@@ -591,9 +589,7 @@ CLIENTS = {
                      []]},
           {'label': 'Off-page',
            'cap': 'citations, embeds, clean-up',
-           'cells': [[{'k': 'new',
-                       'u': 'Foundational citations for Glenville',
-                       'n': 'SAMHSA, NYS OASAS, BBB'}],
+           'cells': [[{'k': 'new', 'u': 'Foundational citations for Glenville', 'n': 'SAMHSA, NYS OASAS, BBB'}],
                      [{'k': 'new',
                        'u': 'Vertical directory citations',
                        'n': 'Healthgrades, Psychology Today, Recovery.com'},
@@ -605,19 +601,24 @@ CLIENTS = {
                        'u': 'Disavow the toxic backlink pattern',
                        'n': 'staged for your Search Console upload'}]]},
           {'label': 'Content & trust',
-           'cap': 'blog refresh and trust signals',
+           'cap': 'named blog refresh and trust signals',
            'cells': [[{'k': 'refresh',
-                       'u': 'Refresh the top blog pages',
-                       'n': 'new titles, FAQ schema and updated stats; route them to the service pages'}],
-                     [{'k': 'refresh', 'u': 'Deepen the refresh and add internal links'}],
+                       'u': 'New titles and FAQ schema on the highest-impression blogs',
+                       'n': 'how-long-does-kratom-last (654K impressions at 0.40% CTR), get-rid-of-alcohol-breath '
+                            '(619K at 0.28%), what-do-dreams-about-drugs-mean (338K at 0.49%), and '
+                            'signs-that-my-body-is-detoxing (the top click page, 528K); route each to its service '
+                            'page'}],
+                     [{'k': 'refresh',
+                       'u': 'Second blog batch, content depth and internal links',
+                       'n': 'mix-alcohol-and-valtrex (290K impressions), foods-to-eat-in-alcohol-detox (247K, stuck at '
+                            'position 22), how-long-do-alcoholics-live (241K) and adderall-use-affect-your-kidneys '
+                            '(183K)'}],
                      [{'k': 'new',
                        'u': 'Surface the trust signals',
                        'n': 'accreditation badges and a public insurance payor list'},
-                      {'k': 'fix',
-                       'u': 'Q2 close-out report',
-                       'n': 'planned, executed and impact, per task'}]]}],
- 'note_html': 'Scope is the managed Glenville pin and the website pages it feeds. Posts and citations run '
-              'through the quarter.'},
+                      {'k': 'fix', 'u': 'Q2 close-out report', 'n': 'planned, executed and impact, per task'}]]}],
+ 'note_html': 'Scope is the managed Glenville pin and the website pages it feeds. Posts and citations run through the '
+              'quarter.'},
     },
 
     'body-balance-massage': {

@@ -1327,19 +1327,20 @@
         },
         {
           "label": "Content & trust",
-          "cap": "blog refresh and trust signals",
+          "cap": "named blog refresh and trust signals",
           "cells": [
             [
               {
                 "k": "refresh",
-                "u": "Refresh the top blog pages",
-                "n": "new titles, FAQ schema and updated stats; route them to the service pages"
+                "u": "New titles and FAQ schema on the highest-impression blogs",
+                "n": "how-long-does-kratom-last (654K impressions at 0.40% CTR), get-rid-of-alcohol-breath (619K at 0.28%), what-do-dreams-about-drugs-mean (338K at 0.49%), and signs-that-my-body-is-detoxing (the top click page, 528K); route each to its service page"
               }
             ],
             [
               {
                 "k": "refresh",
-                "u": "Deepen the refresh and add internal links"
+                "u": "Second blog batch, content depth and internal links",
+                "n": "mix-alcohol-and-valtrex (290K impressions), foods-to-eat-in-alcohol-detox (247K, stuck at position 22), how-long-do-alcoholics-live (241K) and adderall-use-affect-your-kidneys (183K)"
               }
             ],
             [
