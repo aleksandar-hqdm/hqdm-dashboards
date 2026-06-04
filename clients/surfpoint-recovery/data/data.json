@@ -1569,61 +1569,64 @@
     ],
     "quarters": {
       "labels": [
-        "Dec '24",
-        "Q1 '25",
-        "Q2 '25",
-        "Q3 '25",
-        "Q4 '25",
-        "Q1 '26"
+        "Surfpoint (you)",
+        "ACI Inpatient",
+        "Jovenes Brooklyn",
+        "Ascendant Detox",
+        "Teen Challenge"
       ],
       "visitors": [
-        2199,
-        2127,
-        2550,
-        2688,
-        3003,
-        6675
+        130,
+        35,
+        3,
+        0,
+        0
       ],
-      "leads": [
-        386,
-        443,
-        465,
-        464,
-        344,
-        412
-      ],
-      "visitors_label": "Organic visitors",
-      "leads_label": "GBP clicks → site",
+      "leads": [],
+      "visitors_label": "Top-3 Maps cells (of 136)",
+      "leads_label": "",
       "partial_index": null,
-      "title": "By Quarter · Organic visitors + GBP clicks"
+      "title": "Top-3 Maps Coverage · You vs Brooklyn Competitors (Apr 2026)"
     },
     "boxes": [
       {
-        "win": "Year over Year",
-        "cmp": "Q1 2026 vs Q1 2025",
+        "win": "Maps rank",
+        "cmp": "alcohol rehab Brooklyn · 6-mo trend",
         "kind": "good",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "+214%",
+            "m": "Avg position",
+            "d": "1.88 → 1.47",
             "cls": "pos"
           }
         ]
       },
       {
-        "win": "Last 6 Months",
-        "cmp": "vs prior 6 mo",
+        "win": "Grid coverage",
+        "cmp": "136-cell Coney Island grid",
         "kind": "good",
         "rows": [
           {
-            "m": "Visitors",
-            "d": "+74%",
+            "m": "Top-3 cells",
+            "d": "130 / 136 (96%)",
+            "cls": "pos"
+          }
+        ]
+      },
+      {
+        "win": "Vs the field",
+        "cmp": "Oct 2025 → Apr 2026",
+        "kind": "good",
+        "rows": [
+          {
+            "m": "Top-3 cells",
+            "d": "130 vs 35 nearest",
             "cls": "pos"
           }
         ]
       }
     ],
-    "boxes_reading_html": "Organic traffic and Maps visibility are the clean signals this quarter. YoY compares the most recent complete quarter (Q1 2026) against the same quarter prior year — the current Q2 is partial. Conversion volume is understated by known GA4 tracking gaps (`gmb_click` 584/90d + `contact_form_submit` 61/90d not flagged as conversions), so absolute conversion counts are excluded from these comparisons.",
+    "boxes_reading_html": "Maps is the clean, measured signal for this account: these are LocalDominator grid-scan rankings, independent of website analytics. On the core alcohol-rehab search, average position improved from 1.88 to 1.47 over six months and holds top-3 across 96 percent of the Coney Island grid, while nearby competitors lost grid space. Website-traffic and lead counts are held back this quarter because the GA4 tracking has known gaps.",
     "focus": [],
     "calendar": {
       "enabled": true,
